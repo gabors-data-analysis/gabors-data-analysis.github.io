@@ -51,7 +51,7 @@ In Economics and many other social sciences, we use Stata for research, and lear
 ## R to/from Python
 For this textbook, Stata and R code were developed early on, and we started to work on Python code set only after the proof was ready. Some ideas we (and our RAs) found useful
 1. [GGplot for Python by Monash ](https://monashdatafluency.github.io/python-workshop-base/modules/plotting_with_ggplot/){:target="_blank"}    
-2. [Pandas and tidyverse](link)  
+2. [Pandas and tidyverse](https://www.carloscamara.es/en/blog/2020/02/08/manipulating-dataframes-in-r-and-python/){:target="_blank"}     
 
 
 ## Python for Stata users
