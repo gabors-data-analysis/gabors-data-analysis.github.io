@@ -15,24 +15,24 @@ redirect_from:
 >## *Publish the data and code or it didn't happen* [*](http://freerangestats.info/blog/2020/05/30/implausible-health-data-firm){:target="_blank"}   
 
 
-Get the raw data and the cleaning codes that created the datasets used for analyis.
+## Getting code
 
-**NOTE: codes and data should be made available in a more structured way in November 2020. Please check back.**
+For all the code that reproduces all the tables and graphs in the textbook, visit the Github page [github.com/gabors-data-analysis/da_case_studies](https://github.com/gabors-data-analysis/da_case_studies){:target="_blank"} where the live version of the code is available. 
 
-## Summary information
+*All codes in R and Stata should work well. But some improvement of codes may take place. We plan a locked version 1.0 is expected in January 2021. Python is under preparation is the Github page for details. *
 
-To check out the case studies, see the [Case studies summary page](/casestudies){:target="_blank"} 
-
-To read information about all the datasets we used, see the  [Datasets summary page](/datasets){:target="_blank"} 
-
-
+{% comment %}
+You will have several other options to get code for our case studies. Forthcoming in November 2020.
+1.  Download all code in [R](code-zip-r), [Stata](code-zip-stata), [Python](code-zip-python) --- `release 1.0 (2020-11-21)`
+2.  Download code one by one [from the Case studies page](/casestudies)
+{% endcomment %}
 
 
 ## Getting Data
 
 The **current, temporary solution** is that you can download the pre-release datasets from [Google Drive](https://drive.google.com/drive/u/2/folders/1g5j6v_WtB2lQDrSjpfhuw-P4s3Wm7Ucc){:target="_blank"}   
 
-You will have other options to get the datasets for our case studies. Forthcoming in November 2020.
+You will have other options to get the datasets for our case studies. Forthcoming in January 2021.
 
 {% comment %}
 1. Download all the data [Data-all](data-zip-all). Note that this is a very large zipped file. Forthcoming in November 2020: - `release 1.0 (2020-11-21)`
@@ -40,17 +40,12 @@ You will have other options to get the datasets for our case studies. Forthcomin
 {% endcomment %}
 
 
+## Read summary information
 
-## Getting code
+[Case studies summary page](/casestudies){:target="_blank"}   
+[Datasets summary page](/datasets){:target="_blank"} 
 
-For now, visit the Github page [github.com/gabors-data-analysis/da_case_studies](https://github.com/gabors-data-analysis/da_case_studies){:target="_blank"} where the live version of the code is available. Since the release, we are making small edits to the code, to make them simpler or faster. 
 
-You will have several other options to get code for our case studies. Forthcoming in November 2020.
-
-{% comment %}
-1.  Download all code in [R](code-zip-r), [Stata](code-zip-stata), [Python](code-zip-python) --- `release 1.0 (2020-11-21)`
-2.  Download code one by one [from the Case studies page](/casestudies)
-{% endcomment %}
 
 
 
