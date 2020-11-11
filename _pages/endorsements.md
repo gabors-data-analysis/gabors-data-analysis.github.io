@@ -56,7 +56,8 @@ ___
 
 
 
->"This is not an econometrics textbook, but a data analysis textbook.  And a highly unusual one - **written in plain English, based on simplified notation and full of case studies**. An excellent starting point for future data analysts or anyone interested in finding out what data can tell us."
+>"This is not an econometrics textbook, but a data analysis textbook.  And a highly unusual one - **written in plain English, based on simplified notation and full of case studies**. An excellent starting point for future data analysts or anyone interested in finding out what data can tell us."  
+
 [Beata Javorcik](https://www.economics.ox.ac.uk/faculty/beata-javorcik){:target="_blank"},  Professor at the University of Oxford, Chief Economist at EBRD
 
 
