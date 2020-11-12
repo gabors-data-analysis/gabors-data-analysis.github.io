@@ -199,14 +199,14 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 
 ## share-health
 
-**Content and coverage**: The share-health data includes information on the health of people aged 50 to 60 from 14 European countries who reported
-to be healthy in 2011. The dataset has N=3109 observations.  
+**Content and coverage**: The raw data is [EasySHARE version 6.0.0.](http://www.share-project.org/special-data-sets/easyshare.html){:target="_blank"}, N=288,736. Our share-health dataset includes information on the health of people aged 50 to 60 from 14 European countries who reported to be healthy in 2011. The dataset has N=3109 observations.  
 **Key variables**: current smoker, three categories for years of education, gender.  
 **Used in case studies**:  
 [Does smoking pose a health risk?](link)  
  
-**Source**:  
-**Copyright**:  
+**Source**: [SHARE Project](https://releases.sharedataportal.eu/releases?show_archived=1){:target="_blank"}   
+**Copyright**: SHARE. Access is provided after filling in and submitting a [data user statement](http://www.share-project.org/data-access/user-registration.html){:target="_blank"}     
+
 
 ## stocks-sp500
 **Content and coverage**: The stocks-sp500 data consists of daily data on the closing price of the Microsoft company stock and the S&P 500 stock market index. The dataset covers 21 years: from 31 December 1997 to 31 December 2018.  
