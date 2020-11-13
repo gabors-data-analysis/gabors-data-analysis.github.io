@@ -206,7 +206,7 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
  
 **Source**: [SHARE Project](https://releases.sharedataportal.eu/releases?show_archived=1){:target="_blank"}   
 **Copyright**: SHARE. Access is provided after filling in and submitting a [data user statement](http://www.share-project.org/data-access/user-registration.html){:target="_blank"}     
-
+**MORE about [getting the data](/_casestudies/share-health){:target="_blank"}   
 
 ## stocks-sp500
 **Content and coverage**: The stocks-sp500 data consists of daily data on the closing price of the Microsoft company stock and the S&P 500 stock market index. The dataset covers 21 years: from 31 December 1997 to 31 December 2018.  
