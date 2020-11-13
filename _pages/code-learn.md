@@ -8,10 +8,16 @@ redirect_from:
 ---
 
 
-Here is some tip and advice on how to learn coding
+Here is some tip and advice on how to learn coding.
 
-# R
-There are two toungues in R, called *data.table* and *tidyverse*. We use *tidyverse*.  
+# Big picture
+
+A well respected resource that introduces thinking about coding for data analysis is [Code and Data for the Social Sciences: A Practitioner’s Guide](https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf){:target="_blank"} by Matthew Gentzkow and Jesse M. Shapiro. They talk about issues like replication, organization of a project, or version control. 
+
+# Learning to code for data analysis
+
+## R
+There are two popular *toungues* (beyond base) in R, called *data.table* and *tidyverse*. We use *tidyverse*.  
 There are great many resources, to learn R for data analysis. Here are some ideas:   
 
 1. To learn tidyverse, you may start with the wonderful book by Hadley Wickham and Garrett Grolemund [R for Data Science](https://r4ds.had.co.nz/){:target="_blank"}.  
@@ -23,9 +29,7 @@ There are great many resources, to learn R for data analysis. Here are some idea
 7. Grant McDermott has a more advanced lecture series with amazing content [Data Science for Economists](https://github.com/uo-ec607/lectures){:target="_blank"}.   
 
 
-
-
-# Stata
+## Stata
 There are many great materials, here is some we like:   
 1. UCLA extensive material at [UCLA IDRE Stats](https://stats.idre.ucla.edu/stata/modules/){:target="_blank"}. 
 2. Amazing two part series by Kurt Schmidheiny [Part 1](https://www.schmidheiny.name/teaching/stataguide.pdf){:target="_blank"} 
@@ -33,9 +37,9 @@ There are many great materials, here is some we like:
 3. At Data Carpentry, CEU's Miklós Koren and Arieda Muco are developing a [Stata course for Economist](https://datacarpentry.org/stata-economics/){:target="_blank"}.  
 4. Plus, a [Stata cheatsheat](https://geocenter.github.io/StataTraining/portfolio/01_resource/){:target="_blank"}.  
 
-# Python
-There are great many resources, to learn R for data analysis. Here are some ideas:   
-1.
+## Python
+Python is a general purpose language, used for many applications beyond data science/statistics. There are great many resources, to learn Python for data analysis. Here are some ideas:   
+1. Very nice courses are available widely, for instance on [Datacamp](https://www.datacamp.com/courses/intro-to-python-for-data-science){:target="_blank"}, and [Codeacademy](https://www.codecademy.com/catalog/language/python){:target="_blank"}.    
 
 
 # Learning a second language
