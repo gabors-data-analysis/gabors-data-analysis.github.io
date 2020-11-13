@@ -44,7 +44,7 @@ Some people have experience using one language but would now learn a second one.
 
 ## R for Stata users
 In Economics and many other social sciences, we use Stata for research, and learnt R or Python as a second language. Here are some links and tutorials we found useful.  
-1. Matthieu Gomez has a wonderful intro to [ R for Stata users ](https://www.matthieugomez.com/statar/index.html){:target="_blank"}  
+1. Matthieu Gomez has a wonderful intro to [ R for Stata users ](https://www.matthieugomez.com/statar/index.html){:target="_blank"}. For instance the bit on [regressions](https://www.matthieugomez.com/statar/regressions.html){:target="_blank"} is pretty useful, I come back to it regularly.   
 2. John Ricco has a short intro to [basics of data wrangling](https://johnricco.github.io/2016/06/14/stata-dplyr/){:target="_blank"}  
 
 
