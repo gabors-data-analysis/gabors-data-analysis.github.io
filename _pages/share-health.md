@@ -15,14 +15,9 @@ used in case study `11A Does smoking pose a health risk?`
 
 ## Data source
 
-[Survey of Health, Aging and Retirement in Europe (SHARE)](http://www.share-project.org/home0.html)
+[Survey of Health, Aging and Retirement in Europe (SHARE)](http://www.share-project.org/home0.html) with [easySHARE dataset](http://www.share-project.org/special-data-sets/easyshare.html), release 6.0.0
 
-[easySHARE dataset](http://www.share-project.org/special-data-sets/easyshare.html
-), release 6.0.0
-
-(you may receive access to a more recent easySHARE version;
-that's fine as it should contain all observations and variables 
-in the 6.0.0 release, adding some more)
+Note: You may receive access to a more recent easySHARE version; that's fine as it should contain all observations and variables in the 6.0.0 release, adding some more.
 
 ## License
 
@@ -98,6 +93,7 @@ Stata data file: `easySHARE_rel6-0-0.dta`
 ** ID variables mergeid (individuals) wave (survey wave)
 
 **Important variables**   
+
 | variable name 	| info    	| type   	|
 |---------------	|-----------------------	|--------	|
 | country       	| country 	              | string 	|
@@ -112,15 +108,15 @@ Stata data file: `easySHARE_rel6-0-0.dta`
 
 ### Tidy data tables
 
-share-health
-derived from the easySHARE dataset, release 6.0.0
-same as the original file with fewer variables
+`share-health` derived from the easySHARE dataset, release 6.0.0  
+* same as the original file with fewer variables  
 * long format panel data, 21 countries, 6 survey waves
 * observations person x survey wave, n=288,736
 * ID variables mergeid (individuals) wave (survey wave)
 
 
 **Important variables**   
+
 | variable name 	| info    	| type   	|
 |---------------	|-----------------------	|--------	|
 | country       	| country 	              | string 	|
@@ -131,9 +127,8 @@ same as the original file with fewer variables
 |   ever_smoked      	| has smoked ever 	|  binary     	|
 |  sphus       	|  self-perceived health (US version)	|  categorical     	|
 
-The data table is not included in the distributed data repo.
-Instead, you need to run the share-health-cleaner code to create it
-from the raw data (that you downloaded with appropriate permission)
+The data table is not included in the distributed data repo.  
+Instead, you need to run the share-health-cleaner code to create it from the raw data (that you downloaded with appropriate permission)
 
 
 
