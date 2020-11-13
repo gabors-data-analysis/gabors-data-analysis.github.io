@@ -97,7 +97,7 @@ Stata data file: `easySHARE_rel6-0-0.dta`
 ** observations person x survey wave, n=288,736
 ** ID variables mergeid (individuals) wave (survey wave)
 
-** Important variables 	**
+**Important variables**   
 | variable name 	| info    	| type   	|
 |---------------	|-----------------------	|--------	|
 | country       	| country 	              | string 	|
@@ -120,7 +120,7 @@ same as the original file with fewer variables
 * ID variables mergeid (individuals) wave (survey wave)
 
 
-** Important variables 	**
+**Important variables**   
 | variable name 	| info    	| type   	|
 |---------------	|-----------------------	|--------	|
 | country       	| country 	              | string 	|
