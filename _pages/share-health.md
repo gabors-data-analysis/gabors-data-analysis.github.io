@@ -117,7 +117,7 @@ Stata data file: `easySHARE_rel6-0-0.dta`
 
 **Important variables**   
 
-| variable name 	| info    	| type   	|
+| variable name 	| info                  	| type   	|
 |---------------	|-----------------------	|--------	|
 | country       	| country 	              | string 	|
 | age       	| age 	              | numeric 	|
@@ -127,7 +127,7 @@ Stata data file: `easySHARE_rel6-0-0.dta`
 |   ever_smoked      	| has smoked ever 	|  binary     	|
 |  sphus       	|  self-perceived health (US version)	|  categorical     	|
 
-The data table is not included in the distributed data repo.  
+The data table is not included in the distributed data repo.    
 Instead, you need to run the share-health-cleaner code to create it from the raw data (that you downloaded with appropriate permission)
 
 
