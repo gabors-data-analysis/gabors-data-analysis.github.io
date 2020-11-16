@@ -77,7 +77,7 @@ ___
 
 
 
->"Energy and climate change represent one of the most important public policy challenges and high quality data and its empirical analysis is a foundation of solid policy. Data Analysis for Business Economics and Policy will have an impotant contribution to this with its innovative approach. **In addition to the comprehensive treatment of modern econometric techniques, the book also covers the less glamourous but crucial aspects of procuring and cleaning data and drawing useful inferences from less than perfect datasets.** As the center of gravity of the energy system shifts to developing economies where data quality is still an issue this will provide an important and practical combination for both academic and policy professionals."
+>"Energy and climate change is a major public policy challenge, where high-quality data analysis is the foundation of solid policy. This textbook will make an important contribution to this with its innovative approach. **In addition to the comprehensive treatment of modern econometric techniques, the book also covers the less glamorous but crucial aspects of procuring and cleaning data, and drawing useful inferences from less-than-perfect datasets.  An important and practical combination for both academic and policy professionals.** "
 
 [Laszlo Varro](https://www.iea.org/authors/laszlo-varro){:target="_blank"}, Chief Economist, International Energy Agency
 
