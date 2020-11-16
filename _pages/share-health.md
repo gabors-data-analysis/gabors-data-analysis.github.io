@@ -55,15 +55,15 @@ Email:  share-rdc@uvt.nl
 * The simplified approach provides 'teachers' with a way of help registering course participants as regular SHARE users at the same time and allows them to distribute the easySHARE data set to their 'students'. 
 * IMPORTANT: This doesn't substitute for students' individual registrations. Each student needs to send their individual applications even if they are on the teacher's list. This extra step helps the quick and successful registration of the students.
 
-
-1. As a teacher, please follow the steps for individuals first. You gain access and login name. 
-2. Collect names and email addresses of students. 
-3. Fill out and sign the easySHARE [Teacher Statement](http://www.share-project.org/fileadmin/pdf_documentation/easySHARE_Teacher_Statement.pdf) - including student information. 
+1. Collect names and email addresses of students. 
+2. Fill out and sign the easySHARE [Teacher Statement](http://www.share-project.org/fileadmin/pdf_documentation/easySHARE_Teacher_Statement.pdf) - including student information. 
 You may also collect student information in a spreadsheet (columns should be last name, first name, email) and send it attached. This helps administartors assign student access quickly. 
-    
-4. Print, sign and submit the completed and signed Statement(s) to the SHARE Research Data Center: share-rdc@uvt.nl
+3. Collect signed forms from students. Students will then get individual access. 
+4. Send back the following package  to the SHARE Research Data Center: share-rdc@uvt.nl 
+  (i) signed Teacher Statement, 
+  (ii) the list of students, and 
+  (iii) set of signed Statements from students
 
-5. Teachers will ideally collect signed forms from students  and send it back in pacakge. Students will then get individual access. 
 
 ## Download the data
 
