@@ -19,19 +19,28 @@ main:
     url: /blog/
 
 sidebar:
-  - title: Home
+  - title: About
     url: /
     children:
       - title: Authors
         url: /authors/
-      - title: "Codes"
+      - title: "Endorsements"
+        url: /endorsements
+      - title: "Why this book?"
+        url: /whythisbook/
+      - title: "Contact us"
+        url: /contact-us
+
+  - title: Data and code
+    url: /data-and-code/
+    children:
+      - title: "Link to code"
         url: https://github.com/gabors-data-analysis/da_case_studies
       - title: "Datasets used"
         url: /datasets
-      - title: "Endorsements"
-        url: /endorsements
-      - title: "Contact us"
-        url: /contact-us
+      - title: "Getting data"
+        url: /getting-data/
+      
 
   - title: Case studies
     url: /casestudies/
@@ -57,17 +66,12 @@ sidebar:
       - title: "Part IV"
         url: /chapters/part-IV
 
-  - title: Data and code
+  - title: Setup
     url: /data-and-code/
     children:
-      - title: "Getting data"
-        url: /getting-data/
-      - title: "Getting code"
-        url: /getting-code/
-
-  - title: "Setup with R"
-    url: /howto-r/
-  - title: "Setup with Stata"
-    url: /howto-stata/
-  - title: "Setup with Python"
-    url: /howto-python/
+    - title: "Setup with R"
+      url: /howto-r/
+    - title: "Setup with Stata"
+      url: /howto-stata/
+    - title: "Setup with Python"
+      url: /howto-python/
