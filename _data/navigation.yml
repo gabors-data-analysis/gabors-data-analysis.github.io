@@ -24,6 +24,10 @@ sidebar:
     children:
       - title: Authors
         url: /authors/
+      - title: "Codes"
+        url: https://github.com/gabors-data-analysis/da_case_studies
+      - title: "Datasets used"
+        url: /datasets
       - title: "Endorsements"
         url: /endorsements
       - title: "Contact us"
