@@ -6,8 +6,9 @@ permalink: /airline-tickets-usa
 title: "Getting the airline-tickets-usa dataset"
 toc: false
 author_profile: false
+collection: casestudies
 redirect_from:
-  - /airline-tickets-usa.html
+  - /casestudies/airline-tickets-usa.html
 ----
 
 
