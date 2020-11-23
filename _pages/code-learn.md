@@ -35,12 +35,14 @@ There are many great materials, here is some we like:
 2. Amazing two part series by Kurt Schmidheiny [Part 1](https://www.schmidheiny.name/teaching/stataguide.pdf){:target="_blank"} 
 [Part 2](https://www.schmidheiny.name/teaching/stataguide2up.pdf){:target="_blank"}  
 3. At Data Carpentry, CEU's Miklós Koren and Arieda Muco are developing a [Stata course for Economist](https://datacarpentry.org/stata-economics/){:target="_blank"}.  
-4. Plus, a [Stata cheatsheat](https://geocenter.github.io/StataTraining/portfolio/01_resource/){:target="_blank"}.  
+4. Plus, a [Stata cheatsheat](https://geocenter.github.io/StataTraining/portfolio/01_resource/){:target="_blank"}.
+
 
 ## Python
 Python is a general purpose language, used for many applications beyond data science/statistics. There are great many resources, to learn Python for data analysis. Here are some ideas:   
-1. Very nice courses are available widely, for instance on [Datacamp](https://www.datacamp.com/courses/intro-to-python-for-data-science){:target="_blank"}, and [Codeacademy](https://www.codecademy.com/catalog/language/python){:target="_blank"}.    
-
+1. Very nice courses are available widely, for instance on [Datacamp](https://www.datacamp.com/courses/intro-to-python-for-data-science){:target="_blank"}, and [Codeacademy](https://www.codecademy.com/catalog/language/python){:target="_blank"}.
+2. A set of very nice lessons at [Python for Everybody](https://www.py4e.com/){:target="_blank"}.
+3. NYU has a great group also offering a Python cours: [QuanEcon](https://quantecon.org/lectures/){:target="_blank"}.
 
 # Learning a second language
 Some people have experience using one language but would now learn a second one. Some ideas we found useful:
