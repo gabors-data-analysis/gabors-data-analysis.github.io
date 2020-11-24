@@ -1,10 +1,10 @@
 ---
-permalink: /share-health
+permalink: /dat_share-health
 title: "Getting the health-share dataset"
 toc: false
 author_profile: false
 redirect_from:
-  - /share-health.html
+  - /dat_share-health.html
 ---
 
 

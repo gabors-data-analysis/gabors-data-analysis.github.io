@@ -2,17 +2,13 @@
 
 
 ****************************************************************
-permalink: /airline-tickets-usa
+permalink: /dat_airline-tickets-usa
 title: "Getting the airline-tickets-usa dataset"
 toc: false
 author_profile: false
-collection: casestudies
 redirect_from:
-  - /casestudies/airline-tickets-usa.html
+  - /dat_airline-tickets-usa.html
 ----
-
-
-
 
 
 
