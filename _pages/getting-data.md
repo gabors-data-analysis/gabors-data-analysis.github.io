@@ -7,7 +7,8 @@ redirect_from:
   - /md/
   - /getting-data.html
 ---
-You have two options to get the datasets for our case studies.
 
-1. Download all the data [Data-all](data-zip-all). Note that this is a very large zipped file - `release 1.0 (2020-11-21)`
-2. Download data one by one [from the Datasets page](/datasets)
+The **current, temporary solution** is that you can download the pre-release datasets from [Google Drive](https://drive.google.com/drive/u/2/folders/1g5j6v_WtB2lQDrSjpfhuw-P4s3Wm7Ucc){:target="_blank"}   
+
+You will have other options to get the datasets for our case studies. Forthcoming in January 2021.
+

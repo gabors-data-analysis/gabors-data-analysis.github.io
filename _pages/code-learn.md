@@ -61,3 +61,13 @@ For this textbook, Stata and R code were developed early on, and we started to w
 
 
 ## Python for Stata users
+
+
+## Othe useful sites
+
+### Get datasets for exercises, projects
+[Social Science Data Sources & Statistical Methods](https://guides.emich.edu/data/free-data)
+
+
+### tools
+Great list of data tools by the UC Berkeley Library and Research IT run [Research Data Management (RDM) Program](https://researchdata.berkeley.edu/tools)

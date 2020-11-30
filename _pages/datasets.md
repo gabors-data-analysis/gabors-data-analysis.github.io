@@ -9,6 +9,13 @@ redirect_from:
 ---
 
 
+## How to get the data
+The **current, temporary solution** is that you can download the pre-release datasets from [Google Drive](https://drive.google.com/drive/u/2/folders/1g5j6v_WtB2lQDrSjpfhuw-P4s3Wm7Ucc){:target="_blank"}   
+
+You will have other options to get the datasets for our case studies. Forthcoming in January 2021.
+
+
+
 ## airbnb
 **Content and coverage**: The airbnb dataset includes information on the price and feature of apartments let out via airbnb. It covers Greater London. The full London data has N=51 646 observations. It is a single data table. The data refer to rental prices for one night in March 2017. 
 
