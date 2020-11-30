@@ -1,15 +1,14 @@
 ---
 permalink: /dat_cps-earnings
-title: "Getting the cps-earnings dataset"
+title: "README: cps-earnings dataset"
 toc: false
 author_profile: false
 redirect_from:
   - /dat_cps-earnings.html
 ---
 
-# README cps-earnings dataset  
 
-## How to get the `airline-tickets-usa` dataset  
+## How to get the `cps-earnings` dataset  
 
 used in the case studies `9A Estimating gender and age differences in earnings` and `10A Understanding the gender difference in earnings`  
 
