@@ -8,9 +8,8 @@ redirect_from:
 ---
 
 
-## How to get the `airline-tickets-usa` dataset  
-
-used in case study `22A How does a merger between airlines affect prices?`  
+This is a  README file for the `airline-tickets-usa` dataset.   
+Used in case study `22A How does a merger between airlines affect prices?`  
 
 ## Data source
 

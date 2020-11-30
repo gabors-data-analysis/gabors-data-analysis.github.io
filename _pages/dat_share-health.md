@@ -8,9 +8,8 @@ redirect_from:
 ---
 
 
-## How to get the `share-health` dataset
-
-used in case study `11A Does smoking pose a health risk?`
+This is a  README file for the  `share-health` dataset.   
+Used in case study `11A Does smoking pose a health risk?`
 
 
 ## Data source

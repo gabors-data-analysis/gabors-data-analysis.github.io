@@ -7,10 +7,8 @@ redirect_from:
   - /dat_cps-earnings.html
 ---
 
-
-## How to get the `cps-earnings` dataset  
-
-used in the case studies `9A Estimating gender and age differences in earnings` and `10A Understanding the gender difference in earnings`  
+This is a  README file for the `cps-earnings` dataset.   
+Used in the case studies `9A Estimating gender and age differences in earnings` and `10A Understanding the gender difference in earnings`  
 
 ## Data source  
 

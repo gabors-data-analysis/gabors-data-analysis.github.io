@@ -8,10 +8,9 @@ redirect_from:
 ---
 
 
-## How to get the `arizona-electricity` dataset  
+This is a  README file for the `arizona-electricity` dataset.   
+Used in case study `12B Electricity consumption and temperature`   
 
-
-used in case study `12B Electricity consumption and temperature`   
 
 ## Data source
 
