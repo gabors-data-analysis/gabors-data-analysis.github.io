@@ -35,7 +35,7 @@ Note: You may receive access to a more recent easySHARE version; that's fine as 
 
 To get the data, you will need to register and obtain rights. Here are the steps. 
 
-1. [Read the conditions] (http://www.share-project.org/data-access/user-registration.html)
+1. [Read the conditions](http://www.share-project.org/data-access/user-registration.html)
 2. [Download tha user agreement](http://www.share-project.org/fileadmin/pdf_documentation/SHARE_Data_Statement.pdf), and fill out the Statement (registration form).
 
 If you are *not* from a scientific institution, you need to fill in page 2, such as adding something like

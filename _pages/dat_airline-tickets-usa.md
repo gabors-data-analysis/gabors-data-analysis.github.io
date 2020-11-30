@@ -1,18 +1,15 @@
-# README airline-tickets-usa dataset
-
-
-****************************************************************
+---
 permalink: /dat_airline-tickets-usa
 title: "Getting the airline-tickets-usa dataset"
 toc: false
 author_profile: false
 redirect_from:
   - /dat_airline-tickets-usa.html
-----
+---
+
+# README airline-tickets-usa dataset
 
 
-
-****************************************************************
 ## How to get the `airline-tickets-usa` dataset  
 
 used in case study `22A How does a merger between airlines affect prices?`  
@@ -23,19 +20,16 @@ used in case study `22A How does a merger between airlines affect prices?`
 collected by the [Office of Airline Information of the Bureau of Transportation Statistics of the United States Department of Transportation](https://www.bts.gov).  
 
 
-****************************************************************
 ## Data access and copyright
 
 1. The data is part of the United States Government Information System.
 2. You can use this publicly available data for educational purposes.  
 
-****************************************************************
 Note for all users
 * y = year (for now 2011 and 2016 only)
 * q = quarter (1 to 4)
 * aiport code used here is the 3-letter string
 
-****************************************************************
 
 ## About the data
 
@@ -47,16 +41,12 @@ Stata data file: `DB1B_COUPONS_y_q.dta`
 * ID variable: itinid  
 
 
-
-
-a
-
 **Important variable**  
  | variable name 	| info    	             | type   	    |  
  | dest_id | "destination": all airports in the route except origin  |string |  
 
 
-Origin_and_Destination_Survey_DB1BTicket_y_q.csv
+`Origin_and_Destination_Survey_DB1BTicket_y_q.csv`
 * observations: itinerary level, n ~ 3 million per quarter
 * ID variable: itinid
  
