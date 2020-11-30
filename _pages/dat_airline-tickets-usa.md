@@ -42,6 +42,7 @@ Stata data file: `DB1B_COUPONS_y_q.dta`
 
 
 **Important variable**  
+
  | variable name 	| info    	             | type   	    |  
  | dest_id | "destination": all airports in the route except origin  |string |  
 
@@ -51,6 +52,7 @@ Stata data file: `DB1B_COUPONS_y_q.dta`
 * ID variable: itinid
  
  **Important variables**
+
  | variable name 	| info    	             | type   	    |
  |---------------	|---------------------	 |--------------|
  | origin | origin airport                   |    string  |  
@@ -74,6 +76,7 @@ Stata data file: `airline-route-panel.dta`
 
  
  **Important variables**   
+
 | variable name 	| info    	             | type   	    |
 |---------------	|---------------------	 |--------------|
 |  passengers  |  total number of passengers |  numeric  |
@@ -99,6 +102,7 @@ Stata data file: `airline-originfinaldest-panel.dta`
 * ID variables:	airline (string), origin (string), finaldest (string) return year quarter  
 
  **Important variables**   
+
 | variable name 	| info    	             | type   	    |
 |---------------	|---------------------	 |--------------|  
 | passengers  | total number of passengers  |  numeric  |  
@@ -113,6 +117,7 @@ Stata data file: `originfinaldest-panel.dta`
 * ID variables:	origin (string), finaldest (string), return year quarter  
 
  **Important variables**   
+ 
 | variable name 	| info    	             | type   	    |
 |---------------	|---------------------	 |--------------|  
 |  passengers  | total number of passengers  |  numeric  |  

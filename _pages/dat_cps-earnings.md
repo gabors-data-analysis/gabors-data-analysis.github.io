@@ -49,6 +49,7 @@ No copyright restrictions; you can use this dataset for educational purposes.
   	lineno  person ("line") number in household  
 
 **Important variables**  
+
 | variable name 	| info    	| type   	|
 |---------------	|-----------------------	|--------	|  
 |  age  |  age  |  numeric  |  
@@ -73,6 +74,7 @@ Note:
 	 	lineno  person ("line") number in household  
 
  **Important variables**  
+ 
 | variable name 	| info    	| type   	|
 |---------------	|-----------------------	|--------	|  
 |  age  |  age  |  numeric  |  

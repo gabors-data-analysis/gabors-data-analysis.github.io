@@ -66,6 +66,7 @@ and the same for HDD (from HDSD).
 
 
  **Important variable**  
+
  | variable name 	| info    	             | type   	    |  
  | Q | residential electricity consumption in AZ, million KWh  | numeric |    
 
@@ -78,6 +79,7 @@ and the same for HDD (from HDSD).
 
  
  **Important variables**  
+ 
  | variable name 	| info    	             | type   	    |  
  | CLDD | cooling degree days, Fahrenheit  | numeric |  
  | HTDD | heating degree days, Fahrenheit  | numeric |   

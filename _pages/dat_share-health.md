@@ -55,23 +55,14 @@ Teachers & Instructors - to speed up for classes
 If you are a teacher/instructor and use this textbook in the classroom, there is a way to speed up the process.
 The simplified approach provides ‘teachers’ with a way of help registering course participants as regular SHARE users at the same time and allows them to distribute the easySHARE data set to their ‘students’.
 
-<<<<<<< Updated upstream
-1. Collect names and email addresses of students. 
-2. Fill out and sign the easySHARE [Teacher Statement](http://www.share-project.org/fileadmin/pdf_documentation/easySHARE_Teacher_Statement.pdf) - including student information. 
-You may also collect student information in a spreadsheet (columns should be last name, first name, email) and send it attached. This helps administartors assign student access quickly. 
-3. Collect signed forms from students. Students will then get individual access. 
-4. Send back the following package  to the SHARE Research Data Center: share-rdc@uvt.nl 
-  (i) signed Teacher Statement, 
-  (ii) the list of students, and 
-  (iii) set of signed Statements from students
-=======
-The process is:
 1. Download, fill out, sign and scan the "Statement Concerning the Use of SHARE Data."
 Ask all your students to do the same as in 1., with their institutional email address, as a student at your institution; collect all these signed and scanned statements from students.
 2. Collect names and institutional email addresses of students in a spreadsheet (columns should be last name, first name, email).
 3. Download, fill out, sign and scan the easySHARE [Teacher Statement](http://www.share-project.org/fileadmin/pdf_documentation/easySHARE_Teacher_Statement.pdf) ("Statement Concerning The Use of easySHARE Data for Teaching Purposes." 
-4. Send back the following package to the SHARE Research Data Center: share-rdc@uvt.nl (i) your signed User AND Teacher Statement, (ii) the list of students, and (iii) set of signed User Statements from students.
->>>>>>> Stashed changes
+4. Send back the following package to the SHARE Research Data Center: share-rdc@uvt.nl 
+	(i) your signed User AND Teacher Statement, 
+	(ii) the list of students, and 
+	(iii) set of signed User Statements from students.
 
 
 ## Download the data
