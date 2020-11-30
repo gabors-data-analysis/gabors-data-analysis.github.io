@@ -34,7 +34,7 @@ The unit of observation in the data is an airline ticket. The dataset has N=1126
 **Source**:Downloaded from the [US Bureau of Transportation Statistics](https://www.transtats.bts.gov/DatabaseInfo.asp?DB_ID=125){:target="_blank"}  
 **Copyright**: N/A
 
-**MORE about [getting the data](/dat_airline-tickets-usa){:target="_blank"}
+[MORE about the data](/dat_airline-tickets-usa){:target="_blank"}
 
 
 ## arizona-electricity
@@ -47,6 +47,9 @@ The unit of observation in the data is an airline ticket. The dataset has N=1126
 
 **Source**: Downloaded from the [US Energy Information Administration (EIA)](https://www.eia.gov/){:target="_blank"} and [National Oceanic and Atmospheric Administration (NOAA)](https://w2.weather.gov/climate/xmacis.php?wfo=psr){:target="_blank"} 
 **Copyright**: EIA:[Public domain](https://www.eia.gov/about/copyrights_reuse.php) and NOAA:[Public domain](https://www.weather.gov/disclaimer){:target="_blank"}  
+
+
+[MORE about the data](/dat_arizona-electricity){:target="_blank"}
 
 
 ## asia-industry
@@ -117,6 +120,10 @@ Australian city of Darwin. The dataset has N=350 observations.
 
 **Source**: Downloaded from the [National Bureau of Economic Research](https://data.nber.org/morg/annual/){:target="_blank"}  
 **Copyright**:[No copyright restrictions on extracts use.](https://data.nber.org/data/morg.html){:target="_blank"}  
+
+[MORE about the data](/dat_cps-earnings){:target="_blank"}
+
+
 
 ## food-health
 **Content and coverage**: The food-health data includes data on the health status of the population in the USA. The dataset has N=7358 observations.   
@@ -208,7 +215,8 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
  
 **Source**: [SHARE Project](https://releases.sharedataportal.eu/releases?show_archived=1){:target="_blank"}   
 **Copyright**: SHARE. Access is provided after filling in and submitting a [data user statement](http://www.share-project.org/data-access/user-registration.html){:target="_blank"}     
-**MORE about [getting the data](/dat_share-health){:target="_blank"}
+
+[MORE about the data - incl. how to get it](/dat_share-health){:target="_blank"}
 
 
 
