@@ -1,13 +1,11 @@
 ---
 permalink: /dat_arizona-electricity
-title: "Getting the arizona-electricity dataset"
+title: "README: arizona-electricity dataset"
 toc: false
 author_profile: false
 redirect_from:
   - /dat_arizona-electricity.html
 ---
-
-# README arizona-electricity dataset  
 
 
 ## How to get the `arizona-electricity` dataset  

@@ -82,6 +82,7 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Source**: From the paper [Cavallo, Alberto, 2016, "Cavallo (2017) "Are Online and Offline Prices Similar? Evidence from Large Multi-Channel Retailers" - American Economic Review - Vol. 107(1), p.283–303", Harvard Dataverse, V4](https://doi.org/10.7910/DVN/XXOUHF){:target="_blank"} 
 **Copyright**:[CC0 Public Domain](https://dataverse.org/best-practices/dataverse-community-norms){:target="_blank"}  
 
+
 ## bisnode-firms
 **Content and coverage**: The bisnode-firms data includes wide-ranging business information on firms operating in a few industries in manufacturing and services in a European country. The dataset has N=19036 observations.   
 **Key variables**: many variables that fall into four groups: firm size, management, financial variables, and other characteristics.    
@@ -89,7 +90,7 @@ Australian city of Darwin. The dataset has N=350 observations.
 [Predicting firm exit: probability and classification](link)  
 
 **Source**: From Bisnode, a major European business information company.  
-**Copyright**:
+**Copyright**: The dataset as is, may be used for educational purposes. Bisnode has all other righst
 
 ## case-shiller-la
 **Content and coverage**: The case-shiller-la data includes monthly time series of the S&P/Case-Shiller Greater Los Angeles Home Price Index and monthly time series of unemployment rate and total employment for California. The dataset covers 1990-2018 period.  

@@ -1,6 +1,6 @@
 ---
 permalink: /dat_share-health
-title: "Getting the health-share dataset"
+title: "README: health-share dataset"
 toc: false
 author_profile: false
 redirect_from:

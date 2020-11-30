@@ -1,13 +1,11 @@
 ---
 permalink: /dat_airline-tickets-usa
-title: "Getting the airline-tickets-usa dataset"
+title: "README: airline-tickets-usa dataset"
 toc: false
 author_profile: false
 redirect_from:
   - /dat_airline-tickets-usa.html
 ---
-
-# README airline-tickets-usa dataset
 
 
 ## How to get the `airline-tickets-usa` dataset  
