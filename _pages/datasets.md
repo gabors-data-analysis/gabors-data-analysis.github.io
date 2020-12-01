@@ -187,6 +187,9 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Source**: Authors' collection.  
 **Copyright**: N/A  
 
+[MORE about the data](/dat_hotels-europe){:target="_blank"}
+
+
 ## hotels-vienna
 
 **Content and coverage**: The hotels-vienna data includes information on price and features of hotels in Vienna for one date. The dataset has N=428 observations.     
@@ -202,6 +205,9 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 
 **Source**: Authors' collection.  
 **Copyright**: N/A  
+
+[MORE about the data](/dat_hotels-vienna){:target="_blank"}
+
 
 ## sp500
 
