@@ -85,7 +85,7 @@ Gábor Kézdi is a Research Associate Professor at the University of Michigan’
 [More on authors](authors)
 -->
 
-
+We could not have done is alone. Far from it. So, [we are grateful](/our-thanks/), really. 
 
 ## Codes
 
