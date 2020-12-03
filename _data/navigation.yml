@@ -30,7 +30,9 @@ sidebar:
         url: /whythisbook/
       - title: "Contact us"
         url: /contact-us
-
+      - title: "Our thanks"
+        url: /our-thanks
+      
   - title: Data and code
     url: /data-and-code/
     children:
@@ -65,6 +67,9 @@ sidebar:
         url: /chapters/part-III
       - title: "Part IV"
         url: /chapters/part-IV
+
+  - title: Blog 
+    url: /blog
 
   - title: Setup
     url: /data-and-code/
