@@ -39,10 +39,10 @@ The wonderful cover design is based on the work by Ágoston Nagy, his first but 
 ## Coding, translations across scripting languages 
 [Zsuzsa Holler](https://www.linkedin.com/in/zsuzsa-holler-70bba031/) and [Kinga Ritter](https://www.linkedin.com/in/kinga-ritter/) have provided enormous development support, spearheading this effort for years. 
 
-Additional code and refactoring in R was created by Máté Tóth, János Bíró, and Eszter Pázmándi. János and Máté also created the first version of Python notebooks. Later on Adam Víg joined in. 
+Additional code and refactoring in R was created by Máté Tóth, János Bíró, and [Eszter Pázmándi](https://www.linkedin.com/in/eszterpazmandi/). János and Máté also created the first version of Python notebooks. Later on Adam Víg joined in. 
 
 Additional coding, data collection, visualization, and editing were done by Viktória Kónya, Zsófia
-Kőműves, Dániel Bánki, Abuzar Ali, Endre Borza, Imola Csóka, and Ahmed Al Shaibani.
+Kőműves, Dániel Bánki, Abuzar Ali, [Endre Borza](https://www.linkedin.com/in/endremborza/), Imola Csóka, and  [Ahmed Al Shaibani](https://www.linkedin.com/in/ahmedalshaibani/).
 
 ## The community help
 Let us also shout out to the fantastic R user community – both online and offline – from whom
