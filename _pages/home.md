@@ -35,15 +35,19 @@ As the most effective way to communicate data analysis, running case studies pla
 [MORE endorsements](endorsements)
 
 
-## Preorder
+## Preorder and inspection copy
 
 ![cup](images/cup1.png){:height="50%" width="50%"}  
 
-The textbook is scheduled for worldwide publication on January 2021. Preorder is open:   
+The textbook is scheduled for worldwide publication on April 2021. 
+
+Preorder is open:   
  [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC){:target="_blank"}   
  [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=1592915211){:target="_blank"}       
 [Global options](preorder)
 
+
+You may also [request an inspection copy from the Publisher](http://cambridge.force.com/Samples?isbn=9781108716208&Title=Data+Analysis+for+Business%2C+Economics%2C+and+Policy&Author=B%C3%A9k%C3%A9s%2FK%C3%A9zdi)!
 
 ## Why use this book?
 
