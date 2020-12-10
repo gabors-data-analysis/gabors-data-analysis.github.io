@@ -28,4 +28,4 @@ This will be made available at the Publisher's website in .jpeg.
 Or just run the scripts for any case study. (Images in the book were made in R.) 
 
 ## Additional reading suggestions
-We started to add a few additional [reading suggestions](/additional-readings/). 
+We started to add a few additional [reading suggestions](/additional-reading/). 

@@ -15,9 +15,7 @@ Life did not stop when we finished the manusdcript. Actually, we keep finding gr
 
 ### Chapter 09
 
-Regarding **external validity**, one way to check robustness is to take out 1% of the data and repeat the exercise.   
-The simple take is to do it many times randonly + many times by edge of distribution of key variables.   
-The smart take is suggested by *Tamara Broderick, Ryan Giordano, Rachael Meager in "An Automatic Finite-Sample Robustness Metric: Can Dropping a Little Data Change Conclusions?"* Hard-core statistics. [Preprint](https://arxiv.org/abs/2011.14999)
+Regarding **external validity**, one way to check robustness is to take out 1% of the data and repeat the exercise. The simple take is to do it many times randonly + many times by edge of distribution of key variables. The smart take is suggested by *Tamara Broderick, Ryan Giordano, Rachael Meager in "An Automatic Finite-Sample Robustness Metric: Can Dropping a Little Data Change Conclusions?"* Hard-core statistics. [Preprint](https://arxiv.org/abs/2011.14999)
 
 
 ### Chapter 19
