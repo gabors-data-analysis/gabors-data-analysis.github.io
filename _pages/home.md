@@ -136,7 +136,7 @@ There are several materials we prepare for instructors:
 
 * Short [summary on why use this book](/files/bekes-kezdi-data-analysis-summary.pdf)   
 * A [one-page summary](one-page-summary), also available as [PDF]((/files/gabors_da_1pager.pdf)){:target="_blank"}  
-* Download detailed [table of contents](/files/toc.pdf)
+* Download detailed front matter and [table of contents](/files/front_Bekes_Kezdi.pdf)
 <!---
 You can access sample chapters, too. [HERE](chapters) - TO ADD
 -->

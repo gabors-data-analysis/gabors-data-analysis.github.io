@@ -10,8 +10,8 @@ redirect_from:
 
 {% include base_path %}
 
-**This will include links to slides, graphs, and more**
-
+## Front material and Table of contents
+You may check out the [front material and Table of contents](/files/front_Bekes_Kezdi.pdf)
 
 ## How to to teach it?
 This course may be used for a variety of courses, and it is needed used Management Phd, Applied Economics MA, Data Science MSc or even in Executive MBA. Let us offer some experience and advice on [how to teach this textbook for different courses](/teaching-guide/)
