@@ -9,12 +9,47 @@ redirect_from:
 ---
 
 
-## How to get the data
-The **current, temporary solution** is that you can download the pre-release datasets from [Google Drive](https://drive.google.com/drive/u/2/folders/1g5j6v_WtB2lQDrSjpfhuw-P4s3Wm7Ucc){:target="_blank"}   
+# How to get the data
+Data is shared via a [OSF project repository](https://osf.io/7epdj/). 
 
-You will have other options to get the datasets for our case studies. Forthcoming in January 2021.
+## Baseline: download dataset folders
+
+You may download each dataset folder and add to the `da_data_repo` folder to ensure all codes work smoothly. 
 
 
+## Directly open from script
+At the same time, each dataset is a component and files may be directly opened from code. For example, with the `hotel-europe` dataset: 
+
+### R
+```
+data1<-read.csv(url("https://osf.io/p6tyr/download")) 
+```
+
+### Python
+
+```
+import pandas as pd
+pd.read_csv("https://osf.io/p6tyr/download")  
+ ```
+
+### Stata
+```
+import delimited "https://osf.io/p6tyr/download"
+```
+
+Really, really simple. 
+
+## Download the whole textbook material
+You will be able to download the whole material as a single .zip file. 
+Forthcoming: March 2021
+
+
+## Old verison
+You may still use the older approach here: [Google Drive](https://drive.google.com/drive/u/2/folders/1g5j6v_WtB2lQDrSjpfhuw-P4s3Wm7Ucc){:target="_blank"}   
+
+This will be closed down in March 2021. 
+
+# Dataset info details
 
 ## airbnb
 **Content and coverage**: The airbnb dataset includes information on the price and feature of apartments let out via airbnb. It covers Greater London. The full London data has N=51 646 observations. It is a single data table. The data refer to rental prices for one night in March 2017. 
