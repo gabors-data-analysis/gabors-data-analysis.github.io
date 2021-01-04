@@ -15,7 +15,13 @@ redirect_from:
 >## *Publish the data and code or it didn't happen* [*](http://freerangestats.info/blog/2020/05/30/implausible-health-data-firm){:target="_blank"}   
 
 
-## Getting code
+We have created the textbook as a complete package of text, code and data. While the textbook is available for money, code and data are free. 
+Read summary information: [Case studies summary page](/casestudies){:target="_blank"}   
+Read summary information: [Datasets summary page](/datasets){:target="_blank"} 
+
+
+
+# Getting code
 
 For all the code that reproduces all the tables and graphs in the textbook, visit the Github page [github.com/gabors-data-analysis/da_case_studies](https://github.com/gabors-data-analysis/da_case_studies){:target="_blank"} where the live version of the code is available. 
 
@@ -28,28 +34,53 @@ You will have several other options to get code for our case studies. Forthcomin
 {% endcomment %}
 
 
-## Getting Data
 
-The **current, temporary solution** is that you can download the pre-release datasets from [Google Drive](https://drive.google.com/drive/u/2/folders/1g5j6v_WtB2lQDrSjpfhuw-P4s3Wm7Ucc){:target="_blank"}   
+# Getting data
+Data is shared via a [OSF project repository](https://osf.io/7epdj/). 
 
-You will have other options to get the datasets for our case studies. Forthcoming in January 2021.
+## Baseline: download dataset folders
 
-{% comment %}
-1. Download all the data [Data-all](data-zip-all). Note that this is a very large zipped file. Forthcoming in November 2020: - `release 1.0 (2020-11-21)`
-2. Download data one by one [from the Datasets page](/datasets) and copy to the dataset folder. Forthcoming in November 2020
-{% endcomment %}
+You may download each dataset folder and add to the `da_data_repo` folder to ensure all codes work smoothly. 
 
 
-## Read summary information
+## Directly open from script
+At the same time, each dataset is a component and files may be directly opened from code. For example, with the `hotel-europe` dataset: 
 
-[Case studies summary page](/casestudies){:target="_blank"}   
-[Datasets summary page](/datasets){:target="_blank"} 
+### R
+```
+data1<-read.csv(url("https://osf.io/p6tyr/download")) 
+```
+
+### Python
+
+```
+import pandas as pd
+pd.read_csv("https://osf.io/p6tyr/download")  
+ ```
+
+### Stata
+```
+import delimited "https://osf.io/p6tyr/download"
+```
+
+Really, really simple. 
+
+## Download the whole textbook material
+You will be able to download the whole material as a single .zip file. 
+Forthcoming: March 2021
+
+
+## Old verison
+You may still use the older approach here: [Google Drive](https://drive.google.com/drive/u/2/folders/1g5j6v_WtB2lQDrSjpfhuw-P4s3Wm7Ucc){:target="_blank"}   
+
+This will be closed down in March 2021. 
 
 
 
 
 
-## Folder setup
+
+# Folder setup
 **First**, decide about where to store data and code for this textbook. In all codes we will call on data and code folders separately, so you will have to set them at the start of the code. 
 
 1. The folder for code (and output) is `da_case_studies`
@@ -139,7 +170,7 @@ This textbook is coding language neutral. Our code is written in all three most 
 [Some advice on learning to code](/code-learn/)  
 
 
-## Differences in output
+# Differences in output
 The graphs and results in the textbook come from R. However, most results and graphs should be the same when running from Stata or Python.
 
 There could some differences across output from different languages.
