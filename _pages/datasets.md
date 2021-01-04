@@ -188,6 +188,8 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Copyright**: N/A  
 
 [MORE about the data](/dat_hotels-europe){:target="_blank"}
+[DOI]()
+[GET the data from OSF.io](https://osf.io/r6uqb){:target="_blank"}; 
 
 
 ## hotels-vienna
