@@ -46,6 +46,11 @@ redirect_from:
 **Download detailed list of chapters and sections ...... [CONTENTS](/files/toc.pdf)**  
 {: .notice}
 
+## Example chapters
+You may download this chapter from the almost final version of the proof. 
+
+[Chapter 10 Multiple Linear Regression](/files/Ch10_Bekes_Kezdi_draft_2020nov.pdf)
+
 
 
 
