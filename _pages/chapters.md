@@ -41,15 +41,12 @@ redirect_from:
 [Ch24](#chapter-24-appropriate-control-groups-for-panel-data)  
 
 
-## Quick tips
-**Download a short summary on why use this book ... [TEXTBOOK SUMMARY](/files/bekes-kezdi-data-analysis-summary.pdf)**  
-**Download detailed list of chapters and sections ...... [CONTENTS](/files/toc.pdf)**  
+## Downloads
+**Download the front - detailed list of chapters and sections ......... [CONTENTS](/files/front_Bekes_Kezdi.pdf)**  
+**Download a sample chapter from the almost final version of the proof... [Chapter 10 Multiple Linear Regression](/files/Ch10_Bekes_Kezdi_draft_2020nov.pdf)**
+**Download a short summary on why use this book ...... [TEXTBOOK SUMMARY](/files/bekes-kezdi-data-analysis-summary.pdf)**  
 {: .notice}
 
-## Example chapters
-You may download this chapter from the almost final version of the proof. 
-
-[Chapter 10 Multiple Linear Regression](/files/Ch10_Bekes_Kezdi_draft_2020nov.pdf)
 
 
 
