@@ -11,11 +11,6 @@ redirect_from:
 ## Code language versions
 1. **R** -- We used v4.0.2, but most code should work in earlier version such as v3.6.3
 
-## Organization
-1. Each case study has a separate folder.
-2. Within case study folders, codes in different languages are simply stored together.
-3. Some intermediary files (csv, rds) may be saved there, too.
-4. Currently output is not stored here
 
 ## Get R
 1. Download [R](https://www.r-project.org/). We used v4.0.2.

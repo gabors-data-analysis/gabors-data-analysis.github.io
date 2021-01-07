@@ -33,6 +33,13 @@ For the data: `da_data_repo`
 
 All the code that reproduces all the tables and graphs in the textbook is available freely to use. 
 
+Organization:
+1. Each case study has a separate folder.
+2. Within case study folders, codes in different languages are simply stored together.
+3. Some intermediary files (csv, rds) may be saved there, too.
+4. Output folders are created when you run the code
+
+
 All codes in R and Stata should work well. But some improvement of codes may take place. We plan a locked version 1.0 is expected in March 2021.   
 Python is under preparation is the Github page for details.
 
