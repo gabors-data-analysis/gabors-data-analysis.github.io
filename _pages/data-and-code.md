@@ -46,10 +46,10 @@ Python is under preparation is the Github page for details.
 
 ## Option A: Download in one [advised]
 
-The whole codebase for the textbook may be simply downloaded, currently we have the  `v.0.6.0`  [pre-release version](https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.6.0).  
+The whole codebase for the textbook may be simply downloaded, currently we have the [pre-release version](https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.7.0), codename:  `v.0.7.0. Clear Air Turbulence`.  
 
 Steps
-1. Download it in a  [ zipped file](https://github.com/gabors-data-analysis/da_case_studies/archive/v0.6.0.zip)
+1. Download it in a  [ zipped file](https://github.com/gabors-data-analysis/da_case_studies/archive/v0.7.0.zip)
 2. Unzip and rename `da_case_studies`  
 
 
