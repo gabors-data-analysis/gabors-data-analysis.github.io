@@ -1,37 +1,37 @@
 ---
 permalink: /howto-python/
 title: "How to set up your computer for Python"
-excerpt: "Set up system, get python and anaconda notebooks, create a project"
 author_profile: false
 redirect_from:
   - "/nmpp/"
   - "/nmpp.html"
 ---
 
-## Code language versions
-**Python** -- We used v ...
-
-TO BE ADDED
+## How to run case studies in Python
 
 
-## Organization
-1. Each case study has a separate folder.
-2. Within case study folders, codes in different languages are simply stored together.
-3. Some intermediary files (csv) may be saved there, too.
-4. Currently output is not stored here
+#### Without Docker:
+Install requirements.txt from ch00-tech-prep folder, and use jupyter-notebook to run notebooks!
 
-## Get Python
+#### Recommended steps with Docker:
 
-TO BE ADDED
+ 1.  Please install [Docker](https://docs.docker.com/get-docker/) on your computer. 
+ 2. Create a project folder with any name and any location!
+ 
+	 - Clone this repository into the project folder or download and extract the da_case_studies folder.
+	 - Download the data folder into the project folder.
+	 - Make sure you have da_case_studies and da_data_repo in your project folder.
+		 - If you use different names please update the Dockerfile!
+ 3.  Open terminal (Linux & MacOS) or PowerShell/Docker Terminal (Windows) and navigate to you project folder.
+ 4. Use the following code to build docker image (after that use run command only):
+	```
+	docker build -t "da_jupyter" -f da_case_studies/Dockerfile .
+	```
+ 5. Start this image with the following:
+ ```
+docker run --rm -p 443:443 da_jupyter
+```
+ 6. Use Ctrl+click (Cmd+click) on jupyter link in your terminal or just copy and paste into your browser
+ 7. ENJOY!
+ 
 
-
-## What is a notebook?
-
-TO BE ADDED
-
-## How to run case studies in Stata
-
-1. Create a folder for this textbook (such as `my-data-analysis`)
-2. Within this folder, create a folder `my-data-analysis/data-repo` this should include all data folders.
-3. Create another folder  `my-data-analysis/case-studies` this will host all case studies
-4.
