@@ -10,10 +10,10 @@ redirect_from:
 
 ## Chapter 13
 
->**Q:** Are we using loss function to compare different models? E.g. the smaller the MSE is, the better the model is?
+>**Q: Are we using loss function to compare different models? E.g. the smaller the MSE is, the better the model is?**    
 A: Yes, that is very much the purpose on the loss function. 
 
->**Q:**Should we care about multicollinearity then, so that we do not overfit the model?
+>**Q: Should we care about multicollinearity then, so that we do not overfit the model?**  
 A: Multicollinearity is a small sample issue, so in small samples this could be an issue. When you have a few hundred or a few thousand observations, having two predictors that are strongly correlated is luxury you cannot afford as the aim is to avoid overfitting. In such cases, you may well drop on or the other. In large datasets, with hundreds of thousands observations, this is unlikely to be a problem. 
 
 >**Q:**Is model complexity the same as involving "too many" variables into the model?
