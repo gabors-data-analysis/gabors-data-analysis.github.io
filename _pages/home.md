@@ -94,15 +94,15 @@ We could not have done is alone. Far from it. So, [we are grateful](/our-thanks/
 ## Codes
 
 We provide access to get all the code we used --  in R, Stata and Python.  
-  
-Public [github repo](https://github.com/gabors-data-analysis/da_case_studies){:target="_blank"} with pre-release versions available now.    
+
+For all the code that reproduces all the tables and graphs in the textbook, visit the Github page [github.com/gabors-data-analysis/da_case_studies](https://github.com/gabors-data-analysis/da_case_studies){:target="_blank"} where the live version of the code is available. 
+
 
 **Status update:**      
 * R -- All codes ready. Used for graphs in textbook.
 * Stata -- All codes ready. In the lack of machine learning capabilities, no code for chapters 15,16,17, some limitations for chapter 18.
 * Python -- Under preparation. Chapters 01-12 ready, chapters 13-24 are under development. Should be ready by early 2021.
 
-We plan the first release for R and Stata in December 2020, and for Python, we plan an early 2021 first release.
 
 ## Coding help and info
 
@@ -118,10 +118,9 @@ Users can see a
 ## Datasets
 
 We provide access to get all the data we used; see our [dataset summaries](/datasets).    
-First release: November 2020.    
 
-**Update**: Stored in  Google Drive, we have [Pre-release dataset versions](/data-and-code/#getting-data).   
-
+Data is shared via a [OSF project repository](https://osf.io/7epdj/).   
+You can download it and use it, see  [Data and code](/data-and-code) for more information. 
 
 ## Teaching material
 
