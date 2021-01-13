@@ -122,25 +122,23 @@ We provide access to get all the data we used; see our [dataset summaries](/data
 Data is shared via a [OSF project repository](https://osf.io/7epdj/).   
 You can download it and use it, see  [Data and code](/data-and-code) for more information. 
 
-## Teaching material
+## Sample chapters
+Sample chapters 10 and 15 are available to look at the [Cambridge University Press platform](https://www.book2look.com/vbook.aspx?id=9781108483018)
+
+## Teaching material for instructors
 
 There are several materials we prepare for instructors:
 
 * This course may be used for a variety of courses, and it is needed used Management Phd, Applied Economics MA, Data Science MSc or even in Executive MBA. Let us offer some experience and advice on [how to teach this textbook for different courses](/teaching-guide/)
 * For a variety of course and program types [Frequently asked Questions and Answers](/instructor-faq/)
-* Slideshows -- one for each of the 24 chapters. 12 [slideshows](/materials) is already available. 
-* Answers to all 360 practice questions for instructors. Will be available from *November 2020*.  
+* Slideshows -- one for each of the 24 chapters will be made available through [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC)
+* Answers to all 360 practice questions for instructors. Will be available from
+ [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC)
+
 
 ## Download
 
 * Short [summary on why use this book](/files/bekes-kezdi-data-analysis-summary.pdf)   
 * A [one-page summary](one-page-summary), also available as [PDF]((/files/gabors_da_1pager.pdf)){:target="_blank"}  
 * Download detailed front matter and [table of contents](/files/front_Bekes_Kezdi.pdf)
-<!---
-You can access sample chapters, too. [HERE](chapters) - TO ADD
--->
-<!---
-You may also download a pdf with a [summary of case studies](casestudy-summaries.pdf)
--->
-
 
