@@ -32,7 +32,7 @@ This is the correct 14.3
 | \(7\) |           71 |      0.64 | 24117 |         28.83 |     29.88 |
 | \(8\) |          293 |      0.68 | 25549 |         26.84 |     48.53 |
 
-The LASSO CV Test RMSE is 29.6.
+The LASSO has 80 coefficients and the CV Test RMSE is 29.5.
 
 
 
