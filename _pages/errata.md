@@ -36,7 +36,7 @@ The LASSO has 80 coefficients and the CV Test RMSE is 29.5.
 
 Accordingly, Graph 14.3 should look this:
 
-![Graph14-3](images/ch14-figure-7-airbnb-model-result-levels.png){:height="50%" width="50%"}  
+![Graph14-3](/images/ch14-figure-7-airbnb-model-result-levels.png){:height="50%" width="50%"}  
 
 
 
