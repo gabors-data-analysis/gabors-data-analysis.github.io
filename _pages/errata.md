@@ -30,8 +30,6 @@ It turns out that Table 14.3 and the corresponding Figure 14.7 are not right. Th
 |2    | 2021-01-06   |	Book   | Imprecise sentence | Ch14 | B1 p.401 |	"The number of apartments or rooms is left as it is, and treated as continuous.." | "The number of **guests to accommodate** or rooms is left as it is, and treated as continuous."|
 |3    | 2021-01-19   |	Book   | Typo in number | Ch15 |p.423-24 |	In text, and Figure 15.3, cp=0.001 is wrong | It's cp=**0.01**|
 |4    | 2021-01-19   |	Book   | Typo  | Ch16 |p.443 |	"We have illustrated the basics of growing a regression tree using the airbnb dataset in a single London borough." | "We have illustrated the basics of growing a regression tree using the **used-cars dataset**."|
-| 5    | 2021-01-19   |	Book   | Typo  | Ch16 |p. 445 |	"The partial dependence plot shows the
-values of the x variables within each copy of the data against the average predicted y from that data." | "The partial dependence plot shows the
-values of the x variables within each copy of the data against the average predicted y from that data."|
+| 5    | 2021-01-19   |	Book   | Typo  | Ch16 |p. 445 |	"The partial dependence plot shows the values of the x variables within each copy of the data against the average predicted y from that data." | "The partial dependence plot shows the values of the x variables within each copy of the data against the average predicted y from that data."|
 |6    | 2021-01-20   |	Book   | Typo in graph numbers | Ch15 |p.448 |	Figure 16.2a and 16.2b wrong | 16.2a and 16.2b labels should be swapped. |
 
