@@ -11,21 +11,6 @@ redirect_from:
 This is a  README file for the `airline-tickets-usa` dataset.   
 Used in case study `22A How does a merger between airlines affect prices?`  
 
-## The merger
-   
-* American Airlines filed for bankruptcy in November 2011. 
-* US Airways, a competitor, announced its intent to take over American Airlines in 2012. 
-* After years of legal and regulatory deliberations, the merger was allowed in April 2015. The reservation systems of American and US Airways were merged in the second half of 2015. 
-
-
-## The data setup
-
-* Our data comes from a very large database maintained by the Department of Transportation (DB1B data). 
-* It is a 10\% sample of all tickets sold on the U.S. market taken in each quarter, starting with 2010. 
-* The unit of observation in the data is an airline ticket. For confidentiality reasons, the date of each flight is unknown in the data -- only the quarter is known. 
-* The variables include the airports visited including the origin and all subsequent airports, ticket price, number of passengers and airline. 
-* The data we use is another example of Big Data. It comes from automatic ticketing system, it is complicated in nature, and it is very large. For a single quarter, the raw data on tickets has about 3-3.5 million observations. The total data used for the case study has the size of around 15GB. 
-
 ## Data source
 
 [Airline Origin and Destination Survey (DB1B)](https://www.transtats.bts.gov/DatabaseInfo.asp?DB_ID=125)
@@ -142,6 +127,23 @@ Stata data file: `originfinaldest-panel.dta`
 
 
 ## MORE details
+
+### The merger
+   
+* American Airlines filed for bankruptcy in November 2011. 
+* US Airways, a competitor, announced its intent to take over American Airlines in 2012. 
+* After years of legal and regulatory deliberations, the merger was allowed in April 2015. The reservation systems of American and US Airways were merged in the second half of 2015. 
+
+
+### The data setup
+
+* Our data comes from a very large database maintained by the Department of Transportation (DB1B data). 
+* It is a 10\% sample of all tickets sold on the U.S. market taken in each quarter, starting with 2010. 
+* The unit of observation in the data is an airline ticket. For confidentiality reasons, the date of each flight is unknown in the data -- only the quarter is known. 
+* The variables include the airports visited including the origin and all subsequent airports, ticket price, number of passengers and airline. 
+* The data we use is another example of Big Data. It comes from automatic ticketing system, it is complicated in nature, and it is very large. For a single quarter, the raw data on tickets has about 3-3.5 million observations. The total data used for the case study has the size of around 15GB. 
+
+
 
 ### Market definition
 
