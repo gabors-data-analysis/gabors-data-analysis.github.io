@@ -32,6 +32,8 @@ sidebar:
         url: /contact-us
       - title: "Our thanks"
         url: /our-thanks
+      - title: "Errors we made"
+        url: /errata
       
   - title: Data and code
     url: /data-and-code/
