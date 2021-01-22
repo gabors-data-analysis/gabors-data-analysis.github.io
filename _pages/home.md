@@ -91,6 +91,17 @@ Gábor Kézdi is a Research Associate Professor at the University of Michigan’
 
 We could not have done is alone. Far from it. So, [we are grateful](/our-thanks/), really. 
 
+## Key information to download
+
+* [**Front Matter**](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf),   
+* [**Table of content**](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
+* [**Index**](https://assets.cambridge.org/97811084/83018/index/9781108483018_index.pdf)   
+* [**Sample chapters** 10 and 15](https://www.book2look.com/vbook.aspx?id=9781108483018)   
+* [**Short summary on why use this book**](/files/bekes-kezdi-data-analysis-summary.pdf)   
+* [**A one-page summary**](one-page-summary), also available as [PDF]((/files/gabors_da_1pager.pdf)){:target="_blank"}    
+
+
+
 ## Codes
 
 We provide access to get all the code we used --  in R, Stata and Python.  
@@ -121,16 +132,6 @@ We provide access to get all the data we used; see our [dataset summaries](/data
 
 Data is shared via a [OSF project repository](https://osf.io/7epdj/).   
 You can download it and use it, see  [Data and code](/data-and-code) for more information. 
-
-## Key information to download
-
-* [**front matter**](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf),   
-* [**Table of content**](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
-* [**Index**](https://assets.cambridge.org/97811084/83018/index/9781108483018_index.pdf)   
-* **Sample chapters** 10 and 15 are available to look at the [Cambridge University Press platform](https://www.book2look.com/vbook.aspx?id=9781108483018)   
-* Short [summary on why use this book](/files/bekes-kezdi-data-analysis-summary.pdf)   
-* A [one-page summary](one-page-summary), also available as [PDF]((/files/gabors_da_1pager.pdf)){:target="_blank"}    
-
 
 ## Teaching material for instructors
 
