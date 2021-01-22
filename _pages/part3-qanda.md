@@ -1,6 +1,7 @@
 ---
 permalink: /part3-qanda
 title: "Part 3: Questions and Answers"
+classes: #wide
 toc: false
 author_profile: false
 redirect_from:
@@ -36,6 +37,10 @@ A: Only in the sense, that variables dropped are indeed less important in regard
 
 >**Q:**Also, can you include the same X(i) in different functional forms (if LASSO reduces unimportant variable parameters to zero, it would only keep the relevant form, no)?
 A: Yes can indeed. 
+
+>**Q:**Is LASSO similar to cross-validation and BIC in the sense that it reduces model complexity?
+A: All are indeed related to the concept of model compleixty and avoiding overfitting. But, CV and BIC are for model selection, LASSO is for model building
+
 
 ## Chapter 15
 >**Q:**How tried cutoff points are selected in case of continuous variables since there are infinitely many possible cutoff points?
