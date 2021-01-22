@@ -122,8 +122,15 @@ We provide access to get all the data we used; see our [dataset summaries](/data
 Data is shared via a [OSF project repository](https://osf.io/7epdj/).   
 You can download it and use it, see  [Data and code](/data-and-code) for more information. 
 
-## Sample chapters
-Sample chapters 10 and 15 are available to look at the [Cambridge University Press platform](https://www.book2look.com/vbook.aspx?id=9781108483018)
+## Key information to download
+
+* [**front matter**](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf),   
+* [**Table of content**](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
+* [**Index**](https://assets.cambridge.org/97811084/83018/index/9781108483018_index.pdf)   
+* **Sample chapters** 10 and 15 are available to look at the [Cambridge University Press platform](https://www.book2look.com/vbook.aspx?id=9781108483018)   
+* Short [summary on why use this book](/files/bekes-kezdi-data-analysis-summary.pdf)   
+* A [one-page summary](one-page-summary), also available as [PDF]((/files/gabors_da_1pager.pdf)){:target="_blank"}    
+
 
 ## Teaching material for instructors
 
@@ -136,9 +143,5 @@ There are several materials we prepare for instructors:
  [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC)
 
 
-## Download
 
-* Short [summary on why use this book](/files/bekes-kezdi-data-analysis-summary.pdf)   
-* A [one-page summary](one-page-summary), also available as [PDF]((/files/gabors_da_1pager.pdf)){:target="_blank"}  
-* Download detailed front matter and [table of contents](/files/front_Bekes_Kezdi.pdf)
 
