@@ -49,6 +49,18 @@ Preorder is open:
 
 You may also [request an inspection copy from the Publisher](http://cambridge.force.com/Samples?isbn=9781108716208&Title=Data+Analysis+for+Business%2C+Economics%2C+and+Policy&Author=B%C3%A9k%C3%A9s%2FK%C3%A9zdi)!
 
+## Key information to download
+
+* [**Front Matter**](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf),   
+* [**Table of content**](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
+* [**Index**](https://assets.cambridge.org/97811084/83018/index/9781108483018_index.pdf)   
+* [**Sample chapters** 10 and 15](https://www.book2look.com/vbook.aspx?id=9781108483018)   
+* [**Short summary on why use this book**](/files/bekes-kezdi-data-analysis-summary.pdf)   
+* [**A one-page summary**](one-page-summary), also available as [PDF]((/files/gabors_da_1pager.pdf)){:target="_blank"}    
+
+
+
+
 ## Why use this book?
 
 **Data analysis is a process**. It starts with formulating a question and collecting appropriate data, or assessing whether the available data can help answer the question. Then comes cleaning and organizing the data, tedious but essential tasks that affect the results of the analysis as much as any other step in the process. Exploratory data analysis gives context to the eventual results and helps deciding the details of the analytical method to be applied. The main analysis consists of choosing and implementing the method to answer the question, with potential robustness checks. Along the way, correct interpretation and effective presentation of the results are crucial. Carefully crafted data visualization help summarize our findings and convey key messages. The final task is to answer the original question, with potential qualifications and directions for future inquiries.
@@ -90,16 +102,6 @@ Gábor Kézdi is a Research Associate Professor at the University of Michigan’
 -->
 
 We could not have done is alone. Far from it. So, [we are grateful](/our-thanks/), really. 
-
-## Key information to download
-
-* [**Front Matter**](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf),   
-* [**Table of content**](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
-* [**Index**](https://assets.cambridge.org/97811084/83018/index/9781108483018_index.pdf)   
-* [**Sample chapters** 10 and 15](https://www.book2look.com/vbook.aspx?id=9781108483018)   
-* [**Short summary on why use this book**](/files/bekes-kezdi-data-analysis-summary.pdf)   
-* [**A one-page summary**](one-page-summary), also available as [PDF]((/files/gabors_da_1pager.pdf)){:target="_blank"}    
-
 
 
 ## Codes
