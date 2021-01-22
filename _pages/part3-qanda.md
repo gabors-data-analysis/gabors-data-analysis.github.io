@@ -1,7 +1,8 @@
 ---
 permalink: /part3-qanda
 title: "Part 3: Questions and Answers"
-classes: #wide
+layout: single
+classes: wide
 toc: false
 author_profile: false
 redirect_from:
