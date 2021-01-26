@@ -21,3 +21,6 @@ Regarding **external validity**, one way to check robustness is to take out 1% o
 ### Chapter 19
 On **DAGs and Potential outcomes**, deep discussion for social scientists: *Imbens, Guido W. 2020. "Potential Outcome and Directed Acyclic Graph Approaches to Causality: Relevance for Empirical Practice in Economics." Journal of Economic Literature, 58 (4): 1129-79.* [LINK to paper](https://www.aeaweb.org/articles?id=10.1257/jel.20191597). An amazing review that includes Twitter quotes. 
 
+## Chapter 19
+
+Beetroot juice is said to be great. [Review study](https://www.healthline.com/health/food-nutrition/beetroot-juice-benefits#Overview) [Another review](https://www.medicalnewstoday.com/articles/324898). For example, reference to an RCT with beetroot juice -- dietary inorganic nitrate acutely reduces blood pressure. [Study](https://www.ahajournals.org/doi/10.1161/HYPERTENSIONAHA.114.04675). Review in [medical journal](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4425174/)
