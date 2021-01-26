@@ -25,7 +25,7 @@ A: Multicollinearity is a small sample issue, so in small samples this could be 
 A: Close. Model complexity may also include functional form issues, like interactions, quadratic terms
 
 
->**Q: if we want to avoid adding too many variables to the model, should we also avoid using categorical variables? **
+>**Q: if we want to avoid adding too many variables to the model, should we also avoid using categorical variables?**
 
 A: No. But, we may need to combine *values* of categorical variables. One example could be using regions such as Western Europe or South-East Asia instead of countries. 
 
@@ -62,4 +62,13 @@ A: While there are infinite possibilities *in theory*, in practice, it will alwa
 
 A: We can't really optimize the whole tree -- the algorithm is greedy, so we always do just one step. There is no theoretical 
 benchmark tree to get compared to and that means that is indeed very likely that there is always a "better" tree, we just did not find it, because we cannot try out all trees. 
+
+>**Q: Is there a way to combine LASSO and CART?**
+
+A: No. Lasso is aimed at regularizing models that have coefficients such as OLS or Logit, CART is not such a model. CART does variable selection as it may not include variables that could contribute very little to improving fit. 
+
+## Chapter 16
+>**Q: Could trees built in the random forest biased (compared to CART)?**
+
+A: Yes. In random forest, we build trees, by artificially reducing fit -- limiting predictors that may be used. Thus, these trees, individually, could indeed be biased. 
 
