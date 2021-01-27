@@ -67,6 +67,11 @@ benchmark tree to get compared to and that means that is indeed very likely that
 
 A: No. Lasso is aimed at regularizing models that have coefficients such as OLS or Logit, CART is not such a model. CART does variable selection as it may not include variables that could contribute very little to improving fit. 
 
+>**Q: The Variable importance plot for the CART has small values for variables that are not in the tree shown. How is it possible?**
+
+A: Well, that was not clear for us either until we read the `caret` package [documentation](documentation), which says "Recursive Partitioning: The reduction in the loss function (e.g. mean squared error) attributed to each variable at each split is tabulated and the sum is returned. Also, since there may be candidate variables that are important but are not used in a split, the top competing variables are also tabulated at each split. This can be turned off using the maxcompete argument in rpart.control." This is indeed the case, the R code has a comment at the end showing it. 
+
+
 ## Chapter 16
 >**Q: Could trees built in the random forest biased (compared to CART)?**
 
