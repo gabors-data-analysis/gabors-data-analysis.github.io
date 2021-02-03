@@ -14,7 +14,7 @@ Used in case study `11A Does smoking pose a health risk?`
 
 ## Data source
 
-[Survey of Health, Aging and Retirement in Europe (SHARE)](http://www.share-project.org/home0.html) with [easySHARE dataset](http://www.share-project.org/special-data-sets/easyshare.html), release 6.0.0
+[Survey of Health, Aging and Retirement in Europe (SHARE)](http://www.share-project.org/home0.html){:target="_blank"} with [easySHARE dataset](http://www.share-project.org/special-data-sets/easyshare.html){:target="_blank"}, release 6.0.0
 
 Note: You may receive access to a more recent easySHARE version; that's fine as it should contain all observations and variables in the 6.0.0 release, adding some more.
 
@@ -34,8 +34,8 @@ Note: You may receive access to a more recent easySHARE version; that's fine as 
 
 To get the data, you will need to register and obtain rights. Here are the steps. 
 
-1. [Read the conditions](http://www.share-project.org/data-access/user-registration.html)
-2. [Download tha user agreement](http://www.share-project.org/fileadmin/pdf_documentation/SHARE_Data_Statement.pdf), and fill out the Statement (registration form).
+1. [Read the conditions](http://www.share-project.org/data-access/user-registration.html){:target="_blank"}
+2. [Download tha user agreement](http://www.share-project.org/fileadmin/pdf_documentation/SHARE_Data_Statement.pdf){:target="_blank"}, and fill out the Statement (registration form).
 
 If you are *not* from a scientific institution, you need to fill in page 2, such as adding something like
 * Project title could be "Data Analysis course"
@@ -46,7 +46,7 @@ If you are *not* from a scientific institution, you need to fill in page 2, such
 SHARE Research Data Center
 Email:  share-rdc@uvt.nl
 
-4. You will get a login code, and can download easySHARE from the [SHARE Research Data Center](https://releases.sharedataportal.eu/users/login). 
+4. You will get a login code, and can download easySHARE from the [SHARE Research Data Center](https://releases.sharedataportal.eu/users/login){:target="_blank"}. 
 
 ## Teachers & Instructors - to speed up for classes
 
@@ -57,7 +57,7 @@ The simplified approach provides ‘teachers’ with a way of help registering c
 1. Download, fill out, sign and scan the "Statement Concerning the Use of SHARE Data."
 Ask all your students to do the same as in 1., with their institutional email address, as a student at your institution; collect all these signed and scanned statements from students.
 2. Collect names and institutional email addresses of students in a spreadsheet (columns should be last name, first name, email).
-3. Download, fill out, sign and scan the easySHARE [Teacher Statement](http://www.share-project.org/fileadmin/pdf_documentation/easySHARE_Teacher_Statement.pdf) ("Statement Concerning The Use of easySHARE Data for Teaching Purposes." 
+3. Download, fill out, sign and scan the easySHARE [Teacher Statement](http://www.share-project.org/fileadmin/pdf_documentation/easySHARE_Teacher_Statement.pdf){:target="_blank"} ("Statement Concerning The Use of easySHARE Data for Teaching Purposes." 
 4. Send back the following package to the SHARE Research Data Center: share-rdc@uvt.nl 
 	(i) your signed User AND Teacher Statement, 
 	(ii) the list of students, and 
@@ -68,8 +68,8 @@ Ask all your students to do the same as in 1., with their institutional email ad
 
 To get the archived version 6.0.0 we use, follow this simple process:
 
-1. Login to  [SHARE Research Data Center](https://releases.sharedataportal.eu/users/login). 
-2. We will need the [archived 6.0.0 version](https://releases.sharedataportal.eu/releases?show_archived=1).
+1. Login to  [SHARE Research Data Center](https://releases.sharedataportal.eu/users/login){:target="_blank"}. 
+2. We will need the [archived 6.0.0 version](https://releases.sharedataportal.eu/releases?show_archived=1){:target="_blank"}.
 3. Download the zip file `easySHARE_6.0.0_Stata.zip` 
 4. Unzip the file, and copy the .dta file to the raw folder
 

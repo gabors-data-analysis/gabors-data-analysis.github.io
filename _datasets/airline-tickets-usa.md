@@ -13,8 +13,8 @@ Used in case study `22A How does a merger between airlines affect prices?`
 
 ## Data source
 
-[Airline Origin and Destination Survey (DB1B)](https://www.transtats.bts.gov/DatabaseInfo.asp?DB_ID=125)
-collected by the [Office of Airline Information of the Bureau of Transportation Statistics of the United States Department of Transportation](https://www.bts.gov).  
+[Airline Origin and Destination Survey (DB1B)](https://www.transtats.bts.gov/DatabaseInfo.asp?DB_ID=125){:target="_blank"}
+collected by the [Office of Airline Information of the Bureau of Transportation Statistics of the United States Department of Transportation](https://www.bts.gov){:target="_blank"}.  
 
 
 ## Data access and copyright

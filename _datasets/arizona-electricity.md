@@ -15,10 +15,10 @@ Used in case study `12B Electricity consumption and temperature`
 ## Data source
 
 [Arizona residential electricity consumption data]
-collected by the [US Energy Information Administration (EIA)](https://www.eia.gov/opendata/).  
+collected by the [US Energy Information Administration (EIA)](https://www.eia.gov/opendata/){:target="_blank"}.  
 
 
-[Temperature data] collected by the [US National Oceanic and Atmospheric Administration (NOAA)](https://www.ncdc.noaa.gov/cdo-web/search).  
+[Temperature data] collected by the [US National Oceanic and Atmospheric Administration (NOAA)](https://www.ncdc.noaa.gov/cdo-web/search){:target="_blank"}.  
 
 
 ## Data access and copyright  
@@ -29,12 +29,12 @@ You can use this publicly available data for educational purposes.
 ## Download the data  
 
 
-1. The Arizona residential electricity consumption data can be obtained by clicking through the [EIA Data Sets API Query Browser](https://www.eia.gov/opendata/qb.php?category=371)  
+1. The Arizona residential electricity consumption data can be obtained by clicking through the [EIA Data Sets API Query Browser](https://www.eia.gov/opendata/qb.php?category=371){:target="_blank"} 
 EIA Data Sets > Electricity > Retail sales of electricity > Residential > Retail sales of electricity : Arizona : residential : monthly.   
 2. Download the "data" (a comma-delimited csv file with heading rows).  
 3. Our data was downloaded in June 2018.  
 
-1. The temperature data can be obtained by clicking through the [Climate Data Online Search page](https://www.ncdc.noaa.gov/cdo-web/search)
+1. The temperature data can be obtained by clicking through the [Climate Data Online Search page](https://www.ncdc.noaa.gov/cdo-web/search){:target="_blank"}
 2. Select "Global Summary of the Month", date range from Jan 1 2001, Search for "Stations" and Enter a Search Term "Phoenix".  
 3. Then from the several items there select "PHOENIX AIRPORT, AZ US, station ID: GHCND:USW00023183".  
 4. Go to your cart, select that you want csv.  

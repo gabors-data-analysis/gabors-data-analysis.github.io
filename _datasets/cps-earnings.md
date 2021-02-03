@@ -12,7 +12,7 @@ Used in the case studies `9A Estimating gender and age differences in earnings` 
 
 ## Data source  
 
-[CPS Annual Earnings File (also known as the Merged Outgoing Rotation Groups or morg)] extracted by the [National Bureau of Economic Research in the USA](http://www2.nber.org/data/morg.html).   
+[CPS Annual Earnings File (also known as the Merged Outgoing Rotation Groups or morg)] extracted by the [National Bureau of Economic Research in the USA](http://www2.nber.org/data/morg.html){:target="_blank"}.   
 
 The Current Population Survey (CPS) is the monthly household survey conducted in the USA by the Bureau of Labor Statistics. Its primary goal is to measure labor force participation and employment. It interviews 50-60,000 households per month.  
 New households enter the CPS in each month by careful random sampling. Each household is then interviewed once in each month for 4 months. They are not interviewed for 8 months, after which they are interviewed again for 4 more months. As a result, the data collected in each month contains data from four subsamples that give their 1st-4th or 5th-8th interview in that month. The questions about usual weekly hours and earnings are asked only at households in their 4th and 8th interview; for each participating household these two interviews are 12 months apart from each other.  

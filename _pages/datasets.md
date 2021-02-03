@@ -19,7 +19,7 @@ redirect_from:
 [Predicting AirBnB apartment prices: selecting a regression model](link)
 [Predicting Airbnb apartment prices with random forest](link)
 
-**Data**: [Access dataset](https://osf.io/qyca8/)
+**Data**: [Access dataset](https://osf.io/qyca8/){:target="_blank"}
 
 **Source**: Downloaded from web [inside airbnb](http://insideairbnb.com/get-the-data.html){:target="_blank"}.    
 **Copyright**: "The data behind the Inside Airbnb site is sourced from publicly available information from the Airbnb site. The data has been analyzed, cleansed and aggregated where appropriate to faciliate public discussion. Creative Commons CC0 1.0 Universal (CC0 1.0) "Public Domain Dedication" license."
@@ -34,7 +34,7 @@ The unit of observation in the data is an airline ticket. The dataset has N=1126
 **Used in case studies**: 
 [How does a merger between airlines affect prices?](link) 
 
-**Data**: [Access dataset](https://osf.io/6398x/)
+**Data**: [Access dataset](https://osf.io/6398x/){:target="_blank"}
 
 **Source**:Downloaded from the [US Bureau of Transportation Statistics](https://www.transtats.bts.gov/DatabaseInfo.asp?DB_ID=125){:target="_blank"}  
 **Copyright**: N/A
@@ -50,7 +50,7 @@ The unit of observation in the data is an airline ticket. The dataset has N=1126
 **Used in case studies**: 
 [Electricity consumption and temperature](link)  
 
-**Data**: [Access dataset](https://osf.io/9wkae/)
+**Data**: [Access dataset](https://osf.io/9wkae/){:target="_blank"}
 
 **Source**: Downloaded from the [US Energy Information Administration (EIA)](https://www.eia.gov/){:target="_blank"} and [National Oceanic and Atmospheric Administration (NOAA)](https://w2.weather.gov/climate/xmacis.php?wfo=psr){:target="_blank"} 
 **Copyright**: EIA:[Public domain](https://www.eia.gov/about/copyrights_reuse.php) and NOAA:[Public domain](https://www.weather.gov/disclaimer){:target="_blank"}  
@@ -65,7 +65,7 @@ The unit of observation in the data is an airline ticket. The dataset has N=1126
 **Used in case studies**:
 [Import demand and industrial production](link)
 
-**Data**: [Access dataset](https://osf.io/hwgnb/)
+**Data**: [Access dataset](https://osf.io/hwgnb/){:target="_blank"}
 
 **Source**:Downloaded from [The World Bank: World Development Indicators](https://databank.worldbank.org/reports.aspx?source=1179&series=IPTOTNSKD){:target="_blank"}    
 **Copyright**:[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets){:target="_blank"}  
@@ -78,7 +78,7 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Used in case studies**:
 [Are Australian weather forecasts well calibrated?](link)
 
-**Data**: [Access dataset](https://osf.io/4xkze/)
+**Data**: [Access dataset](https://osf.io/4xkze/){:target="_blank"}
 
 **Source**:Downloaded from the [Australian government](https://data.gov.au/data/dataset/weather-forecasting-verification-data-2015-05-to-2016-04){:target="_blank"}. The file is called "bometa20150501-20160430.zip".  
 **Copyright**:[Creative Commons Attribution Share-Alike 3.0 Australia]  
@@ -90,7 +90,7 @@ Australian city of Darwin. The dataset has N=350 observations.
 [Comparing online and offline prices: data collection](link)  
 [Comparing online and offline prices: testing the difference](link)   
 
-**Data**: [Access dataset](https://osf.io/7mtcv/)
+**Data**: [Access dataset](https://osf.io/7mtcv/){:target="_blank"}
 
 **Source**: From the paper [Cavallo, Alberto, 2016, "Cavallo (2017) "Are Online and Offline Prices Similar? Evidence from Large Multi-Channel Retailers" - American Economic Review - Vol. 107(1), p.283–303", Harvard Dataverse, V4](https://doi.org/10.7910/DVN/XXOUHF){:target="_blank"} 
 **Copyright**:[CC0 Public Domain](https://dataverse.org/best-practices/dataverse-community-norms){:target="_blank"}  
@@ -102,7 +102,7 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Used in case studies**: 
 [Predicting firm exit: probability and classification](link)  
 
-**Data**: [Access dataset](https://osf.io/b2ft9/)
+**Data**: [Access dataset](https://osf.io/b2ft9/){:target="_blank"}
 
 **Source**: From Bisnode, a major European business information company.  
 **Copyright**: The dataset as is, may be used for educational purposes. Bisnode has all other righst
@@ -113,7 +113,7 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Used in case studies**: 
 [Forecasting a home price index](link)  
 
-**Data**: [Access dataset](https://osf.io/hzfny/)
+**Data**: [Access dataset](https://osf.io/hzfny/){:target="_blank"}
 
 **Source** S&P Dow Jones Indices LLC, S&P/Case-Shiller CA-Los Angeles Home Price Index [LXXRNSA].   Retrieved from FRED, [Federal Reserve Bank of St. Louis]( https://fred.stlouisfed.org/series/LXXRNSA){:target="_blank"};, December 1, 2019.   
 **Copyright**:  S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Los Angeles, California in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC "S&P".  
@@ -126,7 +126,7 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Used in case studies**: 
 [City size distribution in Japan](link)  
 
-**Data**: [Access dataset](https://osf.io/3g7pd/)
+**Data**: [Access dataset](https://osf.io/3g7pd/){:target="_blank"}
 
 **Source**:From Wikipedia contributors. (2020, August 4). List of cities in Japan. In [Wikipedia, The Free Encyclopedia](https://en.wikipedia.org/w/index.php?title=List_of_cities_in_Japan&oldid=971071171){:target="_blank"}. Retrieved 14:09, September 2, 2020..  
 **Copyright**:[Creative Commons Attribution-ShareAlike License](https://en.wikipedia.org/wiki/wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License){:target="_blank"}  
@@ -138,7 +138,7 @@ Australian city of Darwin. The dataset has N=350 observations.
 [Estimating gender and age differences in earnings](link)  
 [Understanding the gender difference in earnings](link)
 
-**Data**: [Access dataset](https://osf.io/g8p9j/)
+**Data**: [Access dataset](https://osf.io/g8p9j/){:target="_blank"}
 
 **Source**: Downloaded from the [National Bureau of Economic Research](https://data.nber.org/morg/annual/){:target="_blank"}  
 **Copyright**:[No copyright restrictions on extracts use.](https://data.nber.org/data/morg.html){:target="_blank"}  
@@ -153,7 +153,7 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Used in case studies**:   
 [Food and health](link)  
 
-**Data**: [Access dataset](https://osf.io/vrb9a/)
+**Data**: [Access dataset](https://osf.io/vrb9a/){:target="_blank"}
 
 **Source**: Downloaded and combined from the [National Health and Nutrition Examination Survey (NHANES) of the CDC’s National Center for Health Statistics (NCHS)(https://wwwn.cdc.gov/nchs/nhanes/Default.aspx){:target="_blank"}    
 **Copyright**: CDC:[Public domain](https://www.cdc.gov/other/agencymaterials.html){:target="_blank"}
@@ -166,7 +166,7 @@ Australian city of Darwin. The dataset has N=350 observations.
 [Measuring home team advantage in football](link)  
 [Estimating the impact of replacing football team managers](link)  
 
-**Data**: [Access dataset](https://osf.io/zqm6c/)
+**Data**: [Access dataset](https://osf.io/zqm6c/){:target="_blank"}
 
 **Source 1**: Game results come from [football-data.co.uk website](https://www.football-data.co.uk/englandm.php){:target="_blank"}. 
 **Copyright 1**: N/A
@@ -182,7 +182,7 @@ Australian city of Darwin. The dataset has N=350 observations.
 [Estimating the effect of the 2010 Haiti earthquake on GDP](link)  
 The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impacts of the 2010 earthquake in Haiti. Empirical Economics, 56(5), 1647–1681.](https://doi.org/10.1007/s00181-017-1405-4){:target="_blank"}  
 
-**Data**: [Access dataset](https://osf.io/c4wyj/)
+**Data**: [Access dataset](https://osf.io/c4wyj/){:target="_blank"}
 
 **Source**: [Data and code available from authors Best, R. and Burke, P. J.](https://www.dropbox.com/s/h70hvaf2xetrsq8/Best_Burke.zip?dl=0){:target="_blank"}      
 **Copyright**:N/A  
@@ -194,7 +194,7 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Used in case studies**:  
 [Distributions of body height and income](link)  
 
-**Data**: [Access dataset](https://osf.io/ybdcn/)
+**Data**: [Access dataset](https://osf.io/ybdcn/){:target="_blank"}
 
 **Source**:
 **Copyright**:  
@@ -207,7 +207,7 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 [Comparing hotel prices in Europe: Vienna vs. London](link)  
 [How stable is the hotel price - distance to center relationship?](link)  
 
-**Data**: [Access dataset](https://osf.io/r6uqb/)
+**Data**: [Access dataset](https://osf.io/r6uqb/){:target="_blank"}
 
 **Source**: Authors' collection.  
 **Copyright**: N/A  
@@ -230,7 +230,7 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 [Finding a good deal among hotels with non-linear function](link)  
 [Finding a good deal among hotels with multiple regression](link)  
 
-**Data**: [Access dataset](https://osf.io/4e6d8/)
+**Data**: [Access dataset](https://osf.io/4e6d8/){:target="_blank"}
 
 **Source**: Authors' collection.  
 **Copyright**: N/A  
@@ -246,7 +246,7 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 [What likelihood of loss to expect on a stock portfolio?](link)  
 [Testing the likelihood of loss on a stock portfolio](link)  
 
-**Data**: [Access dataset](https://osf.io/vzwbp/)
+**Data**: [Access dataset](https://osf.io/vzwbp/){:target="_blank"}
 
 **Source**:  
 **Copyright**:
@@ -258,7 +258,7 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Used in case studies**:  
 [Does smoking pose a health risk?](link)  
 
-**Data**: [Access dataset](https://osf.io/vd9bz/)
+**Data**: [Access dataset](https://osf.io/vd9bz/){:target="_blank"}
  
 **Source**: [SHARE Project](https://releases.sharedataportal.eu/releases?show_archived=1){:target="_blank"}   
 **Copyright**: SHARE. Access is provided after filling in and submitting a [data user statement](http://www.share-project.org/data-access/user-registration.html){:target="_blank"}     
@@ -275,7 +275,7 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Used in case studies**:  
 [Returns on a company stock and market returns](link)   
 
-**Data**: [Access dataset](https://osf.io/78g6d/)
+**Data**: [Access dataset](https://osf.io/78g6d/){:target="_blank"}
 
 **Source**:
 **Copyright**:
@@ -288,7 +288,7 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Used in case studies**:  
 [Forecasting daily ticket sales for a swimming pool](link)  
 
-**Data**: [Access dataset](https://osf.io/s3ng2/)
+**Data**: [Access dataset](https://osf.io/s3ng2/){:target="_blank"}
 
 **Source**: Downloaded from the [City of Albuquerque Open Data (New Mexico, USA)](https://opendata.cabq.gov/dataset/swimming-pool-admissions){:target="_blank"}.  
 *Thanks to the city for help!*    
@@ -306,7 +306,7 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 [Predicting used car value: log prices](link)  
 [Predicting used car value with regression trees](link)  
 
-**Data**: [Access dataset](https://osf.io/8tx54/)
+**Data**: [Access dataset](https://osf.io/8tx54/){:target="_blank"}
 
 **Source**: Authors' collection.  
 **Copyright**: N/A  
@@ -320,7 +320,7 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 [Management quality and firm size: describing patterns of association](link)  
 [Founder/family ownership and quality of management](link)  
 
-**Data**: [Access dataset](https://osf.io/t6zdp/)
+**Data**: [Access dataset](https://osf.io/t6zdp/){:target="_blank"}
 
 **Source**: Prepared for this study by the [World Management Survey project](https://worldmanagementsurvey.org/about-us/){:target="_blank"}.    
 *Thanks to Scur, Bloom and Van Reenen!*  
@@ -330,9 +330,9 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Content and coverage**: The working-from-home data includes information about the employees of a travel agency in China from 2010. The dataset has N=249 observations.  
 **Key variables**: employee retention, employee performance.    
 **Used in case studies**:  
-[Working from home and employee performance](link)  
+[Working from home and employee performance](link)
 
-**Data**: [Access dataset](https://osf.io/6pa59/)
+**Data**: [Access dataset](https://osf.io/6pa59/){:target="_blank"}
 
 **Source**: The data and Stata do-files used to replicate clean datasets and results are available from [Nick Bloom's website](https://nbloom.people.stanford.edu/sites/g/files/sbiybj4746/f/wfh.zip){:target="_blank"}  
 The case study is based on the paper by [Nicholas Bloom, James Liang, John Roberts, Zhichun Jenny Ying, Does Working from Home Work? Evidence from a Chinese Experiment , The Quarterly Journal of Economics, Volume 130, Issue 1, February 2015, Pages 165–218](https://doi.org/10.1093/qje/qju032){:target="_blank"}.   
@@ -345,7 +345,7 @@ The case study is based on the paper by [Nicholas Bloom, James Liang, John Rober
 [Displaying immunization rates across countries](link)  
 [Immunization against measles and saving children](link)  
 
-**Data**: [Access dataset](https://osf.io/9cwu4/)
+**Data**: [Access dataset](https://osf.io/9cwu4/){:target="_blank"}
 
 **Source**: Downloaded from [The World Bank: World Development Indicators](https://databank.worldbank.org/reports.aspx?source=2&series=SH.IMM.MEAS&country=){:target="_blank"}.  
 **Copyright**: [Creative Commons Attribution 4.0 (CC-BY 4.0)](https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets){:target="_blank"}      
@@ -356,7 +356,7 @@ The case study is based on the paper by [Nicholas Bloom, James Liang, John Rober
 **Used in case studies**:
 [How is life expectancy related to the average income of a country?](link)  
 
-**Data**: [Access dataset](https://osf.io/pguwf/)
+**Data**: [Access dataset](https://osf.io/pguwf/){:target="_blank"}
 
 **Source**: Downloaded from [The World Bank: World Development Indicators](https://databank.worldbank.org/reports.aspx?source=2&series=SP.DYN.LE00.IN&country=){:target="_blank"}  
 **Copyright**:[Creative Commons Attribution 4.0 (CC-BY 4.0)](https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets){:target="_blank"}    
