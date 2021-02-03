@@ -1,8 +1,8 @@
 ---
-permalink: /dat_airline-tickets-usa
 title: "README: airline-tickets-usa dataset"
 toc: false
 author_profile: false
+collections: datasets
 redirect_from:
   - /dat_airline-tickets-usa.html
 ---

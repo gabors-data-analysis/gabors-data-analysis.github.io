@@ -1,8 +1,8 @@
 ---
-permalink: /dat_hotels-vienna
 title: "README: hotels-vienna dataset"
 toc: false
 author_profile: false
+collections: datasets
 redirect_from:
   - /dat_hotels-vienna.html
 ---

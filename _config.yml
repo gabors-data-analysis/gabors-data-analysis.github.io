@@ -191,6 +191,9 @@ kramdown:
 
 # Collections
 collections:
+  datasets:
+    output: true
+    permalink: /:collection/:path/
   casestudies:
     output: true
     permalink: /:collection/:path/
@@ -198,9 +201,6 @@ collections:
     output: true
     permalink: /:collection/:path/
   content:
-    output: true
-    permalink: /:collection/:path/
-  materials:
     output: true
     permalink: /:collection/:path/
 
@@ -261,10 +261,10 @@ defaults:
       comment: true
       sidebar:
         nav: "sidebar"
-  # _materials
+  # _datasets
   - scope:
       path: ""
-      type: materials
+      type: datasets
     values:
       layout: single
       author_profile: true

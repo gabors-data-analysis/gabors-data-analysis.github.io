@@ -9,8 +9,8 @@ How can we find the hotels that are underpriced relative to their distance from 
 
 This case study uses the `hotels-vienna` dataset to illustrate regression analysis with one right-hand-side variable. It shows the use of **bin scatters** and **lowess non-parametric regressions** that reveal qualitative patterns of association. In order to find out the quantitative relationship between distance and average price, we apply **simple linear regression**. The case study illustrates the use of **predicted values** and **regression residuals** 
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [hotels-vienna](link-hotels-vienna).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch07-hotels-simple-reg/ch07-hotels-simple-reg.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch07-hotels-simple-reg/ch07-hotels-simple-reg.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch07-hotels-simple-reg/ch07-hotels-simple-reg.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch07-hotels-simple-reg).
+**Data**: [hotels-vienna](/datasets/#hotels-vienna).
 **Graphs**: [.png](ch07A-png-zip) or [.eps](ch07A-eps-zip)  
 
 
@@ -19,8 +19,8 @@ Continuing our search for the best hotel deals in Vienna, we would like to uncov
 
 This short case study again uses the `hotels-vienna` dataset, to illustrate linear regression analysis with the use of **logarithms**. It shows whether and why it may make sense to take logs of the variables in the regression, and how to estimate, and interpret the results of, and choose from **level-log** regressions, **log-level** regressions, and **log-log** regressions. 
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [hotels-vienna](link-hotels-vienna).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch08-hotels-nonlinear/ch08-hotels-nonlinear-reg.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch08-hotels-nonlinear/ch08-hotels-nonlinear-reg.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch08-hotels-nonlinear/ch08-hotels-nonlinear-reg.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch08-hotels-nonlinear).
+**Data**: [hotels-vienna](/datasets/#hotels-vienna).
 **Graphs**: [.png](ch08A-png-zip) or [.eps](ch08A-eps-zip)  
 
 
@@ -29,8 +29,8 @@ People tend to live longer in richer countries. How long people live is usually 
 
 This case study uses the `worldbank-lifeexpectancy` dataset based on the World Development Index database available at the World Bank webside. It examines cross-sectional data from a single year, 2017, for 182 countries. The case study illustrates the choice between **total and per capita measures** (here GDP), regressions with **variables in logs**, and two ways to model nonlinear patterns in the framework of the linear regression: **piecewise linear splines**, and **polynomials**. It also illustrates whether and how to use **weights** in regression analysis, and what that choice implies for the correct interpretation of the results. The case study also shows how to use **informative visualization** to present the results of regressions.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [worldbank-lifeexpectancy](link-worldbank-lifeexpectancy).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch08-life-expectancy-income/ch08-life-expectancy-income.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch08-life-expectancy-income/ch08-life-expectancy-income.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch08-life-expectancy-income/ch08-life-expectancy-income.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch08-life-expectancy-income).
+**Data**: [worldbank-lifeexpectancy](/datasets/#worldbank-lifeexpectancy).
 **Graphs**: [.png](ch08B-png-zip) or [.eps](ch08B-eps-zip)  
 
 
@@ -39,8 +39,8 @@ When we search for a good deal among hotels, we care about hotel quality as well
 
 This short case study again uses the `hotels-vienna` dataset, to illustrate the consequences of measurement error for regression analysis. In particular, it shows the effect of **classical measurement error** in the right-hand-side variable on the estimated slope of a simple linear regression. 
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [hotels-vienna](link-hotels-vienna).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch08-hotels-measurement-error/ch08-hotels-measeerror.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch08-hotels-measurement-error/ch08-hotels-measeerror.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch08-hotels-measurement-error/ch08-hotels-measeerror.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch08-hotels-measurement-error).
+**Data**: [hotels-vienna](/datasets/#hotels-vienna).
 **Graphs**: [.png](ch08C-png-zip) or [.eps](ch08C-eps-zip)  
 
 
@@ -49,8 +49,8 @@ Do women working in the same occupation tend to earn the same as men? And what a
 
 This case study uses the `cps-morg` dataset, a cross-section based on the Current Population Survey (CPS) of the U.S. in 2014. It focuses on a single occupation potentially relevant for many students of data analysis, "Market research analysts and marketing specialists". The case study illustrates how to estimate the **standard error** of regression coefficients and how to construct and interpret **confidence intervals**. It also shows how to **test hypotheses about regression coefficients** and the standard way of **presenting regression results** in tables. We will ues a larger subsample of the same data in case study 10A to uderstand the sources of gender difference in earnings.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [cps-morg](link-cps-morg).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch09-gender-age-earnings/ch09-earnings-inference.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch09-gender-age-earnings/ch09-earnings-inference.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch09-gender-age-earnings/ch09-earnings-inference.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch09-gender-age-earnings).
+**Data**: [cps-morg](/datasets/#cps-morg).
 **Graphs**: [.png](ch09A-png-zip) or [.eps](ch09A-eps-zip)  
 
 
@@ -59,8 +59,8 @@ We have uncovered the average price - distance association among hotels in a par
 
 This case study uses the `hotels-europe` data from Vienna, Amsterdam and Barcelona. It illustrates the various kinds of **issues with external validity**, first focusing on time (different dates), then space (different cities), and groups of observations (different kinds of accommodations).
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [hotels-europe](link-hotels-europe).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch09-hotels-europe-stability/ch09-hotels-externalvalid.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch09-hotels-europe-stability/ch09-hotels-externalvalid.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch09-hotels-europe-stability/ch09-hotels-externalvalid.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch09-hotels-europe-stability).
+**Data**: [hotels-europe](/datasets/#hotels-europe).
 **Graphs**: [.png](ch09B-png-zip) or [.eps](ch09B-eps-zip)  
 
 
@@ -69,8 +69,8 @@ Women earn less, on average, than man with similar qualifications. How large is 
 
 This short case study uses the `cps-morg` dataset to illustrate the use of multiple regression analysis to help understand the sources of differences between groups of observations. The data is a cross-section based on the Current Population Survey (CPS) of the U.S. in 2014, and the sample is restricted to employees with a graduate degree. The case study illustrates how to estimate and intepret the results of a **multiple regression**. It shows how to include **qualitative right-hand-side variables** and **interactions** in the regression, how to interpret their results, and how to use **visualization** to present estimtes of nonlinear patterns. The case study illustrates the difficulty of uncovering **causal relationships** from the results of multiple regression analysis using cross-sectional observational data.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [cps-morg](link-cps-morg).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-gender-earnings-understand/ch10-gender-earnings-multireg.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-gender-earnings-understand/ch10-gender-earnings-multireg.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-gender-earnings-understand/ch10-gender-earnings-multireg.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch10-gender-earnings-understand).
+**Data**: [cps-morg](/datasets/#cps-morg).
 **Graphs**: [.png](ch10A-png-zip) or [.eps](ch10A-eps-zip)  
 
 
@@ -79,8 +79,8 @@ We return to estimating a good deal among hotels for the last time. We want to f
 
 This case study uses `hotels-vienna` dataset to illustrate the use of multiple regression analyis for prediction within a sample and **residual analysis**. It uses the susample of 3-4 star hotels for a single night in Vienna in November 2017. It illustrates the use of a **nonlinear specification** within a multiple regression and how to identify observations with the largest negative **residuals**. It also illustrates the use of the ***y*-hat - *y* plot** to visualize the prediction within the sample and the residuals from the predicted values.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [hotels-vienna](link-hotels-vienna).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-hotels-multiple-reg/ch10-hotels-multiple-reg.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-hotels-multiple-reg/ch10-hotels-multiple-reg.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-hotels-multiple-reg/ch10-hotels-multiple-reg.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch10-hotels-multiple-reg).
+**Data**: [hotels-vienna](/datasets/#hotels-vienna).
 **Graphs**: [.png](ch10BA-png-zip) or [.eps](ch10B-eps-zip)  
 
 
@@ -89,8 +89,8 @@ Are smokers less likely to remain healthy than non-smokers? How about former smo
 
 This case study uses the `share-health` data from the SHARE survey (Survey for Health, Aging and Retirement in Europe). We focus on people who were 50 to 60 years old and said to be in good health in 2011. We look at how they rated their health in 2015 and see who remained healthy ahd who changed their answer to not healthy. This case study illustrates probability models. It shows how to estimate and interpret the results of a **linear probability model** and the uses of **logit** and **probit** models. It compares the linear probability estimates to the estimated **marginal differences** from logit and probit. Finally, it illustrates when and how the different models may result in different **predicted probabilities** and how to compare their fit using **Brier-score** and other measures of fit.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [share-health](link-share-health).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch11-smoking-health-risk/ch11-smoking-health-risk.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch11-smoking-health-risk/ch11-smoking-health-risk.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch11-smoking-health-risk/ch11-smoking.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch11-smoking-health-risk).
+**Data**: [share-health](/datasets/#share-health).
 **Graphs**: [.png](ch11A-png-zip) or [.eps](ch11A-eps-zip)  
 
 
@@ -99,8 +99,8 @@ Should we take an umbrella when weather forecast predicts rain? In particular, h
 
 This short case study uses the `australia-weather-forecast` data covering 350 days in 2015/16 and looks at rain forecast and actual rain for the Northern Australian city of Darwin. The case study illustrates how to construct and interpret a **calibration curve**.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [australia-weather-forecast](link-australia-weather-forecast).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch11-australia-rainfall-predict/ch11-australia-rainfall-predict.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch11-australia-rainfall-predict/ch11-australia-rainfall-predict.R) or [**Python**](link) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch11-australia-rainfall-predict).
+**Data**: [australia-weather-forecast](/datasets/#australia-weather-forecast).
 **Graphs**: [.png](ch11B-png-zip) or [.eps](ch11B-eps-zip)  
 
 
@@ -109,8 +109,8 @@ How do monthly returns on a company stock move together with monthly market retu
 
 This case study uses the `stocks-sp500` dataset covering 21 years of daily data of many company stocks, focusing on the Microsoft stock and the S&P 500 stock market index. We construct monthly time series of percent returns as the percent change in closing price on the last day of each month. The case study illustrates the use of a simple **time series regression** in changes, focusing on the interpretation and visualization of the results.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [stocks-sp500](link-stocks-sp500).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch12-stock-returns-risk/ch12-stock-returns-risk.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch12-stock-returns-risk/ch12-stock-returns-risk.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch12-stock-returns-risk/ch12-stock-returns.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch12-stock-returns-risk).
+**Data**: [stocks-sp500](/datasets/#stocks-sp500).
 **Graphs**: [.png](ch12A-png-zip) or [.eps](ch12A-eps-zip)  
 
 
@@ -119,6 +119,8 @@ How does temperature affect residential electricity consumption? Answering this 
 
 This case study uses the `arizona-electricity` dataset that that covers 17 years of monthly electricity consumption data from the state of Arizona in the USA and monthly temperature data from a weather station in its largest city, Phoenix. Using  transformed variables of average "cooling degrees" and average "heating degrees" per month, we estimate time series regressions in changes and with and without season dummies. This case study illustrates how to estimate and intepret the results of **times series regressions** specified in **changes**. It shows how to handle and interpret **seasonality** and **lagged associations**, and how to use **Newey-West standard errors** or include **lagged dependent variables** to estimate standard errors that are tobust to **serial correlation** in time series regressions.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [arizona-electricity](link-arizona-electricity).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch12-electrictiy-temperature/ch12-arizona-electricity.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch12-electrictiy-temperature/ch12-arizona-electricity.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch12-electrictiy-temperature/ch12-arizona-electricity.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch12-electrictiy-temperature).
+**Data**: [arizona-electricity](/datasets/#arizona-electricity).
 **Graphs**: [.png](ch12B-png-zip) or [.eps](ch12B-eps-zip)  
+ 
+

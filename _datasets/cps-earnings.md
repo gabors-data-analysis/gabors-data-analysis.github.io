@@ -1,8 +1,8 @@
 ---
-permalink: /dat_cps-earnings
 title: "README: cps-earnings dataset"
 toc: false
 author_profile: false
+collections: datasets
 redirect_from:
   - /dat_cps-earnings.html
 ---

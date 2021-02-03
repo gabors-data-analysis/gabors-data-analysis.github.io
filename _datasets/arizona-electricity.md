@@ -1,8 +1,8 @@
 ---
-permalink: /dat_arizona-electricity
 title: "README: arizona-electricity dataset"
 toc: false
 author_profile: false
+collections: datasets
 redirect_from:
   - /dat_arizona-electricity.html
 ---

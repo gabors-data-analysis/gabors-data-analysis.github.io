@@ -12,12 +12,12 @@ Vienna, Austria is a popular tourist destination for business and leisure; with 
 This case study introduces **non-parametric regression** such as **lowess**, and **linear regression (OLS)**, **residuals** and goodness of fit (**R-squared**).
 
 ## Code
-[**Stata**](ch07-hotel-simple-reg_intro.do)   
-[**R**](ch07-hotel-simple-reg_intro.R)   
-[**Python**](ch07-hotel-simple-reg_intro.py)   
+[**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch07-hotels-simple-reg/ch07-hotels-simple-reg.do)   
+[**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch07-hotels-simple-reg/ch07-hotels-simple-reg.R)   
+[**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch07-hotels-simple-reg/ch07-hotels-simple-reg.ipynb)   
 
 ## Data
-Download data folder (raw, cleaning codes, clean) [hotels-vienna](link-hotels-vienna)   
+Download data folder (raw, cleaning codes, clean) [hotels-vienna](/datasets/#hotels-vienna)   
 
 ## Graphs
 Get the graphs in [.png](ch07A-png-zip)  [.eps](ch07A-eps-zip)

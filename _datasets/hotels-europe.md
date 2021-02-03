@@ -1,8 +1,8 @@
 ---
-permalink: /dat_hotels-europe
 title: "README: hotels-europe dataset"
 toc: false
 author_profile: false
+collections: datasets
 redirect_from:
   - /dat_hotels-europe.html
 ---

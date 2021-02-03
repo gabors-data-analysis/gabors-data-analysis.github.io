@@ -4,6 +4,8 @@ author_profile: false
 collection: casestudies
 ---
  
+# PART I: DATA EXPLORATION
+
 ## CH01A Finding a good deal among hotels: data collection
 Vienna, Austria is a popular tourist destination for business and leisure. From the hundreds of places that offer accommodation, we want to pick a hotel that is underpriced relative to its location and quality for a weekday in November 2017. Can we use data to help this decision? What kind of data would we need, and how could we get it?
 
@@ -29,8 +31,8 @@ Continuing with our search for a hotel that is underpriced relative to its locat
 
 This case study uses the `hotels-vienna` dataset to illustrate how to find problems with observations and variables. It illustrates the various **types of variables**. It shows how to create a **tidy data table** and how to deal with **missing values** and **duplicates**. It allows instructors to demonstrate the importance of **data cleaning** and the common **steps of data wrangling**. We described data collection and quality in case study 1A, and we will use the data in case studies 3A, 7A, 8A, 9B, and 10B to illustrate steps of data analysis that lead to finding good deals.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [hotels-vienna](link-hotels-vienna).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch02-hotels-data-prep/ch02-hotels-data-prep.do) or [**R**](link) or [**Python**](link) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch02-hotels-data-prep).
+**Data**: [hotels-vienna](/datasets/#hotels-vienna).
 **Graphs**: [.png](ch02A-png-zip) or [.eps](ch02A-eps-zip)  
 
 
@@ -39,8 +41,8 @@ Immunization against measles is an effective way to prevent the disease and may 
 
 This short case study illustrates how to store **multi-dimensional data**. It uses the `world-bank-immunization` dataset with data from the World Development Indicators data website maintained by the World Bank to look at countries’ annual immunization rate and GDP per capita. The case study illustrates the structure of **xt panel data data** with a cross-sectional and time series dimension (country and year), with two corresponding ID variables and two other variables (immunization rate and GDP per capita). It allows instructors to demonstrate xt panel data tables in **long format** and **wide format**. Case study 23B will use the data described here to investigate the effect of immunization on the survival chances of children.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [world-bank-immunization](link-world-bank-immunization).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch02-immunization-crosscountry/ch02-immunization-crosscountry.do) or [**R**](link) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch02-immunization-crosscountry/ch02-immunization-crosscountry.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch02-immunization-crosscountry).
+**Data**: [world-bank-immunization](/datasets/#world-bank-immunization).
 **Graphs**: [.png](ch02B-png-zip) or [.eps](ch02B-eps-zip)  
 
 
@@ -49,8 +51,8 @@ The English Premier League (EPL) is the top football (soccer) division in Englan
 
 This case study uses the `football` dataset that covers all games played in the EPL and data on managers, including which team they worked at and when. We create a data table by joining two different data tables, define the measure of success as average points per game, and identify the most successful managers. This case study illustrates how to prepare data for analysis and illustrates **linking data tables** with different kinds of observations and common problems that can arise while doing so. It is a good example of **entity resolution**, and how to work with **relational data**. Case study 24B will use this data to uncover the effect of replacing managers of underperfoming teams on subsequent team performance.
 
-**Code**:   [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch02-football-manager-success/ch02-football-manager-success.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch02-football-manager-success/ch02-football-manager-success.R) or [**Python**](clink) or  [ALL](link)  
-**Data**: [football](link-football).
+**Code**:   [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch02-football-manager-success/ch02-football-manager-success.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch02-football-manager-success/ch02-football-manager-success.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch02-football-manager-success/ch02-football-manager-success.ipynb) or  [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch02-football-manager-success)  
+**Data**: [football](/datasets/#football)).
 **Graphs**: [.png](ch02C-png-zip) or [.eps](ch02C-eps-zip)  
 
 ![pep-and-fergie](/images/pep-and-fergie.jpg){:height="50%" width="50%"}
@@ -63,8 +65,8 @@ Further continuing our search for a good deal (a hotel in Vienna that is underpr
 
 This case study uses the `hotels-vienna` dataset to illustrate how to describe the **distribution of variables** and how to use the findings to identify potential problems in the data, such as **extreme values**. The case study also illustrate how to make **decisions about extreme values**, guided by the ultimate question of the analysis. Along the way, it introduces guidelines for **data visualization** in general, and the design of **histograms** in particular. Case studies 1A and 2A describe data collection and cleaning, and we will use the data in case studies 7A, 8A, 9B, and 10B to illustrate further steps of data analysis that lead to finding good deals.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [hotels-vienna](link-hotels-vienna).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-hotels-vienna-explore/ch03-hotels-vienna-explore.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-hotels-vienna-explore/ch03-hotels-vienna-explore.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-hotels-vienna-explore/ch03_hotels-vienna-explore.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch03-hotels-vienna-explore).
+**Data**: [hotels-vienna](/datasets/#hotels-vienna).
 **Graphs**: [.png](ch03A-png-zip) or [.eps](ch03A-eps-zip)  
 
 
@@ -73,8 +75,8 @@ How can we compare hotel markets over Europe and learn about characteristics of 
 
 This case study uses the `hotels-europe` dataset and selects 3-4 star hotels in Vienna and London to compare the distribution of prices for a weekday in November 2017. It illustrates the comparison of distributions and the use of **histograms** and **density plots**. It illustrates the use of some of the most important **descriptive statistics** for quantitative variables and their visualizations, **box plots** and **violin plots**.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [hotels-europe](link-hotels-europe).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-hotels-europe-compare/ch03-hotels-europe-compare.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-hotels-europe-compare/ch03-hotels-europe-compare.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-hotels-europe-compare/ch03-hotels-europe-compare.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch03-hotels-europe-compare).
+**Data**: [hotels-europe](/datasets/#hotels-europe).
 **Graphs**: [.png](ch03B-png-zip) or [.eps](ch03B-eps-zip)  
 
 
@@ -83,8 +85,8 @@ Is there such a thing as home team advantage in professional football (soccer)? 
 
 This case study uses the `football` dataset, with data on the games played in the English Premier League (EPL) during the 2016/17 season. The case study shows the use of **exploratory data analysis** to answer a substantive question and introduces guidelines to present statistics in a good table.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [football](link-football).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-football-home-advantage/ch03-football-home-advantage-describe.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-football-home-advantage/ch03-football-home-advantage-describe.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-football-home-advantage/ch03-football-home-advantage.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch03-football-home-advantage).
+**Data**: [football](/datasets/#football)).
 **Graphs**: [.png](ch03C-png-zip) or [.eps](ch03C-eps-zip)  
 
 
@@ -95,8 +97,8 @@ In this very short case study, we examine survey data collected by the Health an
 
 ![income](/images//Ch03_figures/ch03-figure-11b-hist-income-log.png){:height="50%" width="50%"}
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [height-income-distributions](height-income-distributions).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-distributions-height-income/ch03-height-income.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-distributions-height-income/ch03-height-income.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-distributions-height-income/ch03_height-income.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch03-distributions-height-income).
+**Data**: [height-income-distributions](/datasets/#height-income-distributions).
 **Graphs**: [.png](ch03D-png-zip) or [.eps](ch03D-eps-zip)  
 
 
@@ -107,8 +109,8 @@ This case study uses the Mexican subsample of the World Management Survey datase
 
 ![wms](/images//Ch04_figures/ch04-figure-6b-wms-mex-violin-mgmt-emp3bins.png){:height="50%" width="50%"}
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [wms-management-survey](wms-management-survey).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch04-management-firm-size/ch04-wms-management-size.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch04-management-firm-size/ch04-wms-management-size.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch04-management-firm-size/ch04_wms_management_size_boxplot_violinpolot.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch04-management-firm-size).
+**Data**: [wms-management-survey](/datasets/#wms-management-survey).
 **Graphs**: [.png](ch04A-png-zip) or [.eps](ch04A-eps-zip)  
 
 
@@ -119,8 +121,8 @@ This case study uses the `sp500` dataset that covers day-to-day returns on the S
 
 ![bootsrap](/images/bootstrap.jpg){:height="30%" width="30%"}
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [sp500](link-sp500).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch05-stock-market-loss-generalize/ch05-stock-market-loss-generalize.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch05-stock-market-loss-generalize/ch05-stock-market-loss-generalize.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch05-stock-market-loss-generalize/ch05-stock-market-loss-generalize.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch05-stock-market-loss-generalize).
+**Data**: [sp500](/datasets/#sp500).
 **Graphs**: [.png](ch05A-png-zip) or [.eps](ch05A-eps-zip)  
 
 
@@ -129,8 +131,8 @@ Do online and offline prices of the same products tend to be the same? Answering
 
 This case study uses the `billion-prices` dataset. We examine online and offline prices of retail products in the U.S. in 2015-16. The case study illustrates how to translate a more abstract question into an inquiry about a **statistic** (here the average difference). It shows how to formulate a **null hypothesis** and an **alternative hypothesis** and how to carry out a **hypothesis test** in two ways, by calculating the **t-statistic** and comparing it to an appropriate **critival value**, or, alternatively, by using the **p-value**. The case study also illustrates the perils of testing **multiple hypotheses** and **p-hacking**. We have introduced the data used here in case study 1B.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [billion-prices](link-billion-prices).
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch06-online-offline-price-test/ch06-online-offline-price-test.do) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch06-online-offline-price-test/ch06-online-offline-price-test.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch06-online-offline-price-test/ch06-online-offline-price-test.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch06-online-offline-price-test).
+**Data**: [billion-prices](/datasets/#billion-prices).
 **Graphs**: [.png](ch06A-png-zip) or [.eps](ch06A-eps-zip)  
 
 
@@ -139,6 +141,6 @@ Will our investment portfolio suffer a large loss with a higher chance than what
 
 This case study uses the `sp500` dataset that covers day-to-day returns for 11 years to illustrate how we can test whether a likelihood is greater or less than a specified value. It illustrates **testing proportions** and how to formulate and carry out a **one-sided hypothesis test**. The case study is a continuation of case study 5A, using the same data.
 
-**Code**: [**Stata**](link) or [**R**](link) or [**Python**](link) or [ALL](link).
-**Data**: [sp500](link-sp500).
-**Graphs**: [.png](ch06B-png-zip) or [.eps](ch06B-eps-zip)  
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch05-stock-market-loss-generalize/ch05-stock-market-loss-generalize.ipynb) or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch05-stock-market-loss-generalize/ch05-stock-market-loss-generalize.R) or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch05-stock-market-loss-generalize/ch05-stock-market-loss-generalize.ipynb) or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch05-stock-market-loss-generalize).
+**Data**: [sp500](/datasets/#sp500).
+**Graphs**: [.png](ch06B-png-zip) or [.eps](ch06B-eps-zip)

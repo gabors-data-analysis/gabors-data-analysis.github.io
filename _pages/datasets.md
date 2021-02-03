@@ -4,6 +4,7 @@ title: "Datasets summary"
 excerpt: "Datasets details for case studiesa"
 author_profile: true
 redirect_from: 
+  - "/datasets.md/"
   - "/nmpr/"
   - "/nmpr.html"
 ---
@@ -18,6 +19,8 @@ redirect_from:
 [Predicting AirBnB apartment prices: selecting a regression model](link)
 [Predicting Airbnb apartment prices with random forest](link)
 
+**Data**: [Access dataset](https://osf.io/qyca8/)
+
 **Source**: Downloaded from web [inside airbnb](http://insideairbnb.com/get-the-data.html){:target="_blank"}.    
 **Copyright**: "The data behind the Inside Airbnb site is sourced from publicly available information from the Airbnb site. The data has been analyzed, cleansed and aggregated where appropriate to faciliate public discussion. Creative Commons CC0 1.0 Universal (CC0 1.0) "Public Domain Dedication" license."
 
@@ -31,10 +34,12 @@ The unit of observation in the data is an airline ticket. The dataset has N=1126
 **Used in case studies**: 
 [How does a merger between airlines affect prices?](link) 
 
+**Data**: [Access dataset](https://osf.io/6398x/)
+
 **Source**:Downloaded from the [US Bureau of Transportation Statistics](https://www.transtats.bts.gov/DatabaseInfo.asp?DB_ID=125){:target="_blank"}  
 **Copyright**: N/A
 
-[MORE about the data](/dat_airline-tickets-usa){:target="_blank"}
+[MORE about the data](/datasets/airline-tickets-usa/){:target="_blank"}
 
 
 ## arizona-electricity
@@ -43,20 +48,24 @@ The unit of observation in the data is an airline ticket. The dataset has N=1126
 **Key variables**: monthly residential electricity consumption, monthly cooling degree days and monthly heating degree days.  
 
 **Used in case studies**: 
-[Electricity consumption and temperature](link)     
+[Electricity consumption and temperature](link)  
+
+**Data**: [Access dataset](https://osf.io/9wkae/)
 
 **Source**: Downloaded from the [US Energy Information Administration (EIA)](https://www.eia.gov/){:target="_blank"} and [National Oceanic and Atmospheric Administration (NOAA)](https://w2.weather.gov/climate/xmacis.php?wfo=psr){:target="_blank"} 
 **Copyright**: EIA:[Public domain](https://www.eia.gov/about/copyrights_reuse.php) and NOAA:[Public domain](https://www.weather.gov/disclaimer){:target="_blank"}  
 
 
-[MORE about the data](/dat_arizona-electricity){:target="_blank"}
+[MORE about the data](/datasets/arizona-electricity/){:target="_blank"}
 
 
 ## asia-industry
 **Content and coverage**: The asia-industry data consists of monthly time series of industrial production from four countries and monthly total imports into the USA. The dataset has N=243 observations.  
 **Key variables**: industrial production of Thailand, Malaysia, Singapore and the Philippines, and total US imports (bn US dollars).  
 **Used in case studies**:
-[Import demand and industrial production](link)  
+[Import demand and industrial production](link)
+
+**Data**: [Access dataset](https://osf.io/hwgnb/)
 
 **Source**:Downloaded from [The World Bank: World Development Indicators](https://databank.worldbank.org/reports.aspx?source=1179&series=IPTOTNSKD){:target="_blank"}    
 **Copyright**:[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets){:target="_blank"}  
@@ -69,6 +78,8 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Used in case studies**:
 [Are Australian weather forecasts well calibrated?](link)
 
+**Data**: [Access dataset](https://osf.io/4xkze/)
+
 **Source**:Downloaded from the [Australian government](https://data.gov.au/data/dataset/weather-forecasting-verification-data-2015-05-to-2016-04){:target="_blank"}. The file is called "bometa20150501-20160430.zip".  
 **Copyright**:[Creative Commons Attribution Share-Alike 3.0 Australia]  
 
@@ -78,6 +89,8 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Used in case studies**:  
 [Comparing online and offline prices: data collection](link)  
 [Comparing online and offline prices: testing the difference](link)   
+
+**Data**: [Access dataset](https://osf.io/7mtcv/)
 
 **Source**: From the paper [Cavallo, Alberto, 2016, "Cavallo (2017) "Are Online and Offline Prices Similar? Evidence from Large Multi-Channel Retailers" - American Economic Review - Vol. 107(1), p.283–303", Harvard Dataverse, V4](https://doi.org/10.7910/DVN/XXOUHF){:target="_blank"} 
 **Copyright**:[CC0 Public Domain](https://dataverse.org/best-practices/dataverse-community-norms){:target="_blank"}  
@@ -89,6 +102,8 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Used in case studies**: 
 [Predicting firm exit: probability and classification](link)  
 
+**Data**: [Access dataset](https://osf.io/b2ft9/)
+
 **Source**: From Bisnode, a major European business information company.  
 **Copyright**: The dataset as is, may be used for educational purposes. Bisnode has all other righst
 
@@ -97,6 +112,8 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Key variables**: Case-Shiller Home Price Index, unemployment rate, total employment.  
 **Used in case studies**: 
 [Forecasting a home price index](link)  
+
+**Data**: [Access dataset](https://osf.io/hzfny/)
 
 **Source** S&P Dow Jones Indices LLC, S&P/Case-Shiller CA-Los Angeles Home Price Index [LXXRNSA].   Retrieved from FRED, [Federal Reserve Bank of St. Louis]( https://fred.stlouisfed.org/series/LXXRNSA){:target="_blank"};, December 1, 2019.   
 **Copyright**:  S&P Dow Jones Indices LLC. All rights reserved. Reproduction of Home Price Index for Los Angeles, California in any form is prohibited except with the prior written permission of S&P Dow Jones Indices LLC "S&P".  
@@ -109,6 +126,8 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Used in case studies**: 
 [City size distribution in Japan](link)  
 
+**Data**: [Access dataset](https://osf.io/3g7pd/)
+
 **Source**:From Wikipedia contributors. (2020, August 4). List of cities in Japan. In [Wikipedia, The Free Encyclopedia](https://en.wikipedia.org/w/index.php?title=List_of_cities_in_Japan&oldid=971071171){:target="_blank"}. Retrieved 14:09, September 2, 2020..  
 **Copyright**:[Creative Commons Attribution-ShareAlike License](https://en.wikipedia.org/wiki/wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License){:target="_blank"}  
 
@@ -117,12 +136,14 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Key variables**: female-male wage difference among market analysts, hourly wage and age of market analysts, age and gender of employees with a graduate degree, three categories of graduate degree (master's, professional and PhDs).    
 **Used in case studies**: 
 [Estimating gender and age differences in earnings](link)  
-[Understanding the gender difference in earnings](link)    
+[Understanding the gender difference in earnings](link)
+
+**Data**: [Access dataset](https://osf.io/g8p9j/)
 
 **Source**: Downloaded from the [National Bureau of Economic Research](https://data.nber.org/morg/annual/){:target="_blank"}  
 **Copyright**:[No copyright restrictions on extracts use.](https://data.nber.org/data/morg.html){:target="_blank"}  
 
-[MORE about the data](/dat_cps-earnings){:target="_blank"}
+[MORE about the data](/datasets/cps-earnings){:target="_blank"}
 
 
 
@@ -131,6 +152,8 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Key variables**: blood pressure, fruit and vegetables consumed per day, household income, days per week of exercising.  
 **Used in case studies**:   
 [Food and health](link)  
+
+**Data**: [Access dataset](https://osf.io/vrb9a/)
 
 **Source**: Downloaded and combined from the [National Health and Nutrition Examination Survey (NHANES) of the CDC’s National Center for Health Statistics (NCHS)(https://wwwn.cdc.gov/nchs/nhanes/Default.aspx){:target="_blank"}    
 **Copyright**: CDC:[Public domain](https://www.cdc.gov/other/agencymaterials.html){:target="_blank"}
@@ -142,6 +165,8 @@ Australian city of Darwin. The dataset has N=350 observations.
 [Identifying successful football managers](link)  
 [Measuring home team advantage in football](link)  
 [Estimating the impact of replacing football team managers](link)  
+
+**Data**: [Access dataset](https://osf.io/zqm6c/)
 
 **Source 1**: Game results come from [football-data.co.uk website](https://www.football-data.co.uk/englandm.php){:target="_blank"}. 
 **Copyright 1**: N/A
@@ -156,6 +181,9 @@ Australian city of Darwin. The dataset has N=350 observations.
 **Used in case studies**:  
 [Estimating the effect of the 2010 Haiti earthquake on GDP](link)  
 The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impacts of the 2010 earthquake in Haiti. Empirical Economics, 56(5), 1647–1681.](https://doi.org/10.1007/s00181-017-1405-4){:target="_blank"}  
+
+**Data**: [Access dataset](https://osf.io/c4wyj/)
+
 **Source**: [Data and code available from authors Best, R. and Burke, P. J.](https://www.dropbox.com/s/h70hvaf2xetrsq8/Best_Burke.zip?dl=0){:target="_blank"}      
 **Copyright**:N/A  
 
@@ -165,6 +193,8 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Key variables**: height and household income.  
 **Used in case studies**:  
 [Distributions of body height and income](link)  
+
+**Data**: [Access dataset](https://osf.io/ybdcn/)
 
 **Source**:
 **Copyright**:  
@@ -177,10 +207,12 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 [Comparing hotel prices in Europe: Vienna vs. London](link)  
 [How stable is the hotel price - distance to center relationship?](link)  
 
+**Data**: [Access dataset](https://osf.io/r6uqb/)
+
 **Source**: Authors' collection.  
 **Copyright**: N/A  
 
-[MORE about the data](/dat_hotels-europe){:target="_blank"}
+[MORE about the data](/datasets/hotels-europe/){:target="_blank"}
 [DOI]()
 [GET the data from OSF.io](https://osf.io/r6uqb){:target="_blank"}; 
 
@@ -198,10 +230,12 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 [Finding a good deal among hotels with non-linear function](link)  
 [Finding a good deal among hotels with multiple regression](link)  
 
+**Data**: [Access dataset](https://osf.io/4e6d8/)
+
 **Source**: Authors' collection.  
 **Copyright**: N/A  
 
-[MORE about the data](/dat_hotels-vienna){:target="_blank"}
+[MORE about the data](/datasets/hotels-vienna/){:target="_blank"}
 
 
 ## sp500
@@ -212,6 +246,8 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 [What likelihood of loss to expect on a stock portfolio?](link)  
 [Testing the likelihood of loss on a stock portfolio](link)  
 
+**Data**: [Access dataset](https://osf.io/vzwbp/)
+
 **Source**:  
 **Copyright**:
 
@@ -221,12 +257,13 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Key variables**: current smoker, three categories for years of education, gender.  
 **Used in case studies**:  
 [Does smoking pose a health risk?](link)  
+
+**Data**: [Access dataset](https://osf.io/vd9bz/)
  
 **Source**: [SHARE Project](https://releases.sharedataportal.eu/releases?show_archived=1){:target="_blank"}   
 **Copyright**: SHARE. Access is provided after filling in and submitting a [data user statement](http://www.share-project.org/data-access/user-registration.html){:target="_blank"}     
 
-[MORE about the data - incl. how to get it](/dat_share-health){:target="_blank"}
-
+[MORE about the data - incl. how to get it](/datasets/share-health/){:target="_blank"}
 
 
 
@@ -238,6 +275,8 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Used in case studies**:  
 [Returns on a company stock and market returns](link)   
 
+**Data**: [Access dataset](https://osf.io/78g6d/)
+
 **Source**:
 **Copyright**:
 
@@ -248,6 +287,8 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 
 **Used in case studies**:  
 [Forecasting daily ticket sales for a swimming pool](link)  
+
+**Data**: [Access dataset](https://osf.io/s3ng2/)
 
 **Source**: Downloaded from the [City of Albuquerque Open Data (New Mexico, USA)](https://opendata.cabq.gov/dataset/swimming-pool-admissions){:target="_blank"}.  
 *Thanks to the city for help!*    
@@ -265,6 +306,8 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 [Predicting used car value: log prices](link)  
 [Predicting used car value with regression trees](link)  
 
+**Data**: [Access dataset](https://osf.io/8tx54/)
+
 **Source**: Authors' collection.  
 **Copyright**: N/A  
 
@@ -275,7 +318,9 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Used in case studies**: 
 [Management quality and firm size: data collection](link)   
 [Management quality and firm size: describing patterns of association](link)  
-[Founder/family ownership and quality of management](link)   
+[Founder/family ownership and quality of management](link)  
+
+**Data**: [Access dataset](https://osf.io/t6zdp/)
 
 **Source**: Prepared for this study by the [World Management Survey project](https://worldmanagementsurvey.org/about-us/){:target="_blank"}.    
 *Thanks to Scur, Bloom and Van Reenen!*  
@@ -286,6 +331,8 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Key variables**: employee retention, employee performance.    
 **Used in case studies**:  
 [Working from home and employee performance](link)  
+
+**Data**: [Access dataset](https://osf.io/6pa59/)
 
 **Source**: The data and Stata do-files used to replicate clean datasets and results are available from [Nick Bloom's website](https://nbloom.people.stanford.edu/sites/g/files/sbiybj4746/f/wfh.zip){:target="_blank"}  
 The case study is based on the paper by [Nicholas Bloom, James Liang, John Roberts, Zhichun Jenny Ying, Does Working from Home Work? Evidence from a Chinese Experiment , The Quarterly Journal of Economics, Volume 130, Issue 1, February 2015, Pages 165–218](https://doi.org/10.1093/qje/qju032){:target="_blank"}.   
@@ -298,6 +345,8 @@ The case study is based on the paper by [Nicholas Bloom, James Liang, John Rober
 [Displaying immunization rates across countries](link)  
 [Immunization against measles and saving children](link)  
 
+**Data**: [Access dataset](https://osf.io/9cwu4/)
+
 **Source**: Downloaded from [The World Bank: World Development Indicators](https://databank.worldbank.org/reports.aspx?source=2&series=SH.IMM.MEAS&country=){:target="_blank"}.  
 **Copyright**: [Creative Commons Attribution 4.0 (CC-BY 4.0)](https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets){:target="_blank"}      
  
@@ -306,6 +355,8 @@ The case study is based on the paper by [Nicholas Bloom, James Liang, John Rober
 **Key variables**: life expectancy, GDP per capita.
 **Used in case studies**:
 [How is life expectancy related to the average income of a country?](link)  
+
+**Data**: [Access dataset](https://osf.io/pguwf/)
 
 **Source**: Downloaded from [The World Bank: World Development Indicators](https://databank.worldbank.org/reports.aspx?source=2&series=SP.DYN.LE00.IN&country=){:target="_blank"}  
 **Copyright**:[Creative Commons Attribution 4.0 (CC-BY 4.0)](https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets){:target="_blank"}    

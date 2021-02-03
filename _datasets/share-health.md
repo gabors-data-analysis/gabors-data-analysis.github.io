@@ -1,8 +1,8 @@
 ---
-permalink: /dat_share-health
 title: "README: health-share dataset"
 toc: false
 author_profile: false
+collections: datasets
 redirect_from:
   - /dat_share-health.html
 ---
@@ -25,7 +25,7 @@ Note: You may receive access to a more recent easySHARE version; that's fine as 
 * Nobody can distribute the original SHARE data or any data derived from it.
 * Therefore, we don't include it in our data_repo, neither the raw data nor the tidy data.
 * We distribute the code that cleans the data so you can create it for yourself.
-* Once you registered and got access,  may store the data on your computer but not share it any further. 
+* Once you registered and got access, may store the data on your computer but not share it any further. 
 
 ## Data access and copyright 
 
