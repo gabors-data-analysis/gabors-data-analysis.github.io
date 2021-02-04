@@ -77,3 +77,14 @@ A: Well, that was not clear for us either until we read the `caret` package [doc
 
 A: Yes. In random forest, we build trees, by artificially reducing fit -- limiting predictors that may be used. Thus, these trees, individually, could indeed be biased. 
 
+
+## Chapter 18
+>**Q: What is epsilon(t) when predicting y(t+1) as we don't know actual y(t)?**
+
+A: The innovation term is what’s new in y(t) on top of what was expected of it, based on previous y observations. So at time (t), we have it as the last innovation we know. We can use it to predict y at (t+1)
+
+
+## Chapter 18
+>**Q: One needs to transform back the log predictions to level in order to compare CV RMSEs, right?**
+
+A: Indeed. We may have quantity as target in the time series in level or log. When in log, we use the formula seen in Chapter 14 to create levels and compute MSE accordingly. 
