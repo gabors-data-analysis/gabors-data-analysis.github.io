@@ -39,7 +39,7 @@ The unit of observation in the data is an airline ticket. The dataset has N=1126
 **Source**:Downloaded from the [US Bureau of Transportation Statistics](https://www.transtats.bts.gov/DatabaseInfo.asp?DB_ID=125){:target="_blank"}  
 **Copyright**: N/A
 
-[MORE about the data](/datasets/airline-tickets-usa/){:target="_blank"}
+[MORE about the data](/datasets/airline-tickets-usa/)
 
 
 ## arizona-electricity
@@ -56,7 +56,7 @@ The unit of observation in the data is an airline ticket. The dataset has N=1126
 **Copyright**: EIA:[Public domain](https://www.eia.gov/about/copyrights_reuse.php) and NOAA:[Public domain](https://www.weather.gov/disclaimer){:target="_blank"}  
 
 
-[MORE about the data](/datasets/arizona-electricity/){:target="_blank"}
+[MORE about the data](/datasets/arizona-electricity/)
 
 
 ## asia-industry
@@ -157,6 +157,10 @@ Australian city of Darwin. The dataset has N=350 observations.
 
 **Source**: Downloaded and combined from the [National Health and Nutrition Examination Survey (NHANES) of the CDC’s National Center for Health Statistics (NCHS)(https://wwwn.cdc.gov/nchs/nhanes/Default.aspx){:target="_blank"}    
 **Copyright**: CDC:[Public domain](https://www.cdc.gov/other/agencymaterials.html){:target="_blank"}
+
+[MORE about the data](/datasets/food-health/)
+
+
 
 ## football
 **Content and coverage**: The football data includes data on games and teams of the English Premier League, the top football division in England. The dataset covers 11 seasons: from 2008/2009 to 2018/19.   
@@ -336,7 +340,11 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 
 **Source**: The data and Stata do-files used to replicate clean datasets and results are available from [Nick Bloom's website](https://nbloom.people.stanford.edu/sites/g/files/sbiybj4746/f/wfh.zip){:target="_blank"}  
 The case study is based on the paper by [Nicholas Bloom, James Liang, John Roberts, Zhichun Jenny Ying, Does Working from Home Work? Evidence from a Chinese Experiment , The Quarterly Journal of Economics, Volume 130, Issue 1, February 2015, Pages 165–218](https://doi.org/10.1093/qje/qju032){:target="_blank"}.   
-**Copyright**:  
+
+
+
+[MORE about the data](/datasets/work-from-home/)
+
 
 ## world-bank-immunization  
 **Content and coverage**: The world-bank-immunization data includes data on immunization rate against measles and child survival rate in 172 countries, among children of age 12 to 23 months old, from 1998 till 2017. The dataset has N=3440 observations.   
