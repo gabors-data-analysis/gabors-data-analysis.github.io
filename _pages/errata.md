@@ -16,7 +16,7 @@ There are a few errors we made, unfortunately. Fortunately, we found them, and y
 
 ## Major errors
 
-### Chapter 14 a discrepancy in numbers vs code
+### Chapter 14 Case Study 14.B: a discrepancy in the printed results and the results from the code 
 Table 14.3 and the corresponding Figure 14.7 are not right. They are okay in relative terms, and do not disturb the storyline, but not the right ones.  [MORE](/errata-ch14/)
 
 ### Chapter 16 Section 16.5 Partial Dependence Plot: the plot shows average predicted y as opposed to average y
