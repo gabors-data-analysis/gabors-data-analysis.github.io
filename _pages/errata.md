@@ -14,10 +14,14 @@ redirect_from:
 
 There are a few errors we made, unfortunately. Fortunately, we found them, and you may review them before reading / teaching below. 
 
-## A few major issues
+## Major errors
 
 ### Chapter 14 a discrepancy in numbers vs code
-It turns out that Table 14.3 and the corresponding Figure 14.7 are not right. They are okay in relative terms, and do not disturb the storyline, but not the right ones.  [MORE](/errata-ch14/)
+Table 14.3 and the corresponding Figure 14.7 are not right. They are okay in relative terms, and do not disturb the storyline, but not the right ones.  [MORE](/errata-ch14/)
+
+### Chapter 16 Section 16.5 Partial Dependence Plot: the plot shows average predicted y as opposed to average y
+For the diagnostics tool PDP, we sometimes erroneously say that it shows "average y,"  or it is about the "y-x relationship". That is not true. The PDP shows average predicted y (which we denote as y^), and so it is about the "y^-x relationship". This error is also present in Review Box 16.3. 
+The detailed description of the procedure (paragraph 4) is fine, and so is Figure 16.3 and its description in the text.
 
 
 
