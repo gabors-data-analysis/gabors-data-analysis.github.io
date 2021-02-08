@@ -19,9 +19,8 @@ There are a few errors we made, unfortunately. Fortunately, we found them, and y
 ### Chapter 14 Case Study 14.B: a discrepancy in the printed results and the results from the code 
 Table 14.3 and the corresponding Figure 14.7 are not right. They are okay in relative terms, and do not disturb the storyline, but not the right ones.  [MORE](/errata-ch14/)
 
-### Chapter 16 Section 16.5 Partial Dependence Plot: the plot shows average predicted y as opposed to average y
-For the diagnostics tool PDP, we sometimes erroneously say that it shows "average y,"  or it is about the "y-x relationship". That is not true. The PDP shows average predicted y (which we denote as y^), and so it is about the "y^-x relationship". This error is also present in Review Box 16.3. 
-The detailed description of the procedure (paragraph 4) is fine, and so is Figure 16.3 and its description in the text.
+### Chapter 16 Section 16.5: the Partial Dependence Plot shows average predicted y not average y
+For the diagnostics tool PDP, we sometimes erroneously say that it shows "average y,"  or it is about the "y-x relationship" conditional on other x variables. That is not true. The PDP shows average predicted y (which we denote as y^), and so it is about the "y^-x relationship" conditional on other variables. This error is also present in Review Box 16.3. The detailed description of the procedure (paragraph 4) talks about predicted y correctly (but see the correction of confusing language in minor error 16-02), and Figure 16.3 and its description in the text are fine, too.
 
 
 
@@ -35,8 +34,7 @@ The detailed description of the procedure (paragraph 4) is fine, and so is Figur
 |15-01    | 2021-01-19   |	Book   | Typo in number | Ch15 |p.423-24 |	In text, and Figure 15.3, cp=0.001 is wrong | It's cp=**0.01**|
 |16-01    | 2021-01-19   |	Book   | Typo  | Ch16 |p.443 |	"We have illustrated the basics of growing a regression tree using the airbnb dataset in a single London borough." | "We have illustrated the basics of growing a regression tree using the **used-cars dataset**."|
 |16-02    | 2021-01-19   |	Book   | Imprecise  | Ch16 |p. 445 |	"The partial dependence plot shows the values of the x variables within each copy of the data against the average predicted y from that data." | "The partial dependence plot shows the values of the x variables against the average predicted y **on the holdout set**."|
-|16-03    | 2021-01-20   |	Book   | Typo in graph numbers | Ch16 |p.448 |	Figure 16.2a and 16.2b wrong | 16.2a and 16.2b **labels should be swapped**. |
-|16-04    | 2021-02-07   |	Book   | Imprecise  | Ch16 |p445-448 |For the diagnostics tool, especially PDP, we use "average y"  such as "values of average y",  "average y differs"  | It should always be read as average **predicted y**. |
+|16-03    | 2021-01-20   |	Book   | Typo in graph numbers | Ch16 |p.448 |	Figure 16.2a and 16.2b wrong | 16.2a and 16.2b **titels should be swapped**: 16.2a is "Factor variables grouped"; 16.2b is "Top 10 important variables". |
 |17-01    | 2021-01-21   |	Book   | Typo numbers | Ch17 |p.479 |	"Yields 139 euros higher profit ...  increase of 139 000 euros in profits" | "Yields **135** euros higher profit ...  increase of **135 000** euros in profits " |
 |24-01    | 2020-12-09   |	Book   | Text not match code | Ch24 | B2 p.696 |	"When there was more than one candidate game within the same season for the same team, we selected the first one in the season." | "When there was more than one candidate game within the same season for the same team, we selected **one in the season randomly**."|
 
