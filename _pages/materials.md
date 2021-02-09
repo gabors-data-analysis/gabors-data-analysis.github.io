@@ -24,7 +24,7 @@ redirect_from:
 
 ## Errors and issues and comments
 As more and more people are reading the book, errors emerge. We started to collect them at an [Errata page](/errata)
-If you find one please [let us know](/contact)
+If you find one please [let us know](/contact-us)
 
 With such a large code-base, there may be many errors, or sipmly better ways to do stuff. If you have a suggestion, please open an issue at our [github repo](https://github.com/gabors-data-analysis/da_case_studies/issues)
 
