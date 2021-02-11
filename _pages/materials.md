@@ -32,13 +32,14 @@ All comments are much appreciated!
 
 
 ## How to to teach it?
-This course may be used for a variety of courses, and it is needed used Management Phd, Applied Economics MA, Data Science MSc or even in Executive MBA. Let us offer some experience and advice on [how to teach this textbook for different courses](/teaching-guide/)
+This course may be used for a variety of courses, and it is needed used Management Phd, Applied Economics MA, Data Science MSc or even in Executive MBA. 
 
-A more extended version will be made available for instructors at the Cambridge University Press website. 
+We offer some experience and advice on [how to teach this textbook for different courses](/teaching-guide/). A more extended version will be made available for instructors at the Cambridge University Press website. 
 
+Also we have some questions and answers for a variety of course and program types on the [Instructor FAQ](/instructor-faq/)
 
-## FAQ for Instructors
-[Questions and answers for a variety of course and program types](/instructor-faq/)
+We started to get some feedback from colleagues piloting the book, see on [Instructors' feedback](/instructor-feedback/)
+
 
 ## Slides
 
@@ -51,8 +52,8 @@ After a simple registration, you can download
 
 This will open in late April 2021.   
 Peek preview:    
-* [PDF for Chapter 1](/files/BK_data_analysis_slides_ch01.pdf) 
-* [PDF for Chapter 1](/files/BK_data_analysis_slides_ch10.pdf) 
+* [PDF for Chapter 01](/files/BK_data_analysis_slides_ch01.pdf) 
+* [PDF for Chapter 10](/files/BK_data_analysis_slides_ch10.pdf) 
 
 ## Solutions to practice questions
 
