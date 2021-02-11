@@ -38,7 +38,7 @@ We offer some experience and advice on [how to teach this textbook for different
 
 Also we have some questions and answers for a variety of course and program types on the [Instructor FAQ](/instructor-faq/)
 
-We started to get some feedback from colleagues piloting the book, see on [Instructors' feedback](/instructor-feedback/)
+We started to get some feedback from colleagues piloting the book, see on [Instructors' feedback](/instructor-feedback)
 
 
 ## Slides
