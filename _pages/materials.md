@@ -40,6 +40,8 @@ Also we have some questions and answers for a variety of course and program type
 
 We started to get some feedback from colleagues piloting the book, see on [Instructors' feedback](/instructor-feedback)
 
+You can see a [list of programs](/courses-using/) that are using this textbook.
+
 
 ## Slides
 
