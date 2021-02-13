@@ -25,7 +25,6 @@ If you were to find an error, please report us [HERE](/contact-us/)
 |14-02    | 2021-01-20   |	Book   | Code not reproduce book  | Ch14 |CS 14B |Code does not reproduce results including Table 14.3, Figure 14.7  | They are okay in relative terms, and do not disturb the storyline, but not exactly ok. Due to a cleaning code error.  [MORE -- TO COME](/errata-ch14/) |
 |14-03    | 2021-02-07   |	Book   | Typo  | Ch14 |p.415 |	"two variables, xixj and x_i^2 x_j and x_i^2 x_j" | "two variables, xixj and x_i^2 x_j and x_i x_j^2"|
 |14-04    | 2021-02-13   |	Book   | Imprecise sentence | Ch14 | B1-B4 | The currency is USD for price| Actually, local currency (GBP) is used. Recently [clarified](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit#gid=1938308660){:target="_blank"} |
-
 |15-01    | 2021-01-19   |	Book   | Typo in number | Ch15 |p.423-24 |	In text, and Figure 15.3, cp=0.001 is wrong | It's cp=**0.01**|
 |16-01    | 2021-01-19   |	Book   | Typo  | Ch16 |p.443 |	"We have illustrated the basics of growing a regression tree using the airbnb dataset in a single London borough." | "We have illustrated the basics of growing a regression tree using the **used-cars dataset**."|
 |16-02    | 2021-01-19   |	Book   | Imprecise  | Ch16 |p. 445 |	"The partial dependence plot shows the values of the x variables within each copy of the data against the average predicted y from that data." | "The partial dependence plot shows the values of the x variables against the average predicted y **on the holdout set**."|
