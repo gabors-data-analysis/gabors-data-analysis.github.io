@@ -38,9 +38,19 @@ Duration: 4 semesters
 
 Emphasis: Offering methods a data analysist may need
 
+We believe the textbook may be applied in undergarduate programs with majors in many fields such as Economics, Finace, Quantitative Social Science, Politics, Philosophy and Economics, Business and Management. The content should be applicable easily. Case studies are already a mix of applications, and of course, different programs may use our datasets to offer additional case studies. For example, financial data used in Chapter 12 may be used in other contexts, management and sport data used in Chapters 3, 20, 21, 24 could also be used elsewehere. World Bank data we used in Chapter 2 and 23 could be easily extended with additional variables. 
+
 Sequence: The whole textbook: [Part I](/chapters/part-I/) and [Part II](/chapters/part-II/) and [Part III](/chapters/part-III/)  and [Part IV](/chapters/part-IV/), with some heavier sectiosn omitted. 
 
 The key difference would be spreading out the material over two or three years, covering Part I and Part II in the first two years, with the advanced material left for the 3rd and 4th years, maybe as elective. The key difference to a graduate course should be the speed - more time shall be given students to discover tools. Also, Under the Hood derivations should be included when possible to help transition to graduate / Phd programs.   
+
+Many undergraduate programs offers a range of existing statistics and econometrics courses. How can this book fit in? Let us offer two options.
+
+First, instructors may keep the existing set of courses but add case studies from this book. Another option is to add a new course on applied data analysis in the 3rd / 4th year building on existing foundations. A possible set of case studies would use those in Chapter 3 and 4 for exploratory data analysis and data vizualization and 7-12 for regression analysis. More advanced courses would also use the case studies in Chapters 21-23. 
+
+Instructors may still use bits on thery from the textbook to convey a data driven world view. For instance, we believe our approach to regression analysis as well as introducing potential outcome compatible DAGS for causal analysis could be rather useful. 
+
+A second option is more radical and could be a solution for programs that under structural transformation. Here one option could be keeping mathemathics in the first year, but starting data analysis early on, and teaching a great of the textbook in the first two years. At the second part of undergrdauet studies advanced courses could build on analytical and data management foundations provided by our book. For instance, in Economics, advanced econometrics courses would focus on formal presentation of some material, advanced methods, time series econoemtrics, bayesian analysis, and more.  
 
 
 
