@@ -32,6 +32,7 @@ If you were to find an error, please report us [HERE](/contact-us/)
 |16-04    | 2021-02-09   |	Book   |Imprecise language | Ch16 |p.446-8, Box 16.3. |	PDP: it shows "average y,",  about the "y-x relationship" conditional on other x variables. |  The PDP shows **average predicted y** ( y^),  about the "y^-x relationship" conditional on other variables.  |
 |16-05    | 2021-02-13   |	Book   | Imprecise sentence | Ch16 | A1-A3 | The currency is USD for price| Actually, local currency (GBP) is used. Recently [clarified](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit#gid=1938308660){:target="_blank"} |
 |17-01    | 2021-01-21   |	Book   | Typo numbers | Ch17 |p.479 |	"Yields 139 euros higher profit ...  increase of 139 000 euros in profits" | "Yields **135** euros higher profit ...  increase of **135 000** euros in profits " |
+|19-01    | 2021-02-16   |	Book   | Typo reference | Ch19 |p.562 |	"... with the help of a t-test (Chapter 6, Section 5.U1).",  "...and the false negative (see Chapter 6, Section 5.U1)" | "... with the help of a t-test (Chapter 6, **Section 3**).",  "...and the false negative (see Chapter 6, **Section 4**)" |
 |24-01    | 2020-12-09   |	Book   | Text not match code | Ch24 | B2 p.696 |	"When there was more than one candidate game within the same season for the same team, we selected the first one in the season." | "When there was more than one candidate game within the same season for the same team, we selected **one in the season randomly**."|
 
 
