@@ -50,7 +50,6 @@ As we have been teaching a course based on the book (or actually, wrote a book b
 After a simple registration, you can download   
 * Download [PDFs] of slides
 * Download all images used in the slideshow in a zip file. (Or just run the scripts for any case study. (Images in the book were made in R.) 
-* Get acess to Gabor B's Overleaf slideshow - so you can simply copy the material and make changes as you see fit. 
 
 This will open in late April 2021.   
 Peek preview:    
