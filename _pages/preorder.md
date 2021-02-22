@@ -9,6 +9,12 @@ redirect_from:
 
 ## Preorder
 
+Pre-order is now available for Unites States, Canada, United Kingdom and European Union, with other regions coming soon.  
+
+**Global**
+[Cambridge UP](https://www.cambridge.org/hu/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=PB){:target="_blank"}  
+[Bookdepository](https://www.bookdepository.com/Data-Analysis-for-Business-Economics-Policy-Gabor-Bekes/9781108716208){:target="_blank"}  
+
  **USA:**  
  [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=1592915211){:target="_blank"}  
  [Barnes and Noble](https://www.barnesandnoble.com/w/data-analysis-for-business-economics-and-policy-g-bor-b-k-s/1137387367?ean=9781108716208){:target="_blank"}  
@@ -26,6 +32,7 @@ redirect_from:
  [Ark.no(Norway)](https://www.ark.no/boker/Gabor-Bekes-Data-Analysis-for-Business-Economics-a-9781108483018){:target="_blank"}  
  [Bol.com (Holland)](https://www.bol.com/nl/f/-/9300000005301765/){:target="_blank"};   
  [Tales (Denmark)](https://tales.dk/data-analysis-for-business-economics-and-policy_gabor-bekes_9781108716208){:target="_blank"}   
+[Prospero, Hungary](https://www.prospero.hu/hu/konyv_seo/data-analysis-for-business-economics-and-policy-isbn-9781108716208){:target="_blank"}   
 
  **Asia-Pacific:**  
  [Booktopia (Australia)](https://www.booktopia.com.au/data-analysis-for-business-economics-and-policy-gabor-bekes/book/9781108716208.html)  
