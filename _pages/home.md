@@ -23,7 +23,7 @@ toc: true
 ## This textbook
 This textbook provides future data analysts with the tools, methods, and skills needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. Data wrangling and exploration, regression analysis, prediction with machine learning, and causal analysis are comprehensively covered, as well as when, why, and how the methods work, and how they relate to each other.
 
-As the most effective way to communicate data analysis, running case studies play a central role in this textbook. Each case starts with an industry relevant question and answers it by using real-world data and applying the tools and methods covered in the textbook. Learning is then consolidated by over 360 practice questions and 110 data exercises. Extensive online resources, including raw and cleaned data and codes for all analysis in Stata, R, and Python are available on this site.
+As the most effective way to communicate data analysis, running case studies play a central role in this textbook. Each case starts with an industry relevant question and answers it by using real-world data and applying the tools and methods covered in the textbook. Learning is then consolidated by over 360 practice questions and 120 data exercises. Extensive online resources, including raw and cleaned data and codes for all analysis in Stata, R, and Python are available on this site.
 
 
 ## Endorsements
@@ -101,7 +101,7 @@ Gábor Kézdi is a Research Associate Professor at the University of Michigan’
 [More on authors](authors)
 -->
 
-We could not have done is alone. Far from it. So, [we are grateful](/our-thanks/), really. 
+We could not have done this alone. Far from it. So, [we are grateful](/our-thanks/), really. 
 
 
 ## Codes
