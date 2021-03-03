@@ -9,4 +9,6 @@ redirect_from:
 
 ## Pre-launch CUP Webinar, March 4, 2021 
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRopSJJfs_FVihzHVrGO9kxx7ottcaAO4f97IS8JE07AGQSl-1XKImdDfmHRkTZvjTGR_7Vl8I-W3h5/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+This is the slideshow for our pre-launch presentation organized by Cambridge University Press
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTpKSHZt4wnaQ5UeQ7wPJCPeY0T6bKvmtYVGVK1ojcHZIAhhTj1EpW3DR-Kur-yYlLikMH8KECba9Sz/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
