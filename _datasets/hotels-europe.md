@@ -4,7 +4,7 @@ toc: false
 author_profile: false
 collections: datasets
 redirect_from:
-  - /dat_hotels-europe.html
+  - /hotels-europe.html
 ---
 
 
@@ -18,7 +18,8 @@ Used in case studies
 ## Data source
 
 Scraped from a price comparison website.
-It was anonymized and slightly altered to ensure confidentiality. It contains all the necessary information about the location and rating that helps to distinguish them.
+It was anonymized and slightly altered to ensure confidentiality. 
+It contains a great deal of information about the location and rating but not the name or the address. 
 
 ## Data access and copyright  
 
@@ -33,7 +34,7 @@ The data was collected by the authors and may be used for education purposes onl
 The file contains data about hotel prices and features from a price comparison website.  
 * for in 46 European cities and for 
 * for 10 different dates, including weekend and weekdays
-* The dataset has N=______ observations.    
+* The dataset has N=148,021 observations.    
 * ID variable: hotel_id
 
 ### Tidy data table
@@ -66,7 +67,7 @@ There are two data tables
 
 `hotel_prices`
 * this is a panel data with id= hotel_id and the date (year, month, weekend)
-* The dataset has N=______ observations.    
+* The dataset has N= 22,902 observations.    
 
 
 
@@ -89,7 +90,7 @@ There are two data tables
 `hotels-europe` is created by joining the two tidy tables and cleaning it. 
 
 * ID variable: hotel_id and date
-* The dataset has N=______ observations.    
+* The dataset has N= 148,021 observations.    
 
 
 | variable name 		| info    	 	            						| type   	|  
