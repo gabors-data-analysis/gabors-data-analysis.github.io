@@ -29,12 +29,12 @@ The data was collected by the authors and may be used for education purposes onl
 
 ### Raw data tables
 
-`hotelbookingdata.csv`  
+The raw data is `hotelbookingdata.csv`  and it is available from the [OSF.io repo](https://osf.io/r6uqb/). It includes the cleaning code.
 
 The file contains data about hotel prices and features from a price comparison website.  
 * for in 46 European cities and for 
 * for 10 different dates, including weekend and weekdays
-* The dataset has N=148,021 observations.    
+* The dataset has N= 149,966 observations.    
 * ID variable: hotel_id
 
 ### Tidy data table
@@ -44,7 +44,7 @@ There are two data tables
 
 `hotel_features`
 * This is a cross section data, with id= hotel_id
-* The dataset has N=______ observations.    
+* The dataset has N=148,021 observations.    
 
 | variable           	| description                                    	| type    	|
 |--------------------	|------------------------------------------------	|---------	|
