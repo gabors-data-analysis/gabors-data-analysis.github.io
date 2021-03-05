@@ -27,7 +27,8 @@ A. There are several differences, reasons we wrote the book.
 2. Plain language, with algebra used only when needed, and derivations relegated to appendix for advanced readers. 
 3. Case study focus - case studies are 1/3 of the text, and not just toy examples. Real life cases, with data and code shared 
 4. Coding language neutral, code shared in Python, R and Stata. 
-5. Machine learning methods explained for students with no computer science backgrohnd
+5. Machine learning methods explained for students with no computer science background
+6. Prepares students for many different career opportunities with transferable skills on data cleaning to modelling and making decisions based on analytics. 
 
 
 ## Undergraduate economics, social science programs
@@ -42,12 +43,36 @@ But along the course intro to coding in *R*, *Stata* or *Python* will be needed
 
 
 
-## Graduate Business Analytics
+## Graduate / Master programs
+
+>**Q: How much time is needed to go through the textbook fully?**
+
+A. One way to proceed is to tackle a chapter a week - so 24 weeks. It may take on average about 4 hours to go through a chapter including theory, the case studies and some discussion. This would mean about 100 contact hours, excluding specific coding seminars. 
+
+Students will spend at least 300 minutes with review, practive questions and reviewing code.
+
+
+
+>**Q: How would a coding class fit in?**
+
+A. It is useful to have some coding course running in parallel with Data Analysis, especially in the beginning. 
+
+In our experience, a coding course of 20-30 hours is useful. This could be done separately or as seminars to the main course. Codes for case studies are becoming more and more complicated, so may be used to learn. 
+
+
+## MS Business / Management, MBA
+
+>**Q: How is this book different to 'business statistics', can it be used in those classes?**
+
+A. The topics covered in the first half of the book -- descriptive statistics, testing, regression analysis -- often feature in business statistics classses. Those may be used directly. We add two important factors:
+
+1. Completed case studies based on real life problems. They illustrate key decision points, the difficulties of working with real life data and potential benefits as well. 
+2. Topics that may not be part of business statistics but are useful. Data collection and data quality are main issues in modern analytics. Understanding how we generalize patterns, or model interpretation are both very helpful for future managers, too. 
 
 
 
 ## Phd
->**Q: I am running a metrics course for a Phd program for management and finance students in a business school. I plan to do an applied course, slightly less technical than a graduate econometrics course. Is this book the right fit? **
+>**Q: I am running a metrics course for a Phd program for management and finance students in a business school. I plan to do an applied course, slightly less technical than a graduate econometrics course. Is this book the right fit?**
 
 A. We think so, because:
 1. It offers a good mix of tools for future applied researchers
