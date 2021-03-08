@@ -41,6 +41,32 @@ I think for an Introductory Econometrics class in business schools, the book is 
 The case studies came out from their feedback as the most useful. 
 
 
+## CEU Executive MBA - Intro to data analysis (business statistics)
+
+>[ Agoston Reguly](https://github.com/regulyagoston){:target="_blank"}, Phd in Economics candidate, CEU
+
+
+
+**What kind of program was the book used and what parts of the book were used?**
+
+I used the book at the Executive MBA program. I had participants with a huge variety of background: some of them had engineering PhD with up-to-date knowledge on statistics and coding, while others had not worked with math since high school.
+This was a class of 3 sessions, 4 hours each within 3 days. We had time to introduce and practice the basic notions.
+Part I, Chapter 1-6 was used as the core for the teaching material.
+
+**Why did you pick this book, and how does it compare to some existing text?**
+
+Gabors Data Analysis textbook allows to use different case studies to provide examples for the basic notions in data analysis. It can be used as an excellent base to what should an executive member pay attention and ask from the employees, when reading a statistical report. The structure of the book helps to build up these main questions along with the notions, that an EMBA student must be aware of. With the help of different case studies I could not only guide the student through this process, but to give them enough practice to attain how to utilise the conclusions from such statistic based reports.
+
+**What advice would you give to Instructors teaching or developing similar course?**
+
+For EMBA students there is limited time, thus I used formulas only if needed, however I put more emphasis on explaining the notions via combined examples and ask for cases when they could utilise these notions in their life.
+
+**What did your student appreciate the most?**
+
+Case study based teaching and the possibility to relate their daily business to the notions that they have studied.
+
+
+
 
 
 
