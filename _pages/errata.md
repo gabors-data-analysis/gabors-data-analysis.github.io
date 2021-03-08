@@ -22,6 +22,7 @@ If you were to find an error, please report us [HERE](/contact-us/)
 |ID | Date Submitted |	Source | Error Type      | Chapter | location |	Problematic | Corrected|
 | --- | ------------ |------   | ---------------- | -----|---------| -----------------------------------| ----------------------|
 |10-01    | 2021-03-06   |	Book   | Typo | Ch10 | B1 p.293 |	Table 10.6 N=217 | 	 **N=207**|
+|10-02    | 2021-03-08   |	Book   | Missing | Ch10 | B1 p.285 |	Graph 10.2 Note, missing info |  **Male: blue, female: green**|
 |14-01    | 2021-01-06   |	Book   | Imprecise sentence | Ch14 | B1 p.401 |	"The number of apartments or rooms is left as it is, and treated as continuous.." | "The number of **guests to accommodate** or rooms is left as it is, and treated as continuous."|
 |14-02    | 2021-01-20   |	Book   | Code not reproduce book  | Ch14 |CS 14B |Code does not reproduce results including Table 14.3, Figure 14.7  | They are okay in relative terms, and do not disturb the storyline, but not exactly ok. Due to a cleaning code error.  [MORE -- TO COME](/errata-ch14/) |
 |14-03    | 2021-02-07   |	Book   | Typo  | Ch14 |p.415 |	"two variables, xixj and x_i^2 x_j and x_i^2 x_j" | "two variables, xixj and x_i^2 x_j and x_i x_j^2"|
