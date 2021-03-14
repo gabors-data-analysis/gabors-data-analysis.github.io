@@ -11,28 +11,28 @@ redirect_from:
 
 {% include base_path %}
 
-[PART 1: DATA EXPLORATION](#part-i-data-exploration) --
+[PART I: DATA EXPLORATION](#part-i-data-exploration) --
 [Ch01](#chapter-01-origins-of-data)
 [Ch02](#chapter-02-preparing-data-for-analysis)
 [Ch03](#chapter-03-exploratory-data-analysis)
 [Ch04](#chapter-04-comparison-and-correlation)
 [Ch05](#chapter-05-generalizing-from-data)
 [Ch06](#chapter-06-testing-hypotheses)  
-[PART 2: REGRESSION ANALYSIS](#part-ii-regression-analysis) --
+[PART II: REGRESSION ANALYSIS](#part-ii-regression-analysis) --
 [Ch07](#chapter-07-simple-regression)
 [Ch08](#chapter-08-complicated-patterns-and-messy-data)
 [Ch09](#chapter-09-generalizing-results-of-a-regression)
 [Ch10](#chapter-10-multiple-linear-regression)
 [Ch11](#chapter-11-modeling-probabilities)
 [Ch12](#chapter-12-regression-with-time-series-data)  
-[PART 3: PREDICTION](#part-iii-prediction) --
+[PART III: PREDICTION](#part-iii-prediction) --
 [Ch13](#chapter-13-a-framework-for-prediction)
 [Ch14](#chapter-14-model-building-for-prediction)
 [Ch15](#chapter-15-regression-trees)
 [Ch16](#chapter-16-random-forest-and-boosting)
 [Ch17](#chapter-17-probability-prediction-and-classification)
 [Ch18](#chapter-18-forecasting-from-time-series-data)  
-[PART 4: REGRESSION ANALYSIS](##part-iiii-causal-analysis) --
+[PART IV: CAUSAL ANALYSIS](##part-iiii-causal-analysis) --
 [Ch19](#chapter-19-a-framework-for-causal-analysis)
 [Ch20](#chapter-20-designing-and-analyzing-experiments)
 [Ch21](#chapter-21-regression-and-matching-with-observational-data)
