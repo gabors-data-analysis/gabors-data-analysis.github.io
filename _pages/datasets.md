@@ -318,7 +318,7 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 
 
 ## wms-management-survey
-**Content and coverage**: The wms-management-survey data includes data on manufacturing companies from 24 countries and was collected between 2004 and 2015. The dataset has N=9569 observations.  
+**Content and coverage**: The wms-management-survey data includes data on manufacturing companies from 24 countries and was collected between 2004 and 2015. 
 **Key variables**: management score, founder/family ownership.  
 **Used in case studies**: 
 [Management quality and firm size: data collection](link)   
@@ -332,7 +332,7 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 **Copyright**: Must reference 
 
 
-[MORE about the data - incl. how to get it](/datasets/wms-management-survey/){:target="_blank"}
+[MORE about the data](/datasets/wms-management-survey/){:target="_blank"}
 
 
 
