@@ -4,7 +4,7 @@ toc: false
 author_profile: false
 collections: datasets
 redirect_from:
-  - /dat_hotels-vienna.html
+  - /hotels-vienna.html
 ---
 
 

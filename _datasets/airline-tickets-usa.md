@@ -4,7 +4,7 @@ toc: false
 author_profile: false
 collections: datasets
 redirect_from:
-  - /dat_airline-tickets-usa.html
+  - /airline-tickets-usa.html
 ---
 
 
@@ -13,7 +13,7 @@ Used in case study `22A How does a merger between airlines affect prices?`
 
 ## Data source
 
-[Airline Origin and Destination Survey (DB1B)](https://www.transtats.bts.gov/DatabaseInfo.asp?DB_ID=125){:target="_blank"}
+[Airline Origin and Destination Survey (DB1B)](https://www.transtats.bts.gov){:target="_blank"}
 collected by the [Office of Airline Information of the Bureau of Transportation Statistics of the United States Department of Transportation](https://www.bts.gov){:target="_blank"}.  
 
 
@@ -28,7 +28,13 @@ Note for all users
 * aiport code used here is the 3-letter string
 
 
+
 ## About the data
+
+
+### Original data collection at US DT
+More info about [data collection](https://helpdesk.cirium.com/hc/en-us/articles/360027629911-Airline-Origin-and-Destination-Survey-DB1B-) as well some [explanation](https://airlab.fiu.edu/data-overview-the-origin-and-destination-survey-db1b/)
+
 
 ### Raw data tables
 

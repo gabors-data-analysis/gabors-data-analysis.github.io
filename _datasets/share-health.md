@@ -4,7 +4,7 @@ toc: false
 author_profile: false
 collections: datasets
 redirect_from:
-  - /dat_share-health.html
+  - /share-health.html
 ---
 
 

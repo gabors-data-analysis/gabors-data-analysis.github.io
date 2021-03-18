@@ -329,7 +329,13 @@ The case study is based on [Best, R., & Burke, P. J. (2019). Macroeconomic impac
 
 **Source**: Prepared for this study by the [World Management Survey project](https://worldmanagementsurvey.org/about-us/){:target="_blank"}.    
 *Thanks to Scur, Bloom and Van Reenen!*  
-**Copyright**: N/A  
+**Copyright**: Must reference 
+
+
+[MORE about the data - incl. how to get it](/datasets/wms-management-survey/){:target="_blank"}
+
+
+
 
 ## working-from-home  
 **Content and coverage**: The working-from-home data includes information about the employees of a travel agency in China from 2010. The dataset has N=249 observations.  
