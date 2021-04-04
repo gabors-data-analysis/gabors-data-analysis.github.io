@@ -16,17 +16,18 @@ redirect_from:
 
 
 We have created the textbook as a complete package of text, code and data. While the textbook is available for money, code and data are free. 
-Read summary information: [Case studies summary page](/casestudies){:target="_blank"}   
-Read summary information: [Datasets summary page](/datasets){:target="_blank"} 
 
+Regarding all datasets we used, check out the [Datasets summary page](/datasets). Or, start from the [Case studies summary page](/casestudies).  
 
 
 # Basic setup
-To ensure smooth sailing, you will need to create to folders on your computer, anywhere you like.  
+Let us start with a simple way to store data and code on your computer. To ensure smooth sailing, you will need to create to folders on your computer, anywhere you like.  
 
 For the code: `da_case_studies` 
 
 For the data: `da_data_repo` 
+
+This setup is assumed for all the codes in R, Python and Stata. 
 
 
 # Getting code
