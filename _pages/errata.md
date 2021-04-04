@@ -37,6 +37,7 @@ If you were to find an error, please report us [HERE](/contact-us/)
 |19-01    | 2021-02-16   |	Book   | Typo reference | Ch19 |p.562 |	"... with the help of a t-test (Chapter 6, Section 5.U1).",  "...and the false negative (see Chapter 6, Section 5.U1)" | "... with the help of a t-test (Chapter 6, **Section 3**).",  "...and the false negative (see Chapter 6, **Section 4**)" |
 |21-01    | 2021-03-01   |	Book   | Typo number | Ch21 |p.600 | In Table 21.1, the number of observations in column 1 N=8440 | N is **8439** not 8440  |
 |21-01    | 2021-03-01   |	Book   | Typo number | Ch21 |p.600 | Formulae 21.17 and 21.21 are not correct, in the second term in the denominator. | In the second term in the denominator, **instead of x=0 there should be x=1**  |
+|22-01    | 2021-03-16   |	Book   | Typo  | Ch22 |p.600 | In Table 21.1, the number of observations in column 1 N=8440 | N is **8439** not 8440  |
 |24-01    | 2020-12-09   |	Book   | Text not match code | Ch24 | B2 p.696 |	"When there was more than one candidate game within the same season for the same team, we selected the first one in the season." | "When there was more than one candidate game within the same season for the same team, we selected **one in the season randomly**."|
 
 
