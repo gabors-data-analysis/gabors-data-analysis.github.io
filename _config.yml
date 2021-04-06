@@ -95,9 +95,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Gabor Bekes (CEU) + Gabor Kezdi (U. Michigan)"
+  name             : "Gábor Békés and Gábor Kézdi"
   avatar           : "images/cover-small.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  #bio              : "CEU and U. Michigan"
+  bio              : "CEU and U Michigan"
   #location         : "Vienna and Ann Arbor"
   email            :
   links:
