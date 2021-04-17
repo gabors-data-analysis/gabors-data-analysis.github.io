@@ -15,9 +15,17 @@ redirect_from:
 >## *Publish the data and code or it didn't happen* [*](http://freerangestats.info/blog/2020/05/30/implausible-health-data-firm){:target="_blank"}   
 
 
-We have created the textbook as a complete package of text, code and data. While the textbook is available for money, code and data are free. 
+We have created the textbook as a complete package of text, code and data. While the textbook is available for money, code and data are free!
 
-Regarding all datasets we used, check out the [Datasets summary page](/datasets). Or, start from the [Case studies summary page](/casestudies).  
+You can start exploration of the ecosystem around Gabors Data Analysis: 
+
+* Start from the [Case studies summary page](/casestudies)
+* Check out the [datasets summary page](/datasets).
+* Go directly to [Code hosted on Github](https://github.com/gabors-data-analysis/da_case_studies)
+* Go directly to [Data hosted on OSF](https://osf.io/7epdj/)
+
+
+Below, we describe how to set up your system, get access to data and code, and replicate graphs and tables in the book. 
 
 
 # Basic setup
