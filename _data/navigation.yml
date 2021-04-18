@@ -28,6 +28,8 @@ sidebar:
         url: /endorsements
       - title: "Why this book?"
         url: /whythisbook/
+      - title: "Order the book"
+        url: /pre-order
       - title: "Contact us"
         url: /contact-us
       - title: "Our thanks"
@@ -58,18 +60,6 @@ sidebar:
         url: https://osf.io/7epdj/
       
 
-  - title: Case studies
-    url: /casestudies/
-    children:
-      - title: "Part I"
-        url: /casestudies/part-I
-      - title: "Part II"
-        url: /casestudies/part-II
-      - title: "Part III"
-        url: /casestudies/part-III
-      - title: "Part IV"
-        url: /casestudies/part-IV
-
   - title: Chapters
     url: /chapters/
     children:
@@ -81,6 +71,18 @@ sidebar:
         url: /chapters/part-III
       - title: "Part IV"
         url: /chapters/part-IV
+
+  - title: Case studies
+    url: /casestudies/
+    children:
+      - title: "Part I"
+        url: /casestudies/part-I
+      - title: "Part II"
+        url: /casestudies/part-II
+      - title: "Part III"
+        url: /casestudies/part-III
+      - title: "Part IV"
+        url: /casestudies/part-IV
 
   - title: Blog 
     url: /blog
