@@ -7,12 +7,10 @@ redirect_from:
   - /preorder.html
 ---
 
-## Preorder
+## Publisher
 
-Pre-order is now available for great many countries: 
+You may order the book from [Cambridge University Press](https://www.cambridge.org/hu/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=PB)
 
-**The Publisher**
-[Cambridge UP](https://www.cambridge.org/hu/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=PB)
 
 ## Global sellers
 
@@ -42,7 +40,7 @@ Pre-order is now available for great many countries:
 **Europe:**  
  
 * Denmark: [academicbooks.dk](https://www.academicbooks.dk/da/content/data-analysis-business-economics-and-policy-0)
-* Denmark: [Tales)](https://tales.dk/data-analysis-for-business-economics-and-policy_gabor-bekes_9781108716208)  
+* Denmark: [Tales](https://tales.dk/data-analysis-for-business-economics-and-policy_gabor-bekes_9781108716208)  
 * France: [Lavoisier](http://www.lavoisier.eu/books/economy/data-analysis-for-business-economics-and-policy/description_4403718)
 * Germany: [Lehmanns ](https://www.lehmanns.de/shop/wirtschaft/52811591-9781108716208-data-analysis-for-business-economics-and-policy)
 * Germany: [Hugendubel ](https://www.hugendubel.de/de/taschenbuch/gabor_bekes_gabor_university_of_michigan_ann_arbor_kezdi-data_analysis_for_business_economics_and_policy-39490275-produkt-details.html)
