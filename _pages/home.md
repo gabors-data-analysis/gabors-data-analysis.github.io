@@ -39,12 +39,11 @@ As the most effective way to communicate data analysis, running case studies pla
 
 ![cup](images/cup1.png){:height="50%" width="50%"}  
 
-The textbook is scheduled for worldwide publication on April 2021. 
+The textbook is scheduled for worldwide publication on 6 May 2021. 
 
-Preorder is open:   
- [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC){:target="_blank"}   
- US: [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=){:target="_blank"} UK/EU: [Amazon.co.uk](https://www.amazon.co.uk/Data-Analysis-Business-Economics-Policy/dp/1108716202/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1610556590&sr=8-3)    
-[Global options](preorder)
+Preorder is open: [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC), [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=). 
+
+Or a great deal of [global options](/preorder)
 
 
 You may also [request an inspection copy from the Publisher](http://cambridge.force.com/Samples?isbn=9781108716208&Title=Data+Analysis+for+Business%2C+Economics%2C+and+Policy&Author=B%C3%A9k%C3%A9s%2FK%C3%A9zdi)!
