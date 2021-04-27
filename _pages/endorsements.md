@@ -9,19 +9,15 @@ redirect_from:
 ___
 
 
-![image-left](/images/Endorsements/Angrist.jpg){: .align-left} [Joshua Angrist](https://economics.mit.edu/faculty/angrist){:target="_blank"}, Professor of Economics, MIT
 
-***"This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible. Like a good confidence interval, the Gabors have got you almost completely covered!"***
-{: .text-justify}
+>**"This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible. Like a good confidence interval, the Gabors have got you almost completely covered!"**
 
-___
+[Joshua Angrist](https://economics.mit.edu/faculty/angrist){:target="_blank"}, Professor of Economics, MIT
 
-![image-left](/images/Endorsements/Bloom.jpg){: .align-left} [Nicholas Bloom](https://nbloom.people.stanford.edu){:target="_blank"}, Professor, Stanford Economics & Graduate School of Business
 
-***"This is an excellent book for students learning the art of modern data analytics. This book combines the latest techniques with practical applications, replicating the implementation side of classroom teaching that is typically missing in textbooks.*** _For example, they used the World Management Survey data to generate exercises on firm performance for students to gain experience in handling real data, with all its quirks, problems and issues._ ***For students looking to learn data analysis from one textbook this is a great way to proceed."***
-{: .text-justify}
-___
+>**"This is an excellent book for students learning the art of modern data analytics. This book combines the latest techniques with practical applications, replicating the implementation side of classroom teaching that is typically missing in textbooks.**_For example, they used the World Management Survey data to generate exercises on firm performance for students to gain experience in handling real data, with all its quirks, problems and issues._ **For students looking to learn data analysis from one textbook this is a great way to proceed."**
 
+[Nicholas Bloom](https://nbloom.people.stanford.edu){:target="_blank"}, Professor, Stanford Economics & Graduate School of Business
 
 
 >"I know of few books about data analysis and visualization that are as comprehensive, deep, practical, and current as this one; and I know of almost none that are as fun to read. **Gábor Békés and Gábor Kézdi have created a most unusual and most compelling beast: a textbook that teaches you the subject manner well and that, at the same time, you can enjoy reading cover-to-cover."**   
