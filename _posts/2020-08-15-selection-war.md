@@ -16,7 +16,7 @@ During the Second World War, in a secret Manhattan building, statisticians and m
 
 ## Wald im action
 
-One of Abraham Wald's tasks was to figure out where to put armor on fighter airplanes. A dataset was put together on airplanes from previous combats with bullet holes shown on various parts of the planes. For example, wings were hit in x\% of the cases, vertical stabilizers in y\%, etc. The data showed a very low percentage for engines: hardly any of the airplanes had their engines hit by bullets. 
+One of Abraham Wald's tasks was to figure out where to put armor on fighter airplanes. A dataset was put together on airplanes from previous combats with bullet holes shown on various parts of the planes. For example, wings were hit in x% of the cases, vertical stabilizers in y%, etc. The data showed a very low percentage for engines: hardly any of the airplanes had their engines hit by bullets. 
 
 ![image](/images/survivorship-bias.png){: style="float: left"}
 
