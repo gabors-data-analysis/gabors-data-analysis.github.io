@@ -27,11 +27,11 @@ The textook is suitable for individual learning as well as traditional classroom
 
 The textbook may be used both in undergraduate and graduate courses. Little background is needed in mathematics or statistics, and coding can be learned along the way. At the same time, students are expected to spend a lot of time working outside contact hours, which may not be feasible in some undergraduate programs.
 
-The textbook may be used for a variety of courses, and it as been used in Management Phd, Applied Economics MA, Data Science MSc, and Executive MBA programs. 
+The textbook may be used for a variety of courses, and it has been used in Management Phd, Applied Economics MA, Data Science MSc, and Executive MBA programs. 
 
 Here is a more detailed guide on [how to use this textbook in different courses](/teaching-guide/).
 
-In addition, we have some questions and answers for a variety of course and program types on the [Instructor FAQ](/instructor-faq/).
+In addition, we have some questions and answers for a variety of courses and programs on the [Instructor FAQ](/instructor-faq/).
 
 We started to get some feedback from colleagues piloting the book, see on [Instructors' feedback](/instructor-feedback).
 
@@ -40,7 +40,7 @@ You can see a [list of programs](/courses-using/) that are using this textbook.
 
 ## Solutions to practice questions
 
-We have written a 100 page document offering suggested answers to the 360 practice questions in the book.   
+We have written a 100-page document offering suggested answers to the 360 practice questions in the book.   
 This will be made available after registration with Cambridge University Press.   
 
 ## Slides
