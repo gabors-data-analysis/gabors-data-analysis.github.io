@@ -11,7 +11,7 @@ redirect_from:
 {% include base_path %}
 
 
-## Important links
+## Important things to download
 
 * [**Front Matter**](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf),   
 * [**Table of content**](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
@@ -25,29 +25,29 @@ redirect_from:
 ## Teaching guide
 The textook is suitable for individual learning as well as traditional classroom teaching, online teaching, or any hybrid version. It aims to include everything students need for individual learning, including intuitive explanations, practical advise, practice questions, and the opportunity to work with code. All of this helps instructors, too, to design their courses in flexible ways. 
 
-It may be used both in undergraduate and graduate courses. Little beckground is needed in mathematics or statistics or coding, but students are expected to spend a lot of time outside contact hours that may not be feasible in some undergraduate programs.
+The textbook may be used both in undergraduate and graduate courses. Little background is needed in mathematics or statistics, and coding can be learned along the way. At the same time, students are expected to spend a lot of time working outside contact hours, which may not be feasible in some undergraduate programs.
 
-It may be used for a variety of courses, and it as been used in Management Phd, Applied Economics MA, Data Science MSc, and Executive MBA pre. 
+The textbook may be used for a variety of courses, and it as been used in Management Phd, Applied Economics MA, Data Science MSc, and Executive MBA programs. 
 
-Here is a more detailed guide on [how to teach this textbook for different courses](/teaching-guide/).
+Here is a more detailed guide on [how to use this textbook in different courses](/teaching-guide/).
 
-In addition, we have some questions and answers for a variety of course and program types on the [Instructor FAQ](/instructor-faq/)
+In addition, we have some questions and answers for a variety of course and program types on the [Instructor FAQ](/instructor-faq/).
 
-We started to get some feedback from colleagues piloting the book, see on [Instructors' feedback](/instructor-feedback)
+We started to get some feedback from colleagues piloting the book, see on [Instructors' feedback](/instructor-feedback).
 
 You can see a [list of programs](/courses-using/) that are using this textbook.
 
 
 ## Solutions to practice questions
 
-We have written a 100 page document offering suggested answers to the practice 360 questions in the book.   
+We have written a 100 page document offering suggested answers to the 360 practice questions in the book.   
 This will be made available after registration with Cambridge University Press.   
 
 ## Slides
 
 As we have been teaching a course based on the book, we will let instructors see and use our slides (in LaTex). There will be 24 slideshows, one for each chapter.
 
-After a simple registration, you can download   
+After a simple registration, you can
 * Download [PDFs] of slides
 * Download all images used in the slideshow in a zip file. (Or just run the code that produces the graphs; all graphs in the book were created in R.) 
 
