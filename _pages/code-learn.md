@@ -28,6 +28,8 @@ There are great many resources, to learn R for data analysis. Here are some idea
 6. At Data Carpentry, François Michonneau and Auriel Fournier has a fantastic content --[Data Analysis and Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/){:target="_blank"}.  
 7. Grant McDermott has a more advanced lecture series with amazing content [Data Science for Economists](https://github.com/uo-ec607/lectures){:target="_blank"}.   
 8. Working with **time series** is hard. A great resource by Hansjörg Neth: Data Science for Psychologists [Chapter 10 Dates and times](https://bookdown.org/hneth/ds4psy/10-time.html){:target="_blank"}.   
+9. What They Forgot to Teach You About R, awesome material by Jennifer Bryan and Jim Hester. [workshop material](https://rstats.wtf/){:target="_blank"}.   
+
 
 
 
@@ -45,6 +47,7 @@ Python is a general purpose language, used for many applications beyond data sci
 1. Very nice courses are available widely, for instance on [Datacamp](https://www.datacamp.com/courses/intro-to-python-for-data-science){:target="_blank"}, and [Codeacademy](https://www.codecademy.com/catalog/language/python){:target="_blank"}.
 2. A set of very nice lessons at [Python for Everybody](https://www.py4e.com/){:target="_blank"}.
 3. NYU has a great group also offering a Python cours: [QuanEcon](https://quantecon.org/lectures/){:target="_blank"}.
+
 
 # Learning a second language
 Some people have experience using one language but would now learn a second one. Some ideas we found useful:
@@ -64,6 +67,8 @@ For this textbook, Stata and R code were developed early on, and we started to w
 
 ## Python for Stata users
 
+TBA
+
 
 ## Othe useful sites
 
@@ -73,3 +78,8 @@ For this textbook, Stata and R code were developed early on, and we started to w
 
 ### tools
 Great list of data tools by the UC Berkeley Library and Research IT run [Research Data Management (RDM) Program](https://researchdata.berkeley.edu/tools)
+
+
+## Help us expand this bit
+
+So if you are here, you have scrolled through. Maybe you thought, why don't you have X. Well, please share ideas with [HERE](/contact-us/). Cheers. 
