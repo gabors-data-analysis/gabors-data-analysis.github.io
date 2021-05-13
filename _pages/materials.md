@@ -18,7 +18,7 @@ redirect_from:
 * [**Index**](https://assets.cambridge.org/97811084/83018/index/9781108483018_index.pdf)   
 * [**Sample chapters** 10 and 15](https://www.book2look.com/vbook.aspx?id=9781108483018)   
 * [**Short summary on why use this book**](/files/bekes-kezdi-data-analysis-summary.pdf)   
-* [**A one-page summary**](one-page-summary), also available as [PDF]((/files/gabors_da_1pager.pdf)){:target="_blank"}    
+* [**A one-page summary**](one-page-summary), also available as [PDF](/files/gabors_da_1pager.pdf){:target="_blank"}    
 
 
 
