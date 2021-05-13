@@ -16,7 +16,10 @@ redirect_from:
 
 ## Status
 This is version 0.1.0 (13 May, 2021)  
+Download as [PDF](/files/bekes-kezdi-errata-2021-05-13.pdf){:target="_blank"}    
+
 Check out the [live version](https://gabors-data-analysis.com/errata/)
+
 
 ## Info
 There are a few errors we made, unfortunately. Some are typos, swapped figure lables, some are imprecise language. It may be that we found an important error in code and corrected it, so the code does not *exactly* reproduce tables and graphs in the book. 
