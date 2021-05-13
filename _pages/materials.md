@@ -13,24 +13,24 @@ redirect_from:
 
 ## Important links
 
-### Download
+### Have a look at content
 
-* [**Front Matter**](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf),   
-* [**Table of content**](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
-* [**Index**](https://assets.cambridge.org/97811084/83018/index/9781108483018_index.pdf)   
-* [**Sample chapters** 10 and 15](https://www.book2look.com/vbook.aspx?id=9781108483018)   
-* [**Short summary on why use this book**](/files/bekes-kezdi-data-analysis-summary.pdf)   
+* [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf),   
+* [Table of content](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
+* [Index](https://assets.cambridge.org/97811084/83018/index/9781108483018_index.pdf)   
+* [Sample chapters 10 and 15](https://www.book2look.com/vbook.aspx?id=9781108483018)   
+* [Short summary on why use this book](/files/bekes-kezdi-data-analysis-summary.pdf)   
 
-### Read
+### Find some teaching info
 
-* [**Teaching guide**](/teaching-guide/)
-* [**Instructor FAQ**](/instructor-faq/).
-* [**Instructors' feedback**](/instructor-feedback)
-* [**Errata page**](/errata)
+* [Teaching guide](/teaching-guide/)
+* [Instructor FAQ](/instructor-faq/).
+* [Instructors' feedback](/instructor-feedback)
+* [Errata page](/errata)
 
 ### Resources at Cambridge UP
-* [**Slides**](https://www.cambridge.org/bekeskezdi)
-* [**Practice Question Solutions**](https://www.cambridge.org/bekeskezdi)
+* [Slides](https://www.cambridge.org/bekeskezdi)
+* [Practice Question Solutions](https://www.cambridge.org/bekeskezdi)
 
 
 ## Teaching support
