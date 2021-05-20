@@ -1,6 +1,7 @@
 ---
 permalink: /student-feedback
 title: "Student Feedback"
+classes: wide
 toc: false
 author_profile: false
 redirect_from:
