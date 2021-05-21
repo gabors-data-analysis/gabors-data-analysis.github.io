@@ -79,22 +79,23 @@ ___
 ## Blogs and more
 
 
-### Analysis articles, blog posts
+### Interesting, non-technical articles
 
 
-* Roger Peng on [good data science](https://simplystatistics.org/2019/01/18/the-tentpoles-of-data-science/) (shorter) 
-* Roger Peng on [data science principles ](https://arxiv.org/abs/1903.07639v1)(longer) 
+* Roger Peng on [data science principles ](https://arxiv.org/abs/1903.07639v1) 
 * McKinsey's [non-technical discussion of machine learning](http://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning%20%20%20)
-* NYT Upshot on[ Polling errors](http://www.nytimes.com/interactive/2016/09/20/upshot/the-error-the-polling-world-rarely-talks-about.html?_r=0%20)
-* Nick Barrowman on why data is not independent from judgement
-* Nick Barrowman [Why Data is never raw](https://www.thenewatlantis.com/publications/why-data-is-never-raw)
 * David Donoho [50 years of data science](https://www.tandfonline.com/doi/full/10.1080/10618600.2017.1384734)
 * Susan Athey in Science (2017) [Beyond prediction: Using big data for policy problems](https://science.sciencemag.org/node/689887.full)
 * American statistical organization on research and the p-value. [Statistical Significance and the Dichotomization of Evidence](https://www.tandfonline.com/doi/full/10.1080/01621459.2017.1289846)
 * Amazing collection by Hadley Wickham - [DS Stats337](https://github.com/hadley/stats337)
-* 538 on nutrition. [https://fivethirtyeight.com/features/you-cant-trust-what-you-read-about-nutrition/](https://fivethirtyeight.com/features/you-cant-trust-what-you-read-about-nutrition/) 
 * U Washington Data Lab - Intetrviews on business data viz [Enterprise-analysis-interviews](https://idl.cs.washington.edu/papers/enterprise-analysis-interviews/) 
 * Time series forecasting competition materials [https://www.m4.unic.ac.cy/](https://www.m4.unic.ac.cy/) 
+
+### Blog posts
+* Roger Peng on [good data science](https://simplystatistics.org/2019/01/18/the-tentpoles-of-data-science/) 
+* NYT Upshot on[ Polling errors](http://www.nytimes.com/interactive/2016/09/20/upshot/the-error-the-polling-world-rarely-talks-about.html?_r=0%20)
+* 538 on nutrition. [https://fivethirtyeight.com/features/you-cant-trust-what-you-read-about-nutrition/](https://fivethirtyeight.com/features/you-cant-trust-what-you-read-about-nutrition/) 
+* Nick Barrowman on why data is not independent from judgement [Why Data is never raw](https://www.thenewatlantis.com/publications/why-data-is-never-raw)
 
 
 ### Podcasts, blogs to follow
