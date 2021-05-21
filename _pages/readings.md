@@ -15,14 +15,14 @@ ___
 ### Popular but high quality books on data
 
 
-* Nate Silver,[ The signal and the noise ](https://www.amazon.com/Signal-Noise-Many-Predictions-Fail-but/dp/0143125087)[Recommended]
-* Philip Tetlock,[ Superforecasting: The Art and Science of Prediction](https://www.amazon.com/Superforecasting-Prediction-Philip-E-Tetlock/dp/0804136718/)
-* Cathy O'Neil, [Weapons of Math Destruction ](https://weaponsofmathdestructionbook.com/)
+* Nate Silver,[ The signal and the noise ](https://www.amazon.com/Signal-Noise-Many-Predictions-Fail-but/dp/0143125087)
 * Seth Stephens-Davidowitz,[ Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Seth-Stephens-Davidowitz/e/B072549W28/ref=dp_byline_cont_ebooks_1)
-* Nassim Nicholas Taleb: [Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets ](https://www.amazon.com/Fooled-Randomness-Hidden-Markets-Incerto/dp/0812975219/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=)
 * Hans Rosling, Factfulness: [Ten Reasons We're Wrong About the World--and Why Things Are Better Than You Think](https://www.gapminder.org/factfulness-book/)
 * David Salsburg [Lady tasting Tea - How Statistics revolutionized science in the twentieth century](https://www.amazon.co.uk/Lady-Tasting-Tea-David-Salsburg/dp/0805071342)
-* David Spiegelhalter [The Art of Statistics ](https://www.amazon.com/dp/B07HQDJD99/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)[Recommended]
+* David Spiegelhalter [The Art of Statistics ](https://www.amazon.com/dp/B07HQDJD99/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
+* Philip Tetlock,[ Superforecasting: The Art and Science of Prediction](https://www.amazon.com/Superforecasting-Prediction-Philip-E-Tetlock/dp/0804136718/)
+* Cathy O'Neil, [Weapons of Math Destruction ](https://weaponsofmathdestructionbook.com/)
+* Nassim Nicholas Taleb: [Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets ](https://www.amazon.com/Fooled-Randomness-Hidden-Markets-Incerto/dp/0812975219/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=)
 
 
 ### Books related to decison-making with data
@@ -48,8 +48,8 @@ ___
 
 ## Maths prep
 
-* Knut Sydsaeter and Peter J. Hammond: [Mathematics for Economic Analysis]() 
-* Dirk P. Kroese: [A Short Introduction to Probability]() 
+* Knut Sydsaeter and Peter J. Hammond: [Mathematics for Economic Analysis](https://www.bookdepository.com/Essential-Mathematics-for-Economic-Analysis-Knut-Sydsaeter/9780273760689?ref=grid-view&qid=1621602125852&sr=1-7) 
+* Dirk P. Kroese: [A Short Introduction to Probability](https://people.smp.uq.edu.au/DirkKroese/asitp.pdf) 
 
 ## More advanced stuff
 
