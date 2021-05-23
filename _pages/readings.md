@@ -29,8 +29,9 @@ ___
 
 * Daniel Kahneman,[ Thinking fast and slow](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555/)
 * Michael Lewis,[ Moneyball](https://www.amazon.com/Moneyball-Art-Winning-Unfair-Game/dp/0393324818)
-* Stefan Szymanski [Money and Soccer ](https://www.bookdepository.com/Money-Soccer-Soccernomics-Guide-Stefan-Szymanski/9781568584768?ref=pd_detail_1_sims_b_v2p_1)and Simon Kuper and Stefan Szymanski [Socceronomics](https://www.bookdepository.com/Soccernomics-2018-World-Cup-Edition-Simon-Kuper/9781568587516?ref=pd_detail_1_sims_b_p2p_1)
+* Stefan Szymanski [Money and Soccer ](https://www.bookdepository.com/Money-Soccer-Soccernomics-Guide-Stefan-Szymanski/9781568584768?ref=pd_detail_1_sims_b_v2p_1)and Simon Kuper and Stefan Szymanski [Socceronomics](https://www.bookdepository.com/Soccernomics-2018-World-Cup-Edition-Simon-Kuper/9781568587516?ref=pd_detail_1_sims_b_p2p_1) *Two great books on understanding football via data.*
 * Andrew Leigh [ Randomistas: How Radical Researchers Are Changing Our World](https://www.amazon.co.uk/Randomistas-Radical-Researchers-Changing-World/dp/0300236123/ref=asap_bc?ie=UTF8)
+*  Michael Pollan, [In defense of food (2008)](https://www.bookdepository.com/Defense-Food-Michael-Pollan/9780143114963)  *A popular science book from an investigative journalist on what we should eat and why, with a very good description of what nutrition research can and cannot uncover using observational.* data.
 
 
 ### Data science popular books
@@ -46,11 +47,6 @@ ___
 * Alberto Cario [How Charts Lie: Getting Smarter about Visual Information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/0393358429/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1594625529&sr=1-1) 
 
 
-## Maths prep
-
-* Knut Sydsaeter and Peter J. Hammond: [Mathematics for Economic Analysis](https://www.bookdepository.com/Essential-Mathematics-for-Economic-Analysis-Knut-Sydsaeter/9780273760689?ref=grid-view&qid=1621602125852&sr=1-7) 
-* Dirk P. Kroese: [A Short Introduction to Probability](https://people.smp.uq.edu.au/DirkKroese/asitp.pdf) 
-
 ## More advanced stuff
 
 
@@ -60,9 +56,7 @@ ___
 * Eric Siegel [Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die](https://www.amazon.com/Predictive-Analytics-Power-Predict-Click/dp/1119145678/ref=asap_bc?ie=UTF8)
 * Michael Luca and Max H. Bazerman (2020) [The Power of Experiments: Decision Making in a Data-Driven World](https://mitpress.mit.edu/books/power-experiments)
 * Judea Pearl [The Book of Why](https://www.amazon.co.uk/Book-Why-Science-Cause-Effect/dp/0241242630/ref=asap_bc?ie=UTF8) - intermediate book on causality
-* Kelleher, John D.  Brendan Tierney [Data Science ](https://www.amazon.com/gp/product/0262535432/ref=dbs_a_def_rwt_bibl_vppi_i0)(MIT Press 2018)
 * Roger Peng [The Art of Data Science](https://www.amazon.com/Art-Data-Science-Roger-Peng/dp/1365061469)  
-* Jay Kreps: [I &lt;3 Logs](https://bit.ly/I-heart-logs)
 
 
 ### Advanced/Techincal books
@@ -70,10 +64,9 @@ ___
 
 * Efron-Hastie [Computer Age Statistical Inference](https://www.amazon.co.uk/Computer-Age-Statistical-Inference-Mathematical/dp/1107149894/ref=asap_bc?ie=UTF8) - intense stat book with Big Data in mind
 * Christopher M. Bishop [Pattern Recognition and Machine Learning](https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738/)
-* Martin Kleppmann [Designing Data-Intensive Applications](designing-data-intensive-applications) - A TOP Data Engineering book
 * Nina Zumel and John Mount [Practical Data Science with R](https://www.manning.com/books/practical-data-science-with-r) - nice collection of coding/analysis ideas -  often covered in our courses. 
 * Hyndman and Athananasopoulos [Forecasting: Principles and Practice](http://otexts.org/fpp2/) - useful time series book
-* Ian Goodfellow and Yoshua Bengio and Aaron Courville: [Deep Learning](http://www.deeplearningbook.org/ )
+* Kelleher, John D.  Brendan Tierney [Data Science ](https://www.amazon.com/gp/product/0262535432/ref=dbs_a_def_rwt_bibl_vppi_i0)(MIT Press 2018)
 
 
 ## Blogs and more
@@ -87,8 +80,6 @@ ___
 * David Donoho [50 years of data science](https://www.tandfonline.com/doi/full/10.1080/10618600.2017.1384734)
 * Susan Athey in Science (2017) [Beyond prediction: Using big data for policy problems](https://science.sciencemag.org/node/689887.full)
 * American statistical organization on research and the p-value. [Statistical Significance and the Dichotomization of Evidence](https://www.tandfonline.com/doi/full/10.1080/01621459.2017.1289846)
-* Amazing collection by Hadley Wickham - [DS Stats337](https://github.com/hadley/stats337)
-* U Washington Data Lab - Intetrviews on business data viz [Enterprise-analysis-interviews](https://idl.cs.washington.edu/papers/enterprise-analysis-interviews/) 
 * Time series forecasting competition materials [https://www.m4.unic.ac.cy/](https://www.m4.unic.ac.cy/) 
 
 ### Blog posts
@@ -106,7 +97,7 @@ ___
 
 
 
-### Practice data and code 
+## Practice data and code 
 
 * Nice collection of data collections - [https://www.columnfivemedia.com/100-best-free-data-sources-infographic](https://www.columnfivemedia.com/100-best-free-data-sources-infographic) 
 * Weekly newsletter - [tinyletter.com/data-is-plural](https://tinyletter.com/data-is-plural) 
@@ -114,3 +105,5 @@ ___
 * Nice educational collection of coding [http://Idre.ucla.edu](http://Idre.ucla.edu)  
 * Very nice initiative for collaborative data projects. Include many datasets with info. [https://data.world/](https://data.world/) 
 * This is a collection of ML/AI papes with code. Mostly very technical - [paperswithcode.com/](https://paperswithcode.com/) 
+* Amazing collection by Hadley Wickham - [DS Stats337](https://github.com/hadley/stats337)
+* U Washington Data Lab - Intetrviews on business data viz [Enterprise-analysis-interviews](https://idl.cs.washington.edu/papers/enterprise-analysis-interviews/) 
