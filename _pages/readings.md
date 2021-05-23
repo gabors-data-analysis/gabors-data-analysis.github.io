@@ -30,18 +30,13 @@ ___
 * Daniel Kahneman,[ Thinking fast and slow](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555/)
 * Michael Lewis,[ Moneyball](https://www.amazon.com/Moneyball-Art-Winning-Unfair-Game/dp/0393324818)
 * Stefan Szymanski [Money and Soccer ](https://www.bookdepository.com/Money-Soccer-Soccernomics-Guide-Stefan-Szymanski/9781568584768?ref=pd_detail_1_sims_b_v2p_1)and Simon Kuper and Stefan Szymanski [Socceronomics](https://www.bookdepository.com/Soccernomics-2018-World-Cup-Edition-Simon-Kuper/9781568587516?ref=pd_detail_1_sims_b_p2p_1) *Two great books on understanding football via data.*
-* Andrew Leigh [ Randomistas: How Radical Researchers Are Changing Our World](https://www.amazon.co.uk/Randomistas-Radical-Researchers-Changing-World/dp/0300236123/ref=asap_bc?ie=UTF8)
-*  Michael Pollan, [In defense of food (2008)](https://www.bookdepository.com/Defense-Food-Michael-Pollan/9780143114963)  *A popular science book from an investigative journalist on what we should eat and why, with a very good description of what nutrition research can and cannot uncover using observational.* data.
+* Andrew Leigh: [ Randomistas: How Radical Researchers Are Changing Our World](https://www.amazon.co.uk/Randomistas-Radical-Researchers-Changing-World/dp/0300236123/ref=asap_bc?ie=UTF8)
+* Michael Pollan: [In defense of food (2008)](https://www.bookdepository.com/Defense-Food-Michael-Pollan/9780143114963)  *A popular science book from an investigative journalist on what we should eat and why, with a very good description of what nutrition research can and cannot uncover using observational.* data.
 
-
-### Data science popular books
-
-* The[ Data Analytics handbook (interviews)](https://www.teamleada.com/handbook)
-* Karl Shan and coauthors:[ Data science Handbook](http://www.thedatasciencehandbook.com/)
 
 
 ### Data vizualization
-* Cole Nussbaumer Knaflic,  [Storytelling with Data](https://www.amazon.com/gp/product/1119002257?ie=UTF8&creativeASIN=1119002257&linkCode=xm2&tag=storytellingwithdata-20)
+* Cole Nussbaumer Knaflic: [Storytelling with Data](https://www.amazon.com/gp/product/1119002257?ie=UTF8&creativeASIN=1119002257&linkCode=xm2&tag=storytellingwithdata-20)
 * Kieran Healy [Data Visualization - A practical introduction](http://socviz.co/ )
 * Claus Wilke [Data vizualization](http://serialmentor.com/dataviz/ ) 
 * Alberto Cario [How Charts Lie: Getting Smarter about Visual Information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/0393358429/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1594625529&sr=1-1) 
