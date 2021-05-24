@@ -15,23 +15,23 @@ ___
 ### Popular but high quality books on data
 
 
-* Nate Silver,[ The signal and the noise ](https://www.amazon.com/Signal-Noise-Many-Predictions-Fail-but/dp/0143125087)
-* Seth Stephens-Davidowitz,[ Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Seth-Stephens-Davidowitz/e/B072549W28/ref=dp_byline_cont_ebooks_1)
-* Hans Rosling, Factfulness: [Ten Reasons We're Wrong About the World--and Why Things Are Better Than You Think](https://www.gapminder.org/factfulness-book/)
-* David Salsburg [Lady tasting Tea - How Statistics revolutionized science in the twentieth century](https://www.amazon.co.uk/Lady-Tasting-Tea-David-Salsburg/dp/0805071342)
-* David Spiegelhalter [The Art of Statistics ](https://www.amazon.com/dp/B07HQDJD99/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
-* Philip Tetlock,[ Superforecasting: The Art and Science of Prediction](https://www.amazon.com/Superforecasting-Prediction-Philip-E-Tetlock/dp/0804136718/)
-* Cathy O'Neil, [Weapons of Math Destruction ](https://weaponsofmathdestructionbook.com/)
+* Nate Silver,[ The signal and the noise (2012)](https://www.amazon.com/Signal-Noise-Many-Predictions-Fail-but/dp/0143125087) *A great book from a leading expert in polling and sports statistics on prediction. A big picture including statistical and other kinds of predictions; a must read for all who want to do predictive analytics.*
+* Hans Rosling et al., [Factfulness: Ten Reasons We're Wrong About the World--and Why Things Are Better Than You Think (2018)] (https://www.gapminder.org/factfulness-book/) *A book summarizing decades of public advocacy from the late doctor and epidemilogist Hans Rosling and his collaborators to understand the world around us by making sense of cross-country data. A must read for everyone, really.*
+* David Salsburg [Lady tasting Tea - How Statistics revolutionized science in the twentieth century (2002)](https://www.amazon.co.uk/Lady-Tasting-Tea-David-Salsburg/dp/0805071342) *A great book about the history of statistics and statistical ideas with many great stories. A must read for statistics nerds.*
+* Philip Tetlock,[ Superforecasting: The Art and Science of Prediction](https://www.amazon.com/Superforecasting-Prediction-Philip-E-Tetlock/dp/0804136718/) *A great book summarizing some of the research and ideas of one of the leading experst in prediction. Not explicitely about statistical predictions; more of a big picture reading for those who want to evaluate predictions.*
 * Nassim Nicholas Taleb: [Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets ](https://www.amazon.com/Fooled-Randomness-Hidden-Markets-Incerto/dp/0812975219/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=)
+* Seth Stephens-Davidowitz,[ Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Seth-Stephens-Davidowitz/e/B072549W28/ref=dp_byline_cont_ebooks_1)
+* David Spiegelhalter [The Art of Statistics ](https://www.amazon.com/dp/B07HQDJD99/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
+* Cathy O'Neil, [Weapons of Math Destruction ](https://weaponsofmathdestructionbook.com/)
 
 
 ### Books related to decison-making with data
 
-* Daniel Kahneman,[ Thinking fast and slow](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555/)
-* Michael Lewis,[ Moneyball](https://www.amazon.com/Moneyball-Art-Winning-Unfair-Game/dp/0393324818)
+* Daniel Kahneman,[ Thinking fast and slow (2011)](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555/) *A great book summarizing a live's resarch of the economics Nobel-winner psychologist.*
 * Stefan Szymanski [Money and Soccer ](https://www.bookdepository.com/Money-Soccer-Soccernomics-Guide-Stefan-Szymanski/9781568584768?ref=pd_detail_1_sims_b_v2p_1)and Simon Kuper and Stefan Szymanski [Socceronomics](https://www.bookdepository.com/Soccernomics-2018-World-Cup-Edition-Simon-Kuper/9781568587516?ref=pd_detail_1_sims_b_p2p_1) *Two great books on understanding football via data.*
+* Michael Pollan: [In defense of food (2008)](https://www.bookdepository.com/Defense-Food-Michael-Pollan/9780143114963)  *A great book from an investigative journalist on what we should eat and why, with a very good description of what nutrition research can and cannot uncover using observational data.*
+* Michael Lewis,[ Moneyball](https://www.amazon.com/Moneyball-Art-Winning-Unfair-Game/dp/0393324818)
 * Andrew Leigh: [ Randomistas: How Radical Researchers Are Changing Our World](https://www.amazon.co.uk/Randomistas-Radical-Researchers-Changing-World/dp/0300236123/ref=asap_bc?ie=UTF8)
-* Michael Pollan: [In defense of food (2008)](https://www.bookdepository.com/Defense-Food-Michael-Pollan/9780143114963)  *A popular science book from an investigative journalist on what we should eat and why, with a very good description of what nutrition research can and cannot uncover using observational.* data.
 
 
 
