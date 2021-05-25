@@ -87,9 +87,11 @@ Steps
 6. Add the dataset folders to a  `da_data_repo` folder to ensure all codes work smoothly.
 
 
-## Option B: Download the whole textbook material - NOT READY YET
-Yes, you will be able to download the whole material as a single .zip file. 
-Forthcoming: March 2021
+## Option B: Download the whole textbook material 
+You can download a single ZIP file that contains all datasets, with clean datasets only. This is for size considerations (the raw data are 20GB or so). 
+
+To get it just visit the [da_data_repo](https://osf.io/3u5em/) site of our OSF repo, download, unzip and enjoy. 
+
 
 
 ## Option C: Directly open from script
