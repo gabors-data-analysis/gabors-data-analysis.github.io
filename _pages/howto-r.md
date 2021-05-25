@@ -16,14 +16,23 @@ redirect_from:
 
 ## How to run case studies in R
 
-1. Step 1: Set the working directory for your project.
+#### Step 1: Set the working directory for your project
 
-Option A: [Recommended] In case you use `RStudio` create a new `Rstudio` project for the case studies and load it every time you are working on the project. See the [official documentation](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) on how to create and use `Rstudio` projects.
+ In case you use `RStudio` create a new `Rstudio` project for the case studies and load it every time you are working on the project. See the [official documentation](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) on how to create and use `Rstudio` projects.
 	
-Option B: Make sure some other way that your working directory is the root folder of the case study repository.
+#### Step 2: Install required packages
 
-2. Step 2: You will need to set the path to the data repo and save it in the `set-data-directory.R` file. 
-	a. Open `set-data-directory-example.R` and add your path to the data repo where you have or will download datasets. 
-	b. Save as  `set-data-directory.R` (exactly where you found `set-data-directory-example.R`)
+  We use [renv](https://rstudio.github.io/renv/articles/renv.html) for dependency management. Open the R project you created in Step 1., and install `renv` by running the following command in the R studio consol:
+  ```
+  install.packages("renv")
+  ```
+ then install all the packages and dependencies used in the case studies stored in the `renv.lock` file:
+  ```
+  renv::restore()
+  ```
+
+#### Step 3: Set project path
+
+ You will need to set the path to the data repo and save it in the `set-data-directory.R` file. a. Open `set-data-directory-example.R` and add your path to the data repo where you have or will download datasets. b. Save as  `set-data-directory.R` (exactly where you found `set-data-directory-example.R`)
 
 
