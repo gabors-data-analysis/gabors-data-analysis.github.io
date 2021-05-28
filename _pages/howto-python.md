@@ -29,10 +29,10 @@ redirect_from:
     Go to the `da_case_studies` folder to create a virtual environment and install packages by running the following code in your terminal/PowerShell:
 
     ```
-    pipenv install
+    pipenv install --ignore-pipfile
     ```
 
-    This installs the required Python version and packages stored in the Pipfile.lock.
+    This installs the required Python version and packages stored in the `Pipfile.lock`.
 
 3. **Run Jupyter Notebook**
 
