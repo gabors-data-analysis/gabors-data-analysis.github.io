@@ -37,7 +37,7 @@ As the most effective way to communicate data analysis, running case studies pla
 
 ## Buy it or ask for an inspection copy
 
-![cup](images/cup1.png){:height="50%" width="50%"}  
+![cup](images/cup2.png){:height="50%" width="50%"}  
 
 Published on 6 May 2021, the book is available from [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC), [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=), or a great deal of [global options](/order)
 
@@ -71,10 +71,10 @@ We share **all raw and cleaned data** we use in the case studies. We also share 
 
 
 <figure class="third">
-	<img src="/images/stata.png">
-	<img src="/images/r.png">
-	<img src="/images/python1.png">
-	<figcaption>Follow your heart! Code is available in major scripting languages! </figcaption>
+	<img src="/images/stata2.png">
+	<img src="/images/r2.png">
+	<img src="/images/python2.png">
+	<figcaption> Follow your heart! Code is available in major scripting languages! </figcaption>
 </figure>
 
 This textbook was written to be a **complete course** in data analysis. This textbook could be useful for university students in graduate programs as **core text** in applied statistics and econometrics, quantitative methods, or data analysis. It may also **complement online courses** that teach specific methods to give more context and explanation. Undergraduate courses can also make use of this textbook, even though the workload on students exceeds the typical undergraduate workload. Finally, the textbook can serve as a **handbook for practitioners** to guide them through all steps of real-life data analysis. [MORE on why use this book?](/whythisbook)
@@ -82,7 +82,7 @@ This textbook was written to be a **complete course** in data analysis. This tex
 
 ## Slideshow
 
-For a quick review, wWatch our pre-launch [slideshow](/presentation/) presentation. 
+For a quick review, watch our pre-launch [slideshow](/presentation/) presentation. 
 
 
 ## About authors
