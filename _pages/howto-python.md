@@ -7,23 +7,39 @@ redirect_from:
   - "/nmpp.html"
 ---
 
+## Get Python
 
-#### Beta version
+1. Install latest version of Python from the [official website](https://www.python.org/downloads/){:target="_blank"}.
 
-1. Install latest version of python from the [official website](https://www.python.org/downloads/).
+2. We suggest to use [Jupyter Notebook](https://jupyter-notebook.readthedocs.io/en/stable/){:target="_blank"} to edit and run Python code. You can install it via `pip` by running `pip3 install jupyter` in your terminal/PowerShell. 
 
-2. Install latest version of jupyter notebook by running the following code in terminal on Mac OS or Powershell on Windows:
-```
-pip install notebook
-```
 
-3. Install required packages: Go to the ch00-tech-prep folder, open a terminal/powershell and run the following code:
-```
-pip install requirements.txt
-```
+## How to run case studies in Python
 
-4. Go to the da_case_studies folder, open a terminal/powershell and run the following code:
-```
-jupyter notebook
-```
-5. The jupyter environment should be opened on your default browser. You are good to go!
+1. **Install `Pipenv`**
+
+    We use [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/index.html){:target="_blank"} for Python dependency management. First, install it via `pip` by running the following code in your terminal/PowerShell:
+
+    ```
+    pip3 install pipenv
+    ```
+
+2. **Create virtual environment and install required packages**
+
+    Go to the `da_case_studies` folder to create a virtual environment and install packages by running the following code in your terminal/PowerShell:
+
+    ```
+    pipenv install
+    ```
+
+    This installs the required Python version and packages stored in the Pipfile.lock.
+
+3. **Run Jupyter Notebook**
+
+    To start a Jupyter Notebook in this virtual environment, go to the `da_case_studies` folder and run the following code in your terminal/PowerShell:
+
+    ```
+    pipenv run jupyter notebook
+    ```
+
+    The jupyter environment should be opened on your default browser. You are good to go!
