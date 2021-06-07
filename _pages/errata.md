@@ -15,10 +15,9 @@ redirect_from:
 ## Errata to Békés-Kézdi: Data Analysis for Business, Economics, and Policy, Cambrigde University Press, 2021
 
 ## Status
-This is version 0.1.0 (13 May, 2021)  
-Download as [PDF](/files/bekes-kezdi-errata-2021-05-13.pdf){:target="_blank"}    
+Latest update: 7 June 2021
 
-Check out the [live version](https://gabors-data-analysis.com/errata/)
+Download PDF [v0.1.0 -- 13 May, 2021](/files/bekes-kezdi-errata-2021-05-13.pdf){:target="_blank"}    
 
 
 ## Info
