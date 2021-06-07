@@ -41,6 +41,7 @@ Version v0.1.0 on 13 May, 2021: [Download PDF](/files/bekes-kezdi-errata-2021-05
 
 |ID       | Date added |   Error Type      | Chapter | Page | Problematic | Corrected|
 | ---     | ----------    | ---------------- | -----|---------| -----------------------------------| ----------------------|
+|     |    |                |   |    |   |
 
 
 ### Part II
