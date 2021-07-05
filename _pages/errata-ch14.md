@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title: "Errata: Ch 14 code issue"
-permalink: /errata/
+permalink: /errata-ch14/
 author_profile: true
 redirect_from:
   - /md/
@@ -12,11 +12,11 @@ redirect_from:
 {% include base_path %}
 
 
+# update 2021-07-05: seems okay, provided we use earlier data version.
+
 There are a few errors we made, unfortunately. Fortunately, we found them, and you may review them before reading / teaching below. 
 
-## A few major issues
-
-### Chapter 14
+## Chapter 14
 It turns out that Table 14.3 and the corresponding Figure 14.7 are not right. They are okay in relative terms, and do not disturb the storyline, but not the right ones. 
 
 This is the correct 14.3
