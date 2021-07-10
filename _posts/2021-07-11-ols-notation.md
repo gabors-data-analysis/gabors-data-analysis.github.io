@@ -16,11 +16,13 @@ We introduced some new notation in the textbook, to make the formulae simpler an
 
 Our approach starts with the definition of the regression: it is a model for the conditional mean. The formulaic definition of the simple linear regression is $$E[y|x]= \alpha + \beta x$$. The formulaic definition of a linear regression with three right-hand-side variables is 
 
+
 $$
 E[y|x_1, x_2, x_3]= \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3
 $$
 
-The regression formula we use in the textbook is a simplified version of this formulaic definition. In particular, we have $$y^E$$ on the left-hand side instead of $$E[y|...]$$. $$y^E$$ is just a shorthand for the expected value of $$y$$ conditional on whatever is on the right-hand side of the regression.
+
+The regression formula we use in the textbook is a simplified version of this formulaic definition. In particular, we have $$y^E$$ on the left-hand side instead of $$E[y|...]$$. So $$y^E$$ is just a shorthand for the expected value of $$y$$ conditional on whatever is on the right-hand side of the regression.
 
 Thus, the formula for the simple linear regression is $$y^E = \alpha + \beta x$$, and $$y^E$$ is the expected value of $$y$$ conditional on $$x$$. The formula for the linear regression with three right-hand-side variables is 
 
