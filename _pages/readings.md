@@ -15,14 +15,15 @@ ___
 ### Popular but high quality books on data
 
 
-* Nate Silver,[ The signal and the noise (2012)](https://www.amazon.com/Signal-Noise-Many-Predictions-Fail-but/dp/0143125087) *A great book from a leading expert in polling and sports statistics on prediction. A big picture including statistical and other kinds of predictions; a must read for all who want to do predictive analytics.*
-* Hans Rosling et al., [Factfulness: Ten Reasons We're Wrong About the World--and Why Things Are Better Than You Think (2018)] (https://www.gapminder.org/factfulness-book/) *A book summarizing decades of public advocacy from the late doctor and epidemilogist Hans Rosling and his collaborators to understand the world around us by making sense of cross-country data. A must read for everyone, really.*
+* Nate Silver (2012): [The signal and the noise ](https://www.amazon.com/Signal-Noise-Many-Predictions-Fail-but/dp/0143125087) *A great book from a leading expert in polling and sports statistics on prediction. A big picture including statistical and other kinds of predictions; a must read for all who want to do predictive analytics.* [Recommended]
+* Hans Rosling et al. (2018), [Factfulness: Ten Reasons We're Wrong About the World--and Why Things Are Better Than You Think)](https://www.gapminder.org/factfulness-book/) *A book summarizing decades of public advocacy from the late doctor and epidemilogist Hans Rosling and his collaborators to understand the world around us by making sense of cross-country data. A must read for everyone, really.*
 * David Salsburg [Lady tasting Tea - How Statistics revolutionized science in the twentieth century (2002)](https://www.amazon.co.uk/Lady-Tasting-Tea-David-Salsburg/dp/0805071342) *A great book about the history of statistics and statistical ideas with many great stories. A must read for statistics nerds.*
 * Philip Tetlock,[ Superforecasting: The Art and Science of Prediction](https://www.amazon.com/Superforecasting-Prediction-Philip-E-Tetlock/dp/0804136718/) *A great book summarizing some of the research and ideas of one of the leading experst in prediction. Not explicitely about statistical predictions; more of a big picture reading for those who want to evaluate predictions.*
-* Nassim Nicholas Taleb: [Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets ](https://www.amazon.com/Fooled-Randomness-Hidden-Markets-Incerto/dp/0812975219/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=)
-* Seth Stephens-Davidowitz,[ Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Seth-Stephens-Davidowitz/e/B072549W28/ref=dp_byline_cont_ebooks_1)
-* David Spiegelhalter [The Art of Statistics ](https://www.amazon.com/dp/B07HQDJD99/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
-* Cathy O'Neil, [Weapons of Math Destruction ](https://weaponsofmathdestructionbook.com/)
+* Nassim Nicholas Taleb: [Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets ](https://www.amazon.com/Fooled-Randomness-Hidden-Markets-Incerto/dp/0812975219/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=) *A fascinating walk through of examples discussing the role of luck and human decision making. Shows how really really important randomness is.* 
+* Seth Stephens-Davidowitz,[ Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Seth-Stephens-Davidowitz/e/B072549W28/ref=dp_byline_cont_ebooks_1) *So you think you can use data to answer some important questions? Watch out people often hide stuff. Look at what they do, not what they say. An amazing collection of stories.*  
+* David Spiegelhalter [The Art of Statistics ](https://www.amazon.com/dp/B07HQDJD99/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1) *A great review of some key statistics concept from a great statitsician. A very nice introduction to any data, stats or metrics course*
+* Cathy O'Neil, [Weapons of Math Destruction ](https://weaponsofmathdestructionbook.com/) *A more sceptic take on the role of algorithms* 
+
 
 
 ### Books related to decison-making with data
