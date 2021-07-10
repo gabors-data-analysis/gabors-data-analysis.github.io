@@ -14,7 +14,7 @@ tags:
 
 We introduced some new notation in the textbook, to make the formulae simpler and more focused. In particular, our formula for regressions is slightly different from the traditional formula. We think that it is good practice to write out the formula for each regression that is analyzed. For this reason, it important to use a notation for the regression formula that is as simple as possible and focuses only on what we care about. Our notation is intuitive, but it's slightly different from traditional practice. Let us explain our reasons.
 
-Our approach starts with the definition of the regression: it is a model for the conditional mean. The formulaic definition of the simple linear regression is $$E[y|x]= \alpha + \beta x$$. The formulaic definition of a linear regression with three right-hand-side variables is 
+Our approach starts with the definition of the regression: it is a model for the conditional mean. The formulaic definition of the simple linear regression is <a href="https://www.codecogs.com/eqnedit.php?latex=E[y|x]=&space;\alpha&space;&plus;&space;\beta&space;x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E[y|x]=&space;\alpha&space;&plus;&space;\beta&space;x" title="E[y|x]= \alpha + \beta x" /></a> The formulaic definition of a linear regression with three right-hand-side variables is 
 
 
 $$
