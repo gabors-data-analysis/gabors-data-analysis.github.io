@@ -31,6 +31,8 @@ There are great many resources, to learn R for data analysis. Here are some idea
 8. Working with **time series** is hard. A great resource by Hansjörg Neth: Data Science for Psychologists [Chapter 10 Dates and times](https://bookdown.org/hneth/ds4psy/10-time.html){:target="_blank"}.   
 9. What They Forgot to Teach You About R, awesome material by Jennifer Bryan and Jim Hester. [workshop material](https://rstats.wtf/){:target="_blank"}.   
 10. Great style guide with suggestions on coding by Sean Higgins. [R guide](https://github.com/skhiggins/R_guide){:target="_blank"}.   
+11. Nice, dplyr focused intro into called *An introductory workshop on modern data analyses and workflows* by folks at Aarhus, available as [Reproducible Research in R](https://r-cubed.rostools.org/index.html)
+
 
 A list of useful stuff
 [Hacks](https://towardsdatascience.com/ten-time-saving-r-hacks-b411add26b96), 
