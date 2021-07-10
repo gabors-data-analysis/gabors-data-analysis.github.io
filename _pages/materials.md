@@ -27,6 +27,8 @@ redirect_from:
 * [Instructor FAQ](/instructor-faq/).
 * [Instructors' feedback](/instructor-feedback)
 * [Errata page](/errata)
+* [Reading recommendation](/readings)
+
 
 ### Resources at Cambridge UP
 * [Slides](https://www.cambridge.org/bekeskezdi)
