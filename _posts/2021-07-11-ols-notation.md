@@ -14,17 +14,17 @@ tags:
 
 We introduced some new notation in the textbook, to make the formulae simpler and more focused. In particular, our formula for regressions is slightly different from the traditional formula. We think that it is good practice to write out the formula for each regression that is analyzed. For this reason, it important to use a notation for the regression formula that is as simple as possible and focuses only on what we care about. Our notation is intuitive, but it's slightly different from traditional practice. Let us explain our reasons.
 
-Our approach starts with the definition of the regression: it is a model for the conditional mean. The formulaic definition of the simple linear regression is $$E[y|x]= \alpha + \beta x$$. 
+Our approach starts with the definition of the regression: it is a model for the conditional mean. The formulaic definition of the simple linear regression is $$E[y \mid x]= \alpha + \beta x$$ . 
 
 The formulaic definition of a linear regression with three right-hand-side variables is 
 
 
 $$
-E[y|x_1, x_2, x_3]= \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3
+E[y \mid x_1, x_2, x_3]= \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3
 $$
 
 
-The regression formula we use in the textbook is a simplified version of this formulaic definition. In particular, we have $$y^E$$ on the left-hand side instead of $$E[y|...]$$. So $$y^E$$ is just a shorthand for the expected value of $$y$$ conditional on whatever is on the right-hand side of the regression.
+The regression formula we use in the textbook is a simplified version of this formulaic definition. In particular, we have $$y^E$$ on the left-hand side instead of $$E[y \mid ...]$$. So $$y^E$$ is just a shorthand for the expected value of $$y$$ conditional on whatever is on the right-hand side of the regression.
 
 Thus, the formula for the simple linear regression is $$y^E = \alpha + \beta x$$, and $$y^E$$ is the expected value of $$y$$ conditional on $$x$$. The formula for the linear regression with three right-hand-side variables is 
 
@@ -32,7 +32,7 @@ $$
 y^E= \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3
 $$ 
 
-and here $$y^E$$ is the expected value of $$y$$ conditional on $$x_1$$, $$x_2$$, and $$x_3$$. Having $$y^E$$ on the left-hand side makes notation much simpler than writing out the conditional expectation formula $$E[y|...]$$, especially when we have many right-hand-side variables.
+and here $$y^E$$ is the expected value of $$y$$ conditional on $$x_1$$, $$x_2$$, and $$x_3$$. Having $$y^E$$ on the left-hand side makes notation much simpler than writing out the conditional expectation formula $$E[y \mid ...]$$, especially when we have many right-hand-side variables.
 
 In contrast, the traditional regression formula has the variable $$y$$ itself on the left-hand side, and has an additional element, the error term. This different notation acknowledges the fact that the actual value of $$y$$ is equal to its expected value (defined by the model) plus a deviation from it. For example, the traditional formula for the linear regression with three right-hand-side variables is 
 
