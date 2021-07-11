@@ -33,7 +33,7 @@ ___
 * Michael Lewis[ Moneyball](https://www.amazon.com/Moneyball-Art-Winning-Unfair-Game/dp/0393324818) *Super famous book on how finding mispriced players can give an edge is baseball.*
 * Andrew Leigh: [ Randomistas: How Radical Researchers Are Changing Our World](https://www.amazon.co.uk/Randomistas-Radical-Researchers-Changing-World/dp/0300236123/ref=asap_bc?ie=UTF8) *Interesting review on experiments in business, as well as government. From an academic/politician.*
 * Michael Luca and Max H. Bazerman (2020) [The Power of Experiments: Decision Making in a Data-Driven World](https://mitpress.mit.edu/books/power-experiments) New dawn of experiments using large datasets with a focus on testing at businesses such as Airbnb or Uber. 
-
+* Carl Bergstrom Jevin West [Calling-bullshit](https://www.penguinrandomhouse.com/books/563882/calling-bullshit-by-carl-t-bergstrom-and-jevin-d-west/)  A fantastic book based on a very famours [course](https://www.callingbullshit.org/) will help you see through deception by statistics. 
 
 ## Intro Data Science / statistics books
 * Roger Peng and Elizabeth Matsui [The Art of Data Science](https://bookdown.org/rdpeng/artofdatascience/) Intro review on the steps of analyzing data.   
@@ -47,25 +47,29 @@ ___
 * Alberto Cario [How Charts Lie: Getting Smarter about Visual Information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/0393358429/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1594625529&sr=1-1) 
 
 
+## Our book
+Okay, so you have read some nice books. Why not read our book, Bekes and Kezdi [Data Analysi](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20) :-)
 
 
 ## More advanced stuff
 
 
-### More advanced books - analytics, statistics and data science
+### Advanced/techincal books on data science and prediction
 
 * Ajay Agrawal, Joshua Gans and Avi Goldfarb,[ Prediction Machines: The Simple Economics of Artificial Intelligence](https://hbr.org/product/prediction-machines-the-simple-economics-of-artificial-intelligence/10195-HBK-ENG)
 * Eric Siegel [Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die](https://www.amazon.com/Predictive-Analytics-Power-Predict-Click/dp/1119145678/ref=asap_bc?ie=UTF8)
-* Judea Pearl [The Book of Why](https://www.amazon.co.uk/Book-Why-Science-Cause-Effect/dp/0241242630/ref=asap_bc?ie=UTF8) - intermediate book on causality, with interesting stories and great care into developing theoretical structures and measurement of causal links.
-
-
-### Advanced/Techincal books
 
 * Efron-Hastie [Computer Age Statistical Inference](https://www.amazon.co.uk/Computer-Age-Statistical-Inference-Mathematical/dp/1107149894/ref=asap_bc?ie=UTF8) - intense stat book with Big Data in mind
 * Christopher M. Bishop [Pattern Recognition and Machine Learning](https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738/)
-* Nina Zumel and John Mount [Practical Data Science with R](https://www.manning.com/books/practical-data-science-with-r) - nice collection of coding/analysis ideas -  often covered in our courses. 
-* Hyndman and Athananasopoulos [Forecasting: Principles and Practice](http://otexts.org/fpp2/) - useful time series book
+* Nina Zumel and John Mount [Practical Data Science with R](https://www.manning.com/books/practical-data-science-with-r) *nice collection of coding/analysis ideas -  often related to our book. *
+* Hyndman and Athananasopoulos [Forecasting: Principles and Practice](http://otexts.org/fpp2/) *useful time series book, matching how we think about time series, a good way to continue.*
 * Kelleher, John D.  Brendan Tierney [Data Science ](https://www.amazon.com/gp/product/0262535432/ref=dbs_a_def_rwt_bibl_vppi_i0)(MIT Press 2018)
+
+
+### Advanced/technical books on causal inference
+* Joshua Angrist and  Jörn-Steffen Pischke (2009) [Mostly Harmless Econometrics](https://press.princeton.edu/books/paperback/9780691120355/mostly-harmless-econometrics) The book that started it all: talking about key econometrics tools in a precise yet accessible and focused way. Aimed at post-graduate economics student.  
+* Scott Cunningham 2020 [The Mixtape](https://yalebooks.yale.edu/book/9780300251685/causal-inference) Advanced, formal but highly accessible discussion of key tools of causal inference using examples from some great academic papers. 
+* Judea Pearl [The Book of Why](https://www.amazon.co.uk/Book-Why-Science-Cause-Effect/dp/0241242630/ref=asap_bc?ie=UTF8) - intermediate book on causality, with interesting stories and great care into developing theoretical structures and measurement of causal links.
 
 
 ## Blogs and more
