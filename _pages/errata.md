@@ -22,7 +22,7 @@ Fortunately, we found some. As we, and our kind readers, carry on finding more e
 
 
 ### Status
-Latest update: 7 June 2021
+Latest update: 12 July 2021
 
 
 ### Feedback
@@ -67,6 +67,8 @@ Version v0.1.0 on 13 May, 2021: [Download PDF](/files/bekes-kezdi-errata-2021-05
 |16-04    | 2021-02-09   |Imprecise language | Ch16 |p.446-8, Box 16.3. | PDP: it shows "average y,",  about the "$$y-x$$ relationship" conditional on other x variables. |  The PDP shows **average predicted y** ( $$\hat{y}$$),  about the "$$\hat{y} - x$$ relationship" conditional on other variables.  |
 |16-05    | 2021-02-13   | Imprecise sentence | Ch16 | A1-A3 | The currency is USD for price| Actually, local currency (GBP) is used. Recently [clarified](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit#gid=1938308660){:target="_blank"}     |
 |17-01    | 2021-01-21   | Typo numbers | Ch17 |p.479 | "Yields 139 euros higher profit ...  increase of 139 000 euros in profits" | "Yields **135** euros higher profit ...  increase of **135 000** euros in profits " |
+|18-01    | 2021-07-12   | Code vs table  | Ch18 |p.509 | "RMSE result for the VAR is RMSE=4.4" | "RMSE result for the VAR is RMSE=4.5"|
+|18-02    | 2021-07-12   | Code vs table  | Ch18 |p.510 | M7 (var) RMSE line presents results without seasonality ( reads: 13.30, 5.85, 3.52, 4.28, 7.8) |  M7 (var) RMSE line should read: **5.24, 2.51,  5.18,  4.75,  4.5**  |
 
 
 ### Part IV
