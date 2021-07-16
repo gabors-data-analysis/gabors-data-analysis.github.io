@@ -16,13 +16,6 @@ redirect_from:
 > ## *Data analysis is a process*
 
 
-
-# Data and code info
-**To get code, data, graphs**, we advise to follow instructions on how to get all codes and dependencies for  [**Stata**](get-allcode-stata) or [**R**](get-allcode-R) or [**Python**](get-allcode-py). All the data may be downloaded from [Get Data](link-google-drive)
-
-
-**Update: links will be live by end of September**
-
 [PART 1: DATA EXPLORATION](#part-i-data-exploration)  
 [PART 2: REGRESSION ANALYSIS](#part-ii-regression-analysis)  
 [PART 3: PREDICTION](#part-iii-prediction)  
