@@ -28,14 +28,19 @@ ___
 ### Books related to decison-making with data
 
 * Daniel Kahneman,[ Thinking fast and slow (2011)](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555/) *A great book summarizing a live's resarch of the economics Nobel-winner psychologist.*
-* Stefan Szymanski [Money and Soccer ](https://www.bookdepository.com/Money-Soccer-Soccernomics-Guide-Stefan-Szymanski/9781568584768?ref=pd_detail_1_sims_b_v2p_1)and Simon Kuper and Stefan Szymanski [Socceronomics](https://www.bookdepository.com/Soccernomics-2018-World-Cup-Edition-Simon-Kuper/9781568587516?ref=pd_detail_1_sims_b_p2p_1) *Two great books on understanding football via data.*
 * Michael Pollan (2008): [In defense of food)](https://www.bookdepository.com/Defense-Food-Michael-Pollan/9780143114963)  *A great book from an investigative journalist on what we should eat and why, with a very good description of what nutrition research can and cannot uncover using observational data.*
-* Michael Lewis[ Moneyball](https://www.amazon.com/Moneyball-Art-Winning-Unfair-Game/dp/0393324818) *Super famous book on how finding mispriced players can give an edge is baseball.*
 * Andrew Leigh: [ Randomistas: How Radical Researchers Are Changing Our World](https://www.amazon.co.uk/Randomistas-Radical-Researchers-Changing-World/dp/0300236123/ref=asap_bc?ie=UTF8) *Interesting review on experiments in business, as well as government. From an academic/politician.*
 * Michael Luca and Max H. Bazerman (2020) [The Power of Experiments: Decision Making in a Data-Driven World](https://mitpress.mit.edu/books/power-experiments) New dawn of experiments using large datasets with a focus on testing at businesses such as Airbnb or Uber. 
 * Carl Bergstrom Jevin West [Calling-bullshit](https://www.penguinrandomhouse.com/books/563882/calling-bullshit-by-carl-t-bergstrom-and-jevin-d-west/)  A fantastic book based on a very famours [course](https://www.callingbullshit.org/) will help you see through deception by statistics. 
 
-## Intro Data Science / statistics books
+
+### Sports and data
+* Stefan Szymanski [Money and Soccer ](https://www.bookdepository.com/Money-Soccer-Soccernomics-Guide-Stefan-Szymanski/9781568584768?ref=pd_detail_1_sims_b_v2p_1)and Simon Kuper and Stefan Szymanski [Socceronomics](https://www.bookdepository.com/Soccernomics-2018-World-Cup-Edition-Simon-Kuper/9781568587516?ref=pd_detail_1_sims_b_p2p_1) *Two great books on understanding football via data.*
+* Michael Lewis[ Moneyball](https://www.amazon.com/Moneyball-Art-Winning-Unfair-Game/dp/0393324818) *Super famous book on how finding mispriced players can give an edge is baseball.*
+* Chris Anderson and David Sally (2013) [The Numbers Game: Why Everything You Know About Soccer Is Wrong](https://www.bookdepository.com/The-Numbers-Game-Chris-Anderson/9780143124566) *I just realized on of the chapters inspired a case study in our book. If you know which one, DM me, and we'll get a drink sometime.*
+
+
+### Intro Data Science / statistics books
 * Roger Peng and Elizabeth Matsui [The Art of Data Science](https://bookdown.org/rdpeng/artofdatascience/) Intro review on the steps of analyzing data.   
 * David Spiegelhalter [The Art of Statistics ](https://www.amazon.com/dp/B07HQDJD99/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1) *A great review of some key statistics concept from a great statitsician. A very nice introduction to any data, stats or metrics course* [Recommended]
 
@@ -60,7 +65,6 @@ Okay, so you have read some nice books. Why not read our book:
 
 * Ajay Agrawal, Joshua Gans and Avi Goldfarb,[ Prediction Machines: The Simple Economics of Artificial Intelligence](https://hbr.org/product/prediction-machines-the-simple-economics-of-artificial-intelligence/10195-HBK-ENG)
 * Eric Siegel [Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die](https://www.amazon.com/Predictive-Analytics-Power-Predict-Click/dp/1119145678/ref=asap_bc?ie=UTF8)
-
 * Efron-Hastie [Computer Age Statistical Inference](https://www.amazon.co.uk/Computer-Age-Statistical-Inference-Mathematical/dp/1107149894/ref=asap_bc?ie=UTF8) - intense stat book with Big Data in mind
 * Christopher M. Bishop [Pattern Recognition and Machine Learning](https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738/)
 * Nina Zumel and John Mount [Practical Data Science with R](https://www.manning.com/books/practical-data-science-with-r) *nice collection of coding/analysis ideas -  often related to our book. *
