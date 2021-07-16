@@ -48,7 +48,9 @@ ___
 
 
 ## Our book
-Okay, so you have read some nice books. Why not read our book, Bekes and Kezdi [Data Analysi](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20) :-)
+Okay, so you have read some nice books. Why not read our book: 
+
+* Gábor Békés and Gábor Kézdi (2021)  [Data Analysis for Business, Economics, and Policy](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20) :-)
 
 
 ## More advanced stuff
