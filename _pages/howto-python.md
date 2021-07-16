@@ -34,6 +34,9 @@ redirect_from:
 
     This installs the required Python version and packages stored in the `Pipfile.lock`.
 
+**NOTE:** Python environment was testet thoroughly only on Mac OS. Windows users might experience bugs, therefore we prepared `requirements.txt` for all package==version we used in the notebooks and `requirements_pipenv.txt` for all packages and dependencies used in the virtual environment.
+{: .notice--success}
+
 3. **Run Jupyter Notebook**
 
     To start a Jupyter Notebook in this virtual environment, go to the `da_case_studies` folder and run the following code in your terminal/PowerShell:
