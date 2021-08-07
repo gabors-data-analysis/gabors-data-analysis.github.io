@@ -104,7 +104,7 @@ We provide access to get all the code we used --  in R, Stata and Python.
 
 For all the code that reproduces all the tables and graphs in the textbook, visit the Github page [github.com/gabors-data-analysis/da_case_studies](https://github.com/gabors-data-analysis/da_case_studies){:target="_blank"} where the live version of the code is available. 
 
-You may download the [latest release as a zip file{https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.8.0}
+You may download the [latest release as a zip file]{https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.8.0}
 
 **Status update:**      
 * R -- All codes ready. Used for graphs in textbook.  Minor tinkering may come. 
