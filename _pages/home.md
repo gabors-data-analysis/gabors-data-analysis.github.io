@@ -41,10 +41,9 @@ As the most effective way to communicate data analysis, running case studies pla
 
 Published on 6 May 2021, the book is available from [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC), [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=), or a great deal of [global options](/order)
 
-
 You may also [request an inspection copy from the Publisher](http://cambridge.force.com/Samples?isbn=9781108716208&Title=Data+Analysis+for+Business%2C+Economics%2C+and+Policy&Author=B%C3%A9k%C3%A9s%2FK%C3%A9zdi)!
 
-## Key information to download
+## Key information materials
 
 * [**Front Matter**](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf),   
 * [**Table of content**](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
@@ -54,6 +53,7 @@ You may also [request an inspection copy from the Publisher](http://cambridge.fo
 * [**A one-page summary**](one-page-summary), also available as [PDF]((/files/gabors_da_1pager.pdf)){:target="_blank"}    
 
 
+You can  check out the **video recording** of the [launch webinar]{https://www.youtube.com/watch?v=0hRuozNnr8c}, or check out the [slideshow](/presentation/) **presentation**. 
 
 
 ## Why use this book?
@@ -62,10 +62,7 @@ You may also [request an inspection copy from the Publisher](http://cambridge.fo
 
 Our textbook **equips future data analysts with the most important tools, methods and skills** they need through **the entire process of data analysis** to answer data focused, real life questions. We cover all the fundamental methods that help along the process of data analysis. The textbook is divided into four parts covering **data wrangling and exploration, regression analysis, prediction with machine learning, and causal analysis**. We explain when, why, and how the various methods work, and how they are related to each other. [MORE on content](/chapters)
 
-A cornerstone of this textbook are 47 **case studies** spreading over one-third of our material. This
-reflects our view that working through case studies is the best way to learn data analysis. Each of our
-case studies starts with a relevant question and answers it in the end, using real life data and applying
-the tools and methods covered in the particular chapter. [MORE on case studies](casestudies)
+A cornerstone of this textbook are 47 **case studies** spreading over one-third of our material. This reflects our view that working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter. [MORE on case studies](casestudies)
 
 We share **all raw and cleaned data** we use in the case studies. We also share the codes that **clean the data** and **produce all results**, tables, and graphs in **Stata, R, and Python** so students can tinker with our code and compare the solutions in the different software. [MORE on data and code](/data-and-code)
 
@@ -79,10 +76,6 @@ We share **all raw and cleaned data** we use in the case studies. We also share 
 
 This textbook was written to be a **complete course** in data analysis. This textbook could be useful for university students in graduate programs as **core text** in applied statistics and econometrics, quantitative methods, or data analysis. It may also **complement online courses** that teach specific methods to give more context and explanation. Undergraduate courses can also make use of this textbook, even though the workload on students exceeds the typical undergraduate workload. Finally, the textbook can serve as a **handbook for practitioners** to guide them through all steps of real-life data analysis. [MORE on why use this book?](/whythisbook)
 
-
-## Slideshow
-
-For a quick review, watch our pre-launch [slideshow](/presentation/) presentation. 
 
 
 ## About authors
@@ -111,23 +104,13 @@ We provide access to get all the code we used --  in R, Stata and Python.
 
 For all the code that reproduces all the tables and graphs in the textbook, visit the Github page [github.com/gabors-data-analysis/da_case_studies](https://github.com/gabors-data-analysis/da_case_studies){:target="_blank"} where the live version of the code is available. 
 
+You may download the [latest release as a zip file{https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.8.0}
 
 **Status update:**      
-* R -- All codes ready. Used for graphs in textbook.
+* R -- All codes ready. Used for graphs in textbook.  Minor tinkering may come. 
 * Stata -- All codes ready. In the lack of machine learning capabilities, no code for chapters 15,16,17, some limitations for chapter 18.
-* Python -- Under preparation. Chapters 01-12 ready, chapters 13-24 are under development. Should be ready by early 2021.
+* Python -- All codes ready. Minor tinkering may come. 
 
-
-## Coding help and info
-
-Users can see a 
-* Review of [Data and code](/data-and-code) and information on [how to set up folders](/data-and-code/#folder-setup)
-* [Brief summary](/languages/) of languages used 
-* [Some advice on learning to code](/code-learn/).
-* Technical help on   
-    * [How to set up for Stata?](/howto-stata/), 
-    * [How to set up for R?](/howto-r/) 
-    * [How to set up for Python?](/howto-python/)
 
 ## Datasets
 
@@ -142,10 +125,19 @@ There are several materials we prepare for instructors:
 
 * This course may be used for a variety of courses, and it is needed used Management Phd, Applied Economics MA, Data Science MSc or even in Executive MBA. Let us offer some experience and advice on [how to teach this textbook for different courses](/teaching-guide/)
 * For a variety of course and program types [Frequently asked Questions and Answers](/instructor-faq/)
-* Slideshows -- one for each of the 24 chapters will be made available through [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC)
-* Answers to all 360 practice questions for instructors. Will be available from
- [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC)
+* Slideshows -- one for each of the 24 chapters available through [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC)
+* Answers to all 360 practice questions for instructors, available from  [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC)
 
 
+## Coding help and info
+
+Users can see a 
+* Review of [Data and code](/data-and-code) and information on [how to set up folders](/data-and-code/#folder-setup)
+* [Brief summary](/languages/) of languages used 
+* [Some advice on learning to code](/code-learn/).
+* Technical help on   
+    * [How to set up for Stata?](/howto-stata/), 
+    * [How to set up for R?](/howto-r/) 
+    * [How to set up for Python?](/howto-python/)
 
 
