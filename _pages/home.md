@@ -129,7 +129,7 @@ There are several materials we prepare for instructors:
 * Answers to all 360 practice questions for instructors, available from  [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC)
 
 
-![gabors](images/merced.jpg){:height="80%" width="80%"}
+![UC Merced library prepares nicely.](images/merced.jpg){:height="80%" width="80%"}
 
 
 ## Coding help and info
@@ -148,4 +148,4 @@ Users can see a
 
 Ideal for summer. 
 
-![gabors](images/summer.jpg){:height="80%" width="80%"}
+![summer ready](images/summer.jpg){:height="80%" width="80%"}
