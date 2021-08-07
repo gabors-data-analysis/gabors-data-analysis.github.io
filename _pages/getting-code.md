@@ -16,7 +16,7 @@ The codebase for the whole textbook lives in github:
   This is where the live version of the code is available. 
 
 
-We have a pre-release version. Currently:  `v.0.7.1. "Little Rascal"` [pre-release](https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.7.1)  
+We have a pre-release version. Currently:  `v.0.8.0. "What Are The Civilian Applications?"` [pre-release](https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.8.0)  
 You may download it in a zipped file. Unzip and rename `da_case_studies`  
 
 
