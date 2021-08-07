@@ -53,7 +53,7 @@ You may also [request an inspection copy from the Publisher](http://cambridge.fo
 * [**A one-page summary**](one-page-summary), also available as [PDF]((/files/gabors_da_1pager.pdf)){:target="_blank"}    
 
 
-You can  check out the **video recording** of the [launch webinar]{https://www.youtube.com/watch?v=0hRuozNnr8c}, or check out the [slideshow](/presentation/) **presentation**. 
+You can  check out the **video recording** of the [launch webinar](https://www.youtube.com/watch?v=0hRuozNnr8c), or check out the [slideshow](/presentation/) **presentation**. 
 
 
 ## Why use this book?
@@ -129,6 +129,9 @@ There are several materials we prepare for instructors:
 * Answers to all 360 practice questions for instructors, available from  [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC)
 
 
+![gabors](images/merced.jpg){:height="80%" width="80%"}
+
+
 ## Coding help and info
 
 Users can see a 
@@ -141,3 +144,8 @@ Users can see a
     * [How to set up for Python?](/howto-python/)
 
 
+## Reading suggestion
+
+Ideal for summer. 
+
+![gabors](images/summer.jpg){:height="80%" width="80%"}
