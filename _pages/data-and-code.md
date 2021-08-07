@@ -55,7 +55,7 @@ Python is under preparation is the Github page for details.
 
 ## Option A: Download in one [advised]
 
-The whole codebase for the textbook may be simply downloaded, currently we have the [pre-release version](https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.7.1), codename:  `v.0.7.1. "Little Rascal"`.  
+The whole codebase for the textbook may be simply downloaded, currently we have the [pre-release version](https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.8.0), codename:  `v.0.8.0. "What Are The Civilian Applications?"`.  
 
 Steps
 1. Download it in a  [ zipped file](https://github.com/gabors-data-analysis/da_case_studies/archive/v0.7.1.zip)
