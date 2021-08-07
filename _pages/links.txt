@@ -1,0 +1,18 @@
+We wanted to create more than a textbook for Data Analysis for Business, Economics, and Policy. An *ecosystem* with our website, gabors-data-analysis.com, in the center. Here we go.
+
+* Great deal of support to teach: https://gabors-data-analysis.com/resources/
+
+* Info on how to reproduce all tables and graphs: https://gabors-data-analysis.com/data-and-code/
+
+* Code: https://github.com/gabors-data-analysis/da_case_studies
+
+* Data: https://osf.io/7epdj/
+
+* Slides for each of 24 chapters (Need CUP registration): https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/resources/instructor-resources/F57C5762D1593E72250729668A08A53B/lecture-slides/875B5F2F7316026079C39728D6108323 
+
+* Practice Q Solutions  (Need CUP registration): https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/resources/instructor-resources/F57C5762D1593E72250729668A08A53B/solutions-manual/5776518CB5B1454955104FDCF922FB69
+
+* Multiple choice Qs  (Need CUP registration): https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/resources/instructor-resources/F57C5762D1593E72250729668A08A53B/questions/B90CD8878980BA65C93EDDE03BC3B4B0
+
+* Social Media: https://twitter.com/Gabors_Data and https://www.facebook.com/gaborsdata
+
