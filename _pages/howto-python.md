@@ -9,7 +9,7 @@ redirect_from:
 
 ## Get Python
 
-1. Install latest version of Python from the [official website](https://www.python.org/downloads/){:target="_blank"}. We used [version 3.8](https://www.python.org/downloads/release/python-3811/){:target="_blank"}
+1. Install latest version of Python from the [official website](https://www.python.org/downloads/){:target="_blank"}. **We used [version 3.8](https://www.python.org/downloads/release/python-3811/){:target="_blank"}**
 
 2. We suggest to use [Jupyter Notebook](https://jupyter-notebook.readthedocs.io/en/stable/){:target="_blank"} to edit and run Python code. You can install it via `pip` by running `pip3 install jupyter` in your terminal/PowerShell. 
 
