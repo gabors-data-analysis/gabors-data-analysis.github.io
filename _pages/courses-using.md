@@ -1,4 +1,6 @@
 ---
+layout: single
+classes: wide
 permalink: /courses-using/
 title: "List of courses already adopting the textbook"
 toc: false
