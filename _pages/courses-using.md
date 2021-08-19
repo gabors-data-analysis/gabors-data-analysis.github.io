@@ -7,6 +7,23 @@ redirect_from:
   - /courses-using.html
 ---
 
+## Adopting programs and syllabi
+
+| University                    	| Country  	| Course                                                                                                                              	| Department                     	| Level   	| Focus                                 	| Coding    	|
+|-------------------------------	|----------	|-------------------------------------------------------------------------------------------------------------------------------------	|--------------------------------	|---------	|---------------------------------------	|-----------	|
+| University of Hawaii at Manoa 	| USA      	| [Economics 427 - Economic Forecasting](https://www2.hawaii.edu/~fuleky/econ427/econ427.html)                                        	| Economics                      	| Sen UG  	| Prediction, Time Series               	| R         	|
+| Heidelberg University         	| Germany  	| [Impact Evaluations for Social Programs](https://www.uni-heidelberg.de/)                                                            	| Economics                      	| Masters 	| regression analysis, causal inference 	| Stata     	|
+| ESSEC Business School         	| France   	| Course: Introduction to Econometrics                                                                                                	| Finance                        	| Phd     	|                                       	| R         	|
+| University of California      	| USA      	| Prediction for Economics                                                                                                            	| Economics                      	| Masters 	| Prediction, Machine Learning          	| Python    	|
+| Central European University   	| Austria  	| [Prediction with Machine Learning for Economists](https://courses.ceu.edu/courses/2021-2022/prediction-machine-learning-economists) 	| Economics                      	| PhD/MA  	| Prediction, Machine Learning          	| R, Python 	|
+| Central European University   	| Austria  	| [Data Analysis for Business Analytics](https://courses.ceu.edu/courses/2021-2022/data-analysis-1-exploration-business-analytics-track) 	| Economics                      	| Masters  	| Data Exploration         	| R 	|
+| Corvinus University           	| Hungary  	|                                                                                                                                     	|                                	|         	|                                       	|           	|
+| University of Rosario         	| Colombia 	| Computational Methods in Public Policy                                                                                              	| Health/Rehabilitation Sciences 	|         	|                                       	|           	|
+| Insper                        	| Brazil   	|                                                                                                                                     	| Data Science                   	|         	|                                       	|           	|
+
+
+# More details
+
 ## Graduate economics, applied economics
 
 School: Central European University (Vienna, Austria)  
