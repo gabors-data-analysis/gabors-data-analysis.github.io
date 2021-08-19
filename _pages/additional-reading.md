@@ -28,6 +28,9 @@ Regarding **external validity**, one way to check robustness is to take out 1% o
 On the partial dependence plots, you may check out both a very useful review of [ R's pdp package](https://bgreenwell.github.io/pdp/articles/pdp.html) as well as Christoph Molnar's [Interpretable ML book](https://christophm.github.io/interpretable-ml-book/pdp.html).
 
 
+On similar house prediction project, Julia Silge does a super nice job hoing through steps, showing graphs. Making great use of text. Boosted trees. Tidymodels and more. Check out her post and video: [Predict housing prices in Austin TX with tidymodels and xgboost](https://juliasilge.com/blog/austin-housing/)
+
+
 ## Part IV
 
 ### Chapter 19
