@@ -1,5 +1,6 @@
 ---
-layout: archive
+layout: single
+classes: #wide
 title: "Teaching Resources"
 permalink: /resources/
 author_profile: true
