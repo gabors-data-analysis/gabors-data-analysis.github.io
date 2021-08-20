@@ -66,8 +66,8 @@ Slides are hosted by Cambridge University Press, available for instructors:
 [**Slides**](https://www.cambridge.org/bekeskezdi)
 
 Peek preview:    
-* [PDF for Chapter 04](/files/Ch04-Bekes_Kezdi_Data_Analysis_slides.pdf) 
-* [PDF for Chapter 10](/files/Ch10-Bekes_Kezdi_Data_Analysis_slides.pdf) 
+* [PDF for Chapter 04](/files/Ch04-Bekes_Kezdi_Data_Analysis_slides_v2.pdf) 
+* [PDF for Chapter 10](/files/Ch10-Bekes_Kezdi_Data_Analysis_slides_v2.pdf) 
 
 
 ## Additional reading suggestions
