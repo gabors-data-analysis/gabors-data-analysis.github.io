@@ -61,10 +61,12 @@ Visit the website of the publisher, [Cambridge University Press](https://www.cam
 
 ## Slides
 
-As we have been teaching a course based on the book, we will let instructors see and use our slides. There will be 24 slideshows, one for each chapter.
+As we have been teaching a course based on the book, we can let instructors see and use our slides. There are 24 slideshows, one for each chapter.
 
-Slides are hosted by Cambridge University Press, available for instructors:    
+Slides are hosted by Cambridge University Press, available now for instructors:    
 [**Slides**](https://www.cambridge.org/bekeskezdi)
+
+If you are an instructor adopting the book, you can get access to all the slides in Latex / **Overleaf**. The package includes graphs and tables. This lets you use and modify slides to fit your course! To gain access, [contact us](/contact-us/) or the Publisher.  
 
 Peek preview:    
 * [PDF for Chapter 04](/files/Ch04-Bekes_Kezdi_Data_Analysis_slides_v2.pdf) 
