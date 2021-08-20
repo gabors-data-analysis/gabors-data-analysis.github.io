@@ -39,9 +39,9 @@ As the most effective way to communicate data analysis, running case studies pla
 
 ![cup](images/cup2.png){:height="50%" width="50%"}  
 
-Published on 6 May 2021, the book is available from [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC), [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=), or a great deal of [global options](/order)
+Published on 6 May 2021, the book is available from [Cambridge University Press](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20#overview), [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=), or a great deal of [global options](/order)
 
-You may also [request an inspection copy from the Publisher](http://cambridge.force.com/Samples?isbn=9781108716208&Title=Data+Analysis+for+Business%2C+Economics%2C+and+Policy&Author=B%C3%A9k%C3%A9s%2FK%C3%A9zdi)!
+You may also [request an inspection copy from the Publisher](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20#overview)!
 
 ## Key information materials
 
@@ -125,11 +125,15 @@ There are several materials we prepare for instructors:
 
 * This course may be used for a variety of courses, and it is needed used Management Phd, Applied Economics MA, Data Science MSc or even in Executive MBA. Let us offer some experience and advice on [how to teach this textbook for different courses](/teaching-guide/)
 * For a variety of course and program types [Frequently asked Questions and Answers](/instructor-faq/)
-* Slideshows -- one for each of the 24 chapters available through [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC)
-* Answers to all 360 practice questions for instructors, available from  [Cambridge University Press](https://www.cambridge.org/us/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=HC)
+* Answers to all 360 practice questions for instructors, available from  [Cambridge University Press Instructor Resources](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/resources/instructor-resources/F57C5762D1593E72250729668A08A53B)
 
 
 ![UC Merced library prepares nicely.](images/merced.jpg){:height="80%" width="80%"}
+
+## Slideshows
+
+* Slideshows -- one for each of the 24 chapters available through [Cambridge University Press Instructor Resources](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/resources/instructor-resources/F57C5762D1593E72250729668A08A53B)
+* Adopting instructors may get access to slides in Latex. [Contact us for access](/contact-us/)
 
 
 ## Coding help and info
