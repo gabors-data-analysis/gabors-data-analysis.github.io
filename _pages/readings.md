@@ -20,19 +20,19 @@ ___
 * David Salsburg [Lady tasting Tea - How Statistics revolutionized science in the twentieth century (2002)](https://www.amazon.co.uk/Lady-Tasting-Tea-David-Salsburg/dp/0805071342) *A great book about the history of statistics and statistical ideas with many great stories. A must read for statistics nerds.*
 * Philip Tetlock,[ Superforecasting: The Art and Science of Prediction](https://www.amazon.com/Superforecasting-Prediction-Philip-E-Tetlock/dp/0804136718/) *A great book summarizing some of the research and ideas of one of the leading experst in prediction. Not explicitely about statistical predictions; more of a big picture reading for those who want to evaluate predictions.*
 * Nassim Nicholas Taleb: [Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets ](https://www.amazon.com/Fooled-Randomness-Hidden-Markets-Incerto/dp/0812975219/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=) *A fascinating walk through of examples discussing the role of luck and human decision making. Shows how really really important randomness is.* 
-* Seth Stephens-Davidowitz,[ Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Seth-Stephens-Davidowitz/e/B072549W28/ref=dp_byline_cont_ebooks_1) *So you think you can use data to answer some important questions? Watch out people often hide stuff. Look at what they do, not what they say. An amazing collection of stories.*  
+* Seth Stephens-Davidowitz (2018) [Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Seth-Stephens-Davidowitz/e/B072549W28/ref=dp_byline_cont_ebooks_1) *So you think you can use data to answer some important questions? Watch out people often hide stuff. Look at what they do, not what they say. An amazing collection of stories.*  
 * Cathy O'Neil, [Weapons of Math Destruction ](https://weaponsofmathdestructionbook.com/) *A more sceptic take on the role of algorithms* 
 
 
 
 ### Books related to decison-making with data
 
-* Daniel Kahneman,[ Thinking fast and slow (2011)](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555/) *A great book summarizing a live's resarch of the economics Nobel-winner psychologist.*
+* Daniel Kahneman (2011) [Thinking fast and slow](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555/) *A great book summarizing a live's resarch of the economics Nobel-winner psychologist.*
 * Michael Pollan (2008): [In defense of food)](https://www.bookdepository.com/Defense-Food-Michael-Pollan/9780143114963)  *A great book from an investigative journalist on what we should eat and why, with a very good description of what nutrition research can and cannot uncover using observational data.*
-* Andrew Leigh: [ Randomistas: How Radical Researchers Are Changing Our World](https://www.amazon.co.uk/Randomistas-Radical-Researchers-Changing-World/dp/0300236123/ref=asap_bc?ie=UTF8) *Interesting review on experiments in business, as well as government. From an academic/politician.*
+* Andrew Leigh (2018): [ Randomistas: How Radical Researchers Are Changing Our World](https://www.amazon.co.uk/Randomistas-Radical-Researchers-Changing-World/dp/0300236123/ref=asap_bc?ie=UTF8) *Interesting review on experiments in business, as well as government. From an academic/politician.*
 * Michael Luca and Max H. Bazerman (2020) [The Power of Experiments: Decision Making in a Data-Driven World](https://mitpress.mit.edu/books/power-experiments) New dawn of experiments using large datasets with a focus on testing at businesses such as Airbnb or Uber. 
-* Carl Bergstrom Jevin West [Calling-bullshit](https://www.penguinrandomhouse.com/books/563882/calling-bullshit-by-carl-t-bergstrom-and-jevin-d-west/)  A fantastic book based on a very famours [course](https://www.callingbullshit.org/) will help you see through deception by statistics. 
-
+* Carl Bergstrom Jevin West (2021) [Calling-bullshit](https://www.penguinrandomhouse.com/books/563882/calling-bullshit-by-carl-t-bergstrom-and-jevin-d-west/)  A fantastic book based on a very famours [course](https://www.callingbullshit.org/) will help you see through deception by statistics. 
+* Tim Harford (2021) [Data Detective](https://timharford.com/books/datadetective/) Great storytelling on how we use and feel about data and statistics. FYI, starts with a quote from the Empire Strikes Back. 
 
 ### Sports and data
 * Stefan Szymanski [Money and Soccer ](https://www.bookdepository.com/Money-Soccer-Soccernomics-Guide-Stefan-Szymanski/9781568584768?ref=pd_detail_1_sims_b_v2p_1)and Simon Kuper and Stefan Szymanski [Socceronomics](https://www.bookdepository.com/Soccernomics-2018-World-Cup-Edition-Simon-Kuper/9781568587516?ref=pd_detail_1_sims_b_p2p_1) *Two great books on understanding football via data.*
