@@ -23,6 +23,7 @@ ___
 * Seth Stephens-Davidowitz (2018) [Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Seth-Stephens-Davidowitz/e/B072549W28/ref=dp_byline_cont_ebooks_1) *So you think you can use data to answer some important questions? Watch out people often hide stuff. Look at what they do, not what they say. An amazing collection of stories.*  
 * Cathy O'Neil, [Weapons of Math Destruction ](https://weaponsofmathdestructionbook.com/) *A more sceptic take on the role of algorithms* 
 
+![summer ready](images/readings1.jpg){:height="80%" width="80%"}
 
 
 ### Books related to decison-making with data
@@ -38,6 +39,9 @@ ___
 * Stefan Szymanski [Money and Soccer ](https://www.bookdepository.com/Money-Soccer-Soccernomics-Guide-Stefan-Szymanski/9781568584768?ref=pd_detail_1_sims_b_v2p_1)and Simon Kuper and Stefan Szymanski [Socceronomics](https://www.bookdepository.com/Soccernomics-2018-World-Cup-Edition-Simon-Kuper/9781568587516?ref=pd_detail_1_sims_b_p2p_1) *Two great books on understanding football via data.*
 * Michael Lewis[ Moneyball](https://www.amazon.com/Moneyball-Art-Winning-Unfair-Game/dp/0393324818) *Super famous book on how finding mispriced players can give an edge is baseball.*
 * Chris Anderson and David Sally (2013) [The Numbers Game: Why Everything You Know About Soccer Is Wrong](https://www.bookdepository.com/The-Numbers-Game-Chris-Anderson/9780143124566) *I just realized on of the chapters inspired a case study in our book. If you know which one, DM me, and we'll get a drink sometime.*
+
+
+![summer ready](images/readings2.jpg){:height="80%" width="80%"}
 
 
 ### Intro Data Science / statistics books
@@ -56,6 +60,9 @@ ___
 Okay, so you have read some nice books. Why not read our book: 
 
 * Gábor Békés and Gábor Kézdi (2021)  [Data Analysis for Business, Economics, and Policy](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20) :-)
+
+
+![summer ready](images/pepe){:height="80%" width="80%"}
 
 
 ## More advanced stuff
