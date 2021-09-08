@@ -16,6 +16,10 @@ Happy day!
 
 **Data Analysis for Business, Economics, and Policy** by Gábor Békés (Central European University, Austria and CEPR, UK) and Gábor Kézdi (ISR, University of Michigan, USA), Cambridge University Press, 744 pages, May, 2021. 
 
+
+*Have a look and if you agree, just email me, including a link to your course or a link/copy of your syllabus, and I grant you access.*
+
+
 ## The slideshow
 An [Overleaf](https://www.overleaf.com/) folder contains the slides for the Békés-Kézdi Data Analysis textbook.
 
@@ -52,7 +56,7 @@ An [Overleaf](https://www.overleaf.com/) folder contains the slides for the Bék
 
 ## HOW TO ACCESS
 
-1. **If you agree, just email me and send a link to your course or syllabus, and I grant you access.** (No need to sign anything.)
+1. **Have a look and if you agree, just email me, including a link to your course or a link/copy of your syllabus, and I grant you access.** (No need to sign anything.)
 2. This is read-only.  So please make a copy for yourself, and then you can edit it.
 3. Your TAs may also use your access.
 
