@@ -17,19 +17,16 @@ Happy day!
 **Data Analysis for Business, Economics, and Policy** by Gábor Békés (Central European University, Austria and CEPR, UK) and Gábor Kézdi (ISR, University of Michigan, USA), Cambridge University Press, 744 pages, May, 2021. 
 
 ## The slideshow
--   There is a slideshow for each chapter, it has been used at Gabor B's CEU classes.
--   The figures folder include all tables and graphs
+An [Overleaf](https://www.overleaf.com/) folder contains the slides for the Békés-Kézdi Data Analysis textbook.
 
+1.  It includes graphs and tables. 
+2.  There is a slideshow for each chapter, it has been used at Gabor B's CEU classes.
+3.  The figures folder include all tables and graphs
 
-## HOW TO ACCESS
-
-
-1.   An overleaf folder contains the slides for the Békés-Kézdi Data Analysis textbook, including graphs and tables. 
-2.  This is read-only.  So please make a copy for yourself, and then you can edit it.
-3.  **If you agree, just email me and send a link to your course or syllabus, and I grant you access.** (No need to sign anything.)
-4.  Your TAs may also use your access.
 
 ## USER AGREEMENT
+
+**Use it freely, give credit, and do not share.**
 
 1.  You may use the slideshows in any way you wish, you can edit the
     slides, use bits from it, etc.
@@ -45,7 +42,9 @@ Happy day!
 5.  There shall be no copyrighted material in it, but users shall check
     it.
 
-## USER PLEA: In return to getting access to my slide, I kindly ask you
+## USER PLEA
+
+**In return to getting access to my slide, I kindly ask you to help spread the word.** 
 
 1.  Please share your experience with colleagues - emails and other
     first hand information is super useful.
@@ -60,11 +59,13 @@ Happy day!
     please [SEND US](https://gabors-data-analysis.com/contact-us/) anything you may have found.
 
 
+## HOW TO ACCESS
+
+1.  **If you agree, just email me and send a link to your course or syllabus, and I grant you access.** (No need to sign anything.)
+2.  This is read-only.  So please make a copy for yourself, and then you can edit it.
+3.  Your TAs may also use your access.
+
   
-## ABOUT THE TEXTBOOK
-
-This textbook provides future data analysts with the tools, methods, and skills needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. Data wrangling and exploration, regression analysis, prediction with machine learning, and causal analysis are comprehensively covered, as well as when, why, and how the methods work, and how they relate to each other. 
-
 
 See more on our website: <https://gabors-data-analysis.com>
 
