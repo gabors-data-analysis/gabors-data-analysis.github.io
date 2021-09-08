@@ -19,12 +19,9 @@ Happy day!
 ## HOW TO ACCESS
 
 
--   An overleaf folder contains the slides for the Békés-Kézdi Data
-    Analysis textbook, including graphs and tables. This is read-only.
-    So please make a copy for yourself, and then you can edit it.
-
--   **If you agree, just email me and send a link to your course or syllabus, and I grant you access.** (No need to sign anything.)*
-
+-   An overleaf folder contains the slides for the Békés-Kézdi Data Analysis textbook, including graphs and tables. 
+- This is read-only.  So please make a copy for yourself, and then you can edit it.
+-   **If you agree, just email me and send a link to your course or syllabus, and I grant you access.** (No need to sign anything.)
 -   Your TAs may also use your access.
 
 ## USER AGREEMENT
@@ -50,11 +47,7 @@ Happy day!
 
 2.  Please help spread the word: share information on social media,
     especially Twitter, LinkedIn and Facebook. The book has two social
-    media sites :
-
-    1.  Facebook: <https://www.facebook.com/gaborsdata>
-
-    2.  Twitter: <https://twitter.com/Gabors_Data>
+    media sites : Facebook: <https://www.facebook.com/gaborsdata> and Twitter: <https://twitter.com/Gabors_Data>
 
 3.  Please rate the book, write reviews to [Amazon](https://www.amazon.com/Data-Analysis-Business-Economics-Policy/dp/1108483011)  or [Goodreads](https://www.goodreads.com/book/show/54329233-data-analysis-for-business-economics-and-policy), or any other useful outlet. 
 
@@ -73,6 +66,6 @@ Happy day!
 This textbook provides future data analysts with the tools, methods, and skills needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. Data wrangling and exploration, regression analysis, prediction with machine learning, and causal analysis are comprehensively covered, as well as when, why, and how the methods work, and how they relate to each other. 
 
 
-More: \url{https://gabors-data-analysis.com/}
+See more on our website: <https://gabors-data-analysis.com>
 
 
