@@ -16,13 +16,18 @@ Happy day!
 
 **Data Analysis for Business, Economics, and Policy** by Gábor Békés (Central European University, Austria and CEPR, UK) and Gábor Kézdi (ISR, University of Michigan, USA), Cambridge University Press, 744 pages, May, 2021. 
 
+## The slideshow
+-   There is a slideshow for each chapter, it has been used at Gabor B's CEU classes.
+-   The figures folder include all tables and graphs
+
+
 ## HOW TO ACCESS
 
 
--   An overleaf folder contains the slides for the Békés-Kézdi Data Analysis textbook, including graphs and tables. 
-- This is read-only.  So please make a copy for yourself, and then you can edit it.
--   **If you agree, just email me and send a link to your course or syllabus, and I grant you access.** (No need to sign anything.)
--   Your TAs may also use your access.
+1.   An overleaf folder contains the slides for the Békés-Kézdi Data Analysis textbook, including graphs and tables. 
+2.  This is read-only.  So please make a copy for yourself, and then you can edit it.
+3.  **If you agree, just email me and send a link to your course or syllabus, and I grant you access.** (No need to sign anything.)
+4.  Your TAs may also use your access.
 
 ## USER AGREEMENT
 
@@ -47,18 +52,13 @@ Happy day!
 
 2.  Please help spread the word: share information on social media,
     especially Twitter, LinkedIn and Facebook. The book has two social
-    media sites : Facebook: <https://www.facebook.com/gaborsdata> and Twitter: <https://twitter.com/Gabors_Data>
+    media sites :[facebook.com/gaborsdata](https://www.facebook.com/gaborsdata) and [twitter.com/Gabors_Data](https://twitter.com/Gabors_Data)
 
 3.  Please rate the book, write reviews to [Amazon](https://www.amazon.com/Data-Analysis-Business-Economics-Policy/dp/1108483011)  or [Goodreads](https://www.goodreads.com/book/show/54329233-data-analysis-for-business-economics-and-policy), or any other useful outlet. 
 
-4.  Offer feedback in DM, and especially report back errors. We collect
-    errors found at <https://gabors-data-analysis.com/errata/> and
+4.  Offer feedback in DM, and especially report back errors. We collect errors found in the textbook at our [Errata page](https://gabors-data-analysis.com/errata/) and
     please [SEND US](https://gabors-data-analysis.com/contact-us/) anything you may have found.
 
-## ABOUT THE SLIDESHOWS** Here you can find a slideshow for each chapter by Gabor Bekes.
-
--   There is a slideshow for each chapter
--   The figures folder include all tables and graphs
 
   
 ## ABOUT THE TEXTBOOK
