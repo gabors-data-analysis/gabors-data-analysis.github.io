@@ -32,10 +32,7 @@ There are great many resources, to learn R for data analysis. Here are some idea
 9. What They Forgot to Teach You About R, awesome material by Jennifer Bryan and Jim Hester. [workshop material](https://rstats.wtf/){:target="_blank"}.   
 10. Great style guide with suggestions on coding by Sean Higgins. [R guide](https://github.com/skhiggins/R_guide){:target="_blank"}.   
 11. Nice, dplyr focused intro into called *An introductory workshop on modern data analyses and workflows* by folks at Aarhus, available as [Reproducible Research in R](https://r-cubed.rostools.org/index.html)
-
-
-A list of useful stuff
-[Hacks](https://towardsdatascience.com/ten-time-saving-r-hacks-b411add26b96), 
+12. A list of useful stuff: [Hacks](https://towardsdatascience.com/ten-time-saving-r-hacks-b411add26b96), 
 
 
 ## Stata
@@ -45,6 +42,8 @@ There are many great materials, here is some we like:
 [Part 2](https://www.schmidheiny.name/teaching/stataguide2up.pdf){:target="_blank"}  
 3. At Data Carpentry, CEU's Miklós Koren and Arieda Muco are developing a [Stata course for Economist](https://datacarpentry.org/stata-economics/){:target="_blank"}.  
 4. A Stata [cheatsheat](https://geocenter.github.io/StataTraining/portfolio/01_resource/){:target="_blank"}.
+5. One of the greatest, coolest somewhat advanced Stata resource is the Medium site of Asjad Naqvi [The Stata Guide](https://medium.com/the-stata-guide){:target="_blank"} that includes pearls like 
+  * [Stata and Github integration](https://medium.com/the-stata-guide/stata-and-github-integration-8c87ddf9784a){:target="_blank"} .
 
 
 ## Python
