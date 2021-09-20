@@ -8,6 +8,9 @@ redirect_from:
 ---
 ___
 
+## University of Hawaii  - course on forecasting 
+
+
 >[Prof Peter Fuleky](http://www2.hawaii.edu/~fuleky/), Associate Professor of Economics, University of Hawaii and editor of new book, [Macroeconomic Forecasting in the Era of Big Data](https://link.springer.com/book/10.1007%2F978-3-030-31150-6)
 
 I like the book so much that I modified my course to better adhere to the contents of the book. My class is hands-on, and the book facilitates this type of learning. The case studies with available R code are the biggest bonus, but I also really like the scope of the contents and the intuitive explanations. Excellent book and ecosystem around it - this will be the single main text I’ll use. 
