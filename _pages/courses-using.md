@@ -33,9 +33,9 @@ Columbia University | USA | Analytics for managerial decision-making | Public He
 | University of Rosario         	| Colombia 	| Computational Methods in Public Policy                                                                                              	| Health/Rehabilitation Sciences 	|    Masters     	|                                      	|     R      	|
 | Insper                        	| Brazil   	|                                                                                                                                     	| Data Science                   	|         	|                                       	|           	|
 | Budapest Technical University             | Hungary   | [Data Analytics]((/files/bme.pdf))                                                                                                                                      | Data Analysis, modelling, vizualization |          Masters    |                                    |              |
-| Middlesex University  | UK    | [Data Analysis]()) | Economics| Masters       | |            |
+| Middlesex University  | UK    | Data Analysis | Economics| Masters       | |            |
 | Westminster Universitry | UK    | [ Predictive Analysis for Decision-Making](https://www.westminster.ac.uk/accounting-and-finance-data-science-and-informatics-courses/2022-23/september/full-time/fintech-with-business-analytics-msc) | Fintech/ Biz Analytics| Masters       |Prediction |            |
 | Essex Business School  | UK    | [Managerial Economics](https://rl.talis.com/3/essex/lists/3582B6FD-439A-435D-3970-BA93FA84177C.html?lang=en-GB) | Business| BA       | |            |
-| Sheffield Hallam University  | UK    | [Course Name: Statistics & Data Modelling]() | Economics| Masters  |   | R           |
+| Sheffield Hallam University  | UK    | Statistics & Data Modelling | Economics| Masters  |   | R           |
 | Eindhoven University of Technology  | Netherlands    | [Social Cost Benefit Analysis](https://research.tue.nl/en/courses/economic-policy-in-practice-social-cost-benefit-analysis) | Industrial Engineering and Innovation| Masters       | | -           |
-| Université de Limoges  | France    | [Econometrics of Banking and Finance]() | Finance| Masters       | |            |
+| Université de Limoges  | France    | Econometrics of Banking and Finance | Finance| Masters       | |            |
