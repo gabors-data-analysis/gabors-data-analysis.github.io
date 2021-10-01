@@ -13,7 +13,7 @@ redirect_from:
   - /about.html
 ---
 
-![textbook cover](images/cover-full.png){:height="100%" width="100%"}
+![textbook cover](images/cover-full.png){:height="80" width="80%"}
 <!---
 toc: true
 -->
@@ -148,8 +148,8 @@ Users can see a
     * [How to set up for Python?](/howto-python/)
 
 
-## Reading suggestion
+## Many applications
 
-Ideal for summer. 
+The book has many application. 
 
-![summer ready](images/summer.jpg){:height="80%" width="80%"}
+![Use to hold your laptop](images/booklaptop.jpg){:height="80%" width="80%"}
