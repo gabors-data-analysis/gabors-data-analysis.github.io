@@ -13,7 +13,7 @@ redirect_from:
   - /about.html
 ---
 
-![textbook cover](images/cover-highdef.jpg){:height="70%" width="70%"}
+![textbook cover](images/cover-full.png){:height="100%" width="100%"}
 <!---
 toc: true
 -->
