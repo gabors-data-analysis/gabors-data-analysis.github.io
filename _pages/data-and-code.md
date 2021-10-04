@@ -58,7 +58,7 @@ Python is under preparation is the Github page for details.
 The whole codebase for the textbook may be simply downloaded, currently we have the [pre-release version](https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.8.0), codename:  `v.0.8.0. "What Are The Civilian Applications?"`.  
 
 Steps
-1. Download it in a  [ zipped file](https://github.com/gabors-data-analysis/da_case_studies/archive/v0.7.1.zip)
+1. Download it in a  [ zipped file](https://github.com/gabors-data-analysis/da_case_studies/archive/refs/tags/v0.8.0.zip)
 2. Unzip and rename `da_case_studies`  
 
 
