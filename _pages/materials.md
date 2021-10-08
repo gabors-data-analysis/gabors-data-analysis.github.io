@@ -88,10 +88,8 @@ All comments are much appreciated!
 
 
 ## Questions and answers
-The book was piloted in several Universities and programs in 2020, and online teaching allowed collecting student questions. We started to collect and post them. 
-* [Part I - Chapter 01-06](/part1-qanda) - not yet 
-* [Part II - Chapter 07-12](/part2-qanda) - not yet
-* [Part III - Chapter 13-18](/part3-qanda) - this already has content
-* [Part IV - Chapter 19-24](/part4-qanda) - this already has content
+The book was piloted in several Universities and programs in 2020, and online teaching allowed collecting student questions. We started to collect and post them. It's very beta version. 
+
+[Part I - Chapter 01-06](/part1-qanda) [Part II - Chapter 07-12](/part2-qanda) [Part III - Chapter 13-18](/part3-qanda)  [Part IV - Chapter 19-24](/part4-qanda) 
 
 
