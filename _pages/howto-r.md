@@ -10,7 +10,15 @@ redirect_from:
 
 
 ## Get R
-1. Download [R](https://www.r-project.org/){:target="_blank"}. We used v4.0.2. and tidyverse 1.0.x
+1. Download R 4.0.5.
+
+R is constantly evolving software, with new versions being made available regularly. To make sure all codes are reproducible, we set version 4.0.5. as the version used for this textbook.
+To start working in R, please download version 4.0.5 from below. After download, double-click the file and follow the instructions. (If you are using a newer version of R, codes shall all work, but there is no guarantee.) 
+
+* For Windows [R 4.0.5 for Windows](https://cran.r-project.org/bin/windows/base/old/4.0.5/){:target="_blank"}.
+* For Mac 
+
+
 
 2. We suggest to use R Studio as editor for R code. (There many other options, too.) You can get [R Studio](https://rstudio.com/products/rstudio/download/){:target="_blank"} for free.
 
