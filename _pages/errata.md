@@ -22,7 +22,7 @@ Fortunately, we found some. As we, and our kind readers, carry on finding more e
 
 
 ### Status
-Latest update: 12 July 2021
+Latest update:20 October 2021
 
 
 ### Feedback
@@ -41,7 +41,7 @@ Version v0.1.0 on 13 May, 2021: [Download PDF](/files/bekes-kezdi-errata-2021-05
 
 |ID       | Date added |   Error Type      | Chapter | Page | Problematic | Corrected|
 | ---     | ----------    | ---------------- | -----|---------| -----------------------------------| ----------------------|
-|06-01     |2021-10-20    | Minor typo       | Ch06 | B1 p159   | "That p-value is shown to be 0.0000, which means that it’s less than
+|06-01     |2021-10-20    | Typos      | Ch06 | B1 p159   | "That p-value is shown to be 0.0000, which means that it’s less than
 0.000 05. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value."   | "That p-value is shown to be **0.0007**, which means that it’s less than **0.05**. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value **(0.00035)**"|
 
 
