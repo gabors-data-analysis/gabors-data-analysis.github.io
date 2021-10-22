@@ -29,8 +29,17 @@ As the most effective way to communicate data analysis, running case studies pla
 ## Endorsements
 
 "***This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible.  Like a good confidence interval, the Gabors have got you almost completely covered!***"  
-*Joshua Angrist, MIT Economics*
+
+*Joshua Angrist, MIT, Nobel laureate in Economics 2021*
 {: .notice--success}
+
+
+"***A beautiful integration of Econometrics and Data Science** that provides a direct path from data collection and exploratory analysis to conventional regression modeling, then on to prediction and causal modeling. **Exactly what is needed to equip the next generation of students with the tools and insights from the two fields.** 
+
+*David Card, University of California, Berkeley,  Nobel laureate in Economics 2021*
+{: .notice--success}
+
+
 
 [MORE endorsements](endorsements)
 
@@ -104,10 +113,10 @@ We provide access to get all the code we used --  in R, Stata and Python.
 
 For all the code that reproduces all the tables and graphs in the textbook, visit the Github page [github.com/gabors-data-analysis/da_case_studies](https://github.com/gabors-data-analysis/da_case_studies){:target="_blank"} where the live version of the code is available. 
 
-You may download the [latest release as a zip file](https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.8.0).
+You may download the [latest release v0.8.1. as a zip file](https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.8.1).
 
 **Status update:**      
-* R -- All codes ready. Used for graphs in textbook.  Minor tinkering may come. 
+* R -- All codes ready. Used for graphs in textbook.  
 * Stata -- All codes ready. In the lack of machine learning capabilities, no code for chapters 15,16,17, some limitations for chapter 18.
 * Python -- All codes ready. Minor tinkering may come. 
 
