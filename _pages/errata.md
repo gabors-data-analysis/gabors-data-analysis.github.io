@@ -44,10 +44,14 @@ Version v0.1.0 on 13 May, 2021: [Download PDF](/files/bekes-kezdi-errata-2021-05
 |06-01     |2021-10-20    | Typos      | Ch06 | B1 p159   | "That p-value is shown to be 0.0000, which means that it’s less than 0.000 05. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value."   | "That p-value is shown to be **0.0007**, which means that it’s less than **0.05**. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value **(0.00035)**"|
 
 
+
+
+
 ### Part II
 
 |ID       | Date added |   Error Type      | Chapter | Page | Problematic | Corrected|
 | ---     | ----------    | ---------------- | -----|---------| -----------------------------------| ----------------------|
+|09-01    | 2021-11-05   | Miss reference    | Ch11 | p.239 |  (about SE...) simple formula in that it is smaller the smaller Std[e], the larger Std[x], and the larger $$\sqrt n$$. |  ... A more precise definition would have a degree of freedom correction with $$\sqrt{n-2} $$, see Under the Hood section 9.U4. |
 |10-01    | 2021-03-06   | Typo              | Ch10 | B1 p.293 |  Table 10.6 N=217 |   **N=207**|
 |10-02    | 2021-03-08   | Missing | Ch10 | B1 p.285 |  Graph 10.2 Note, missing info |  **Male: blue, female: green**|
 
