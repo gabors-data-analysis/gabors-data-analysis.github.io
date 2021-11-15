@@ -1,7 +1,7 @@
 ---
 layout: single
-classes: #wide
-title: "Teaching Resources"
+classes: wide
+title: "Teaching Information and Resources"
 permalink: /resources/
 author_profile: true
 redirect_from:
@@ -16,6 +16,7 @@ redirect_from:
 
 ### Have a look at content
 
+* []
 * [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf),   
 * [Table of content](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
 * [Index](https://assets.cambridge.org/97811084/83018/index/9781108483018_index.pdf)   
@@ -28,8 +29,8 @@ redirect_from:
 * [Instructor FAQ](/instructor-faq/).
 * [Instructors' feedback](/instructor-feedback)
 * [Errata page](/errata)
+* [List of schools and programs using the textbook](/courses-using/) 
 * [Reading recommendation](/readings)
-
 
 ### Resources at Cambridge UP
 * [Slides](https://www.cambridge.org/bekeskezdi)
