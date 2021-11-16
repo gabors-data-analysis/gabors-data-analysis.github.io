@@ -35,6 +35,7 @@ redirect_from:
 ### Resources at Cambridge UP
 * [Slides](https://www.cambridge.org/bekeskezdi)
 * [Practice Question Solutions](https://www.cambridge.org/bekeskezdi)
+* [Cover photo](images/cover-full_hd.png)
 
 
 ## Teaching support
