@@ -13,7 +13,7 @@ redirect_from:
   - /about.html
 ---
 
-![textbook cover](images/cover-full_hd.png){:height="80" width="80%"}
+![textbook cover](images/cover-full_hd.png){:height="100" width="100%"}
 <!---
 toc: true
 -->
@@ -29,13 +29,11 @@ As the most effective way to communicate data analysis, running case studies pla
 ## Endorsements
 
 "***This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible.  Like a good confidence interval, the Gabors have got you almost completely covered!***"  
-
 *Joshua Angrist, MIT, Nobel laureate in Economics 2021*
 {: .notice--success}
 
 
 "***A beautiful integration of Econometrics and Data Science** that provides a direct path from data collection and exploratory analysis to conventional regression modeling, then on to prediction and causal modeling. **Exactly what is needed to equip the next generation of students with the tools and insights from the two fields.** 
-
 *David Card, University of California, Berkeley,  Nobel laureate in Economics 2021*
 {: .notice--success}
 
