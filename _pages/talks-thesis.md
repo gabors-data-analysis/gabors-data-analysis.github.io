@@ -28,9 +28,9 @@ The target audience is terminal year undergraduate  (BA, BSc) as well as applied
 
 ### We are on tour (I guess...)
 
-* UCL University College London, UK: 7 December 2021
+* [FEP, University of Porto](https://sigarra.up.pt/fep/pt/noticias_geral.ver_noticia?p_nr=37529), Portugal: 18 November 2021
 * CAED [conference]({)https://www.uc.pt/en/uid/ceber/CAED2021/schedule), University of Coimbra, Portugal: 20 November 2021 
-* FEP, University of Porto, Portugal: 18 November 2021
+* UCL University College London, UK: 7 December 2021
 * Corvinus University, Budapest, Hungary: December 2021
 
 *Ping me if interested in hosting an event*
