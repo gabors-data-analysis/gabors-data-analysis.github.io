@@ -23,6 +23,12 @@ redirect_from:
 * [Sample chapters 10 and 15](https://www.book2look.com/vbook.aspx?id=9781108483018)   
 * [Short summary on why use this book](/files/bekes-kezdi-data-analysis-summary.pdf)   
 
+### Check out the teaching guide
+
+* [Target audience](teaching-guide/#target-audience)  
+* [Undergraduate and graduate courses](teaching-guide/#undergraduate-and-graduate-programs)
+
+
 ### Find some teaching info
 
 * [Teaching guide](/teaching-guide/)
