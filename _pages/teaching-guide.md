@@ -32,6 +32,10 @@ No programming experience is needed, because students can learn coding during th
 
 The case studies cover a wide range of fields that can cater to the diverse interests of an undergraduate group. For these reasons the book is adequate for both graduate and undergraduate courses.
 
+
+![Tools and insights from Econometrics and Data Science](images/cambridge-card.jpg){:height="80%" width="80%"}
+
+
 # Undergraduate and graduate programs
 
 ## Using the book for undergraduate teaching
@@ -111,6 +115,10 @@ The book is designed to teach a year-long course in data analysis. Starting from
 
 As an academic year is approximately 25-30 weeks long, the textbook with its 24 chapters may be covered on a week-by-week basis. Indeed, most chapters can be covered within a week, leaving extra time for some of the chapters and review.
 Often, instructors have a material and will use selected chapters as background reading. Furthermore, one option is to take some of our case studies first. One-third of the book is about the case studies, with motivation, data description, explanations, and the results themselves. 
+
+
+![Comprehensive, deep and practical](images/bk-cairo.jpeg){:height="80%" width="80%"}
+
 
 # Some advice using auxiliary material
 
