@@ -32,6 +32,8 @@ ___
 [David Card](https://davidcard.berkeley.edu/){:target="_blank"}, Professor of Economics, University of California, Berkeley
 
 
+![Inside of the book](/images/book-front.jpg){:height="70%" width="70%"}
+
 
 >"This textbook is excellent at dissecting and explaining the underlying process of data analysis. Békés and Kézdi have masterfully woven into their instruction a comprehensive range of case studies. The result is a **rigorous textbook grounded in real-world learning, at once accessible and engaging to novice scholars and advanced practitioners alike**. I have every confidence it will be valued by future generations.""
 

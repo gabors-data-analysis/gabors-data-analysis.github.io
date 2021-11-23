@@ -20,6 +20,8 @@ In this teaching guide we offer some discussion of the intended target audience,
 
 This textbook was written to be a **complete course** in data analysis. It introduces and discusses the most important concepts and methods in exploratory data analysis, regression analysis, machine learning and causal analysis. Thus, readers don’t need to have a background in those areas.
 
+![Tools and insights from Econometrics and Data Science](/images/cambridge-card.jpg){:height="70%" width="70%"}
+
 The textbook includes formulae to define methods and tools, but it **explains all formulae in plain English**, both when a formula is introduced and, then, when it is used in a case study. Thus, understanding formulae is not necessary to learn data analysis from this textbook. They are of great help, though, and we encourage all students and practitioners to work with formulae whenever possible. The mathematics background required to understand these formulae is quite low, at the the level of basic calculus.
 
 This textbook could be useful for university students in graduate programs as **core text** in applied statistics and econometrics, quantitative methods, or data analysis. The textbook is best used as core text for non-research degree Masters programs or part of the curriculum in a Phd or research Masters programs. It may also **complement online courses** that teach specific methods to give more context and explanation. Undergraduate courses can also make use of this textbook, even though the workload on students exceeds the typical undergraduate workload. Finally, the textbook can serve as a **handbook for practitioners** to guide them through all steps of real-life data analysis.
@@ -32,8 +34,6 @@ No programming experience is needed, because students can learn coding during th
 
 The case studies cover a wide range of fields that can cater to the diverse interests of an undergraduate group. For these reasons the book is adequate for both graduate and undergraduate courses.
 
-
-![Tools and insights from Econometrics and Data Science](/images/cambridge-card.jpg){:height="70%" width="70%"}
 
 
 # Undergraduate and graduate programs
@@ -117,7 +117,7 @@ As an academic year is approximately 25-30 weeks long, the textbook with its 24 
 Often, instructors have a material and will use selected chapters as background reading. Furthermore, one option is to take some of our case studies first. One-third of the book is about the case studies, with motivation, data description, explanations, and the results themselves. 
 
 
-![Comprehensive, deep and practical](/images/bk-cairo.jpeg){:height="70%" width="70%"}
+![Comprehensive, deep and practical](/images/bk-cairo.jpeg){:height="80%" width="80%"}
 
 
 # Some advice using auxiliary material
