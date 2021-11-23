@@ -33,7 +33,7 @@ No programming experience is needed, because students can learn coding during th
 The case studies cover a wide range of fields that can cater to the diverse interests of an undergraduate group. For these reasons the book is adequate for both graduate and undergraduate courses.
 
 
-![Tools and insights from Econometrics and Data Science](images/cambridge-card.jpg){:height="80%" width="80%"}
+![Tools and insights from Econometrics and Data Science](/images/cambridge-card.jpg){:height="70%" width="70%"}
 
 
 # Undergraduate and graduate programs
@@ -117,7 +117,7 @@ As an academic year is approximately 25-30 weeks long, the textbook with its 24 
 Often, instructors have a material and will use selected chapters as background reading. Furthermore, one option is to take some of our case studies first. One-third of the book is about the case studies, with motivation, data description, explanations, and the results themselves. 
 
 
-![Comprehensive, deep and practical](images/bk-cairo.jpeg){:height="80%" width="80%"}
+![Comprehensive, deep and practical](/images/bk-cairo.jpeg){:height="70%" width="70%"}
 
 
 # Some advice using auxiliary material
