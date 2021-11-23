@@ -10,7 +10,11 @@ redirect_from:
   - "/nmp.html"
 ---
 
-# Background
+
+In this teaching guide we offer some discussion of the intended target audience, followed by advice on teaching the book in undergraduate and graduate programs. We offer some tentative example sequences, too. The guide finally offers some advice on using auxiliary material. 
+
+
+# Target audience
 
 ## Who is this book for?
 
@@ -108,7 +112,7 @@ The book is designed to teach a year-long course in data analysis. Starting from
 As an academic year is approximately 25-30 weeks long, the textbook with its 24 chapters may be covered on a week-by-week basis. Indeed, most chapters can be covered within a week, leaving extra time for some of the chapters and review.
 Often, instructors have a material and will use selected chapters as background reading. Furthermore, one option is to take some of our case studies first. One-third of the book is about the case studies, with motivation, data description, explanations, and the results themselves. 
 
-# Some advice
+# Some advice using auxiliary material
 
 ## The book allows for individual learning, facilitating flexible teaching
 The textbook is suitable for individual learning as well as traditional classroom teaching, online teaching, or any hybrid version. It aims to include everything students need for individual learning, including intuitive explanations, practical advice, practice questions, and the opportunity to work with code. All of this helps instructors, too, to design their courses in flexible ways. In particular, they can assign entire chapters, or parts of chapters, as individual reading. That allows them spending precious contact time on the especially important or interesting topics and using teaching methods other than lecturing (e.g. going over case studies together with the students). The additional resources help instructors: they can assign homework or administer quizzes based on the practice questions, and they can make students replicate the case study results, also with small modifications, in homework assignments.
@@ -120,4 +124,5 @@ Run code in class. Instructors can reproduce all case study results by running c
 
 Make students replicate results. Each chapter ends with five data exercises, some of which are simple variations on the main case study. Students should start with the case study code and modify them to get the new results. According to our experience, students like replicating the results and doing simple modifications, because this helps them with coding as well as understanding the conceptual aspects of data analysis.
 
+MCQ. Multiple choice questions offered at the Publisher's website may be used for start of the class quiz or as exam questions. 
 
