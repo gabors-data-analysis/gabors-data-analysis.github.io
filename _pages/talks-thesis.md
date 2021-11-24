@@ -22,7 +22,19 @@ The target audience is terminal year undergraduate  (BA, BSc) as well as applied
 
 
 ### Topics
-The talk is centered around three topics.  First, I focus on the starting phase of a project: data collection and data wrangling and possible difficulties associated with the process. I will discuss the role of coding, data engineering and reproducible research. Second, I will talk about the research question and answer, how the analytical process moves from a broad question, into a testable model and the choice of methods to apply. In particular, I will talk about causal thinking and how far we may go with observational data. Third, I will discuss what to do with results we got, how to generalize from the data, think about external validity and answer the research question we started with. 
+The talk is centered around the process of data analysis discussing all the phases of project. I'll talk about the research question and answer, how the analytical process moves from a broad question, into a testable model and the choice of methods to apply. I will discuss also data issues: collection and data wrangling with an emphasis on the role of coding, data engineering and reproducible research. 
+
+In particular, to discuss data analysis as a process, we'll discuss 7 topics about how data analysis will...
+
+ * Start with a question
+ * Require data collection or selection
+ * Include a great of cleaning and organizing the data, necessary but hard 
+ * Rely on exploratory data analysis that helps preparation and analysis 
+ * Feature analytical (statistical/econometric) work that tests and estimates model(s)  
+ * Present results in a user friendly way
+ * Eventually answer the original question and discuss generality
+
+
 
 ### A case study
 Throughout the talk I will use a case study from my textbook on family ownership of firms and management quality. 
@@ -31,13 +43,13 @@ Data and code in Stata, R and Python are available for anyone interested to lear
 
 ### Tools
  I'll talk about 7 tools as well: 
- * presentation and thesis in Latex/Overleaf 
- * Survey collection with SurveyMonkey and alike 
- * Coding environments Rstudio and ProjectJupyter
- * Graphics and ggplot2 /plotnine, 
- * Reproducible research with git and github
+ * Writing a thesis in Latex/Overleaf 
+ * Data collection via survey with SurveyMonkey and alike 
+ * Wrangling in coding environments Rstudio and ProjectJupyter
+ * EDA with graphics and ggplot2 /plotnine, 
+ * Analytics with reproducible research with git and github
  * Presenting results with markdown 
- * Communication with Twitter
+ * Discussing results with Twitter
 
 
 
