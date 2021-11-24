@@ -45,7 +45,7 @@ Data and code in Stata, R and Python are available for anyone interested to lear
 ### We are on tour (I guess...)
 
 * [FEP, University of Porto](https://sigarra.up.pt/fep/pt/noticias_geral.ver_noticia?p_nr=37529), Portugal: 18 November 2021
-* CAED [conference]({)https://www.uc.pt/en/uid/ceber/CAED2021/schedule), University of Coimbra, Portugal: 20 November 2021 
+* [CAED conference](https://www.uc.pt/en/uid/ceber/CAED2021/schedule), University of Coimbra, Portugal: 20 November 2021 
 * UCL University College London, UK: 7 December 2021
 * Corvinus University, Budapest, Hungary: December 2021
 
