@@ -62,3 +62,6 @@ Data and code in Stata, R and Python are available for anyone interested to lear
 * Corvinus University, Budapest, Hungary: December 2021
 
 *Ping me if interested in hosting an event*
+
+![Coimbra](images/coimbra.jpg){:height="80%" width="80%"}
+
