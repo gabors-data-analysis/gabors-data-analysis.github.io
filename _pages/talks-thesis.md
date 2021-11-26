@@ -37,9 +37,9 @@ In particular, to discuss data analysis as a process, we'll discuss 7 topics abo
 
 
 ### A case study
-Throughout the talk I will use a case study from my textbook on family ownership of firms and management quality. 
+Throughout the talk I will use a case study from my textbook on family ownership of firms and management quality. The case study is based on the [World Management Survey](https://gabors-data-analysis.com/casestudies/#ch21a-founderfamily-ownership-and-quality-of-management).
 
-Data and code in Stata, R and Python are available for anyone interested to learn more. 
+Data and code in Stata, R and Python are available for anyone interested to learn more or replicare results. 
 
 ### Tools
  I'll talk about 7 tools as well: 
