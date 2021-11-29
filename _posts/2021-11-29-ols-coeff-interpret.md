@@ -20,10 +20,10 @@ There are many good (precise) ways to do it, some that are not perfect and some 
 You have a representative sample of 10,000 people in a country, aged 15-45. You are interested in the relationship between earning (USD /per year) and age. You run a simple linear regression estimated with OLS. Both $$y$$ and $$x$$ are in levels. 
 
 $$ 
-y^{E}_i = \hat\alpha + \hat \beta \times age_i  
+y^{E} = \hat\alpha + \hat \beta \times age 
 $$
 
-The estimated coefficients are: $\hat \alpha = 7000, \hat\beta = 400$. The task is to interpret both of these coefficients.
+The estimated coefficients are: $$\hat \alpha = 7000, \hat\beta = 400$$. The task is to interpret both of these coefficients.
 
 
 ### Good answers
