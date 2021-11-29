@@ -38,8 +38,8 @@ Now let us look at the slope,  $$\hat\beta$$
 
 *  **People who are one year older, earn \$400 more, on average**
 *  People who are one year older tend to earn \$400 more (you may or may not add on average, “expected” kind of includes it)
-  * ... are expected to earn \$400 more
-  * ...tend to have higher earnings by \$400 
+    * ... are expected to earn \$400 more
+    * ...tend to have higher earnings by \$400 
 *  One additional year of age is associated with \$400 higher earning, on average
 *  One year age difference is associated with and an average of \$400 extra earnings
 *  One additional year in age corresponds to an average of \$400 extra earnings
