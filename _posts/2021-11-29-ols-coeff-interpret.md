@@ -29,7 +29,8 @@ The estimated coefficients are: $$\hat \alpha = 7000, \hat\beta = 400$$. The tas
 ### Good answers
 Let us start with the constant (intercept) $$\hat\alpha$$
 * **For people aged zero (when age=0), earnings is \$7000, on average**
-* For people aged zero (when age=0), the expected earning is \$7000 (you may or may not add on average, “expected” includes it)
+* For people aged zero (when age=0), the expected earning is \$7000 
+    * *you may or may not add on average, “expected” includes it*
 * For people aged zero (when age=0), earning is \$7000, on average
 * The constant cannot be interpreted in this context (because newborns make no money)
 * Intercept of the regression line, in this case has no realistic meaning, no earnings at age = 0
@@ -46,7 +47,7 @@ Now let us look at the slope,  $$\hat\beta$$
 *  Earnings of people who are one year older, are (tend to be / is expected to be) on average \$400 higher in the data
 *  Comparing two people, the one who is one year older, is expected to (tend to have) have \$400 higher earning
 
-### Partially ok but problematic
+### Partial credit, not completely bad but problematic
 
 For constant, $$\hat\alpha$$
 *  Newborn/Zero aged people earn \$7000 ( missed: on average )
@@ -55,12 +56,12 @@ For constant, $$\hat\alpha$$
 *  7000 is the minimum income that has to be given irrespective of the age ( true but only because beta is positive )
 
 For slope, $$\hat\beta$$
-*  People who are one year older will have \$400 higher earnings, on average ( “will have”: the data is about the past, we don’t know what the future brings. Yes, will can mean “likely” but should be avoided )
 *  One additional year in age corresponds to \$400 higher earning ( missed: on average )
 *  One extra year means (implies) 400 more ( suggests causality, and missed on average )
 *  any extra age adds up 400 to earnings ( suggests causality, and missed on average )
+*  People who are one year older will have \$400 higher earnings, on average ( “will have”: the data is about the past, we don’t know what the future brings. Yes, *will* can mean “likely” but should be avoided )
 
-### Not good
+### Not good (bad)
 
 For constant, $$\hat\alpha$$
 *  The intercept is 7000 ( not interpretation )
