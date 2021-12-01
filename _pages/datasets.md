@@ -2,12 +2,16 @@
 permalink: /datasets/
 title: "Datasets summary"
 excerpt: "Datasets details for case studiesa"
-author_profile: true
+toc: true
+toc_sticky: false
+author_profile: false
 redirect_from: 
   - "/datasets.md/"
   - "/nmpr/"
   - "/nmpr.html"
 ---
+
+{% include base_path %}
 
 
 ## airbnb
@@ -158,7 +162,7 @@ Australian city of Darwin. The dataset has N=350 observations.
 
 **Data**: [Access dataset](https://osf.io/vrb9a/){:target="_blank"}
 
-**Source**: Downloaded and combined from the [National Health and Nutrition Examination Survey (NHANES) of the CDC’s National Center for Health Statistics (NCHS)(https://wwwn.cdc.gov/nchs/nhanes/Default.aspx){:target="_blank"}    
+**Source**: Downloaded and combined from the [National Health and Nutrition Examination Survey (NHANES) of the CDC’s National Center for Health Statistics [NCHS](https://wwwn.cdc.gov/nchs/nhanes/Default.aspx){:target="_blank"}    
 **Copyright**: CDC:[Public domain](https://www.cdc.gov/other/agencymaterials.html){:target="_blank"}
 
 [MORE about the data](/datasets/food-health/)

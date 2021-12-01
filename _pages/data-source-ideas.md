@@ -11,6 +11,8 @@ ___
 
 Many of you, dear readers, are either teaching or studying metrics, and look for nice data sources for assignments, term projects. Here are some suggestions. 
 
+## The textbook
+* We used dozens of datasets. Check the the [dataset overy](/datasets/)
 
 ## Data about the economy
 
@@ -34,3 +36,4 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 
 ## Collections
 * Maybe the best data collection is based on a newsletter by Jeremy Singer-Vine [Data is plural](https://www.data-is-plural.com/), also as a [spreadsheet](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
+* Fivethirtyeight.com is politics, sports and entertainment website focusing on data driven, analysis. [Some datasets shared](https://data.fivethirtyeight.com/)
