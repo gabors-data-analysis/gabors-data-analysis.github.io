@@ -37,6 +37,9 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [City-data.com](https://www.city-data.com/) -- USA city information on a vareity of features: schools to restaurant inspections
 * [Airbnb](http://insideairbnb.com/) -- massive resource of Airbnb offers around the world by Inside Airbnb  [partly used in the textbook](/casestudies/#ch14b-predicting-airbnb-apartment-prices-selecting-a-regression-model)
 
+## Finance
+* [Yahoo Finance]() has historical data on stocks, bonds, indices, such as [Microsoft](https://finance.yahoo.com/quote/MSFT/history?p=MSFT), [used in the textbook](/casestudies/#ch12a-returns-on-a-company-stock-and-market-returns) 
+
 
 ## Sports data
 * Football/Soccer: [Football-data.co.uk)](https://football-data.co.uk/) -- teams, games, odds, [partly used in the textbook](/casestudies/#ch24-estimating-the-impact-of-replacing-football-team-managers) -- great way to simply download data
