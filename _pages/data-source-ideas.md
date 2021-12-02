@@ -13,7 +13,8 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 
 
 ## The textbook
-* We used dozens of datasets. Check the the [dataset overy](/datasets/)
+* We used dozens of datasets. Check the the [dataset review section](/datasets/)
+
 
 ## Data about the economy, society - most country level
 
@@ -48,5 +49,5 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * One of the collest  data collection is based on a newsletter by Jeremy Singer-Vine [Data is plural](https://www.data-is-plural.com/), also as a [spreadsheet](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
 * Fivethirtyeight.com is politics, sports and entertainment website focusing on data driven, analysis. [Some datasets shared](https://data.fivethirtyeight.com/)
 * If interested in more sports data, check out the collection by [Tableau](https://public.tableau.com/s/blog/2014/03/where-find-sports-data)
-
+* For machine learning projects,a gateway to wealthy resources is University of California in Irvine's  [Machine Learning Repository ](https://archive.ics.uci.edu/ml/index.php)
 
