@@ -21,7 +21,7 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [World Bank](https://data.worldbank.org/) -- international data on almost everything [partly used in the textbook](/casestudies/#ch08b-how-is-life-expectancy-related-to-the-average-income-of-a-country)
 * [Our World in Data](https://ourworldindata.org/) -- A recent and great set of data is that became famous because of Covid coverage
 * [FRED]( https://fred.stlouisfed.org/) -- mostly USA, but some international 
-* [OECD(]https://data.oecd.org) --  standard macro data for OECD countries
+* [OECD](https://data.oecd.org) --  standard macro data for OECD countries
 * [World Inequality Database](https://wid.world) -- on the historical evolution of the world distribution of income and wealth within and between countries 
 
 
