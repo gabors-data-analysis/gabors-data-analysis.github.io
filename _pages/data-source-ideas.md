@@ -12,11 +12,10 @@ ___
 Many of you, dear readers, are either teaching or studying metrics, and look for nice data sources for assignments, term projects or just practice new skills. Here are some suggestions. 
 
 
-## The textbook
-* We used dozens of datasets. Check the the [dataset review section](/datasets/)
-
 ![Data-source](/images/data-source-ideas.png){:height="80%" width="80%"}
 
+## The textbook
+* We used dozens of datasets. Check the the [dataset review section](/datasets/)
 
 
 ## Data about the economy, society - most country level
