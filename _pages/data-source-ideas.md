@@ -15,6 +15,9 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 ## The textbook
 * We used dozens of datasets. Check the the [dataset review section](/datasets/)
 
+![Data-source](/images/data-source-ideas.png){:height="80%" width="80%"}
+
+
 
 ## Data about the economy, society - most country level
 
