@@ -21,16 +21,22 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [World Bank](https://data.worldbank.org/) -- international data on almost everything [partly used in the textbook](/casestudies/#ch08b-how-is-life-expectancy-related-to-the-average-income-of-a-country)
 * [Our World in Data](https://ourworldindata.org/) -- A recent and great set of data is that became famous because of Covid coverage
 * [FRED]( https://fred.stlouisfed.org/) -- mostly USA, but some international 
-* [BP global energy](https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html) -- nergy consumption and co2 emissions
+* [OECD(]https://data.oecd.org) --  standard macro data for OECD countries
+* [World Inequality Database](https://wid.world) -- on the historical evolution of the world distribution of income and wealth within and between countries 
+
 
 ## Data about firms, business
 
 * [World Bank microdata](https://microdata.worldbank.org/index.php/home)
 * [EBRD business surveys](https://www.beeps-ebrd.com/)
 
+
 ## Data about people
 * [World value survey](https://www.worldvaluessurvey.org/wvs.jsp) - regular international survey on values
 * [CDC NHANES](https://www.cdc.gov/nchs/nhanes/index.htm) -- US health surveys, [partly used in the textbook](/casestudies/#ch19a-food-and-health)
+* [IPMUS](www.ipums.org): census and survey data from around the world integrated across time and space 
+
+
 
 ## Data on cities, locations
 * [Eurostata European Cities](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Statistics_on_European_cities) -- socio-economic, population, transport data on European cities
@@ -39,6 +45,13 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 
 ## Finance
 * [Yahoo Finance]() has historical data on stocks, bonds, indices, such as [Microsoft](https://finance.yahoo.com/quote/MSFT/history?p=MSFT), [used in the textbook](/casestudies/#ch12a-returns-on-a-company-stock-and-market-returns) 
+
+
+## Climate, environment, energy
+* [NOAA Climate Data Online](https://www.ncdc.noaa.gov/cdo-web/) -- provides free access to NCDC's archive of global historical weather and climate data
+* [City climate data](https://en.climate-data.org/)
+* [BP global energy](https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html) -- energy consumption and co2 emissions
+
 
 
 ## Sports data
@@ -55,3 +68,7 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * For machine learning projects,a gateway to wealthy resources is University of California in Irvine's  [Machine Learning Repository ](https://archive.ics.uci.edu/ml/index.php)
 * Not only for R users: a great collection for data wrangling and vizualization projects comes from [Tidy Tuesdays](https://github.com/rfordatascience/tidytuesday#datasets), a weekly data project series
 * [Data.world](https://data.world/) is a fantastic collection of datasets such various sources on [environment](https://data.world/datasets/environment). Partly free, may need sign-up
+
+
+
+
