@@ -9,7 +9,7 @@ redirect_from:
 ---
 ___
 
-Many of you, dear readers, are either teaching or studying metrics, and look for nice data sources for assignments, term projects. Here are some suggestions. 
+Many of you, dear readers, are either teaching or studying metrics, and look for nice data sources for assignments, term projects or just practice new skills. Here are some suggestions. 
 
 
 ## The textbook
