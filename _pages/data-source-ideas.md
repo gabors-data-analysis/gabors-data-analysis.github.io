@@ -51,3 +51,4 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * If interested in more sports data, check out the collection by [Tableau](https://public.tableau.com/s/blog/2014/03/where-find-sports-data)
 * For machine learning projects,a gateway to wealthy resources is University of California in Irvine's  [Machine Learning Repository ](https://archive.ics.uci.edu/ml/index.php)
 * Not only for R users: a great collection for data wrangling and vizualization projects comes from [Tidy Tuesdays](https://github.com/rfordatascience/tidytuesday#datasets), a weekly data project series
+* [Data.world](https://data.world/) is a fantastic collection of datasets such various sources on [environment](https://data.world/datasets/environment). Partly free, may need sign-up
