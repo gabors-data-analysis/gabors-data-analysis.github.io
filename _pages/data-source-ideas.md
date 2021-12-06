@@ -31,7 +31,8 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 
 * [World Bank microdata](https://microdata.worldbank.org/index.php/home)
 * [EBRD business surveys](https://www.beeps-ebrd.com/)
-
+* [World Management Survey](https://worldmanagementsurvey.org/survey-data/download-data/) -- used in [several case studies in the textbook](/casestudies/#ch04a-management-quality-and-firm-size-describing-patterns-of-association)  
+ 
 
 ## Data about people
 * [World value survey](https://www.worldvaluessurvey.org/wvs.jsp) - regular international survey on values
