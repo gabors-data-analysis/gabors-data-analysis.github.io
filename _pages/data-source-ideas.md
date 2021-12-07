@@ -77,6 +77,6 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [Machine Learning Repository ](https://archive.ics.uci.edu/ml/index.php) -- For machine learning projects,a gateway to wealthy resources is University of California in Irvine's  repo
 * [Tidy Tuesdays](https://github.com/rfordatascience/tidytuesday#datasets), a weekly data project series. Not only for R users: a great collection for data wrangling and vizualization projects.
 * [Data.world](https://data.world/) is a fantastic collection of datasets such various sources on [environment](https://data.world/datasets/environment). Partly free, may need sign-up
-
-
+* [R datasets](https://vincentarelbundock.github.io/Rdatasets/datasets.html) - a collection of datasets included in various R packages by Vincent Arel-Bundock 
+* [Datahub's collection](https://datahub.io/collections) Another collection data on the economy, environment and more
 
