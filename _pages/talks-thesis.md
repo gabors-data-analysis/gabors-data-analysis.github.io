@@ -46,17 +46,16 @@ Data and code in Stata, R and Python are available for anyone interested to lear
 ![wms-dag](images/Ch21_figures/ch21-figure-1-foundfam-causalmap-color.png){:height="70%" width="70%"}
 
 ### Tools
- I'll talk about 7 tools as well: 
- * Writing a thesis in Latex/Overleaf 
- * Data collection via survey with SurveyMonkey and alike 
- * Wrangling in coding environments Rstudio and ProjectJupyter
- * EDA with graphics and ggplot2 /plotnine, 
- * Analytics with reproducible research with git and github
- * Presenting results with markdown 
- * Discussing results with Twitter
+ I'll talk about tools for all seven steps as well: 
 
-
-
+* Read up on your topic with  [Google Scholar](https://scholar.google.com/), manage references with [Paperpile]https://paperpile.com/
+* Doing surveys online with [Google Forms](https://docs.google.com/forms/u/0) [SurveyMonkey](https://www.surveymonkey.com)
+* Coding environment for reproducible research: in R [Rstudio](https://www.rstudio.com/products/rstudio/) and for Python: [Jupyter Notebook](https://jupyter.org/) 
+*  Data exploration and visualization with [ggplot in R](https://ggplot2.tidyverse.org/) and [PlotNine in Python](https://plotnine.readthedocs.io/en/stable/)
+* Doing reproducible research with Git and [Github (for case studies)](https://github.com/gabors-data-analysis/da_case_studies)
+* Writing up a thesis and presentation in Latex and  [Overleaf](https://www.overleaf.com)
+* Benefit from online community with [Twitter](https://twitter.com) and [Stackoverflow](https://stackoverflow.com/)
+    
 
 ### We are on tour (I guess...)
 
