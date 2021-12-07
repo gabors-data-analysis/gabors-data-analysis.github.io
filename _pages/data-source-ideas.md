@@ -46,15 +46,20 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [City-data.com](https://www.city-data.com/) -- USA city information on a vareity of features: schools to restaurant inspections
 * [Airbnb](http://insideairbnb.com/) -- massive resource of Airbnb offers around the world by Inside Airbnb  [partly used in the textbook](/casestudies/#ch14b-predicting-airbnb-apartment-prices-selecting-a-regression-model)
 
+
 ## Finance
 * [Yahoo Finance]() has historical data on stocks, bonds, indices, such as [Microsoft](https://finance.yahoo.com/quote/MSFT/history?p=MSFT), [used in the textbook](/casestudies/#ch12a-returns-on-a-company-stock-and-market-returns) 
+
+## Culture
+* [Open movies database](http://www.omdbapi.com/) get movie data via API
+* [IMDB data](https://www.imdb.com/interfaces/) - get movie data from popular size IMDB
 
 
 ## Climate, environment, energy
 * [NOAA Climate Data Online](https://www.ncdc.noaa.gov/cdo-web/) -- provides free access to NCDC's archive of global historical weather and climate data
 * [City climate data](https://en.climate-data.org/)
 * [BP global energy](https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html) -- energy consumption and co2 emissions
-
+* [Air quality](https://www.iqair.com/air-pollution-data-api) -- air pollution data via an API
 
 
 ## Sports data
@@ -65,13 +70,13 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * Tennis: [tennis-data.co.uk](http://www.tennis-data.co.uk/data.php)
 
 ## Collections
-* One of the collest  data collection is based on a newsletter by Jeremy Singer-Vine [Data is plural](https://www.data-is-plural.com/), also as a [spreadsheet](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
-* Fivethirtyeight.com is politics, sports and entertainment website focusing on data driven, analysis. [Some datasets shared](https://data.fivethirtyeight.com/)
-* If interested in more sports data, check out the collection by [Tableau](https://public.tableau.com/s/blog/2014/03/where-find-sports-data)
-* For machine learning projects,a gateway to wealthy resources is University of California in Irvine's  [Machine Learning Repository ](https://archive.ics.uci.edu/ml/index.php)
-* Not only for R users: a great collection for data wrangling and vizualization projects comes from [Tidy Tuesdays](https://github.com/rfordatascience/tidytuesday#datasets), a weekly data project series
+*  [Data is plural spreadsheet](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0) -- One of the collest  data collection is based on a newsletter by Jeremy Singer-Vine [Data is plural](https://www.data-is-plural.com/)
+* [Public API collection](https://github.com/public-apis/public-apis) -- just a wonderful collection of APIs to a plethora of sources, really great on environment, finance, popular culture, transport, any many more
+* [538 some datasets shared](https://data.fivethirtyeight.com/) -- Fivethirtyeight.com is politics, sports and entertainment website focusing on data driven, analysis. 
+* [Tableau](https://public.tableau.com/s/blog/2014/03/where-find-sports-data) -- If interested in more sports data, check out the collection by Tableau
+* [Machine Learning Repository ](https://archive.ics.uci.edu/ml/index.php) -- For machine learning projects,a gateway to wealthy resources is University of California in Irvine's  repo
+* [Tidy Tuesdays](https://github.com/rfordatascience/tidytuesday#datasets), a weekly data project series. Not only for R users: a great collection for data wrangling and vizualization projects.
 * [Data.world](https://data.world/) is a fantastic collection of datasets such various sources on [environment](https://data.world/datasets/environment). Partly free, may need sign-up
-
 
 
 
