@@ -63,7 +63,11 @@ Data and code in Stata, R and Python are available for anyone interested to lear
 * [FEP, University of Porto](https://sigarra.up.pt/fep/pt/noticias_geral.ver_noticia?p_nr=37529), Portugal: 18 November 2021
 * [CAED conference](https://www.uc.pt/en/uid/ceber/CAED2021/schedule), University of Coimbra, Portugal: 20 November 2021 
 * UCL University College London, UK: 7 December 2021
-* Corvinus University, Budapest, Hungary: December 2021
+* Corvinus University Budapest, Hungary: December 2021
+* [Ecommerce Hungary](https://ecommerce.hu/esemenyek/talalkozas-egy-adattudossal-i-ech-meetup/), Online 30 November, 2021
+* Middlesex University, UK, 2022 (TBC)
+* Bocconi University, Italy 2022 (TBC)
+
 
 *Ping me if interested in hosting an event*
 
