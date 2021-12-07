@@ -25,18 +25,22 @@ redirect_from:
 
 ### Check out the teaching guide
 
-* [Target audience](teaching-guide/#target-audience)  
-* [Undergraduate and graduate courses](teaching-guide/#undergraduate-and-graduate-programs)
-
-
-### Find some teaching info
-
 * [Teaching guide](/teaching-guide/)
-* [Instructor FAQ](/instructor-faq/).
-* [Instructors' feedback](/instructor-feedback)
-* [Errata page](/errata)
+    * [Target audience](teaching-guide/#target-audience)  
+    * [Undergraduate and graduate courses](teaching-guide/#undergraduate-and-graduate-programs)
+
+### Instructors info and feedback
+
 * [List of schools and programs using the textbook](/courses-using/) 
+* [Instructor FAQ](/instructor-faq/).
+* [Instructors' feedback](/instructor-feedback) and [reviews](/instructor-reviews)
+* [Errata page](/errata)
+
+### Suggestions and resources
 * [Reading recommendation](/readings)
+* [Suggested datasets for projects and practice](/data-source-ideas)
+* [Learning to code ideas](/code-learn)
+
 
 ### Resources at Cambridge UP
 * [Slides](https://www.cambridge.org/bekeskezdi)
