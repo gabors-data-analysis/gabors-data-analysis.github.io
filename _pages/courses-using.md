@@ -56,6 +56,7 @@ Columbia University | USA | Analytics for managerial decision-making | Public He
 
 
 ## Engineering, computer science
+
 | University                      | Country   | Course                                                                                                                                | Department                      | Level     | Focus                                   | Coding      |
 |-------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
 | Eindhoven University of Technology  | Netherlands    | [Social Cost Benefit Analysis](https://research.tue.nl/en/courses/economic-policy-in-practice-social-cost-benefit-analysis) | Industrial Engineering and Innovation| Masters       | | -           |
