@@ -12,6 +12,9 @@ redirect_from:
 You may order the book from [Cambridge University Press](https://www.cambridge.org/hu/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=PB)
 
 
+![textbook xmas](/images/book-xmas.jpg){:height="80%" width="80%"}
+
+
 ## Global sellers
 
 * [Bookdepository](https://www.bookdepository.com/Data-Analysis-for-Business-Economics-Policy-Gabor-Bekes/9781108716208)

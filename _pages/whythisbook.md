@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 
-![textbook cover](/images/cover-title2.jpg){:height="80%" width="80%"}
+![textbook cover](/images/book-front.jpg){:height="80%" width="80%"}
 
 
 
