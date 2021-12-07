@@ -26,8 +26,8 @@ redirect_from:
 ### Check out the teaching guide
 
 * [Teaching guide](/teaching-guide/)
-    * [Target audience](teaching-guide/#target-audience)  
-    * [Undergraduate and graduate courses](teaching-guide/#undergraduate-and-graduate-programs)
+    * [Target audience](/teaching-guide/#target-audience)  
+    * [Undergraduate and graduate courses](/teaching-guide/#undergraduate-and-graduate-programs)
 
 ### Instructors info and feedback
 

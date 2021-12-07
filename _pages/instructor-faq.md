@@ -31,6 +31,11 @@ A. There are several differences, reasons we wrote the book.
 6. Prepares students for many different career opportunities with transferable skills on data cleaning to modelling and making decisions based on analytics. 
 
 
+>**Q: I want to have a great deal of theory in my class, how could I integrate the book with a traditional econometrics course**
+
+A. There are several differences, reasons we wrote the book.
+
+
 ## Undergraduate economics, social science programs
 
 >**Q: What are the **prerequisites** for an undergraduate data analytics course which may be cross-listed with computer science and/or business? **
