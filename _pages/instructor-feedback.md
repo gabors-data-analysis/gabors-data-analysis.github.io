@@ -2,6 +2,7 @@
 permalink: /instructor-feedback
 title: "Instructor Feedback"
 toc: false
+classes: wide
 author_profile: false
 redirect_from:
   - /instructor-feedback.html
