@@ -62,6 +62,10 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [Air quality](https://www.iqair.com/air-pollution-data-api) -- air pollution data via an API
 
 
+## Government, policy
+* [Open tenders](https://opentender.eu/download) -- you could get government contracting datasets from 33 countries
+
+
 ## Sports data
 * Football/Soccer: [Football-data.co.uk)](https://football-data.co.uk/) -- teams, games, odds, [partly used in the textbook](/casestudies/#ch24-estimating-the-impact-of-replacing-football-team-managers) -- great way to simply download data
 * Football/soccer:  [Soccerway](https://int.soccerway.com/) and [whoscored](http://whoscored.com/) -- Great deal of football data,  but you may need webscraping to collect datasets. 
