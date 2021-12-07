@@ -33,7 +33,7 @@ redirect_from:
 
 * [List of schools and programs using the textbook](/courses-using/) 
 * [Instructor FAQ](/instructor-faq/).
-* [Instructors' feedback](/instructor-feedback) and [reviews](/instructor-reviews)
+* [Instructors' feedback and reviews](/instructor-feedback) 
 * [Errata page](/errata)
 
 ### Suggestions and resources
