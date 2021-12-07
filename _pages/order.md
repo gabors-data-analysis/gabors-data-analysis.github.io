@@ -7,12 +7,18 @@ redirect_from:
   - /order.html
 ---
 
+
+## To enjoy the book, order soon
+
+Paperback, hardcover, or e-book.
+
+![textbook xmas](/images/book-xmas.jpg){:height="80%" width="80%"}
+
+
+
 ## Publisher
 
 You may order the book from [Cambridge University Press](https://www.cambridge.org/hu/academic/subjects/economics/econometrics-statistics-and-mathematical-economics/data-analysis-business-economics-and-policy?format=PB)
-
-
-![textbook xmas](/images/book-xmas.jpg){:height="80%" width="80%"}
 
 
 ## Global sellers
