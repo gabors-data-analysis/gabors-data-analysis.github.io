@@ -64,7 +64,8 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 
 ## Government, policy
 * [Open tenders](https://opentender.eu/download) -- you could get government contracting datasets from 33 countries
-
+* [Election results and institutions around the globe](https://cses.org/) -- a collaborative project 
+* [Quality of Government](https://www.gu.se/en/quality-government/qog-data) -- several open-source datasets, some extra information, all about Quality of Government
 
 ## Sports data
 * Football/Soccer: [Football-data.co.uk)](https://football-data.co.uk/) -- teams, games, odds, [partly used in the textbook](/casestudies/#ch24-estimating-the-impact-of-replacing-football-team-managers) -- great way to simply download data
