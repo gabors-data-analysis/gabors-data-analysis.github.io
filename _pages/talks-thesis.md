@@ -26,18 +26,18 @@ The talk is centered around the process of data analysis discussing all the phas
 
 In particular, to discuss data analysis as a process, we'll discuss 7 topics about how data analysis will...
 
- * Start with a question
- * Require data collection or selection
- * Include a great of cleaning and organizing the data, necessary but hard 
- * Rely on exploratory data analysis that helps preparation and analysis 
- * Feature analytical (statistical/econometric) work that tests and estimates model(s)  
- * Present results in a user friendly way
- * Eventually answer the original question and discuss generality
+1. First comes a research topic and a specific question
+2. Data collection is the foundation for all empirical work
+3. Cleaning and organizing the data is a necessary and time-consuming part
+4. Exploratory data analysis helps both data preparation and analysis
+5. Analytical work tests hypotheses and estimates model(s)
+6. Results shall be presented in a user friendly way
+7. Finally, we answer the original question and discuss generality
 
 
 
 ### A case study
-Throughout the talk I will use a case study from my textbook on family ownership of firms and management quality. The case study is based on the [World Management Survey](https://gabors-data-analysis.com/casestudies/#ch21a-founderfamily-ownership-and-quality-of-management).
+Throughout the talk I will use a case study from my textbook on family ownership of firms and management quality. The case study is based on the [World Management Survey](https://gabors-data-analysis.com/casestudies/#ch21a-founderfamily-ownership-and-quality-of-management), data from [WMS](https://gabors-data-analysis.com/datasets/wms-management-survey/)
 
 ![wms](images/wms.png){:height="70%" width="70%"}
 
@@ -48,7 +48,7 @@ Data and code in Stata, R and Python are available for anyone interested to lear
 ### Tools
  I'll talk about tools for all seven steps as well: 
 
-* Read up on your topic with  [Google Scholar](https://scholar.google.com/), manage references with [Paperpile]https://paperpile.com/
+* Read up on your topic with  [Google Scholar](https://scholar.google.com/), [Repec](https://ideas.repec.org/) manage references with [Paperpile](https://paperpile.com/) or [Zotero](https://www.zotero.org/) or similar tools
 * Doing surveys online with [Google Forms](https://docs.google.com/forms/u/0) [SurveyMonkey](https://www.surveymonkey.com)
 * Coding environment for reproducible research: in R [Rstudio](https://www.rstudio.com/products/rstudio/) and for Python: [Jupyter Notebook](https://jupyter.org/) 
 *  Data exploration and visualization with [ggplot in R](https://ggplot2.tidyverse.org/) and [PlotNine in Python](https://plotnine.readthedocs.io/en/stable/)
@@ -70,5 +70,5 @@ Data and code in Stata, R and Python are available for anyone interested to lear
 
 *Ping me if interested in hosting an event*
 
-![Coimbra](images/coimbra.jpg){:height="80%" width="80%"}
+![Coimbra](images/coimbra.jpg){:height="60%" width="60%"}
 
