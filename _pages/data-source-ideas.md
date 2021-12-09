@@ -66,6 +66,8 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [Open tenders](https://opentender.eu/download) -- you could get government contracting datasets from 33 countries
 * [Election results and institutions around the globe](https://cses.org/) -- a collaborative project 
 * [Quality of Government](https://www.gu.se/en/quality-government/qog-data) -- several open-source datasets, some extra information, all about Quality of Government
+* [The Global Open Data Index](http://index.okfn.org/place/) provides the most comprehensive snapshot available of the state of open government data publication. Read about the [methodology](http://index.okfn.org/methodology/)
+
 
 ## Sports data
 * Football/Soccer: [Football-data.co.uk)](https://football-data.co.uk/) -- teams, games, odds, [partly used in the textbook](/casestudies/#ch24-estimating-the-impact-of-replacing-football-team-managers) -- great way to simply download data
@@ -73,6 +75,11 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * Baseball: [Sean Lahman Baseball collection](http://www.seanlahman.com/baseball-archive/statistics/)
 * Baseball: [Baseball-refernce](https://www.baseball-reference.com/)
 * Tennis: [tennis-data.co.uk](http://www.tennis-data.co.uk/data.php)
+
+## Transport, travel
+* [Open flights data](https://openflights.org/data.html) -- flight routes, airport locations. Data for 2014-2017 only. 
+* [US airline tickets](https://www.bts.gov/topics/airlines-and-airports/origin-and-destination-survey-data) --- Bureau of Transportation Statistics' Passenger Origin and Destination (O&D) Survey. An earlier version is [used in the textbook](https://gabors-data-analysis.com/casestudies/#ch22a-how-does-a-merger-between-airlines-affect-prices)
+
 
 ## Collections
 *  [Data is plural spreadsheet](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0) -- One of the collest  data collection is based on a newsletter by Jeremy Singer-Vine [Data is plural](https://www.data-is-plural.com/)
