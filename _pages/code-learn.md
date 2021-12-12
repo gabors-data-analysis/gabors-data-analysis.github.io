@@ -66,7 +66,7 @@ Take an example: management quality and firm size, descriptive statistics
 * in [Python](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch04-management-firm-size/ch04-wms-management-size.ipynb) with `pandas` and `plotnine/ggplot`
 
 
-![Github](images/github-gabors.png){:height="80%" width="80%"}
+![Github](/images/github-gabors.png){:height="80%" width="80%"}
 
 
 ## R for Stata users
