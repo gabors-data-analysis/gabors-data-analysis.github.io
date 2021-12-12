@@ -22,6 +22,7 @@ ___
 * Nassim Nicholas Taleb: [Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets ](https://www.amazon.com/Fooled-Randomness-Hidden-Markets-Incerto/dp/0812975219/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=) *A fascinating walk through of examples discussing the role of luck and human decision making. Shows how really really important randomness is.* 
 * Seth Stephens-Davidowitz (2018) [Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Seth-Stephens-Davidowitz/e/B072549W28/ref=dp_byline_cont_ebooks_1) *So you think you can use data to answer some important questions? Watch out people often hide stuff. Look at what they do, not what they say. An amazing collection of stories.*  
 * Cathy O'Neil, [Weapons of Math Destruction ](https://weaponsofmathdestructionbook.com/) *A more sceptic take on the role of algorithms* 
+* Albert-László Barabási (2014), [Linked: How Everything Is Connected to Everything Else and What It Means for Business, Science, and Everyday Life](https://www.amazon.com/Linked-Everything-Connected-Business-Everyday/dp/0465085733/) - a great intro into networks
 
 ![Some nice and fun readings on data and metrics](images/reading_many.jpg){:height="80%" width="80%"}
 
@@ -53,6 +54,7 @@ ___
 * Kieran Healy [Data Visualization - A practical introduction](http://socviz.co/ )
 * Claus Wilke [Data vizualization](http://serialmentor.com/dataviz/ ) 
 * Alberto Cario [How Charts Lie: Getting Smarter about Visual Information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/0393358429/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1594625529&sr=1-1) 
+* Jonathan Schwabish (2021) [Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks](https://www.amazon.com/Better-Data-Visualizations-Scholars-Researchers/dp/0231193114/) -- practical guide to dataviz tools; more advanced. 
 
 
 ## Our book
@@ -69,16 +71,16 @@ Okay, so you have read some nice books. Why not read our book:
 
 * Ajay Agrawal, Joshua Gans and Avi Goldfarb,[ Prediction Machines: The Simple Economics of Artificial Intelligence](https://hbr.org/product/prediction-machines-the-simple-economics-of-artificial-intelligence/10195-HBK-ENG)
 * Eric Siegel [Predictive Analytics: The Power to Predict Who Will Click, Buy, Lie, or Die](https://www.amazon.com/Predictive-Analytics-Power-Predict-Click/dp/1119145678/ref=asap_bc?ie=UTF8)
-* Efron-Hastie [Computer Age Statistical Inference](https://www.amazon.co.uk/Computer-Age-Statistical-Inference-Mathematical/dp/1107149894/ref=asap_bc?ie=UTF8) - intense stat book with Big Data in mind
+* Bradley Efron and Trevor Hastie , 2016 [Computer Age Statistical Inference](https://www.amazon.co.uk/Computer-Age-Statistical-Inference-Mathematical/dp/1107149894/ref=asap_bc?ie=UTF8) - intense stats book with Big Data in mind
 * Christopher M. Bishop [Pattern Recognition and Machine Learning](https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738/)
-* Nina Zumel and John Mount [Practical Data Science with R](https://www.manning.com/books/practical-data-science-with-r) *nice collection of coding/analysis ideas -  often related to our book. *
-* Hyndman and Athananasopoulos [Forecasting: Principles and Practice](http://otexts.org/fpp2/) *useful time series book, matching how we think about time series, a good way to continue.*
-* Kelleher, John D.  Brendan Tierney [Data Science ](https://www.amazon.com/gp/product/0262535432/ref=dbs_a_def_rwt_bibl_vppi_i0)(MIT Press 2018)
+* Nina Zumel and John Mount [Practical Data Science with R](https://www.manning.com/books/practical-data-science-with-r) -- nice collection of coding/analysis ideas -  often related to our book.
+* Hyndman and Athananasopoulos, 2020 [Forecasting: Principles and Practice](http://otexts.org/fpp2/) -- useful time series book, matching how we think about time series, a good way to continue.
+* Kelleher, John D.  Brendan Tierney, 2018 [Data Science ](https://www.amazon.com/gp/product/0262535432/ref=dbs_a_def_rwt_bibl_vppi_i0)
 
 
 ### Advanced/technical books on causal inference
 * Joshua Angrist and  Jörn-Steffen Pischke (2009) [Mostly Harmless Econometrics](https://press.princeton.edu/books/paperback/9780691120355/mostly-harmless-econometrics) The book that started it all: talking about key econometrics tools in a precise yet accessible and focused way. Aimed at post-graduate economics student.  
-* Scott Cunningham 2020 [The Mixtape](https://yalebooks.yale.edu/book/9780300251685/causal-inference) Advanced, formal but highly accessible discussion of key tools of causal inference using examples from some great academic papers. 
+* Scott Cunningham, 2020 [The Mixtape](https://yalebooks.yale.edu/book/9780300251685/causal-inference) Advanced, formal but highly accessible discussion of key tools of causal inference using examples from some great academic papers. 
 * Judea Pearl [The Book of Why](https://www.amazon.co.uk/Book-Why-Science-Cause-Effect/dp/0241242630/ref=asap_bc?ie=UTF8) - intermediate book on causality, with interesting stories and great care into developing theoretical structures and measurement of causal links.
 
 
