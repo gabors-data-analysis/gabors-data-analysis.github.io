@@ -91,4 +91,4 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [Data.world](https://data.world/) is a fantastic collection of datasets such various sources on [environment](https://data.world/datasets/environment). Partly free, may need sign-up
 * [R datasets](https://vincentarelbundock.github.io/Rdatasets/datasets.html) - a collection of datasets included in various R packages by Vincent Arel-Bundock 
 * [Datahub's collection](https://datahub.io/collections) Another collection data on the economy, environment and more
-
+* [Social Science Data Sources & Statistical Methods](https://guides.emich.edu/data/free-data)

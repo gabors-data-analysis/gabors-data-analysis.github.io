@@ -42,8 +42,7 @@ There are many great materials, here is some we like:
 [Part 2](https://www.schmidheiny.name/teaching/stataguide2up.pdf){:target="_blank"}  
 3. At Data Carpentry, CEU's Miklós Koren and Arieda Muco are developing a [Stata course for Economist](https://datacarpentry.org/stata-economics/){:target="_blank"}.  
 4. A Stata [cheatsheat](https://geocenter.github.io/StataTraining/portfolio/01_resource/){:target="_blank"}.
-5. One of the greatest, coolest somewhat advanced Stata resource is the Medium site of Asjad Naqvi [The Stata Guide](https://medium.com/the-stata-guide){:target="_blank"} that includes pearls like 
-  * [Stata and Github integration](https://medium.com/the-stata-guide/stata-and-github-integration-8c87ddf9784a){:target="_blank"} .
+5. One of the greatest, coolest somewhat advanced Stata resource is the Medium site of Asjad Naqvi [The Stata Guide](https://medium.com/the-stata-guide){:target="_blank"} that includes pearls like [Stata and Github integration](https://medium.com/the-stata-guide/stata-and-github-integration-8c87ddf9784a){:target="_blank"} 
 
 
 ## Python
@@ -72,16 +71,11 @@ For this textbook, Stata and R code were developed early on, and we started to w
 
 ## Python for Stata users
 
-TBA
+1. Adam Ross Nelson (2020) [Going From Stata to Pandas](https://towardsdatascience.com/going-from-stata-to-pandas-706888525acf) -- a longer post on Medium
 
 
-## Othe useful sites
 
-### Get datasets for exercises, projects
-[Social Science Data Sources & Statistical Methods](https://guides.emich.edu/data/free-data)
-
-
-### tools
+## Tools
 Great list of data tools by the UC Berkeley Library and Research IT run [Research Data Management (RDM) Program](https://researchdata.berkeley.edu/tools)
 
 
