@@ -57,6 +57,18 @@ Python is a general purpose language, used for many applications beyond data sci
 Some people have experience using one language but would now learn a second one. Some ideas we found useful:
 
 
+## Check out the texbook's Github and compare
+
+Check out the codebase for the textbook at [Gabors Data Analysis Github page](https://github.com/gabors-data-analysis/da_case_studies)   
+Take an example: management quality and firm size, descriptive statistics
+* in [R](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch04-management-firm-size/ch04-wms-management-size.R) with `tidyverse`/`dplyr`, `modelsummary` and `ggplot`
+* in [Stata](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch04-management-firm-size/ch04-wms-management-size.do) with `tabstat`, `twoway scatter` 
+* in [Python](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch04-management-firm-size/ch04-wms-management-size.ipynb) with `pandas` and `plotnine/ggplot`
+
+
+![Github](images/github-gabors.png){:height="80%" width="80%"}
+
+
 ## R for Stata users
 In Economics and many other social sciences, we use Stata for research, and learnt R or Python as a second language. Here are some links and tutorials we found useful.  
 1. Matthieu Gomez has a wonderful intro to [ R for Stata users ](https://www.matthieugomez.com/statar/index.html){:target="_blank"}. For instance the bit on [regressions](https://www.matthieugomez.com/statar/regressions.html){:target="_blank"} is pretty useful, I come back to it regularly.   
