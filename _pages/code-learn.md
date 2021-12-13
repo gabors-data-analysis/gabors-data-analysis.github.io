@@ -51,7 +51,7 @@ Python is a general purpose language, used for many applications beyond data sci
 1. A set of very nice lessons at [Python for Everybody](https://www.py4e.com/){:target="_blank"}.
 1. NYU has a great group also offering a Python cours by [QuanEcon](https://quantecon.org/lectures/){:target="_blank"}.
 1. Great style guide with suggestions on coding by Sean Higgins. [Python guide](https://github.com/skhiggins/Python_guide){:target="_blank"}.
-
+1. Great intro book and material by Allen B. Downey to [Think Python](https://greenteapress.com/thinkpython/thinkpython.html) --How to Think Like a Computer Scientist
 
 # Learning a second language
 Some people have experience using one language but would now learn a second one. Some ideas we found useful:
@@ -86,9 +86,10 @@ For this textbook, Stata and R code were developed early on, and we started to w
 1. Adam Ross Nelson (2020) [Going From Stata to Pandas](https://towardsdatascience.com/going-from-stata-to-pandas-706888525acf) -- a longer post on Medium
 
 
-
 ## Tools
-Great list of data tools by the UC Berkeley Library and Research IT run [Research Data Management (RDM) Program](https://researchdata.berkeley.edu/tools)
+* Great list of data tools by the UC Berkeley Library and Research IT run [Research Data Management (RDM) Program](https://researchdata.berkeley.edu/tools)
+* Al Sweigart, 2019 (2nd ed)  [Automate the Boring Stuff with Python, 2nd Edition](https://automatetheboringstuff.com/)
+
 
 
 ## Help us expand this bit
