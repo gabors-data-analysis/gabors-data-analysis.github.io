@@ -63,6 +63,7 @@ ___
 * Kelleher, John D.  Brendan Tierney [Data Science ](https://www.amazon.com/gp/product/0262535432/ref=dbs_a_def_rwt_bibl_vppi_i0)(MIT Press 2018)
 * Roger Peng [The Art of Data Science](https://www.amazon.com/Art-Data-Science-Roger-Peng/dp/1365061469)  
 * Jay Kreps: [I &lt;3 Logs](https://bit.ly/I-heart-logs)
+* Renee Marie Parilak Teate (2021)[SQL for Data Scientists](https://sqlfordatascientists.com/) -- Intro book something all data scientists need, SQL by @BecomingDataSci. 
 
 
 ### Advanced/Techincal books

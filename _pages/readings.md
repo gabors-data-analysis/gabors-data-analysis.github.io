@@ -76,6 +76,7 @@ Okay, so you have read some nice books. Why not read our book:
 * Nina Zumel and John Mount [Practical Data Science with R](https://www.manning.com/books/practical-data-science-with-r) -- nice collection of coding/analysis ideas -  often related to our book.
 * Hyndman and Athananasopoulos, 2020 [Forecasting: Principles and Practice](http://otexts.org/fpp2/) -- useful time series book, matching how we think about time series, a good way to continue.
 * Kelleher, John D.  Brendan Tierney, 2018 [Data Science ](https://www.amazon.com/gp/product/0262535432/ref=dbs_a_def_rwt_bibl_vppi_i0)
+* Sarah Guido and Andreas Müller, 2016 [Introduction to Machine Learning with Python: A Guide for Data Scientists](https://www.oreilly.com/library/view/introduction-to-machine/9781449369880/)
 
 
 ### Advanced/technical books on causal inference
