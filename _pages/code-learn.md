@@ -98,4 +98,4 @@ So if you are here, you have scrolled through. Maybe you thought, why don't you 
 
 Also, check out the book that holds up the code!
 
-![Use to hold your laptop](images/booklaptop.jpg){:height="80%" width="80%"}
+![Use to hold your laptop](/images/booklaptop.jpg){:height="80%" width="80%"}
