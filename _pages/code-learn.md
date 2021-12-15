@@ -82,7 +82,7 @@ In Economics and many other social sciences, we use Stata for research, and lear
 For this textbook, Stata and R code were developed early on, and we started to work on Python code set only after the proof was ready. Some ideas we (and our RAs) found useful
 1. [GGplot for Python by Monash ](https://monashdatafluency.github.io/python-workshop-base/modules/plotting_with_ggplot/){:target="_blank"}    
 2. [Pandas and tidyverse](https://www.carloscamara.es/en/blog/2020/02/08/manipulating-dataframes-in-r-and-python/){:target="_blank"}     
-
+3. A new textbook, [Foundations of Statistics for Data Scientists ](http://stat4ds.rwth-aachen.de/) by Alan Agresti and Maria Kateri has a very expansive code support in [R](http://stat4ds.rwth-aachen.de/pdf/DS_R_webAppendix.pdf), [Python](http://stat4ds.rwth-aachen.de/pdf/DS_Python_webAppendix.pdf) 
 
 ## Python for Stata users
 1. Adam Ross Nelson (2020) [Going From Stata to Pandas](https://towardsdatascience.com/going-from-stata-to-pandas-706888525acf) -- a longer post on Medium
