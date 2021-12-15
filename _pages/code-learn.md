@@ -76,7 +76,7 @@ Take an example: management quality and firm size, descriptive statistics
 In Economics and many other social sciences, we use Stata for research, and learnt R or Python as a second language. Here are some links and tutorials we found useful.  
 1. Matthieu Gomez has a wonderful intro to [ R for Stata users ](https://www.matthieugomez.com/statar/index.html){:target="_blank"}. For instance the bit on [regressions](https://www.matthieugomez.com/statar/regressions.html){:target="_blank"} is pretty useful, I come back to it regularly.   
 2. John Ricco has a short intro to [basics of data wrangling](https://johnricco.github.io/2016/06/14/stata-dplyr/){:target="_blank"}  
-3. Nick Huntington-Klein has a new (2021) and superb transition resource [From Stata to R](https://stata2r.github.io), like check this out on [cleaning](https://stata2r.github.io/data_cleaning.html#sort)
+3. Nick Huntington-Klein, Grant McDermott and Kyle Butts collaborate for a new (2021) and superb transition resource [From Stata to R](https://stata2r.github.io), like check this out on [cleaning](https://stata2r.github.io/data_cleaning.html#sort). A key position I love is building with a few pacakges only!
 
 ## R to/from Python
 For this textbook, Stata and R code were developed early on, and we started to work on Python code set only after the proof was ready. Some ideas we (and our RAs) found useful
@@ -92,7 +92,10 @@ For this textbook, Stata and R code were developed early on, and we started to w
 * Great list of data tools by the UC Berkeley Library and Research IT run [Research Data Management (RDM) Program](https://researchdata.berkeley.edu/tools)
 
 
-
 ## Help us expand this bit
 
 So if you are here, you have scrolled through. Maybe you thought, why don't you have X. Well, please share ideas with [HERE](/contact-us/). Cheers. 
+
+Also, check out the book that holds up the code!
+
+![Use to hold your laptop](images/booklaptop.jpg){:height="80%" width="80%"}
