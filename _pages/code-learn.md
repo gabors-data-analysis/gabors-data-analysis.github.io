@@ -52,6 +52,9 @@ Python is a general purpose language, used for many applications beyond data sci
 1. NYU has a great group also offering a Python cours by [QuanEcon](https://quantecon.org/lectures/){:target="_blank"}.
 1. Great style guide with suggestions on coding by Sean Higgins. [Python guide](https://github.com/skhiggins/Python_guide){:target="_blank"}.
 1. Great intro book and material by Allen B. Downey to [Think Python](https://greenteapress.com/thinkpython/thinkpython.html) --How to Think Like a Computer Scientist
+1. A great online book by Arthur Turrell [Coding for Economists](https://aeturrell.github.io/coding-for-economists/intro.html) -- a guide for (not only for) economists on what programming is, why it’s useful, and how to do it.
+1. Al Sweigart, 2019 (2nd ed)  [Automate the Boring Stuff with Python, 2nd Edition](https://automatetheboringstuff.com/)
+
 
 # Learning a second language
 Some people have experience using one language but would now learn a second one. Some ideas we found useful:
@@ -82,13 +85,11 @@ For this textbook, Stata and R code were developed early on, and we started to w
 
 
 ## Python for Stata users
-
 1. Adam Ross Nelson (2020) [Going From Stata to Pandas](https://towardsdatascience.com/going-from-stata-to-pandas-706888525acf) -- a longer post on Medium
 
-
-## Tools
+## More translations
+* To even more translations across languages, check out [Library of Statistical Techniques](https://lost-stats.github.io/) -- LOST is a publicly-editable website with the goal of making it easy to execute statistical techniques in statistical software. This is a project by Nick Huntington-Klein but we can all [contribute now](https://lost-stats.github.io/Contributing/Contributing.html), as many people has done. Furthermore check out the Github page for [Nick's excellent causality book](https://github.com/NickCH-K/causaldata), also on all three languages. 
 * Great list of data tools by the UC Berkeley Library and Research IT run [Research Data Management (RDM) Program](https://researchdata.berkeley.edu/tools)
-* Al Sweigart, 2019 (2nd ed)  [Automate the Boring Stuff with Python, 2nd Edition](https://automatetheboringstuff.com/)
 
 
 
