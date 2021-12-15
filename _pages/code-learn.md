@@ -89,7 +89,11 @@ For this textbook, Stata and R code were developed early on, and we started to w
 
 ## More translations
 * To even more translations across languages, check out [Library of Statistical Techniques](https://lost-stats.github.io/) -- LOST is a publicly-editable website with the goal of making it easy to execute statistical techniques in statistical software. This is a project by Nick Huntington-Klein but we can all [contribute now](https://lost-stats.github.io/Contributing/Contributing.html), as many people has done. Furthermore check out the Github page for [Nick's excellent causality book](https://github.com/NickCH-K/causaldata), also on all three languages. 
+
+## More resources
 * Great list of data tools by the UC Berkeley Library and Research IT run [Research Data Management (RDM) Program](https://researchdata.berkeley.edu/tools)
+* Oxford University's Center for the Study of African Economies runs [Coders Corner](https://www.csae.ox.ac.uk/coders-corner) - a collection of coding help on many topics. Mostly Stata, but some R, Python (and Matlab)
+
 
 
 ## Help us expand this bit
