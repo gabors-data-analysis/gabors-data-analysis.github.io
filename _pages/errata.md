@@ -22,7 +22,7 @@ Fortunately, we found some. As we, and our kind readers, carry on finding more e
 
 
 ### Status
-Latest update:20 October 2021
+Latest update:15 December 2021
 
 
 ### Feedback
@@ -42,6 +42,7 @@ Version v0.1.0 on 13 May, 2021: [Download PDF](/files/bekes-kezdi-errata-2021-05
 | ---     | ----------    | ---------------- | -----|---------| -----------------------------------| ----------------------|
 |01-01    | 2021-10-26   | Imprecise          | Ch01 | p.19 |  If it shows similar distributions then the **sample is representative** for the variable, or variables, used in the comparison.  |   If it shows similar distributions then the **sample is likely to be representative** for the variable, or variables, used in the comparison.|
 |01-02    | 2021-11-06   | Imprecise          | Ch01 | p.27 pq4 |  Give an example of data with selection bias and are without  | Give an example of data with selection bias and **one without  it** |
+|03-01    | 2021-12-15   | Typo          | Ch03 | p75 | The range **is** around 50 dollars in both cities.  | The range **starts** around 50 dollars in both cities|
 |06-01     |2021-10-20    | Typos      | Ch06 | B1 p159   | "That p-value is shown to be 0.0000, which means that it’s less than 0.000 05. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value."   | "That p-value is shown to be **0.0007**, which means that it’s less than **0.05**. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value **(0.00035)**"|
 
 
