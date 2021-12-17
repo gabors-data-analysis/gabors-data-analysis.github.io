@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 
-![textbook cover](/images/book-front.jpg){:height="80%" width="80%"}
+![textbook front](/images/book-front.jpg){:height="80%" width="80%"}
 
 
 
@@ -23,7 +23,6 @@ Our textbook **equips future data analysts with the most important tools, method
 Our approach has a **different focus compared to the typical textbooks** in econometrics and data science. They are often excellent in teaching many econometric and machine learning methods. But they don't give much guidance about how to carry out an actual data analysis project from beginning to end. Instead, students have to learn all of that when they work through individual projects, guided by their teachers, advisors, and peers -- but not their textbooks.
 
 To cover all of the steps that are necessary to carry out an actual data analysis project, we **lean on a set of fully developed case studies**. While each case study focuses on the particular method discussed in the chapter, they illustrate all elements of the process from question through analysis to conclusion. We facilitate individual work by **sharing all data and code in Stata, R, and Python**.
-
 
 
 ## Curated content and focus for the modern data analyst
@@ -62,3 +61,10 @@ This textbook was written to be a **complete course** in data analysis. It intro
 The textbook includes formulae to define methods and tools, but it **explains all formulae in plain English**, both when a formula is introduced and, then, when it is used in a case study. Thus, understanding formulae is not necessary to learn data analysis from this textbook. They are of great help, though, and we encourage all students and practitioners to work with formulae whenever possible. The mathematics background required to understand these formulae is quite low, at the the level of basic calculus.
 
 This textbook could be useful for university students in graduate programs as **core text** in applied statistics and econometrics, quantitative methods, or data analysis. The textbook is best used as core text for non-research degree Masters programs or part of the curriculum in a Phd or research Masters programs. It may also **complement online courses** that teach specific methods to give more context and explanation. Undergraduate courses can also make use of this textbook, even though the workload on students exceeds the typical undergraduate workload. Finally, the textbook can serve as a **handbook for practitioners** to guide them through all steps of real-life data analysis.
+
+## Finally, take the advice from Hal Varian 
+Hal Varian has been the chief data scientist at Google, but before he wrote on of the best and most popular textbooks in Economics. 
+
+![textbook front](/images/varian.jpg){:height="80%" width="80%"}
+
+
