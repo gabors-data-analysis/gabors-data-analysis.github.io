@@ -13,3 +13,9 @@ redirect_from:
 
 <object data="https://github.com/gabors-data-analysis/gabors-data-analysis.github.io/blob/master/files/mke-bekes-2021-12-20a.pdf" width="1000" height="1000" type='application/pdf'></object>
 
+## Rövid könyvbemutató, MKE 2021
+
+Drive
+
+<object data="https://drive.google.com/file/d/1sREBJSRosoXRKZbrCS8Ifbo8jKrFzolz/view?usp=sharing" width="1000" height="1000" type='application/pdf'></object>
+
