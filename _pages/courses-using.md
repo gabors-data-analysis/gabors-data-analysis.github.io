@@ -21,17 +21,20 @@ This is a (not comprehensive) list of courses that use the textbook.
 |-------------------------------	|----------	|-------------------------------------------------------------------------------------------------------------------------------------	|--------------------------------	|---------	|---------------------------------------	|-----------	|
 | University of Hawaii at Manoa 	| USA      	| [Economics 427 - Economic Forecasting](https://www2.hawaii.edu/~fuleky/econ427/econ427.html){:target="_blank"}                                        	| Economics                      	| BA  	| Prediction, Time Series               	| R         	|
 | University of California        | USA       | Prediction for Economics                                                                                                              | Economics                       | Masters   | Prediction, Machine Learning            | Python      |
+| Middlesex University  | UK    | Data Analysis | Economics| Masters       | |            |
+| Sheffield Hallam University  | UK    | Statistics & Data Modelling | Economics| Masters  |   | R           |
 | Humboldt University, Berlin           | Germany   | [Applied Econometrics]( https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&publishid=184877&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung)                                                               | Economics                       | BA, Masters   | regression analysis, causal inference   | R     |
 | Bocconi University, Milan     | Italy   | [Econometrics for Big Data](https://didattica.unibocconi.it/ts/tsn_anteprima.php?cod_ins=20594&anno=2022&IdPag=)     | Economics                        | Masters    | Regression, Causal analysis, time series, big data      | Stata  |
 | University of Brescia     | Italy   | [Empirical Economics](https://unibs.coursecatalogue.cineca.it/insegnamenti/2021/757640/2019/2074/107) [PDF](/files/brescia-empirical-economics.pdf)     | Economics / Business Administration                       | BA    | Regression, Causal analysis, time series          | R   |
-| Middlesex University  | UK    | Data Analysis | Economics| Masters       | |            |
-| Sheffield Hallam University  | UK    | Statistics & Data Modelling | Economics| Masters  |   | R           |
-| University of Alberta           | Canada    | Data Science for Business Economics| Marketing, Business Economics                         | senior BA       |                                         | Python           |
 | Central European University     | Austria   | [Prediction with Machine Learning for Economists](https://courses.ceu.edu/courses/2021-2022/prediction-machine-learning-economists){:target="_blank"}   | Economics                       | PhD/Masters   | Prediction, Machine Learning            | R, Python   |
 | Central European University     | Austria   | [Data Analysis for Business Analytics](https://courses.ceu.edu/courses/2021-2022/data-analysis-1-exploration-business-analytics-track){:target="_blank"}  | Economics                       | Masters   | Data Exploration          | R   |
 | Central European University     | Austria   | [Research Design and Methods for Public Policy](https://courses.ceu.edu/courses/2021-2022/quantitative-methods-public-policy){:target="_blank"}  | Economics                       | Masters   | Data Exploration          | R   |
 | Corvinus University, Budapest         | Hungary   | Econometrics | Economics | Masters| Regressions, Causality                                            | Stata             |
 | Budapest Technical University             | Hungary   | [Data Analytics]((/files/bme.pdf))                                                                                                                                      | Data Analysis, modelling, vizualization |          Masters    |                                    |              |
+| University of Alberta           | Canada    | Data Science for Business Economics| Marketing, Business Economics                         | senior BA       |                                         | Python           |
+| University of East Anglia  | UK    | Econometrics | Economics| Masters  |   | R           |
+| Tokyo International University  | Japan    | Econometrics | Economics                         |  BA       | full textbook                                         | R           |
+| Tecnologico de Monterrey           | Mexico    | Econometrics| Economics                         |  BA       |                                         | Python/R           |
 
 ## Public Policy
 
@@ -40,6 +43,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 Columbia University | USA | Analytics for managerial decision-making | Public Health/Health Policy | Masters | Health care analytics | JASP-R |
 | Heidelberg University         	| Germany  	| [Impact Evaluations for Social Programs](https://www.uni-heidelberg.de/md/awi/professuren/intwipol/2021-22_ws_syllabus_ie_englisch.pdf)                                                             	| Economics                      	| Masters 	| regression analysis, causal inference 	| Stata     	|
 | University of Rosario           | Colombia  | Computational Methods in Public Policy                                                                                                | Health/Rehabilitation Sciences  |    Masters      |                                       |     R       |
+| Universidad Autónoma de Nuevo Leon            | Mexico    | Econometrics |       |                                         |            |
 
 
 ## Business, Management, Finance
