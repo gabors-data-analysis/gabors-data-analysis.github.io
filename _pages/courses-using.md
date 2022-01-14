@@ -35,6 +35,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 | University of East Anglia  | UK    | Econometrics | Economics| Masters  |   | R           |
 | Tokyo International University  | Japan    | Econometrics | Economics                         |  BA       | full textbook                                         | R           |
 | Tecnologico de Monterrey           | Mexico    | Econometrics| Economics                         |  BA       |                                         | Python/R           |
+| Corvinus University, Budapest         | Hungary   | Machine Learning in Economics  | Economics | Masters| Prediction, causal inference with ML                                            | R             |
 
 ## Public Policy
 
@@ -57,6 +58,9 @@ Columbia University | USA | Analytics for managerial decision-making | Public He
 | Westminster Universitry | UK    | [ Predictive Analysis for Decision-Making](https://www.westminster.ac.uk/accounting-and-finance-data-science-and-informatics-courses/2022-23/september/full-time/fintech-with-business-analytics-msc) | Fintech/ Biz Analytics| Masters       |Prediction |            |
 | Essex Business School  | UK    | [Managerial Economics](https://rl.talis.com/3/essex/lists/3582B6FD-439A-435D-3970-BA93FA84177C.html?lang=en-GB) | Business| BA       | |            |
 | Université de Limoges  | France    | Econometrics of Banking and Finance | Finance| Masters       | |            |
+| Bocconi University, Milan      | Italy    | [Causal Inference for Marketing Policies](https://didattica.unibocconi.it/ts/tsn_anteprima.php?cod_ins=20757&anno=2022&ric_cdl=BI01&IdPag=6618)                                                                                                  | Marketing, Business                     | MA       |                                         | R           |
+
+
 
 
 ## Engineering, computer science
