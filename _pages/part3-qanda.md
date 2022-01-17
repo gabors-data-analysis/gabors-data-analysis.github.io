@@ -51,6 +51,11 @@ A: Yes can indeed.
 
 A: All are indeed related to the concept of model compleixty and avoiding overfitting. But, CV and BIC are for model selection, LASSO is for model building
 
+>**Q: I have a question about LASSO. Let's just theoretically say I want to use it to select variables not specifically for the aim of the prediction, but for the aim that I will later use these variables for causal inference regression.  And let's say I have a categorical variable - "states". I create then many dummies for observation being in 1 of the states. Then LASSO most probably make coefficients 0 on some of them.  Let's imagine only dummy for being in NY will be left as non zero coefficient by LASSO.  Then I put in my causal regression only this dummy. Would it have some consequences I need to think about? Does it then mean I won't be able to have state fixed effects ?**
+
+A: Consider a causal question: y=a+bx+cZ, where x is the causal variable and Z is a set of possible confounders. Now, double lasso inference (as the causal use of LASSO is called) means running y on Z and x on Z and keep the union of non zero vars. Your point is what if Z has a variable like state={s1, s2,....s50} and so we would have 49 dummies in a regression. Its okay to use LASSO decide which dummies to keep. If it drops s15, it means s15 is uncorrelated w x and y, so doesn't matter what we do. Still, personally I would avoid using LASSO to decide which s states to keep. Instead if, having run lasso and found that say 15 out 50 stays in, i would consider other information concentration measures. One option is group values, ie regions (midwest) instead of states. I think it is easier to interpret.
+
+
 
 ## Chapter 15
 >**Q: How tried cutoff points are selected in case of continuous variables since there are infinitely many possible cutoff points?**
