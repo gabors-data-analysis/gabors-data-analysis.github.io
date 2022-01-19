@@ -76,10 +76,10 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * Baseball: [Baseball-refernce](https://www.baseball-reference.com/)
 * Tennis: [tennis-data.co.uk](http://www.tennis-data.co.uk/data.php)
 
-## Transport, travel
+## Transport, travel, commute
 * [Open flights data](https://openflights.org/data.html) -- flight routes, airport locations. Data for 2014-2017 only. 
 * [US airline tickets](https://www.bts.gov/topics/airlines-and-airports/origin-and-destination-survey-data) --- Bureau of Transportation Statistics' Passenger Origin and Destination (O&D) Survey. An earlier version is [used in the textbook](https://gabors-data-analysis.com/casestudies/#ch22a-how-does-a-merger-between-airlines-affect-prices)
-
+* [Commuting zones] -- Facebook collected data on users' position to estimate commuting zone areas. Check out the [Data overview](https://dataforgood.facebook.com/dfg/tools/commuting-zones) and [Commuting zones datasets](https://data.humdata.org/dataset/commuting-zones)
 
 ## Covid
 * [Covid data hub](https://covid19datahub.io/) --  a unified dataset by collecting worldwide fine-grained case data, merged with exogenous variables helpful for a better understanding of COVID-19, by Emanuele Guidotti. Has now an [R package](https://rviews.rstudio.com/2021/12/08/the-r-package-covid19/)
