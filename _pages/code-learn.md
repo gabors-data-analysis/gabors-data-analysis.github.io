@@ -28,12 +28,12 @@ There are great many resources, to learn R for data analysis. Here are some idea
 5. A great online course is by Roger Peng, Jeff Leek and Brian Caffo  [R programming onCoursera](https://www.coursera.org/learn/r-programming)
 6. At Data Carpentry, François Michonneau and Auriel Fournier has a fantastic content --[Data Analysis and Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/){:target="_blank"}.  
 7. Grant McDermott has a more advanced lecture series with amazing content [Data Science for Economists](https://github.com/uo-ec607/lectures){:target="_blank"}.   
-8. Working with **time series** is hard. A great resource by Hansjörg Neth: Data Science for Psychologists [Chapter 10 Dates and times](https://bookdown.org/hneth/ds4psy/10-time.html){:target="_blank"}.   
+8. Working with *time series* is hard. A great resource by Hansjörg Neth: Data Science for Psychologists [Chapter 10 Dates and times](https://bookdown.org/hneth/ds4psy/10-time.html){:target="_blank"}.   
 9. What They Forgot to Teach You About R, awesome material by Jennifer Bryan and Jim Hester. [workshop material](https://rstats.wtf/){:target="_blank"}.   
 10. Great style guide with suggestions on coding by Sean Higgins. [R guide](https://github.com/skhiggins/R_guide){:target="_blank"}.   
 11. Nice, dplyr focused intro into called *An introductory workshop on modern data analyses and workflows* by folks at Aarhus, available as [Reproducible Research in R](https://r-cubed.rostools.org/index.html)
 12. A list of useful stuff: [Hacks](https://towardsdatascience.com/ten-time-saving-r-hacks-b411add26b96), 
-
+13. Very nice intro to R is the [R introduction](https://hhsievertsen.shinyapps.io/r_introduction/) by Hans H. Sievertsen in Bristol, UK. Coolness in shinyapps! 
 
 ## Stata
 There are many great materials, here is some we like:   
