@@ -33,6 +33,10 @@ A: No. But, we may need to combine *values* of categorical variables. One exampl
 
 A: OLS is based on RMSE, but there are models that correspond to other loss functions. Quantile regression for instance is related to MAE. Also, depending on the actual business problem, other loss functions could be indeed used. In time series, for instance, MAPE is widely used. But, taking averager does not seem a sensible solution. 
 
+>**Q: What do we do with the missing values flag variables if the coefficients are either close to zero or close to 1? Do we continue with keeping them in our prediction model? What happens to those missing values?**
+
+A: If flags are different from zero, they signal non-randomly missing. If so what happens next depends on what we expect in live data. If we expect missing values as well in live data, we should keep the flag, and use it as predictor. If we do not expect missing values in live data (rare case), they will not be used in prediction. But in any case, it is wise to investigate the source of missing - maybe data collection could be improved.
+
 ## Chapter 14
 
 >**Q: For K-fold cross-validation, after randomly reshuffling my data and splitting it to training-tests, can training data in each "K" overlap, or should they be distinct?**
@@ -55,7 +59,9 @@ A: All are indeed related to the concept of model compleixty and avoiding overfi
 
 A: Consider a causal question: y=a+bx+cZ, where x is the causal variable and Z is a set of possible confounders. Now, double lasso inference (as the causal use of LASSO is called) means running y on Z and x on Z and keep the union of non zero vars. Your point is what if Z has a variable like state={s1, s2,....s50} and so we would have 49 dummies in a regression. Its okay to use LASSO decide which dummies to keep. If it drops s15, it means s15 is uncorrelated w x and y, so doesn't matter what we do. Still, personally I would avoid using LASSO to decide which s states to keep. Instead if, having run lasso and found that say 15 out 50 stays in, i would consider other information concentration measures. One option is group values, ie regions (midwest) instead of states. I think it is easier to interpret.
 
+>**Q:Can we predict confidence interval and prediction interval for LASSO?**
 
+A: 
 
 ## Chapter 15
 >**Q: How tried cutoff points are selected in case of continuous variables since there are infinitely many possible cutoff points?**
@@ -75,6 +81,11 @@ A: No. Lasso is aimed at regularizing models that have coefficients such as OLS 
 >**Q: The Variable importance plot for the CART has small values for variables that are not in the tree shown. How is it possible?**
 
 A: Well, that was not clear for us either until we read the `caret` package [documentation](documentation), which says "Recursive Partitioning: The reduction in the loss function (e.g. mean squared error) attributed to each variable at each split is tabulated and the sum is returned. Also, since there may be candidate variables that are important but are not used in a split, the top competing variables are also tabulated at each split. This can be turned off using the maxcompete argument in rpart.control." This is indeed the case, the R code has a comment at the end showing it. 
+
+>**Q: How is the average value actually calculated for the partial dependence plot, meaning what happens to the "other variables", are they fixed at average?**
+
+A:
+For more see [Christoph Molnar'a ML book](https://christophm.github.io/interpretable-ml-book/ )
 
 
 ## Chapter 16
