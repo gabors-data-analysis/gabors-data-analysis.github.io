@@ -20,3 +20,13 @@ SD is useful to compare two distributions with the same mean. The one with highe
 
 Importantly it has the same unit as our variable. For prices, both the mean and the standard deviation would be in currency units (ie dollars, euros, yen, etc)
 
+
+
+## Other parts
+
+* [Part I - Chapter 01-06](/part1-qanda) 
+* [Part II - Chapter 07-12](/part2-qanda) 
+* [Part III - Chapter 13-18](/part3-qanda) 
+* [Part IV - Chapter 19-24](/part4-qanda) 
+
+

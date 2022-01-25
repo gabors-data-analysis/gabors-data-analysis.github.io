@@ -105,3 +105,11 @@ A: The innovation term is what’s new in y(t) on top of what was expected of it
 >**Q: One needs to transform back the log predictions to level in order to compare CV RMSEs, right?**
 
 A: Indeed. We may have quantity as target in the time series in level or log. When in log, we use the formula seen in Chapter 14 to create levels and compute MSE accordingly. 
+
+
+## Other parts
+
+* [Part I - Chapter 01-06](/part1-qanda) 
+* [Part II - Chapter 07-12](/part2-qanda) 
+* [Part III - Chapter 13-18](/part3-qanda) 
+* [Part IV - Chapter 19-24](/part4-qanda) 
