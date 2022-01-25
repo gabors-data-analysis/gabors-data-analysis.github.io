@@ -160,3 +160,6 @@ Users can see a
 The book has many application. 
 
 ![Use to hold your laptop](images/booklaptop.jpg){:height="80%" width="80%"}
+
+## Summary from JEL
+Textbook for graduate students discusses the most important tools, methods, and skills necessary for carrying out a data analysis project, presenting case studies from around the world linking business or policy questions to decisions in data selection and the application of methods. Covers data collection and quality, exploratory data analysis and visualization generalizing from data, and hypothesis testing. Provides an overview of regression analysis, including probability models and time series regressions. Explores predictive analytics, cross-validation, tree-based machine learning methods, classification, and forecasting from time series data. Focuses on causal analysis, the potential outcomes framework and causal maps, difference-in-differences analysis, various panel data methods, and the event study approach.
