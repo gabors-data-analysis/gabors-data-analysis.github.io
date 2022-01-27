@@ -25,18 +25,19 @@ This textbook was written to be a *complete course* in data analysis.
  
 ## Endorsements
 
-* “This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible.  Like a good confidence interval, the Gabors have got you almost completely covered!”  Joshua Angrist (MIT)
-* "A beautiful integration of Econometrics and Data Science that provides a direct path from data collection and exploratory analysis to conventional regression modeling, then on to prediction and causal modeling. Exactly what is needed to equip the next generation of students with the tools and insights from the two fields." David Card (University of California, Berkeley) 
+* “This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible.  Like a good confidence interval, the Gabors have got you almost completely covered!”  **Joshua Angrist (MIT)**
+* "A beautiful integration of Econometrics and Data Science that provides a direct path from data collection and exploratory analysis to conventional regression modeling, then on to prediction and causal modeling. Exactly what is needed to equip the next generation of students with the tools and insights from the two fields." **David Card (University of California, Berkeley)** 
 * “This book combines the latest techniques with practical applications, replicating the implementation side of classroom teaching that is typically missing in textbooks.”   
-Nicholas Bloom (Stanford)
+**Nicholas Bloom (Stanford)**
 * “This sophisticatedly simple book is ideal for undergraduate or Master’s level Data Analytics courses with a broad audience.” 
-Carter Hill (Louisiana)
+**Carter Hill (Louisiana)**
 * “Strong data skills are critical for modern business and economic research, and this text provides a thorough and practical guide to acquiring them.”   
-John Van Reenen (MIT Sloan)
-* “I know of few books about data analysis and visualization that are as comprehensive, deep, practical, and current as this one; and I know of almost none that are as fun to read.”  Alberto Cairo (Miami)
+**John Van Reenen (MIT Sloan/LSE)**
+* “I know of few books about data analysis and visualization that are as comprehensive, deep, practical, and current as this one; and I know of almost none that are as fun to read.”  **Alberto Cairo (Miami)**
 {: .notice--success}
 
-[MORE endorsements](endorsements)
+## Adoption
+Adopted or in the process of adoption in over a 100 courses globally: USA (e.g. Columbia, U Texas, U Penn), UK (e.g.  UCL, Cambridge Judge, Middlesex, Essex), EU (ESSEC, Bocconi, Heidelberg, Berlin), Asia (e.g. Int'l Uni Japan)
 
 ## More info
 * [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf) and the [Table of content](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
