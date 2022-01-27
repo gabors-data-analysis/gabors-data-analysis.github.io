@@ -1,6 +1,7 @@
 ---
 permalink: /one-page-summary
 title: "One page summary"
+classes: wide
 toc: false
 author_profile: false
 redirect_from:
