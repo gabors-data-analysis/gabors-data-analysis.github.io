@@ -8,38 +8,44 @@ redirect_from:
 ---
 
 
+## Data Analysis for Business, Economics, and Policy
+This textbook provides future data analysts with the **tools, methods, and skills** needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. Data wrangling and exploration, regression analysis, prediction with machine learning, and causal analysis are comprehensively covered, as well as when, why, and how the methods work, and how they relate to each other. 
 
-**Data Analysis for Business, Economics, and Policy  
-Gábor Békés (CEU) and Gábor Kézdi (U. Michigan)   
-Cambridge University Press, 2021 January  
-Website: gabors-data-analysis.com**
+A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter.  Our case studies cover a wide range of topics: *consumer decision, economic and social policy, finance, business and management, health, and sport*. Their regional coverage is also wider than usual: one third is from the U.S.A., one third is from Europe and the U.K., and one third is from other countries or includes all countries from Australia to Thailand.
 
+## Target audience
 
-##About
-This textbook provides future data analysts with the tools, methods, and skills needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. This textbook was written to be a complete course in data analysis. This textbook could be useful for university students in graduate programs as core text in applied statistics and econometrics, quantitative methods, or data analysis. It may also complement online courses that teach specific methods to give more context and explanation. Undergraduate courses can also make use of this textbook, even though the workload on students exceeds the typical undergraduate workload. Finally, the textbook can serve as a handbook for practitioners to guide them through all steps of real-life data analysis.
+This textbook was written to be a *complete course* in data analysis. 
+* Undergraduate programs with a Major in Economics, Accounting and Finance, Analytics, Management. Covered partially or over two years. 
+* Graduate (MA, MSc) programs in Economics, Finance, Business Analytics / Applied Data Science, Marketing. May be covered in a single academic year. 
+* Phd / academic masters in Economics, Manageement. Used as additional material for data analytical skills. 
 
-##Early Endorsements
-1. Joshua Angrist, MIT, Department of Economics: "This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible. Like a good confidence interval, the Gabors have got you almost completely covered!"   
-2. John van Reenen, MIT Sloan: "This is a fantastic book to have. Strong data skills are critical for modern business and economic research, and this text provides a thorough and practical guide to acquiring them. Highly recommended."   
-3. Nicholas Bloom, Stanford University /School of Business: "This is an excellent book for students learning the art of modern data analytics. This book combines the latest techniques with practical applications, replicating the implementation side of classroom teaching that is typically missing in text books. [...]] For students looking to learn data analysis from one textbook this is a great way to proceed."  
-4. Alberto Cairo, University of Miami, School of Journalism, and Data Center: "I know of few books about data analysis and visualization that are as comprehensive, deep, practical, and current as this one; and I know of almost none that are as fun to read. Gábor Békés and Gábor Kézdi have created a most unusual and most compelling beast: a textbook that teaches you the subject manner well and that, at the same time, you can enjoy reading cover-to-cover.”  
+* Typical course names are: Econometrics, Quantitative Methods, Research Methods, Data Analysis, Business Analytics
+ 
+## Endorsements
 
-##Some early adoption    
-Central European University (Austria, Hungary): MA Economic Policy, MSc Business Analytics, Executive MBA, PHD in Business, MA Public Policy, Corvinus University (Hungary) MA Economic Analysis, ESSEC Business School (France): PHD in Management/Finance, University of California, Merced (USA): Graduate Economics. 
-
-##Preorder
- USA: [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=1592915211), [Barnes and Noble](https://www.barnesandnoble.com/w/data-analysis-for-business-economics-and-policy-g-bor-b-k-s/1137387367?ean=9781108716208)  
- UK:[Amazon.co.uk](https://www.amazon.co.uk/Data-Analysis-Business-Economics-Policy/dp/1108716202), [Foyles](https://www.foyles.co.uk/witem/business/data-analysis-for-business,gabor-bekes-gabor-kezdi-9781108716208), [Watersones](https://www.waterstones.com/book/data-analysis-for-business-economics-and-policy/gabor-bekes/gabor-kezdi/9781108716208), [WHSmith]()            
- EU+: [Lehmanns(DE)](https://www.lehmanns.de/shop/wirtschaft/52811591-9781108716208-data-analysis-for-business-economics-and-policy)  [Ark.no(NO)](https://www.ark.no/boker/Gabor-Bekes-Data-Analysis-for-Business-Economics-a-9781108483018)  [Bol.com (NL)](https://www.bol.com/nl/f/-/9300000005301765/); 
- Asia: [Univcoop (Japan)](https://yosho.univcoop.jp/BookShop/Book/Detail?icd=1031612061&isbn=978-1-108-71620-8)
+"***This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible.  Like a good confidence interval, the Gabors have got you almost completely covered!***"  
+Joshua Angrist, MIT, Nobel laureate in Economics 2021
+{: .notice--success}
 
 
+"***A beautiful integration of Econometrics and Data Science that provides a direct path from data collection and exploratory analysis to conventional regression modeling, then on to prediction and causal modeling. Exactly what is needed to equip the next generation of students with the tools and insights from the two fields.***"  
+David Card, University of California, Berkeley,  Nobel laureate in Economics 2021
+{: .notice--success}
 
+[MORE endorsements](endorsements)
 
+## More info
+* [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf) and the [Table of content](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
+* [Chapter summaries](/chapters/) and [Case study summaries](/casestudies/)
+* [Sample chapters 10 (multiple regression) and 15 (machine learning)](https://www.book2look.com/vbook.aspx?id=9781108483018)   
+* All data used avilable free [online at osf.io]((https://osf.io/7epdj/))
+* Codes for all analysis in Stata, R, and Python available free [online on Github](https://github.com/gabors-data-analysis/da_case_studies){:target="_blank"} 
 
-
-
-
-
+## Auxilliary material
+* 360 practice questions in the book (with solutions available)
+* 120 data exercises in the book
+* Multiple choice questions
+* Slides in pdf and Overleaf 
 
 
