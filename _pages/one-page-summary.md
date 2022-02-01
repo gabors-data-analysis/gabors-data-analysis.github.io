@@ -18,6 +18,8 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 **Data [avilable on OSF.io](https://osf.io/7epdj/)**  
 **Codes [available in Stata, R, and Python on Github](https://github.com/gabors-data-analysis/da_case_studies)**  
 
+![textbook cover](images/cover-full_hd.png){:height="65%" width="65%"}
+
 
 ## Endorsements
 
