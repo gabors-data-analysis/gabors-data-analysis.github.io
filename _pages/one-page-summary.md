@@ -14,9 +14,9 @@ This textbook provides future data analysts with the **tools, methods, and skill
 
 A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter.  Our case studies cover a wide range of topics: *consumer decision, economic and social policy, finance, business and management, health, and sport*. Their regional coverage is also wider than usual: one third is from the U.S.A., one third is from Europe and the U.K., and one third is from other countries or includes all countries from Australia to Thailand. **More on content**: [chapter summaries](/chapters/), [case study summaries](/casestudies/)
 
-**Textbook website: [Gabors-Data-Analysis.com](https://gabors-data-analysis.com/)**
-
-**Data [avilable on OSF.io](https://osf.io/7epdj/), Codes [available in Stata, R, and Python on Github](https://github.com/gabors-data-analysis/da_case_studies)**
+**Textbook website: [Gabors-Data-Analysis.com](https://gabors-data-analysis.com/)**  
+**Data [avilable on OSF.io](https://osf.io/7epdj/)**  
+**Codes [available in Stata, R, and Python on Github](https://github.com/gabors-data-analysis/da_case_studies)**  
 
 
 ## Endorsements
@@ -42,7 +42,7 @@ This textbook was written to be a *complete course* in data analysis. Key type p
 Typical course names are: 
 * Econometrics, Applied econometrics, Causal inference, Quantitative Methods, Research Methods, Data Analysis, Business Analytics, Applied data science
 
-[More teaching resources](/resources/)
+**[More teaching resources](/resources/)**
 
 
 ## Adoption
