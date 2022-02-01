@@ -10,17 +10,19 @@ redirect_from:
 
 
 ## Data Analysis for Business, Economics, and Policy
-This textbook provides future data analysts with the **tools, methods, and skills** needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. Data wrangling and exploration, regression analysis, prediction with machine learning, and causal analysis are comprehensively covered, as well as when, why, and how the methods work, and how they relate to each other. 
+This textbook provides future data analysts with the **tools, methods, and skills** needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. Data wrangling and exploration, regression analysis, prediction with machine learning, and causal analysis are comprehensively covered, as well as when, why, and how the methods work, and how they relate to each other. **More**: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Content](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018)   
 
-A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter.  Our case studies cover a wide range of topics: *consumer decision, economic and social policy, finance, business and management, health, and sport*. Their regional coverage is also wider than usual: one third is from the U.S.A., one third is from Europe and the U.K., and one third is from other countries or includes all countries from Australia to Thailand.
+A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter.  Our case studies cover a wide range of topics: *consumer decision, economic and social policy, finance, business and management, health, and sport*. Their regional coverage is also wider than usual: one third is from the U.S.A., one third is from Europe and the U.K., and one third is from other countries or includes all countries from Australia to Thailand. **More**: [chapter summaries](/chapters/), [case study summaries](/casestudies/)
+
+**Textbook website: [Gabors-Data-Analysis.com](https://gabors-data-analysis.com/)**
+
 
 ## Target audience
 
 This textbook was written to be a *complete course* in data analysis. 
-* Undergraduate programs with a Major in Economics, Accounting and Finance, Analytics, Management. Covered partially or over two years. 
+* Undergraduate programs (BA, BSc) with a Major in Economics, Accounting and Finance, Analytics, Management. Covered partially or over two years. 
 * Graduate (MA, MSc) programs in Economics, Finance, Business Analytics / Applied Data Science, Marketing. May be covered in a single academic year. 
 * Phd / academic masters in Economics, Manageement. Used as additional material for data analytical skills. 
-
 
 Typical course names are: 
 * Econometrics, Applied econometrics, Causal inference 
@@ -36,7 +38,8 @@ Typical course names are:
 **Carter Hill (Louisiana)**
 * “Strong data skills are critical for modern business and economic research, and this text provides a thorough and practical guide to acquiring them.”   **John Van Reenen (MIT Sloan/LSE)**
 * “I know of few books about data analysis and visualization that are as comprehensive, deep, practical, and current as this one; and I know of almost none that are as fun to read.”  **Alberto Cairo (Miami)**
-{: .notice--success}
+
+[**More endorsemenets**](/endorsements)
 
 ## Adoption
 Adopted or in the process of adoption in over a 100 courses globally: 
@@ -45,14 +48,10 @@ Adopted or in the process of adoption in over a 100 courses globally:
 * EU (ESSEC, IESEG, Bocconi, Bologna, Brescia, Heidelberg, Berlin, CEU, Corvinus, Tilburg, Amsterdam, UC Dublin), 
 * Asia (e.g. Tokyo Int'l Uni )
 
+[**More details on courses using**](/courses-using/)
 
 
-## More info
-* [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf) and the [Table of content](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf)    
-* [Chapter summaries](/chapters/) and [Case study summaries](/casestudies/)
-* [Sample chapters 10 (multiple regression) and 15 (machine learning)](https://www.book2look.com/vbook.aspx?id=9781108483018)   
-* All data used avilable free [online at osf.io]((https://osf.io/7epdj/))
-* Codes for all analysis in Stata, R, and Python available free [online on Github](https://github.com/gabors-data-analysis/da_case_studies){:target="_blank"} 
+**More**: All [data avilable freely]((https://osf.io/7epdj/), [Codes in Stata, R, and Python on Github](https://github.com/gabors-data-analysis/da_case_studies){:target="_blank"} 
 
 ## Auxilliary material
 * 360 practice questions in the book (with solutions available)
