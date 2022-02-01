@@ -47,10 +47,10 @@ Typical course names are:
 
 ## Adoption
 Adopted or in the process of adoption in over a 100 courses globally: 
-* USA/Canada (e.g. Columbia, U Texas, Penn State, SUNY, Hawaii, U California; Simon Fraser, Alberta, Toronto)
-* UK (e.g.  UCL, City, Oxford, Cambridge Judge, Middlesex, Essex, East Anglia)
-* Europe (ESSEC, IESEG, Bocconi,  Brescia, Heidelberg, Berlin, CEU, Corvinus, Tilburg, Amsterdam, UC Dublin)
-* Asia (e.g. Tokyo Int'l Uni ); South America (U Bogota, Monterrey, Mexico) 
+* USA/Canada (e.g. Columbia, U Texas, Penn State, SUNY, Wisconsin, Michigan, Hawaii, U of California; Simon Fraser, Alberta, Toronto)
+* UK (e.g.  UCL, City, Oxford, Cambridge Judge, Middlesex, Essex, Reading, Huddersfield BS, East Anglia)
+* Europe (e.g. ESSEC, IESEG, Bocconi,  Brescia, Heidelberg, Berlin, CEU, Corvinus, Antwerp, Tilburg, Amsterdam, UC Dublin)
+* Asia (e.g. Tokyo International U.); South America (U Bogota, Insper Brazil Monterrey Mexico) 
 
 [**More details on courses using**](/courses-using/)
 
