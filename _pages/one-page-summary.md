@@ -39,7 +39,7 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 This textbook was written to be a *complete course* in data analysis. Key type programs/courses adopting have been: 
 * Graduate (MA, MSc) programs in Economics, Finance, Business Analytics / Applied Data Science, Marketing. May be covered in a single academic year. 
 * Undergraduate programs (BA, BSc) with a Major in Economics, Accounting and Finance, Analytics, Management. Covered partially or over two years. 
-* Phd / academic masters in Economics, Manageement. Used as additional material for data analytical skills. 
+* Phd in Business, Management, Public Policy, Economics. Used as additional material for data analytical skills. 
 
 Typical course names are: 
 * Econometrics, Applied econometrics, Causal inference, Quantitative Methods, Research Methods, Data Analysis, Business Analytics, Applied data science
