@@ -10,10 +10,10 @@ redirect_from:
 
 
 ## Data Analysis for Business, Economics, and Policy
-This textbook provides future data analysts with the **tools, methods, and skills** needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. Covers data collection and quality, exploratory data analysis and visualization generalizing from data, and hypothesis testing. Provides an overview of regression analysis, including probability models and time series regressions. Explores predictive analytics, cross-validation, tree-based machine learning methods, classification, and forecasting from time series data. Focuses on causal analysis, the potential outcomes framework and causal maps, difference-in-differences analysis, various panel data methods, and the event study approach.
+This textbook provides future data analysts with the **tools, methods, and skills** needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. Covers data collection and quality, exploratory data analysis and visualization generalizing from data, and hypothesis testing. Provides an overview of regression analysis, including probability models and time series regressions. Explores predictive analytics, cross-validation, tree-based machine learning methods, classification, and forecasting from time series data. Focuses on causal analysis, the potential outcomes framework and causal maps, difference-in-differences analysis, various panel data methods, and the event study approach.  
 **More info**: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Content](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018)   
 
-A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter.  Our case studies cover a wide range of topics: consumer decision, economic and social policy, finance, business and management, health, and sport. We present case studies from around the world: one third is from the U.S.A., one third is from Europe and the U.K., and one third works with countries from Australia to Haiti, or covers global issues with international data.   
+A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter.  Our case studies deal with a wide range of topics: consumer decision, economic and social policy, finance, business and management, health, and sport. We present case studies from around the world: one third is from the U.S.A., one third is from Europe and the U.K., and one third involves ountries from Australia to Haiti, or covers global issues with international data.   
 **More on content**: [chapter summaries](/chapters/), [case study summaries](/casestudies/)
 
 **Textbook website: [Gabors-Data-Analysis.com](https://gabors-data-analysis.com/)**  
@@ -39,8 +39,8 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 ## Target audience
 
 This textbook was written to be a *complete course* in data analysis. Key type programs/courses adopting have been: 
-* Graduate (MA, MSc) programs in Economics, Finance, Business Analytics / Applied Data Science, Marketing. May be covered in a single academic year. 
-* Undergraduate programs (BA, BSc) with a Major in Economics, Accounting and Finance, Analytics, Management. Covered partially or over two years. 
+* Graduate (MA, MSc) programs in Economics, Finance, Business Analytics / Applied Data Science, Marketing. May be taught in a single academic year. 
+* Undergraduate programs (BA, BSc) with a Major in Economics, Accounting and Finance, Analytics, Management. Taught partially or over two years. 
 * Phd in Business, Management, Public Policy, Economics. Used as additional material for data analytical skills. 
 
 Typical course names are: 
@@ -54,15 +54,15 @@ Adopted or in the process of adoption in over a 100 courses globally:
 * USA/Canada (e.g. Columbia, U Texas, Penn State, SUNY, Wisconsin, Michigan, Hawaii, U of California; Simon Fraser, Alberta, Toronto)
 * UK (e.g.  UCL, City, Oxford, Cambridge Judge, Middlesex, Essex, Reading, Huddersfield BS, East Anglia)
 * Europe (e.g. ESSEC, IESEG, Bocconi,  Brescia, Heidelberg, Berlin, CEU, Corvinus, Antwerp, Tilburg, Amsterdam, UC Dublin)
-* Asia (e.g. Tokyo International U.); South America (U Bogota, Insper Brazil Monterrey Mexico) 
+* Asia (e.g. Tokyo International U.); South America (U Bogota, Insper Brazil, Monterrey Mexico) 
 
 [**More details on courses using**](/courses-using/)
 
-## Auxilliary material
-* 360 practice questions in the book (with solutions available)
-* 120 data exercises in the book
-* Multiple choice questions
-* Slides in pdf and Overleaf 
+## Auxiliary material
+* 360 practice questions -- in the book (with solutions available)
+* 120 data exercises -- in the book
+* Multiple choice questions -- available from Publisher
+* Slides in pdf and Overleaf -- available from Publisher
 
 [**Contact us**](/contact-us/)
 
