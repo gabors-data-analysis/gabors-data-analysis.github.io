@@ -31,7 +31,7 @@ The textbook offers a complete, curated curriculum from data collection to machi
 ## Case studies with a global coverage on diverse topics  
 A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter. Case studies have a large variation in fields and geogrpahy, for example:  
 
-* Finding a good deal among hotels with multiple regression (EU)
+* [Finding a good deal among hotels with multiple regression (EU)](/casestudies/#ch07a-finding-a-good-deal-among-hotels-with-simple-regression)
 * Identifying successful football managers, and the effect of a change (UK)
 * Management quality, firm size and family ownership (Mexico, international)
 * Calculating beta: returns on a company stock vs the market (USA)
@@ -39,7 +39,7 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 * Working from home and employee performance (China)
 * How does a merger between airlines affect prices? (USA)
 
-**More on case studies: [summaries](/casestudies/)**
+**[More on case studies](/casestudies/)**
 
 
 ## Endorsers: "Comprehensive", "Thorough", "Accessible", "fun to read"
