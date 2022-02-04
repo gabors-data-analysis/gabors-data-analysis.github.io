@@ -10,11 +10,17 @@ redirect_from:
 
 
 ## Data Analysis for Business, Economics, and Policy
-This textbook provides future data analysts with the **tools, methods, and skills** needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. Covers data collection and quality, exploratory data analysis and visualization generalizing from data, and hypothesis testing. Provides an overview of regression analysis, including probability models and time series regressions. Explores predictive analytics, cross-validation, tree-based machine learning methods, classification, and forecasting from time series data. Focuses on causal analysis, the potential outcomes framework and causal maps, difference-in-differences analysis, various panel data methods, and the event study approach.  
-**More info**: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Content](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018)   
+This textbook provides future data analysts with the **tools, methods, and skills** needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. 
+
+The textbook offers a complete, curated curriculum from data collection to machine learning and causal analysis:  
+* **[Data exploration](/chapters/part-I/)**: data collection and quality, exploratory data analysis and visualization, generalizing from data, and hypothesis testing. 
+* **[Regression analysis](chapters/part-II/)**: non-parametric and linear models, functional form, probability models and time series regressions. 
+* **[Predictive analytics](chapters/part-III/)**: loss function, cross-validation, tree-based machine learning methods, classification, and forecasting from time series data. 
+* **[Causal inference](chapters/part-IV/)**: the potential outcomes framework and causal maps, experiments, matching, difference-in-differences analysis, various panel data methods, synthetic control, event study.  
+**More info: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Content](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018), [chapter summaries](/chapters/)**   
 
 A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter.  Our case studies deal with a wide range of topics: consumer decision, economic and social policy, finance, business and management, health, and sport. We present case studies from around the world: one third is from the U.S.A., one third is from Europe and the U.K., and one third involves ountries from Australia to Haiti, or covers global issues with international data.   
-**More on content**: [chapter summaries](/chapters/), [case study summaries](/casestudies/)
+**More on case studies: [summaries](/casestudies/)**
 
 **Textbook website: [Gabors-Data-Analysis.com](https://gabors-data-analysis.com/)**  
 **Data [avilable on OSF.io](https://osf.io/7epdj/)**  
@@ -64,5 +70,5 @@ Adopted or in the process of adoption in over a 100 courses globally:
 * Multiple choice questions -- available from Publisher
 * Slides in pdf and Overleaf -- available from Publisher
 
+[**Request an examination copy**](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/examination-copy/login)  
 [**Contact us**](/contact-us/)
-
