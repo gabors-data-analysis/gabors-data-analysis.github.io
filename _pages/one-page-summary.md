@@ -21,10 +21,10 @@ This textbook provides future data analysts with the **tools, methods, and skill
 
 ## Covers data exploration, regression, machine learning, causality
 The textbook offers a complete, curated curriculum from data collection to machine learning and causal analysis:  
-* **[Data exploration](/chapters/part-I/)**: data collection and quality, exploratory data analysis and visualization, generalizing from data, and hypothesis testing. 
-* **[Regression analysis](chapters/part-II/)**: non-parametric and linear models, functional form, probability models and time series regressions. 
-* **[Predictive analytics](chapters/part-III/)**: loss function, cross-validation, tree-based machine learning methods, classification, and forecasting from time series data. 
-* **[Causal inference](chapters/part-IV/)**: the potential outcomes framework and causal maps, experiments, matching, difference-in-differences analysis, various panel data methods, synthetic control, event study.  
+* **[Data exploration](/chapters/part-I/)**: data collection and quality, tidy data and wrangling, exploratory data analysis and visualization, generalizing from data, and hypothesis testing. 
+* **[Regression analysis](chapters/part-II/)**: non-parametric and linear models, functional form, internal and external validity, probability models and time series regressions. 
+* **[Predictive analytics](chapters/part-III/)**: loss function, cross-validation, tree-based machine learning methods (CART, RF, boosting), classification, and forecasting from time series data. 
+* **[Causal inference](chapters/part-IV/)**: the potential outcomes framework and causal maps/DAGs, experiments and A/B testing, matching, difference-in-differences analysis, panel data methods, synthetic control, event study.  
 
 **More info: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Table of contents](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018)**   
 
@@ -33,7 +33,7 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 
 * Finding a good deal among hotels with multiple regression (EU) [**More**](/casestudies/#ch07a-finding-a-good-deal-among-hotels-with-simple-regression)
 * Estimating gender and age differences in earnings (USA) [**More**](/casestudies/#ch09a-estimating-gender-and-age-differences-in-earnings)
-* Management quality, firm size and family ownership (Mexico, International) [More](/casestudies/#ch04a-management-quality-and-firm-size-describing-patterns-of-association)
+* Management quality, firm size and family ownership (Mexico, International) [**More**](/casestudies/#ch04a-management-quality-and-firm-size-describing-patterns-of-association)
 * Calculating beta: returns on a company stock vs the market (USA)  [**More**](/casestudies/#ch12a-returns-on-a-company-stock-and-market-returns)
 * Predicting company default with machine learning (EU) [**More**](/casestudies/#ch17a-predicting-firm-exit-probability-and-classification)
 * Working from home and employee performance (China) [**More**](/casestudies/#ch20a-working-from-home-and-employee-performance)
