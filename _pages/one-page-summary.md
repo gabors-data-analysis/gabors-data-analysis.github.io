@@ -24,7 +24,7 @@ The textbook offers a complete, curated curriculum from data collection to machi
 * **[Data exploration](/chapters/part-I/)**: data collection and quality, tidy data and wrangling, exploratory data analysis and visualization, generalizing from data, and hypothesis testing. 
 * **[Regression analysis](chapters/part-II/)**: non-parametric and linear models, functional form, internal and external validity, probability models and time series regressions. 
 * **[Predictive analytics](chapters/part-III/)**: loss function, cross-validation, tree-based machine learning methods (CART, RF, boosting), classification, and forecasting from time series data. 
-* **[Causal inference](chapters/part-IV/)**: the potential outcomes framework and causal maps/DAGs, experiments and A/B testing, matching, difference-in-differences analysis, panel data methods, synthetic control, event study.  
+* **[Causal inference](chapters/part-IV/)**: potential outcomes framework and causal maps/DAGs, experiments, matching, difference-in-differences analysis, panel data methods, synthetic control, event study.  
 
 **More info: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Table of contents](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018)**   
 
@@ -60,7 +60,7 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 This textbook was written to be a *complete course* in data analysis. Key type programs/courses adopting have been: 
 * Graduate (MA, MSc) programs in Economics, Finance, Business Analytics / Applied Data Science, Marketing. May be taught in a single academic year. 
 * Undergraduate programs (BA, BSc) with a Major in Economics, Accounting and Finance, Analytics, Management. Taught partially or over two years. 
-* Phd in Business, Management, Public Policy, Economics. Used as additional material for data analytical skills. 
+* Phd in Management, Public Policy, Economics. Used as additional material for data analytical skills. 
 
 Typical course names are: 
 * Econometrics, Applied econometrics, Causal inference, Quantitative Methods, Research Methods, Data Analysis, Business Analytics, Applied data science
