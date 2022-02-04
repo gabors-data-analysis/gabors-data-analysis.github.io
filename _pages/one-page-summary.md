@@ -9,32 +9,8 @@ redirect_from:
 ---
 
 
-## Curated content on data exploration, regression, machine learning and causal inference
+## New textbook for the future data analysts mixing econometrics and data science
 This textbook provides future data analysts with the **tools, methods, and skills** needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. 
-
-The textbook offers a complete, curated curriculum from data collection to machine learning and causal analysis:  
-* **[Data exploration](/chapters/part-I/)**: data collection and quality, exploratory data analysis and visualization, generalizing from data, and hypothesis testing. 
-* **[Regression analysis](chapters/part-II/)**: non-parametric and linear models, functional form, probability models and time series regressions. 
-* **[Predictive analytics](chapters/part-III/)**: loss function, cross-validation, tree-based machine learning methods, classification, and forecasting from time series data. 
-* **[Causal inference](chapters/part-IV/)**: the potential outcomes framework and causal maps, experiments, matching, difference-in-differences analysis, various panel data methods, synthetic control, event study.  
-**More info: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Content](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018), [chapter summaries](/chapters/)**   
-
-## Case studies with a global coverage diverse topics on soccer, housing, health, management and pricing  
-A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter. Case studies have a large variation in fields and geogrpahy, for example:  
-
-* Identifying successful football managers, and the effect of a change (UK)
-* Comparing online and offline prices: testing the difference (USA/International)
-* Management quality, firm size and family ownership (Mexico, international)
-* How is life expectancy related to the average income of a country?  (International)
-* Finding a good deal among hotels with multiple regression (Austria)
-* Calculating beta: returns on a company stock vs the market (USA)
-* Predicting apartment prices with machine learning (UK)
-* Forecasting a house price index (USA)
-* Working from home and employee performance (China)
-* How does a merger between airlines affect prices? (USA)
-* Estimating the effect of an earthquake (Haiti)
-
-**More on case studies: [summaries](/casestudies/)**
 
 **Textbook website: [Gabors-Data-Analysis.com](https://gabors-data-analysis.com/)**  
 **Data [avilable on OSF.io](https://osf.io/7epdj/)**  
@@ -43,8 +19,30 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 ![textbook cover](images/cover-full_hd.png){:height="65%" width="65%"}
 
 
-## Endorsements: "Comprehensive", "accessible", "integration of econometrics and data science", "fun to read"
+## Curated content on data exploration, regression, machine learning and causal inference
+The textbook offers a complete, curated curriculum from data collection to machine learning and causal analysis:  
+* **[Data exploration](/chapters/part-I/)**: data collection and quality, exploratory data analysis and visualization, generalizing from data, and hypothesis testing. 
+* **[Regression analysis](chapters/part-II/)**: non-parametric and linear models, functional form, probability models and time series regressions. 
+* **[Predictive analytics](chapters/part-III/)**: loss function, cross-validation, tree-based machine learning methods, classification, and forecasting from time series data. 
+* **[Causal inference](chapters/part-IV/)**: the potential outcomes framework and causal maps, experiments, matching, difference-in-differences analysis, various panel data methods, synthetic control, event study.  
 
+**More info: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Content](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018), [chapter summaries](/chapters/)**   
+
+## Case studies with a global coverage on diverse topics  
+A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter. Case studies have a large variation in fields and geogrpahy, for example:  
+
+* Finding a good deal among hotels with multiple regression (EU)
+* Identifying successful football managers, and the effect of a change (UK)
+* Management quality, firm size and family ownership (Mexico, international)
+* Calculating beta: returns on a company stock vs the market (USA)
+* Predicting company defaults (EU)
+* Working from home and employee performance (China)
+* How does a merger between airlines affect prices? (USA)
+
+**More on case studies: [summaries](/casestudies/)**
+
+
+## Endorsements: "Comprehensive", "accessible", "thorough and practical", "fun to read"
 * “This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible.  Like a good confidence interval, the Gabors have got you almost completely covered!”  **Joshua Angrist (MIT)**
 * "A beautiful integration of Econometrics and Data Science that provides a direct path from data collection and exploratory analysis to conventional regression modeling, then on to prediction and causal modeling. Exactly what is needed to equip the next generation of students with the tools and insights from the two fields." **David Card (University of California, Berkeley)** 
 * “This book combines the latest techniques with practical applications, replicating the implementation side of classroom teaching that is typically missing in textbooks.” **Nicholas Bloom (Stanford)**
