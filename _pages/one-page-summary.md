@@ -19,14 +19,14 @@ This textbook provides future data analysts with the **tools, methods, and skill
 ![textbook cover](images/cover-full_hd.png){:height="65%" width="65%"}
 
 
-## Covering data exploration, regression, machine learning, causal inference
+## Covers data exploration, regression, machine learning, causality
 The textbook offers a complete, curated curriculum from data collection to machine learning and causal analysis:  
 * **[Data exploration](/chapters/part-I/)**: data collection and quality, exploratory data analysis and visualization, generalizing from data, and hypothesis testing. 
 * **[Regression analysis](chapters/part-II/)**: non-parametric and linear models, functional form, probability models and time series regressions. 
 * **[Predictive analytics](chapters/part-III/)**: loss function, cross-validation, tree-based machine learning methods, classification, and forecasting from time series data. 
 * **[Causal inference](chapters/part-IV/)**: the potential outcomes framework and causal maps, experiments, matching, difference-in-differences analysis, various panel data methods, synthetic control, event study.  
 
-**More info: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Content](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018), [chapter summaries](/chapters/)**   
+**More info: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Table of contents](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018)**   
 
 ## Case studies with a global coverage on diverse topics  
 A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter. Case studies have a large variation in fields and geogrpahy, for example:  
@@ -54,7 +54,7 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 [**More endorsemenets**](/endorsements)
 
 
-## Taught in MA/BA Economics, Finance, Analytics, Business, Policy & more
+## Taught in MA/BA Economics, Finance, Analytics, Business, Policy
 
 This textbook was written to be a *complete course* in data analysis. Key type programs/courses adopting have been: 
 * Graduate (MA, MSc) programs in Economics, Finance, Business Analytics / Applied Data Science, Marketing. May be taught in a single academic year. 
