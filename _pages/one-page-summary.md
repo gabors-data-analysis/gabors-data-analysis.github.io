@@ -31,7 +31,7 @@ The textbook offers a complete, curated curriculum from data collection to machi
 **More info: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Table of contents](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018)**   
 
 ## Case studies with a global coverage on diverse topics  
-A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter. Case studies have a large variation in fields and geogrpahy, for example:  
+Working through case studies is the best way to learn data analysis. Thus, a cornerstone of this textbook are **47 case studies** spreading over one-third of our material.  Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter. Case studies cover a wide range of topics and come from different geographical areas, for example:
 
 * Finding a good deal among hotels with multiple regression (EU) [**More**](/casestudies/#ch07a-finding-a-good-deal-among-hotels-with-simple-regression)
 * Estimating gender and age differences in earnings (USA) [**More**](/casestudies/#ch09a-estimating-gender-and-age-differences-in-earnings)
@@ -45,7 +45,7 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 **[More on case studies](/casestudies/)**
 
 
-## Endorsers: "Comprehensive", "Thorough", "Accessible", "fun to read"
+## Endorsers: "comprehensive", "thorough", "accessible", "fun to read"
 * “This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible.  Like a good confidence interval, the Gabors have got you almost completely covered!”  **Joshua Angrist (MIT)**
 * "A beautiful integration of Econometrics and Data Science that provides a direct path from data collection and exploratory analysis to conventional regression modeling, then on to prediction and causal modeling. Exactly what is needed to equip the next generation of students with the tools and insights from the two fields." **David Card (University of California, Berkeley)** 
 * “This book combines the latest techniques with practical applications, replicating the implementation side of classroom teaching that is typically missing in textbooks.” **Nicholas Bloom (Stanford)**
@@ -56,12 +56,12 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 
 [**More endorsemenets**](/endorsements)
 
-![textbook cover](images/book-withpix2.png){:height="70%" width="70%"}
+![textbook cover](images/book-withpix2.jpg){:height="70%" width="70%"}
 
 
-## Taught in MA/BA Economics, Finance, Analytics, Business, Policy
+## Taught in MA/BA Economics, Finance, Analytics, Business, Public Policy
 
-This textbook was written to be a *complete course* in data analysis. Key type programs/courses adopting have been: 
+This textbook was written to be a complete course in data analysis. Key type of programs/courses adopting have been: 
 * Graduate (MA, MSc) programs in Economics, Finance, Business Analytics / Applied Data Science, Marketing. May be taught in a single academic year. 
 * Undergraduate programs (BA, BSc) with a Major in Economics, Accounting and Finance, Analytics, Management. Taught partially or over two years. 
 * Phd in Management, Public Policy, Economics. Used as additional material for data analytical skills. 
