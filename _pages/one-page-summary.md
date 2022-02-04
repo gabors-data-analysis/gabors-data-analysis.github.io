@@ -8,6 +8,8 @@ redirect_from:
   - /one-page-summary.html
 ---
 
+**Published by [Cambridge University Press, 2021](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20)**  
+
 
 ## Data analysis textbook mixing econometrics and data science
 This textbook provides future data analysts with the **tools, methods, and skills** needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. 
@@ -16,7 +18,7 @@ This textbook provides future data analysts with the **tools, methods, and skill
 **Data [avilable on OSF.io](https://osf.io/7epdj/)**  
 **Codes [available in Stata, R, and Python on Github](https://github.com/gabors-data-analysis/da_case_studies)**  
 
-![textbook cover](images/cover-full_hd.png){:height="65%" width="65%"}
+![textbook cover](images/cover-full_hd.png){:height="70%" width="70%"}
 
 
 ## Covers data exploration, regression, machine learning, causality
@@ -53,6 +55,8 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 * “I know of few books about data analysis and visualization that are as comprehensive, deep, practical, and current as this one; and I know of almost none that are as fun to read.”  **Alberto Cairo (Miami)**
 
 [**More endorsemenets**](/endorsements)
+
+![textbook cover](images/book-withpix2.png){:height="70%" width="70%"}
 
 
 ## Taught in MA/BA Economics, Finance, Analytics, Business, Policy
