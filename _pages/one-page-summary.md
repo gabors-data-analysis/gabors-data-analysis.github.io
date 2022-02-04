@@ -31,13 +31,14 @@ The textbook offers a complete, curated curriculum from data collection to machi
 ## Case studies with a global coverage on diverse topics  
 A cornerstone of this textbook are **47 case studies** spreading over one-third of our material because working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter. Case studies have a large variation in fields and geogrpahy, for example:  
 
-* [Finding a good deal among hotels with multiple regression (EU)](/casestudies/#ch07a-finding-a-good-deal-among-hotels-with-simple-regression)
-* Identifying successful football managers, and the effect of a change (UK)
-* Management quality, firm size and family ownership (Mexico, international)
-* Calculating beta: returns on a company stock vs the market (USA)
-* Predicting company defaults (EU)
-* Working from home and employee performance (China)
-* How does a merger between airlines affect prices? (USA)
+* Finding a good deal among hotels with multiple regression (EU) [**More**](/casestudies/#ch07a-finding-a-good-deal-among-hotels-with-simple-regression)
+* Estimating gender and age differences in earnings (USA) [**More**](/casestudies/#ch09a-estimating-gender-and-age-differences-in-earnings)
+* Management quality, firm size and family ownership (Mexico, International) [More](/casestudies/#ch04a-management-quality-and-firm-size-describing-patterns-of-association)
+* Calculating beta: returns on a company stock vs the market (USA)  [**More**](/casestudies/#ch12a-returns-on-a-company-stock-and-market-returns)
+* Predicting company default with machine learning (EU) [**More**](/casestudies/#ch17a-predicting-firm-exit-probability-and-classification)
+* Working from home and employee performance (China) [**More**](/casestudies/#ch20a-working-from-home-and-employee-performance)
+* How does a merger between airlines affect prices? (USA) [**More**](/casestudies/#ch22a-how-does-a-merger-between-airlines-affect-prices)
+* Identifying successful football managers, and the effect of a change (UK) [**More**](/casestudies/#ch24-estimating-the-impact-of-replacing-football-team-managers) 
 
 **[More on case studies](/casestudies/)**
 
