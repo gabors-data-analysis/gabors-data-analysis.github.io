@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 
-## New textbook for the future data analysts mixing econometrics and data science
+## Data analysis textbook mixing econometrics and data science
 This textbook provides future data analysts with the **tools, methods, and skills** needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. 
 
 **Textbook website: [Gabors-Data-Analysis.com](https://gabors-data-analysis.com/)**  
@@ -19,7 +19,7 @@ This textbook provides future data analysts with the **tools, methods, and skill
 ![textbook cover](images/cover-full_hd.png){:height="65%" width="65%"}
 
 
-## Curated content on data exploration, regression, machine learning and causal inference
+## Covering data exploration, regression, machine learning, causal inference
 The textbook offers a complete, curated curriculum from data collection to machine learning and causal analysis:  
 * **[Data exploration](/chapters/part-I/)**: data collection and quality, exploratory data analysis and visualization, generalizing from data, and hypothesis testing. 
 * **[Regression analysis](chapters/part-II/)**: non-parametric and linear models, functional form, probability models and time series regressions. 
@@ -42,7 +42,7 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 **More on case studies: [summaries](/casestudies/)**
 
 
-## Endorsements: "Comprehensive", "accessible", "thorough and practical", "fun to read"
+## Endorsers: "Comprehensive", "Thorough", "Accessible", "fun to read"
 * “This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible.  Like a good confidence interval, the Gabors have got you almost completely covered!”  **Joshua Angrist (MIT)**
 * "A beautiful integration of Econometrics and Data Science that provides a direct path from data collection and exploratory analysis to conventional regression modeling, then on to prediction and causal modeling. Exactly what is needed to equip the next generation of students with the tools and insights from the two fields." **David Card (University of California, Berkeley)** 
 * “This book combines the latest techniques with practical applications, replicating the implementation side of classroom teaching that is typically missing in textbooks.” **Nicholas Bloom (Stanford)**
@@ -54,7 +54,7 @@ A cornerstone of this textbook are **47 case studies** spreading over one-third 
 [**More endorsemenets**](/endorsements)
 
 
-## Target audience: MA/BA in Economics, Finance, Analytics, Business, Policy
+## Taught in MA/BA Economics, Finance, Analytics, Business, Policy & more
 
 This textbook was written to be a *complete course* in data analysis. Key type programs/courses adopting have been: 
 * Graduate (MA, MSc) programs in Economics, Finance, Business Analytics / Applied Data Science, Marketing. May be taught in a single academic year. 
