@@ -88,8 +88,12 @@ The textbook was already adopted or in the process of adoption in over a 100 cou
 * Multiple choice questions -- available from Publisher
 * Slides in pdf and Overleaf -- available from Publisher
 
+------ 
 **Buy the book:** [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=), or a great deal of [global options](/order)  
 [**Request an examination copy**](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/examination-copy/login)  
 
 [**Contact us**](/contact-us/)   
 **Follow us on [Twitter](https://twitter.com/Gabors_Data) and [Facebook](https://www.facebook.com/gaborsdata)** 
+
+-------
+
