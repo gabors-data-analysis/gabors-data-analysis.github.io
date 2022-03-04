@@ -1,6 +1,6 @@
 ---
 permalink: /talks-thesis
-title: "Talks on the book: Empirical Dissertation"
+title: "The seven steps of data analysis"
 layout: single
 classes: wide
 toc: false
@@ -10,10 +10,11 @@ redirect_from:
 ---
 
 
+
+
 ## Data Analysis is a Process: Doing real life empirical projects 
 
-In the lecture I will discuss how real-life analytical projects are different to many academic examples that students have typically seen. 
-The lecture is based on Békés-Kézdi: Data Analysis for Business, Economics, and Policy (Cambridge UP 2021) 
+**The Seven Steps of Data Analyis**  lecture discusses the process of empirical projects: research question, data collection, cleaning and wrangling, exploration, modeling, communicating results, and answering our question and discussing the validity. It also touches upon a range of issues related to working with data: aspects of collection and data wrangling with an emphasis on the role of coding, data engineering and reproducible research.  The lecture is based on Békés-Kézdi: Data Analysis for Business, Economics, and Policy (Cambridge UP 2021) 
 
 The talk is 60-90 mins. 
 
@@ -22,17 +23,18 @@ The target audience is terminal year undergraduate  (BA, BSc) as well as applied
 
 
 ### Topics
-The talk is centered around the process of data analysis discussing all the phases of project. I'll talk about the research question and answer, how the analytical process moves from a broad question, into a testable model and the choice of methods to apply. I will discuss also data issues: collection and data wrangling with an emphasis on the role of coding, data engineering and reproducible research. 
 
 In particular, to discuss data analysis as a process, we'll discuss 7 topics about how data analysis will...
 
-1. First comes a research topic and a specific question
+1. First comes a research topic and a specific research question
 2. Data collection is the foundation for all empirical work
 3. Cleaning and organizing the data is a necessary and time-consuming part
 4. Exploratory data analysis helps both data preparation and analysis
 5. Analytical work tests hypotheses and estimates model(s)
 6. Results shall be presented in a user friendly way
 7. Finally, we answer the original question and discuss generality
+
+![7 samurai](images/7samurai.jpg){:height="50%" width="50%"}
 
 
 
@@ -41,9 +43,6 @@ Throughout the talk I will use a case study from my textbook on family ownership
 
 ![wms](images/wms.png){:height="70%" width="70%"}
 
-Data and code in Stata, R and Python are available for anyone interested to learn more or replicare results. 
-
-![wms-dag](images/Ch21_figures/ch21-figure-1-foundfam-causalmap-color.png){:height="70%" width="70%"}
 
 ### Tools
  I'll talk about tools for all seven steps as well: 
@@ -62,13 +61,13 @@ Data and code in Stata, R and Python are available for anyone interested to lear
 * [FEP, University of Porto](https://sigarra.up.pt/fep/pt/noticias_geral.ver_noticia?p_nr=37529), Portugal: 18 November 2021
 * [CAED conference](https://www.uc.pt/en/uid/ceber/CAED2021/schedule), University of Coimbra, Portugal: 20 November 2021 
 * UCL University College London, UK: 7 December 2021
-* Corvinus University Budapest, Hungary: December 2021
 * [Ecommerce Hungary](https://ecommerce.hu/esemenyek/talalkozas-egy-adattudossal-i-ech-meetup/), Online 30 November, 2021
+* [Corvinus University Budapest](https://www.uni-corvinus.hu/event/az-adatelemzes-het-lepese/), Hungary: 3 March 2022
+* Bocconi University, Italy 2022, April 2022
 * Middlesex University, UK, 2022 (TBC)
-* Bocconi University, Italy 2022 (TBC)
 
 
 *Ping me if interested in hosting an event*
 
-![Coimbra](images/coimbra.jpg){:height="60%" width="60%"}
+![Corvinus](images/bekes-corvinus-talk2.jpg){:height="80%" width="80%"}
 
