@@ -85,8 +85,9 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [Covid data hub](https://covid19datahub.io/) --  a unified dataset by collecting worldwide fine-grained case data, merged with exogenous variables helpful for a better understanding of COVID-19, by Emanuele Guidotti. Has now an [R package](https://rviews.rstudio.com/2021/12/08/the-r-package-covid19/)
 * [Our world in data / Covid page](https://ourworldindata.org/coronavirus)
 
-## historidcal data
-* [Medieval and Early Modern Data Bank](https://memdb.libraries.rutgers.edu/) -- The Medieval and Early Modern Data Bank (MEMDB) is a project established at Rutgers University to provide scholars with an expanding library of information in electronic format on the medieval and early modern periods of European history, circa **800-1815 C.E.** It has six different datasets on prices and currencies and textile production. 
+## Historidcal data
+* [Medieval and Early Modern Data Bank](https://memdb.libraries.rutgers.edu/) -- The Medieval and Early Modern Data Bank (MEMDB) is a project established at Rutgers University to provide scholars with an expanding library of information in electronic format on the medieval and early modern periods of European history, circa **800-1815 C.E.** It has six different datasets on prices and currencies and textile production. Like on [European currency excnage rates in mediveal times](https://memdb.libraries.rutgers.edu/metz-currency)
+
 
 ## Collections
 *  [Data is plural spreadsheet](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0) -- One of the collest  data collection is based on a newsletter by Jeremy Singer-Vine [Data is plural](https://www.data-is-plural.com/)
