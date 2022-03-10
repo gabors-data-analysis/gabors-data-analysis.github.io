@@ -56,6 +56,8 @@ ___
 * Claus Wilke [Data vizualization](http://serialmentor.com/dataviz/ ) 
 * Alberto Cario [How Charts Lie: Getting Smarter about Visual Information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/0393358429/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1594625529&sr=1-1) 
 * Jonathan Schwabish (2021) [Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks](https://www.amazon.com/Better-Data-Visualizations-Scholars-Researchers/dp/0231193114/) -- practical guide to dataviz tools; more advanced. 
+* Online and in print -- [The Economist Graphic Detail](https://www.economist.com/graphic-detail) - amazing resource with really good explanations
+
 
 
 ## Our book
