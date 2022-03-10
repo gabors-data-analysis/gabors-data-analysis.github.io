@@ -45,6 +45,7 @@ ___
 
 
 ### Intro Data Science / statistics books
+* Andrij Burkov: [The 100 page Machine Learning book](http://themlbook.com/) A popular and concise review
 * Roger Peng and Elizabeth Matsui [The Art of Data Science](https://bookdown.org/rdpeng/artofdatascience/) Intro review on the steps of analyzing data.   
 * David Spiegelhalter [The Art of Statistics ](https://www.amazon.com/dp/B07HQDJD99/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1) *A great review of some key statistics concept from a great statitsician. A very nice introduction to any data, stats or metrics course* [Recommended]
 
@@ -92,7 +93,9 @@ Okay, so you have read some nice books. Why not read our book:
 
 
 * Roger Peng on [data science principles ](https://arxiv.org/abs/1903.07639v1) 
-* McKinsey's [non-technical discussion of machine learning](http://www.mckinsey.com/industries/high-tech/our-insights/an-executives-guide-to-machine-learning%20%20%20)
+* McKinsey's [non-technical discussion of machine learning](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/an-executives-guide-to-machine-learning)
+*  Mike Yeomans in Harvard Business Review, an older but good piece [What every managers should know about ML](https://hbr.org/2015/07/what-every-manager-should-know-about-machine-learning)
+* How Uber uses ML/AI in high level piece -- [Uber on Medium post](https://jamal-robinson.medium.com/how-uber-organizes-around-artificial-intelligence-machine-learning-665cdeb946bc) by Jamal Robinson
 * David Donoho [50 years of data science](https://www.tandfonline.com/doi/full/10.1080/10618600.2017.1384734)
 * Susan Athey in Science (2017) [Beyond prediction: Using big data for policy problems](https://science.sciencemag.org/node/689887.full)
 * American statistical organization on research and the p-value. [Statistical Significance and the Dichotomization of Evidence](https://www.tandfonline.com/doi/full/10.1080/01621459.2017.1289846)
