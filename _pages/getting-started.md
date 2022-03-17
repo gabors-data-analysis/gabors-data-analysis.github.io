@@ -21,6 +21,9 @@ This textbook provides future data analysts with the **tools, methods, and skill
 ![textbook cover](images/cover-full_hd.png){:height="80%" width="80%"}
 
 
+{% include video id="1JIa1E5M1JhjVytjZpMtzirQM4V9hr_eO" provider="google-drive" %}
+
+
 ## Covers data exploration, regression, machine learning, causality
 The textbook offers a complete, curated curriculum from data collection to machine learning and causal analysis:  
 * **[Data exploration](/chapters/part-I/)**: data collection and quality, tidy data and wrangling, exploratory data analysis and visualization, generalizing from data, and hypothesis testing. 
