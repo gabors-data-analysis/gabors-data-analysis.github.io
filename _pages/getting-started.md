@@ -21,8 +21,6 @@ This textbook provides future data analysts with the **tools, methods, and skill
 ![textbook cover](images/cover-full_hd.png){:height="80%" width="80%"}
 
 
-{% include video id="1JIa1E5M1JhjVytjZpMtzirQM4V9hr_eO" provider="google-drive" %}
-
 
 ## Covers data exploration, regression, machine learning, causality
 The textbook offers a complete, curated curriculum from data collection to machine learning and causal analysis:  
@@ -97,6 +95,13 @@ The textbook was already adopted or in the process of adoption in over a 100 cou
 
 [**Contact us**](/contact-us/)   
 **Follow us on [Twitter](https://twitter.com/Gabors_Data) and [Facebook](https://www.facebook.com/gaborsdata)** 
+
+
+## Take a quick look!
+
+{% include video id="1JIa1E5M1JhjVytjZpMtzirQM4V9hr_eO" provider="google-drive" %}
+
+
 
 -------
 
