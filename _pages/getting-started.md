@@ -96,6 +96,7 @@ The textbook was already adopted or in the process of adoption in over a 100 cou
 [**Contact us**](/contact-us/)   
 **Follow us on [Twitter](https://twitter.com/Gabors_Data) and [Facebook](https://www.facebook.com/gaborsdata)** 
 
+-------
 
 ## Take a quick look!
 
@@ -103,5 +104,4 @@ The textbook was already adopted or in the process of adoption in over a 100 cou
 
 
 
--------
 
