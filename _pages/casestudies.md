@@ -115,9 +115,16 @@ In this very short case study, we examine survey data collected by the Health an
 
 ![income](/images//Ch03_figures/ch03-figure-11b-hist-income-log.png){:height="50%" width="50%"}
 
+**Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-city-size-japan/ch03-city-size-Japan.do){:target="_blank"} or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-city-size-japan/ch03-city-size-Japan.R){:target="_blank"} or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-city-size-japan/ch03-city-size-Japan.ipynb){:target="_blank"} or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch03-distributions-height-income){:target="_blank"}.
+**Data**: [height-income-distributions](/datasets/#city-size-japan).
+**Graphs**: [.png](ch03D-png-zip){:target="_blank"} or [.eps](ch03D-eps-zip){:target="_blank"}
+
+
+## Ch03U1 Size distribution of Japanese cities
+What is the size distribution of Japanese cities? Looking at cities with at least 150,000 inhabitants, it follows a power law. 
+
 **Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-distributions-height-income/ch03-height-income.do){:target="_blank"} or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-distributions-height-income/ch03-height-income.R){:target="_blank"} or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch03-distributions-height-income/ch03_height-income.ipynb){:target="_blank"} or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch03-distributions-height-income){:target="_blank"}.
 **Data**: [height-income-distributions](/datasets/#height-income-distributions).
-**Graphs**: [.png](ch03D-png-zip){:target="_blank"} or [.eps](ch03D-eps-zip){:target="_blank"}
 
 
 ## Ch04A Management quality and firm size: describing patterns of association
