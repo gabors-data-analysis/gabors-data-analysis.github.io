@@ -22,7 +22,7 @@ Fortunately, we found some. As we, and our kind readers, carry on finding more e
 
 
 ### Status
-Latest update:15 December 2021
+Latest update:25 March 2022
 
 
 ### Feedback
@@ -93,6 +93,7 @@ Version v0.1.0 on 13 May, 2021: [Download PDF](/files/bekes-kezdi-errata-2021-05
 |21-02    | 2021-03-01   | Typo number | Ch21 |p.600 | Formulae 21.17 and 21.21 are not correct, in the second term in the denominator. | In the second term in the denominator, **instead of x=0 there should be x=1**  |
 |21-03    | 2021-05-11   | Typo mumber | Ch21 |p.607 | In Table 21.2, the number of matched observations (5751 and 5528) slightly off  | col 1: **5716**, col 2: **5481**   |
 |21-04    | 2021-05-11   | Typo mumber | Ch21 |p.607 | In Table 21.2, the number of observations in the second column (8827) is slightly off  | N is **8439** not 8227  |
+|23-01    | 2022-03-15   | Typo mumber | Ch23 |p.680 | E4: "present results analogous to the ones in Tables 23.4 and 23.5, and discuss what you find"  | E4: "present results analogous to the ones in Tables **23.3,** 24.4 and 23.5, and discuss what you find"  |
 |24-01    | 2020-12-09   | Text not match code | Ch24 | B2 p.696 |	"When there was more than one candidate game within the same season for the same team, we selected the first one in the season." | "When there was more than one candidate game within the same season for the same team, we selected **one in the season randomly**."|
 |24-02    | 2021-06-07   | Imprecise sentence | Ch24 | B2 page 698|  "Here the intercept, $$\beta_0$$, shows the average change in points in the reference time period, from 7--12 games before to 1--6 games before, for pseudo-interventions. $$\beta_1$$ shows the average change in points from 1--6 games before to 1--6 games after, in addition to $$\beta_0$$. $$\beta_2$$ shows the average change in points from 1--6 games after to 7--12 games after, again, in addition to $$\beta_0$$. Thus, the change from 1--6 games before the pseudo-intervention to 1--6 games after it is $$\beta_1 + \beta_0$$." | ""Here, the intercept, $$\beta_0$$ shows the average change in points in the reference time period: from event time window $$[-12,-7]$$ to event time window $$[-6,-1]$$, for the control group. $$\beta_1$$ shows the average change in points from event time window $$[-6,-1]$$ to event time window $$[1,6]$$, compared to the change in the reference time period (captured by $$\beta_0$$), for the control group. $$\beta_2$$ shows the average change in points from event time $$[1,6]$$ to $$[7,12]$$, again compared to the change in the reference time period, for the control group."|
 |24-03    | 2021-06-07   | Imprecise sentence | Ch24 | B2 page 698|  "$$\beta_3$$ shows the difference between the treatment and control group in terms of average point change from 7--12 games before to 1--6 before. If we selected the control group well, this should be close to zero." | "$$\beta_3$$ shows the treatment-control difference in the change in the reference time period (from $$[-12,-7]$$ 7-12 to $$[-6,-1]$$). If we selected the control group well, $$\beta_3$$ should be close to zero, because we want the control group to have the same pre-treatment changes in the outcome variable."|
