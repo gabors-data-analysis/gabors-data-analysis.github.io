@@ -1,6 +1,6 @@
 ---
 permalink: /code-learn/
-title: "Learning to code"
+title: "Learning to code for data analysis"
 classes: wide
 toc: false
 author_profile: false
