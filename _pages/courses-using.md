@@ -49,6 +49,7 @@ Columbia University | USA | Analytics for managerial decision-making | Public He
 | University of Rosario           | Colombia  | Computational Methods in Public Policy                                                                                                | Health/Rehabilitation Sciences  |    Masters      |                                       |     R       |
 | Universidad Autónoma de Nuevo Leon            | Mexico    | Econometrics |       |                                         |            |
 | University of Western Australia, Perth           | Australia  | [Health Analytics](httpshttps://handbooks.uwa.edu.au/unitdetails?code=ECON5570)                                                               | Business Data Analytics + Economics                  | Masters   | regression analysis, causal inference   | Stata       |
+| Wirtschaft Universitat Wien            | Austria    | Ecological Economics |       |    BA                                     |            Stata |
 
 
 
