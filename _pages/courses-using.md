@@ -61,6 +61,7 @@ Columbia University | USA | Analytics for managerial decision-making | Public He
 
 
 ## Business Analytics, Data Science
+
 | Middlesex University  | UK    | Data Analysis | Economics| Masters       | |            |
 | Sheffield Hallam University  | UK    | Statistics & Data Modelling | Economics| Masters  |   | R           |
 | Central European University     | Austria   | [Data Analysis for Business Analytics](https://courses.ceu.edu/courses/2021-2022/data-analysis-1-exploration-business-analytics-track){:target="_blank"}  | Economics                       | Masters   | Data Exploration          | R   |
