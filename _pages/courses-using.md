@@ -1,7 +1,7 @@
 ---
 layout: single
 classes: wide
-perMA/MSclink: /courses-using/
+permalink: /courses-using/
 title: "List of courses already adopting the textbook"
 toc: false
 author_profile: false
