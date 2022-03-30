@@ -50,7 +50,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 
 | University                      | Country   | Course                                                                                                                                | Department                      | Level     | Focus                                   | Coding      |
 |-------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
-Columbia University | USA | Analytics for MA/MScnagerial decision-MA/MScking | Public Health/Health Policy | MA/MSc | Health care analytics | JASP-R |
+Columbia University | USA | Analytics for Managerial decision-Making | Public Health / Health Policy | MA/MSc | Health care analytics | JASP-R |
 Economics                      	| MA/MSc 	| regression analysis, causal inference 	| Stata     	|
 | University of Rosario           | Colombia  | Computational Methods in Public Policy                                                                                                | Health/Rehabilitation Sciences  |    MA/MSc      |                                       |     R       |
 | Insper IER, Sao Paolo                       | Brazil     | Data Analytics for Healthcare | Healthcare | MA | Regressions| R |
@@ -72,7 +72,7 @@ Economics                      	| MA/MSc 	| regression analysis, causal inferenc
 | Dominican University of   California        | USA  | Advanced Data Analysis                            | Business Analytics  | MA/MSc    |     |     |
 | St Joseph's University,   Pennsylvania      | USA  | Predictive Analytics                              | Data Science        | MA/MSc    |     |     |
 | University College London (UCL)       | UK              | [Business Strategy and Analytics](https://github.com/bus-strat-analytics/MSIN0093-syllabus)             | Business Analytics        | MA/MSc    |     |     |
-| Westminster Universitry | UK    | [ Predictive Analysis for Decision-MA/MScking](https://www.westminster.ac.uk/accounting-and-finance-data-science-and-inforMA/MSctics-courses/2022-23/september/full-time/fintech-with-business-analytics-msc) | Fintech/ Biz Analytics| MA/MSc       |Prediction |            |
+| Westminster Universitry | UK    | [ Predictive Analysis for Decision-Making](https://www.westminster.ac.uk/accounting-and-finance-data-science-and-inforMA/MSctics-courses/2022-23/september/full-time/fintech-with-business-analytics-msc) | Fintech/ Biz Analytics| MA/MSc       |Prediction |            |
 | London School of Economics  (LSE)                | UK              | Data Analysis and Statistical Methods             | Data Science        | MA/MSc    |     |     |
 | Middlesex University  | UK    | Data Analysis | Economics| MA/MSc       | |            |
 | Sheffield Hallam University  | UK    | Statistics & Data Modelling | Economics| MA/MSc  |   | R           |
@@ -93,9 +93,9 @@ Economics                      	| MA/MSc 	| regression analysis, causal inferenc
 | University of Bristol                       | UK              | Data Analytics for Business                       | Finance             |       |     |     |
 | University of Chester                       | UK              | International Finance                             | Finance             | MA/MSc    |     |     |
 | University of Amsterdam                     | Netherlands           | Quantitative data analysis                        | Finance             | MA/MSc    |     |     |
-| University of Westminster,   London         | UK              | Predictive Analysis for Decision-MA/MScking           | Finance             | MA/MSc    |     |     |
+| University of Westminster,   London         | UK              | Predictive Analysis for Decision-Making           | Finance             | MA/MSc    |     |     |
 | University of Westminster,   London         | UK              | Contemporary Finance                              | Finance             |       |     |     |
-| Essex Business School  | UK    | [MA/MScnagerial Economics](https://rl.talis.com/3/essex/lists/3582B6FD-439A-435D-3970-BA93FA84177C.html?lang=en-GB) | Business| BA       | |            |
+| Essex Business School  | UK    | [Managerial Economics](https://rl.talis.com/3/essex/lists/3582B6FD-439A-435D-3970-BA93FA84177C.html?lang=en-GB) | Business| BA       | |            |
 | ESSEC Business School         	| France   	| [Introduction to Econometrics](https://www.essec.edu/en/program/phd-en/phd-program/)            	| Finance                        	| Phd     	|                                       	| R         	|
 | IESEG School of Management      | France    | Econometrics                                                                                                  | International Business                     | BA       |                                         | R           |
 | Université de Limoges  | France    | Econometrics of Banking and Finance | Finance| MA/MSc       | |            |
@@ -129,6 +129,6 @@ Economics                      	| MA/MSc 	| regression analysis, causal inferenc
 |-------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
 | University of Wisconsin   Milwaukee         | USA        | Data/IT Retrieval Systems                | IT                  | BA    |     |     |
 | University of Plymouth                      | UK              | Logistics, Systems and Methods     | IT                  | MS    |     |     |
-                                                    | Data Science                    |           |                                         |             |
+|                                         |             |
 | Eindhoven University of Technology  | Netherlands    | [Social Cost Benefit Analysis](https://research.tue.nl/en/courses/economic-policy-in-practice-social-cost-benefit-analysis) | Industrial Engineering / Innovation| MA/MSc       | | -           |
 
