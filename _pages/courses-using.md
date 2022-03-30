@@ -91,7 +91,7 @@ Economics                      	| Masters 	| regression analysis, causal inferen
 | University of Cambridge / Judge     | UK   	| [Econometrics 1](/files/judge-econometrics1.pdf) and [Econometrics 2](/files/judge-econometrics2.pdf) | Finance                        	| Masters     	|Modelling, regressions, causal inference                             	|R, Stata          	|
 | University of Bristol                       | UK              | Data Analytics for Business                       | Finance             |       |     |     |
 | University of Chester                       | UK              | International Finance                             | Finance             | MA    |     |     |
-| University of Amsterdam                     | The Netherlands           | Quantitative data analysis                        | Finance             | MA    |     |     |
+| University of Amsterdam                     | Netherlands           | Quantitative data analysis                        | Finance             | MA    |     |     |
 | University of Westminster,   London         | UK              | Predictive Analysis for Decision-Making           | Finance             | MA    |     |     |
 | University of Westminster,   London         | UK              | Contemporary Finance                              | Finance             |       |     |     |
 | Essex Business School  | UK    | [Managerial Economics](https://rl.talis.com/3/essex/lists/3582B6FD-439A-435D-3970-BA93FA84177C.html?lang=en-GB) | Business| BA       | |            |
@@ -108,7 +108,6 @@ Economics                      	| Masters 	| regression analysis, causal inferen
 
 | University                      | Country   | Course                                                                                                                                | Department                      | Level     | Focus                                   | Coding      |
 |-------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
-
 | SUNY Empire State College                   | USA  | Business Research Methods                         | Business            |       |     |     |
 | University of New Haven,   Connecticut      | USA  | Business Analytics                                | Business            | BS    |     |     |
 | Utah Valley University                      | USA  | Advanced statistics                               | Business            | BA    |     |     |
