@@ -25,11 +25,11 @@ This is a (not comprehensive) list of courses that use the textbook.
 | University of Alberta           | Canada    | Data Science for Business Economics| Marketing, Business Economics                         | senior BA       |                                         | Python           |
 | Tecnologico de Monterrey           | Mexico    | Econometrics| Economics                         |  BA       |                                         | Python/R           |
 | University of East Anglia  | UK    | Econometrics | Economics| Masters  |   | R           |
-| Heriot-Watt University                      | UK - Scotland             | Econometrics Methods                              | Economics           | BA    |     |     |
-| Kingston University                         | UK - England              | Working as An Economist                           | Economics           | MA    |     |     |
-| Middlesex University, London                | UK - England              | Econometrics, Applied Econometrics                | Economics           | MA    |     |     |
-| Queen Mary University of   London           | UK - England              | Introduction to Econometrics                      | Economics           | PhD   |     |     |
-| University of Newcastle                     | UK - England              | Applied Econometrics                              | Economics           |       |     |     |
+| Heriot-Watt University                      | UK             | Econometrics Methods                              | Economics           | BA    |     |     |
+| Kingston University                         | UK              | Working as An Economist                           | Economics           | MA    |     |     |
+| Middlesex University, London                | UK              | Econometrics, Applied Econometrics                | Economics           | MA    |     |     |
+| Queen Mary University of   London           | UK              | Introduction to Econometrics                      | Economics           | PhD   |     |     |
+| University of Newcastle                     | UK              | Applied Econometrics                              | Economics           |       |     |     |
 | Universite Libre de Bruxelles /Solvay                  | Belgium                    | Introduction to Economic Research                | Economics/Business           | BA       |  Case studies    | Stata     |
 
 | IÉSEG School of Management                  | France                    | Introduction Applied Economics                    | Economics           |       |     |     |
@@ -55,7 +55,7 @@ Columbia University | USA | Analytics for managerial decision-making | Public He
 Economics                      	| Masters 	| regression analysis, causal inference 	| Stata     	|
 | University of Rosario           | Colombia  | Computational Methods in Public Policy                                                                                                | Health/Rehabilitation Sciences  |    Masters      |                                       |     R       |
 | Universidad Autónoma de Nuevo Leon            | Mexico    | Econometrics |       |                                         |            |
-| Cardiff University                          | UK - Wales                | Introduction to Data Science for Politics and IR  | Politics            |       |     |     |
+| Cardiff University                          | UK                | Introduction to Data Science for Politics and IR  | Politics            |       |     |     |
 | Heidelberg University           | Germany   | [Impact Evaluations for Social Programs](https://www.uni-heidelberg.de/md/awi/professuren/intwipol/2021-22_ws_syllabus_ie_englisch.pdf)                                                               | | Wirtschaft Universitat Wien            | Austria    | Ecological Economics |       |    BA                                     |             | Stata |
 | Central European University                 | Austria                   | Quantitative methods for public policy            | Policy              | MA    |     |     |
 | Central European University                 | Austria                   | Research Methods I                                | Politics            | MA    |     |     |
@@ -70,9 +70,9 @@ Economics                      	| Masters 	| regression analysis, causal inferen
 | Concordia University Wisconsin              | USA  | Business Data Analtics with Programming           | Business Analytics  | BA    |     |     |
 | Dominican University of   California        | USA  | Advanced Data Analysis                            | Business Analytics  | MA    |     |     |
 | St Joseph's University,   Pennsylvania      | USA  | Predictive Analytics                              | Data Science        | MA    |     |     |
-| University College London (UCL)       | UK - England              | [Business Strategy and Analytics](https://github.com/bus-strat-analytics/MSIN0093-syllabus)             | Business Analytics        | MA    |     |     |
+| University College London (UCL)       | UK              | [Business Strategy and Analytics](https://github.com/bus-strat-analytics/MSIN0093-syllabus)             | Business Analytics        | MA    |     |     |
 | Westminster Universitry | UK    | [ Predictive Analysis for Decision-Making](https://www.westminster.ac.uk/accounting-and-finance-data-science-and-informatics-courses/2022-23/september/full-time/fintech-with-business-analytics-msc) | Fintech/ Biz Analytics| Masters       |Prediction |            |
-| London School of Economics  (LSE)                | UK - England              | Data Analysis and Statistical Methods             | Data Science        | MA    |     |     |
+| London School of Economics  (LSE)                | UK              | Data Analysis and Statistical Methods             | Data Science        | MA    |     |     |
 | Middlesex University  | UK    | Data Analysis | Economics| Masters       | |            |
 | Sheffield Hallam University  | UK    | Statistics & Data Modelling | Economics| Masters  |   | R           |
 | Central European University     | Austria   | [Data Analysis for Business Analytics](https://courses.ceu.edu/courses/2021-2022/data-analysis-1-exploration-business-analytics-track){:target="_blank"}  | Economics                       | Masters   | Data Exploration          | R   |
@@ -89,11 +89,11 @@ Economics                      	| Masters 	| regression analysis, causal inferen
 | William Paterson University,   New Jersey   | USA  | Financial Data Analytics                          | Finance             | MA    |     |     |
 | Houghton College                            | USA  | Financial Econometrics                            | Finance             |       |     |     |
 | University of Cambridge / Judge     | UK   	| [Econometrics 1](/files/judge-econometrics1.pdf) and [Econometrics 2](/files/judge-econometrics2.pdf) | Finance                        	| Masters     	|Modelling, regressions, causal inference                             	|R, Stata          	|
-| University of Bristol                       | UK - England              | Data Analytics for Business                       | Finance             |       |     |     |
-| University of Chester                       | UK - England              | International Finance                             | Finance             | MA    |     |     |
+| University of Bristol                       | UK              | Data Analytics for Business                       | Finance             |       |     |     |
+| University of Chester                       | UK              | International Finance                             | Finance             | MA    |     |     |
 | University of Amsterdam                     | The Netherlands           | Quantitative data analysis                        | Finance             | MA    |     |     |
-| University of Westminster,   London         | UK - England              | Predictive Analysis for Decision-Making           | Finance             | MA    |     |     |
-| University of Westminster,   London         | UK - England              | Contemporary Finance                              | Finance             |       |     |     |
+| University of Westminster,   London         | UK              | Predictive Analysis for Decision-Making           | Finance             | MA    |     |     |
+| University of Westminster,   London         | UK              | Contemporary Finance                              | Finance             |       |     |     |
 | Essex Business School  | UK    | [Managerial Economics](https://rl.talis.com/3/essex/lists/3582B6FD-439A-435D-3970-BA93FA84177C.html?lang=en-GB) | Business| BA       | |            |
 | ESSEC Business School         	| France   	| [Introduction to Econometrics](https://www.essec.edu/en/program/phd-en/phd-program/)                                                                                                 	| Finance                        	| Phd     	|                                       	| R         	|
 | IESEG School of Management      | France    | Econometrics                                                                                                  | International Business                     | BA       |                                         | R           |
@@ -105,6 +105,7 @@ Economics                      	| Masters 	| regression analysis, causal inferen
 
 
 ## Business and management
+
 | University                      | Country   | Course                                                                                                                                | Department                      | Level     | Focus                                   | Coding      |
 |-------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
 
@@ -112,10 +113,10 @@ Economics                      	| Masters 	| regression analysis, causal inferen
 | University of New Haven,   Connecticut      | USA  | Business Analytics                                | Business            | BS    |     |     |
 | Utah Valley University                      | USA  | Advanced statistics                               | Business            | BA    |     |     |
 | Huddersfield Business School | UK    | Quantitative Economic Methods | Economics and Business| Masters       |Exploration, regression, TS, panel |   R/Stata         |
-| London Business School                      | UK - England              | Data Analytics for Management                     | Business            |       |     |     |
-| SOAS, University of London                  | UK - England              | Fintech in International Business                 | Business            |       |     |     |
-| University of Nottingham                    | UK - England              | Research Methods for Management Studies           | Business            | BA    |     |     |
-| University of Southampton                   | UK - England              | Advanced Time Series Modelling                    | Business            | MA    |     |     |
+| London Business School                      | UK              | Data Analytics for Management                     | Business            |       |     |     |
+| SOAS, University of London                  | UK              | Fintech in International Business                 | Business            |       |     |     |
+| University of Nottingham                    | UK              | Research Methods for Management Studies           | Business            | BA    |     |     |
+| University of Southampton                   | UK              | Advanced Time Series Modelling                    | Business            | MA    |     |     |
 | Pole Universitaire Leonard de   Vinci       | France                    | Foundations of management                         | Management          |       |     |     |
 | Bocconi University, Milan      | Italy    | [Causal Inference for Marketing Policies](https://didattica.unibocconi.it/ts/tsn_anteprima.php?cod_ins=20757&anno=2022&ric_cdl=BI01&IdPag=6618)                               | Marketing, Business                     | MA       |                                         | R           |
 | Central European University                 | Austria                   | EMBA course Vienna                                | Business            | EMBA  |     |     |
@@ -127,7 +128,7 @@ Economics                      	| Masters 	| regression analysis, causal inferen
 | University                      | Country   | Course                                                                                                                                | Department                      | Level     | Focus                                   | Coding      |
 |-------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
 | University of Wisconsin   Milwaukee         | USA  | Data/Information Retrieval Systems                | IT                  | BA    |     |     |
-| Insper                          | Brazil    |                                                                                   | University of Plymouth                      | UK - England              | Logistics, Supply Chains, Systems and Methods     | IT                  | MS    |     |     |
+| Insper                          | Brazil    |                                                                                   | University of Plymouth                      | UK              | Logistics, Supply Chains, Systems and Methods     | IT                  | MS    |     |     |
                                                     | Data Science                    |           |                                         |             |
 | Eindhoven University of Technology  | Netherlands    | [Social Cost Benefit Analysis](https://research.tue.nl/en/courses/economic-policy-in-practice-social-cost-benefit-analysis) | Industrial Engineering and Innovation| Masters       | | -           |
 
