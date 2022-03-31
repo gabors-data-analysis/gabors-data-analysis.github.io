@@ -36,6 +36,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 | Bocconi University, Milan     | Italy   | [Econometrics for Big Data](https://didattica.unibocconi.it/ts/tsn_antepriMA/MSc.php?cod_ins=20594&anno=2022&IdPag=)     | Economics                        | MA/MSc    | Regression, Causal analysis, time series, big data      | Stata  |
 | University of Bologna                       | Italy                     | statistica economica                              | Economics           |       |     |     |
 | University of Brescia     | Italy   | [Empirical Economics](https://unibs.coursecatalogue.cineca.it/insegnamenti/2021/757640/2019/2074/107) [PDF](/files/brescia-empirical-economics.pdf)     | Economics / Business Administration                       | BA    | Regression, Causal analysis, time series          | R   |
+| Scuola Normale Superiore di Pisa                  | Italy                    | Applied Econometrics                | Economics | BA       |      |      |
 | University of Toriono            | Italy     | Economics|  TBD (AY 2022/23)                         | BA       |                                         |            |
 | Central European University     | Austria   | [Prediction with Machine Learning for Economists](https://courses.ceu.edu/courses/2021-2022/prediction-Machine-learning-economists){:target="_blank"}   | Economics                       | PhD/MA/MSc   | Prediction, Machine Learning            | R, Python   |
 | Central European University     | Austria   | [Research Design and Methods for Public Policy](https://courses.ceu.edu/courses/2021-2022/quantitative-methods-public-policy){:target="_blank"}  | Economics                       | MA/MSc   | Data Exploration          | R   |
@@ -45,6 +46,13 @@ This is a (not comprehensive) list of courses that use the textbook.
 | Tokyo International University  | Japan    | Econometrics | Economics                         |  BA       | full textbook                                         | R           |
 
 
+
+             
+
+ 
+
+
+       
 
 ## Public Policy
 
@@ -56,6 +64,7 @@ Economics                      	| MA/MSc 	| regression analysis, causal inferenc
 | Insper IER, Sao Paolo                       | Brazil     | Data Analytics for Healthcare | Healthcare | MA | Regressions| R |
 | Universidad Autónoma de Nuevo Leon            | Mexico    | Econometrics |       |                                         |            |
 | Cardiff University                          | UK                | Introduction to Data Science for Politics and IR  | Politics            |       |     |     |
+| Universitat Politecnica de Catalunya                  | Spain                    | Environmental Economics                | Economics | MA       |      |      |
 | Heidelberg University           | Germany  | [Impact Evaluations for Social Programs](https://www.uni-heidelberg.de/md/awi/professuren/intwipol/2021-22_ws_syllabus_ie_englisch.pdf)                                                               | 
 | Wirtschaft Universitat Wien            | Austria    | Ecological Economics |       |    BA                                     |             | Stata |
 | Central European University                 | Austria                   | Quantitative methods for public policy            | Policy              | MA/MSc    |     |     |
