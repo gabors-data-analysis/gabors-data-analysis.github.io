@@ -21,7 +21,8 @@ This is a (not comprehensive) list of courses that use the textbook.
 |-------------------------------	|----------	|-------------------------------------------------------------------------------------------------------------------------------------	|--------------------------------	|---------	|---------------------------------------	|-----------	|
 | University of Hawaii at Manoa 	| USA      	| [Economics 427 - Economic Forecasting](https://www2.hawaii.edu/~fuleky/econ427/econ427.html){:target="_blank"}                                        	| Economics                      	| BA  	| Prediction, Time Series               	| R         	|
 | University of California        | USA       | Prediction for Economics | Economics                       | MA/MSc   | Prediction, Machine Learning            | Python      |
-| University of Michigan -- Ann   Arbor       | USA  | Econometrics for Applied Economics II             | Economics           |       |     |     |
+| University of Pittsburgh        | USA       | Applied Econometrics | Economics                       | MA/MSc   | Case studies             | TBD      |
+| University of Michigan        | USA  | Econometrics for Applied Economics II             | Economics           |       |     |     |
 | University of Alberta           | Canada    | Data Science for Business Economics| Marketing, Business Economics                         | senior BA       |                                         | Python           |
 | Tecnologico de Monterrey           | Mexico    | Econometrics| Economics                         |  BA       |                                         | Python/R           |
 | University of East Anglia  | UK    | Econometrics | Economics| MA/MSc  |   | R           |
@@ -80,6 +81,7 @@ Economics                      	| MA/MSc 	| regression analysis, causal inferenc
 | Concordia University Wisconsin              | USA  | Business Data Analtics with Programming           | Business Analytics  | BA    |     |     |
 | Dominican University of   California        | USA  | Advanced Data Analysis                            | Business Analytics  | MA/MSc    |     |     |
 | St Joseph's University,   Pennsylvania      | USA  | Predictive Analytics                              | Data Science        | MA/MSc    |     |     |
+| Minnesota State University      | USA  | Business Analytics                              | Business Analytics         | BA    |     |     |
 | University College London (UCL)       | UK              | [Business Strategy and Analytics](https://github.com/bus-strat-analytics/MSIN0093-syllabus)             | Business Analytics        | MA/MSc    |     |     |
 | Westminster Universitry | UK    | [ Predictive Analysis for Decision-Making](https://www.westminster.ac.uk/accounting-and-finance-data-science-and-inforMA/MSctics-courses/2022-23/september/full-time/fintech-with-business-analytics-msc) | Fintech/ Biz Analytics| MA/MSc       |Prediction |            |
 | London School of Economics  (LSE)                | UK              | Data Analysis and Statistical Methods             | Data Science        | MA/MSc    |     |     |
