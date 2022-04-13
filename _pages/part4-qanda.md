@@ -23,6 +23,10 @@ A: We never observe individual treatment effects, and ATE is their average. When
 
 A: No, it is actually percent changes. Log difference is an approximation of relative difference in percent. We shall use percentage points when the x or y variable is already in percent, such as share of immunization for children (Ch23, case study B). Then, we did *not* take logs, but kept percent, so difference between percent values is the percentage point.  
 
+>**Q: With unbalanced panel data, what should I do if I see that there is a great deal of missing values for some years in particular**
+
+A: If you see that, say, for a panel data on countries for the 1992-2018 period, data is missing for many countries till 1995, you may drop those years, rather than keep them empty. In this case, you may see that the estimated average will more reflect countries with full time series. If having shorter series is correlated with some key variable, this can bias the estimate. 
+
 ## Other parts
 
 * [Part I - Chapter 01-06](/part1-qanda) 
