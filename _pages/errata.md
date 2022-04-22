@@ -41,10 +41,9 @@ If you were to find an error, please report us [HERE](https://gabors-data-analys
 |04-01    | 2022-04-20   | Typo          | Ch04 | p109 | a symmetrical U-shaped conditional expectation has an average of zero |   a symmetrical U-shaped conditional expectation function has a zero average |
 |04-02    | 2022-04-20   | Easier read      | Ch04 | p109 | The more balanced the positive deviation in $$x_i$$ and positive deviation in $$y_i$$ instances are with the positive deviation in $$x_i$$ and negative deviation in $$y_i$$ instances, the closer the covariance is to zero.  | We have the covariance closer to zero, when we have a more balanced ratio of the two types of instances -- positive deviation in $$x_i$$ and positive deviation in $$y_i$$ versus positive deviation in $$x_i$$ and negative deviation in $$y_i$$ |
 |04-03    | 2022-04-20   | Typo          | Ch04 | p109 | Thus, they give a quick and not completely meaningless picture about mean-dependence among binary and ordered qualitative variables. However, they are more appropriate measures for **qualitative variables**.   | Thus, they give a quick and not completely meaningless picture about mean-dependence among binary and ordered qualitative variables. However, they are more appropriate measures for **quantitative variables**.|
+|04-04    | 2022-04-22   | Sentence wrong | Ch04 | p108 | In contrast, larger firms differ more from each other in terms of their management score. |  (cut)|
+|04-05    | 2022-04-22   | Sentence wrong | Ch04 | p112-13 | Finally, we have seen that management quality is not only better, on average, among larger firms, but it is also somewhat more spread among larger firms. |  (cut)|
 |06-01     |2021-10-20    | Typos      | Ch06 | B1 p159   | "That p-value is shown to be 0.0000, which means that it’s less than 0.000 05. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value."   | "That p-value is shown to be **0.0007**, which means that it’s less than **0.05**. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value **(0.00035)**"|
-
-
-
 
 
 ### Part II
