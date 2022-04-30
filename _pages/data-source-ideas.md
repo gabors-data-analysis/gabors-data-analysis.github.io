@@ -81,9 +81,10 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [US airline tickets](https://www.bts.gov/topics/airlines-and-airports/origin-and-destination-survey-data) --- Bureau of Transportation Statistics' Passenger Origin and Destination (O&D) Survey. An earlier version is [used in the textbook](https://gabors-data-analysis.com/casestudies/#ch22a-how-does-a-merger-between-airlines-affect-prices)
 * [Commuting zones] -- Facebook collected data on users' position to estimate commuting zone areas. Check out the [Data overview](https://dataforgood.facebook.com/dfg/tools/commuting-zones) and [Commuting zones datasets](https://data.humdata.org/dataset/commuting-zones)
 
-## Covid
+## Health, medical, Covid
 * [Covid data hub](https://covid19datahub.io/) --  a unified dataset by collecting worldwide fine-grained case data, merged with exogenous variables helpful for a better understanding of COVID-19, by Emanuele Guidotti. Has now an [R package](https://rviews.rstudio.com/2021/12/08/the-r-package-covid19/)
 * [Our world in data / Covid page](https://ourworldindata.org/coronavirus)
+* [SGIM Research Dataset Compendium](https://www.sgim.org/communities/research/dataset-compendium/public-datasets-description) is designed to assist investigators conducting research on existing datasets, with a particular emphasis on health services research, clinical epidemiology, and research on medical education. Public dataset list. 
 
 ## Historidcal data
 * [Medieval and Early Modern Data Bank](https://memdb.libraries.rutgers.edu/) -- The Medieval and Early Modern Data Bank (MEMDB) is a project established at Rutgers University to provide scholars with an expanding library of information in electronic format on the medieval and early modern periods of European history, circa **800-1815 C.E.** It has six different datasets on prices and currencies and textile production. Like on [European currency excnage rates in mediveal times](https://memdb.libraries.rutgers.edu/metz-currency)
