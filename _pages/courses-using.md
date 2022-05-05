@@ -9,7 +9,11 @@ redirect_from:
   - /courses-using.html
 ---
 
-## Adopting programs and syllabi
+## Adopting Universities around the world
+
+<iframe src="https://www.google.com/maps/d/embed?mid=1pC2_o2u9oILlA6nLYkXm34UpVSKoxQQP&ehbc=2E312F" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:700px;width:100%;border:none;overflow:hidden;"></iframe>
+
+## Details of adopting programs and syllabi
 
 This is a (not comprehensive) list of courses that use the textbook.   
 *(Contact/DM if you teach a course that is not listed here!)*
