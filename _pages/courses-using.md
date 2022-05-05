@@ -38,7 +38,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 | University of Bologna                       | Italy                     | statistica economica                              | Economics           |       |     |     |
 | University of Brescia     | Italy   | [Empirical Economics](https://unibs.coursecatalogue.cineca.it/insegnamenti/2021/757640/2019/2074/107) [PDF](/files/brescia-empirical-economics.pdf)     | Economics / Business Administration                       | BA    | Regression, Causal analysis, time series          | R   |
 | Scuola Normale Superiore di Pisa                  | Italy                    | Applied Econometrics                | Economics | BA       |      |      |
-| University of Toriono            | Italy     | Economics|  TBD (AY 2022/23)                         | BA       |                                         |            |
+| University of Torino            | Italy     | Economics|  TBD (AY 2022/23)                         | BA       |                                         |            |
 | Central European University     | Austria   | [Prediction with Machine Learning for Economists](https://courses.ceu.edu/courses/2021-2022/prediction-Machine-learning-economists){:target="_blank"}   | Economics                       | PhD/MA/MSc   | Prediction, Machine Learning            | R, Python   |
 | Central European University     | Austria   | [Research Design and Methods for Public Policy](https://courses.ceu.edu/courses/2021-2022/quantitative-methods-public-policy){:target="_blank"}  | Economics                       | MA/MSc   | Data Exploration          | R   |
 | Corvinus University, Budapest         | Hungary   | Econometrics | Economics | MA/MSc| Regressions, Causality                                            | Stata             |
@@ -59,9 +59,8 @@ This is a (not comprehensive) list of courses that use the textbook.
 
 | University                      | Country   | Course                                                                                                                                | Department                      | Level     | Focus                                   | Coding      |
 |-------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
-Columbia University | USA | Analytics for Managerial decision-Making | Public Health / Health Policy | MA/MSc | Health care analytics | JASP-R |
-Economics                      	| MA/MSc 	| regression analysis, causal inference 	| Stata     	|
-| University of Rosario           | Colombia  | Computational Methods in Public Policy                                                                                                | Health/Rehabilitation Sciences  |    MA/MSc      |                                       |     R       |
+| Columbia University              | USA | Analytics for Managerial decision-Making | Public Health / Health Policy | MA/MSc | Health care analytics | JASP-R |
+| University of Rosario           | Colombia  | Computational Methods in Public Policy                                                                                                | Health/Rehabilitation Sciences  |    MA/MSc      |      |   R       |
 | Insper IER, Sao Paolo                       | Brazil     | Data Analytics for Healthcare | Healthcare | MA | Regressions| R |
 | Universidad Autónoma de Nuevo Leon            | Mexico    | Econometrics |       |                                         |            |
 | Cardiff University                          | UK                | Introduction to Data Science for Politics and IR  | Politics            |       |     |     |
