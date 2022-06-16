@@ -22,7 +22,7 @@ Fortunately, we found some. As we, and our kind readers, carry on finding more e
 
 
 ### Status
-Latest update: 21 April 2022
+Latest update: 13 June 2022
 
 
 ### Feedback
@@ -37,6 +37,7 @@ If you were to find an error, please report us [HERE](https://gabors-data-analys
 | ---     | ----------    | ---------------- | -----|---------| -----------------------------------| ----------------------|
 |01-01    | 2021-10-26   | Imprecise          | Ch01 | p.19 |  If it shows similar distributions then the **sample is representative** for the variable, or variables, used in the comparison.  |   If it shows similar distributions then the **sample is likely to be representative** for the variable, or variables, used in the comparison.|
 |01-02    | 2021-11-06   | Imprecise          | Ch01 | p.27 pq4 |  Give an example of data with selection bias and are without  | Give an example of data with selection bias and **one without  it** |
+|01-03    | 2022-06-13   | Typo          | Ch01 | p.10 |  Management Quality and Firm Performance: Data Collection  | Management Quality and Firm **Size**: Data Collection |
 |03-01    | 2021-12-15   | Typo          | Ch03 | p75 | The range **is** around 50 dollars in both cities.  | The range **starts** around 50 dollars in both cities|
 |04-01    | 2022-04-20   | Typo          | Ch04 | p109 | a symmetrical U-shaped conditional expectation has an average of zero |   a symmetrical U-shaped conditional expectation function has a zero average |
 |04-02    | 2022-04-20   | Easier read      | Ch04 | p109 | The more balanced the positive deviation in $$x_i$$ and positive deviation in $$y_i$$ instances are with the positive deviation in $$x_i$$ and negative deviation in $$y_i$$ instances, the closer the covariance is to zero.  | We have the covariance closer to zero, when we have a more balanced ratio of the two types of instances -- positive deviation in $$x_i$$ and positive deviation in $$y_i$$ versus positive deviation in $$x_i$$ and negative deviation in $$y_i$$ |
