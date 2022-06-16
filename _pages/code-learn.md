@@ -19,7 +19,12 @@ A well respected resource that introduces thinking about coding for data analysi
 
 ## R
 There are two popular *toungues* (beyond base) in R, called *data.table* and *tidyverse*. We use *tidyverse*.  
-There are great many resources, to learn R for data analysis. Here are some ideas:   
+There are great many resources, to learn R for data analysis. 
+
+The best start is our brand new course: [**Coding for Data Analysis in R**](https://github.com/gabors-data-analysis/da-coding-rstats). It offers a complete course to go along with the first twelve chapters of [Data Analysis](https://gabors-data-analysis.com/). Classes with code, learning outcomes, exercises. Pretty cool.
+
+
+To learn R, here are some oher ideas:   
 
 1. To learn tidyverse, you may start with the wonderful book by Hadley Wickham and Garrett Grolemund [R for Data Science](https://r4ds.had.co.nz/){:target="_blank"}.  
 2. A wonderful intro, with a focus on starting R and data wrangling, is by Jenny Briant's [Data wrangling, exploration, and analysis with R](https://stat545.com/){:target="_blank"} course, aka STAT545.   
@@ -43,6 +48,7 @@ There are many great materials, here is some we like:
 3. At Data Carpentry, CEU's Miklós Koren and Arieda Muco are developing a [Stata course for Economist](https://datacarpentry.org/stata-economics/){:target="_blank"}.  
 4. A Stata [cheatsheat](https://geocenter.github.io/StataTraining/portfolio/01_resource/){:target="_blank"}.
 5. One of the greatest, coolest somewhat advanced Stata resource is the Medium site of Asjad Naqvi [The Stata Guide](https://medium.com/the-stata-guide){:target="_blank"} that includes pearls like [Stata and Github integration](https://medium.com/the-stata-guide/stata-and-github-integration-8c87ddf9784a){:target="_blank"} 
+6. Another piece by Asjad: code for [30 different graphs](https://github.com/asjadnaqvi/30DayMapChallenge2021)
 
 
 ## Python
