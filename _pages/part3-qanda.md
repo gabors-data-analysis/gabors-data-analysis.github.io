@@ -105,10 +105,34 @@ A: Yes. In random forest, we build trees, by artificially reducing fit -- limiti
 A: The innovation term is what’s new in y(t) on top of what was expected of it, based on previous y observations. So at time (t), we have it as the last innovation we know. We can use it to predict y at (t+1)
 
 
-## Chapter 18
->**Q: One needs to transform back the log predictions to level in order to compare CV RMSEs, right?**
+>**Q: For time series, one needs to transform back the log predictions to level in order to compare CV RMSEs, right?**
 
 A: Indeed. We may have quantity as target in the time series in level or log. When in log, we use the formula seen in Chapter 14 to create levels and compute MSE accordingly. 
+
+>**Q: When using TS models, we often require stationarity for our results to be unbiased/consistent. In Chapter 18 the word 'stationary' does not appear. So, iss stationarity no longer required in time series data when the goal is  forecasting? Is stationarity also a necessary condition when working with time series data, even if we don't care that much about unbiasedness, but rather about forecasting?**
+
+A: You are right, stationarity matters: the model we build uses past information to estimate coefficients, and we need it to be stable over time. Not because of some asymptotics (we indeed care about asymptotic properties, unbiasedness less (if at all), but because of performance. A stationary series may be predicted with lower variance. Thus, I think a base rule, we shall detrend if needed and also allow for seasonality. 
+
+In practice, we do it in both case studies, all models have seasonality + some version of detrending. 
+
+Also, both algos referenced, do it. 
+* auto-arima checks serial correlation and makes it I(1) if auto-correlation cannot be rejected (regardless of performance, ie ARIMA(2,0,1) vs ARIMA(1,1,1), the latter will be picked if unit root test fails. 
+* Prophet also checks it but allows different patterns / shapes across breaks. 
+
+
+
+>**Q: Should we care about stationarity when using ML models Random Forest or XGBoost for prediction in a time series? My feeling is that stationary time series would make it easier for these models to identify the signal. However, given the non-linear nature of the data, they should be able to react to seasonality and time trends given that these models are no longer estimating coefficients."**
+
+A: Hard question. I think the data science/machine learning approach differs to econometrics in terms of only focusing on performance. That is true here as well. 
+
+I consider stationarity as a combination of two problems, really. The first is simple: how to standardize training data to allow for better performance in a parsimonious way. Recognizing trend and seasonality helps because it allows a more parsimonious model -- ie lower variance. The second issue is about external validity: can we assume stability in terms of patterns (trend, distributions, cross-correlations) in the future.
+
+When deciding arima, prophet or RF -- we shall focus on the first one. Thus, allowing to have a simpler model by looking for trend and seasonality may help, in a way as pre-processing. 
+
+In any case, I'd try both: preprocess data (detrend, get rid of most important seasonality) and do ML, as well as without. Pick the one that works better.
+
+Finally, note that a case when RF/GBM may be really useful is once you add several $$x$$ variables (like in a VAR), and the model also helps select $$x$$ vars used. )
+
 
 
 ## Other parts
