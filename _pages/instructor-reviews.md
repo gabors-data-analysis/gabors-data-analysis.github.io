@@ -36,3 +36,10 @@ I recommend it!"
 
 >*Luca De Benedictis,  Professor of International Economics at University of Macerata and LUISS Rome*
 
+
+
+"I think what is amazing about it is not only how you „rush“ through important topics, which allows it to cover a lot in a short period of time. But what is really good is how you teach students to handle data, with recommendations on what to do with outliers etc. but also with lots of hands on. 
+
+As a teacher - and now I am not sure I can mention it - I found the slides of course amazing. I don’t know how much life time you saved me with that!!"
+
+>*Alexandra Avdeenko, Uni Heidelberg, Research Director at the Center for Evaluation and Development*
