@@ -27,14 +27,14 @@ I have reviewed the book, and I think it is excellent. I plan on using it as a s
 
 "Data Analysis for Business, Economics and Policy is an excellent and much needed companion for practitioners in various policy fields. It is not simply a textbook on a broad range of methods, but a hands-on guide for data analysis in practice. It guides the reader firmly through the process of actual empirical analysis, demonstrating how to answer policy and business questions through a broad set of case studies. While covering a large variety of topics, the book never loses focus of the most acute problems practitioners are likely to face. **It should be definitely included in the welcome package of every junior data analyst.**"
 
->*Dr. G. Koltay, senior economist in the European Commission’s DG Competition Chief Economist Team.*
+>*Dr. G. Koltay, senior economist in the European Commission’s DG Competition Chief Economist Team (Belgium/EU).*
 
 
 "I have be using it as a supplementary textbook to a course in International economics at the Master level at Luiss University in Rome. The course has a data analysis component an the book is just what I needed. Updated, complete, full of practical examples and including R, Python and Stata codes. **It is a pleasure to read and with a little bit of adaptation could fit well in any applied course in the social sciences.**
 
 I recommend it!"
 
->*Luca De Benedictis,  Professor of International Economics at University of Macerata and LUISS Rome*
+>*Luca De Benedictis,  Professor of International Economics at University of Macerata and LUISS Rome (Italy)*
 
 
 
@@ -42,4 +42,4 @@ I recommend it!"
 
 As a teacher - and now I am not sure I can mention it - I found the slides of course amazing. I don’t know how much life time you saved me with that!!"
 
->*Alexandra Avdeenko, Uni Heidelberg, Research Director at the Center for Evaluation and Development*
+>*Alexandra Avdeenko, Uni Heidelberg, Research Director at the Center for Evaluation and Development (Germany)*
