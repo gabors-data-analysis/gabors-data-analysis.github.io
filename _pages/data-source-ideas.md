@@ -32,13 +32,21 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [World Bank microdata](https://microdata.worldbank.org/index.php/home)
 * [EBRD business surveys](https://www.beeps-ebrd.com/)
 * [World Management Survey](https://worldmanagementsurvey.org/survey-data/download-data/) -- used in [several case studies in the textbook](/casestudies/#ch04a-management-quality-and-firm-size-describing-patterns-of-association)  
- 
+* [OECD on multinational companies](https://www.oecd.org/sti/ind/amne.htm), their [measurement](https://www.oecd.org/sdd/its/measuring-multinational-enterprises.htm), [controlled foreign firms](https://qdd.oecd.org/subject.aspx?Subject=CFC)
+* [ECB Compnet European firm data](https://www.comp-net.org/) -- harmonized firm level datasets
+* [US historical industry data](https://www.nber.org/research/data/nber-ces-manufacturing-industry-database) -- 60 years
 
 ## Data about people
 * [World value survey](https://www.worldvaluessurvey.org/wvs.jsp) - regular international survey on values
 * [CDC NHANES](https://www.cdc.gov/nchs/nhanes/index.htm) -- US health surveys, [partly used in the textbook](/casestudies/#ch19a-food-and-health)
 * [IPMUS](www.ipums.org): census and survey data from around the world integrated across time and space 
 
+
+## Global trade
+* [UN ComTrade](https://comtrade.un.org/) -- the most wellknown and widely used trade data
+* [WTO datasets](https://www.wto.org/english/res_e/statis_e/trade_datasets_e.htm) -- you may download several datasets here, goods and services.
+* [CEPII datasets BACI](http://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37) -- BACI provides data on bilateral trade flows for 200 countries at the product level (5000 products). Products correspond to the "Harmonized System" nomenclature (6 digit code).
+* [US product level data](https://faculty.som.yale.edu/peterschott/international-trade-data/) by Peter Schott at Yale. Also technical data on matching datasets
 
 
 ## Data on cities, locations
@@ -50,9 +58,10 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 ## Finance
 * [Yahoo Finance]() has historical data on stocks, bonds, indices, such as [Microsoft](https://finance.yahoo.com/quote/MSFT/history?p=MSFT), [used in the textbook](/casestudies/#ch12a-returns-on-a-company-stock-and-market-returns) 
 
-## Culture
+## Culture and language
 * [Open movies database](http://www.omdbapi.com/) get movie data via API
 * [IMDB data](https://www.imdb.com/interfaces/) - get movie data from popular size IMDB
+* [Domestic and International Common Language Database (DICL)](https://www.usitc.gov/data/dicl.htm)
 
 
 ## Climate, environment, energy
@@ -67,6 +76,7 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [Election results and institutions around the globe](https://cses.org/) -- a collaborative project 
 * [Quality of Government](https://www.gu.se/en/quality-government/qog-data) -- several open-source datasets, some extra information, all about Quality of Government
 * [The Global Open Data Index](http://index.okfn.org/place/) provides the most comprehensive snapshot available of the state of open government data publication. Read about the [methodology](http://index.okfn.org/methodology/)
+* [PPEG political parties, Presidents, Elections, and Governments](https://ppeg.wzb.eu/) -- The PPEG Database from around the world. It brings together a range of datasets produced by the department "Democracy & Democratization" of the WZB Berlin Social Science Center.
 
 
 ## Sports data
@@ -88,6 +98,7 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 
 ## Historidcal data
 * [Medieval and Early Modern Data Bank](https://memdb.libraries.rutgers.edu/) -- The Medieval and Early Modern Data Bank (MEMDB) is a project established at Rutgers University to provide scholars with an expanding library of information in electronic format on the medieval and early modern periods of European history, circa **800-1815 C.E.** It has six different datasets on prices and currencies and textile production. Like on [European currency excnage rates in mediveal times](https://memdb.libraries.rutgers.edu/metz-currency)
+* [Yale historical financial research data](https://som.yale.edu/centers/international-center-for-finance/data/historical-financial-research-data) -- old stockmarkets, plus cool stuff like data on [South Seas Bubble of 1720](https://som.yale.edu/centers/international-center-for-finance/data/historical-financial-research-data/south-seas-bubble-1720)
 
 
 ## Collections
@@ -101,3 +112,4 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [R datasets](https://vincentarelbundock.github.io/Rdatasets/datasets.html) - a collection of datasets included in various R packages by Vincent Arel-Bundock 
 * [Datahub's collection](https://datahub.io/collections) Another collection data on the economy, environment and more
 * [Social Science Data Sources & Statistical Methods](https://guides.emich.edu/data/free-data)
+* [Trade, globalization, tax datasets by Baptiste Souillard](https://www.baptistesouillard.com/resources)
