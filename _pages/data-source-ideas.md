@@ -47,7 +47,7 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [WTO datasets](https://www.wto.org/english/res_e/statis_e/trade_datasets_e.htm) -- you may download several datasets here, goods and services.
 * [CEPII datasets BACI](http://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=37) -- BACI provides data on bilateral trade flows for 200 countries at the product level (5000 products). Products correspond to the "Harmonized System" nomenclature (6 digit code).
 * [US product level data](https://faculty.som.yale.edu/peterschott/international-trade-data/) by Peter Schott at Yale. Also technical data on matching datasets
-
+* [CEPII Gravity country pair data](http://www.cepii.fr/cepii/en/bdd_modele/bdd_modele_item.asp?id=8) -- trade, distance between country pairs
 
 ## Data on cities, locations
 * [Eurostata European Cities](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Statistics_on_European_cities) -- socio-economic, population, transport data on European cities
@@ -62,6 +62,7 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 ## Culture and language
 * [Open movies database](http://www.omdbapi.com/) get movie data via API
 * [IMDB data](https://www.imdb.com/interfaces/) - get movie data from popular size IMDB
+* [CEPII language and history](http://www.cepii.fr/cepii/en/bdd_modele/bdd_modele_item.asp?id=19) -- country pair level info on shared common language, historical links (like colonial ties)
 * [Domestic and International Common Language Database (DICL)](https://www.usitc.gov/data/dicl.htm)
 
 
