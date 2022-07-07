@@ -35,8 +35,8 @@ ___
 
 ### Data science popular books
 
-* The[ Data Analytics handbook (interviews)](https://www.teamleada.com/handbook)
-* Karl Shan and coauthors:[ Data science Handbook](http://www.thedatasciencehandbook.com/)
+* The [Data Analytics handbook (interviews)](https://www.teamleada.com/handbook)
+* Karl Shan and coauthors: [Data science Handbook](http://www.thedatasciencehandbook.com/)
 
 
 ### Data vizualization
@@ -44,6 +44,8 @@ ___
 * Kieran Healy [Data Visualization - A practical introduction](http://socviz.co/ )
 * Claus Wilke [Data vizualization](http://serialmentor.com/dataviz/ ) 
 * Alberto Cario [How Charts Lie: Getting Smarter about Visual Information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/0393358429/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1594625529&sr=1-1) 
+* Jonathan Schwabish [Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks](https://www.amazon.com/Better-Data-Visualizations-Scholars-Researchers-dp-0231193106/dp/0231193106/ref=mt_other?_encoding=UTF8&me=&qid=)
+
 
 
 ## Maths prep
@@ -64,7 +66,7 @@ ___
 * Roger Peng [The Art of Data Science](https://www.amazon.com/Art-Data-Science-Roger-Peng/dp/1365061469)  
 * Jay Kreps: [I &lt;3 Logs](https://bit.ly/I-heart-logs)
 * Renee Marie Parilak Teate (2021)[SQL for Data Scientists](https://sqlfordatascientists.com/) -- Intro book something all data scientists need, SQL by @BecomingDataSci. 
-
+* Ethan Bueno de Mesquita and Anthony Fowler (2021) [Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis](https://www.amazon.com/Thinking-Clearly-Data-Quantitative-Reasoning-dp-0691214360/dp/0691214360/ref=mt_other?_encoding=UTF8&me=&qid=) -- intro to data science and statistics with nice examples.
 
 ### Advanced/Techincal books
 
