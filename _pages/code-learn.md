@@ -48,7 +48,6 @@ There are many great materials, here is some we like:
 3. At Data Carpentry, CEU's Miklós Koren and Arieda Muco are developing a [Stata course for Economist](https://datacarpentry.org/stata-economics/){:target="_blank"}.  
 4. A Stata [cheatsheat](https://geocenter.github.io/StataTraining/portfolio/01_resource/){:target="_blank"}.
 5. One of the greatest, coolest somewhat advanced Stata resource is the Medium site of Asjad Naqvi [The Stata Guide](https://medium.com/the-stata-guide){:target="_blank"} that includes pearls like [Stata and Github integration](https://medium.com/the-stata-guide/stata-and-github-integration-8c87ddf9784a){:target="_blank"} 
-6. Another piece by Asjad: code for [30 different graphs](https://github.com/asjadnaqvi/30DayMapChallenge2021)
 
 
 ## Python
@@ -99,6 +98,14 @@ For this textbook, Stata and R code were developed early on, and we started to w
 ## More resources
 * Great list of data tools by the UC Berkeley Library and Research IT run [Research Data Management (RDM) Program](https://researchdata.berkeley.edu/tools)
 * Oxford University's Center for the Study of African Economies runs [Coders Corner](https://www.csae.ox.ac.uk/coders-corner) - a collection of coding help on many topics. Mostly Stata, but some R, Python (and Matlab)
+
+# Data visualization
+
+* The [Data-to-Viz](https://www.data-to-viz.com/#explore) project is a classification of chart types based on input data format. Created by Yan Holtz, it is a phenomenal educational and practical tool. Importantly, it is linked to
+  * [R graph gallery](https://r-graph-gallery.com/) to show how to do graphs with `ggplot2`
+  * [Python Graph gallery](https://www.python-graph-gallery.com/) to show to do it with `matplotlib` and `seaborn`
+* For Stata users, one of the best resource is the Medium site of Asjad Naqvi [The Stata Guide](https://medium.com/the-stata-guide){:target="_blank"} 
+  * Another piece by Asjad: code for [30 different graphs](https://github.com/asjadnaqvi/30DayMapChallenge2021)
 
 
 
