@@ -73,7 +73,7 @@ Python is a general purpose language, used for many applications beyond data sci
   * [Stata Econ Viz Library](https://worldbank.github.io/stata-visual-library/)
   * [R Econ Viz library](https://worldbank.github.io/r-econ-visual-library/)
 * The Jpal Poverty Action Lab, a scientific/ policy analyis NGO has a research guide with a very nice [data vizualization guide](https://www.povertyactionlab.org/resource/data-visualization). It lists useful commands in Stata and R
-
+* Check out the codebase for the textbook at [Gabors Data Analysis Github page](https://github.com/gabors-data-analysis/da_case_studies) to see graphs like this (chapter 18):  
 
 ![Github](/images/Ch18_figures/ch18-figure-5-swim-heatmap.png){:height="50%" width="50%"}
 
