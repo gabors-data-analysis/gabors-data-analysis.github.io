@@ -61,6 +61,19 @@ Python is a general purpose language, used for many applications beyond data sci
 1. Al Sweigart, 2019 (2nd ed)  [Automate the Boring Stuff with Python, 2nd Edition](https://automatetheboringstuff.com/)
 
 
+
+# Data visualization
+
+* The [Data-to-Viz](https://www.data-to-viz.com/#explore) project is a classification of chart types based on input data format. Created by Yan Holtz, it is a phenomenal educational and practical tool. Importantly, it is linked to
+  * [R graph gallery](https://r-graph-gallery.com/) to show how to do graphs with `ggplot2`
+  * [Python Graph gallery](https://www.python-graph-gallery.com/) to show to do it with `matplotlib` and `seaborn`
+* For Stata users, one of the best resource is the Medium site of Asjad Naqvi [The Stata Guide](https://medium.com/the-stata-guide){:target="_blank"} 
+  * Another piece by Asjad: code for [30 different graphs](https://github.com/asjadnaqvi/30DayMapChallenge2021)
+* The World Bank has nice [Visual Libraries](https://blogs.worldbank.org/impactevaluations/new-visual-libraries-r-and-stata-users) collection for R and Stata users, mostly on impact evaluations. It comes with
+  * [Stata Econ Viz Library](https://worldbank.github.io/stata-visual-library/)
+  * [R Econ Viz library](https://worldbank.github.io/r-econ-visual-library/)
+* The Jpal Poverty Action Lab, a scientific/ policy analyis NGO has a research guide with a very nice [data vizualization guide](https://www.povertyactionlab.org/resource/data-visualization). It lists useful commands in Stata and R
+
 # Learning a second language
 Some people have experience using one language but would now learn a second one. Some ideas we found useful:
 
@@ -98,14 +111,6 @@ For this textbook, Stata and R code were developed early on, and we started to w
 ## More resources
 * Great list of data tools by the UC Berkeley Library and Research IT run [Research Data Management (RDM) Program](https://researchdata.berkeley.edu/tools)
 * Oxford University's Center for the Study of African Economies runs [Coders Corner](https://www.csae.ox.ac.uk/coders-corner) - a collection of coding help on many topics. Mostly Stata, but some R, Python (and Matlab)
-
-# Data visualization
-
-* The [Data-to-Viz](https://www.data-to-viz.com/#explore) project is a classification of chart types based on input data format. Created by Yan Holtz, it is a phenomenal educational and practical tool. Importantly, it is linked to
-  * [R graph gallery](https://r-graph-gallery.com/) to show how to do graphs with `ggplot2`
-  * [Python Graph gallery](https://www.python-graph-gallery.com/) to show to do it with `matplotlib` and `seaborn`
-* For Stata users, one of the best resource is the Medium site of Asjad Naqvi [The Stata Guide](https://medium.com/the-stata-guide){:target="_blank"} 
-  * Another piece by Asjad: code for [30 different graphs](https://github.com/asjadnaqvi/30DayMapChallenge2021)
 
 
 
