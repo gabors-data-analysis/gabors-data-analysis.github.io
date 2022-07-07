@@ -75,7 +75,7 @@ Python is a general purpose language, used for many applications beyond data sci
 * The Jpal Poverty Action Lab, a scientific/ policy analyis NGO has a research guide with a very nice [data vizualization guide](https://www.povertyactionlab.org/resource/data-visualization). It lists useful commands in Stata and R
 
 
-![Github](/images/Ch18_figures/ch18-figure-5-swim-heatmap.png){:style="display:block; margin-left:auto; margin-right:auto"}
+![Github](/images/Ch18_figures/ch18-figure-5-swim-heatmap.png){:height="50%" width="50%"}
 
 
 # Learning a second language
