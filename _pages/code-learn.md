@@ -74,6 +74,10 @@ Python is a general purpose language, used for many applications beyond data sci
   * [R Econ Viz library](https://worldbank.github.io/r-econ-visual-library/)
 * The Jpal Poverty Action Lab, a scientific/ policy analyis NGO has a research guide with a very nice [data vizualization guide](https://www.povertyactionlab.org/resource/data-visualization). It lists useful commands in Stata and R
 
+
+![Github](/images/Ch18_figures/ch18-figure-5-swim-heatmap){:height="60%" width="60%"}
+
+
 # Learning a second language
 Some people have experience using one language but would now learn a second one. Some ideas we found useful:
 
