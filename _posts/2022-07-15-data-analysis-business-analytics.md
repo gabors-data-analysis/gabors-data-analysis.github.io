@@ -1,6 +1,7 @@
 ---
 title: 'Data Analysis for Business Analytics '
 date: 2022-07-15
+classes: wide
 permalink: /posts/2022/07/data-analysis-business-analytics/
 tags:
   - business analytics
@@ -12,14 +13,13 @@ tags:
 
 # A complete Data Analysis package for Business Analytics
 
-MS in Business Analytics, MS Applied Data Science --a variety of names exist for a relatively new breed of Masters program. They typically offer a one-year intensive program to build up skills in coding: ( #Rstats or #Python), engineering with #SQL,  #cloud , #bigdata, #spark and many more, management and data analysis.
+MS in Business Analytics, MS Applied Data Science -- a variety of names exist for a relatively new breed of Masters program. They typically offer a one-year intensive program to build up skills in coding: (#Rstats or #Python), engineering with #SQL,  #cloud , #bigdata, #spark and many more, management and data analysis.
 
 
 ## Data Analysis for Business, Economics, and policy
 Data Analysis is a mix of statistics, econometrics, data science, machine learning with the aim of teaching practical skills that analysts may use in real life working in business. As instructor of Data Analysis and program director at  [CEU MS in Business Analytics](https://economics.ceu.edu/program/master-science-business-analytics) for years, I have experimented quite a bit with the curriculum. The experience gave rise to my Cambridge University Press textbook, now used in 80+ programs around the world, including a dozen [Analytics](https://gabors-data-analysis.com/courses-using/#business-analytics-data-science) Masters programs.
 
 How can my [Data Analysis for Business, Economics, and Policy](https://gabors-data-analysis.com/) textbook help for instructors and students Business Analytics or related programs? We beleive, it can help in several different aspects.
-
 
 ## Four benefits
 
@@ -65,7 +65,7 @@ In summary, analytic process orientation, curated content and comprehensive cove
 The book is [endorsed](https://gabors-data-analysis.com/endorsements) by two Nobel lauretes (Angrist and Card), the dean of Yale School of Management (Charles) and many leading scholars. It is already adopted in over a 80 courses globally, including Columbia, U Texas, U Michgan, Penn State, Pittsburgh, U of California, Simon Fraser, UCLondon, Cambridge Judge, Essex, ESSEC, Bocconi,  Berlin, CEU Vienna, Budapest, Amsterdam, UC Dublin, UWA Perth, Kyoto. 
 
 **You may buy the book:** [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=), or a great deal of [global options](/order)  
-[**Request an examination copy**](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/examination-copy/login)  
+[**Request an examination copy**](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/examination-copy/login) from the Publisher (or DM me) 
 
 [**Contact us**](/contact-us/)   
 **Follow us on [Twitter](https://twitter.com/Gabors_Data) and [Facebook](https://www.facebook.com/gaborsdata)** 
