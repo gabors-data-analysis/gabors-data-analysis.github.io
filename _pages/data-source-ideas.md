@@ -25,6 +25,9 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [FRED]( https://fred.stlouisfed.org/) -- mostly USA, but some international 
 * [OECD](https://data.oecd.org) --  standard macro data for OECD countries
 * [World Inequality Database](https://wid.world) -- on the historical evolution of the world distribution of income and wealth within and between countries 
+* [NBER business cycles](https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions) -- information on GDP growth and contraction by the committee that calls recessions
+* [FED consumer finance survey](https://www.federalreserve.gov/econres/aboutscf.htm) -- The Survey of Consumer Finances (SCF) is a triennial cross-sectional survey of U.S. families. The study is sponsored by the Federal Reserve Board in cooperation with the Department of the Treasury, collected by NORC at the University of Chicago. 
+* [USA inequality historical data](https://sites.google.com/view/ellora-derenoncourt/us-inequality-data) -- Ellora Derenoncourt, Chi Hyun Kim Moritz, KuhnMoritz Schularick wonderful dataset on USA racial inequality (and more) used in their research
 
 
 ## Data about firms, business
