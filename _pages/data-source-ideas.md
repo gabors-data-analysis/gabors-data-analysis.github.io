@@ -74,7 +74,8 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [City climate data](https://en.climate-data.org/)
 * [BP global energy](https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy.html) -- energy consumption and co2 emissions
 * [Air quality](https://www.iqair.com/air-pollution-data-api) -- air pollution data via an API
-
+* [Global wildfires](https://gwis.jrc.ec.europa.eu/applications/data-and-services) by Global Wildfire Information System (GWIS), for instance [burnt areas](https://gwis.jrc.ec.europa.eu/apps/country.profile/downloads)
+* [EuroCrops](https://github.com/maja601/EuroCrops) --  is a dataset collection combining all publicly available self-declared crop reporting datasets from countries of the European Union. 
 
 ## Government, policy
 * [Open tenders](https://opentender.eu/download) -- you could get government contracting datasets from 33 countries
@@ -82,7 +83,7 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [Quality of Government](https://www.gu.se/en/quality-government/qog-data) -- several open-source datasets, some extra information, all about Quality of Government
 * [The Global Open Data Index](http://index.okfn.org/place/) provides the most comprehensive snapshot available of the state of open government data publication. Read about the [methodology](http://index.okfn.org/methodology/)
 * [PPEG political parties, Presidents, Elections, and Governments](https://ppeg.wzb.eu/) -- The PPEG Database from around the world. It brings together a range of datasets produced by the department "Democracy & Democratization" of the WZB Berlin Social Science Center.
-
+* [Central bank policy rates](https://www.bis.org/statistics/cbpol.htm) -- BIS collection of international policy rates, monthly
 
 ## Sports data
 * Football/Soccer: [Football-data.co.uk)](https://football-data.co.uk/) -- teams, games, odds, [partly used in the textbook](/casestudies/#ch24-estimating-the-impact-of-replacing-football-team-managers) -- great way to simply download data
@@ -105,6 +106,9 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [Medieval and Early Modern Data Bank](https://memdb.libraries.rutgers.edu/) -- The Medieval and Early Modern Data Bank (MEMDB) is a project established at Rutgers University to provide scholars with an expanding library of information in electronic format on the medieval and early modern periods of European history, circa **800-1815 C.E.** It has six different datasets on prices and currencies and textile production. Like on [European currency excnage rates in mediveal times](https://memdb.libraries.rutgers.edu/metz-currency)
 * [Yale historical financial research data](https://som.yale.edu/centers/international-center-for-finance/data/historical-financial-research-data) -- old stockmarkets, plus cool stuff like data on [South Seas Bubble of 1720](https://som.yale.edu/centers/international-center-for-finance/data/historical-financial-research-data/south-seas-bubble-1720)
 
+
+## Technology
+* [The chips dataset](https://chip-dataset.vercel.app/) provides a dataset with 2185 CPUs and 2668 GPUs.
 
 ## Collections
 *  [Data is plural spreadsheet](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0) -- One of the collest  data collection is based on a newsletter by Jeremy Singer-Vine [Data is plural](https://www.data-is-plural.com/)
