@@ -22,7 +22,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 ## Economics
 
 | University                    	| Country  	| Course                                                                                                                              	| Department                     	| Level   	| Focus                                 	| Coding    	|
-|-------------------------------	|----------	|-------------------------------------------------------------------------------------------------------------------------------------	|--------------------------------	|---------	|---------------------------------------	|-----------	|
+|-----------------------------------------	|----------	|-------------------------------------------------------------------------------------------------------------------------------------	|--------------------------------	|---------	|---------------------------------------	|-----------	|
 | University of Hawaii at Manoa 	| USA      	| [Economics 427 - Economic Forecasting](https://www2.hawaii.edu/~fuleky/econ427/econ427.html){:target="_blank"}                                        	| Economics                      	| BA  	| Prediction, Time Series               	| R         	|
 | University of California        | USA       | Prediction for Economics | Economics                       | MA/MSc   | Prediction, Machine Learning            | Python      |
 | University of Pittsburgh        | USA       | Applied Econometrics | Economics                       | MA/MSc   | Case studies             | TBD      |
@@ -57,7 +57,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 ## Public Policy
 
 | University                      | Country   | Course                                                                                                                                | Department                      | Level     | Focus                                   | Coding      |
-|-------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
+|-----------------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
 | Columbia University              | USA | Analytics for Managerial decision-Making | Public Health / Health Policy | MA/MSc | Health care analytics | JASP-R |
 | University of Rosario           | Colombia  | Computational Methods in Public Policy                                                                                                | Health/Rehabilitation Sciences  |    MA/MSc      |      |   R       |
 | Insper IER, Sao Paolo                       | Brazil     | Data Analytics for Healthcare | Healthcare | MA | Regressions| R |
@@ -74,7 +74,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 ## Business Analytics, Data Science
 
 | University                      | Country   | Course                                                                                                                                | Department                      | Level     | Focus                                   | Coding      |
-|-------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
+|-----------------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
 | University of Utah                          | USA  | Advanced Econometrics                             | Data Science        | BA    |     |     |
 | Concordia University Wisconsin              | USA  | Business Data Analtics with Programming           | Business Analytics  | BA    |     |     |
 | Dominican University of   California        | USA  | Advanced Data Analysis                            | Business Analytics  | MA/MSc    |     |     |
@@ -92,7 +92,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 ## Finance
 
 | University                      | Country   | Course                                                                                                                                | Department                      | Level     | Focus                                   | Coding      |
-|-------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
+|-----------------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
 | University of Texas at Dallas               | USA  | Statistical Methods for Financial Analysis        | Finance             | MA/MSc    |     |     |
 | University of Texas at Dallas               | USA  | Statistical Methods for Finance                   | Finance             | MA/MSc    |     |     |
 | Utah Valley University                      | USA  | Analytics and Advanced Statistics                 | Finance             | MA/MSc    |     |     |
@@ -117,7 +117,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 ## Business and Management
 
 | University                      | Country   | Course                                                                                                                                | Department                      | Level     | Focus                                   | Coding      |
-|-------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
+|-----------------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
 | SUNY Empire State College                   | USA  | Business Research Methods                         | Business            |       |     |     |
 | University of New Haven,   Connecticut      | USA  | Business Analytics                                | Business            | BS    |     |     |
 | Utah Valley University                      | USA  | Advanced statistics                               | Business            | BA    |     |     |
@@ -137,7 +137,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 ## Engineering, computer science
 
 | University                      | Country   | Course                                                                                                                                | Department                      | Level     | Focus                                   | Coding      |
-|-------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
+|-----------------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
 | University of Wisconsin   Milwaukee         | USA        | Data/IT Retrieval Systems                | IT                  | BA    |     |     |
 | University of Plymouth                      | UK              | Logistics, Systems and Methods     | IT                  | MS    |     |     |
 |                                         |             |
