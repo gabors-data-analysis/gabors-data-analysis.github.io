@@ -38,6 +38,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 | University of Lincoln                       | UK              | Thesis Module                              | Economics/Business           | MA      |     |     |
 | ULB /Solvay                  | Belgium                    | Introduction to Economic Research                | Economics/Business           | BA       |  Case studies    | Stata     |
 | IÉSEG School of Management                  | France                    | Introduction Applied Economics                    | Economics           |       |     |     |
+| University of Luzern                 | Switzerland       | [Workshop in Applied Data Analysis](https://www.unilu.ch/fileadmin/universitaet/akademische-dienste/iro/Incoming_docs/Additional_courses_WF_fall_2022.pdf)                    | Economics          |   BA/MA    |Applied data projects     |     |
 | Humboldt University, Berlin           | Germany  | [Applied Econometrics]( https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&publishid=184877&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung)                                                               | Economics                       | BA, MA/MSc   | regression analysis, causal inference   | R     |
 | Bocconi University, Milan     | Italy   | [Econometrics for Big Data](https://didattica.unibocconi.it/ts/tsn_antepriMA/MSc.php?cod_ins=20594&anno=2022&IdPag=)     | Economics                        | MA/MSc    | Regression, Causal analysis, time series, big data      | Stata  |
 | University of Bologna                       | Italy                     | statistica economica                              | Economics           |       |     |     |
@@ -124,6 +125,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 | London Business School                      | UK              | Data Analytics for Management                     | Business            |       |     |     |
 | SOAS, University of London                  | UK              | Fintech in International Business                 | Business            |       |     |     |
 | University of Nottingham                    | UK              | Research Methods for Management Studies           | Business            | BA    |     |     |
+| London Metropolitan U. /Guildhall SB         | UK              | [Data Analysis for Global Business](https://intranet.londonmet.ac.uk/module-catalogue/record.cfm?mc=FE7066)             | Business            | MA/MSc    |     |    SPSS |
 | University of Southampton                   | UK              | Advanced Time Series Modelling                    | Business            | MA/MSc    |     |     |
 | Copenhagen Business School                   | Denmark              | [Applied Business Research](https://kursuskatalog.cbs.dk/2022-2023/KAN-CIBSO1061U.aspx)                    | Business            | MA/MSc    |  Exploration, analysis   | R     |
 | Pole Universitaire Leonard de   Vinci       | France                    | Foundations of Management                         | Management          |       |     |     |
