@@ -35,6 +35,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 | Middlesex University, London                | UK              | Econometrics, Applied Econometrics                | Economics           | MA/MSc    |     |     |
 | Queen Mary University of   London           | UK              | Introduction to Econometrics                      | Economics           | PhD   |     |     |
 | University of Newcastle                     | UK              | Applied Econometrics                              | Economics           |       |     |     |
+| University of Lincoln                       | UK              | Thesis Module                              | Economics/Business           | MA      |     |     |
 | ULB /Solvay                  | Belgium                    | Introduction to Economic Research                | Economics/Business           | BA       |  Case studies    | Stata     |
 | IÉSEG School of Management                  | France                    | Introduction Applied Economics                    | Economics           |       |     |     |
 | Humboldt University, Berlin           | Germany  | [Applied Econometrics]( https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&publishid=184877&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung)                                                               | Economics                       | BA, MA/MSc   | regression analysis, causal inference   | R     |
@@ -51,13 +52,6 @@ This is a (not comprehensive) list of courses that use the textbook.
 | Tokyo International University  | Japan    | Econometrics | Economics                         |  BA       | full textbook                                         | R           |
 
 
-
-             
-
- 
-
-
-       
 
 ## Public Policy
 
@@ -115,7 +109,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 | Université de Limoges  | France    | Econometrics of Banking and Finance | Finance| MA/MSc       | |            |
 | Frankfurt University                        | Germany                  | Data Analytics in Finance and Accounting          | Finance             |       |     |     |
 | University of Brescia                       | Italy                     | Econometria dei mercati finanziari                | Finance             |       |     |     |
-|  Ho Chi Minh University of Banking  | Vietnam    | Reserach Methodology | Finance| BA       | |            |
+| Ho Chi Minh University of Banking  | Vietnam    | Reserach Methodology | Finance| BA       | |            |
 
 
 
@@ -131,6 +125,7 @@ This is a (not comprehensive) list of courses that use the textbook.
 | SOAS, University of London                  | UK              | Fintech in International Business                 | Business            |       |     |     |
 | University of Nottingham                    | UK              | Research Methods for Management Studies           | Business            | BA    |     |     |
 | University of Southampton                   | UK              | Advanced Time Series Modelling                    | Business            | MA/MSc    |     |     |
+| Copenhagen Business School                   | Denmark              | [Applied Business Research](https://kursuskatalog.cbs.dk/2022-2023/KAN-CIBSO1061U.aspx)                    | Business            | MA/MSc    |  Exploration, analysis   | R     |
 | Pole Universitaire Leonard de   Vinci       | France                    | Foundations of Management                         | Management          |       |     |     |
 | Bocconi University, Milan      | Italy    | [Causal Inference for Marketing Policies](https://didattica.unibocconi.it/ts/tsn_antepriMA/MSc.php?cod_ins=20757&anno=2022&ric_cdl=BI01&IdPag=6618)                               | Marketing, Business                     | MA/MSc       |                                         | R           |
 | Central European University                 | Austria                   | EMBA course Vienna                                | Business            | EMBA  |     |     |
