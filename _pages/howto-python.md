@@ -50,5 +50,5 @@ redirect_from:
 
     The jupyter environment should be opened on your default browser. You are good to go!
 
-**NOTE:** For Windows users, the above code might result in an error, because the `pipenv` terminalshortcut sometimes does not install properly. In this case, run ```python3 -m pipenv run jupyter notebook```.
+**NOTE:** For Windows users, the above code might result in an error, because the `pipenv` terminal shortcut sometimes does not install properly. In this case, run ```python3 -m pipenv run jupyter notebook```.
 {: .notice--success}
