@@ -34,6 +34,9 @@ redirect_from:
 
     This installs the required Python version and packages stored in the `Pipfile.lock`.
 
+**NOTE:** For Windows users, the above code might result in an error, because the `pipenv` terminal shortcut sometimes does not install properly. In this case, run ```python3 -m pipenv sync```.
+{: .notice--success}
+
 **NOTE:** Python environment was testet thoroughly only on Mac OS. Windows users might experience bugs, therefore we prepared `requirements.txt` for all package==version we used in the notebooks and `requirements_pipenv.txt` for all packages and dependencies used in the virtual environment.
 {: .notice--success}
 
@@ -46,3 +49,6 @@ redirect_from:
     ```
 
     The jupyter environment should be opened on your default browser. You are good to go!
+
+**NOTE:** For Windows users, the above code might result in an error, because the `pipenv` terminalshortcut sometimes does not install properly. In this case, run ```python3 -m pipenv run jupyter notebook```.
+{: .notice--success}
