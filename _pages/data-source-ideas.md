@@ -38,6 +38,7 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [OECD on multinational companies](https://www.oecd.org/sti/ind/amne.htm), their [measurement](https://www.oecd.org/sdd/its/measuring-multinational-enterprises.htm), [controlled foreign firms](https://qdd.oecd.org/subject.aspx?Subject=CFC)
 * [ECB Compnet European firm data](https://www.comp-net.org/) -- harmonized firm level datasets
 * [US historical industry data](https://www.nber.org/research/data/nber-ces-manufacturing-industry-database) -- 60 years
+* [Open Ownership Register](https://register.openownership.org/download) is a database identifying the beneficial owners of 8.4 million companies (mostly Denmark, Slovakia, the UK, and Ukraine). Records include company names, addresses as well as the owners’ names, nationalities, and interests in those companies.
 
 ## Data about people
 * [World value survey](https://www.worldvaluessurvey.org/wvs.jsp) - regular international survey on values
