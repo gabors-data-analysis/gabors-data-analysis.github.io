@@ -26,6 +26,10 @@ This textbook provides future data analysts with the tools, methods, and skills 
 As the most effective way to communicate data analysis, running case studies play a central role in this textbook. Each case starts with an industry relevant question and answers it by using real-world data and applying the tools and methods covered in the textbook. Learning is then consolidated by over 360 practice questions and 120 data exercises. Extensive online resources, including raw and cleaned data and codes for all analysis in Stata, R, and Python are available on this site.
 
 
+![textbook cover](images/bekes-kezdi-data-analysis-flyer-2022.jpg){:height="100%" width="100%"}
+**[Download the flyer in PDF](files/bekes-kezdi-data-analysis-flyer-2022.pdf)**   
+
+
 ## Endorsements
 
 "***This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible.  Like a good confidence interval, the Gabors have got you almost completely covered!***"  
@@ -38,17 +42,19 @@ David Card, University of California, Berkeley,  Nobel laureate in Economics 202
 {: .notice--success}
 
 
-
 [MORE endorsements](endorsements)
 
 
-## Buy it or ask for an inspection copy
+------ 
+**Buy the book:** [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=), or a great deal of [global options](/order)  
+[**Request an examination copy**](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/examination-copy/login)  
 
-![cup](images/cup2.png){:height="50%" width="50%"}  
+[**Contact us**](/contact-us/)   
+**Follow us on [Twitter](https://twitter.com/Gabors_Data) and [Facebook](https://www.facebook.com/gaborsdata)** 
 
-Published on 6 May 2021, the book is available from [Cambridge University Press](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20#overview), [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=), or a great deal of [global options](/order)
+-------
 
-You may also [request an inspection copy from the Publisher](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20#overview)!
+
 
 ## Key information materials
 
