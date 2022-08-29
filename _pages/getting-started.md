@@ -31,6 +31,11 @@ The textbook offers a complete, curated curriculum from data collection to machi
 
 **More info: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Table of contents](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018)**   
 
+
+![textbook cover](images/bekes-kezdi-data-analysis-flyer-2022.jpg){:height="60%" width="60%"}
+**[Download the flyer in PDF](files/bekes-kezdi-data-analysis-flyer-2022.pdf)**   
+
+
 ## Case studies with a global coverage on diverse topics  
 Working through case studies is the best way to learn data analysis. Thus, a cornerstone of this textbook are **47 case studies** spreading over one-third of our material.  Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter. Case studies cover a wide range of topics and come from different geographical areas, for example:
 

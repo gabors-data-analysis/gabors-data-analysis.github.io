@@ -26,7 +26,7 @@ This textbook provides future data analysts with the tools, methods, and skills 
 As the most effective way to communicate data analysis, running case studies play a central role in this textbook. Each case starts with an industry relevant question and answers it by using real-world data and applying the tools and methods covered in the textbook. Learning is then consolidated by over 360 practice questions and 120 data exercises. Extensive online resources, including raw and cleaned data and codes for all analysis in Stata, R, and Python are available on this site.
 
 
-![textbook cover](images/bekes-kezdi-data-analysis-flyer-2022.jpg){:height="100%" width="100%"}
+![textbook cover](images/bekes-kezdi-data-analysis-flyer-2022.jpg){:height="60%" width="60%"}
 **[Download the flyer in PDF](files/bekes-kezdi-data-analysis-flyer-2022.pdf)**   
 
 
