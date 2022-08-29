@@ -15,7 +15,7 @@ redirect_from:
 
 ## Details of adopting programs and syllabi
 
-This is a (not comprehensive) list of courses that use the textbook.   
+This is a (not comprehensive) list of courses that use the textbook (June 2022).   
 *(Contact/DM if you teach a course that is not listed here!)*
 
 
