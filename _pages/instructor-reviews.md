@@ -10,7 +10,7 @@ ___
 
 
 
-![Scott](images/scott-on-gabors-2022sept.twitter.jpg){:height="70%" width="70%"}
+![Scott](images/scott-on-gabors-2022sept.twitter.jpg){:height="80%" width="80%"}
 
 
 I would like to wholeheartedly praise this book. I am **totally impressed by its depth, clarity and applications of the book.** The exercises are highly applied and coming from industry-relevant questions which will be of highly interests for economics, business, or even data science students. The Online Resources are great with clear and detailed codes and instructions in R, Stata, and Python, which provide a rich range of approaches for students. I will highly recommend this book for my students if they would like to develop the tools and understandings of econometrics and data science techniques. I would like to thanks Bekes and Kezdi for their excellent book. **It’s one of the best textbook in econometrics and data science that I’ve ever read.** 
