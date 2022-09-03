@@ -62,6 +62,10 @@ Working through case studies is the best way to learn data analysis. Thus, a cor
 
 [**More endorsemenets**](/endorsements)
 
+
+[**Reviews by instructors**](/instructor-reviews)
+
+
 ![textbook cover](images/book-withpix2.jpg){:height="80%" width="80%"}
 
 

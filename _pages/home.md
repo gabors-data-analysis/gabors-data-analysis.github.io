@@ -42,7 +42,11 @@ David Card, University of California, Berkeley,  Nobel laureate in Economics 202
 {: .notice--success}
 
 
-[MORE endorsements](endorsements)
+[**MORE endorsements**](endorsements)
+
+
+[**Reviews by instructors**](/instructor-reviews)
+
 
 
 ------ 
