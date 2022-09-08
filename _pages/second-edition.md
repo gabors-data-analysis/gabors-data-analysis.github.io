@@ -13,18 +13,12 @@ redirect_from:
 
 ## Error correction
 
-The most important plan will be correcting typos and errors based on the errata. 
+The most important plan will be correcting typos and errors based on the [errata page](/errata/).
 * typos, errors
 * improve unclear sentences 
 * add a few lines of explanation when needed
 
-## Minor additions to sections
-
-* Add coeffplots (Chapter 10, Chapter 21)
-* Show tables with p-values and stars, add a para discussion ref back to p-hacking + both have pros and cons (Ch 10, Ch 22)
-* Add run time in google colabs / amazon cloud for Table 16.4 (Chapter 16)
-
-## New things
+## New things, minor edits
 
 We plan some (not many) new things, typically a few extra paragraphs, maybe a short new section. 
 
@@ -41,6 +35,11 @@ Some ideas are
 |  24 | add a new DiD |  Event study, maybe add one of new DiD method using the same case study |
 | 16 | SHAP for ML | For the machine learning bit, add SHAP in addition to VIP  |
 |  16 | ensemble for OLS |  For linear models in prediction, we can also have an ensemble model, ln+log |
+|16 | cloud comp|  Add run time in google colabs / amazon cloud for Table 16.4 |
+| 10,21| dataviz | Add coeffplots |
+|10,22 | p-values |  Show tables with p-values and stars, add a para discussion ref back to p-hacking + both have pros and cons|
+
+
 
 ## Feedback
 
