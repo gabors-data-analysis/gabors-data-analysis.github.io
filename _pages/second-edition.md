@@ -30,12 +30,18 @@ We plan some (not many) new things, typically a few extra paragraphs, maybe a sh
 
 Some ideas are
 
-* Add a page on Frisch-Waughn-Lowell theorem (no proof), with a case study application. The key application will be a graph, ie show show scatterplot despite controls. Maybe use earnings. Or even add a new case study on Mankiw-Romer-Weil QJE growth regressions. [Deepnote](https://deepnote.com/@carlos-mendez/R-Augmented-Solow-Model-d90f7550-909c-407d-8295-9ba49e81764f) (This may be Chapter 10, or maybe somewhere else)
-* For the machine learning bit, add SHAP in addition to VIP (Chapter 16)
-* For linear models in prediction, add a few para, new section on variable importance (Chapter 14)
-* Event study, maybe add one of new DiD method using the same case study (Chapter 24)
-* Add a few para on naming *variables*, some ideas and when it's really important. Extend 2.U1 or add 2.U2 (Chapter 02)
-* Add a few para/section on discussing that results that are borne out of algos without a close solution, will vary across platforms (Chapter 13?)
+| Chapter | Topic                         | Idea                                                                                         |
+| ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
+
+|  02 |variable naming |   Add a few para on naming *variables*, some ideas and when it's really important. Extend 2.U1 or add 2.U2 |
+| 10?     |  Frisch-Waughn-Lowell theorem | Add a short section on FWL (no proof), with a case study application. The key application will be a graph, ie show show scatterplot despite controls. Maybe use earnings. Or even add a new case study on Mankiw-Romer-Weil QJE growth regressions. [Deepnote](https://deepnote.com/@carlos-mendez/R-Augmented-Solow-Model-d90f7550-909c-407d-8295-9ba49e81764f) | 
+|  13 | r vs python results|   Add a few para/section on discussing that results that are borne out of algos without a close solution, will vary across platforms |
+|  14 |var imp for OLS |  For linear models in prediction, add a few para, new section on variable importance |
+|  14 |ln OLS correction |  More on what smearing does, when it's better to use other formula, bias, MAE vs RMSE |
+|  14 |Quant reg |  If MAE is target, qreg is a way. MAE vs RMSE discussion |
+|  24 | add a new DiD |  Event study, maybe add one of new DiD method using the same case study |
+| 16 | SHAP for ML | For the machine learning bit, add SHAP in addition to VIP  |
+|  16 | ensemble for OLS |  For linear models in prediction, we can also have an ensemble model, ln+log |
 
 ## Feedback
 
