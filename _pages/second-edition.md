@@ -32,7 +32,6 @@ Some ideas are
 
 | Chapter | Topic                         | Idea                                                                                         |
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
-
 |  02 |variable naming |   Add a few para on naming *variables*, some ideas and when it's really important. Extend 2.U1 or add 2.U2 |
 | 10?     |  Frisch-Waughn-Lowell theorem | Add a short section on FWL (no proof), with a case study application. The key application will be a graph, ie show show scatterplot despite controls. Maybe use earnings. Or even add a new case study on Mankiw-Romer-Weil QJE growth regressions. [Deepnote](https://deepnote.com/@carlos-mendez/R-Augmented-Solow-Model-d90f7550-909c-407d-8295-9ba49e81764f) | 
 |  13 | r vs python results|   Add a few para/section on discussing that results that are borne out of algos without a close solution, will vary across platforms |
