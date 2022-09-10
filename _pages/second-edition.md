@@ -38,7 +38,7 @@ Some ideas are
 |16 | cloud comp|  Add run time in google colabs / amazon cloud for Table 16.4 |
 | 10,21| dataviz | Add coeffplots |
 |10,22 | p-values |  Show tables with p-values and stars, add a para discussion ref back to p-hacking + both have pros and cons|
-
+| 11   | gender/binary | What is a binary variable? Often a decision. Gender conceptually non-binary. In data, often is. Sample size matters for definitions |
 
 
 ## Feedback
