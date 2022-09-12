@@ -19,9 +19,9 @@ MS in Business Analytics, MS Applied Data Science -- a variety of names exist fo
 ## Data Analysis for Business, Economics, and policy
 Data Analysis is a mix of statistics, econometrics, data science, machine learning with the aim of teaching practical skills that analysts may use in real life working in business. As instructor of Data Analysis and program director at [CEU MS in Business Analytics](https://economics.ceu.edu/program/master-science-business-analytics) for years, I have experimented quite a bit with the curriculum. The experience gave rise to a textbook co-authored with Gabor Kezdi and published by Cambridge University Press. It is currently used in 80+ programs around the world, including a dozen [Analytics](https://gabors-data-analysis.com/courses-using/#business-analytics-data-science) Master’s programs.
 
-How can this [Data Analysis for Business, Economics, and Policy] https://gabors-data-analysis.com/) textbook help instructors and students Business Analytics or related programs? We believe it can help in several different aspects.
+How can this [Data Analysis for Business, Economics, and Policy](https://gabors-data-analysis.com/) textbook help instructors and students Business Analytics or related programs? We believe it can help in several different aspects.
 
-![Card](images/cambridge-card.jpg){:height="90%" width="90%"}
+![Card](/images/cambridge-card.jpg){:height="90%" width="90%"}
 
 
 ## Four benefits
@@ -48,7 +48,7 @@ Second, it will help you think about a course structure. In our view, a great wa
 
 Third, our approach focuses on explaining **how to carry out an actual data analysis project from beginning to end**.  To cover all the steps that are necessary to carry out an actual data analysis project, we **lean on a set of fully developed case studies**. While each case study focuses on the method discussed in the chapter, they illustrate all elements of the process from question through analysis to conclusion. Our case studies cover a wide range of topics, with a potential appeal to a wide range of students. They include **consumer decision, economic and social policy, finance, business and management, health, and sport**. Their regional coverage is also wider than usual: one third is from the U.S.A., one third is from Europe and the U.K., and one third is from other countries or includes all parts of the world, from Australia to Thailand.
 
-![case studies](images/book-withpix1.jpg){:height="90%" width="90%"}
+![case studies](/images/book-withpix1.jpg){:height="90%" width="90%"}
 
 
 ### The ecosystem
