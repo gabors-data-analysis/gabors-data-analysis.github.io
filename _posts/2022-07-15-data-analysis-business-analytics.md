@@ -21,6 +21,9 @@ Data Analysis is a mix of statistics, econometrics, data science, machine learni
 
 How can this [Data Analysis for Business, Economics, and Policy] https://gabors-data-analysis.com/) textbook help instructors and students Business Analytics or related programs? We believe it can help in several different aspects.
 
+![Card](images/cambridge-card.jpg){:height="90%" width="90%"}
+
+
 ## Four benefits
 
 We think there are four key benefits of using the textbook in Business Analytics education: an approach that aims at highlighting the analytical process, curated content from exploration to machine learning **and** causal inference, focus on case studies and an ecosystem helping the learning process. 
@@ -44,6 +47,9 @@ Second, it will help you think about a course structure. In our view, a great wa
 ### A case study focus
 
 Third, our approach focuses on explaining **how to carry out an actual data analysis project from beginning to end**.  To cover all the steps that are necessary to carry out an actual data analysis project, we **lean on a set of fully developed case studies**. While each case study focuses on the method discussed in the chapter, they illustrate all elements of the process from question through analysis to conclusion. Our case studies cover a wide range of topics, with a potential appeal to a wide range of students. They include **consumer decision, economic and social policy, finance, business and management, health, and sport**. Their regional coverage is also wider than usual: one third is from the U.S.A., one third is from Europe and the U.K., and one third is from other countries or includes all parts of the world, from Australia to Thailand.
+
+![case studies](images/book-withpix1.jpg){:height="90%" width="90%"}
+
 
 ### The ecosystem
 
