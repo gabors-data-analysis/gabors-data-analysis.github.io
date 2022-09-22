@@ -34,7 +34,7 @@ If you were to find an error, please report us [HERE](https://gabors-data-analys
 ### Part I
 
 |ID       | Date added |   Error Type      | Chapter | Page | Problematic | Corrected|
-| ---     | ----------    | ---------------- | -----|---------| -----------------------------------| ----------------------|
+| ---     | ----------    | ---------------- | -----|---------| ---------------------------------------| ---------------------------------------|
 |01-01    | 2021-10-26   | Imprecise          | Ch01 | p.19 |  If it shows similar distributions then the **sample is representative** for the variable, or variables, used in the comparison.  |   If it shows similar distributions then the **sample is likely to be representative** for the variable, or variables, used in the comparison.|
 |01-02    | 2021-11-06   | Imprecise          | Ch01 | p.27 pq4 |  Give an example of data with selection bias and are without  | Give an example of data with selection bias and **one without  it** |
 |01-03    | 2022-06-13   | Typo          | Ch01 | p.10 |  Management Quality and Firm Performance: Data Collection  | Management Quality and Firm **Size**: Data Collection |
@@ -42,7 +42,7 @@ If you were to find an error, please report us [HERE](https://gabors-data-analys
 |01-05    | 2022-06-28   | Easier read       | Ch02 | p.34 |  Observations in xt data are one unit observed in one time period. | One observation in an xt data is one unit observed in one time period.|
 |02-01    | 2022-06-28   | Imprecise       | Ch02 | p.55/DE/3 |For FIN, there is one lecture for DA1 and DA2, and another lecture for all other programs | For both DA1 and DA2 courses, **there is one lecture for** FIN, and another one for all other programs. |
 |03-01    | 2021-12-15   | Typo          | Ch03 | p75 | The range **is** around 50 dollars in both cities.  | The range **starts** around 50 dollars in both cities|
-|03-02    | 2022-09-22   | Imprecise          | Ch03 | p91 | The binomial distribution has one mode in the middle, and it is symmetric so its median, mean, and mode are the same  |The binomial distribution is not symmetric $in general$. It is symmetrical when $$p=0.5$$ (with the mean = the median), but will be skewed to the left or right otherwise. |
+|03-02    | 2022-09-22   | Imprecise          | Ch03 | p91 | The binomial distribution has one mode in the middle, and it is symmetric so its median, mean, and mode are the same  |The binomial distribution is not symmetric *in general*. It is symmetrical when $$p=0.5$$ (with the mean = the median), but will be skewed to the left or right otherwise. |
 |03-02    | 2022-09-22   | Imprecise          | Ch03 | p96 |They range between zero and positive infinity (never reaching either) | They range between zero and positive infinity (never reaching exactly 0)  |
 |03-02    | 2022-09-22   | Imprecise          | Ch03 | p96 | | |
 |03-02    | 2022-09-22   | Imprecise          | Ch03 | p96 | | |
