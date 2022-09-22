@@ -22,7 +22,7 @@ Fortunately, we found some. As we, and our kind readers, carry on finding more e
 
 
 ### Status
-Latest update: 13 June 2022
+Latest update: 22 Sept 2022
 
 
 ### Feedback
@@ -47,6 +47,7 @@ If you were to find an error, please report us [HERE](https://gabors-data-analys
 |04-03    | 2022-04-20   | Typo          | Ch04 | p109 | Thus, they give a quick and not completely meaningless picture about mean-dependence among binary and ordered qualitative variables. However, they are more appropriate measures for **qualitative variables**.   | Thus, they give a quick and not completely meaningless picture about mean-dependence among binary and ordered qualitative variables. However, they are more appropriate measures for **quantitative variables**.|
 |04-04    | 2022-04-22   | Sentence wrong | Ch04 | p108 | In contrast, larger firms differ more from each other in terms of their management score. |  (cut)|
 |04-05    | 2022-04-22   | Sentence wrong | Ch04 | p112-13 | Finally, we have seen that management quality is not only better, on average, among larger firms, but it is also somewhat more spread among larger firms. |  (cut)|
+|04-06 | 2022-09-22 | Imprecise | Ch04 | p97 | Many questions that data analysis can answer are based on comparing values of one variable, y, **against** values of another variable, x, and often other variables. | Many questions that data analysis can answer are based on comparing values of one variable, y, **by** values of another variable, x, and often **by** other variables. |
 |06-01     |2021-10-20    | Typos      | Ch06 | B1 p159   | "That p-value is shown to be 0.0000, which means that it’s less than 0.000 05. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value."   | "That p-value is shown to be **0.0007**, which means that it’s less than **0.05**. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value **(0.00035)**"|
 
 
