@@ -42,6 +42,10 @@ If you were to find an error, please report us [HERE](https://gabors-data-analys
 |01-05    | 2022-06-28   | Easier read       | Ch02 | p.34 |  Observations in xt data are one unit observed in one time period. | One observation in an xt data is one unit observed in one time period.|
 |02-01    | 2022-06-28   | Imprecise       | Ch02 | p.55/DE/3 |For FIN, there is one lecture for DA1 and DA2, and another lecture for all other programs | For both DA1 and DA2 courses, **there is one lecture for** FIN, and another one for all other programs. |
 |03-01    | 2021-12-15   | Typo          | Ch03 | p75 | The range **is** around 50 dollars in both cities.  | The range **starts** around 50 dollars in both cities|
+|03-02    | 2022-09-22   | Imprecise          | Ch03 | p91 | The binomial distribution has one mode in the middle, and it is symmetric so its median, mean, and mode are the same  |The binomial distribution is not symmetric $in general$. It is symmetrical when $$p=0.5$$ (with the mean = the median), but will be skewed to the left or right otherwise. |
+|03-02    | 2022-09-22   | Imprecise          | Ch03 | p96 |They range between zero and positive infinity (never reaching either) | They range between zero and positive infinity (never reaching exactly 0)  |
+|03-02    | 2022-09-22   | Imprecise          | Ch03 | p96 | | |
+|03-02    | 2022-09-22   | Imprecise          | Ch03 | p96 | | |
 |04-01    | 2022-04-20   | Typo          | Ch04 | p109 | a symmetrical U-shaped conditional expectation has an average of zero |   a symmetrical U-shaped conditional expectation function has a zero average |
 |04-02    | 2022-04-20   | Easier read      | Ch04 | p109 | The more balanced the positive deviation in $$x_i$$ and positive deviation in $$y_i$$ instances are with the positive deviation in $$x_i$$ and negative deviation in $$y_i$$ instances, the closer the covariance is to zero.  | We have the covariance closer to zero, when we have a more balanced ratio of the two types of instances -- positive deviation in $$x_i$$ and positive deviation in $$y_i$$ versus positive deviation in $$x_i$$ and negative deviation in $$y_i$$ |
 |04-03    | 2022-04-20   | Typo          | Ch04 | p109 | Thus, they give a quick and not completely meaningless picture about mean-dependence among binary and ordered qualitative variables. However, they are more appropriate measures for **qualitative variables**.   | Thus, they give a quick and not completely meaningless picture about mean-dependence among binary and ordered qualitative variables. However, they are more appropriate measures for **quantitative variables**.|
@@ -49,6 +53,10 @@ If you were to find an error, please report us [HERE](https://gabors-data-analys
 |04-05    | 2022-04-22   | Sentence wrong | Ch04 | p112-13 | Finally, we have seen that management quality is not only better, on average, among larger firms, but it is also somewhat more spread among larger firms. |  (cut)|
 |04-06 | 2022-09-22 | Imprecise | Ch04 | p97 | Many questions that data analysis can answer are based on comparing values of one variable, y, **against** values of another variable, x, and often other variables. | Many questions that data analysis can answer are based on comparing values of one variable, y, **by** values of another variable, x, and often **by** other variables. |
 |06-01     |2021-10-20    | Typos      | Ch06 | B1 p159   | "That p-value is shown to be 0.0000, which means that it’s less than 0.000 05. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value."   | "That p-value is shown to be **0.0007**, which means that it’s less than **0.05**. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value **(0.00035)**"|
+|06-02     |2022-09-22    | Wrong number      | Ch06 | p146   | The mean difference is −0.05 US dollars: online prices are, on average, 5 cents lower in this data. | The mean difference is **0.05** US dollars: online prices are, on average, 5 cents **higher** in this data. |
+|06-03     |2022-09-22    | Wrong number      | Ch06 | p146   | s = −0.05 | s = **0.05** |
+|06-04     |2022-09-22    | Wrong number      | Ch06 | p147, Fig6.1   | Mean = −0.05 | Mean = **0.05** |
+
 
 
 ### Part II
