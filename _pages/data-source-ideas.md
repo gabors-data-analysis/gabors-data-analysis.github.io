@@ -44,6 +44,8 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [World value survey](https://www.worldvaluessurvey.org/wvs.jsp) - regular international survey on values
 * [CDC NHANES](https://www.cdc.gov/nchs/nhanes/index.htm) -- US health surveys, [partly used in the textbook](/casestudies/#ch19a-food-and-health)
 * [IPMUS](www.ipums.org): census and survey data from around the world integrated across time and space 
+* [USA Integrated Postsecondary Education Data System (IPEDS)](https://nces.ed.gov/ipeds/)  Institutions of higher education in the United States, including enrollment, financial aid, degree completion.
+* [USA Early Childhood Longitudinal Study (ECLS)](https://nces.ed.gov/ecls/index.asp)  data  about children's knowledge, skills, and development from birth through elementary school
 
 
 ## Global trade
@@ -123,3 +125,4 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * [Datahub's collection](https://datahub.io/collections) Another collection data on the economy, environment and more
 * [Social Science Data Sources & Statistical Methods](https://guides.emich.edu/data/free-data)
 * [Trade, globalization, tax datasets by Baptiste Souillard](https://www.baptistesouillard.com/resources)
+* [Education data, USA and beyond](https://docs.google.com/spreadsheets/d/1xjw5Z0LLK4Fp-vrEK523uvMnSfxtJOb_5f_vKUrZJDg/edit#gid=0) by Paul Bruno
