@@ -15,7 +15,7 @@ redirect_from:
 
 ## Details of adopting programs and syllabi
 
-This is a (not comprehensive) list of courses that use the textbook (June 2022).   
+This is a (not comprehensive) list of courses that use the textbook (September 2022).   
 *(Contact/DM if you teach a course that is not listed here!)*
 
 
@@ -27,7 +27,13 @@ This is a (not comprehensive) list of courses that use the textbook (June 2022).
 | University of California        | USA       | Prediction for Economics | Economics                       | MA/MSc   | Prediction, Machine Learning            | Python      |
 | University of Pittsburgh        | USA       | Applied Econometrics | Economics                       | MA/MSc   | Case studies             | TBD      |
 | University of Michigan        | USA  | Econometrics for Applied Economics II             | Economics           |       |     |     |
+|University of Illinois at Chicago        | USA  | Econometrics              | Economics           |  BA     |     |     |
+
+
+
+
 | University of Alberta           | Canada    | Data Science for Business Economics| Marketing, Business Economics                         | senior BA       |                                         | Python           |
+| McGill University           | Canada    | Quantitative Methods                         | MA       | Overview of methods                                         | Stata           |
 | Tecnologico de Monterrey           | Mexico    | Econometrics| Economics                         |  BA       |                                         | Python/R           |
 | University of East Anglia  | UK    | Econometrics | Economics| MA/MSc  |   | R           |
 | Heriot-Watt University                      | UK             | Econometrics Methods                              | Economics           | BA    |     |     |
@@ -38,19 +44,22 @@ This is a (not comprehensive) list of courses that use the textbook (June 2022).
 | University of Lincoln                       | UK              | Thesis Module                              | Economics/Business           | MA      |     |     |
 | ULB /Solvay                  | Belgium                    | Introduction to Economic Research                | Economics/Business           | BA       |  Case studies    | Stata     |
 | IÉSEG School of Management                  | France                    | Introduction Applied Economics                    | Economics           |       |     |     |
+| Université de Limoges  | France    | Econometrics  | Economics| MA/MSc       | |            |
 | University of Luzern                 | Switzerland       | [Workshop in Applied Data Analysis](https://www.unilu.ch/fileadmin/universitaet/akademische-dienste/iro/Incoming_docs/Additional_courses_WF_fall_2022.pdf)                    | Economics          |   BA/MA    |Applied data projects     |     |
 | Humboldt University, Berlin           | Germany  | [Applied Econometrics]( https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&publishid=184877&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung)                                                               | Economics                       | BA, MA/MSc   | regression analysis, causal inference   | R     |
+| University of Cologne           | Germany  | [Data Science](/files/cologne-data-science.pdf)                                                            | Economics                       | BA   | data wrangling, regression, ML    | R     |
 | Bocconi University, Milan     | Italy   | [Econometrics for Big Data](https://didattica.unibocconi.it/ts/tsn_antepriMA/MSc.php?cod_ins=20594&anno=2022&IdPag=)     | Economics                        | MA/MSc    | Regression, Causal analysis, time series, big data      | Stata  |
 | University of Bologna                       | Italy                     | statistica economica                              | Economics           |       |     |     |
 | University of Brescia     | Italy   | [Empirical Economics](https://unibs.coursecatalogue.cineca.it/insegnamenti/2021/757640/2019/2074/107) [PDF](/files/brescia-empirical-economics.pdf)     | Economics / Business Administration                       | BA    | Regression, Causal analysis, time series          | R   |
 | Scuola Normale Superiore di Pisa                  | Italy                    | Applied Econometrics                | Economics | BA       |      |      |
-| University of Torino            | Italy     | Economics|  TBD (AY 2022/23)                         | BA       |                                         |            |
+| University of Torino            | Italy     | Economics/Business|  Empirical Tools for Managers                    | BA       |                                         |            |
 | Central European University     | Austria   | [Prediction with Machine Learning for Economists](https://courses.ceu.edu/courses/2021-2022/prediction-Machine-learning-economists){:target="_blank"}   | Economics                       | PhD/MA/MSc   | Prediction, Machine Learning            | R, Python   |
 | Central European University     | Austria   | [Research Design and Methods for Public Policy](https://courses.ceu.edu/courses/2021-2022/quantitative-methods-public-policy){:target="_blank"}  | Economics                       | MA/MSc   | Data Exploration          | R   |
 | Corvinus University, Budapest         | Hungary   | Econometrics | Economics | MA/MSc| Regressions, Causality                                            | Stata             |
 | Budapest Technical University             | Hungary   | [Data Analytics](/files/bme.pdf)                                                                                                                                      | Data Analysis, modelling, vizualization |          MA/MSc    |                                    |              |
 | Corvinus University, Budapest         | Hungary   | Machine Learning in Economics  | Economics | MA/MSc| Prediction, causal inference with ML                                            | R             |
 | Tokyo International University  | Japan    | Econometrics | Economics                         |  BA       | full textbook                                         | R           |
+| Flame University  | India    | Econometrics | Economics                         |  BA       |                                          |            |
 
 
 
@@ -89,7 +98,7 @@ This is a (not comprehensive) list of courses that use the textbook (June 2022).
 | University of Maccedonia, AcPro              | Greece                    | Data analysis                                     | Data Science        |       |     |     |
 
 
-## Finance
+## Finance and Banking
 
 | University                      | Country   | Course                                                                                                                                | Department                      | Level     | Focus                                   | Coding      |
 |-----------------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
@@ -109,6 +118,7 @@ This is a (not comprehensive) list of courses that use the textbook (June 2022).
 | IESEG School of Management      | France    | Econometrics                                                                                                  | International Business                     | BA       |                                         | R           |
 | Université de Limoges  | France    | Econometrics of Banking and Finance | Finance| MA/MSc       | |            |
 | Frankfurt University                        | Germany                  | Data Analytics in Finance and Accounting          | Finance             |       |     |     |
+| Aachen University                        | Germany                  | Econometrics of Banking          | Finance             |       |     |     |
 | University of Brescia                       | Italy                     | Econometria dei mercati finanziari                | Finance             |       |     |     |
 | Ho Chi Minh University of Banking  | Vietnam    | Reserach Methodology | Finance| BA       | |            |
 
@@ -127,12 +137,17 @@ This is a (not comprehensive) list of courses that use the textbook (June 2022).
 | University of Nottingham                    | UK              | Research Methods for Management Studies           | Business            | BA    |     |     |
 | London Metropolitan U. /Guildhall SB         | UK              | [Data Analysis for Global Business](https://intranet.londonmet.ac.uk/module-catalogue/record.cfm?mc=FE7066)             | Business            | MA/MSc    |     |    SPSS |
 | University of Southampton                   | UK              | Advanced Time Series Modelling                    | Business            | MA/MSc    |     |     |
+| Abertay University  | UK    | Business Analytics | Management with Analytics| BA  |   | R           |
 | Copenhagen Business School                   | Denmark              | [Applied Business Research](https://kursuskatalog.cbs.dk/2022-2023/KAN-CIBSO1061U.aspx)                    | Business            | MA/MSc    |  Exploration, analysis   | R     |
 | Pole Universitaire Leonard de   Vinci       | France                    | Foundations of Management                         | Management          |       |     |     |
 | Bocconi University, Milan      | Italy    | [Causal Inference for Marketing Policies](https://didattica.unibocconi.it/ts/tsn_antepriMA/MSc.php?cod_ins=20757&anno=2022&ric_cdl=BI01&IdPag=6618)                               | Marketing, Business                     | MA/MSc       |                                         | R           |
 | Central European University                 | Austria                   | EMBA course Vienna                                | Business            | EMBA  |     |     |
 | Kyoto  University | Japan    | [Business Economics](https://sites.google.com/site/takanoriadachi/home/teaching?authuser=0) | Business| MBA       | |            |
 |Yamacguchi University  | Japan    | [Business Economics](https://www.kyoumu.jimu.yaMA/MScguchi-u.ac.jp/portal/Public/Syllabus/SyllabusSearchStart.aspx?lct_year=2022&lct_cd=8062100004) | Business| BA       | Regression Analysis | Python, R            |
+| IBA Karachi | Pakistan    | Data Analytics for Economists | Business Economics| BA       | | Stata           |
+| Asia BS Kuala Lumpur | Malaysia    | Data Analytics for Banking |Central Banking| MA       | ||
+
+
 
 ## Engineering, computer science
 

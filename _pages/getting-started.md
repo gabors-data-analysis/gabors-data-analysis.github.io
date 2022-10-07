@@ -84,11 +84,11 @@ Typical course names are:
 
 ## Adoption in process over 80 programs worldwide
 
-The textbook was already adopted in over a 80 courses globally: 
-* USA/Canada (e.g. Columbia, U Texas, U Michgan, Penn State, Pittsburgh, SUNY, Wisconsin, Michigan, Hawaii, U of California; Simon Fraser, Alberta, Toronto)
+The textbook was already adopted in over a 90 courses globally: 
+* USA/Canada (e.g. Columbia, U Texas, U Michgan, Penn State, Pittsburgh, SUNY, Wisconsin, Michigan, Hawaii, U of California; Simon Fraser, Alberta, Toronto, McGill)
 * UK (e.g.  UCL, LSE, City, Oxford, Cambridge Judge, Middlesex, Essex, Reading, Huddersfield BS, East Anglia)
-* Europe (e.g. ESSEC, IESEG, Bocconi, Brescia, ULB Solvay, Heidelberg, Berlin, CEU, Vienna U,Corvinus, Antwerp, Tilburg, Amsterdam, UC Dublin)
-* Asia-Pacific (e.g. UWA Perth, Tokyo International U, Kyoto U.); South America (U Bogota, Insper Brazil, Monterrey Mexico) 
+* Europe (e.g. ESSEC, IESEG, Bocconi, Brescia, ULB Solvay, Heidelberg, Berlin, CEU, Vienna U,Corvinus, Antwerp, Tilburg, Amsterdam, UC Dublin, Copenhagen)
+* Asia-Pacific (e.g. UWA Perth, Tokyo International U, Kyoto U. ABS Kuala Lumpur); South America (U Bogota, Insper Brazil, Monterrey Mexico) 
 
 [**More details on courses using**](/courses-using/)
 
