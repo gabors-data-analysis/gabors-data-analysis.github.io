@@ -15,6 +15,11 @@ Life did not stop when we finished the manusdcript. Actually, we keep finding gr
 
 ## Part I
 
+### Chapter 01
+
+On **surveys**, a great review is "How to run survey: A guide to creating your own identifying variation and revelealing the invisible", [NBER DP Stefanie Stantcheva](https://www.nber.org/system/files/working_papers/w30527/w30527.pdf).
+
+
 
 ## Part II
 
