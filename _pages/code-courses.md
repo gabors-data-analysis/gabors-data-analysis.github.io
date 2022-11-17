@@ -14,19 +14,24 @@ redirect_from:
 
 Well, well, well. We are developing coding courses to go along with the matreial in the book. 
 
-This course material is a supplement to **[Data Analysis for Business, Economics, and Policy](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20)**  by Gábor Békés (CEU) and Gábor Kézdi (U. Michigan),  Cambridge University Press, 2021.
+This course material is a supplement to **[Data Analysis for Business, Economics, and Policy](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20)**. For more, see the textbook's website [**gabors-data-analysis.com**](https://gabors-data-analysis.com/).
 
-*Textbook* information: see the textbook's website [**gabors-data-analysis.com**](https://gabors-data-analysis.com/) or visit [Cambridge University Press](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20)
+The courses serve as an introduction to the **R** and **Python** and **Stata** programming languages and software environments for data exploration, data munging, data visualization, reporting, and modeling. Yes, all three!
 
-
-The courses serve as an introduction to the R/Python/Stata programming languages and software environments for data exploration, data munging, data visualization, reporting, and modeling.
-
-* Coding for Data Analysis with **[Rstats](https://github.com/gabors-data-analysis/da-coding-rstats)**  by Ágoston Reguly with Gábor Békés
-* Coding for Data Analysis with **[Python](https://github.com/gabors-data-analysis/da-coding-python)** by Ádám Víg and Péter Duronelly with Ágoston Regulyand  Gábor Békés
-* Coding for Data Analysis with **[Stata](https://github.com/gabors-data-analysis/da-coding-stata)** by László Tőkés with Ágoston Reguly and Gábor Békés
+* Coding for Data Analysis with **[Rstats](https://github.com/gabors-data-analysis/da-coding-rstats)**  *by Ágoston Reguly with Gábor Békés*
+* Coding for Data Analysis with **[Python](https://github.com/gabors-data-analysis/da-coding-python)** *by Ádám Víg and Péter Duronelly with Ágoston Regulyand  Gábor Békés*
+* Coding for Data Analysis with **[Stata](https://github.com/gabors-data-analysis/da-coding-stata)** *by László Tőkés with Ágoston Reguly and Gábor Békés*
 
 
-![Use to hold your laptop](/images/booklaptop.jpg){:height="80%" width="80%"}
+
+<figure class="third">
+  <img src="/images/events_python.jpg">
+  <img src="/images/events_rstats.jpg">
+  <img src="/images/events_stata.jpg">
+  <figcaption>Code bits.</figcaption>
+</figure>
+
+
 
 
 ## About the courses
@@ -43,6 +48,9 @@ The material structure reflects these principles. The majority of the lecturers 
 
 ### Solutions to tasks but not to exercises
 It is always a good question if solutions for the tasks or homework should be made available for students. We believe show students the in-class solution is beneficial and does not distort motivation as slower learners may want to revise and compare the true solution to their own. Hence, for each lecture, we provide the solutions for these tasks. However, this is not the case for the homework. We found that showing solutions to the students rather depresses their motivation and creativity, therefore there are no solutions for the homework. (It is important that there are (infinitely) many good solutions for an HW, thus we usually encourage students to try out different paths as well.)
+
+
+![Use to hold your laptop](/images/booklaptop.jpg){:height="80%" width="80%"}
 
 
 ### How to use
