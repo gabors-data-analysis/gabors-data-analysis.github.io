@@ -49,9 +49,8 @@ Organization:
 4. Output folders are created when you run the code
 
 
-All codes in R and Stata should work well. But some improvement of codes may take place. We plan a locked version 1.0 is expected in March 2021.   
-Python is under preparation is the Github page for details.
-
+All codes in R, Python, and Stata should work well. We regularly make edits and updates to improve.    
+Check the Github repo for [latest release]()
 
 ## Option A: Download in one [advised]
 
