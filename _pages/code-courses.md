@@ -25,10 +25,10 @@ The courses serve as an introduction to the **R** and **Python** and **Stata** p
 
 
 <figure class="third">
-  <img src="/images/events_python.jpg">
   <img src="/images/events_rstats.jpg">
+  <img src="/images/events_python.jpg">
   <img src="/images/events_stata.jpg">
-  <figcaption>Code bits.</figcaption>
+  <figcaption>Code bits in Python, R and Stata.</figcaption>
 </figure>
 
 
