@@ -123,10 +123,12 @@ For all the code that reproduces all the tables and graphs in the textbook, visi
 
 You may download the [latest release v0.8.1. as a zip file](https://github.com/gabors-data-analysis/da_case_studies/releases/tag/v0.8.1).
 
-**Status update:**      
-* R -- All codes ready. Used for graphs in textbook.  
-* Stata -- All codes ready. In the lack of machine learning capabilities, no code for chapters 15,16,17, some limitations for chapter 18.
-* Python -- All codes ready. Minor tinkering may come. 
+
+### Learning to code for data analysis
+
+[Learning to code for data analysis ](code-courses/) -- free fully online courses now available!
+
+For R, Stata and Python!
 
 
 ## Datasets

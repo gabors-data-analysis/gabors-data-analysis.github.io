@@ -98,6 +98,9 @@ The textbook was already adopted in over a 90 courses globally:
 * Multiple choice questions -- available from Publisher
 * Slides in pdf and Overleaf -- available from Publisher
 
+[Learning to code for data analysis ](code-courses/) -- free fully online courses now available, for R, Stata and Python!
+
+
 ------ 
 **Buy the book:** [Amazon.com](https://www.amazon.com/Data-Analysis-Business-Economics-Policy-dp-1108716202/dp/1108716202/ref=mt_other?_encoding=UTF8&me=&qid=), or a great deal of [global options](/order)  
 [**Request an examination copy**](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/examination-copy/login)  
