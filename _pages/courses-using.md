@@ -28,12 +28,8 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 | University of Pittsburgh        | USA       | Applied Econometrics | Economics                       | MA/MSc   | Case studies             | TBD      |
 | University of Michigan        | USA  | Econometrics for Applied Economics II             | Economics           |       |     |     |
 |University of Illinois at Chicago        | USA  | Econometrics              | Economics           |  BA     |     |     |
-
-
-
-
-| University of Alberta           | Canada    | Data Science for Business Economics| Marketing, Business Economics                         | senior BA       |                                         | Python           |
-| McGill University           | Canada    | Quantitative Methods                         | MA       | Overview of methods                                         | Stata           |
+| University of Alberta           | Canada    | Data Science for Business Economics| Marketing, Business Economics                         | senior BA       | Python           |
+| McGill University           | Canada    | Quantitative Methods                         | MA       | Overview of methods                                         | Stata          |
 | Tecnologico de Monterrey           | Mexico    | Econometrics| Economics                         |  BA       |                                         | Python/R           |
 | University of East Anglia  | UK    | Econometrics | Economics| MA/MSc  |   | R           |
 | Heriot-Watt University                      | UK             | Econometrics Methods                              | Economics           | BA    |     |     |
@@ -42,7 +38,7 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 | Queen Mary University of   London           | UK              | Introduction to Econometrics                      | Economics           | PhD   |     |     |
 | University of Newcastle                     | UK              | Applied Econometrics                              | Economics           |       |     |     |
 | University of Lincoln                       | UK              | Thesis Module                              | Economics/Business           | MA      |     |     |
-| ULB /Solvay                  | Belgium                    | Introduction to Economic Research                | Economics/Business           | BA       |  Case studies    | Stata     |
+| ULB /Solvay                  | Belgium                    | Introduction to Economic Research                | Economics/Business     | BA       |  Case studies | Stata     |
 | IÉSEG School of Management                  | France                    | Introduction Applied Economics                    | Economics           |       |     |     |
 | Université de Limoges  | France    | Econometrics  | Economics| MA/MSc       | |            |
 | University of Luzern                 | Switzerland       | [Workshop in Applied Data Analysis](https://www.unilu.ch/fileadmin/universitaet/akademische-dienste/iro/Incoming_docs/Additional_courses_WF_fall_2022.pdf)                    | Economics          |   BA/MA    |Applied data projects     |     |
@@ -56,8 +52,8 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 | Central European University     | Austria   | [Prediction with Machine Learning for Economists](https://courses.ceu.edu/courses/2021-2022/prediction-Machine-learning-economists){:target="_blank"}   | Economics                       | PhD/MA/MSc   | Prediction, Machine Learning            | R, Python   |
 | Central European University     | Austria   | [Research Design and Methods for Public Policy](https://courses.ceu.edu/courses/2021-2022/quantitative-methods-public-policy){:target="_blank"}  | Economics                       | MA/MSc   | Data Exploration          | R   |
 | Corvinus University, Budapest         | Hungary   | Econometrics | Economics | MA/MSc| Regressions, Causality                                            | Stata             |
-| Budapest Technical University             | Hungary   | [Data Analytics](/files/bme.pdf)                                                                                                                                      | Data Analysis, modelling, vizualization |          MA/MSc    |                                    |              |
-| Corvinus University, Budapest         | Hungary   | Machine Learning in Economics  | Economics | MA/MSc| Prediction, causal inference with ML                                            | R             |
+| Budapest Technical University             | Hungary   | [Data Analytics](/files/bme.pdf) | Data Analysis, modelling, vizualization |          MA/MSc    |                                    |              |
+| Corvinus University, Budapest         | Hungary   | Machine Learning in Economics  | Economics | MA/MSc| Prediction, causal inference with ML                  | R             |
 | Tokyo International University  | Japan    | Econometrics | Economics                         |  BA       | full textbook                                         | R           |
 | Flame University  | India    | Econometrics | Economics                         |  BA       |                                          |            |
 
@@ -77,7 +73,7 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 | Wirtschaft Universitat Wien            | Austria    | Ecological Economics |       |    BA                                     |             | Stata |
 | Central European University                 | Austria                   | Quantitative methods for public policy            | Policy              | MA/MSc    |     |     |
 | Central European University                 | Austria                   | Research Methods I                                | Politics            | MA/MSc    |     |     |
-| University of Western Australia, Perth           | Australia  | [Health Analytics](httpshttps://handbooks.uwa.edu.au/unitdetails?code=ECON5570)                                                               | Business Data Analytics + Economics                  | MA/MSc   | regression analysis, causal inference   | Stata       |
+| University of Western Australia, Perth           | Australia  | [Health Analytics](httpshttps://handbooks.uwa.edu.au/unitdetails?code=ECON5570)   | Business Data Analytics + Economics                  | MA/MSc   | regression analysis, causal inference   | Stata       |
 
 
 ## Business Analytics, Data Science
@@ -137,6 +133,7 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 | University of Nottingham                    | UK              | Research Methods for Management Studies           | Business            | BA    |     |     |
 | London Metropolitan U. /Guildhall SB         | UK              | [Data Analysis for Global Business](https://intranet.londonmet.ac.uk/module-catalogue/record.cfm?mc=FE7066)             | Business            | MA/MSc    |     |    SPSS |
 | University of Southampton                   | UK              | Advanced Time Series Modelling                    | Business            | MA/MSc    |     |     |
+| University of Winchester                 | UK              | Data Analytics and Modelling                    | Business            | MA/MSc    |   Data cleaning, Exploratory Data Analysis, Data Viz, and Regression  |   Python  |
 | Abertay University  | UK    | Business Analytics | Management with Analytics| BA  |   | R           |
 | Copenhagen Business School                   | Denmark              | [Applied Business Research](https://kursuskatalog.cbs.dk/2022-2023/KAN-CIBSO1061U.aspx)                    | Business            | MA/MSc    |  Exploration, analysis   | R     |
 | Pole Universitaire Leonard de   Vinci       | France                    | Foundations of Management                         | Management          |       |     |     |
