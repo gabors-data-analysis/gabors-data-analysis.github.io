@@ -17,6 +17,7 @@ This textbook provides future data analysts with the **tools, methods, and skill
 **Textbook website: [Gabors-Data-Analysis.com](https://gabors-data-analysis.com/)**  
 **Data [avilable on OSF.io](https://osf.io/7epdj/)**  
 **Codes [available in Stata, R, and Python on Github](https://github.com/gabors-data-analysis/da_case_studies)**  
+**Free online courses: [Coding for Data Analysis with R / Python / Stata](https://gabors-data-analysis.com/code-courses/)**
 
 ![textbook cover](images/cover-full_hd.png){:height="80%" width="80%"}
 
