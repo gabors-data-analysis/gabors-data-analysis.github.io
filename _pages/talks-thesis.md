@@ -56,15 +56,20 @@ Throughout the talk I will use a case study from my textbook on family ownership
 * Benefit from online community with [Twitter](https://twitter.com) and [Stackoverflow](https://stackoverflow.com/)
     
 
-### We are on tour (I guess...)
+### Talks AY 2021/22
 
 * [FEP, University of Porto](https://sigarra.up.pt/fep/pt/noticias_geral.ver_noticia?p_nr=37529), Portugal: 18 November 2021
 * [CAED conference](https://www.uc.pt/en/uid/ceber/CAED2021/schedule), University of Coimbra, Portugal: 20 November 2021 
 * UCL University College London, UK: 7 December 2021
-* [Ecommerce Hungary](https://ecommerce.hu/esemenyek/talalkozas-egy-adattudossal-i-ech-meetup/), Online 30 November, 2021
 * [Corvinus University Budapest](https://www.uni-corvinus.hu/event/az-adatelemzes-het-lepese/), Hungary: 3 March 2022
-* Bocconi University, Italy 2022, April 2022
-* Middlesex University, UK, 2022 (TBC)
+
+### Talks AY 2022/23
+* Bocconi University, Italy (TBC)
+* Middlesex University, UK (TBC)
+
+
+### Others
+* [Ecommerce Hungary](https://ecommerce.hu/esemenyek/talalkozas-egy-adattudossal-i-ech-meetup/), Online 30 November, 2021
 
 
 *Ping me if interested in hosting an event*
