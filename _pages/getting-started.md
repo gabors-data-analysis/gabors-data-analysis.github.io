@@ -83,7 +83,7 @@ Typical course names are:
 **[More teaching resources](/resources/)**
 
 
-## Adoption in process over 80 programs worldwide
+## Adoption in process over 90 programs worldwide
 
 The textbook was already adopted in over a 90 courses globally: 
 * USA/Canada (e.g. Columbia, U Texas, U Michgan, Penn State, Pittsburgh, SUNY, Wisconsin, Michigan, Hawaii, U of California; Simon Fraser, Alberta, Toronto, McGill)
