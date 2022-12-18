@@ -15,6 +15,17 @@ We have collaborated with the fantastic team of the World Management Survey to c
 ![wms](/images/wms-gabors-2022-emc.jpg){:height="80%" width="80%"}
 *Daniella Scur, Rafaelle Sadun, Renata Lamos, John Van Reenen, and Gabor Bekes. I'm sure Nick Bloom can be seen if you concentrate enough:-)*
 
+
+
+Other way
+
+
+<figure>
+  <img src="/images/wms-gabors-2022-emc.jpg"{:height="80%" width="80%"}>
+  <figcaption> Daniella Scur, Rafaelle Sadun, Renata Lamos, John Van Reenen, and Gabor Bekes. I'm sure Nick Bloom can be seen if you concentrate enough:-)  </figcaption>
+</figure>
+
+
 ##
 The source of the data is the [World Management Survey](https://worldmanagementsurvey.org/survey-data/) This public version is prepared for this textbook by the World Management Survey project team. Great thanks to Nick Bloom, John Van Reenen and Daniela Scur at WMS team. 
 
