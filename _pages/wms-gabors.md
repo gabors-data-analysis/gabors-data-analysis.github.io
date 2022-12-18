@@ -1,11 +1,13 @@
 ---
+permalink: /wms-gabors/
 title: "World Management Survey and Gabors Data"
+classes: wide
 toc: false
 author_profile: false
-collections: datasets
 redirect_from:
   - /wms-gabors.html
 ---
+
 
 
 We have collaborated with the fantastic team of the World Management Survey to create case studies and a dataset for learning some data analysis practices. 
