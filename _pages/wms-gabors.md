@@ -22,6 +22,19 @@ One key experience in teaching econometrics or data analysis outside PhD program
 
 Let us flag two pedagogical benefits. First, descriptive statitics about the quality of management are interesting and not trivial. They can be discussed, debated, especially in a multi-national classroom. Second, when thinking about the causal impact of management, there is a lot of room for discussion, drawing DAGS, debating if firm size is a confounder or a collider. Or what is the role of industry? Both these benfits allow using WMS in classes where interaction with students is valued. Both lend themselves to teaching almost like one would do with business case studies. 
 
+## Built on knowledge from WMS team
+
+We used quite a few papers as references, and advised students to have a look:
+
+* Bandiera, O., Lemos, R., Prat, A., & Sadun, R. (2018), “Managing the family firm: Evidence from CEOs at work,” Review of Financial Studies 31(5), 1605–1653.
+* Bloom, N. & Van Reenen, J. V. (2007), “Measuring and explaining management practices across firms and countries,” Quarterly Journal of Economics 122(4), 1351–1408.
+* Bloom, N., Eifert, B., Mahajan, A., McKenzie, D., & Roberts, J. (2012), “ Does management matter? Evidence from India,” Quarterly Journal of Economics 128(1), 1–51.
+* Bloom, N., Lemos, R., Sadun, R., Scur, D., & Reenen, J. V. (2014), “The new empirical economics of management,” Journal of the European Economic Association 12, 835–876.
+* Bloom, N., Sadun, R., & Reenen, J. V. (2017), “Why do we undervalue competent management?,” Harvard Business Review, September–October, 120–127.
+* Lemos, R. & Scur, D. (2019), The ties that bind: implicit contracts and management practices in family-run firms, CEPR Discussion Papers 13794 (now)
+
+
+
 
 ## Specialized dataset
 The source of the data is the [World Management Survey](https://worldmanagementsurvey.org/survey-data/) This public version is prepared for this textbook by the World Management Survey project team. Great thanks to Nick Bloom, John Van Reenen and Daniela Scur at WMS team. 
@@ -63,7 +76,6 @@ This case study uses the `wms-survey-management` dataset that we introduced in c
 ![causal map](/images//Ch21_figures/ch21-figure-1-foundfam-causalmap-color.png){:height="70%" width="70%"}
 
 *Causal map / DAG on case study*
-
 
 
 **Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch21-ownership-management-quality/ch21-wms.do){:target="_blank"} or [**R-prep**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch21-ownership-management-quality/ch21-wms-01-dataprep.R){:target="_blank"}, [**R-study**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch21-ownership-management-quality/ch21-wms-02-analysis.R){:target="_blank"} or [**Python-prep**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch21-ownership-management-quality/ch21-wms-01-dataprep.ipynb){:target="_blank"}, [**Python-study**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch21-ownership-management-quality/ch21-wms-02-analysis.ipynb){:target="_blank"} or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch21-ownership-management-quality){:target="_blank"}.
