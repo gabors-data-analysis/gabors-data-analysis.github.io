@@ -16,11 +16,14 @@ We have collaborated with the fantastic team of the World Management Survey to c
 
 *Daniella Scur, Rafaelle Sadun, Renata Lamos, John Van Reenen, and Gabor Bekes. I'm sure Nick Bloom can be seen if you concentrate enough:-)*
 
+## Teaching metrics with WMS to business and management and econonomics students
+
+One key experience in teaching econometrics or data analysis outside PhD programs is that students learn better when case studies are closer to their interest. Management is one such topic. It is a relevant topic for their future career, and the link between management and performance is a fascinating topic for many. 
+
+Let us flag two pedagogical benefits. First, descriptive statitics about the quality of management are interesting and not trivial. They can be discussed, debated, especially in a multi-national classroom. Second, when thinking about the causal impact of management, there is a lot of room for discussion, drawing DAGS, debating if firm size is a confounder or a collider. Or what is the role of industry? Both these benfits allow using WMS in classes where interaction with students is valued. Both lend themselves to teaching almost like one would do with business case studies. 
 
 
-
-
-##
+## Specialized dataset
 The source of the data is the [World Management Survey](https://worldmanagementsurvey.org/survey-data/) This public version is prepared for this textbook by the World Management Survey project team. Great thanks to Nick Bloom, John Van Reenen and Daniela Scur at WMS team. 
 
 **Data**: [wms-survey-management](/datasets/#wms-management-survey).
@@ -68,6 +71,13 @@ This case study uses the `wms-survey-management` dataset that we introduced in c
 **Data**: [wms-survey-management](/datasets/#wms-management-survey).
 
 **Graphs**: [.png](ch21A-png-zip) or [.eps](ch21A-eps-zip)  
+
+
+## What John and Nick said
+
+![wms](/images/john-nick-endorse.jpg){:height="80%" width="80%"}
+
+
 
 
 ## More about the data  
