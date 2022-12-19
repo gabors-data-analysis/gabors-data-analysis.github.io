@@ -20,17 +20,17 @@ We have collaborated with the fantastic team of the World Management Survey to c
 
 One key experience in teaching econometrics or data analysis outside PhD programs is that students learn better when case studies are closer to their interest. Management is one such topic. It is a relevant topic for their future career, and the link between management and performance is a fascinating topic for many. 
 
+### Pedagogical benefits
+
 Let us flag three pedagogical benefits.
 1. Many students will work on survey later on. In a business, or government. Learning about survey design and execution is of great practical use, and a useful way to start understanding how datasets are born. WMS is a great example, it has many real-life features from formulating questions to scoring that could be useful.
 2. Descriptive statitics about the quality of management are interesting and not trivial. They can be discussed, debated, especially in a multi-national classroom. 
 3. When thinking about the causal impact of management, there is a lot of room for discussion, drawing DAGS, debating if firm size is a confounder or a collider. Or what is the role of industry? Both these benfits allow using WMS in classes where interaction with students is valued. Both lend themselves to teaching almost like one would do with business case studies. 
 
-
+### Some kind endorsements from John and Nick
 ![wms](/images/john-nick-endorse.jpg)
 
-
-
-## Built on knowledge from WMS team
+### Built on knowledge from WMS team
 
 We used quite a few papers as references, and advised students to have a look:
 
@@ -40,7 +40,6 @@ We used quite a few papers as references, and advised students to have a look:
 * Bloom, N., Lemos, R., Sadun, R., Scur, D., & Reenen, J. V. (2014), “The new empirical economics of management,” Journal of the European Economic Association 12, 835–876.
 * Bloom, N., Sadun, R., & Reenen, J. V. (2017), “Why do we undervalue competent management?,” Harvard Business Review, September–October, 120–127.
 * Lemos, R. & Scur, D. (2019), The ties that bind: implicit contracts and management practices in family-run firms, CEPR Discussion Papers 13794 (now)
-
 
 
 
