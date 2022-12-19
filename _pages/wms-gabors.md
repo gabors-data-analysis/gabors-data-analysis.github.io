@@ -20,7 +20,10 @@ We have collaborated with the fantastic team of the World Management Survey to c
 
 One key experience in teaching econometrics or data analysis outside PhD programs is that students learn better when case studies are closer to their interest. Management is one such topic. It is a relevant topic for their future career, and the link between management and performance is a fascinating topic for many. 
 
-Let us flag two pedagogical benefits. First, descriptive statitics about the quality of management are interesting and not trivial. They can be discussed, debated, especially in a multi-national classroom. Second, when thinking about the causal impact of management, there is a lot of room for discussion, drawing DAGS, debating if firm size is a confounder or a collider. Or what is the role of industry? Both these benfits allow using WMS in classes where interaction with students is valued. Both lend themselves to teaching almost like one would do with business case studies. 
+Let us flag three pedagogical benefits.
+1. Many students will work on survey later on. In a business, or government. Learning about survey design and execution is of great practical use, and a useful way to start understanding how datasets are born. WMS is a great example, it has many real-life features from formulating questions to scoring that could be useful.
+2. Descriptive statitics about the quality of management are interesting and not trivial. They can be discussed, debated, especially in a multi-national classroom. 
+3. When thinking about the causal impact of management, there is a lot of room for discussion, drawing DAGS, debating if firm size is a confounder or a collider. Or what is the role of industry? Both these benfits allow using WMS in classes where interaction with students is valued. Both lend themselves to teaching almost like one would do with business case studies. 
 
 ## Built on knowledge from WMS team
 
@@ -40,7 +43,6 @@ We used quite a few papers as references, and advised students to have a look:
 The source of the data is the [World Management Survey](https://worldmanagementsurvey.org/survey-data/) This public version is prepared for this textbook by the World Management Survey project team. Great thanks to Nick Bloom, John Van Reenen and Daniela Scur at WMS team. 
 
 **Data**: [wms-survey-management](/datasets/#wms-management-survey).
-
 
 ## Case studies 
 It is used in three case studies
@@ -63,9 +65,8 @@ This case study uses the Mexican subsample of the World Management Survey datase
 
 **Code**: [**Stata**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch04-management-firm-size/ch04-wms-management-size.do){:target="_blank"} or [**R**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch04-management-firm-size/ch04-wms-management-size.R){:target="_blank"} or [**Python**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch04-management-firm-size/ch04_wms_management_size_boxplot_violinpolot.ipynb){:target="_blank"} or [ALL](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch04-management-firm-size){:target="_blank"}.
 
-**Data**: [wms-management-survey](/datasets/#wms-management-survey).
+**Data**: [wms-management-survey](/datasets/wms-management-survey/).
 
-**Graphs**: [.png](ch04A-png-zip){:target="_blank"} or [.eps](ch04A-eps-zip){:target="_blank"}  
 
 
 ### 21A Founder/family ownership and quality of management
@@ -82,12 +83,11 @@ This case study uses the `wms-survey-management` dataset that we introduced in c
 
 **Data**: [wms-survey-management](/datasets/#wms-management-survey).
 
-**Graphs**: [.png](ch21A-png-zip) or [.eps](ch21A-eps-zip)  
 
 
 ## What John and Nick said
 
-![wms](/images/john-nick-endorse.jpg){:height="80%" width="80%"}
+![wms](/images/john-nick-endorse.jpg)
 
 
 
