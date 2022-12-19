@@ -14,7 +14,7 @@ We have collaborated with the fantastic team of the World Management Survey to c
 
 ![wms](/images/wms-gabors-2022-emc.jpg){:height="80%" width="80%"}
 
-*Daniella Scur, Rafaelle Sadun, Renata Lamos, John Van Reenen, and Gabor Bekes. I'm sure Nick Bloom can be seen if you concentrate enough:-)*
+*Daniella Scur, Rafaelle Sadun, Renata Lamos, John Van Reenen, and Gabor Bekes. Hope Nick Bloom might be seen if you concentrate enough:-)*
 
 ## Teaching metrics with WMS to business and management and econonomics students
 
@@ -24,6 +24,11 @@ Let us flag three pedagogical benefits.
 1. Many students will work on survey later on. In a business, or government. Learning about survey design and execution is of great practical use, and a useful way to start understanding how datasets are born. WMS is a great example, it has many real-life features from formulating questions to scoring that could be useful.
 2. Descriptive statitics about the quality of management are interesting and not trivial. They can be discussed, debated, especially in a multi-national classroom. 
 3. When thinking about the causal impact of management, there is a lot of room for discussion, drawing DAGS, debating if firm size is a confounder or a collider. Or what is the role of industry? Both these benfits allow using WMS in classes where interaction with students is valued. Both lend themselves to teaching almost like one would do with business case studies. 
+
+
+![wms](/images/john-nick-endorse.jpg)
+
+
 
 ## Built on knowledge from WMS team
 
@@ -83,11 +88,6 @@ This case study uses the `wms-survey-management` dataset that we introduced in c
 
 **Data**: [wms-survey-management](/datasets/#wms-management-survey).
 
-
-
-## What John and Nick said
-
-![wms](/images/john-nick-endorse.jpg)
 
 
 
