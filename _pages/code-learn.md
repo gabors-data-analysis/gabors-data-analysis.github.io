@@ -128,6 +128,9 @@ For this textbook, Stata and R code were developed early on, and we started to w
 * Oxford University's Center for the Study of African Economies runs [Coders Corner](https://www.csae.ox.ac.uk/coders-corner) - a collection of coding help on many topics. Mostly Stata, but some R, Python (and Matlab)
 
 
+## More useful bits
+* [Data project structure, names](https://djnavarro.net/slides-project-structure/#1) by Danielle Navarro
+
 
 ## Help us expand this bit
 
