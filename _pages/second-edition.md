@@ -33,12 +33,14 @@ Some ideas are
 |  14 |ln OLS correction |  More on what smearing does, when it's better to use other formula, bias, MAE vs RMSE |
 |  14 |Quant reg |  If MAE is target, qreg is a way. MAE vs RMSE discussion |
 |  14 |Correlated predictors |  In any predictive model (OLS, RF), when we have many predictors that are correlated, we have problems: varimp and interpretation. Ideas: PCA, groupings, drop|
-|  24 | add a new DiD |  Event study, maybe add one of new DiD method using the same case study |
 | 16 | SHAP for ML | For the machine learning bit, add SHAP in addition to VIP  |
 |  16 | ensemble for OLS |  For linear models in prediction, we can also have an ensemble model, ln+log |
 |16 | cloud comp|  Add run time in google colabs / amazon cloud for Table 16.4 |
 | 10,21| dataviz | Add coeffplots |
 |10,22 | p-values |  Show tables with p-values and stars, add a para discussion ref back to p-hacking + both have pros and cons|
+|  21 | More on RDD|  A more detailed example on RDD, maybe even a short case study |
+|  21 | Good vs bad control|  Two example stories with discussion on controls, confounders, mechanism and collider|
+|  24 | Add a new DiD |  Event study, maybe add one of new DiD method using the same case study |
 
 
 ## Feedback
