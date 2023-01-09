@@ -30,10 +30,13 @@ Pragmatic Institute‘s data podcast covers emerging and relevant topics in data
 * Implications of data analysis on public policy
 * Humility required for the data interpretation process
 
+![Use to hold your laptop](/images/pragmatic.png){:height="80%" width="80%"}
+
+
 ## More details 
 
 I talk about
-* How we chose the topics to include. 
+* How we chose the topics to include.
 * Why he didn’t include code in the book.
 * Process of producing the code that is on the website.
 
