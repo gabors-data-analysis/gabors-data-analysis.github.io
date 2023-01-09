@@ -9,19 +9,20 @@ tags:
 
 ---
 
-## Data Chats
-
-
-I did a podcast with a California based data institute a while back, it is out now. 
+I did a podcast with Chris Richardson of Pragmatic Institute, a California based data science education institute a while back, it is out now. 
 [Data Science in Action: Insights from a Leading Textbook Author](https://ds30.podbean.com/). 
 
 Also on [Apple](https://podcasts.apple.com/us/podcast/data-science-in-action-insights-from-a-leading/id1507005455?i=1000592893701), [Spotify](https://open.spotify.com/episode/0p8nrfxxhdKxp5Zm7tqcVx)
 
+Pragmatic Institute‘s data podcast covers emerging and relevant topics in data science, data analytics, data engineering and pretty much all things data. They have some cool episodes with fellow book authors [Charles Wheelan](https://podcasts.apple.com/us/podcast/charles-wheelan-author-of-naked-statistics-why-data/id1507005455?i=1000571592075) [Alberto Cairo](https://podcasts.apple.com/us/podcast/data-visualization-and-how-to-stop-your-charts-from-lying/id1507005455?i=1000576620853) and [Cole-Nussbaumer-Knaflic](https://podcasts.apple.com/us/podcast/strategies-to-tell-better-stories-with-data/id1507005455?i=1000579708479) as well as data scientits from [GoDaddy](https://podcasts.apple.com/us/podcast/godaddys-senior-data-scientist-on-evaluating-customer/id1507005455?i=1000585882813) or [Netflix](https://podcasts.apple.com/us/podcast/beyond-recommendations-content-data-science-netflix/id1507005455?i=1000529859413).
 
-“We also wanted to use the textbook to talk about important social issues, like, why do men make more than women? And so, one case study is about understanding the gender gap in the US and why is there a 15, 20% difference in earnings.”
-- Gábor Békés
+
+## Data Chats summary
+
+
+*“We also wanted to use the textbook to talk about important social issues, like, why do men make more than women? And so, one case study is about understanding the gender gap in the US and why is there a 15, 20% difference in earnings.” - Gábor Békés*
  
-In this episode of Data Chats, Chris Richardson interviews Gábor Békés. They discuss:
+**In this episode of Data Chats, Chris Richardson interviews Gábor Békés. They discuss:**
 
 * Detailed process of data analysis
 * The most important methods, tools, and skills for future data analysts
@@ -29,7 +30,7 @@ In this episode of Data Chats, Chris Richardson interviews Gábor Békés. They 
 * Implications of data analysis on public policy
 * Humility required for the data interpretation process
 
-## More details (via Cambridge UP)
+## More details 
 
 I talk about
 * How we chose the topics to include. 
@@ -48,7 +49,7 @@ Some other bits
 * We thought long and hard about the first sentence of the book? 
 * Data (without the theory the effects are silent) is silent without the analysis. You need to not just have the data, but you have to have the context and understanding of the environment of the problem.
 
-What a student who has read this book will be able to do this after reading the book: 95% of what an analyst needs (as pointed out by Joshua Angrist)
+What a student who has read this book will be able to do this after reading the book: 95% of what an analyst needs (*as pointed out by Joshua Angrist*)
 * How you start working with your data
 * How you find patterns
 * Have a prediction mind set—how do I predict outside my data?
