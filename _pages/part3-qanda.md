@@ -57,16 +57,25 @@ A: All are indeed related to the concept of model compleixty and avoiding overfi
 
 >**Q: I have a question about LASSO. Let's just theoretically say I want to use it to select variables not specifically for the aim of the prediction, but for the aim that I will later use these variables for causal inference regression.  And let's say I have a categorical variable - "states". I create then many dummies for observation being in 1 of the states. Then LASSO most probably make coefficients 0 on some of them.  Let's imagine only dummy for being in NY will be left as non zero coefficient by LASSO.  Then I put in my causal regression only this dummy. Would it have some consequences I need to think about? Does it then mean I won't be able to have state fixed effects ?**
 
-A: Consider a causal question: y=a+bx+cZ, where x is the causal variable and Z is a set of possible confounders. Now, double lasso inference (as the causal use of LASSO is called) means running y on Z and x on Z and keep the union of non zero vars. Your point is what if Z has a variable like state={s1, s2,....s50} and so we would have 49 dummies in a regression. Its okay to use LASSO decide which dummies to keep. If it drops s15, it means s15 is uncorrelated w x and y, so doesn't matter what we do. 
+A: Consider a causal question: $$y=a+bx+cZ$$, where x is the causal variable and Z is a set of possible confounders. Now, double lasso inference (as the causal use of LASSO is called) means running y on Z and x on Z and keep the union of non zero vars. Your point is what if Z has a variable like state={s1, s2,....s50} and so we would have 49 dummies in a regression. Its okay to use LASSO decide which dummies to keep. If it drops s15, it means s15 is uncorrelated w x and y, so doesn't matter what we do. 
+
 There is a method called *Group LASSO* which treats categorical variable as one unit. So in this case, this would be a better solution. Here is another option. If, having run lasso we found that say 15 out 50 dummies stays in, I would consider other information concentration measures. One option is group values, ie regions (midwest) instead of states. I think it is easier to interpret.
 
-A forthcoming work on LASSO is a chapter in a book by [Felix Chan and Laszlo Matyas](https://ewml.ceu.edu/Chapter1/Chapter1A_July27.pdf)  
+A new work on LASSO is a chapter in a book by [Felix Chan and Laszlo Matyas](https://ewml.ceu.edu/Chapter1/Chapter1A_July27.pdf)  
 One R package is [grplasso](https://cran.r-project.org/web/packages/grplasso/grplasso.pdf). 
 
 
 >**Q:Can we predict confidence interval and prediction interval for LASSO?**
 
-A: 
+A: Yes. There is a standard error, and but this is not a trivial issue. See [Statistical Learning with Sparsity:
+The Lasso and Generalizations](https://hastie.su.domains/StatLearnSparsity/) by Hastie, Tibshirani and Wainwright, Chapter 6.3.
+
+
+>**Q: The difference between the log and level models in the size of the PI was mainly due to the CI part or the “other stuff” in the formula**
+
+A: The difference in the formulae is having "more" of std[e], ie the MSE of the model. So, there is no difference in objects just that std[e] magnifies uncertainty. 
+
+
 
 ## Chapter 15
 >**Q: How tried cutoff points are selected in case of continuous variables since there are infinitely many possible cutoff points?**
