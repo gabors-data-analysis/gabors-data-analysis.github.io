@@ -98,8 +98,12 @@ A: Well, that was not clear for us either until we read the `caret` package [doc
 
 >**Q: How is the average value actually calculated for the partial dependence plot, meaning what happens to the "other variables", are they fixed at average?**
 
-A:
-For more see [Christoph Molnar'a ML book](https://christophm.github.io/interpretable-ml-book/ )
+A: For more see [Christoph Molnar'a ML book](https://christophm.github.io/interpretable-ml-book/ )
+
+
+>**Q: In Table 3 of Chapter 15 on CART, there was a table comparing contributions of each split (if I remember correctly), and the last one was exactly 1%. It's a question whether that was correct.**
+
+A: I looked up the code. So what happens is that in the next split, the cp would improve by 0.008031415 only so it does not make it. IMHO it should be displayed as N/A instead of the binding constraint. This may be seen if you run the code and check the table for cart5 that has cp=0.002 so runs longer. (edited) 
 
 
 ## Chapter 16
