@@ -36,8 +36,10 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 | Kingston University                         | UK              | Working as An Economist                           | Economics           | MA/MSc    |     |     |
 | Middlesex University, London                | UK              | Econometrics, Applied Econometrics                | Economics           | MA/MSc    |     |     |
 | Queen Mary University of   London           | UK              | Introduction to Econometrics                      | Economics           | PhD   |     |     |
+| University of Liverpool           | UK              | Econometrics                      | Economics           | PhD   |     |   Stata  |
 | University of Newcastle                     | UK              | Applied Econometrics                              | Economics           |       |     |     |
 | University of Lincoln                       | UK              | Thesis Module                              | Economics/Business           | MA      |     |     |
+| Aarhus University                      | Denmark              | Quantitative Research Methods                              | Economics           |       | BA    |  R   |
 | ULB /Solvay                  | Belgium                    | Introduction to Economic Research                | Economics/Business     | BA       |  Case studies | Stata     |
 | IÉSEG School of Management                  | France                    | Introduction Applied Economics                    | Economics           |       |     |     |
 | Université de Limoges  | France    | Econometrics  | Economics| MA/MSc       | |            |
@@ -49,6 +51,7 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 | University of Brescia     | Italy   | [Empirical Economics](https://unibs.coursecatalogue.cineca.it/insegnamenti/2021/757640/2019/2074/107) [PDF](/files/brescia-empirical-economics.pdf)     | Economics / Business Administration                       | BA    | Regression, Causal analysis, time series          | R   |
 | Scuola Normale Superiore di Pisa                  | Italy                    | Applied Econometrics                | Economics | BA       |      |      |
 | University of Torino            | Italy     | Economics/Business|  Empirical Tools for Managers                    | BA       |                                         |            |
+| U Ramon Llull, IQS School of Management          | Spain     | Panel Data Analysis                    | BA       | R  |            |
 | Central European University     | Austria   | [Prediction with Machine Learning for Economists](https://courses.ceu.edu/courses/2021-2022/prediction-Machine-learning-economists){:target="_blank"}   | Economics                       | PhD/MA/MSc   | Prediction, Machine Learning            | R, Python   |
 | Central European University     | Austria   | [Research Design and Methods for Public Policy](https://courses.ceu.edu/courses/2021-2022/quantitative-methods-public-policy){:target="_blank"}  | Economics                       | MA/MSc   | Data Exploration          | R   |
 | Corvinus University, Budapest         | Hungary   | Econometrics | Economics | MA/MSc| Regressions, Causality                                            | Stata             |
@@ -56,6 +59,8 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 | Corvinus University, Budapest         | Hungary   | Machine Learning in Economics  | Economics | MA/MSc| Prediction, causal inference with ML                  | R             |
 | Tokyo International University  | Japan    | Econometrics | Economics                         |  BA       | full textbook                                         | R           |
 | Flame University  | India    | Econometrics | Economics                         |  BA       |                                          |            |
+| Damascus University  | Syria    | Data Analysis | Economics                         |  BA       |
+
 
 
 
@@ -74,6 +79,7 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 | Central European University                 | Austria                   | Quantitative methods for public policy            | Policy              | MA/MSc    |     |     |
 | Central European University                 | Austria                   | Research Methods I                                | Politics            | MA/MSc    |     |     |
 | University of Western Australia, Perth           | Australia  | [Health Analytics](httpshttps://handbooks.uwa.edu.au/unitdetails?code=ECON5570)   | Business Data Analytics + Economics                  | MA/MSc   | regression analysis, causal inference   | Stata       |
+| Nanjing University |  China    | [Introduction to Econometrics](https://byelenin.github.io/Metrics_2023/) | Economics, Business | BA       |  Regressions, causal analysis|  R, Stata          |
 
 
 ## Business Analytics, Data Science
@@ -143,8 +149,9 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 |Yamacguchi University  | Japan    | [Business Economics](https://www.kyoumu.jimu.yaMA/MScguchi-u.ac.jp/portal/Public/Syllabus/SyllabusSearchStart.aspx?lct_year=2022&lct_cd=8062100004) | Business| BA       | Regression Analysis | Python, R            |
 | IBA Karachi | Pakistan    | Data Analytics for Economists | Business Economics| BA       | | Stata           |
 | Asia BS Kuala Lumpur | Malaysia    | Data Analytics for Banking |Central Banking| MA       | ||
-
-
+| KAIST College of Business |  South Korea    | Advanced Business Analaytics | Management | MBA       | MBA Regressions, causal analysis|            |
+| Nanjing University |  China    | [Big Data Analytics](https://byelenin.github.io/Metrics_2023/) | Management | MBA       |  Regressions, causal analysis|  R, Stata          |
+  
 
 ## Engineering, computer science
 
@@ -152,6 +159,5 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 |-----------------------------------------  |---------- |-------------------------------------------------------------------------------------------------------------------------------------  |-------------------------------- |---------  |---------------------------------------  |-----------  |
 | University of Wisconsin   Milwaukee         | USA        | Data/IT Retrieval Systems                | IT                  | BA    |     |     |
 | University of Plymouth                      | UK              | Logistics, Systems and Methods     | IT                  | MS    |     |     |
-|                                         |             |
 | Eindhoven University of Technology  | Netherlands    | [Social Cost Benefit Analysis](https://research.tue.nl/en/courses/economic-policy-in-practice-social-cost-benefit-analysis) | Industrial Engineering / Innovation| MA/MSc       | | -           |
 
