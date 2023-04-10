@@ -69,6 +69,8 @@ If you were to find an error, please report us [HERE](https://gabors-data-analys
 |09-01    | 2021-11-05   | Miss reference    | Ch11 | p.239 |  (about SE...) simple formula in that it is smaller the smaller Std[e], the larger Std[x], and the larger $$\sqrt n$$. |  ... A more precise definition would have a degree of freedom correction with $$\sqrt{n-2} $$, see Under the Hood section 9.U4. |
 |10-01    | 2021-03-06   | Typo              | Ch10 | B1 p.293 |  Table 10.6 N=217 |   **N=207**|
 |10-02    | 2021-03-08   | Missing | Ch10 | B1 p.285 |  Graph 10.2 Note, missing info |  **Male: blue, female: green**|
+|11-01    | 2023-04-10   | Typo + explain              | Ch11 | 315 |  Note that a model may be unbiased on average but not well calibrated. For instance, it may underestimate the probability when it’s high and underestimate it when it’s low. |   Note that a model may be unbiased on average but not well calibrated. For instance, it may underestimate the probability when it’s high (e.g. y^p=60% vs y=80%) and at the same time, **overestimate** it when it’s low (e.g. y^p=30% vs y=10%).|
+
 
 
 ### Part III
