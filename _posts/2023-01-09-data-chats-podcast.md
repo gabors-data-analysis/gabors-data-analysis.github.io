@@ -10,7 +10,8 @@ tags:
 ---
 
 I did a podcast with Chris Richardson of Pragmatic Institute, a California based data science education institute a while back, it is out now. 
-[Data Science in Action: Insights from a Leading Textbook Author](https://ds30.podbean.com/). 
+[Data Science in Action: Insights from a Leading Textbook Author and Case Studies
+Friday Jan 06, 2023](https://ds30.podbean.com/). 
 
 Also on [Apple](https://podcasts.apple.com/us/podcast/data-science-in-action-insights-from-a-leading/id1507005455?i=1000592893701), [Spotify](https://open.spotify.com/episode/0p8nrfxxhdKxp5Zm7tqcVx)
 
