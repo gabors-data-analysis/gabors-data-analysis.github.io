@@ -44,6 +44,8 @@ Additional code and refactoring in R was created by [Máté Tóth](https://www.l
 Additional coding, data collection, visualization, and editing were done by [Viktória Kónya](https://www.linkedin.com/in/vikt%C3%B3ria-k%C3%B3nya-6b7b8694/), [Zsófia
 Kőműves](https://www.linkedin.com/in/zsofia-komuves-05651339/), [Dániel Bánki](https://www.linkedin.com/in/daniel-banki-15b06a8b/), [Abuzar Ali](https://www.linkedin.com/in/abuzar-ali-a8995b27/), [Endre Borza](https://www.linkedin.com/in/endremborza/), [Imola Csóka](https://www.linkedin.com/in/imola-cs%C3%B3ka-63b58457/), and  [Ahmed Al Shaibani](https://www.linkedin.com/in/ahmedalshaibani/).
 
+After the publication, new folks came to help, especially regarding the Pythpn code: [Péter Duronelly](https://www.linkedin.com/in/peter-duronelly-44a98188/?originalSubdomain=hu), [Ágoston Reguly](https://www.linkedin.com/in/%C3%A1goston-reguly-47187448/) who also created the blueprint for coding courses.
+
 ## The community help
 Let us also shout out to the fantastic R user community – both online and offline – from whom
 we learned tremendously. Special thanks to the Rstats and Econ Twitter community – we received
