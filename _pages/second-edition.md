@@ -11,6 +11,9 @@ redirect_from:
 
 {% include base_path %}
 
+
+The second edition, planned for early 2025 will focus on correcting errors, improving some explanations and adding minor edits overall. There may be a single new chapter.
+
 ## Error correction
 
 The most important plan will be correcting typos and errors based on the [errata page](/errata/).
@@ -25,13 +28,15 @@ We plan some (not many) new things, typically a few extra paragraphs, maybe a sh
 Some ideas are
 
 ### Part 1
+
 | Chapter | Topic                         | Idea                                                                                         |
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
-|  02 |variable naming |   Add a few para on naming *variables*, some ideas and when it's really important. Extend 2.U1 or add 2.U2 |
-|  05 | now short CS |   Maybe add a case study on estimating arrival time|
+|  02     |variable naming                |   Add a few para on naming *variables*, some ideas and when it's really important. Extend 2.U1 or add 2.U2 |
+|  05 | now short CS |   Maybe add a case study on estimating arrival time |
 
 
 ### Part 2
+
 | Chapter | Topic                         | Idea                                                                                         |
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
 | 10?     |  Frisch-Waughn-Lowell theorem | Add a short section on FWL (no proof), with a case study application. The key application will be a graph, ie show show scatterplot despite controls. Maybe use earnings. Or even add a new case study on Mankiw-Romer-Weil QJE growth regressions. [Deepnote](https://deepnote.com/@carlos-mendez/R-Augmented-Solow-Model-d90f7550-909c-407d-8295-9ba49e81764f) | 
@@ -40,6 +45,7 @@ Some ideas are
 
 
 ### Part 3
+
 | Chapter | Topic                         | Idea                                                                                         |
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
 |  13 | r vs python results|   Add a few para/section on discussing that results that are borne out of algos without a close solution, will vary across platforms |
@@ -52,6 +58,7 @@ Some ideas are
 |16 | cloud comp|  Add run time in google colabs / amazon cloud for Table 16.4 |
 
 ### Part 4
+
 | Chapter | Topic                         | Idea                                                                                         |
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
 |  19 | SUTVA |  2 para -- Explicit about SUTVA |
