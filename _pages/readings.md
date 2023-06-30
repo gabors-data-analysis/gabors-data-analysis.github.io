@@ -51,6 +51,8 @@ ___
 * Andrij Burkov: [The 100 page Machine Learning book](http://themlbook.com/) A popular and concise review
 * Roger Peng and Elizabeth Matsui [The Art of Data Science](https://bookdown.org/rdpeng/artofdatascience/) Intro review on the steps of analyzing data.   
 * David Spiegelhalter [The Art of Statistics ](https://www.amazon.com/dp/B07HQDJD99/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1) *A great review of some key statistics concept from a great statitsician. A very nice introduction to any data, stats or metrics course* [Recommended]
+* Elena Llaudet and Kosuke Imai (2022) [Data Analysis for Social Science: A Friendly and Practical Introduction](https://www.amazon.com/Data-Analysis-Social-Science-Introduction/dp/0691199434/) Concepts and skills indeed
+
 
 
 ### Data vizualization
