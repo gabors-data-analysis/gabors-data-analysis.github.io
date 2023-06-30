@@ -23,6 +23,9 @@ ___
 * Seth Stephens-Davidowitz (2018) [Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Seth-Stephens-Davidowitz/e/B072549W28/ref=dp_byline_cont_ebooks_1) *So you think you can use data to answer some important questions? Watch out people often hide stuff. Look at what they do, not what they say. An amazing collection of stories.*  
 * Cathy O'Neil, [Weapons of Math Destruction ](https://weaponsofmathdestructionbook.com/) *A more sceptic take on the role of algorithms* 
 * Albert-László Barabási (2014), [Linked: How Everything Is Connected to Everything Else and What It Means for Business, Science, and Everyday Life](https://www.amazon.com/Linked-Everything-Connected-Business-Everyday/dp/0465085733/) - a great intro into networks
+* Gary Smith (2016) [Standard Deviations: Flawed Assumptions, Tortured Data and Other Ways to Lie with Statistics](https://www.amazon.com/Standard-Deviations-Gary-Smith/dp/071565103X/ref=zg_bs_g_2586_sccl_17/130-9448574-7165015?psc=1) looks interesting. 
+
+
 
 ![Some nice and fun readings on data and metrics](images/reading_many.jpg){:height="80%" width="80%"}
 
@@ -86,6 +89,18 @@ Okay, so you have read some nice books. Why not read our book:
 * Joshua Angrist and  Jörn-Steffen Pischke (2009) [Mostly Harmless Econometrics](https://press.princeton.edu/books/paperback/9780691120355/mostly-harmless-econometrics) The book that started it all: talking about key econometrics tools in a precise yet accessible and focused way. Aimed at post-graduate economics student.  
 * Scott Cunningham, 2020 [The Mixtape](https://yalebooks.yale.edu/book/9780300251685/causal-inference) Advanced, formal but highly accessible discussion of key tools of causal inference using examples from some great academic papers. 
 * Judea Pearl [The Book of Why](https://www.amazon.co.uk/Book-Why-Science-Cause-Effect/dp/0241242630/ref=asap_bc?ie=UTF8) - intermediate book on causality, with interesting stories and great care into developing theoretical structures and measurement of causal links.
+
+
+### Advanced book on the intersection of Econometrics and Machine Learning
+* Martin Huber, 2023 [Causal Analysis -- Impact Evaluation and Causal Machine Learning with Applications in R](https://mitpress.mit.edu/9780262545914/causal-analysis/) is a great new accessible yet advanced book, with yes, applications. Includes application with Machine Learning. 
+* Felix Chan and László Mátyás edited a great collection (2022) [Econometrics with Machine Learning](https://ewml.ceu.edu/) on well, how machine learning infused causal methods for a variety of areas such as policy evulation or development studies. 
+
+
+## Other post course book
+
+* Marc F. Bellemare (2022) [Doing Economics: What You Should Have Learned in Grad School—But Didn’t](https://www.amazon.com/Doing-Economics-Should-Learned-School_But/dp/0262543559/) title has it. How to extend what you learnt, especially for Economics students. I know folks who read it on an airpline ride to job interview.
+* Lionel Page (2023) [Optimally Irrational](https://www.amazon.com/Optimally-Irrational-Good-Reasons-Behave/dp/1009209205/) has data yes, but also a lot of economics. I'm yet to read it, but like Lionel's work a lot. If you liked Kahnemann and Tversky, you will like this too.   
+
 
 
 ## Blogs and more
