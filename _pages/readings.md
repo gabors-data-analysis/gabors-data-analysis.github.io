@@ -44,13 +44,14 @@ ___
 * Michael Lewis[ Moneyball](https://www.amazon.com/Moneyball-Art-Winning-Unfair-Game/dp/0393324818) *Super famous book on how finding mispriced players can give an edge is baseball.*
 * Chris Anderson and David Sally (2013) [The Numbers Game: Why Everything You Know About Soccer Is Wrong](https://www.bookdepository.com/The-Numbers-Game-Chris-Anderson/9780143124566) *I just realized on of the chapters inspired a case study in our book. If you know which one, DM me, and we'll get a drink sometime.*
 * Yves Dominicy and Christophe Ley (eds) (2023) [What We Can Learn from Sports Data](https://www.cambridgescholars.com/news/item/book-in-focus-Statistics-Meets-Sports-What-We-Can-Learn-from-Sports-Data) - nice collection on sport analytics. 
-
+* Ben Lindbergh and Sam Miller (2017) [The Only Rule Is It Has to Work: Our Wild Experiment Building a New Kind of Baseball Team](https://www.amazon.ca/Only-Rule-Has-Work-Experiment/dp/1250130905) - suggested by a dear reader, I'm excited to have a look.  
 
 
 ### Intro Data Science / statistics books
 * Andrij Burkov: [The 100 page Machine Learning book](http://themlbook.com/) A popular and concise review
 * Roger Peng and Elizabeth Matsui [The Art of Data Science](https://bookdown.org/rdpeng/artofdatascience/) Intro review on the steps of analyzing data.   
 * David Spiegelhalter [The Art of Statistics ](https://www.amazon.com/dp/B07HQDJD99/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1) *A great review of some key statistics concept from a great statitsician. A very nice introduction to any data, stats or metrics course* [Recommended]
+* Ian Hacking (1990) [The Taming of Chance](https://www.amazon.ca/Taming-Chance-Ian-Hacking/dp/0521388848/) Okay, I have not read it. But it promises to take you over the eremergence of statistics, starting in the 19th centrury. Suggested by a dear reader.
 * Elena Llaudet and Kosuke Imai (2022) [Data Analysis for Social Science: A Friendly and Practical Introduction](https://www.amazon.com/Data-Analysis-Social-Science-Introduction/dp/0691199434/) Concepts and skills indeed
 
 
