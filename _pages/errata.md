@@ -54,11 +54,11 @@ If you were to find an error, please report us [HERE](https://gabors-data-analys
 |04-06 | 2022-09-22 | Imprecise | Ch04 | p97 | Many questions that data analysis can answer are based on comparing values of one variable, y, **against** values of another variable, x, and often other variables. | Many questions that data analysis can answer are based on comparing values of one variable, y, **by** values of another variable, x, and often **by** other variables. |
 |05-01     |2022-09-30    | Typo      | Ch05 | p140   |i.i.d. variables: identical and independently distributed variables | i.i.d. variables: **independent** and independently distributed variables |
 |05-01     |2023-07-04    | Error      | Ch05 | p127 | For example in the bin (0.8,1) we have 512 cases for the N=1000 exercise and 1250 cases for the N=500 exercise with values of 0.8 or 1. | For example in the bin (0.8,1), containing values greater or equal to 0.8 but less than 1, we have 853 cases for the N=1000 (8.53%) exercise and 1451 cases for the N=500 exercise (14.5%) |
-
 |06-01     |2021-10-20    | Typos      | Ch06 | B1 p159   | "That p-value is shown to be 0.0000, which means that it’s less than 0.000 05. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value."   | "That p-value is shown to be **0.0007**, which means that it’s less than **0.05**. According to step 2 above, we can further divide this by two, and that would lead to an even smaller p-value **(0.00035)**"|
 |06-02     |2022-09-22    | Wrong number      | Ch06 | p146   | The mean difference is −0.05 US dollars: online prices are, on average, 5 cents lower in this data. | The mean difference is **0.05** US dollars: online prices are, on average, 5 cents **higher** in this data. |
 |06-03     |2022-09-22    | Wrong number      | Ch06 | p146   | s = −0.05 | s = **0.05** |
 |06-04     |2022-09-22    | Wrong number      | Ch06 | p147, Fig6.1   | Mean = −0.05 | Mean = **0.05** |
+|06-05     |2023-07-04    | Typo      | Ch05 | 156|   true average price difference is more than −30 cents or +20 cents  |  true average price difference is more than −30 cents or +**19** cents.
 
 
 
