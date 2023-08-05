@@ -21,6 +21,10 @@ On **surveys**, a great review is "How to run survey: A guide to creating your o
 
 
 
+### Chapter 06
+
+On *p-hacking*, a fantastic story is about a body of research in social psychology written up in [New York Times Magazine](https://www.nytimes.com/2017/10/18/magazine/when-the-revolution-came-for-amy-cuddy.html) in 2017. The review of methods started in 2012 soon led to the birth of data investigation team [Data Colada](https://datacolada.org/about) in 2013. Amazing stuff. 
+
 ## Part II
 
 ### Chapter 09
