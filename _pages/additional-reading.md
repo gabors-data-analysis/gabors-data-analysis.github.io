@@ -20,10 +20,9 @@ Life did not stop when we finished the manusdcript. Actually, we keep finding gr
 On **surveys**, a great review is "How to run survey: A guide to creating your own identifying variation and revelealing the invisible", [NBER DP Stefanie Stantcheva](https://www.nber.org/system/files/working_papers/w30527/w30527.pdf).
 
 
-
 ### Chapter 06
 
-On *p-hacking*, a fantastic story is about a body of research in social psychology written up in [New York Times Magazine](https://www.nytimes.com/2017/10/18/magazine/when-the-revolution-came-for-amy-cuddy.html) in 2017. The review of methods started in 2012 soon led to the birth of data investigation team [Data Colada](https://datacolada.org/about) in 2013. Amazing stuff. 
+On *p-hacking*, a fantastic story is about a body of research in social psychology written up in [New York Times Magazine](https://www.nytimes.com/2017/10/18/magazine/when-the-revolution-came-for-amy-cuddy.html) in 2017. The review of methods started in 2012 soon led to the birth of data investigation team [Data Colada](https://datacolada.org/about) in 2013 by Profs Uri Simonsohn, Leif Nelson and Joe Simmons. They also wrote a [paper on p-curve](http://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/2019/01/pcp2-P-curve-2-published-.pdf), a tool to analyze a body of literature. Read any other pieces of Data Colada on challenges to reproducibility. Amazing stuff. 
 
 ## Part II
 
@@ -52,4 +51,6 @@ Beetroot juice is said to be great. [Review study](https://www.healthline.com/he
 ## Chapter 20
 
 On A/B testing, some neat ideas in presentation by [Harlan Harris](https://www.harlan.harris.name/2022/08/communicating-a-b-test-results-for-conversion-rates-with-ratios-and-uncertainty-intervals/?utm_campaign=Data_Elixir&utm_source=Data_Elixir_403/), with code in R
+
+
 
