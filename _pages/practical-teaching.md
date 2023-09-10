@@ -46,3 +46,19 @@ As a graduate course, it will assume students have some background in statistics
 * Cover Ch05 and Ch06, possibly fast. Generalization and basic hypothesis testing are necessary for Part 2. 
 * You may skip bootstrap (ch05) and final bits of testing (ch06)
 
+
+## Phd 
+
+
+### Phd in Management, year long course 
+
+*I teach the main metrics course in a Phd in management program. Diverse student body, 2 semesters, 12x90mins each, has to cover intro and causality (not prediction). What shall I keep? How to segment into two parts?*
+
+I would have three types of material
+* Students are expected to know, but maybe some don't. Here you go fast and offer some help to those who need to pick up. I'd say Ch01-Ch04 make them read the book, focus on case studies. 
+* Core basics, students might know, but probably not well. Ch05-Ch10/Ch11. Here I would take time, target those below median to make sure *everybody* understands what happens in a multivariate regression, how to interpret coefficients, think functional form, uncertainty. Take as much time as needed. 
+* Follow with 19-22 in much detail. This is core causality. 
+* To do panel, you'll need time series, so the last bit could be Ch12, 23, 24. Depending on time, you can cut pieces. 
+* Obviously as it's management program, you shall focus on case studies with an open attitude, ie discussing options and why certain decisions are made what could be the alternative
+* I'd try get them to ch10 in semester 1, maybe not covering some bits. In semester 2, I'd start again with ch10 as review and cover all parts including Under the Hood. Then go from there. 
+
