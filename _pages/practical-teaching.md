@@ -28,6 +28,9 @@ For the second part, you can do stuff that was left out plus all the regression 
 
 
 
+![textbook cover](images/book-withpix2.jpg){:height="80%" width="80%"}
+
+
 ## MA/MSc programs
 
 
