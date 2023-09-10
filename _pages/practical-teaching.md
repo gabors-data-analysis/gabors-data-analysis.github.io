@@ -14,6 +14,9 @@ Practical advice on what and how teach the textbook in a variety of programs. Q&
 *Just started, comments are welcome.*
 
 
+![textbook cover](/images/book-front.jpg){:height="80%" width="80%"}
+
+
 ## Undegraduate programs
 
 ### Intro metrics with coding
@@ -28,7 +31,7 @@ For the second part, you can do stuff that was left out plus all the regression 
 
 
 
-![textbook cover](images/book-withpix2.jpg){:height="80%" width="80%"}
+![textbook cover](/images/book-withpix2.jpg){:height="80%" width="80%"}
 
 
 ## MA/MSc programs
@@ -48,6 +51,9 @@ As a graduate course, it will assume students have some background in statistics
 * Give them chapters 01-04 of [Part 1](https://gabors-data-analysis.com/chapters/#part-i-data-exploration) as reading with a focus on the nature of data and data types (Ch 02), frequency, probability, distributions (Ch03), and most of Chapter 04. Maybe offer consultations for students in need. 
 * Cover Ch05 and Ch06, possibly fast. Generalization and basic hypothesis testing are necessary for Part 2. 
 * You may skip bootstrap (ch05) and final bits of testing (ch06)
+
+
+![textbook cover](/images/book-withpix1.jpg){:height="80%" width="80%"}
 
 
 ## Phd 
