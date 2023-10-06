@@ -14,22 +14,14 @@ redirect_from:
 
 ## Errata to Békés-Kézdi: Data Analysis for Business, Economics, and Policy, Cambrigde University Press, 2021
 
-## Info
-
 There are a few errors we made, unfortunately. Some are typos, swapped figure lables, some are imprecise language. It may be that we found an important error in code and corrected it, so the code does not *exactly* reproduce tables and graphs in the book. 
 
 Fortunately, we found some. As we, and our kind readers, carry on finding more errors, we are adding them here. You shall review them before reading / teaching. 
 
 
-### Status
-Latest update: 22 Sept 2022
-
-
-### Feedback
-
 If you were to find an error, please report us [HERE](https://gabors-data-analysis.com/contact-us/)
 
-## List of errors
+## List of errors (Latest update: July 2023)
 
 ### Part I
 
