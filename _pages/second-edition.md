@@ -44,6 +44,7 @@ Some ideas are
 | 10?     |  Frisch-Waughn-Lowell theorem | Add a short section on FWL (no proof), with a case study application. The key application will be a graph, ie show show scatterplot despite controls. Maybe use earnings. Or even add a new case study on Mankiw-Romer-Weil QJE growth regressions. [Deepnote](https://deepnote.com/@carlos-mendez/R-Augmented-Solow-Model-d90f7550-909c-407d-8295-9ba49e81764f) | 
 | 10,21| dataviz | Add coeffplots |
 |10,22 | p-values |  Show tables with p-values and stars, add a para discussion ref back to p-hacking + both have pros and cons |
+|8 | attenuation |  Add example for attenuation bias from Feodora Teti customs data paper, real policy implications |
 
 
 ### Part 3
