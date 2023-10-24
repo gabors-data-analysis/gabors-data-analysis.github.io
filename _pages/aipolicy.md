@@ -12,12 +12,9 @@ redirect_from:
 {% include base_path %}
 
 
-## Gábor’s AI policy for advanced data/metrics classes
-
-Gábor Békés (Central European University, BekesG@ceu.edu)
-
-* V.0.2.4.  9. August 2023 [draft. comments welcome]
+* V.0.2.4.  9. August 2023. 
 * This is a policy is written for my advanced classes only: Applied Economics with Sports Data, Data Analysis 3 Prediction and ML.Data Analysis 4 Causal Analysis. 
+* Gábor Békés (Central European University, BekesG@ceu.edu)
 * Licence: CC BY-NC 4.0 free to share and adapt. 
 
 
@@ -31,13 +28,13 @@ Gábor Békés (Central European University, BekesG@ceu.edu)
 1. While I expect you to be able to code without "AI", in your assignments, you may use any “AI” assistance for coding. Note that you carry all responsibility for the correctness of your code. Please test and debug your code relentlessly.  
 1. You may use any “AI” assistance for writing your report or presentation. You may build on output following your prompts, but consider any output material by “AI” as an input to your project This input shall be treated similarly to any other source such as a book or a paper: you must reference it by linking the public link generated for the conversation. Not doing so will be considered a serious ethical violation equivalent to plagiarism. 
 1. In order to ensure the best learning outcome, I suggest using “AI” for the following tasks only 
-2. Drafting code snippets, turning code bits into functions, 
-2. Improving code, commenting it 
-2. Idea generation, thinking about predictors, causal pathways, potential confounders  
-2. Potential problem finding, discussions on what can go wrong 
-2. Language improvement, translation 
-2. Technical help re markdown/latex/beamer/ppt, formatting
-2. Learn more about topics by having a conversation with AI on the material. You may copy text into it and ask for help in understanding details, and clarifications.  
+  2. Drafting code snippets, turning code bits into functions, 
+  2. Improving code, commenting it 
+  2. Idea generation, thinking about predictors, causal pathways, potential confounders  
+  2. Potential problem finding, discussions on what can go wrong 
+  2. Language improvement, translation 
+  2. Technical help re markdown/latex/beamer/ppt, formatting
+  2. Learn more about topics by having a conversation with AI on the material. You may copy text into it and ask for help in understanding details, and clarifications.  
 
 ## Policies for exam, quiz
 1. All quiz, exams will be on site with zero “AI” tool use policy. Any use of “AI” tools will be considered cheating. This may require provision of offline computers or pen and paper exams. 
