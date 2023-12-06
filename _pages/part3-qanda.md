@@ -148,6 +148,14 @@ Finally, note that a case when RF/GBM may be really useful is once you add sever
 
 
 
+>**Q: "When we do short-term prediction in time series and use a rolling window for cross-validation, would it also make sense to compare our model performance by changing the size of the rolling window?"**
+
+A: It is actually a great idea, it has a conceptual element (ie maybe more data is not always helpful, data from long time ago may not be relevant). One might indeed try it!
+
+
+
+
+
 ## Other parts
 
 * [Part I - Chapter 01-06](/part1-qanda) 
