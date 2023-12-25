@@ -21,7 +21,7 @@ title: English-Hungarian Data Analysis Dictionary
     var resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = ''; // Clear previous results
 
-    fetch('{{ site.baseurl }}/dictionary.json')
+    fetch('{{ https://gabors-data-analysis.com }}/dictionary.json')
       .then(response => response.json())
       .then(data => {
         var filteredData = data.filter(word => word.English.toLowerCase() === input || word.Hungarian.toLowerCase() === input);
