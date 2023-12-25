@@ -83,8 +83,8 @@ button:hover {
   <a id="downloadButton" href="#" download>Download Chapter Words</a>
 </div>
 
-<div style="margin-top: 60px;">
-  <p>Created as part of the textbook translation project for chapters 01-12. The team: Translator: Sarolta Rózsás, Academic Reviewer: Anna Bárdits, 
+<div style="margin-top: 40px;">
+  <p>Created as part of the textbook -- chapter 01-12 -- translation project. Translation team: Translator: Sarolta Rózsás, Academic Reviewer: Anna Bárdits, 
      Council of Advisors: Ágnes Szabó-Morvai (chair), Ádám Reiff, Daniel Horn, János Kiss-Hubert, István Boza, Anikó Biró, and many fellows 
      of the <a href="https://www.mktudegy.hu/">Hungarian Economics Society</a>. Comments in DM.</p>
   <p>Email: <a href="mailto:gabors.da.contact@gmail.com">gabors.da.contact@gmail.com</a></p>
@@ -123,3 +123,22 @@ function searchWord() {
           row.insertCell(1).innerHTML = isEnglishSearch ? word.Hungarian : word.English;
           row.insertCell(2).innerHTML = word.Chapter;
           row.insertCell(3).innerHTML = `<a href="${word.ChapterLink}">Link</a>`;
+          chapterNumbers.add(word.Chapter);
+        });
+
+        // If only one chapter is found, show download button
+        if (chapterNumbers.size === 1) {
+          var chapterNumber = chapterNumbers.values().next().value;
+          downloadButton.href = `{{ site.baseurl }}/assets/chapters/chapter-${String(chapterNumber).padStart(2, '0')}-words.xlsx`;
+          downloadButton.style.display = 'inline-block';
+        }
+      }
+    }).catch(error => {
+      console.error('Error:', error);
+      var row = resultsTable.insertRow();
+      var cell = row.insertCell(0);
+      cell.colSpan = 4;
+      cell.innerHTML = 'An error occurred while fetching the data';
+    });
+}
+</script>
