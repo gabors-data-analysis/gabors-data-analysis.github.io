@@ -49,6 +49,16 @@ button:hover {
 #resultsTable tr:nth-child(even) {background-color: #f2f2f2;}
 
 #resultsTable tr:hover {background-color: #ddd;}
+
+#downloadButton {
+  display: none;
+  margin-top: 10px;
+  background-color: #541352;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
 </style>
 
 <div style="margin-bottom: 20px;">
@@ -70,12 +80,11 @@ button:hover {
     </thead>
     <tbody id="results"></tbody>
   </table>
+  <a id="downloadButton" href="#" download>Download Chapter Words</a>
 </div>
 
-<a id="downloadButton" style="display: none; margin-top: 10px; background-color: #541352; color: white; padding: 10px; border-radius: 4px; text-decoration: none;" href="#" download>Download Chapter Words</a>
-
-<div style="margin-top: 20px;">
-  <p>Created as part of the textbook chapter 01-12 translation project. Translation: Sarolta Rózsás, Academic Reviewer: Anna Bárdits, 
+<div style="margin-top: 60px;">
+  <p>Created as part of the textbook translation project for chapters 01-12. The team: Translator: Sarolta Rózsás, Academic Reviewer: Anna Bárdits, 
      Council of Advisors: Ágnes Szabó-Morvai (chair), Ádám Reiff, Daniel Horn, János Kiss-Hubert, István Boza, Anikó Biró, and many fellows 
      of the <a href="https://www.mktudegy.hu/">Hungarian Economics Society</a>. Comments in DM.</p>
   <p>Email: <a href="mailto:gabors.da.contact@gmail.com">gabors.da.contact@gmail.com</a></p>
@@ -104,4 +113,13 @@ function searchWord() {
         var row = resultsTable.insertRow();
         var cell = row.insertCell(0);
         cell.colSpan = 4;
-       
+        cell.innerHTML = 'No results found';
+      } else {
+        var chapterNumbers = new Set();
+        filteredData.forEach(word => {
+          var row = resultsTable.insertRow();
+          var isEnglishSearch = word.English.toLowerCase().includes(input);
+          row.insertCell(0).innerHTML = isEnglishSearch ? word.English : word.Hungarian;
+          row.insertCell(1).innerHTML = isEnglishSearch ? word.Hungarian : word.English;
+          row.insertCell(2).innerHTML = word.Chapter;
+          row.insertCell(3).innerHTML = `<a href="${word.ChapterLink}">Link</a>`;
