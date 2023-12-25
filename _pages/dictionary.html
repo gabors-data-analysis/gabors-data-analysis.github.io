@@ -5,7 +5,7 @@ title: English-Hungarian Data Analysis Dictionary
 redirect_from:
   - /dictionary.html
 ---
-
+ 
 
 <style>
 #searchInput {
@@ -51,13 +51,12 @@ button:hover {
 #resultsTable tr:hover {background-color: #ddd;}
 
 #downloadButton {
-  display: none;
-  margin-top: 10px;
-  background-color: #541352;
-  color: white;
+  background-color: #ffcf20; /* Button Color */
+  color: black;
   padding: 10px;
   border-radius: 4px;
   text-decoration: none;
+  display: none;
 }
 </style>
 
@@ -69,22 +68,24 @@ button:hover {
 <div>
   <input type="text" id="searchInput" placeholder="Type a word..." />
   <button onclick="searchWord()">Search</button>
-  <table id="resultsTable">
-    <thead>
-      <tr>
-        <th>Word</th>
-        <th>Translation</th>
-        <th>Chapter</th>
-        <th>Link</th>
-      </tr>
-    </thead>
-    <tbody id="results"></tbody>
-  </table>
-  <a id="downloadButton" href="#" download>Download Chapter Words</a>
+  <div style="display: flex; align-items: center; margin-top: 10px;">
+    <table id="resultsTable" style="margin-right: 10px;">
+      <thead>
+        <tr>
+          <th>Word</th>
+          <th>Translation</th>
+          <th>Chapter</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody id="results"></tbody>
+    </table>
+    <a id="downloadButton" href="#" download>Download Chapter Words</a>
+  </div>
 </div>
 
-<div style="margin-top: 40px;">
-  <p>Created as part of the textbook -- chapter 01-12 -- translation project. Translation team: Translator: Sarolta Rózsás, Academic Reviewer: Anna Bárdits, 
+<div style="margin-top: 20px;">
+  <p>Created as part of the textbook translation project (chapters 01-12). Translator: Sarolta Rózsás, Academic Reviewer: Anna Bárdits, 
      Council of Advisors: Ágnes Szabó-Morvai (chair), Ádám Reiff, Daniel Horn, János Kiss-Hubert, István Boza, Anikó Biró, and many fellows 
      of the <a href="https://www.mktudegy.hu/">Hungarian Economics Society</a>. Comments in DM.</p>
   <p>Email: <a href="mailto:gabors.da.contact@gmail.com">gabors.da.contact@gmail.com</a></p>
@@ -104,7 +105,7 @@ function searchWord() {
   resultsTable.innerHTML = ''; // Clear previous results
   downloadButton.style.display = 'none'; // Hide the button initially
 
-  fetch('{{ https://gabors-data-analysis.com  }}/assets/dictionary.json')
+  fetch('https://gabors-data-analysis.com/assets/dictionary.json')
     .then(response => response.json())
     .then(data => {
       var filteredData = data.filter(word => word.English.toLowerCase().includes(input) || word.Hungarian.toLowerCase().includes(input));
@@ -115,7 +116,6 @@ function searchWord() {
         cell.colSpan = 4;
         cell.innerHTML = 'No results found';
       } else {
-        var chapterNumbers = new Set();
         filteredData.forEach(word => {
           var row = resultsTable.insertRow();
           var isEnglishSearch = word.English.toLowerCase().includes(input);
@@ -123,15 +123,12 @@ function searchWord() {
           row.insertCell(1).innerHTML = isEnglishSearch ? word.Hungarian : word.English;
           row.insertCell(2).innerHTML = word.Chapter;
           row.insertCell(3).innerHTML = `<a href="${word.ChapterLink}">Link</a>`;
-          chapterNumbers.add(word.Chapter);
         });
 
-        // If only one chapter is found, show download button
-        if (chapterNumbers.size === 1) {
-          var chapterNumber = chapterNumbers.values().next().value;
-          downloadButton.href = `{{ site.baseurl }}/assets/chapters/chapter-${String(chapterNumber).padStart(2, '0')}-words.xlsx`;
-          downloadButton.style.display = 'inline-block';
-        }
+        // Show download button for the first chapter in the results
+        var firstChapterNumber = filteredData[0].Chapter;
+        downloadButton.href = `https://gabors-data-analysis.com/assets/chapters/chapter-${String(firstChapterNumber).padStart(2, '0')}-words.xlsx`;
+        downloadButton.style.display = 'inline-block';
       }
     }).catch(error => {
       console.error('Error:', error);
