@@ -17,19 +17,19 @@ redirect_from:
 
 button {
   padding: 10px 15px;
-  background-color: #541352FF;
+  background-color: #541352; /* Button Color */
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: darken(#541352, 10%);
 }
 
 #resultsTable {
-  width: 70%;
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -42,7 +42,7 @@ button:hover {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #3a5e8cFF;
+  background-color: #3a5e8c; /* Header Bar Color */
   color: white;
 }
 
@@ -51,20 +51,34 @@ button:hover {
 #resultsTable tr:hover {background-color: #ddd;}
 </style>
 
+<div style="margin-bottom: 20px;">
+  <p>This is an English-Hungarian dictionary for key terms in the Békés-Kézdi: 
+     <a href="https://gabors-data-analysis.com/getting-started">Data Analysis for Business, Economics, and Policy</a> textbook.</p>
+</div>
+
 <div>
   <input type="text" id="searchInput" placeholder="Type a word..." />
   <button onclick="searchWord()">Search</button>
   <table id="resultsTable">
     <thead>
       <tr>
-        <th>English</th>
-        <th>Hungarian</th>
+        <th>Word</th>
+        <th>Translation</th>
         <th>Chapter</th>
         <th>Link</th>
       </tr>
     </thead>
     <tbody id="results"></tbody>
   </table>
+</div>
+
+<a id="downloadButton" style="display: none; margin-top: 10px; background-color: #541352; color: white; padding: 10px; border-radius: 4px; text-decoration: none;" href="#" download>Download Chapter Words</a>
+
+<div style="margin-top: 20px;">
+  <p>Created as part of the textbook chapter 01-12 translation project. Translation: Sarolta Rózsás, Academic Reviewer: Anna Bárdits, 
+     Council of Advisors: Ágnes Szabó-Morvai (chair), Ádám Reiff, Daniel Horn, János Kiss-Hubert, István Boza, Anikó Biró, and many fellows 
+     of the <a href="https://www.mktudegy.hu/">Hungarian Economics Society</a>. Comments in DM.</p>
+  <p>Email: <a href="mailto:gabors.da.contact@gmail.com">gabors.da.contact@gmail.com</a></p>
 </div>
 
 <script>
@@ -77,7 +91,9 @@ document.getElementById('searchInput').addEventListener('keyup', function(event)
 function searchWord() {
   var input = document.getElementById('searchInput').value.toLowerCase();
   var resultsTable = document.getElementById('results');
+  var downloadButton = document.getElementById('downloadButton');
   resultsTable.innerHTML = ''; // Clear previous results
+  downloadButton.style.display = 'none'; // Hide the button initially
 
   fetch('{{ https://gabors-data-analysis.com  }}/assets/dictionary.json')
     .then(response => response.json())
@@ -88,22 +104,4 @@ function searchWord() {
         var row = resultsTable.insertRow();
         var cell = row.insertCell(0);
         cell.colSpan = 4;
-        cell.innerHTML = 'No results found';
-      } else {
-        filteredData.forEach(word => {
-          var row = resultsTable.insertRow();
-          row.insertCell(0).innerHTML = word.English;
-          row.insertCell(1).innerHTML = word.Hungarian;
-          row.insertCell(2).innerHTML = word.Chapter;
-          row.insertCell(3).innerHTML = `<a href="${word.ChapterLink}">Link</a>`;
-        });
-      }
-    }).catch(error => {
-      console.error('Error:', error);
-      var row = resultsTable.insertRow();
-      var cell = row.insertCell(0);
-      cell.colSpan = 4;
-      cell.innerHTML = 'An error occurred while fetching the data';
-    });
-}
-</script>
+       
