@@ -78,7 +78,7 @@ function searchWord() {
   var resultsTable = document.getElementById('results');
   resultsTable.innerHTML = ''; // Clear previous results
 
-  fetch('{{ site.baseurl }}/assets/dictionary.json')
+  fetch('{{ https://gabors-data-analysis.com  }}/assets/dictionary.json')
     .then(response => response.json())
     .then(data => {
       var filteredData = data.filter(word => word.English.toLowerCase().includes(input) || word.Hungarian.toLowerCase().includes(input));
