@@ -1,0 +1,45 @@
+---
+permalink: /dictionary
+layout: page
+title: English-Hungarian Data Analysis Dictionary
+redirect_from:
+  - /dictionary.html
+---
+
+<div>
+  <input type="text" id="searchInput" placeholder="Type a word..." />
+  <button onclick="searchWord()">Search</button>
+  <div id="results"></div>
+</div>
+
+<script>
+  document.getElementById('searchInput').addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+      searchWord();
+    }
+  });
+
+  function searchWord() {
+    var input = document.getElementById('searchInput').value.toLowerCase();
+    var resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = ''; // Clear previous results
+
+    fetch('{{ https://gabors-data-analysis.com }}/dictionary.json')
+      .then(response => response.json())
+      .then(data => {
+        var filteredData = data.filter(word => word.English.toLowerCase() === input || word.Hungarian.toLowerCase() === input);
+        if (filteredData.length === 0) {
+          resultsDiv.innerHTML = 'No results found';
+        } else {
+          filteredData.forEach(word => {
+            var p = document.createElement('p');
+            p.innerHTML = `English: ${word.English}, Hungarian: ${word.Hungarian}, Chapter: <a href="${word.ChapterLink}">${word.Chapter}</a>`;
+            resultsDiv.appendChild(p);
+          });
+        }
+      }).catch(error => {
+        console.error('Error:', error);
+        resultsDiv.innerHTML = 'An error occurred while fetching the data';
+      });
+  }
+</script>

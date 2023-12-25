@@ -6,40 +6,103 @@ redirect_from:
   - /dictionary.html
 ---
 
+<style>
+#searchInput {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#resultsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#resultsTable th, #resultsTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#resultsTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+#resultsTable tr:nth-child(even) {background-color: #f2f2f2;}
+
+#resultsTable tr:hover {background-color: #ddd;}
+</style>
+
 <div>
   <input type="text" id="searchInput" placeholder="Type a word..." />
   <button onclick="searchWord()">Search</button>
-  <div id="results"></div>
+  <table id="resultsTable">
+    <thead>
+      <tr>
+        <th>English</th>
+        <th>Hungarian</th>
+        <th>Chapter</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody id="results"></tbody>
+  </table>
 </div>
 
 <script>
-  document.getElementById('searchInput').addEventListener('keyup', function(event) {
-    if (event.key === 'Enter') {
-      searchWord();
-    }
-  });
-
-  function searchWord() {
-    var input = document.getElementById('searchInput').value.toLowerCase();
-    var resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = ''; // Clear previous results
-
-    fetch('{{ https://gabors-data-analysis.com }}/dictionary.json')
-      .then(response => response.json())
-      .then(data => {
-        var filteredData = data.filter(word => word.English.toLowerCase() === input || word.Hungarian.toLowerCase() === input);
-        if (filteredData.length === 0) {
-          resultsDiv.innerHTML = 'No results found';
-        } else {
-          filteredData.forEach(word => {
-            var p = document.createElement('p');
-            p.innerHTML = `English: ${word.English}, Hungarian: ${word.Hungarian}, Chapter: <a href="${word.ChapterLink}">${word.Chapter}</a>`;
-            resultsDiv.appendChild(p);
-          });
-        }
-      }).catch(error => {
-        console.error('Error:', error);
-        resultsDiv.innerHTML = 'An error occurred while fetching the data';
-      });
+document.getElementById('searchInput').addEventListener('keyup', function(event) {
+  if (event.key === 'Enter') {
+    searchWord();
   }
+});
+
+function searchWord() {
+  var input = document.getElementById('searchInput').value.toLowerCase();
+  var resultsTable = document.getElementById('results');
+  resultsTable.innerHTML = ''; // Clear previous results
+
+  fetch('{{ site.baseurl }}/assets/dictionary.json')
+    .then(response => response.json())
+    .then(data => {
+      var filteredData = data.filter(word => word.English.toLowerCase().includes(input) || word.Hungarian.toLowerCase().includes(input));
+
+      if (filteredData.length === 0) {
+        var row = resultsTable.insertRow();
+        var cell = row.insertCell(0);
+        cell.colSpan = 4;
+        cell.innerHTML = 'No results found';
+      } else {
+        filteredData.forEach(word => {
+          var row = resultsTable.insertRow();
+          row.insertCell(0).innerHTML = word.English;
+          row.insertCell(1).innerHTML = word.Hungarian;
+          row.insertCell(2).innerHTML = word.Chapter;
+          row.insertCell(3).innerHTML = `<a href="${word.ChapterLink}">Link</a>`;
+        });
+      }
+    }).catch(error => {
+      console.error('Error:', error);
+      var row = resultsTable.insertRow();
+      var cell = row.insertCell(0);
+      cell.colSpan = 4;
+      cell.innerHTML = 'An error occurred while fetching the data';
+    });
+}
 </script>
