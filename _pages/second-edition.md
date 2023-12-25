@@ -33,6 +33,7 @@ Some ideas are
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
 |  02     |variable naming                |   Add a few para on naming *variables*, some ideas and when it's really important. Extend 2.U1 or add 2.U2 |
 |  05 | now short CS |   Maybe add a case study on estimating arrival time |
+|  06 | t-test fro two samples |   One para and the formula for independent sample means |
 
 
 
@@ -45,7 +46,7 @@ Some ideas are
 | 10,21| dataviz | Add coeffplots |
 |10,22 | p-values |  Show tables with p-values and stars, add a para discussion ref back to p-hacking + both have pros and cons |
 |8 | attenuation |  Add example for attenuation bias from Feodora Teti customs data paper, real policy implications |
-
+|10 | Regression vs test | U.x Discuss how regression may be the same as testing [ideas](https://lindeloev.github.io/tests-as-linear/)
 
 ### Part 3
 
@@ -58,7 +59,7 @@ Some ideas are
 |  14 |Quant reg |  If MAE is target, qreg is a way. MAE vs RMSE discussion |
 |  14 |Correlated predictors |  In any predictive model (OLS, RF), when we have many predictors that are correlated, we have problems: varimp and interpretation. Ideas: PCA, groupings, drop|
 | 16 | SHAP for ML | For the machine learning bit, add SHAP in addition to VIP  |
-|  16 | ensemble for OLS |  For linear models in prediction, we can also have an ensemble model, ln+log |
+|  16 | ensemble for OLS |  For linear models in prediction, we can also have an ensemble model, ln+log (as assignment for cars) |
 |16 | cloud comp|  Add run time in google colabs / amazon cloud for Table 16.4 |
 
 ### Part 4
