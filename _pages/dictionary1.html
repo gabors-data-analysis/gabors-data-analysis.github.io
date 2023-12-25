@@ -1,9 +1,9 @@
 ---
-permalink: /dictionary
+permalink: /dictionary1
 layout: page
 title: English-Hungarian Data Analysis Dictionary
 redirect_from:
-  - /dictionary.html
+  - /dictionary1.html
 ---
 
 <div>
@@ -24,7 +24,7 @@ redirect_from:
     var resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = ''; // Clear previous results
 
-    fetch('{{ https://gabors-data-analysis.com }}/dictionary.json')
+    fetch('{{ https://gabors-data-analysis.com }}/assets/dictionary.json')
       .then(response => response.json())
       .then(data => {
         var filteredData = data.filter(word => word.English.toLowerCase() === input || word.Hungarian.toLowerCase() === input);
