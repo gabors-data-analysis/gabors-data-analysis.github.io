@@ -1,0 +1,84 @@
+---
+permalink: /dictionary-full
+layout: page
+title: Full English-Hungarian Data Analysis Dictionary
+redirect_from:
+  - /dictionary-full.html
+---
+
+<style>
+#searchInput {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+</style>
+
+<div>
+  <input type="text" id="searchInput" placeholder="Search..." />
+  <table id="dictionaryTable">
+    <thead>
+      <tr>
+        <th>English</th>
+        <th>Hungarian</th>
+        <th>Chapter</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table rows will be inserted here by JavaScript -->
+    </tbody>
+  </table>
+</div>
+
+<script>
+document.getElementById('searchInput').addEventListener('keyup', function(event) {
+  searchFunction(event.target.value.toLowerCase());
+});
+
+function searchFunction(searchValue) {
+    fetch('https://gabors-data-analysis.com/assets/dictionary.json')
+    .then(response => response.json())
+    .then(data => {
+      var tbody = document.getElementById('dictionaryTable').getElementsByTagName('tbody')[0];
+      tbody.innerHTML = ''; // Clear existing rows
+
+      data.forEach(entry => {
+        if (entry.English.toLowerCase().includes(searchValue) || entry.Hungarian.toLowerCase().includes(searchValue)) {
+          var row = tbody.insertRow();
+          row.insertCell(0).innerHTML = entry.English;
+          row.insertCell(1).innerHTML = entry.Hungarian;
+          row.insertCell(2).innerHTML = entry.Chapter;
+        }
+      });
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Initial load
+searchFunction('');
+</script>
