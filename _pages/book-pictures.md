@@ -13,7 +13,7 @@ redirect_from:
 
 ## Book
 
-Textbook cover with Angrist and Card after their Nobel prize
+Textbook cover
 
 ![Cover](/images/cover-full_hd.png){:height="90%" width="90%"}
 
@@ -63,7 +63,7 @@ Talk at VDSG 2023
 
 David Card (2021)
 
-![Card](/images/cambridge-card.png.){:height="90%" width="90%"}
+![Card](/images/cambridge-card.png){:height="90%" width="90%"}
 
 Textbook cover with Angrist and Card after their Nobel prize (2022)
 
@@ -79,7 +79,7 @@ Lucas Meyer (Microsoft) via LinkedIn (2023)
 
 Ian Schmutte (Georgia /Terry) via Twitter (2023)
 
-![Ian](/images/instructor-preps2.png.){:height="90%" width="90%"}
+![Ian](/images/instructor-preps2.png){:height="90%" width="90%"}
 
 
 
@@ -87,7 +87,7 @@ Ian Schmutte (Georgia /Terry) via Twitter (2023)
 
 Github page for case studies
 
-![Github](/images/github-gabors.png.){:height="90%" width="90%"}
+![Github](/images/github-gabors.png){:height="90%" width="90%"}
 
 
 
