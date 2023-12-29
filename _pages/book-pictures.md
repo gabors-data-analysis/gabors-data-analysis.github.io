@@ -61,27 +61,43 @@ Talk at VDSG 2023
 
 ## Feedback
 
-Textbook cover with Angrist and Card after their Nobel prize
+David Card (2021)
+
+![Card](/images/cambridge-card.png.){:height="90%" width="90%"}
+
+Textbook cover with Angrist and Card after their Nobel prize (2022)
 
 ![Cover Angrist and Card](/images/bekes_kezdi_angrist_card.jpg){:height="90%" width="90%"}
 
-Scott Cunningham
+Scott Cunningham via Twitter (2022)
 
 ![Scott](/images/scott-on-gabors-2022sept.twitter.jpg){:height="90%" width="90%"}
 
-Lucas Meyer (Microsoft)
+Lucas Meyer (Microsoft) via LinkedIn (2023)
 
 ![Lucas](/images/meyer-on-book-2023.png){:height="90%" width="90%"}
 
-Ian Schmutte (Georgia /Terry)
+Ian Schmutte (Georgia /Terry) via Twitter (2023)
 
 ![Ian](/images/instructor-preps2.png.){:height="90%" width="90%"}
 
 
 
+## Ecosystem
+
+Github page for case studies
+
+![Github](/images/github-gabors.png.){:height="90%" width="90%"}
+
+
 
 ## Festive
 
-Book at Christmas
+I ran a little game offering cake for people taking selfies with the book at ASSA 2023. 
+
+![Scott](/images/book-bday-candles.jpg){:height="90%" width="90%"}
+
+
+Book at Christmas 2023
 
 ![Xmas](/images/book-xmas-2023.jpg){:height="90%" width="90%"}
