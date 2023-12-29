@@ -15,7 +15,7 @@ redirect_from:
 
 Textbook cover with Angrist and Card after their Nobel prize
 
-![Cover](/images/cover-full_hd.jpg){:height="90%" width="90%"}
+![Cover](/images/cover-full_hd.png){:height="90%" width="90%"}
 
 Book and laptop with code
 
@@ -47,7 +47,7 @@ Gábor and Gábor
 ![Gabors](/images/gaborok-balaton1a.jpg){:height="90%" width="90%"}
 
 
-![Gabors](/images/gaborok-balaton2a.jpg){:height="90%" width="90%"}
+![Gabors](/images/gaborok-balaton2a.png){:height="90%" width="90%"}
 
 Talk at Corvinus in 2022
 ![Corvinus](/images/bekes-corvinus-talk2.jpg){:height="90%" width="90%"}
@@ -56,7 +56,7 @@ World Management Survey in Washington DC at WB
 ![WMS ](/images/wms-gabors-2022-emc.jpg){:height="90%" width="90%"}
 
 Talk at VDSG 2023
-![Vienna](/images/vdsg-highres_503825143.jpg){:height="90%" width="90%"}
+![Vienna](/images/vdsg-highres_503825143.png){:height="90%" width="90%"}
 
 
 ## Feedback
@@ -71,10 +71,11 @@ Scott Cunningham
 
 Lucas Meyer (Microsoft)
 
-![Lucas](/images/meyer-on-book-2023.jpg){:height="90%" width="90%"}
+![Lucas](/images/meyer-on-book-2023.png){:height="90%" width="90%"}
 
 Ian Schmutte (Georgia /Terry)
-![Ian](/images/instructor-preps2.jpg.jpg){:height="90%" width="90%"}
+
+![Ian](/images/instructor-preps2.jpg.){:height="90%" width="90%"}
 
 
 
