@@ -56,7 +56,7 @@ World Management Survey in Washington DC at WB
 ![WMS ](/images/wms-gabors-2022-emc.jpg){:height="90%" width="90%"}
 
 Talk at VDSG 2023
-![Vienna](/images/vdsg-highres_503825143.png){:height="90%" width="90%"}
+![Vienna](/images/vdsg-highres_503825143.jpeg){:height="90%" width="90%"}
 
 
 ## Feedback
@@ -75,7 +75,7 @@ Lucas Meyer (Microsoft)
 
 Ian Schmutte (Georgia /Terry)
 
-![Ian](/images/instructor-preps2.jpg.){:height="90%" width="90%"}
+![Ian](/images/instructor-preps2.png.){:height="90%" width="90%"}
 
 
 
