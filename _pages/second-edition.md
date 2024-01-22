@@ -55,8 +55,8 @@ Some ideas are
 
 | Chapter | Topic                         | Idea                                                                                         |
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
-|  13 | r vs python results|   Add a few para/section on discussing that results that are borne out of algos without a close solution, will vary across platforms |
-| 13  | loss               | Price prediction model trade-offs, loss function [Kayak](https://d3.harvard.edu/not-just-winging-it-predicting-airfare-at-kayak/)
+|  13 | r vs python results|   Add a few para/section on discussing that results that are borne out of algos without a close solution, will vary across platforms|
+| 13  | loss               | Price prediction model trade-offs, loss function [Kayak](https://d3.harvard.edu/not-just-winging-it-predicting-airfare-at-kayak/) |
 |  14 |var imp for OLS |  For linear models in prediction, add a few para, new section on variable importance |
 |  14 |ln OLS correction |  More on what smearing does, when it's better to use other formula, bias, MAE vs RMSE |
 |  14 |Quant reg |  If MAE is target, qreg is a way. MAE vs RMSE discussion |
@@ -75,9 +75,15 @@ Some ideas are
 |  21 | Good vs bad control|  Two example stories with discussion on controls, confounders, mechanism and collider|
 |  24 | Add a new DiD |  Event study, maybe add one of new DiD method using the same case study |
 
+## Slightly bigger issues I'm thinking about
+
+1. Chapter 10 is too large, and is set to be bigger. Some say 07-09 is too slow. Some magic rearrangement? 
+
+
+
 ## Case studies, data sources
 
-* [US Time share data](https://www.bls.gov/tus/data.htm) -- used [obesity gap by Economist](https://www.economist.com/finance-and-economics/2023/11/23/
+* [US Time share data](https://www.bls.gov/tus/data.htm) -- used [obesity gap by Economist](https://www.economist.com/finance-and-economics/2023/11/23/)
 
 
 
