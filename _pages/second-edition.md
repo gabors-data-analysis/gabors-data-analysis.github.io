@@ -21,6 +21,12 @@ The most important plan will be correcting typos and errors based on the [errata
 * improve unclear sentences 
 * add a few lines of explanation when needed
 
+## Broad issues I'm thinking about
+
+1. Using LLMs to answer statistical questions, write code, etc. is the biggest change since 1st ed. I now plan to add something related to all chapters + create online extra material. Not sure how. 
+2. Chapter 10 is too large, and is set to be bigger. Some say 07-09 is too slow. Some magic rearrangement? 
+
+
 ## New things, minor edits
 
 We plan some (not many) new things, typically a few extra paragraphs, maybe a short new section. 
@@ -74,11 +80,6 @@ Some ideas are
 |  21 | More on RDD |  A more detailed example on RDD, maybe even a short case study |
 |  21 | Good vs bad control|  Two example stories with discussion on controls, confounders, mechanism and collider|
 |  24 | Add a new DiD |  Event study, maybe add one of new DiD method using the same case study |
-
-## Slightly bigger issues I'm thinking about
-
-1. Chapter 10 is too large, and is set to be bigger. Some say 07-09 is too slow. Some magic rearrangement? 
-
 
 
 ## Case studies, data sources
