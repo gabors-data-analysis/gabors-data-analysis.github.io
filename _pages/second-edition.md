@@ -27,20 +27,20 @@ The most important plan will be correcting typos and errors based on the [errata
 2. Chapter 10 is too large, and is set to be bigger. Some say 07-09 is too slow. Some magic rearrangement? 
 
 
-## New things, minor edits
+## Small improvements and additions
 
-We plan some (not many) new things, typically a few extra paragraphs, maybe a short new section. 
+We plan several smaller improvements. Mostly adding some examples, better explanations. Also adding concepts based on feedback. Typically a few extra paragraphs, maybe a short new section. 
 
-Some ideas are
+Some ideas are:
 
 ### Part 1
 
 | Chapter | Topic                         | Idea                                                                                         |
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
-|  02     |variable naming                |   Add a few para on naming *variables*, some ideas and when it's really important. Extend 2.U1 or add 2.U2 |
-|  05 | now short CS |   Maybe add a case study on estimating arrival time |
-|  06 | t-test fro two samples |   One para and the formula for independent sample means |
-
+|  02  |variable naming         |   Add a few para on naming *variables*, some ideas and when it's really important. Extend 2.U1 or add 2.U2 |
+|  04  | Dashboards             | What is a good dashboard, creating a simple one in shiny/quarto to show conditional means with hotel data |
+|  05  | now short CS           |   Maybe add a case study on estimating arrival time with simulation |
+|  06  | t-test fro two samples |   One para and the formula for independent sample means |
 
 
 ### Part 2
@@ -80,6 +80,17 @@ Some ideas are
 |  21 | More on RDD |  A more detailed example on RDD, maybe even a short case study |
 |  21 | Good vs bad control|  Two example stories with discussion on controls, confounders, mechanism and collider|
 |  24 | Add a new DiD |  Event study, maybe add one of new DiD method using the same case study |
+
+## A new chapter
+
+I am thinking about a single new chapter called "Different shapes of Data". 
+
+* This would basically give a short intro to non-tabular (ie not numbers) data: 
+  * (i) text, 
+  * (ii) spatial data/maps, 
+  * (iii) network data. 
+* Give basic concepts, about 6-7 pages each including a short case study. 
+
 
 
 ## Case studies, data sources
