@@ -37,10 +37,11 @@ Some ideas are:
 
 | Chapter | Topic                         | Idea                                                                                         |
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
-|  02  |variable naming         |   Add a few para on naming *variables*, some ideas and when it's really important. Extend 2.U1 or add 2.U2 |
+|  02  |variable naming         | Add a few para on naming *variables*, some ideas and when it's really important. Extend 2.U1 or add 2.U2 |
+| 03   | 3.9, 3.U1              | Redo the theoretical distribution section. Bring pdf, cdf to main bit. Show pdf and cdf for normal, log-normal. Give more reason who they are useful when comparing cities, countries. Be more explicit re definitions of pareto, scale-free, power law, zipf's law. Replace pareto x axis | 
 |  04  | Dashboards             | What is a good dashboard, creating a simple one in shiny/quarto to show conditional means with hotel data |
-|  05  | now short CS           |   Maybe add a case study on estimating arrival time with simulation |
-|  06  | t-test fro two samples |   One para and the formula for independent sample means |
+|  05  | now short CS           | Maybe add a case study on estimating arrival time with simulation |
+|  06  | t-test fro two samples | One para and the formula for independent sample means |
 
 
 ### Part 2
