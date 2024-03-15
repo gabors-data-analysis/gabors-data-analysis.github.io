@@ -16,7 +16,7 @@ redirect_from:
 
 <div class="chapter" id="chapter-01" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
   <div style="flex: 1;">
-    <img src="/images/ch01-fig.png" alt="Chapter 01 Image" style="width: 100%; max-width: 200px;">
+    <img src="/images/chapter-images/ch01-fig.png" alt="Chapter 01 Image" style="width: 100%; max-width: 200px;">
   </div>
   <div style="flex: 2; padding-left: 20px;">
     <h3>Chapter 01: Origins of Data</h3>
@@ -36,7 +36,7 @@ The chapter starts by introducing **key concepts of data**. It then describes th
 
 <div class="chapter" id="chapter-02" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
   <div style="flex: 1;">
-    <img src="/images/ch02-fig.png" alt="Chapter 02 Image" style="width: 100%; max-width: 200px;">
+    <img src="/images/chapter-images/ch02-fig.png" alt="Chapter 02 Image" style="width: 100%; max-width: 200px;">
   </div>
   <div style="flex: 2; padding-left: 20px;">
     <h3>Chapter 02: Preparing Data for Analysis</h3>
