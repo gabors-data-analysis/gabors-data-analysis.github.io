@@ -13,14 +13,15 @@ redirect_from:
 
 <div class="chapters">
 
+<h2>Chapter 01: Origins of Data</h2>
+<hr>
 <div class="chapter" id="chapter-01" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
   <div style="flex: 1;">
     <img src="/images/chapter-images/ch01-fig.png" alt="Chapter 01 Image" style="width: 100%; max-width: 400px;">
   </div>
   <div style="flex: 2; padding-left: 20px;">
-    <h3>Chapter 01: Origins of Data</h3>
     <details>
-      <summary><strong>Chapter summary:</strong> This chapter is about data collection and data quality. <strong>MORE</strong></summary>
+      <summary><strong>Chapter summary:</strong> This chapter is about data collection and data quality.</summary>
       <p>This chapter starts by introducing <strong>key concepts of data</strong>. It then describes the most important <strong>methods of data collection</strong> used in business, economics, and policy analysis, such as <strong>web scraping</strong>, <strong>using administrative sources</strong>, and <strong>conducting surveys</strong>. We introduce aspects of data quality, such as <strong>validity and reliability of variables</strong> and <strong>coverage of observations</strong>. We discuss how to assess and link data quality to how the data was collected. We devote a section to <strong>Big Data</strong> to understand what it is and how it may differ from more traditional data. This chapter also covers <strong>sampling</strong>, including <strong>random sampling</strong> and potential biases due to <strong>noncoverage</strong> and <strong>nonresponse</strong>, as well as <strong>ethical issues</strong> and some <strong>good practices in data collection</strong>.</p>
     </details>
     <p>
@@ -35,14 +36,15 @@ redirect_from:
   </div>
 </div>
 
+<h2>Chapter 02: Preparing Data for Analysis</h2>
+<hr>
 <div class="chapter" id="chapter-02" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
   <div style="flex: 1;">
     <img src="/images/chapter-images/ch02-fig.png" alt="Chapter 02 Image" style="width: 100%; max-width: 400px;">
   </div>
   <div style="flex: 2; padding-left: 20px;">
-    <h3>Chapter 02: Preparing Data for Analysis</h3>
     <details>
-      <summary><strong>Chapter summary:</strong> This chapter is about preparing data for analysis: how to start working with data. <strong>MORE</strong></summary>
+      <summary><strong>Chapter summary:</strong> This chapter is about preparing data for analysis: how to start working with data.</summary>
       <p>First, we clarify some concepts: <strong>types of variables</strong>, <strong>types of observations</strong>, <strong>data tables</strong>, and <strong>datasets</strong>. We then turn to the concept of <strong>tidy data</strong>: data tables with the same kinds of observations. We discuss potential issues with observations and variables, and how to deal with those issues. We describe <strong>good practices for the process of data cleaning</strong> and discuss the additional <strong>challenges of working with Big Data</strong>.</p>
     </details>
     <p>
@@ -56,6 +58,8 @@ redirect_from:
     </p>
   </div>
 </div>
+
+<!-- Repeat the structure for additional chapters -->
 
 </div>
 
