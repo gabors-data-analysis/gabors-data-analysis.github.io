@@ -7,15 +7,22 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-.chapter-card {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 30px;
+/* General styles */
+.chapters {
+  background: #f0f0f0;
   padding: 20px;
+  border-radius: 15px;
+}
+
+.chapter-card {
   background: #ffffff;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   border-radius: 10px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding: 20px;
 }
 
 .chapter-card:hover {
@@ -35,48 +42,42 @@
 
 .chapter-summary details summary {
   cursor: pointer;
-}
-
-.chapter-title {
-  margin-top: 0;
-}
-
-
-
-/* Background for the chapters section */
-.chapters {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 15px;
-}
-
-/* Card styles with color */
-.chapter-card {
-  background: #ffffff; /* Light theme */
-  border-left: 5px solid #007bff; /* Color accent */
-}
-
-.chapter-title {
-  color: #007bff; /* Matching color for the title */
-  font-family: 'Georgia', serif; /* Example of a font change */
-  margin-bottom: 15px;
-}
-
-/* Summary and details font style */
-.chapter-summary details summary {
   font-weight: bold;
-  color: #333; /* Darker text for better readability */
+}
+
+.chapter-title {
+  font-family: 'Georgia', serif;
+  margin-bottom: 15px;
 }
 
 .chapter-summary p, .chapter-summary details {
   font-family: 'Arial', sans-serif;
-  color: #555; /* Slightly lighter text for the content */
 }
 
-/* Adjustments for icons */
 .icon {
   width: 30px;
   height: 30px;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+/* Part-specific colors */
+/* Part 1: Chapters 01-06 */
+.chapter-card:nth-child(-n+6) {
+  border-left: 5px solid #3a5e8c; /* Viridis blue */
+}
+
+/* Part 2: Chapters 07-12 */
+.chapter-card:nth-child(n+7):nth-child(-n+12) {
+  border-left: 5px solid #10a53d; /* Viridis green */
+}
+
+/* Part 3: Chapters 13-18 */
+.chapter-card:nth-child(n+13):nth-child(-n+18) {
+  border-left: 5px solid #541352; /* Viridis purple */
+}
+
+/* Part 4: Chapters 19-24 */
+.chapter-card:nth-child(n+19):nth-child(-n+24) {
+  border-left: 5px solid #ffcf20; /* Viridis yellow */
 }
