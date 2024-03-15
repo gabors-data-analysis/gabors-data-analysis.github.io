@@ -6,3 +6,37 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.chapter-card {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chapter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.chapter-card img {
+  max-width: 400px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.chapter-summary {
+  flex: 2;
+}
+
+.chapter-summary details summary {
+  cursor: pointer;
+}
+
+.chapter-title {
+  margin-top: 0;
+}
