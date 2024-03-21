@@ -1,0 +1,99 @@
+---
+permalink: /dictionary-hun
+layout: single
+classes: wide
+title: Full English-Hungarian Data Analysis Dictionary
+redirect_from:
+  - /dictionary-hun.html
+---
+
+<style>
+#searchInput {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #3a5e8c;
+  color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+</style>
+
+<div style="margin-bottom: 20px;">
+  <p>This is an English-Hungarian dictionary for key terms in the Békés-Kézdi: 
+     <a href="https://gabors-data-analysis.com/getting-started">Data Analysis for Business, Economics, and Policy</a> textbook.</p>
+</div>
+
+
+<div>
+  <input type="text" id="searchInput" placeholder="Search..." />
+  <table id="dictionaryTable">
+    <thead>
+      <tr>
+        <th>English</th>
+        <th>Hungarian</th>
+        <th>Chapter</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table rows will be inserted here by JavaScript -->
+    </tbody>
+  </table>
+</div>
+
+<div style="margin-top: 20px;">
+  <p>Created as part of the textbook translation project (chapters 01-12). Translator: Sarolta Rózsás, Academic Reviewer: Anna Bárdits, 
+     Council of Advisors: Ágnes Szabó-Morvai (chair), Ádám Reiff, Daniel Horn, János Kiss-Hubert, István Boza, Anikó Biró, and many fellows 
+     of the <a href="https://www.mktudegy.hu/">Hungarian Economics Society</a>. Comments in DM.</p>
+  <p>Email: <a href="mailto:gabors.da.contact@gmail.com">gabors.da.contact@gmail.com</a></p>
+</div>
+
+
+<script>
+document.getElementById('searchInput').addEventListener('keyup', function(event) {
+  searchFunction(event.target.value.toLowerCase());
+});
+
+function searchFunction(searchValue) {
+    fetch('https://gabors-data-analysis.com/assets/dictionary.json')
+    .then(response => response.json())
+    .then(data => {
+      var tbody = document.getElementById('dictionaryTable').getElementsByTagName('tbody')[0];
+      tbody.innerHTML = ''; // Clear existing rows
+
+      data.forEach(entry => {
+        if (entry.English.toLowerCase().includes(searchValue) || entry.Hungarian.toLowerCase().includes(searchValue)) {
+          var row = tbody.insertRow();
+          row.insertCell(0).innerHTML = entry.English;
+          row.insertCell(1).innerHTML = entry.Hungarian;
+          row.insertCell(2).innerHTML = entry.Chapter;
+        }
+      });
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Initial load
+searchFunction('');
+</script>
