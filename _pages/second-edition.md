@@ -38,10 +38,12 @@ Some ideas are:
 | Chapter | Topic                         | Idea                                                                                         |
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
 |  02  |variable naming         | Add a few para on naming *variables*, some ideas and when it's really important. Extend 2.U1 or add 2.U2 |
-| 03   | 3.9, 3.U1              | Redo the theoretical distribution section. Bring pdf, cdf to main bit. Show pdf and cdf for normal, log-normal. Give more reason who they are useful when comparing cities, countries. Be more explicit re definitions of pareto, scale-free, power law, zipf's law. Redo Pareto x axis | 
+|  03  | HHI | In addition to descriptive stats, add HHI / enthropy. |
+| 03   | 3.9, 3.U1              | Redo the theoretical distribution section. Bring pdf, cdf to main bit. Show pdf and cdf for normal, log-normal. Give more reason who they are useful when comparing cities, countries. Be more explicit re definitions of pareto, scale-free, power law, zipf's law. Redo Pareto x axis. Maybe show how HHI looks for simplest power law | 
 |  04  | Dashboards             | What is a good dashboard, creating a simple one in shiny/quarto to show conditional means with hotel data |
 |  05  | now short CS           | Maybe add a case study on estimating arrival time with simulation |
 |  06  | t-test fro two samples | One para and the formula for independent sample means |
+|  06  | super many tests| Two paras [GWAS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2865585/#:~:text=Manhattan%20plots%20represent%20the%20P,the%20decimal%20point%20plus%20one), [Manhattan graph]()|
 
 
 ### Part 2
@@ -71,12 +73,14 @@ Some ideas are:
 | 16 | SHAP for ML | For the machine learning bit, add SHAP in addition to VIP  |
 |  16 | ensemble for OLS |  For linear models in prediction, we can also have an ensemble model, ln+log (as assignment for cars) |
 |16 | cloud comp|  Add run time in google colabs / amazon cloud for Table 16.4 |
+| 18 | Mention Chronos | One para + link to LLM based TS predictor [Chronos](https://github.com/amazon-science/chronos-forecasting)
 
 ### Part 4
 
 | Chapter | Topic                         | Idea                                                                                         |
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
 |  19 | Intro to causality | [friedmans-thermostat](https://worthwhile.typepad.com/worthwhile_canadian_initi/2010/12/milton-friedmans-thermostat.html) |
+|  20  | Mendelian randomization | Few para on the idea. Example of gene for being fat|
 |  19 | SUTVA |  2 para -- Explicit about SUTVA |
 |  21 | More on RDD |  A more detailed example on RDD, maybe even a short case study |
 |  21 | Good vs bad control|  Two example stories with discussion on controls, confounders, mechanism and collider|
