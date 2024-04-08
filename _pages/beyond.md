@@ -11,15 +11,13 @@ redirect_from:
 ___
 
 
-## What's beyond? 
 
-
-### Advanced stuff
+## What's beyond? I. Advanced stuff
 
 Our textbook is not a pamphlet, you know it's 750 pages. But it is comprehensive so will abviously miss a great deal of methods, tools and ideas. Here we collect some brief pointers to more advanced ideas that could be useful for an analyst. 
 
 
-### New ideas, changed views 
+## What's beyond? II.  New ideas, changed views 
 
 When we were students, textbooks seemed like the collection of ultimate and absolute truth. What's in a textbook *must* be right. But well, not really. 
 
@@ -29,6 +27,7 @@ Similarly in statistics, machine learning, and causal inference, we have known O
 
 Some stuff in the textbook is close to the frontier of knowledge. But this fontier might change. So, here we'll collect a bunch of very short dicussion of emerging ideas. 
 
+# Beyond
 
 ## Part I
 
