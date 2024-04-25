@@ -48,6 +48,11 @@ Some stuff in the textbook is close to the frontier of knowledge. But this fonti
 
 ## Part III
 
+### Chapter 14
+
+* Logit vs ML by  Christodoulou, Ma, Collins, Steyerberg, Verbakel, and Van Calster, [A systematic review shows no performance benefit of machine learning over logistic regression for clinical prediction models](), Journal of Clinical Epidemiology, Volume 110, 2019, Pages 12-22,
+
+
 ### Chapter 16
 
 * On the partial dependence plots, you may check out both a very useful review of [ R's pdp package](https://bgreenwell.github.io/pdp/articles/pdp.html) as well as Christoph Molnar's [Interpretable ML book](https://christophm.github.io/interpretable-ml-book/pdp.html).
@@ -82,4 +87,4 @@ Some stuff in the textbook is close to the frontier of knowledge. But this fonti
 
 
 
-* Sythetic controls and difference in differences evolved separately. But recently a marriage of convenience is taking place. In a 2021 AER paper by Arkhangelsky, Athey, Hirshberg, Imbens and Wager [Synthetic Difference-in-Differences](https://www.aeaweb.org/articles?id=10.1257/aer.20190159) offered a way to think about them together. Also, Susan Athey has a great [youtube video presenting it](https://www.youtube.com/watch?v=r2DzGAigTl4). [MORE]
+* Sythetic controls and difference in differences evolved separately. But recently a marriage of convenience is taking place. In a 2021 AER paper by Arkhangelsky, Athey, Hirshberg, Imbens and Wager [Synthetic Difference-in-Differences](https://www.aeaweb.org/articles?id=10.1257/aer.20190159) offered a way to think about them together. Also, Susan Athey has a great [youtube video presenting it](https://www.youtube.com/watch?v=r2DzGAigTl4). [MORE] On SC, see also  Abadie and  ives-i-Bastida [Synthetic Controls in Action](https://arxiv.org/pdf/2203.06279.pdf)

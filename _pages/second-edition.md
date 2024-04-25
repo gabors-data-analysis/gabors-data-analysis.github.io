@@ -12,7 +12,7 @@ redirect_from:
 {% include base_path %}
 
 
-The second edition, planned for early 2025 will focus on correcting errors, improving some explanations and adding minor edits overall. There may be a single new chapter.
+The second edition, planned to be out late 2025 will focus on correcting errors, improving some explanations and adding minor edits overall. There may be a single new chapter.
 
 ## Error correction
 
@@ -21,10 +21,22 @@ The most important plan will be correcting typos and errors based on the [errata
 * improve unclear sentences 
 * add a few lines of explanation when needed
 
+## Data Analysis with AI
+
+Each chapter will get a new section, which talks about how AI (LLM) might help one or more methods in the chapter. A section will be 0.5 to 1 page long and include a link to a chat. Examples
+
+* (Chapter 03) Data discovery with AI. We show a dataset and chat about variables, possible wrnagling and cleaning issues. 
+* (Chapter 06) Look for statistics with AI. We discussed the t-test in the material. Now we ask how to run tests in more complicated scenarios
+
+## Beyond
+
+Each section will get a *Beyond* section replacing *Further readings*. This will be somewhat longer and link to an ever growing online version called [Beyond: Directions to Frontier](https://gabors-data-analysis.com/beyond). Basically an extra 1-2 paragraphs focusing on helping readers towards what's new. 
+
+
 ## Broad issues I'm thinking about
 
-1. Using LLMs to answer statistical questions, write code, etc. is the biggest change since 1st ed. I now plan to add something related to all chapters + create online extra material. Not sure how. 
-2. Chapter 10 is too large, and is set to be bigger. Some say 07-09 is too slow. Some magic rearrangement? 
+1. Chapter 10 is too large, and is set to be bigger. Some say 07-09 is too slow. Some magic rearrangement? 
+2. More maths. Some users advised to add more derivation to Under the Hood sections to avoid the need for another textbook in more advanced metrics classes. Okay, which ones?
 
 
 ## Small improvements and additions
@@ -38,12 +50,10 @@ Some ideas are:
 | Chapter | Topic                         | Idea                                                                                         |
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
 |  02  |variable naming         | Add a few para on naming *variables*, some ideas and when it's really important. Extend 2.U1 or add 2.U2 |
-|  03  | HHI | In addition to descriptive stats, add HHI / enthropy. |
-| 03   | 3.9, 3.U1              | Redo the theoretical distribution section. Bring pdf, cdf to main bit. Show pdf and cdf for normal, log-normal. Give more reason who they are useful when comparing cities, countries. Be more explicit re definitions of pareto, scale-free, power law, zipf's law. Redo Pareto x axis. Maybe show how HHI looks for simplest power law | 
+| 03   | 3.9, 3.U1              | Redo the theoretical distribution section. Bring pdf, cdf to main bit. Show pdf and cdf for normal, log-normal. Give more reason who they are useful when comparing cities, countries. Be more explicit re definitions of pareto, scale-free, power law, zipf's law. Redo Pareto x axis | 
 |  04  | Dashboards             | What is a good dashboard, creating a simple one in shiny/quarto to show conditional means with hotel data |
 |  05  | now short CS           | Maybe add a case study on estimating arrival time with simulation |
 |  06  | t-test fro two samples | One para and the formula for independent sample means |
-|  06  | super many tests| Two paras [GWAS](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2865585/#:~:text=Manhattan%20plots%20represent%20the%20P,the%20decimal%20point%20plus%20one), [Manhattan graph]()|
 
 
 ### Part 2
@@ -73,15 +83,14 @@ Some ideas are:
 | 16 | SHAP for ML | For the machine learning bit, add SHAP in addition to VIP  |
 |  16 | ensemble for OLS |  For linear models in prediction, we can also have an ensemble model, ln+log (as assignment for cars) |
 |16 | cloud comp|  Add run time in google colabs / amazon cloud for Table 16.4 |
-| 18 | Mention Chronos | One para + link to LLM based TS predictor [Chronos](https://github.com/amazon-science/chronos-forecasting)
 
 ### Part 4
 
 | Chapter | Topic                         | Idea                                                                                         |
 | ------- | ------------------------------|--------------------------------------------------------------------------------------------------------|
 |  19 | Intro to causality | [friedmans-thermostat](https://worthwhile.typepad.com/worthwhile_canadian_initi/2010/12/milton-friedmans-thermostat.html) |
-|  20  | Mendelian randomization | Few para on the idea. Example of gene for being fat|
 |  19 | SUTVA |  2 para -- Explicit about SUTVA |
+| 20   | more on A/B test | Add a bit more on experiments in large companies like [UBER Pool](https://www.researchgate.net/publication/357150412_Uber_Express_A_Case_of_Study) more [source1](https://experimentguide.com/wp-content/uploads/TrustworthyOnlineControlledExperiments_PracticalGuideToABTesting_Chapter1.pdf) [Microsoft 2009](https://exp-platform.com/Documents/ExPThinkWeek2009Public.pdf), [Kohavi HBR](https://hbsp.harvard.edu/product/R1705E-PDF-ENG?Ntt=The%20Surprising%20Power%20of%20Online%20Experiments)
 |  21 | More on RDD |  A more detailed example on RDD, maybe even a short case study |
 |  21 | Good vs bad control|  Two example stories with discussion on controls, confounders, mechanism and collider|
 |  24 | Add a new DiD |  Event study, maybe add one of new DiD method using the same case study |
