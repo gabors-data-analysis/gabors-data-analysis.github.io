@@ -1,10 +1,14 @@
 ---
+layout: single
+classes: wide
 permalink: /magyar-kiadas/
 title: "Adatelemzés üzleti, közgazdasági és szakpolitikai döntésekhez"
 toc: false
-author_profile: false
+author_profile: true
 redirect_from:
+  - /md/
   - "/magyar-kiadas.html"
+    - /magyar-kiadas.html
 ---
 
 
@@ -12,7 +16,7 @@ redirect_from:
 
 Békés Gábor és Kézdi Gábor (2024) Adatelemzés üzleti, közgazdasági és szakpolitikai döntésekhez. 
 
-Fordította: Rózsás Sarolta. Szaklektor: Bárdits Anna. Alinea kiadó: Budapest. 
+Fordította: Rózsás Sarolta. Szaklektor: Bárdits Anna. Kiadja az Alinea kiadó, Budapest. 
 
 A könyv kiadását a Budapesti Corvinus Egyetem, a HUN-REN KRTK és a Concorde támogatta. Köszönjük az MKE és tagjainak segítségét. 
 
