@@ -1,14 +1,11 @@
 ---
-layout: single
-classes: wide
-permalink: /magyar-kiadas/
+permalink: /magyar-kiadas
 title: "Adatelemzés üzleti, közgazdasági és szakpolitikai döntésekhez"
+classes: wide
 toc: false
-author_profile: true
+author_profile: false
 redirect_from:
-  - /md/
-  - "/magyar-kiadas.html"
-    - /magyar-kiadas.html
+  - /magyar-kiadas.html
 ---
 
 
