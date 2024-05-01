@@ -35,9 +35,9 @@ Each section will get a *Beyond* section replacing *Further readings*. This will
 
 ## Broad issues I'm thinking about
 
-1. Chapter 10 is too large, and is set to be bigger. Some say 07-09 is too slow. Some magic rearrangement? 
+1. Chapter 10 is too large, and is set to be bigger. Some say 07-09 is too slow. Some magic rearrangement: merge 07 and 08, and cut 10? 
 2. More maths. Some users advised to add more derivation to Under the Hood sections to avoid the need for another textbook in more advanced metrics classes. Okay, which ones?
-
+3. Add 2-3 case studies on evnvironment, finance using data from Asia-Pacific
 
 ## Small improvements and additions
 
@@ -55,7 +55,6 @@ Some ideas are:
 |  05  | now short CS           | Maybe add a case study on estimating arrival time with simulation |
 |  06  | t-test fro two samples | One para and the formula for independent sample means |
 
-
 ### Part 2
 
 | Chapter | Topic                         | Idea                                                                                         |
@@ -68,6 +67,7 @@ Some ideas are:
 |10 | Regression vs test | U.x Discuss how regression may be the same as testing [ideas](https://lindeloev.github.io/tests-as-linear/)
 |10 | Hard q on confounders | Suppose I have two random variables, y and x. If I’m allowed to construct a third random variable z, I can guarantee that a regression y = beta1 * x + beta2 * z will yield any value for beta1 I want [Source](https://x.com/johnjhorton/status/1737148357582221543?t=i1hkm6zMfpH6P0pwViddjw&s=03) |
 |10  |Exercise | Read and discuss [obesity gap by Economist](https://www.economist.com/finance-and-economics/2023/11/23/the-obesity-pay-gap-is-worse-than-previously-thought) |
+| 10   | Blinder-Oaxaca decomposition | Blinder-Oaxaca-Kitagwa -- decomposing gender gap with education and age |
 |12 | What is seasonality really | Seasonality as human behavior. Example: [Interest over time on Google Trends for Diet](https://trends.google.com/trends/explore/TIMESERIES/1704148800?hl=en-GB&tz=-60&date=all&geo=US&hl=en-GB&q=Diet&sni=3)
 
 ### Part 3
