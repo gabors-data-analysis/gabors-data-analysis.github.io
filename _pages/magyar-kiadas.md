@@ -19,53 +19,39 @@ Fordította: Rózsás Sarolta. Szaklektor: Bárdits Anna. Kiadja az Alinea kiad�
 
 A könyv kiadását a Budapesti Corvinus Egyetem, a HUN-REN KRTK és a Concorde támogatta. Köszönjük az MKE és tagjainak segítségét. 
 
-Megvásárolható május elejétől!
+Megvásárolható május elejétől az [Alinea Kiadótól](https://www.alinea.hu/adatelemzes)  !
 
 ## Angol magyar szótár
 
 [Angol-magyar szakszótár ITT elérhető](/dictionary-hun.html)
 
 ## Könyvbemutató: Békés Gábor - Kézdi Gábor: Adatelemzés
-Dátum: 2024. május 15. 17 óra.
 
-Helyszín: Budapesti Corvinus Egyetem, xx terem
+**Dátum: 2024. május 15. 17 óra.**
 
-A könyv a Cambridge University Pressnél megjelent tankönyv fordítása, amelyet a Corvinus volt diákjai írtak, és amelyből a világ 30 országában több mint 120 egyetemen oktatnak.  Tanítják például New York, San Francisco, Ann Arbor, Torontó, London,  Amszetrdam, Milánó, Bécs, Koppenhága, Tokió, Kuala Lumpur diákságának és a persze ott van már a Corvinuson is. Az angol kiadás első fele most jelenik meg magyarul. 
+*Helyszín: Budapesti Corvinus Egyetem, 1093 Budapest, Fővám tér. 9. Főépület  E330 terem.*
 
-A könyv először a helyszínen lesz megvásárolható!
+A könyv a Cambridge University Pressnél megjelent tankönyv fordítása, amelyet a Corvinus volt diákjai írtak, és amelyből a világ 30 országában több mint 200 egyetemen oktatnak.  Tanítják például New York, San Francisco, Ann Arbor, Toronto, London,  Amsterdam, Milánó, Bécs, Koppenhága, Tokió, Kuala Lumpur diákságának és a persze ott van már a Corvinuson is. Az angol kiadás első fele most jelenik meg magyarul. 
+
+A könyv már megrendelhető és a helyszínen kedvezményesen is megvásárolható az [Alinea Kiadótól](https://www.alinea.hu/adatelemzes)  
+
+Részvételi szándékát [itt jelezze](https://docs.google.com/forms/d/e/1FAIpQLSet4Q_eYMmzixzMKo06nh0sHjw7hBbitOw03789eptFjw2_Yg/viewform?usp=sf_link). 
+
 
 
 ### Program:
-
 17:00-17:10 - Megnyitó, köszöntő: Major Klára (BCE Közgazdasági Intézet, intézetvezető)
 
-17:10-17:30 - Beszélgetés az egyik szerzővel: Horn Dániel (BCE Közgazdasági Intézet, docens) beszélget Békés Gáborral (CEU Közgadasági Tanszék, docens).
+17:10-17:30 - Beszélgetés az egyik szerzővel: Békés Gáborral (CEU Közgazdasági Tanszék, docens) Horn Dániel (BCE Közgazdasági Intézet, docens) beszélget.
 
 17:30-18:30 - Kerekasztal-beszélgetés az üzleti és szakpolitikai adatelemzésről, a mesterséges intelligenciáról és általában az adattudomány üzleti felhasználásáról.
 
 Moderátor: Békés Gábor
-
 Résztvevők: 
 * Bodnár Viktória - IFUA Horváth ügyvezető partnere, Corvinus tanára;
 * Duronelly Péter - Telekom adatelemző csoportvezetője;
 * Fazekas Dóra - Cambridge Econometrics magyarországi vezetője;
 * Vargha Simon - Google Cloud AI vezető adatelemzője. 
 
-18:30-19:00 - Állófogadás
-
-Informális környezetben további beszélgetés és networking a résztvevőkkel.
-
-
-## Korábbi események
-
-### Rövid könyvbemutató magyarul, MKE 2021
-
-2021 december 20-án a Magyar Közgazdaságtudományi Egyesület tartott egy megemlékező ülést Kézdi Gáborról. Ennek keretében tartottam ezt a kis bemutatót. 
-
-<object data="https://github.com/gabors-data-analysis/gabors-data-analysis.github.io/blob/master/files/mke-bekes-2021-12-20a.pdf" width="1000" height="1000" type='application/pdf'></object>
-
-
-<object data="https://drive.google.com/file/d/1sREBJSRosoXRKZbrCS8Ifbo8jKrFzolz/view?usp=sharing" width="6000" height="6000" type='application/pdf'></object>
-
-
+18:30-19:00 - Informális környezetben további beszélgetés és networking a résztvevőkkel, pogácsával és üdítővel.
 
