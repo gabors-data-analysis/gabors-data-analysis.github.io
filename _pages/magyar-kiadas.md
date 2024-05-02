@@ -47,6 +47,7 @@ Részvételi szándékát [itt jelezze](https://docs.google.com/forms/d/e/1FAIpQ
 17:30-18:30 - Kerekasztal-beszélgetés az üzleti és szakpolitikai adatelemzésről, a mesterséges intelligenciáról és általában az adattudomány üzleti felhasználásáról.
 
 Moderátor: Békés Gábor
+
 Résztvevők: 
 * Bodnár Viktória - IFUA Horváth ügyvezető partnere, Corvinus tanára;
 * Duronelly Péter - Telekom adatelemző csoportvezetője;
@@ -66,5 +67,5 @@ Behind the book  [Arieda Muco on Medium](https://medium.com/ceu-economic-threads
 
 ### Magyarul
 
-Prospero Könyvek vezetőjével, [Janzer Frigyessel] (https://www.youtube.com/watch?v=HXzVsnOM2oM&list=PL6LGnk3aSVOj-N-e9qAnSQGHNL-YcpW8c&index=3) beszélgetünk a könyv bizniszről. 
+Prospero Könyvek vezetőjével, [Janzer Frigyessel](https://www.youtube.com/watch?v=HXzVsnOM2oM&list=PL6LGnk3aSVOj-N-e9qAnSQGHNL-YcpW8c&index=3) beszélgetünk a könyv bizniszről. 
 
