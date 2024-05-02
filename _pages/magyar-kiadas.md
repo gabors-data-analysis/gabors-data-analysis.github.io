@@ -55,3 +55,16 @@ Résztvevők:
 
 18:30-19:00 - Informális környezetben további beszélgetés és networking a résztvevőkkel, pogácsával és üdítővel.
 
+## Többet akarsz hallani?
+
+### Angolul
+Scott Cunningham [Mixtape podcast interview](https://economics.ceu.edu/article/2023-08-28/listen-interview-gabor-bekes-podcast-series-mixtape-scott) and [HERE](https://causalinf.substack.com/p/s2e26-interview-with-gabor-bekes) -- Economists, textbook authors talk life and economics
+
+Million dollar bookclub [Mike Fallat interview](https://blog.milliondollarbookagency.com/gabor-bekes-author-of-data-analysis-for-business-economics-and-policy/) and [HERE]() -- How is this useful for enterpreneurs?
+
+Behind the book  [Arieda Muco on Medium](https://medium.com/ceu-economic-threads/behind-the-book-interview-with-g%C3%A1bor-b%C3%A9k%C3%A9s-1cee945f75a8) -- CEU colleague's deep dive
+
+### Magyarul
+
+Prospero Könyvek vezetőjével, [Janzer Frigyessel] (https://www.youtube.com/watch?v=HXzVsnOM2oM&list=PL6LGnk3aSVOj-N-e9qAnSQGHNL-YcpW8c&index=3) beszélgetünk a könyv bizniszről. 
+
