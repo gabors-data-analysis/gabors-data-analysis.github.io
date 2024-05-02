@@ -39,6 +39,13 @@ Each section will get a *Beyond* section replacing *Further readings*. This will
 2. More maths. Some users advised to add more derivation to Under the Hood sections to avoid the need for another textbook in more advanced metrics classes. Okay, which ones?
 3. Add 2-3 case studies on evnvironment, finance using data from Asia-Pacific
 
+## Data Science extra
+
+I'm planning to increase the coverage of key "data science" tools, focusing on pre-analysis stuff. Some of this are alreday in the book, APIs, wrangling, transforming text to bag of words. But I plan to expand on them and spend more time on selected elements. David Card suggested to focus on join, so we will... 
+
+What I plan is an online material focusing on a dozen issues, often expanding what is mentioned in the book. Currently I plan: API, combing datasets, entitity resolution, basics of SQL, date and time, data storage (parquet, etc). Ideas? Suggestions? Ping me. 
+
+
 ## Small improvements and additions
 
 We plan several smaller improvements. Mostly adding some examples, better explanations. Also adding concepts based on feedback. Typically a few extra paragraphs, maybe a short new section. 
