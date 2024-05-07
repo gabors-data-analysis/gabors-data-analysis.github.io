@@ -69,3 +69,12 @@ Behind the book  [Arieda Muco on Medium](https://medium.com/ceu-economic-threads
 
 Prospero Könyvek vezetőjével, [Janzer Frigyessel](https://www.youtube.com/watch?v=HXzVsnOM2oM&list=PL6LGnk3aSVOj-N-e9qAnSQGHNL-YcpW8c&index=3) beszélgetünk a könyv bizniszről. 
 
+## Háttér
+
+### Országok (37)
+
+* Amerika (8): Kanada, USA, Mexikó, Chile, Brazilia, El Salvador, Kolumbia, Peru
+* Európa (14): UK, Írország, Hollandia, Belgium, Dánia, Svédország, Finnország, Németország, Svájc, Franciaország, Spanyolország, Olaszország, Ausztria, Magyarország, Görögorszég
+* Ázsia-Pacific (11): Ausztrália, Új-Zéland, Japán, Kína, Dél-Korea, Szingapúr, Malajzia, India, Bangaldesh, Pakisztán, Vietnám
+* Közel-Kelet és Afrika (4): Izrael, Szaud-Arábia, Szíria, UAE
+
