@@ -94,6 +94,7 @@ Many of you, dear readers, are either teaching or studying metrics, and look for
 * Baseball: [Sean Lahman Baseball collection](http://www.seanlahman.com/baseball-archive/statistics/)
 * Baseball: [Baseball-refernce](https://www.baseball-reference.com/)
 * Tennis: [tennis-data.co.uk](http://www.tennis-data.co.uk/data.php)
+* Football -- a Python package to get [transfermarkt datasets](https://github.com/dcaribou/transfermarkt-datasets)
 
 ## Transport, travel, commute
 * [Open flights data](https://openflights.org/data.html) -- flight routes, airport locations. Data for 2014-2017 only. 
