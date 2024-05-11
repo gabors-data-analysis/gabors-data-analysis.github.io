@@ -1,5 +1,5 @@
 ---
-permalink: /magyar-kiadas
+permalink: /magyar-kiadas/
 title: "Adatelemzés üzleti, közgazdasági és szakpolitikai döntésekhez"
 classes: wide
 toc: false
