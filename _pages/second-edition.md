@@ -28,6 +28,8 @@ Each chapter will get a new section, which talks about how AI (LLM) might help o
 * (Chapter 03) Data discovery with AI. We show a dataset and chat about variables, possible wrnagling and cleaning issues. 
 * (Chapter 06) Look for statistics with AI. We discussed the t-test in the material. Now we ask how to run tests in more complicated scenarios
 
+I'm still thinkin about the best pedagogical approach. 
+
 ## Beyond
 
 Each section will get a *Beyond* section replacing *Further readings*. This will be somewhat longer and link to an ever growing online version called [Beyond: Directions to Frontier](https://gabors-data-analysis.com/beyond). Basically an extra 1-2 paragraphs focusing on helping readers towards what's new. 
@@ -37,18 +39,19 @@ Each section will get a *Beyond* section replacing *Further readings*. This will
 
 1. Chapter 10 is too large, and is set to be bigger. Some say 07-09 is too slow. Some magic rearrangement: merge 07 and 08, and cut 10? 
 2. More maths. Some users advised to add more derivation to Under the Hood sections to avoid the need for another textbook in more advanced metrics classes. Okay, which ones?
-3. Add 2-3 case studies on evnvironment, finance using data from Asia-Pacific
-
-## Data Science extra
-
-I'm planning to increase the coverage of key "data science" tools, focusing on pre-analysis stuff. Some of this are alreday in the book, APIs, wrangling, transforming text to bag of words. But I plan to expand on them and spend more time on selected elements. David Card suggested to focus on join, so we will... 
-
-What I plan is an online material focusing on a dozen issues, often expanding what is mentioned in the book. Currently I plan: API, combing datasets, entitity resolution, basics of SQL, date and time, data storage (parquet, etc). Ideas? Suggestions? Ping me. 
+3. Case studies: Add 2-3 case studies. 
+  * topics: climate/evnvironment, finance 
+  * region: Asia/Pacific, Africa / Middle East
 
 
 ## Improvements and additions
 
-We plan several smaller improvements. Mostly adding some examples, better explanations. Also adding concepts based on feedback. Typically a few extra paragraphs, maybe a short new section. A few broader changes are denoted with **bold**. 
+We plan several smaller improvements. Mostly adding some examples, better explanations. Also adding concepts based on feedback. Typically a few extra paragraphs, maybe a short new section.
+
+ A few broader changes are denoted with **bold**: 
+* Frisch-Waughn-Lowell theorem
+* Prediction model interpretability
+* Staggered Diff-in-diffs (+ more discussion on design)
 
 ### Part 1
 
@@ -86,7 +89,7 @@ We plan several smaller improvements. Mostly adding some examples, better explan
 | 14 |ln OLS correction |  More on what smearing does, when it's better to use other formula, bias, MAE vs RMSE |
 | 14 |Quant reg |  If MAE is target, qreg is a way. MAE vs RMSE discussion |
 | 14 |Correlated predictors |  In any predictive model (OLS, RF), when we have many predictors that are correlated, we have problems: varimp and interpretation. Ideas: PCA, groupings, drop|
-| 16 | **interpretability, shap** | SHAP for ML. For the machine learning bit, add SHAP in addition to VIP  |
+| 16 | **interpretability** | marginal effects / SHAP for ML. For the machine learning bit, consider SHAP, other methods in addition to VIP  |
 | 16 | ensemble for OLS |  For linear models in prediction, we can also have an ensemble model, ln+log (as assignment for cars) |
 | 16 | cloud comp|  Add run time in google colabs / amazon cloud for Table 16.4 |
 
@@ -101,6 +104,13 @@ We plan several smaller improvements. Mostly adding some examples, better explan
 |  21 | More on RDD |  A more detailed example on RDD, maybe even a short case study |
 |  21 | Good vs bad control|  Two example stories with discussion on controls, confounders, mechanism and collider|
 |  24 | **Staggered DiD** |  Event study, maybe add one of new DiD method using the same football case study. One solution is bacon-goodman later treated as control.  |
+
+
+## Data Science extra
+
+I'm planning to increase the coverage of key "data science" tools, focusing on pre-analysis stuff. Some of this are alreday in the book, APIs, wrangling, transforming text to bag of words. But I plan to expand on them and spend more time on selected elements. David Card suggested to focus on join, so we will... 
+
+What I plan is an online material focusing on a dozen issues, often expanding what is mentioned in the book. Currently I plan: API, combing datasets, entitity resolution, basics of SQL, date and time, data storage (parquet, etc). Ideas? Suggestions? Ping me. 
 
 
 ### Data science section (online)
