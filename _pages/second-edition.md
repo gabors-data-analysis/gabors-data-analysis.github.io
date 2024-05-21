@@ -28,16 +28,23 @@ Each chapter will get a new section, which talks about how AI (LLM) might help o
 * (Chapter 03) Data discovery with AI. We show a dataset and chat about variables, possible wrnagling and cleaning issues. 
 * (Chapter 06) Look for statistics with AI. We discussed the t-test in the material. Now we ask how to run tests in more complicated scenarios
 
-I'm still thinkin about the best pedagogical approach. 
+I'm still thinkin about the best pedagogical approach. (But this is not about how LLMs work at all.)
 
 ## Beyond
 
-Each section will get a *Beyond* section replacing *Further readings*. This will be somewhat longer and link to an ever growing online version called [Beyond: Directions to Frontier](https://gabors-data-analysis.com/beyond). Basically an extra 1-2 paragraphs focusing on helping readers towards what's new. 
+Each section will get a *Beyond* bit replacing *Further readings*. This will be somewhat longer and link to an ever growing online version called [Beyond: Directions to Frontier](https://gabors-data-analysis.com/beyond). Basically an extra 1-2 paragraphs focusing on helping readers towards what's new. 
+
+## Applications
+
+Short new bit at the end part of the section. Basically a list of application for methods covered. Kind of a "What for" learning outcome. Sometimes comparing with previously covered methods. 
+
+* (chapter 03) we showed histogram, here is an example from The economist. 
+* (chapter 12) we showed you TS analysis here is an application to XX sales data
 
 
 ## Broad issues I'm thinking about
 
-1. Chapter 10 is too large, and is set to be bigger. Some say 07-09 is too slow. Some magic rearrangement: merge 07 and 08, and cut 10? 
+1. Chapter 10 is too large, and is set to be bigger. Some instructors say 07-09 is too slow (but maybe not for students!). Some magic rearrangement: merge 07 and 08, and cut ch 10 into two? 
 2. More maths. Some users advised to add more derivation to Under the Hood sections to avoid the need for another textbook in more advanced metrics classes. Okay, which ones?
 3. Case studies: Add 2-3 case studies. 
   * topics: climate/evnvironment, finance 
