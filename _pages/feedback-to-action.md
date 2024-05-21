@@ -98,7 +98,7 @@ redirect_from:
 
 | Response | Todo | Status |
 |----------|------|--------|
-| Add the data shape chapter and focus on machine learning and prediction, then I might be able to use it in a Machine Learning for Economists course at the masters level, OR,  Drop machine learning and focus on causal analysis, then I could use it in a Causal Econometrics course at the advanced undergrad or masters level. Add codes into the book, see https://theeffectbook.net/ to see how it can be done successfully. Your strength are the case studies, that other books don't provide, so if you can build on that I could be convinced. | - | - |
+| Add the data shape chapter and focus on machine learning and prediction, then I might be able to use it in a Machine Learning for Economists course at the masters level, OR,  Drop machine learning and focus on causal analysis, then I could use it in a Causal Econometrics course at the advanced undergrad or masters level. Add codes into the book, see the effect book to see how it can be done successfully. Your strength are the case studies, that other books don't provide, so if you can build on that I could be convinced. | - | - |
 | I already wrote extensively about that. I would wish there was a more basic version available, shorter and more affordable. | - | - |
 | It would have to be pitched at a more introductory level and I don't feel that's what this book is. I think I would maybe be able to use a handful of chapters but the overall style would not work. | - | - |
 | Introduce a shorter version that could be used for quarter-long courses. | - | - |
