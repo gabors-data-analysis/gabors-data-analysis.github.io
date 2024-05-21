@@ -1,4 +1,18 @@
-# Changes from feedback
+---
+layout: single
+classes: wide
+title: "CUP Feedback to action for second edition"
+permalink: /feedback-to-action/
+author_profile: true
+redirect_from:
+  - /md/
+  - /feedback-to-action.html
+---
+
+{% include base_path %}
+
+
+## Changes from feedback
 
 * What is one change you would need to see to convince you to switch from your current text to Data Analysis for Business, Economics, and Policy? If you are currently an adopter, what change would convince you to stay with this textbook?
 * What do you think of the authors' proposed changes? Is there anything you would add? Are there any changes they suggest that seem unnecessary?
