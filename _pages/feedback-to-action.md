@@ -20,6 +20,7 @@ redirect_from:
 
 
 ### Minor suggestions
+
 | Response | Todo | Status |
 |----------|------|--------|
 | The introduction of new chapter related with environmental topics. Spatial, climate etc. | Not chapter, but CS: climate | RA to suggest |
@@ -34,6 +35,7 @@ redirect_from:
 
 
 ### Key changes
+
 | Response | Todo | Status |
 |----------|------|--------|
 | I would step up the level, currently too elementary. One possibility is to make the "Under the Hood" sections a little more technical (similar to what Stock & Watson do). | YES | RA to suggest |
@@ -46,6 +48,7 @@ redirect_from:
 
 
 ### To consider
+
 | Response | Todo | Status |
 |----------|------|--------|
 | Maybe more emphasis on financial time series, but I can understand if it does not happen | Maybe. | - |
@@ -75,10 +78,12 @@ redirect_from:
 |  Big Data Analytics | - | - |
 
 
- 
+
+
 
 
 ### code
+
 | Response | Todo | Status |
 |----------|------|--------|
 | I am already happy with the first edition. Cleaning up the code is perhaps at the top of my wish list. | TODO | Organize taskforce |
@@ -90,6 +95,7 @@ redirect_from:
 
 
 ### Other 
+
 | Response | Todo | Status |
 |----------|------|--------|
 | Add the data shape chapter and focus on machine learning and prediction, then I might be able to use it in a Machine Learning for Economists course at the masters level, OR,  Drop machine learning and focus on causal analysis, then I could use it in a Causal Econometrics course at the advanced undergrad or masters level. Add codes into the book, see https://theeffectbook.net/ to see how it can be done successfully. Your strength are the case studies, that other books don't provide, so if you can build on that I could be convinced. | - | - |
