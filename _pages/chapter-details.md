@@ -28,7 +28,7 @@ redirect_from:
     </p>
     <p>
       <strong>Slides:</strong><br>
-      <a href="/images/slides-public/Ch01-Bekes_Kezdi_Data_Analysis_slides_v2.pdf">Chapter 01 Slideshow</a>
+      <a href="/images/slides-public/da-public-slides-ch01-v3-2023.pdf">Chapter 01 Slideshow</a>
     </p>
   </div>
 </div>
@@ -48,7 +48,7 @@ redirect_from:
     </p>
     <p>
       <strong>Slides:</strong><br>
-      <a href="/images/slides-public/Ch02-Bekes_Kezdi_Data_Analysis_slides_v2.pdf">Chapter 02 Slideshow</a>
+      <a href="/images/slides-public/da-public-slides-ch02-v3-2023.pdf">Chapter 02 Slideshow</a>
     </p>
   </div>
 </div>
