@@ -141,7 +141,6 @@ We describe the <strong>steps of hypothesis testing</strong> and discuss two alt
   </div>
 </div>
 
-</div>
 
 
 
