@@ -1,4 +1,3 @@
-
 ---
 layout: single
 classes: wide
@@ -141,22 +140,4 @@ We describe the <strong>steps of hypothesis testing</strong> and discuss two alt
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-## Downloads
-
-**Comprehensive downloads for deeper engagement with the textbook content.**
-
-- [Detailed list of chapters and sections (PDF)](/files/front_Bekes_Kezdi.pdf)
-- [Sample chapter: Chapter 10 Multiple Linear Regression (PDF)](/files/Ch10_Bekes_Kezdi_draft_2020nov.pdf)
-- [Textbook Summary (PDF)](/files/bekes-kezdi-data-analysis-summary.pdf)
-
-{: .notice}
+</div>
