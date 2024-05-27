@@ -79,12 +79,14 @@ We plan several smaller improvements. Mostly adding some examples, better explan
 | 10,21| dataviz | Add coeffplots |
 |10,22 | p-values |  Show tables with p-values and stars, add a para discussion ref back to p-hacking + both have pros and cons |
 |10 | Regression vs test | U.x Discuss how regression may be the same as testing [ideas](https://lindeloev.github.io/tests-as-linear/)
-|10 | Hard q on confounders | Suppose I have two random variables, y and x. If I’m allowed to construct a third random variable z, I can guarantee that a regression y = beta1 * x + beta2 * z will yield any value for beta1 I want [Source](https://x.com/johnjhorton/status/1737148357582221543?t=i1hkm6zMfpH6P0pwViddjw&s=03) |
+|10 | Hard q on confounders | Suppose I have two random variables, y and x. If I’m allowed to construct a third random variable z, I can guarantee that a regression $y = \beta_1  x + \beta_2  z$ will yield any value for beta1 I want [Source](https://x.com/johnjhorton/status/1737148357582221543?t=i1hkm6zMfpH6P0pwViddjw&s=03) |
 |10  |Exercise | Read and discuss [obesity gap by Economist](https://www.economist.com/finance-and-economics/2023/11/23/the-obesity-pay-gap-is-worse-than-previously-thought) |
 | 10   | Blinder-Oaxaca decomposition | Blinder-Oaxaca-Kitagwa -- decomposing gender gap with education and age |
-| 10 |  **Frisch-Waughn-Lowell theorem** | Add a short section on FWL (no proof), with a case study application. The key application will be a graph, ie show show scatterplot despite controls. Maybe use earnings. Or even add a new case study on Mankiw-Romer-Weil QJE growth regressions. [Deepnote](https://deepnote.com/@carlos-mendez/R-Augmented-Solow-Model-d90f7550-909c-407d-8295-9ba49e81764f) | 
+| 10 |  **Frisch-Waugh-Lowell theorem** | Add a short section on FWL (no proof), with a case study application. The key application will be a graph, ie show show scatterplot despite controls. Maybe use earnings. Or even add a new case study on Mankiw-Romer-Weil QJE growth regressions. [Deepnote](https://deepnote.com/@carlos-mendez/R-Augmented-Solow-Model-d90f7550-909c-407d-8295-9ba49e81764f) | 
 | 11 | **Poisson** | Add other regression models, especially Poisson. This needs a new case study, maybe number of goals and shots on goal? Would also add another discussion of the role of zeroes. Introduce Odds-ratio. |
-| 12 | What is seasonality really | Seasonality as human behavior. Example: [Interest over time on Google Trends for Diet](https://trends.google.com/trends/explore/TIMESERIES/1704148800?hl=en-GB&tz=-60&date=all&geo=US&hl=en-GB&q=Diet&sni=3)
+| 12 | What is trend + seasonality really | Seasonality as human behavior. Example: [Interest over time on Google Trends for Diet](https://trends.google.com/trends/explore/TIMESERIES/1704148800?hl=en-GB&tz=-60&date=all&geo=US&hl=en-GB&q=Diet&sni=3). Also note that trend was always thought of as coming from a confounder such as [population growth affecting the demand curve](https://www.jstor.org/stable/1907330)- first volume of Eca.  |
+| 12 | Log run trends | [Frisch-Waugh](https://www.jstor.org/stable/1907330) Trend in $y$ as a sum of trends in RHS vars. Long run trend in either, we can't do much: either partial out or leave it in.   |
+
 
 
 ### Part 3
