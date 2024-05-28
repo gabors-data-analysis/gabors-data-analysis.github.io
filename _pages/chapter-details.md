@@ -139,15 +139,15 @@ We describe the <strong>steps of hypothesis testing</strong> and discuss two alt
     </p>
   </div>
 </div>
-
+https://gabors-data-analysis.com/chapters/part-III/
 </div>
 
 ## What's in all the chapters ?
 The textbook offers a complete, curated curriculum from data collection to machine learning and causal analysis:  
 * **[Data exploration](/chapters/part-I/)**: data collection and quality, tidy data and wrangling, exploratory data analysis and visualization, generalizing from data, and hypothesis testing. 
-* **[Regression analysis](chapters/part-II/)**: non-parametric and linear models, functional form, internal and external validity, probability models and time series regressions. 
-* **[Predictive analytics](chapters/part-III/)**: loss function, cross-validation, tree-based machine learning methods (CART, RF, boosting), classification, and forecasting from time series data. 
-* **[Causal inference](chapters/part-IV/)**: potential outcomes framework and causal maps/DAGs, experiments, matching, difference-in-differences analysis, panel data methods, synthetic control, event study.  
+* **[Regression analysis](/chapters/part-II/)**: non-parametric and linear models, functional form, internal and external validity, probability models and time series regressions. 
+* **[Predictive analytics](/chapters/part-III/)**: loss function, cross-validation, tree-based machine learning methods (CART, RF, boosting), classification, and forecasting from time series data. 
+* **[Causal inference](/chapters/part-IV/)**: potential outcomes framework and causal maps/DAGs, experiments, matching, difference-in-differences analysis, panel data methods, synthetic control, event study.  
 
 Get started on the textbook, the ecosystem: [getting started](/getting-started)
 
