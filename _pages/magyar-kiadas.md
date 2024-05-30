@@ -21,9 +21,12 @@ A könyv kiadását a Budapesti Corvinus Egyetem, a HUN-REN KRTK és a Concorde 
 
 Megvásárolható május elejétől az [Alinea Kiadótól](https://www.alinea.hu/adatelemzes)  !
 
-## Angol magyar szótár
+A könyv gyorsan befutott, megjelenés óta vezeti az üzleti könyv listát, és 4 napig top 10 volt az általános könyv listán!
 
-[Angol-magyar szakszótár ITT elérhető](/dictionary-hun.html)
+![textbook cover](/images/Libri_alt_sikerlista_240519.jpg){:height="70%" width="70%"}
+
+
+
 
 ## Könyvbemutató: Békés Gábor - Kézdi Gábor: Adatelemzés
 
@@ -33,10 +36,10 @@ Megvásárolható május elejétől az [Alinea Kiadótól](https://www.alinea.hu
 
 A könyv a Cambridge University Pressnél megjelent tankönyv fordítása, amelyet a Corvinus volt diákjai írtak, és amelyből a világ 30 országában több mint 200 egyetemen oktatnak.  Tanítják például New York, San Francisco, Ann Arbor, Toronto, London,  Amsterdam, Milánó, Bécs, Koppenhága, Tokió, Kuala Lumpur diákságának és a persze ott van már a Corvinuson is. Az angol kiadás első fele most jelenik meg magyarul. 
 
-A könyv már megrendelhető és a helyszínen kedvezményesen is megvásárolható az [Alinea Kiadótól](https://www.alinea.hu/adatelemzes)  
+[ITT olvasható a bemutató összefoglalója](https://www.uni-corvinus.hu/post/hir/itthon-is-tarol-a-magyar-kutatok-nemzetkozi-slagerkonyve-az-adatelemzesrol/)
 
-Részvételi szándékát [itt jelezze](https://docs.google.com/forms/d/e/1FAIpQLSet4Q_eYMmzixzMKo06nh0sHjw7hBbitOw03789eptFjw2_Yg/viewform?usp=sf_link). 
 
+![textbook cover](/images/corvinus-2024-0.jpg){:height="60%" width="60%"}
 
 
 ### Program:
@@ -45,6 +48,9 @@ Részvételi szándékát [itt jelezze](https://docs.google.com/forms/d/e/1FAIpQ
 17:10-17:30 - Beszélgetés az egyik szerzővel: Békés Gáborral (CEU Közgazdasági Tanszék, docens) Horn Dániel (BCE Közgazdasági Intézet, docens) beszélget.
 
 17:30-18:30 - Kerekasztal-beszélgetés az üzleti és szakpolitikai adatelemzésről, a mesterséges intelligenciáról és általában az adattudomány üzleti felhasználásáról.
+
+![textbook cover](/images/corvinus-2024-2.jpg){:height="60%" width="60%"}
+
 
 Moderátor: Békés Gábor
 
@@ -55,6 +61,13 @@ Résztvevők:
 * Vargha Simon - Google Cloud AI vezető adatelemzője. 
 
 18:30-19:00 - Informális környezetben további beszélgetés és networking a résztvevőkkel, pogácsával és üdítővel.
+
+![textbook cover](/images/corvinus-2024-3.jpg){:height="60%" width="60%"}
+
+
+## Angol magyar szótár
+
+[Angol-magyar szakszótár ITT elérhető](/dictionary-hun.html)
 
 ## Többet akarsz hallani?
 
