@@ -23,7 +23,7 @@ Megvásárolható május elejétől az [Alinea Kiadótól](https://www.alinea.hu
 
 A könyv gyorsan befutott, megjelenés óta vezeti az üzleti könyv listát, és 4 napig top 10 volt az általános könyv listán!
 
-![textbook cover](/images/Libri_alt_sikerlista_240519.jpg){:height="70%" width="70%"}
+![textbook cover](images/libri.jpg){:height="70%" width="70%"}
 
 
 
