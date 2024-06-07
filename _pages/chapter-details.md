@@ -274,19 +274,3 @@ The chapter starts by discussing features of time series variables, such as <str
 
 
 
-## What's in all the chapters ?
-
-The textbook offers a complete, curated curriculum from data collection to machine learning and causal analysis:  
-* **[Data exploration](/chapters/part-I/)**: data collection and quality, tidy data and wrangling, exploratory data analysis and visualization, generalizing from data, and hypothesis testing. 
-* **[Regression analysis](/chapters/part-II/)**: non-parametric and linear models, functional form, internal and external validity, probability models and time series regressions. 
-* **[Predictive analytics](/chapters/part-III/)**: loss function, cross-validation, tree-based machine learning methods (CART, RF, boosting), classification, and forecasting from time series data. 
-* **[Causal inference](/chapters/part-IV/)**: potential outcomes framework and causal maps/DAGs, experiments, matching, difference-in-differences analysis, panel data methods, synthetic control, event study.  
-
-Get started on the textbook, the ecosystem: [getting started](/getting-started)
-
-**Download the front - detailed list of chapters and sections ......... [CONTENTS](/files/front_Bekes_Kezdi.pdf)**  
-**Download a sample chapter from the almost final version of the proof... [Chapter 10 Multiple Linear Regression](/files/Ch10_Bekes_Kezdi_draft_2020nov.pdf)**
-**Download a short summary on why use this book ...... [TEXTBOOK SUMMARY](/files/bekes-kezdi-data-analysis-summary.pdf)**  
-{: .notice}
-
-
