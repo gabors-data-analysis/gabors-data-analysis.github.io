@@ -274,8 +274,8 @@ The chapter starts by discussing features of time series variables, such as <str
 
 
 
-
 ## What's in all the chapters ?
+
 The textbook offers a complete, curated curriculum from data collection to machine learning and causal analysis:  
 * **[Data exploration](/chapters/part-I/)**: data collection and quality, tidy data and wrangling, exploratory data analysis and visualization, generalizing from data, and hypothesis testing. 
 * **[Regression analysis](/chapters/part-II/)**: non-parametric and linear models, functional form, internal and external validity, probability models and time series regressions. 
