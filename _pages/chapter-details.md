@@ -12,36 +12,24 @@ redirect_from:
 {% include base_path %}
 
 ## Download quickly
-Chapter 01: Origins of Data [slides](/images/slides-public/da-public-slides-ch01-v3-2023.pdf)
-
-Chapter 02: Preparing Data for Analysis [slides](/images/slides-public/da-public-slides-ch02-v3-2023.pdf)
-
-Chapter 03: Exploratory Data Analysis [slides](/images/slides-public/da-public-slides-ch03-v3-2023.pdf)
-
-Chapter 04: Comparison and Correlation [slides](/images/slides-public/da-public-slides-ch04-v3-2023.pdf)
-
-Chapter 05: Generalizing from Data [slides](/images/slides-public/da-public-slides-ch05-v3-2023.pdf)
-
-Chapter 06: Testing Hypotheses [slides](/images/slides-public/da-public-slides-ch06-v3-2023.pdf)
-
-Chapter 07: Simple Regression [slides](/images/slides-public/da-public-slides-ch07-v3-2023.pdf)
-
-Chapter 08: Complicated Patterns and Messy Data [slides](/images/slides-public/da-public-slides-ch08-v3-2023.pdf)
-
-Chapter 09: Generalizing Results of a Regression [slides](/images/slides-public/da-public-slides-ch09-v3-2023.pdf)
-
-Chapter 10: Multiple Linear Regression [slides](/images/slides-public/da-public-slides-ch10-v3-2023.pdf)
-
-Chapter 11: Modeling Probabilities [slides](/images/slides-public/da-public-slides-ch11-v3-2023.pdf)
-
-Chapter 12: Regression with Time Series Data [slides](/images/slides-public/da-public-slides-ch12-v3-2023.pdf)
+Chapter 01: Origins of Data [slides](/images/slides-public/da-public-slides-ch01-v3-2023.pdf)  
+Chapter 02: Preparing Data for Analysis [slides](/images/slides-public/da-public-slides-ch02-v3-2023.pdf)  
+Chapter 03: Exploratory Data Analysis [slides](/images/slides-public/da-public-slides-ch03-v3-2023.pdf)  
+Chapter 04: Comparison and Correlation [slides](/images/slides-public/da-public-slides-ch04-v3-2023.pdf)  
+Chapter 05: Generalizing from Data [slides](/images/slides-public/da-public-slides-ch05-v3-2023.pdf)  
+Chapter 06: Testing Hypotheses [slides](/images/slides-public/da-public-slides-ch06-v3-2023.pdf)  
+Chapter 07: Simple Regression [slides](/images/slides-public/da-public-slides-ch07-v3-2023.pdf)  
+Chapter 08: Complicated Patterns and Messy Data [slides](/images/slides-public/da-public-slides-ch08-v3-2023.pdf)  
+Chapter 09: Generalizing Results of a Regression [slides](/images/slides-public/da-public-slides-ch09-v3-2023.pdf)  
+Chapter 10: Multiple Linear Regression [slides](/images/slides-public/da-public-slides-ch10-v3-2023.pdf)  
+Chapter 11: Modeling Probabilities [slides](/images/slides-public/da-public-slides-ch11-v3-2023.pdf)  
+Chapter 12: Regression with Time Series Data [slides](/images/slides-public/da-public-slides-ch12-v3-2023.pdf)  
 
 
+## Part 1: Data Exploration
 
 
 <div class="chapters">
-
-## Part 1: Data Exploration
 
 
 <div class="chapter-card" id="chapter-01">
