@@ -14,18 +14,36 @@ redirect_from:
 ## Download quickly
 Here are the titles and links to the slideshows for the first 12 chapters with the correct link format:
 
-1. Chapter 01: Origins of Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch01-v3-2023.pdf)  
-2. Chapter 02: Preparing Data for Analysis [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch02-v3-2023.pdf)  
-3. Chapter 03: Exploratory Data Analysis [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch03-v3-2023.pdf)  
-4. Chapter 04: Comparison and Correlation [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch04-v3-2023.pdf)  
-5. Chapter 05: Generalizing from Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch05-v3-2023.pdf)  
-6. Chapter 06: Testing Hypotheses [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch06-v3-2023.pdf)  
-7. Chapter 07: Simple Regression [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch07-v3-2023.pdf)  
-8. Chapter 08: Complicated Patterns and Messy Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch08-v3-2023.pdf)  
-9. Chapter 09: Generalizing Results of a Regression [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch09-v3-2023.pdf)  
-10. Chapter 10: Multiple Linear Regression [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch10-v3-2023.pdf)  
-11. Chapter 11: Modeling Probabilities [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch11-v3-2023.pdf)  
-12. Chapter 12: Regression with Time Series Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch12-v3-2023.pdf)  
+Chapter 01: Origins of Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch01-v3-2023.pdf)  
+Chapter 02: Preparing Data for Analysis [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch02-v3-2023.pdf)  
+Chapter 03: Exploratory Data Analysis [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch03-v3-2023.pdf)  
+Chapter 04: Comparison and Correlation [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch04-v3-2023.pdf)  
+Chapter 05: Generalizing from Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch05-v3-2023.pdf)  
+
+
+Chapter 06: Testing Hypotheses [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch06-v3-2023.pdf)  
+Chapter 07: Simple Regression [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch07-v3-2023.pdf)  
+Chapter 08: Complicated Patterns and Messy Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch08-v3-2023.pdf)  
+Chapter 09: Generalizing Results of a Regression [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch09-v3-2023.pdf)  
+Chapter 10: Multiple Linear Regression [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch10-v3-2023.pdf)  
+Chapter 11: Modeling Probabilities [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch11-v3-2023.pdf)  
+Chapter 12: Regression with Time Series Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch12-v3-2023.pdf)  
+
+
+Chapter 13: A Framework for Prediction [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch13-v3-2023.pdf)  
+Chapter 14: Model Building for Prediction [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch14-v3-2023.pdf)  
+Chapter 15: Regression Trees [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch15-v3-2023.pdf)  
+Chapter 16: Random Forest and Boosting [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch16-v3-2023.pdf)  
+Chapter 17: Probability Prediction and Classification [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch17-v3-2023.pdf)  
+Chapter 18: Forecasting from Time Series Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch18-v3-2023.pdf)  
+
+
+Chapter 19: A Framework for Causal Analysis [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch19-v3-2023.pdf)  
+Chapter 20: Designing and Analyzing Experiments [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch20-v3-2023.pdf)  
+Chapter 21: Regression and Matching with Observational Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch21-v3-2023.pdf)  
+Chapter 22: Difference-in-Differences [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch22-v3-2023.pdf)  
+Chapter 23: Methods for Panel Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch23-v3-2023.pdf)  
+Chapter 24: Appropriate Control Groups for Panel Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch24-v3-2023.pdf)   
 
 ## Part 1: Data Exploration
 
