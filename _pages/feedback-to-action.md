@@ -106,3 +106,15 @@ RA to suggest |
 | Maybe should be first chapters, be summurized in Appendix as kind of reminder of statisc basics. | - | - |
 | I would want a more streamlined presentation, but that probably wouldn't work for other users. The book is pretty great, overall. Switching is hard though! | Think how to help switching | ?? |
 
+## Parts
+
+### Part 3
+
+|Ch |  Response | Todo | Status |
+|---| --------------------------------------------------------------------|------------------|----------------|
+|13 | Consider adding the Bayesian Information Criterion (BIC) formula, as its simple form is one of the reason of the large popularity of the criterion. Moreover, discussing the interpretation of BIC differences among models to be compared based on Kass & Raftery's paper  (1995) would provide valuable guidance for model selection.   | Consider | - | 
+|13 | Discuss the main limitation of k-fold CV due to the potential computational effort of the procedure, especially for complex models, and contrast it with the computational efficiency of BIC.   | Add 2 sentences  |  Gabor| 
+|13 | As with other chapters, the presentation of external validity needs improvement. Consider simplifying the explanation and providing concrete examples to ensure wider comprehension.  | ? | ? |
+|13 | add the median as the best predictor under absolute loss, and the quantiles different from the median under asymmetric absolute loss) | yes, also to case study | gabor |
+| 14 | 14u1 hard to understand | to expand | ? |
+| 16 | Expand on how boosting works, consider other variants | to expand | TODO ADAM |
