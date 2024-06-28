@@ -77,6 +77,10 @@ Some stuff in the textbook is close to the frontier of knowledge. But this fonti
 
 * Beetroot juice is said to be great. [Review study](https://www.healthline.com/health/food-nutrition/beetroot-juice-benefits#Overview) [Another review](https://www.medicalnewstoday.com/articles/324898). For example, reference to an RCT with beetroot juice -- dietary inorganic nitrate acutely reduces blood pressure. [Study](https://www.ahajournals.org/doi/10.1161/HYPERTENSIONAHA.114.04675). Review in [medical journal](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4425174/)
 
+* Another issue is vitamin intake already featured in the book. In 2024, a large scale study was published following 400K individuals in the US over 20 years. They found no correlation on life span and vitamin intake. [Multivitamin Use and Mortality Risk in 3 Prospective US Cohorts}(https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2820369) The issue with beta carotin is actually noted there, too. 
+
+
+
 ## Chapter 20
 
 * On A/B testing, some neat ideas in presentation by [Harlan Harris](https://www.harlan.harris.name/2022/08/communicating-a-b-test-results-for-conversion-rates-with-ratios-and-uncertainty-intervals/?utm_campaign=Data_Elixir&utm_source=Data_Elixir_403/), with code in R
