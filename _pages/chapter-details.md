@@ -11,8 +11,7 @@ redirect_from:
 
 {% include base_path %}
 
-## Download quickly
-Here are the titles and links to the slideshows for the first 12 chapters with the correct link format:
+## Slideshows for all 24 chapters of Gabors Data Analysis!
 
 Chapter 01: Origins of Data [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch01-v3-2023.pdf)  
 Chapter 02: Preparing Data for Analysis [slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch02-v3-2023.pdf)  
