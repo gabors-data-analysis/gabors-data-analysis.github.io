@@ -20,8 +20,8 @@ ___
 * David Salsburg [Lady tasting Tea - How Statistics revolutionized science in the twentieth century (2002)](https://www.amazon.co.uk/Lady-Tasting-Tea-David-Salsburg/dp/0805071342) *A great book about the history of statistics and statistical ideas with many great stories. A must read for statistics nerds.*
 * Philip Tetlock,[ Superforecasting: The Art and Science of Prediction](https://www.amazon.com/Superforecasting-Prediction-Philip-E-Tetlock/dp/0804136718/) *A great book summarizing some of the research and ideas of one of the leading experst in prediction. Not explicitely about statistical predictions; more of a big picture reading for those who want to evaluate predictions.*
 * Nassim Nicholas Taleb: [Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets ](https://www.amazon.com/Fooled-Randomness-Hidden-Markets-Incerto/dp/0812975219/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=) *A fascinating walk through of examples discussing the role of luck and human decision making. Shows how really really important randomness is.* 
-* Seth Stephens-Davidowitz (2018) [Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Seth-Stephens-Davidowitz/e/B072549W28/ref=dp_byline_cont_ebooks_1) *So you think you can use data to answer some important questions? Watch out people often hide stuff. Look at what they do, not what they say. An amazing collection of stories.*  
-* Cathy O'Neil, [Weapons of Math Destruction ](https://weaponsofmathdestructionbook.com/) *A more sceptic take on the role of algorithms* 
+* Seth Stephens-Davidowitz (2018) [Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Seth-Stephens-Davidowitz/e/B072549W28/ref=dp_byline_cont_ebooks_1) *So you think you can use data to answer some important questions? Watch out people often hide stuff. Look at what they do, not what they say. An amazing collection of stories.*
+*  Cathy O'Neil, [Weapons of Math Destruction ](https://weaponsofmathdestructionbook.com/) *A more sceptic take on the role of algorithms* 
 * Albert-László Barabási (2014), [Linked: How Everything Is Connected to Everything Else and What It Means for Business, Science, and Everyday Life](https://www.amazon.com/Linked-Everything-Connected-Business-Everyday/dp/0465085733/) - a great intro into networks
 * Gary Smith (2016) [Standard Deviations: Flawed Assumptions, Tortured Data and Other Ways to Lie with Statistics](https://www.amazon.com/Standard-Deviations-Gary-Smith/dp/071565103X/ref=zg_bs_g_2586_sccl_17/130-9448574-7165015?psc=1) looks interesting. 
 
@@ -32,12 +32,14 @@ ___
 
 ### Books related to decison-making with data
 
+* Alex Edmans (2024) May Contain Lies: How Stories, Statistics, and Studies Exploit Our Biases―And What We Can Do about It. [maycontainlies.com](https://maycontainlies.com/) *One of planned reading for summer 2024*
+* Ethan Mollick (2024) [Co-Intelligence: Living and Working with AI](https://www.penguinrandomhouse.com/books/741805/co-intelligence-by-ethan-mollick/) *Super useful book on how we might integrate work with AI. Includes a supernatural animal.* 
 * Daniel Kahneman (2011) [Thinking fast and slow](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555/) *A great book summarizing a live's resarch of the economics Nobel-winner psychologist.*
 * Michael Pollan (2008): [In defense of food)](https://www.bookdepository.com/Defense-Food-Michael-Pollan/9780143114963)  *A great book from an investigative journalist on what we should eat and why, with a very good description of what nutrition research can and cannot uncover using observational data.*
 * Andrew Leigh (2018): [ Randomistas: How Radical Researchers Are Changing Our World](https://www.amazon.co.uk/Randomistas-Radical-Researchers-Changing-World/dp/0300236123/ref=asap_bc?ie=UTF8) *Interesting review on experiments in business, as well as government. From an academic/politician.*
 * Michael Luca and Max H. Bazerman (2020) [The Power of Experiments: Decision Making in a Data-Driven World](https://mitpress.mit.edu/books/power-experiments) New dawn of experiments using large datasets with a focus on testing at businesses such as Airbnb or Uber. 
-* Carl Bergstrom Jevin West (2021) [Calling-bullshit](https://www.penguinrandomhouse.com/books/563882/calling-bullshit-by-carl-t-bergstrom-and-jevin-d-west/)  A fantastic book based on a very famours [course](https://www.callingbullshit.org/) will help you see through deception by statistics. 
-* Tim Harford (2021) [Data Detective](https://timharford.com/books/datadetective/) Great storytelling on how we use and feel about data and statistics. FYI, starts with a quote from the Empire Strikes Back. 
+* Carl Bergstrom Jevin West (2021) [Calling-bullshit](https://www.penguinrandomhouse.com/books/563882/calling-bullshit-by-carl-t-bergstrom-and-jevin-d-west/) *A fantastic book based on a very famours [course](https://www.callingbullshit.org/) will help you see through deception by statistics.*
+* Tim Harford (2021) [Data Detective](https://timharford.com/books/datadetective/) *Great storytelling on how we use and feel about data and statistics. FYI, starts with a quote from the Empire Strikes Back.*
 
 ### Sports and data
 * Stefan Szymanski [Money and Soccer ](https://www.bookdepository.com/Money-Soccer-Soccernomics-Guide-Stefan-Szymanski/9781568584768?ref=pd_detail_1_sims_b_v2p_1)and Simon Kuper and Stefan Szymanski [Socceronomics](https://www.bookdepository.com/Soccernomics-2018-World-Cup-Edition-Simon-Kuper/9781568587516?ref=pd_detail_1_sims_b_p2p_1) *Two great books on understanding football via data.*
@@ -45,14 +47,16 @@ ___
 * Chris Anderson and David Sally (2013) [The Numbers Game: Why Everything You Know About Soccer Is Wrong](https://www.bookdepository.com/The-Numbers-Game-Chris-Anderson/9780143124566) *I just realized on of the chapters inspired a case study in our book. If you know which one, DM me, and we'll get a drink sometime.*
 * Yves Dominicy and Christophe Ley (eds) (2023) [What We Can Learn from Sports Data](https://www.cambridgescholars.com/news/item/book-in-focus-Statistics-Meets-Sports-What-We-Can-Learn-from-Sports-Data) - nice collection on sport analytics. 
 * Ben Lindbergh and Sam Miller (2017) [The Only Rule Is It Has to Work: Our Wild Experiment Building a New Kind of Baseball Team](https://www.amazon.ca/Only-Rule-Has-Work-Experiment/dp/1250130905) - suggested by a dear reader, I'm excited to have a look.  
-
+* Chris Wiggins and Matthew L. Jones (2023) [How Data Happened: A History from the Age of Reason to the Age of Algorithms](https://www.amazon.com/How-Data-Happened-History-Algorithms/dp/1324006730) *Looks interesting --  history of data and its technical, political, and ethical impact.*
 
 ### Intro Data Science / statistics books
+
 * Andrij Burkov: [The 100 page Machine Learning book](http://themlbook.com/) A popular and concise review
 * Roger Peng and Elizabeth Matsui [The Art of Data Science](https://bookdown.org/rdpeng/artofdatascience/) Intro review on the steps of analyzing data.   
 * David Spiegelhalter [The Art of Statistics ](https://www.amazon.com/dp/B07HQDJD99/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1) *A great review of some key statistics concept from a great statitsician. A very nice introduction to any data, stats or metrics course* [Recommended]
 * Ian Hacking (1990) [The Taming of Chance](https://www.amazon.ca/Taming-Chance-Ian-Hacking/dp/0521388848/) Okay, I have not read it. But it promises to take you over the eremergence of statistics, starting in the 19th centrury. Suggested by a dear reader.
 * Elena Llaudet and Kosuke Imai (2022) [Data Analysis for Social Science: A Friendly and Practical Introduction](https://www.amazon.com/Data-Analysis-Social-Science-Introduction/dp/0691199434/) Concepts and skills indeed
+* Ethan Bueno de Mesquita and Anthony Fowler (2021) [Thinking Clearly with Data: A Guide to Quantitative Reasoning and Analysis](https://www.amazon.com/Thinking-Clearly-Data-Quantitative-Reasoning/dp/0691214352) Nice intro to data science, non-technical focusing on ideas such as what is a relationship (in data...)
 
 
 
@@ -95,14 +99,14 @@ Okay, so you have read some nice books. Why not read our book:
 
 
 ### Advanced book on the intersection of Econometrics and Machine Learning
-* Martin Huber, 2023 [Causal Analysis -- Impact Evaluation and Causal Machine Learning with Applications in R](https://mitpress.mit.edu/9780262545914/causal-analysis/) is a great new accessible yet advanced book, with yes, applications. Includes application with Machine Learning. 
-* Felix Chan and László Mátyás edited a great collection (2022) [Econometrics with Machine Learning](https://ewml.ceu.edu/) on well, how machine learning infused causal methods for a variety of areas such as policy evulation or development studies. 
+* Martin Huber, 2023 [Causal Analysis -- Impact Evaluation and Causal Machine Learning with Applications in R](https://mitpress.mit.edu/9780262545914/causal-analysis/) *a great new accessible yet advanced book, with yes, applications. Includes application with Machine Learning.* 
+* Felix Chan and László Mátyás edited a great collection (2022) [Econometrics with Machine Learning](https://ewml.ceu.edu/) *on well, how machine learning infused causal methods for a variety of areas such as policy evulation or development studies.* 
 
 
 ## Other post course book
 
-* Marc F. Bellemare (2022) [Doing Economics: What You Should Have Learned in Grad School—But Didn’t](https://www.amazon.com/Doing-Economics-Should-Learned-School_But/dp/0262543559/) title has it. How to extend what you learnt, especially for Economics students. I know folks who read it on an airpline ride to job interview.
-* Lionel Page (2023) [Optimally Irrational](https://www.amazon.com/Optimally-Irrational-Good-Reasons-Behave/dp/1009209205/) has data yes, but also a lot of economics. I'm yet to read it, but like Lionel's work a lot. If you liked Kahnemann and Tversky, you will like this too.   
+* Marc F. Bellemare (2022) [Doing Economics: What You Should Have Learned in Grad School—But Didn’t](https://www.amazon.com/Doing-Economics-Should-Learned-School_But/dp/0262543559/) title has it. *How to extend what you learnt, especially for Economics students. I know folks who read it on an airpline ride to job interview.*
+* Lionel Page (2023) [Optimally Irrational](https://www.amazon.com/Optimally-Irrational-Good-Reasons-Behave/dp/1009209205/) *has data yes, but also a lot of economics. I'm yet to read it, but like Lionel's work a lot. If you liked Kahnemann and Tversky, you will like this too.* 
 
 
 
