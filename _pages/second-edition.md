@@ -113,7 +113,7 @@ We plan several smaller improvements. Mostly adding some examples, better explan
 |  21 | More on RDD |  A more detailed example on RDD, maybe even a short case study |
 |  21 | Good vs bad control|  Two example stories with discussion on controls, confounders, mechanism and collider|
 |  24 | **Staggered DiD** |  Event study, maybe add one of new DiD method using the same football case study. One solution is bacon-goodman later treated as control.  |
-
+| 24 | Review case studey | Consider Brexit for synthetic control [paper](https://www.brexitcost.org/brexitcost.pdf), great deal of options. | 
 
 ## Data Science extra
 
