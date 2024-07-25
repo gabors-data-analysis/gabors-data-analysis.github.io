@@ -55,7 +55,7 @@ They may be 2nd year MA or 2nd or 3rd year Phd in Economics or other quantitativ
 
 Email to <econdept@ceu.edu>
 
-Subject line "Applying for Data Analysis with AI - Prediction with Machine Learning for Economists - course material development"
+Subject line "Applying for Data Analysis with AI - course material development"
 
 ###  Apply by sending two attachments
 1.	CV 
