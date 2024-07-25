@@ -48,8 +48,13 @@ They may be 2nd year MA or 2nd or 3rd year Phd in Economics or other quantitativ
 
 ### Advantages
 * Experience with Quarto, Latex Beamer, Reveal.js 
-* Experience / Knowledge of my textbook 
-* Some experience with two language out of R, Python, Stata
+* Experience / Knowledge of my [data analyis textbook](https://gabors-data-analysis.com/getting-started) 
+* Some experience with *two* language out of R, Python, Stata
+
+## Why apply?
+
+I hope it's gonna be a good learning experience for all of us (we alread have a great Phd student and former MA student working on it). It's clearly an experience that will have valued in most workplaces, too. Should be fun, too. 
+
 
 ## Application
 
