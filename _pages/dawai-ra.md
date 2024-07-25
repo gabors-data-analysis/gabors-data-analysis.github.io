@@ -16,7 +16,7 @@ redirect_from:
 
 ### Key info
 
-* Project title: Prediction with Machine Learning for Economists
+* Project title: Applying for Data Analysis with AI - course material development
 * Name(s) of supervisor(s): Gábor Békés
 * CEU Department: Department of Economics and Business
 * Location: Vienna / online
