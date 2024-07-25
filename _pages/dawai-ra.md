@@ -60,9 +60,9 @@ Subject line "Applying for Data Analysis with AI - Prediction with Machine Learn
 ###  Apply by sending two attachments
 1.	CV 
 2.	Applied Data Experience – plain text with
-    a.	Info on coding skills/experience with Python and/or R.
-    b.	List of all data analysis / econometrics courses you had
-    c.	List of all data science courses you had
-    d.	Experience with ML tools (scikit-learn, caret, tensorflow, etc) if any
-    e.	Link to Github/Gitlab etc repo if any
-    f.	Experience with Latex, Markdown, Quarto, reveal.js, etc
+    1. Info on coding skills/experience with Python and/or R.
+    2.	List of all data analysis / econometrics courses you had
+    3.	List of all data science courses you had
+    4.	Experience with ML tools (scikit-learn, caret, tensorflow, etc) if any
+    5.	Link to Github/Gitlab etc repo if any
+    6.	Experience with Latex, Markdown, Quarto, reveal.js, etc
