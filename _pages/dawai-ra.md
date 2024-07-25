@@ -15,11 +15,12 @@ redirect_from:
 ## Overview
 
 ### Key info
+
 * Project title: Prediction with Machine Learning for Economists
 * Name(s) of supervisor(s): Gábor Békés
-CEU Department: Department of Economics and Business
+* CEU Department: Department of Economics and Business
 * Location: Vienna / online
-* Approximate workload (hour/week): 8-10
+* Approximate workload (hour/week): 8-10 hours for about 10-12 weeks.
 * Total gross remuneration in EUR 1300-1800 (could be 2x if working for 6 months)
 * Application deadline: Aug 15, 2024
 * Start date: 21 August, 2024 (or later)
@@ -38,7 +39,7 @@ The material is based on the my textbook Data Analysis for Business, Economics, 
 ## Background
 We are looking for two graduate students with shorter assignment or one student with longer one. 
 
-They may be 2nd year MA or 2nd or 3rd year Phd in Economics or other quantitative social science programs. 
+They may be 2nd year MA or 2nd or 3rd year Phd in Economics or other quantitative social science programs. They may have graduated recently with some extra time on their hands. 
 
 ### Expected experience
 * Good knowledge of econometrics and introductory familiarity with data science 
@@ -49,7 +50,6 @@ They may be 2nd year MA or 2nd or 3rd year Phd in Economics or other quantitativ
 * Experience with Quarto, Latex Beamer, Reveal.js 
 * Experience / Knowledge of my textbook 
 * Some experience with two language out of R, Python, Stata
-
 
 ## Application
 
@@ -66,3 +66,9 @@ Subject line "Applying for Data Analysis with AI - Prediction with Machine Learn
     4.	Experience with ML tools (scikit-learn, caret, tensorflow, etc) if any
     5.	Link to Github/Gitlab etc repo if any
     6.	Experience with Latex, Markdown, Quarto, reveal.js, etc
+
+
+### Opportinity, preferences
+CEU is an equal opportunity employer and values geographical and gender diversity, thus encouraging applications from women and/or other underrepresented groups.
+
+The job is based in Vienna or online. Mild preference may be give to applicants who are (i) current or former students of CEU, (ii) based in Vienna, or (iii) current students in the European Union. 
