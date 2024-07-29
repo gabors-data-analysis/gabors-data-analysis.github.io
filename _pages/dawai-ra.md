@@ -47,6 +47,10 @@ They may be 2nd year MA or 2nd or 3rd year Phd in Economics or other quantitativ
 * Experience with the following tools: Git/Github, Latex/markdown
 
 ### Advantages
+
+*Ideally, you'll have some but no need to have it all!*
+
+* Experience doing data analysis with LLMs
 * Experience with Quarto, Latex Beamer, Reveal.js 
 * Experience / Knowledge of my [data analyis textbook](https://gabors-data-analysis.com/getting-started) 
 * Some experience with *two* language out of R, Python, Stata
@@ -66,11 +70,12 @@ Subject line "Applying for Data Analysis with AI - course material development"
 1.	CV 
 2.	Applied Data Experience – plain text with
     1. Info on coding skills/experience with Python and/or R.
-    2.	List of all data analysis / econometrics courses you had
+    2.	List of all data analysis / econometrics courses you had 
     3.	List of all data science courses you had
-    4.	Experience with ML tools (scikit-learn, caret, tensorflow, etc) if any
-    5.	Link to Github/Gitlab etc repo if any
-    6.	Experience with Latex, Markdown, Quarto, reveal.js, etc
+    4.  Evidence of experience doing data analysis with LLMs, such as a chatGPT link of a conversation 
+    5.	Experience with ML tools (scikit-learn, caret, tensorflow, etc) if any
+    6.	Link to Github/Gitlab etc repo if any
+    7.	Experience with Latex, Markdown, Quarto, reveal.js, etc
 
 
 ### Opportinity, preferences
