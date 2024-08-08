@@ -55,20 +55,25 @@ This version: 0.1, 2024-08-08 (Gábor Békés, [bekesg@ceu.edu](mailto:bekesg@ce
 
 3. What is different is the examination and motivation of students. 
 
-4. We propose a 3-step phase-in of LLMs. (Each step is 6 weeks at [CEU](https://economics.ceu.edu/program/master-science-business-analytics).) 
+## III. The proposal
 
-    1. Prohibit AI. 
-        1. Focus on core structures, objects, and basic skills.
-        2. The exam as pen and paper style. 
+We propose a 3-step phase-in of LLMs. Basically cut the term(s) into three distinct time periods, with different rules at each phase. (We'll have 6 weeks at [CEU](https://economics.ceu.edu/program/master-science-business-analytics).) 
 
-    2. Tolerate AI: 
-      1. Focus on core problem-solving skills. 
-      2. AI is encouraged as tutor not as copilot.  
-      3. In-class short quiz without AI. 
-      4. The exam is online but debugging is key. 
+1. Phase 1: Prohibit AI. 
+    1. Focus on core structures, objects, and basic skills.
+    2. AI shall not be used in class, and encouraged to be avoided at home
+    3. The exam as pen and paper style. 
 
-    3. Encourage AI: 
-      1. Focus on projects. 
-      2. AI is now a copilot that will raise the bar. 
-      3. Exam is assignment-focused, where high-quality and designed products are expected. 
+2. Phase 2: Tolerate AI: 
+    1. Focus on core problem-solving skills. 
+    2. AI shall not be used in class, but it is encouraged as *tutor* (not as *copilot*).  
+    3. In-class short quiz without AI. The exam is online, so AI cannot be avoided, but debugging is key. 
 
+3. Phase 3: Encourage AI: 
+    1. Focus on projects. 
+    2. AI is now a *copilot* that will raise the bar. 
+    3. Exam is assignment-focused, where high-quality and designed products are expected. AI use is assumed as default.
+
+## IV. Data Analysis with AI
+
+Yes. We are creating a brand new course material. Coming soon.
