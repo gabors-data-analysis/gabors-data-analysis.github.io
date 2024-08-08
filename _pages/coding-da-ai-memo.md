@@ -55,7 +55,7 @@ This version: 0.1, 2024-08-08 (Gábor Békés, [bekesg@ceu.edu](mailto:bekesg@ce
 
 3. What is different is the examination and motivation of students. 
 
-## III. The proposal
+## III. The proposal: Staggered phase-in
 
 We propose a 3-step phase-in of LLMs. Basically cut the term(s) into three distinct time periods, with different rules at each phase. (We'll have 6 weeks at [CEU](https://economics.ceu.edu/program/master-science-business-analytics).) 
 
