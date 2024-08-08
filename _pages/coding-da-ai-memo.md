@@ -1,7 +1,7 @@
 ---
 layout: single
 classes: wide
-title: "Coding for Data Analysis \- teaching in the era of AI"
+title: "Coding for Data Analysis -- teaching in the era of AI"
 permalink: /coding-da-ai-memo/
 author_profile: true
 redirect_from:
@@ -23,7 +23,7 @@ This version: 0.1, 2024-08-08 (Gábor Békés, [bekesg@ceu.edu](mailto:bekesg@ce
 
 2. People are now used to doing stuff with LLMs
 
-   1. Direct communication, chats \- such as [ChatGPT](https://chat.openai.com/) or [Claude](https://claude.ai/)
+   1. Direct communication, chats -- such as [ChatGPT](https://chat.openai.com/) or [Claude](https://claude.ai/)
 
    2. Use built-in copilots like [Github copilot](https://github.com/features/copilot) \-- tools that minor your coding and make suggestions in real-time. 
 
@@ -60,13 +60,13 @@ This version: 0.1, 2024-08-08 (Gábor Békés, [bekesg@ceu.edu](mailto:bekesg@ce
 
 4. We propose a 3-step phase-in of LLMs. (Each step is 6 weeks at [CEU](https://economics.ceu.edu/program/master-science-business-analytics).) 
 
-   1. 1: Prohibit AI. 
+   1.  Prohibit AI. 
 
       1. Focus on core structures, objects, and basic skills.
 
       2. The exam as pen and paper style. 
 
-   2. 2: Tolerate AI: 
+   2.  Tolerate AI: 
 
       1. Focus on core problem-solving skills. 
 
@@ -76,7 +76,7 @@ This version: 0.1, 2024-08-08 (Gábor Békés, [bekesg@ceu.edu](mailto:bekesg@ce
 
       4. The exam is online but debugging is key. 
 
-   3. 3\. Encourage AI: 
+   3. Encourage AI: 
 
       1. Focus on projects. 
 
