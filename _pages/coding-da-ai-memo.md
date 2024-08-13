@@ -27,7 +27,7 @@ This version: 0.1, 2024-08-08 (Gábor Békés, [bekesg@ceu.edu](mailto:bekesg@ce
 2. People are now used to doing stuff with LLMs
 
    1. Direct communication, chats -- such as [ChatGPT](https://chat.openai.com/) or [Claude](https://claude.ai/)
-   2. Use built-in copilots like [Github copilot](https://github.com/features/copilot) \-- tools that minor your coding and make suggestions in real-time. 
+   2. Use built-in copilots like [Github copilot](https://github.com/features/copilot) \-- tools that monitor your coding and make suggestions in real-time. 
 
 3. Copilots are built in modern IDEs like [VScode](https://code.visualstudio.com/), [RStudio](https://posit.co/products/open-source/rstudio/), or [Anaconda](https://www.anaconda.com/). The default setting often is that these are switched on. 
 
@@ -43,7 +43,7 @@ This version: 0.1, 2024-08-08 (Gábor Békés, [bekesg@ceu.edu](mailto:bekesg@ce
 
 ## II. Our approach
 
-1. We believe that learning to code has value even if LLMs will do a great deal of assistance and even if the next iteration of AI
+1. We believe that learning to code has value even if LLMs will do a great deal of assistance and even if the next iteration of AI will be markedly better in coding. 
 
    1. It will help understand what code is suggested by LLM, help finetune it
    2. It has intrinsic value when thinking in terms of a code. This will be important for prompting or designing workflows. 
