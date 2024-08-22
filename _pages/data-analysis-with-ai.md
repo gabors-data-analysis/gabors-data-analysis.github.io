@@ -17,17 +17,21 @@ Developing a new teaching material for shwoing how use genAI/LLM technologies to
 ### The project detal
 We develop a new course material, “Data Analysis with AI“ to equip students already versed in core methods of data analysis on how best to harness generative AI (GenAI) technologies to improve their productivity. We will focus on large language models (LLMs) such as ChatGPT or Claude. 
 
+![AI](images/ai_imag1.png){:height="80%" width="80%"}
+
+
 ### Topics
 The material is based on the textbook [Békés-Kézdi: Data Analysis for Business, Economics, and Policy, Cambridge University Press, 2021.](https://gabors-data-analysis.com/getting-started) as it takes the variety of topics from the book and shows how to implement tasks with AI and how enhance human analysts with AI. 
 
 The set of topics only covers data analysis but a wide variety of topics such as 
-* Joining two datasets
-* Create variable names from survey questions
-* Multivariate regression
-* Data discovery, exploratiory analysis
-* Event study design and estimation
-* Build a predictive model for prices
-* Creating sparse model in high-dimensional dataset
+* *Data wrangling*: Join two datasets
+* *Surveys*: Create variable names from survey questions
+* *Analysis/modelling*: Design and estimte a multivariate regression of wage gap
+* *Data discovery*: Do an exploratiory analysis of unknown dataset
+* *Causal inference*: Event study design and estimation
+* *Causal inference*: Design an RCT (A/B test of an ad), including sample size planning
+* *Machine learning*: Build a predictive model for prices
+* *Machine learning*: Creating sparse model in high-dimensional dataset
 
 ### Case studies
 
