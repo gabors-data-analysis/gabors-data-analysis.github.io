@@ -17,7 +17,8 @@ Developing a new teaching material for shwoing how use genAI/LLM technologies to
 ### The project detal
 We develop a new course material, “Data Analysis with AI“ to equip students already versed in core methods of data analysis on how best to harness generative AI (GenAI) technologies to improve their productivity. We will focus on large language models (LLMs) such as ChatGPT or Claude. 
 
-![AI](images/ai_imag1.png){:height="80%" width="80%"}
+
+![DAAI](images/ai_imag1.png){:height="80%" width="80%"}
 
 
 ### Topics
