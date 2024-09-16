@@ -15,11 +15,11 @@ redirect_from:
 This textbook provides future data analysts with the **tools, methods, and skills** needed to answer data-focused, real life questions, to choose and apply appropriate methods to answer those questions, and to visualize and interpret results to support better decisions in business, economics, and public policy. 
 
 **Textbook website: [Gabors-Data-Analysis.com](https://gabors-data-analysis.com/)**  
-**All the [slides](/chapter-details)!**
-**Data [avilable on OSF.io](https://osf.io/7epdj/)**  
+**Chapter details + all the [slides](/chapter-details)!**  
+**Data used in case studies [avilable on OSF.io](https://osf.io/7epdj/)**  
 **Full codebase [available in Stata, R, and Python on Github](https://github.com/gabors-data-analysis/da_case_studies)**  
-**Open online courses from zero to hero: [Coding for Data Analysis with R / Python / Stata](/code-courses/) and on [Python](https://github.com/gabors-data-analysis/da-coding-python), [R](https://github.com/gabors-data-analysis/da-coding-rstats) and [Stata](https://github.com/gabors-data-analysis/da-coding-stata)**
-**[2nd edition](https://gabors-data-analysis.com/second-edition/): started to collect ideas for the second edition; Collecting what's [beyond](https://gabors-data-analysis.com/beyond)**
+**Open online courses from zero to hero: [Coding for Data Analysis with R / Python / Stata](/code-courses/) and on [Python](https://github.com/gabors-data-analysis/da-coding-python), [R](https://github.com/gabors-data-analysis/da-coding-rstats) and [Stata](https://github.com/gabors-data-analysis/da-coding-stata)**  
+**started to collect ideas for the [second edition](https://gabors-data-analysis.com/second-edition/). Such as collecting what's [beyond](https://gabors-data-analysis.com/beyond)**
 
 ![textbook cover](images/cover-full_hd.png){:height="80%" width="80%"}
 
