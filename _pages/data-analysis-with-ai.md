@@ -45,3 +45,16 @@ Here we'll illustrate that
 * PART II is mostly okay but highest correlation does not alaways work
 * PART II graph needs input, then gets okay, but never 100%. 
 
+## Benchmarking
+
+We'll generate a set of tasks that can measure (*benchmark*) the performance of AI.
+
+* Create case studies with real questions and data of different focus (analysis, wrangling) and difficulty
+* cover main topics in Békés-Kézdi + some more data science tasks such as NLP
+
+We'll answer questions
+
+1. To what extent can AI produce work comparable to humans, worse, same, better
+2. Measure it as what you can get in three time lengths 15, 60, 120 minutes
+3. Test to what extent prompt engineering matters
+

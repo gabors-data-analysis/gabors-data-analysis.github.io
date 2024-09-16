@@ -30,6 +30,12 @@ Life did not stop when we finished the manusdcript. Actually, we keep finding gr
 
 * Regarding **external validity**, one way to check robustness is to take out 1% of the data and repeat the exercise. The simple take is to do it many times randonly + many times by edge of distribution of key variables. The smart take is suggested by *Tamara Broderick, Ryan Giordano, Rachael Meager in "An Automatic Finite-Sample Robustness Metric: Can Dropping a Little Data Change Conclusions?"* Hard-core statistics. [Preprint](https://arxiv.org/abs/2011.14999)
 
+### Chapter 10
+
+* on the Simpsons paradox, one article where it is front and center is about identifying who migrates published in the [Journal of Development Economics] (https://www.sciencedirect.com/science/article/abs/pii/S0304387824001081?via%3Dihub): Michael A. Clemens, Mariapia Mendola, Migration from developing countries: Selection, income elasticity, and Simpson’s paradox, Journal of Development Economics,
+Volume 171, 2024
+
+
 ## Part III
 
 ### Chapter 16
