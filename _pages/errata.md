@@ -73,7 +73,7 @@ If you were to find an error, please report us [HERE](https://gabors-data-analys
 
 |ID       | Date added |   Error Type      | Chapter | Page | Problematic | Corrected|
 | ---     | ----------    | ---------------- |  -----------------------------------| ----------------------|
-|13-01    | 2024-09-18   | Typo | Ch13 | p.376, EQ 13.8 | In variance, a it's $$\hat{y_j} $$ and not $$y$$ in $$& = (\frac{1}{J} \sum_{j=1}^{J}(\hat{y}_j-{y}))^2 + \frac{1}{J} \sum_{j=1}^{J}({y_j}-\bar{\hat{y}})^2 $$ | $$& = (\frac{1}{J} \sum_{j=1}^{J}(\hat{y}_j-{y}))^2 + \frac{1}{J} \sum_{j=1}^{J}(\hat{y_j}-\bar{\hat{y}})^2 $$ |
+|13-01    | 2024-09-18   | Typo | Ch13 | p.376, EQ 13.8 | In variance, a it's $$\hat{y_j}$$ and not $$y$$ in $$(\frac{1}{J} \sum_{j=1}^{J}(\hat{y}_j-{y}))^2 + \frac{1}{J} \sum_{j=1}^{J}({y_j}-\bar{\hat{y}})^2$$ | $$(\frac{1}{J} \sum_{j=1}^{J}(\hat{y}_j-{y}))^2 + \frac{1}{J} \sum_{j=1}^{J}(\hat{y_j}-\bar{\hat{y}})^2$$ |
 
 |14-01    | 2021-01-06   | Imprecise sentence | Ch14 | B1 p.401 | "The number of apartments or rooms is left as it is, and treated as continuous.." | "The number of **guests to accommodate** or rooms is left as it is, and treated as continuous."|
 |14-02    | 2021-02-07   | Typo  | Ch14 |p.415 |  "two variables, $$x_i x_j$$ and $$x_i^2 x_j$$ and $$x_i^2 x_j$$" | "two variables, $$x_i x_j$$ and $$x_i^2 x_j$$ and $$x_i x_j^2$$"|
