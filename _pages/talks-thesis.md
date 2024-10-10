@@ -53,7 +53,7 @@ Throughout the talk I will use a case study from my textbook on family ownership
 *  Data exploration and visualization with [ggplot in R](https://ggplot2.tidyverse.org/) and [PlotNine in Python](https://plotnine.readthedocs.io/en/stable/)
 * Doing reproducible research with Git and [Github (for case studies)](https://github.com/gabors-data-analysis/da_case_studies)
 * Writing up a thesis and presentation in Latex and  [Overleaf](https://www.overleaf.com)
-* Benefit from online community with [Twitter](https://twitter.com) and [Stackoverflow](https://stackoverflow.com/)
+* Benefit from AI (ChatGPT, Claude.ai and [Github copilot](https://docs.github.com/en/copilot). Other tools: [scite.ai](scite.ai) és [consensus.app](www.consensus.app) 
     
 
 ### Talks AY 2021/22
@@ -64,8 +64,13 @@ Throughout the talk I will use a case study from my textbook on family ownership
 * [Corvinus University Budapest](https://www.uni-corvinus.hu/event/az-adatelemzes-het-lepese/), Hungary: 3 March 2022
 
 ### Talks AY 2022/23
-* Bocconi University, Italy (TBC)
-* Middlesex University, UK (TBC)
+* Middlesex University, UK 
+
+
+### Talks AY 2024/25
+* HUN-REN KRTK
+
+
 
 
 ### Others
