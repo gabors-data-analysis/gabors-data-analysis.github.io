@@ -31,10 +31,12 @@ A könyv gyorsan befutott, megjelenés óta vezeti az üzleti könyv listát, é
 2024 október 10-11 2-napos workshop a [HUN-RENK KRTK szervezésében](https://krtk.hun-ren.hu/esemeny/adatelemzes-workshop-kutatoknak-es-oktatoknak/). A műhely célja, hogy gyakorlati tanácsokat adjon gyakorló kutatóknak és oktatóknak
 az adatelemzésben és az adatelemzés oktatásában.
 
-Hogyan tanítsuk a könyvet? Oktatók (Corvinus, Rajk, CEU) mondják el tapasztalataikat. 
+### Hogyan tanítsuk a könyvet?
 
-* Horn Dániel (BCE és KRTK):  
-* Reguly Ágoston (BCE):
+Oktatók (Corvinus, Rajk, CEU) mondják el tapasztalataikat: 
+
+* Horn Dániel (BCE és KRTK): [Az adatelemzése oktatása + Gábor bevezetője](/files/bekes_horn_intro)  
+* Reguly Ágoston (BCE): [Adatelemzés és kódolás](/files/reguly_kodolas.pdf)
 * Bárdits Anna (KRTK) [Esettanulmányok és gyakorlati példák](/files/bardits-esettanulmanyok.pdf)
 * Elek Péter (KRTK, BCE) [Regresszió, gépi tanulás és oksági elemzés oktatása a tankönyv segítségével](/files/elek_adatelemzes_oktatas.pdf)
 
@@ -47,6 +49,7 @@ Előadás: Békés Gábor (CEU és KRTK): [Az adatelemzés 7 lépése](/files/be
 	<figcaption> KRTK Adatelemzés előadók! </figcaption>
 </figure>
 
+### Reprodukálható kutatás workshop
 
 Reprodukálhatóság a kutatásban: Mik a legújabb elvárások a kutatások replikálhatóságában? Hogyan lehet biztosítani, hogy az elemzés később vagy másoknak is lefut? Milyen új szoftverek, eszközök vannak, amik segítenek ebben?
 Csóka Imola a CEU vendégtanára vezeti a workshopot.
@@ -61,9 +64,7 @@ Csóka Imola a CEU vendégtanára vezeti a workshopot.
 
 ## Könyvbemutató: Békés Gábor - Kézdi Gábor: Adatelemzés
 
-**Dátum: 2024. május 15. 17 óra.**
-
-*Helyszín: Budapesti Corvinus Egyetem, 1093 Budapest, Fővám tér. 9. Főépület  E330 terem.*
+*Dátum: 2024. május 15. 17 óra. Helyszín: Budapesti Corvinus Egyetem, 1093 Budapest, Fővám tér. 9. Főépület  E330 terem.*
 
 A könyv a Cambridge University Pressnél megjelent tankönyv fordítása, amelyet a Corvinus volt diákjai írtak, és amelyből a világ 30 országában több mint 200 egyetemen oktatnak.  Tanítják például New York, San Francisco, Ann Arbor, Toronto, London,  Amsterdam, Milánó, Bécs, Koppenhága, Tokió, Kuala Lumpur diákságának és a persze ott van már a Corvinuson is. Az angol kiadás első fele most jelenik meg magyarul. 
 
