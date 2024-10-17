@@ -35,17 +35,21 @@ Hogyan tanítsuk a könyvet? Oktatók (Corvinus, Rajk, CEU) mondják el tapaszta
 
 * Horn Dániel (BCE és KRTK):  
 * Reguly Ágoston (BCE):
-* Bárdits Anna (KRTK), 
+* Bárdits Anna (KRTK) [Esettanulmányok és gyakorlati példák](/files/bardits-esettanulmanyok.pdf)
 * Elek Péter (KRTK, BCE) [Regresszió, gépi tanulás és oksági elemzés oktatása a tankönyv segítségével](/files/elek_adatelemzes_oktatas.pdf)
-
 
 Előadás: Békés Gábor (CEU és KRTK): [Az adatelemzés 7 lépése](/files/bekes-krtk-adat-2024-10-10-F.pdf)
 
+<figure class="third">
+	<img src="/images/krtlk-adatelemzés-dani.jpg">
+	<img src="/images/krtlk-adatelemzés-ago.jpg">
+	<img src="/images/krtlk-adatelemzés-gabor.png">
+	<figcaption> KRTK Adatelemzés előadók! </figcaption>
+</figure>
+
+
 Reprodukálhatóság a kutatásban: Mik a legújabb elvárások a kutatások replikálhatóságában? Hogyan lehet biztosítani, hogy az elemzés később vagy másoknak is lefut? Milyen új szoftverek, eszközök vannak, amik segítenek ebben?
 Csóka Imola a CEU vendégtanára vezeti a workshopot.
-
-![krtk1](/images/krtk1.jpg){:height="70%" width="70%"}
-
 
 
 
