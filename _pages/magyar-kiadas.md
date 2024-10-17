@@ -115,6 +115,8 @@ Behind the book  [Arieda Muco on Medium](https://medium.com/ceu-economic-threads
 
 Prospero Könyvek vezetőjével, [Janzer Frigyessel](https://www.youtube.com/watch?v=HXzVsnOM2oM&list=PL6LGnk3aSVOj-N-e9qAnSQGHNL-YcpW8c&index=3) beszélgetünk a könyv bizniszről. 
 
+Az adatelemzés olyan munka, mint a nyomozóké – interjú Békés Gáborral, a sikerkönyv társszerzőjével. [Szabad Európa interjú](https://www.szabadeuropa.hu/a/adatelemzes-bekes-gabor-interju/33020517.html) Szalai Bálinttal beszélgettem 2024 júniusban. 
+
 ## Háttér
 
 ### Országok (37)
