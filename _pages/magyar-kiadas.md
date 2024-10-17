@@ -26,6 +26,27 @@ A könyv gyorsan befutott, megjelenés óta vezeti az üzleti könyv listát, é
 ![libri](/images/libri-top8.jpg){:height="70%" width="70%"}
 
 
+## HUN-REN KRTK Adatelemzés workshop
+
+2024 október 10-11 2-napos workshop a [HUN-RENK KRTK szervezésében](https://krtk.hun-ren.hu/esemeny/adatelemzes-workshop-kutatoknak-es-oktatoknak/). A műhely célja, hogy gyakorlati tanácsokat adjon gyakorló kutatóknak és oktatóknak
+az adatelemzésben és az adatelemzés oktatásában.
+
+Hogyan tanítsuk a könyvet? Oktatók (Corvinus, Rajk, CEU) mondják el tapasztalataikat. 
+
+* Horn Dániel (BCE és KRTK):  
+* Reguly Ágoston (BCE):
+* Bárdits Anna (KRTK), 
+* Elek Péter (KRTK, BCE) [Regresszió, gépi tanulás és oksági elemzés oktatása a tankönyv segítségével](/files/elek_adatelemzes_oktatas.pdf)
+
+
+Előadás: Békés Gábor (CEU és KRTK): [Az adatelemzés 7 lépése](/files/bekes-krtk-adat-2024-10-10-F.pdf)
+
+Reprodukálhatóság a kutatásban: Mik a legújabb elvárások a kutatások replikálhatóságában? Hogyan lehet biztosítani, hogy az elemzés később vagy másoknak is lefut? Milyen új szoftverek, eszközök vannak, amik segítenek ebben?
+Csóka Imola a CEU vendégtanára vezeti a workshopot.
+
+![krtk1](/images/krtk1.jpg){:height="70%" width="70%"}
+
+
 
 
 ## Könyvbemutató: Békés Gábor - Kézdi Gábor: Adatelemzés
