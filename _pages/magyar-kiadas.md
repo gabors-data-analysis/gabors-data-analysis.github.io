@@ -44,7 +44,7 @@ Oktatók (Corvinus, Rajk, CEU) mondják el tapasztalataikat:
 * Bárdits Anna (KRTK) [Esettanulmányok és gyakorlati példák](/files/bardits-esettanulmanyok.pdf)
 * Elek Péter (KRTK, BCE) [Regresszió, gépi tanulás és oksági elemzés oktatása a tankönyv segítségével](/files/elek_adatelemzes_oktatas.pdf)
 
-Előadás: Békés Gábor (CEU és KRTK): [Az adatelemzés 7 lépése](/files/bekes-krtk-adat-2024-10-10-F.pdf)
+Előadás: Békés Gábor (CEU és KRTK): [Az adatelemzés 7 lépése](/files/bekes-krtk-adat-2024-10-10-F.pdf). Linkek az előadásban [ITT](/talks-thesis/) 
 
 <figure class="third">
 	<img src="/images/krtlk-adatelemzés-dani.jpg">
@@ -52,6 +52,7 @@ Előadás: Békés Gábor (CEU és KRTK): [Az adatelemzés 7 lépése](/files/be
 	<img src="/images/krtlk-adatelemzés-gabor.jpg">
 	<figcaption> KRTK Adatelemzés előadók! </figcaption>
 </figure>
+
 
 ### Reprodukálható kutatás workshop
 
