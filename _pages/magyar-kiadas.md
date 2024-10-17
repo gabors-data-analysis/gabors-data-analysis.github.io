@@ -43,7 +43,7 @@ Előadás: Békés Gábor (CEU és KRTK): [Az adatelemzés 7 lépése](/files/be
 <figure class="third">
 	<img src="/images/krtlk-adatelemzés-dani.jpg">
 	<img src="/images/krtlk-adatelemzés-ago.jpg">
-	<img src="/images/krtlk-adatelemzés-gabor.png">
+	<img src="/images/krtlk-adatelemzés-gabor.jpg">
 	<figcaption> KRTK Adatelemzés előadók! </figcaption>
 </figure>
 
@@ -51,6 +51,12 @@ Előadás: Békés Gábor (CEU és KRTK): [Az adatelemzés 7 lépése](/files/be
 Reprodukálhatóság a kutatásban: Mik a legújabb elvárások a kutatások replikálhatóságában? Hogyan lehet biztosítani, hogy az elemzés később vagy másoknak is lefut? Milyen új szoftverek, eszközök vannak, amik segítenek ebben?
 Csóka Imola a CEU vendégtanára vezeti a workshopot.
 
+<figure class="third">
+	<img src="/images/imola2.jpg">
+	<img src="/images/krtlk-adatelemzés1.jpg">
+	<img src="/images/krtlk-adatelemzés2.jpg">
+	<figcaption> KRTK Adatelemzés előadók és hallgatóság </figcaption>
+</figure>
 
 
 ## Könyvbemutató: Békés Gábor - Kézdi Gábor: Adatelemzés
