@@ -15,7 +15,7 @@ Békés Gábor és Kézdi Gábor (2024) Adatelemzés üzleti, közgazdasági és
 
 Fordította: Rózsás Sarolta. Szaklektor: Bárdits Anna. Kiadja az Alinea kiadó, Budapest. 
 
-![textbook cover](/images/Bekes-Kezdi_Adatelemzes_Cover_B1.jpg){:height="80%" width="80%"}
+![textbook cover](/images/Bekes-Kezdi_Adatelemzes_Cover_B1.jpg){:height="65%" width="65%"}
 
 A könyv kiadását a Budapesti Corvinus Egyetem, a HUN-REN KRTK és a Concorde támogatta. Köszönjük az MKE és tagjainak segítségét. 
 
@@ -23,7 +23,7 @@ Megvásárolható május elejétől az [Alinea Kiadótól](https://www.alinea.hu
 
 A könyv gyorsan befutott, megjelenés után hetekig vezette az üzleti könyv listát, és 4 napig top 10 volt az általános könyv listán!
 
-![libri](/images/libri-top8.jpg){:height="50%" width="50%"}
+![libri](/images/libri8.jpg){:height="50%" width="50%"}
 
 ## Angol magyar szótár
 
