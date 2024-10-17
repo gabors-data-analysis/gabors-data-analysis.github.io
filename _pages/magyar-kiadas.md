@@ -21,9 +21,13 @@ A könyv kiadását a Budapesti Corvinus Egyetem, a HUN-REN KRTK és a Concorde 
 
 Megvásárolható május elejétől az [Alinea Kiadótól](https://www.alinea.hu/adatelemzes)  !
 
-A könyv gyorsan befutott, megjelenés óta vezeti az üzleti könyv listát, és 4 napig top 10 volt az általános könyv listán!
+A könyv gyorsan befutott, megjelenés után hetekig vezette az üzleti könyv listát, és 4 napig top 10 volt az általános könyv listán!
 
-![libri](/images/libri-top8.jpg){:height="70%" width="70%"}
+![libri](/images/libri-top8.jpg){:height="50%" width="50%"}
+
+## Angol magyar szótár
+
+[Angol-magyar szakszótár ITT elérhető](/dictionary-hun.html). Próbáld ki!
 
 
 ## HUN-REN KRTK Adatelemzés workshop
@@ -35,7 +39,7 @@ az adatelemzésben és az adatelemzés oktatásában.
 
 Oktatók (Corvinus, Rajk, CEU) mondják el tapasztalataikat: 
 
-* Horn Dániel (BCE és KRTK): [Az adatelemzése oktatása + Gábor bevezetője](/files/bekes_horn_intro)  
+* Horn Dániel (BCE és KRTK): [Az adatelemzése oktatása + Gábor bevezetője](/files/bekes_horn_intro.pdf)  
 * Reguly Ágoston (BCE): [Adatelemzés és kódolás](/files/reguly_kodolas.pdf)
 * Bárdits Anna (KRTK) [Esettanulmányok és gyakorlati példák](/files/bardits-esettanulmanyok.pdf)
 * Elek Péter (KRTK, BCE) [Regresszió, gépi tanulás és oksági elemzés oktatása a tankönyv segítségével](/files/elek_adatelemzes_oktatas.pdf)
@@ -97,9 +101,6 @@ Résztvevők:
 ![textbook cover](/images/corvinus-2024-3.jpg){:height="60%" width="60%"}
 
 
-## Angol magyar szótár
-
-[Angol-magyar szakszótár ITT elérhető](/dictionary-hun.html)
 
 ## Többet akarsz hallani?
 
