@@ -115,7 +115,8 @@ The textbook was already adopted in over a 90 courses globally:
 
 ## Take a quick look!
 
-{% include video id="1JIa1E5M1JhjVytjZpMtzirQM4V9hr_eO" provider="google-drive" %}
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/gVDcWFpTycQ" frameborder="0" allowfullscreen></iframe>
 
 
 
