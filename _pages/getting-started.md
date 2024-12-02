@@ -6,6 +6,7 @@ toc: false
 author_profile: false
 redirect_from:
   - /getting-started.html
+youtubeId: gVDcWFpTycQ
 ---
 
 **Published by [Cambridge University Press, 2021](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20)**  
@@ -116,8 +117,8 @@ The textbook was already adopted in over a 90 courses globally:
 ## Take a quick look!
 
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/gVDcWFpTycQ" frameborder="0" allowfullscreen></iframe>
 
 
 
+{% include youtubePlayer.html id=page.youtubeId %}
 
