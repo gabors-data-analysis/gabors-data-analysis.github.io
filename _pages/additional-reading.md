@@ -60,4 +60,8 @@ Volume 171, 2024
 * On A/B testing, some neat ideas in presentation by [Harlan Harris](https://www.harlan.harris.name/2022/08/communicating-a-b-test-results-for-conversion-rates-with-ratios-and-uncertainty-intervals/?utm_campaign=Data_Elixir&utm_source=Data_Elixir_403/), with code in R
 
 
+## Chapter 21
+
+* On the empirics of management, a great review study is [The international empirics of management](https://www.pnas.org/doi/abs/10.1073/pnas.2412205121) by Daniela Scur and her co-authors published in PNAS in 2024. 
+
 
