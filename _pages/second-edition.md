@@ -69,6 +69,7 @@ We plan several smaller improvements. Mostly adding some examples, better explan
 | 03   | Redo, expand on distributions | 3.9, 3.U1 -- Redo the theoretical distribution section. Bring pdf, cdf to main bit. Show pdf and cdf for normal, log-normal. Give more reason who they are useful when comparing cities, countries. Be more explicit re definitions of pareto, scale-free, power law, zipf's law. Redo Pareto x axis | 
 |  05  | More FP/FN, costs      | now short Case study. Maybe add a case study on estimating arrival time with simulation |
 |  06  | t-test fro two samples | One para and the formula for independent sample means |
+| 04 |  coding error and correlation | Show a dataset of 
 
 ### Part 2
 
