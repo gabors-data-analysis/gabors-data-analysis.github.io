@@ -73,19 +73,22 @@ Some stuff in the textbook is close to the frontier of knowledge. But this fonti
 
 * On **DAGs and Potential outcomes**, deep discussion for social scientists: *Imbens, Guido W. 2020. "Potential Outcome and Directed Acyclic Graph Approaches to Causality: Relevance for Empirical Practice in Economics." Journal of Economic Literature, 58 (4): 1129-79.* [LINK to paper](https://www.aeaweb.org/articles?id=10.1257/jel.20191597). An amazing review that includes Twitter quotes. 
 
-## Chapter 19
+### Chapter 19
 
 * Beetroot juice is said to be great. [Review study](https://www.healthline.com/health/food-nutrition/beetroot-juice-benefits#Overview) [Another review](https://www.medicalnewstoday.com/articles/324898). For example, reference to an RCT with beetroot juice -- dietary inorganic nitrate acutely reduces blood pressure. [Study](https://www.ahajournals.org/doi/10.1161/HYPERTENSIONAHA.114.04675). Review in [medical journal](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4425174/)
 
 * Another issue is vitamin intake already featured in the book. In 2024, a large scale study was published following 400K individuals in the US over 20 years. They found no correlation on life span and vitamin intake. [Multivitamin Use and Mortality Risk in 3 Prospective US Cohorts}(https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2820369) The issue with beta carotin is actually noted there, too. 
 
 
-
-## Chapter 20
+### Chapter 20
 
 * On A/B testing, some neat ideas in presentation by [Harlan Harris](https://www.harlan.harris.name/2022/08/communicating-a-b-test-results-for-conversion-rates-with-ratios-and-uncertainty-intervals/?utm_campaign=Data_Elixir&utm_source=Data_Elixir_403/), with code in R
 
-## Chapter 24
+### Chapter 23
+
+* Very influential paper on difference in differences is [Cengiz, Dube, Lindner, Zipperer QJE 2019](https://academic.oup.com/qje/article/134/3/1405/5484905) paper on minimum wage estimation. They show that simple TWFE make comparisons that are practiacally irrelevant (e.g. well before the intervention) biasing the treatment effect estimation. 
+
+### Chapter 24
 
 * Event studies. A great review to see more is [Miller's 2023 JEP paper](https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.37.2.203), "An Introductory Guide to Event Study Models". Fantastically useful summary. *"Event study models are great! But behind that attractive interpretive graph, researchers are necessarily making decisions. This raises risks of bias due to systematic (if perhaps unconscious) model selection processes, committed by either the researcher or the journal review process. Despite these risks, these decisions are  unavoidable. There is no “button to push” that can automate the necessary judgment calls. For now, best practice should be to increase transparency through bringing clarity about the specification decisions made (and the reasons for those decisions) and to discuss robustness to alternative decisions, along with providing 
 both estimation code and (whenever possible) data for replication."*
@@ -93,3 +96,9 @@ both estimation code and (whenever possible) data for replication."*
 * Fixed effects. Difference in differences. Event studies. These core methods just experienced the largest revival in research for two decades. Since the finish of the 1st edition manuscript in the beginning of 2020, several very important papers were published on potential pitfalls of the two-way fixed effects model. There are several key new results. First, weights matter. For example, $xt$ fixed effect results may be incorrect in the sense that some observations are taken with negative weight. Second, more attention must be paid on selecting control observations, especially when the intervention is staggered (deployed at to different time on different units) and/or heterogeneous in terms of dose. 
 
 * Sythetic controls and difference in differences evolved separately. But recently a marriage of convenience is taking place. In a 2021 AER paper by Arkhangelsky, Athey, Hirshberg, Imbens and Wager [Synthetic Difference-in-Differences](https://www.aeaweb.org/articles?id=10.1257/aer.20190159) offered a way to think about them together. Also, Susan Athey has a great [youtube video presenting it](https://www.youtube.com/watch?v=r2DzGAigTl4). [MORE] On SC, see also  Abadie and  ives-i-Bastida [Synthetic Controls in Action](https://arxiv.org/pdf/2203.06279.pdf)
+
+## After
+
+### Methods books
+
+* A very nice book explaining statistical concepts in detail, offering proofs and simulations in R is: [Statistical Tools for Causal Inference Sylvain Chabé-Ferret](https://chabefer.github.io/STCI/index.html) It's a Phd text, but following our book, it shall be partially accessible for the reader. 
