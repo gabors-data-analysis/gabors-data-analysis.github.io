@@ -19,6 +19,10 @@ Life did not stop when we finished the manusdcript. Actually, we keep finding gr
 
 * On **surveys**, a great review is "How to run survey: A guide to creating your own identifying variation and revelealing the invisible", [NBER DP Stefanie Stantcheva](https://www.nber.org/system/files/working_papers/w30527/w30527.pdf).
 
+### Chapter 02
+
+* On the nature of variables, DuckDB has a great post on [Data Types](https://duckdb.org/docs/sql/data_types/overview) that for instance details length of numbers.
+
 
 ### Chapter 06
 
