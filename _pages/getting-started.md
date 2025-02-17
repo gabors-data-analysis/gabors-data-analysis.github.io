@@ -21,6 +21,7 @@ This textbook provides future data analysts with the **tools, methods, and skill
 **Full codebase [available in Stata, R, and Python on Github](https://github.com/gabors-data-analysis/da_case_studies)**  
 **Open online courses from zero to hero: [Coding for Data Analysis with R / Python / Stata](/code-courses/) and on [Python](https://github.com/gabors-data-analysis/da-coding-python), [R](https://github.com/gabors-data-analysis/da-coding-rstats) and [Stata](https://github.com/gabors-data-analysis/da-coding-stata)**  
 **started to collect ideas for the [second edition](https://gabors-data-analysis.com/second-edition/). Such as collecting what's [beyond](https://gabors-data-analysis.com/beyond)**
+**NEW Data Analysis with AI Course [Class 1 Intro](/courses/da-w-ai-2025/da-w-ai-01-llm-course.html))**
 
 ![textbook cover](images/cover-full_hd.png){:height="80%" width="80%"}
 
