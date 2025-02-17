@@ -1,0 +1,109 @@
+/*U pdated Custom CSS */
+
+/* Base font size */
+.reveal {
+    font-size: 1.6em !important;
+}
+
+/* Regular paragraph line spacing */
+.reveal p {
+    line-height: 1.4;
+    margin-bottom: 1em;
+}
+
+/* List spacing */
+.reveal ul, 
+.reveal ol {
+    line-height: 1.2;  /* Tighter line spacing for lists */
+    margin-bottom: 1em;
+}
+
+.reveal li {
+    margin-bottom: 0.5em;  /* Space between list items */
+}
+
+/* Nested lists spacing */
+.reveal li > ul,
+.reveal li > ol {
+    margin-top: 0.3em;  /* Space before nested lists */
+}
+
+
+
+
+/* Table sizing and spacing */
+.reveal table {
+    font-size: 0.9em;  /* Much smaller font size */
+    line-height: 1.2;  /* Tighter line spacing */
+}
+
+/* Table cell padding adjustment */
+.reveal table td {
+    padding: 0.3em 0.5em;  /* Reduced padding */
+}
+
+/* Table header styling */
+.reveal table th {
+    font-size: 0.75em;  /* Slightly larger than cell text */
+    padding: 0.3em 0.5em;
+    font-weight: bold;
+}
+
+
+/* Viridis color palette variables */
+:root {
+  --viridis-1: #440154;  /* Dark purple */
+  --viridis-2: #3b528b;  /* Purple-blue */
+  --viridis-3: #21918c;  /* Teal */
+  --viridis-4: #5ec962;  /* Green */
+  --viridis-5: #fde725;  /* Yellow */
+}
+
+/* Background gradients for different section types */
+.title-slide {
+  background: linear-gradient(45deg, var(--viridis-1), var(--viridis-2));
+  color: white;
+}
+
+/* Custom styling for visualizations */
+.visualization {
+  border: 2px solid var(--viridis-1);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Highlight colors for code and emphasis */
+.highlight {
+  color: var(--viridis-3);
+  font-weight: bold;
+}
+
+/* Custom styling for callouts */
+.callout {
+  background-color: rgba(33, 145, 140, 0.1);
+  border-left: 4px solid var(--viridis-3);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Progress bar styling */
+.progress {
+  color: var(--viridis-4);
+}
+
+
+/* Custom styling for callouts */
+.reveal .callout {
+  font-size: 1em;  /* Match regular text size */
+  background-color: rgba(33, 145, 140, 0.1);
+  border-left: 4px solid var(--viridis-3);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Ensure callout content also matches regular size */
+.reveal .callout p,
+.reveal .callout strong {
+  font-size: 1.3em;
+  line-height: 1.4;
+}
