@@ -378,24 +378,36 @@ Gábor Békés (CEU)
 </ul>
 </div>
 </section>
-<section id="readings" class="slide level2 center">
-<h2>Readings</h2>
-<ul>
-<li>Ethan Mollick “Co-Intelligence: Living and Working with AI” <a href="https://www.penguinrandomhouse.com/books/741805/co-intelligence-by-ethan-mollick/">Penguin Random House 2024</a></li>
-<li>Anton Korinek “Generative AI for Economic Research: Use Cases and Implications for Economists,” <a href="https://doi.org/10.1257/jel.20231736">Journal of Economic Literature 61(4) December 2024 Update 1–74</a></li>
-<li>Many blog posts in presentation</li>
-</ul>
-</section>
 <section id="this-class-topics" class="slide level2 center">
 <h2>This class – topics</h2>
 <ul>
 <li>Week 1: Effectively summarize academic content</li>
-<li>Week 2: Document data – World Values Survey</li>
+<li>Week 2: Document data – World Values Survey (VWS)</li>
 <li>Week 3: Exploratory data analysis and report creation - VWS</li>
 <li>Week 4: Data manipulation, wrangling – Football games and teams</li>
-<li>Week 5: Text analysis and information extraction – Football</li>
-<li>Week 6: Building interactive applications – simulated data</li>
+<li>Week 5: Text analysis and information extraction – Interviews</li>
+<li>Week 6: Combing data from text and tabular data, text analysis with APIs (TBD) – Interviews</li>
 </ul>
+</section>
+<section id="evolution-of-language-models" class="slide level2 center" data-background-color="#fcfcfc">
+<h2>Evolution of Language Models</h2>
+
+<img data-src="images/timeline-viz.svg" class="r-stretch"><div class="callout callout-none no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p><strong>Key Breakthrough: “Attention is All You Need” (2017)</strong></p>
+<ul>
+<li>Introduced the Transformer architecture</li>
+<li>Eliminated need for sequential processing</li>
+<li>Enabled massive parallelization</li>
+<li>Foundation for all modern LLMs</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>Vaswani et al.&nbsp;(2017). “Attention Is All You Need”. NeurIPS 30.</p>
+</div>
 </section>
 <section id="what-are-large-language-models" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>What are Large Language Models?</h2>
@@ -410,23 +422,6 @@ Gábor Békés (CEU)
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/context-viz.svg"></p>
 </div></div>
-<aside class="notes">
-<ul>
-<li>Emphasize the statistical nature</li>
-<li>Draw parallel to econometric models</li>
-<li>Mention the importance of scale</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="llms-as-prediction-machines" class="slide level2 center" data-background-transition="zoom">
 <h2>LLMs as Prediction Machines</h2>
@@ -466,14 +461,15 @@ Gábor Békés (CEU)
 </div>
 </div>
 </section>
-<section id="more-reading" class="slide level2 center">
-<h2>More reading</h2>
+<section id="token-window" class="slide level2 center">
+<h2>Token window</h2>
 <ul>
-<li><p>What’s an LLM context window and why is it getting larger? <a href="https://research.ibm.com/blog/larger-context-window">IBM research on context window</a></p></li>
-<li><p>Glossary of LLM terms <a href="https://www.vectara.com/glossary-of-llm-terms">Glossary of LLM Terms</a></p></li>
-<li><p>Interview with a great <a href="https://youtu.be/z_svj3NP968?si=cWUoVAImTF4PZ_aw">Sendhil Mullainathan on direction AI</a></p></li>
-<li><p>Review of LLMs by <a href="https://simonwillison.net/2024/Dec/31/llms-in-2024/">Simon Willison</a></p></li>
-<li><p>Machines of Loving Grace <a href="https://darioamodei.com/machines-of-loving-grace">Dario Amodei</a></p></li>
+<li><p>1 token = 4 characters, 4 tokens= 3 words (In English)</p></li>
+<li><p>ChatGPT 2022 window of 4,000 tokens.</p>
+<ul>
+<li>Over limit: hallucinate, off-topic.</li>
+</ul></li>
+<li><p>ChatGPT 2025 – 128,000 tokens = 250p book</p></li>
 </ul>
 </section>
 <section id="hallucination-prediction-errors" class="slide level2 center" data-background-color="#f8f9fa">
@@ -528,8 +524,7 @@ Gábor Békés (CEU)
 </ul></li>
 <li><strong>Direct Preference Optimization</strong>
 <ul>
-<li>More efficient than traditional RLHF</li>
-<li>Anthropic’s major innovation in 2023</li>
+<li>Model trained to prefer responses that humans rank higher</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:40%;">
@@ -603,65 +598,6 @@ Gábor Békés (CEU)
 </ul></li>
 </ul>
 </div></div>
-<aside class="notes">
-<p>Note: While these are known techniques used in Claude’s development, specific details about 3.5 improvements would require verification from Anthropic</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="evolution-of-language-models" class="slide level2 center" data-background-color="#fcfcfc">
-<h2>Evolution of Language Models</h2>
-
-<img data-src="images/timeline-viz.svg" class="r-stretch"><div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p><strong>Key Breakthrough: “Attention is All You Need” (2017)</strong></p>
-<ul>
-<li>Introduced the Transformer architecture</li>
-<li>Eliminated need for sequential processing</li>
-<li>Enabled massive parallelization</li>
-<li>Foundation for all modern LLMs</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="footer">
-<p>Vaswani et al.&nbsp;(2017). “Attention Is All You Need”. NeurIPS 30.</p>
-</div>
-</section>
-<section id="to-learn-more" class="slide level2 center">
-<h2>To learn more:</h2>
-<h3 id="understanding-llms">Understanding LLMs</h3>
-<ul>
-<li><a href="https://ig.ft.com/generative-ai/">Financial Times: How AI Large Language Models Work</a></li>
-<li><a href="https://www.economist.com/science-and-technology/2024/07/11/researchers-are-figuring-out-how-large-language-models-work">The Economist: How Large Language Models Work</a></li>
-<li><a href="https://www.oneusefulthing.org/p/thinking-like-an-ai">Thinking like AI</a></li>
-<li><a href="https://research.ibm.com/blog/larger-context-window">Context window</a></li>
-</ul>
-<h3 id="video-resources">Video Resources</h3>
-<ul>
-<li>“Introduction to Large Language Models” <a href="https://www.youtube.com/watch?v=zjkBMFhNj_g">1hr overview</a></li>
-<li>Andrej Karpathy: <a href="https://www.youtube.com/watch?v=kCc8FmEb1nY">“Let’s build GPT: from scratch, in code, spelled out”</a></li>
-</ul>
-</section>
-<section id="the-plan-is-follow-advice" class="slide level2 center">
-<h2>The plan is follow advice</h2>
-<h3 id="practice">Practice</h3>
-<ul>
-<li>“just use AI to do stuff that you do for work or fun, for about 10 hours, and you will figure out a remarkable amount” (Ethan Mollick, 2024)</li>
-</ul>
-<h3 id="more-on-strategy">More on Strategy</h3>
-<ul>
-<li>Strategy in business <a href="https://hbr.org/2023/07/build-a-winning-ai-strategy-for-your-business">Build a winning AI strategy, HBR 2023</a></li>
-</ul>
 </section></section>
 <section>
 <section id="working-with-llms" class="title-slide slide level1 white center" data-background-color="#3b528b">
@@ -909,9 +845,10 @@ Gábor Békés (CEU)
 <section id="stochastic-parrots" class="slide level2 center">
 <h2>Stochastic Parrots</h2>
 <ul>
-<li>Stochastic = when prompted repeatedly, LLMs may give different answers</li>
-<li>Parrot = LLMs can repeat information without understanding</li>
-<li>Philosophy = to what extent do they understand the state of the world?</li>
+<li><p>Stochastic = when prompted repeatedly, LLMs may give different answers</p></li>
+<li><p>Parrot = LLMs can repeat information without understanding</p></li>
+<li><p>Philosophy = to what extent do they understand the state of the world?</p></li>
+<li><p><a href="https://e-discoveryteam.com/2024/04/05/stochastic-parrots-how-to-tell-if-something-was-written-by-an-ai-or-a-human/">List of words often used by LLMs</a></p></li>
 </ul>
 <h3 id="data-analysis">Data Analysis</h3>
 <ul>
@@ -929,7 +866,6 @@ Gábor Békés (CEU)
 <li class="fragment">Best = learnt from experience, best people</li>
 </ul>
 </div>
-<p><a href="https://e-discoveryteam.com/2024/04/05/stochastic-parrots-how-to-tell-if-something-was-written-by-an-ai-or-a-human/">List of words often used by LLMs</a></p>
 </section>
 <section id="big-debate-on-errors-and-hallucination" class="slide level2 center">
 <h2>Big debate on errors and hallucination</h2>
@@ -949,6 +885,17 @@ Gábor Békés (CEU)
 
 <img data-src="images/bja.png" class="r-stretch"><p><a href="https://www.bjanaesthesia.org.uk/article/S0007-0912(23)00372-0/fulltext">Medical research</a></p>
 </section>
+<section id="hallucination-2025" class="slide level2 center">
+<h2>Hallucination 2025</h2>
+<ul>
+<li>You can now ask for more thinking leading to less hallucination</li>
+</ul>
+<p><a href="https://chatgpt.com/share/67b4402b-9fd4-8000-a5c4-5a8f068a5201">ChatGPT convo on tokens</a></p>
+<ul>
+<li>Use explicit push for calculations</li>
+</ul>
+<p><a href="https://chatgpt.com/share/67b440eb-e474-8000-8461-cc56c56f929e">ChatGPT convo on tokens 2</a></p>
+</section>
 <section id="llm-vs-human-2025" class="slide level2 center">
 <h2>LLM vs human 2025</h2>
 <ul>
@@ -957,17 +904,60 @@ Gábor Békés (CEU)
 <li>Solve scientific problems</li>
 <li>Reasoning models, like OpenAI o3</li>
 </ul>
+</section></section>
+<section>
+<section id="ethich-and-law" class="title-slide slide level1 center">
+<h1>Ethich and Law</h1>
+
+</section>
+<section id="copyright" class="slide level2 center">
+<h2>Copyright</h2>
+<p>U.S. Copyright Office 2025 Jan report <a href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf">Copyright and Artificial Intelligence Part 2: Copyrightability</a>: copyright protection is intended for human-created works.</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>“Do not provide sufficient human control to make users of an AI system the authors of the output. Prompts essentially function as instructions that convey unprotectable ideas. While highly detailed prompts could contain the user’s desired expressive elements, at present they do not control how the AI system processes them in generating the output.”</p>
+</div>
+</div>
+</div>
 </section>
 <section id="ethics" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>Ethics</h2>
+<h3 id="ai-was-created-by-using-stealing-human-knowledge">AI was created by using (stealing?) human knowledge</h3>
+<ul>
+<li>NYT <a href="https://www.cnbc.com/2023/12/27/new-york-times-sues-microsoft-chatgpt-maker-openai-over-copyright-infringement.html">sued OpenAI</a></li>
+</ul>
 <h3 id="is-it-okay-to-use-everything-as-training-material">Is it Okay to use “Everything” as training material?</h3>
 <ul>
 <li>Read essay by <a href="https://www.robinsloan.com/lab/is-it-okay/">Robin Sloan</a></li>
 </ul>
+</section>
+<section id="ai-in-research" class="slide level2 center">
+<h2>AI in research</h2>
+<h3 id="use-of-artificial-intelligence-in-aer">Use of Artificial Intelligence in AER</h3>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Artificial intelligence software, such as chatbots or other large language models, may not be listed as an author. If artificial intelligence software was used in the preparation of the manuscript, including drafting or editing text, this must be briefly described during the submission process, which will help us understand how authors are or are not using chatbots or other forms of artificial intelligence. Authors are solely accountable for, and must thoroughly fact-check, outputs created with the help of artificial intelligence software.</p>
+</div>
+</div>
+</div>
 </section></section>
 <section>
-<section id="conclusions-and-discussion" class="title-slide slide level1 center">
-<h1>Conclusions and discussion</h1>
+<section id="ai-use-cases" class="title-slide slide level1 center">
+<h1>AI use cases</h1>
 
 </section>
 <section id="ai-use-cases-student-response" class="slide level2 center" data-background-color="#f8f9fa">
@@ -1002,6 +992,20 @@ AI supports coding in R, Python, and Stata, assisting with debugging, automating
 AI aids in drafting, structuring, and refining academic writing, improving clarity, grammar, and coherence while maintaining academic integrity.</p></li>
 </ol>
 </section>
+<section id="how-i-use-it" class="slide level2 center">
+<h2>How I use it?</h2>
+<ul>
+<li><p>All the time, ChatGPT 4o (Canvas), Claude (Projects), ChatGPT o1 (rare), both paid tiers</p></li>
+<li><p>Github Copilot in VSCode and Rstudio</p></li>
+<li><p>This presentation is massively helped by AI</p>
+<ul>
+<li>How can I make a presentation as html –&gt; Quarto and revealjs</li>
+<li>add boxes, etc, create yml, customs.css, add to my website</li>
+<li>Content on RFHL, tokens</li>
+<li>Summary slides on cyborg vs centaur</li>
+</ul></li>
+</ul>
+</section>
 <section id="what-were-bad-experience-with-ai" class="slide level2 center">
 <h2>What were bad experience with AI?</h2>
 <h3 id="topics">Topics</h3>
@@ -1013,7 +1017,45 @@ AI aids in drafting, structuring, and refining academic writing, improving clari
 </ul>
 </section></section>
 <section>
-<section id="conclusions-and-discussion-1" class="title-slide slide level1 center">
+<section id="to-learn-more" class="title-slide slide level1 center">
+<h1>To learn more</h1>
+
+</section>
+<section id="readings" class="slide level2 center">
+<h2>Readings</h2>
+<ul>
+<li>Ethan Mollick “Co-Intelligence: Living and Working with AI” <a href="https://www.penguinrandomhouse.com/books/741805/co-intelligence-by-ethan-mollick/">Penguin Random House 2024</a></li>
+<li>Anton Korinek “Generative AI for Economic Research: Use Cases and Implications for Economists,” <a href="https://doi.org/10.1257/jel.20231736">Journal of Economic Literature 61(4) December 2024 Update 1–74</a></li>
+<li>Many blog posts, videos, papers scattered in presentation</li>
+</ul>
+</section>
+<section id="to-learn-more-1" class="slide level2 center">
+<h2>To learn more:</h2>
+<h3 id="understanding-llms">Understanding LLMs</h3>
+<ul>
+<li><p>Glossary of LLM terms <a href="https://www.vectara.com/glossary-of-llm-terms">Glossary of LLM Terms</a></p></li>
+<li><p><a href="https://ig.ft.com/generative-ai/">Financial Times: How AI Large Language Models Work</a></p></li>
+<li><p><a href="https://www.economist.com/science-and-technology/2024/07/11/researchers-are-figuring-out-how-large-language-models-work">The Economist: How Large Language Models Work</a></p></li>
+<li><p><a href="https://www.oneusefulthing.org/p/thinking-like-an-ai">Thinking like AI</a></p></li>
+<li><p>What’s an LLM context window and why is it getting larger? <a href="https://research.ibm.com/blog/larger-context-window">IBM research on context window</a></p></li>
+<li><p>Strategy in business <a href="https://hbr.org/2023/07/build-a-winning-ai-strategy-for-your-business">Build a winning AI strategy, HBR 2023</a></p></li>
+</ul>
+</section>
+<section id="interviews-podcasts" class="slide level2 center">
+<h2>Interviews, podcasts</h2>
+<ul>
+<li>Review of LLMs by <a href="https://simonwillison.net/2024/Dec/31/llms-in-2024/">Simon Willison</a></li>
+<li>Machines of Loving Grace <a href="https://darioamodei.com/machines-of-loving-grace">Dario Amodei</a></li>
+</ul>
+<h3 id="video-resources">Video Resources</h3>
+<ul>
+<li>Andrej Karpathy “Introduction to Large Language Models” <a href="https://www.youtube.com/watch?v=zjkBMFhNj_g">1hr overview</a></li>
+<li>Andrej Karpathy: <a href="https://www.youtube.com/watch?v=kCc8FmEb1nY">“Let’s build GPT: from scratch, in code, spelled out”</a></li>
+<li>Interview with a great <a href="https://youtu.be/z_svj3NP968?si=cWUoVAImTF4PZ_aw">Sendhil Mullainathan on direction AI</a></li>
+</ul>
+</section></section>
+<section>
+<section id="conclusions-and-discussion" class="title-slide slide level1 center">
 <h1>Conclusions and discussion</h1>
 
 </section>
@@ -1024,23 +1066,6 @@ AI aids in drafting, structuring, and refining academic writing, improving clari
 <li>2024 summer piece in <a href="https://www.economist.com/science-and-technology/2024/07/31/gpt-claude-llama-how-to-tell-which-ai-model-is-best">The Economist</a></li>
 <li>2025-02 <a href="https://www.oneusefulthing.org/p/which-ai-to-use-now-an-updated-opinionated">Which Ai by Ethan Mollick</a>, especially regarding <a href="https://www.oneusefulthing.org/i/155502334/executes-code-and-does-data-analysis">data analysis</a></li>
 </ul>
-</section>
-<section id="ai-in-research" class="slide level2 center">
-<h2>AI in research</h2>
-<h3 id="use-of-artificial-intelligence-in-aer">Use of Artificial Intelligence in AER</h3>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Artificial intelligence software, such as chatbots or other large language models, may not be listed as an author. If artificial intelligence software was used in the preparation of the manuscript, including drafting or editing text, this must be briefly described during the submission process, which will help us understand how authors are or are not using chatbots or other forms of artificial intelligence. Authors are solely accountable for, and must thoroughly fact-check, outputs created with the help of artificial intelligence software.</p>
-</div>
-</div>
-</div>
 </section>
 <section id="gabors-current-take-1" class="slide level2 center">
 <h2>Gabor’s current take 1</h2>
@@ -1059,19 +1084,21 @@ AI aids in drafting, structuring, and refining academic writing, improving clari
 <section id="gabors-current-take-2" class="slide level2 center">
 <h2>Gabor’s current take 2</h2>
 <h3 id="your-place">Your place</h3>
+<div>
 <ul>
-<li>Without core knowledge you can’t interact</li>
-<li>Strong knowledge and experience helps debugging</li>
-<li>Cheaper data analysis = more use cases</li>
+<li class="fragment">Without core knowledge you can’t interact</li>
+<li class="fragment">Strong knowledge and experience helps debugging</li>
+<li class="fragment">Cheaper data analysis = more use cases</li>
 </ul>
+</div>
 </section>
 <section id="date-stamp" class="slide level2 center">
 <h2>Date stamp</h2>
-<p>This version: 2025-02-17</p>
+<p>This version: 2025-02-18</p>
 <p><a href="mailto:bekesg@ceu.edu">bekesg@ceu.edu</a></p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p>Gabors Data Analysis with AI - 2025-02-17 v0.2</p>
+<p>Gabors Data Analysis with AI - 2025-02-18 v0.3</p>
 </div>
 </div>
 </section></section>
