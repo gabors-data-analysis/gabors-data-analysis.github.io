@@ -346,13 +346,22 @@ Gábor Békés
 <h1>Prompting strategies</h1>
 
 </section>
-<section id="prompting-key-to-effective-llm-use" class="slide level2 center">
-<h2>Prompting: Key to Effective LLM Use</h2>
+<section id="prompting" class="slide level2 center">
+<h2>Prompting</h2>
 <ul>
-<li class="fragment">Clear communication with LLMs is crucial for accurate results</li>
-<li class="fragment">Similar to statistical analysis: garbage in, garbage out</li>
-<li class="fragment">Specific, structured prompts lead to better outputs</li>
-<li class="fragment"><span style="color: #21918c;">Different strategies for different analytical needs</span></li>
+<li><p>It is helpful to think about prompts</p></li>
+<li><p>But it’s not magic, just focus on defining what you want.</p></li>
+<li><p>Think as giving instructions to someone else (= The RA approach)</p></li>
+</ul>
+</section>
+<section id="prompting-for-effective-llm-use" class="slide level2 center">
+<h2>Prompting for Effective LLM Use</h2>
+<ul>
+<li>AI model is a prediction machine. More input yields better prediction.<br>
+</li>
+<li>Clear communication with LLMs is crucial for accurate results</li>
+<li>Specific, structured prompts lead to better outputs</li>
+<li><span style="color: #21918c;">Different strategies for different analytical needs</span></li>
 </ul>
 </section>
 <section id="six-key-prompting-strategies" class="slide level2 center">
@@ -362,7 +371,7 @@ Gábor Békés
 <li>Write clear instructions</li>
 <li>Provide reference materials</li>
 <li>Break complex tasks into subtasks</li>
-<li>Give time to “think”</li>
+<li>Step by step reasining</li>
 <li>Use external tools</li>
 <li>Test systematically</li>
 </ol>
@@ -375,16 +384,16 @@ Gábor Békés
 <div class="column" style="width:45%;">
 <h3 id="general-principles">General Principles</h3>
 <ul>
-<li class="fragment">Be specific about style, requirements</li>
-<li class="fragment">Include relevant context and constraints</li>
-<li class="fragment">Use example formats when needed</li>
+<li>Be specific about style, requirements</li>
+<li>Include relevant context and constraints</li>
+<li>Use example formats when needed</li>
 </ul>
 </div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
 <h3 id="data-analysis-apps">Data Analysis Apps 📊</h3>
 <ul>
-<li class="fragment">Define audience (academic/business/public)</li>
-<li class="fragment">Define desired statistical approaches</li>
-<li class="fragment">Clarify output format (tables, graphs, reports)</li>
+<li>Define audience (academic/business/public)</li>
+<li>Define desired statistical approaches</li>
+<li>Clarify output format (tables, graphs, reports)</li>
 </ul>
 </div></div>
 </section>
@@ -394,227 +403,170 @@ Gábor Békés
 <div class="column" style="width:45%;">
 <h3 id="general-tactics">General Tactics ⚡</h3>
 <ul>
-<li class="fragment">Adopt personas</li>
-<li class="fragment">Specify output format explicitly</li>
-<li class="fragment">Define scope clearly</li>
-<li class="fragment">Ask for specific extensions</li>
+<li>Adopt personas</li>
+<li>Specify output format explicitly</li>
+<li>Define scope clearly</li>
+<li>Ask for specific extensions</li>
 </ul>
 </div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
 <h3 id="example-prompts">Example Prompts 💡</h3>
 <ul>
-<li class="fragment">“Write a report for government officials”</li>
-<li class="fragment">“Format correlation matrices as heatmaps”</li>
-<li class="fragment">“Show full statistical tests including p-values”</li>
-<li class="fragment">“Report extreme values and influential points”</li>
+<li>“Write a report for government officials”</li>
+<li>“Format correlation matrices as heatmaps”</li>
+<li>“Show full statistical tests including p-values”</li>
+<li>“Report extreme values and influential points”</li>
 </ul>
 </div></div>
 </section>
-<section id="provide-references" class="slide level2 center">
+<section id="clear-instructions-a-comment" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>1 Clear Instructions: A comment</h2>
+<ul>
+<li>High-level knowledge is important
+<ul>
+<li>to guide the process</li>
+<li>check for errors in execution</li>
+</ul></li>
+</ul>
+</section>
+<section id="provide-references" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>2. Provide References</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
 <h3 id="general-tactics-1">General Tactics ⚡</h3>
-<div>
 <ul>
-<li class="fragment">Share relevant documentation</li>
-<li class="fragment">Include descriptions</li>
-<li class="fragment">Require citations</li>
+<li>Share relevant documentation</li>
+<li>Include descriptions</li>
+<li>Require citations</li>
 </ul>
-</div>
-<section id="data-analysis-apps-1" style="color: #21918c;">
-<h3>Data Analysis Apps 📊</h3>
-<div>
+</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
+<h3 id="data-analysis-apps-1">Data Analysis Apps 📊</h3>
 <ul>
-<li class="fragment">Reference statistical methodology</li>
-<li class="fragment">Share domain context and assumptions</li>
-<li class="fragment">Provide data quality metrics</li>
+<li>Reference statistical methodology</li>
+<li>Share domain context and assumptions</li>
+<li>Provide data quality metrics</li>
 </ul>
-</div>
+</div></div>
 </section>
-</section>
-<section id="provide-references-tactics" class="slide level2 center">
+<section id="provide-references-tactics" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>2. Provide References: Tactics</h2>
-<p><strong>General</strong>:</p>
-<div>
+<div class="columns">
+<div class="column" style="width:45%;">
+<h3 id="general-tactics-2">General Tactics ⚡</h3>
 <ul>
 <li>Insert documentation at start</li>
 <li>Include sample outputs</li>
 </ul>
-</div>
-<div style="color: #21918c;">
-<p><strong>Data Analysis Tactics:</strong></p>
-<div>
+</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
+<h3 id="data-analysis-tactics">Data Analysis Tactics 📊</h3>
 <ul>
-<li class="fragment">Link/ upload statistical papers or paragraphs for methods</li>
-<li class="fragment">Share data dictionaries and variable descriptions</li>
+<li>Link/upload statistical papers or paragraphs for methods</li>
+<li>Share data dictionaries and variable descriptions</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
-<section id="break-complex-tasks" class="slide level2 center">
+<section id="provide-references-a-comment" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>2. Provide References: A comment</h2>
+<ul>
+<li>2025-02 vs 2024-07: Improved</li>
+<li>Increased context window and reduced hallucinations made this much better</li>
+</ul>
+</section>
+<section id="break-complex-tasks" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>3. Break Complex Tasks</h2>
-<p><strong>General</strong>:</p>
-<div>
+<div class="columns">
+<div class="column" style="width:45%;">
+<h3 id="general-tactics-3">General Tactics ⚡</h3>
 <ul>
 <li>Divide into logical steps</li>
 <li>Build complexity gradually</li>
 <li>Validate intermediate steps</li>
 </ul>
-</div>
-<div style="color: #21918c;">
-<p><strong>Data Analysis Applications:</strong></p>
-<div>
+</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
+<h3 id="data-analysis-applications">Data Analysis Applications 📊</h3>
 <ul>
-<li class="fragment">Cleaning, EDA, Analysis</li>
-<li class="fragment">Xsec OLS, panelFE, event time</li>
-<li class="fragment">Does OLS <span class="math inline">\(y\)</span>, <span class="math inline">\(x\)</span> make sense?</li>
+<li>Cleaning, EDA, Analysis</li>
+<li>Xsec OLS, panelFE, event time</li>
+<li>Does OLS <span class="math inline">\(y\)</span>, <span class="math inline">\(x\)</span> make sense?</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
-<section class="slide level2 center">
-
-<p>%%% do we need it?</p>
-</section>
-<section id="break-complex-tasks-tactics" class="slide level2 center">
+<section id="break-complex-tasks-tactics" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>3. Break Complex Tasks: Tactics</h2>
-<p><strong>General</strong>:</p>
-<div>
+<div class="columns">
+<div class="column" style="width:45%;">
+<h3 id="general-tactics-4">General Tactics ⚡</h3>
 <ul>
 <li>Create checkpoints</li>
 <li>Request validations</li>
 <li>Chain related tasks</li>
 </ul>
-</div>
-<div style="color: #21918c;">
-<p><strong>Data Analysis Tactics:</strong></p>
-<div>
+</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
+<h3 id="data-analysis-tactics-1">Data Analysis Tactics 📊</h3>
 <ul>
-<li class="fragment">Verify distributions before tests</li>
-<li class="fragment">Check assumptions step by step</li>
-<li class="fragment">Build analysis pipeline incrementally</li>
-<li class="fragment">Validate transformations at each stage</li>
+<li>Verify distributions before tests</li>
+<li>Check assumptions step by step</li>
+<li>Build analysis pipeline incrementally</li>
+<li>Validate transformations at each stage</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
-<section id="time-to-think" class="slide level2 center">
-<h2>4. Time to “Think”</h2>
-<p><strong>General</strong>:</p>
-<div>
+<section id="step-by-step" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>4. Step by step</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<h3 id="general-tactics-5">General Tactics ⚡</h3>
 <ul>
 <li>Request step-by-step reasoning</li>
 <li>Explain assumptions</li>
 <li>Validate interim results</li>
 </ul>
-</div>
-<div style="color: #21918c;">
-<p><strong>Data Analysis Applications:</strong></p>
-<div>
+</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
+<h3 id="data-analysis-tactics-2">Data Analysis Tactics 📊</h3>
 <ul>
-<li class="fragment">Show data exploration process</li>
-<li class="fragment">Justify method selection</li>
-<li class="fragment">Document assumption checks</li>
-<li class="fragment">Explain statistical decisions</li>
+<li>Show data exploration process</li>
+<li>Justify method selection</li>
+<li>Document assumption checks</li>
+<li>Explain statistical decisions</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
-<section id="time-to-think-tactics" class="slide level2 center">
-<h2>4. Time to “Think”: Tactics</h2>
-<p><strong>General</strong>:</p>
-<div>
-<ul>
-<li>Ask for justifications</li>
-<li>Consider alternatives</li>
-<li>Review limitations</li>
-</ul>
-</div>
-<div style="color: #21918c;">
-<p><strong>Data Analysis Tactics:</strong></p>
-<div>
-<ul>
-<li class="fragment">“Explain why this test is appropriate”</li>
-<li class="fragment">“What are alternative approaches?”</li>
-<li class="fragment">“List statistical assumptions being made”</li>
-<li class="fragment">“Assess potential biases in analysis”</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="external-tools" class="slide level2 center">
+<section id="external-tools" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>5. External Tools</h2>
-<p><strong>General</strong>:</p>
-<div>
+<div class="columns">
+<div class="column" style="width:45%;">
+<h3 id="general-tactics-6">General Tactics ⚡</h3>
 <ul>
-<li>Use code execution</li>
-<li>Leverage visualization tools</li>
-<li>Connect to external services</li>
+<li>Use code execution (Python)</li>
+<li>use interactive tools like /canvas,</li>
+<li>Share full folders like Claude projects</li>
 </ul>
-</div>
-<div style="color: #21918c;">
-<p><strong>Data Analysis Applications:</strong></p>
-<div>
+</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
+<h3 id="data-analysis-tactics-3">Data Analysis Tactics 📊</h3>
 <ul>
-<li class="fragment">Statistical packages integration</li>
-<li class="fragment">Visualization libraries</li>
-<li class="fragment">Data validation tools</li>
-<li class="fragment">Computational resources</li>
+<li>Ask for direct solution</li>
+<li>Upload for code stack</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
-<section id="external-tools-tactics" class="slide level2 center">
-<h2>5. External Tools: Tactics</h2>
-<p><strong>General</strong>:</p>
-<div>
-<ul>
-<li>Specify versions - Request modular code - Document dependencies</li>
-</ul>
-</div>
-<div style="color: #21918c;">
-<p><strong>Data Analysis Tactics:</strong></p>
-<div>
-<ul>
-<li class="fragment">Use pandas for data manipulation</li>
-<li class="fragment">Implement statsmodels for analysis</li>
-<li class="fragment">Create seaborn/plotly visualizations</li>
-<li class="fragment">Integrate scipy for advanced statistics</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="test-systematically" class="slide level2 center">
+<section id="test-systematically" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>6. Test Systematically</h2>
-<p><strong>General</strong>:</p>
-<div>
+<div class="columns">
+<div class="column" style="width:45%;">
+<h3 id="general-tactics-7">General Tactics ⚡</h3>
 <ul>
-<li>Validate against known results - Check validity - Compare methods</li>
+<li>Validate against known results</li>
+<li>Check validity</li>
+<li>Compare methods</li>
 </ul>
-</div>
-<div style="color: #21918c;">
-<p><strong>Data Analysis Applications:</strong></p>
-<div>
+</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
+<h3 id="data-analysis-tactics-4">Data Analysis Tactics 📊</h3>
 <ul>
-<li class="fragment">Cross-validation</li>
-<li class="fragment">Benchmark datasets</li>
-<li class="fragment">Statistical assumption verification</li>
-<li class="fragment">Sensitivity analysis</li>
+<li>Cross-validation</li>
+<li>Benchmark datasets</li>
+<li>Statistical assumption verification</li>
+<li>Sensitivity analysis</li>
 </ul>
-</div>
-</div>
-</section>
-<section id="test-systematically-tactics" class="slide level2 center">
-<h2>6. Test Systematically: Tactics</h2>
-<p><strong>General</strong>:</p>
-<div>
-<ul>
-<li>Create test cases - Document coverage - Validate edge cases</li>
-</ul>
-</div>
-<div style="color: #21918c;">
-<div>
-<p><strong>Data Analysis Tactics:</strong> - Test with simulated data - Compare with established methods - Verify statistical power - Check reproducibility - Validate against null hypotheses</p>
-</div>
-</div>
+</div></div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>Data Analysis with AI - 2025</p>
