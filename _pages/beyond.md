@@ -38,13 +38,18 @@ Some stuff in the textbook is close to the frontier of knowledge. But this fonti
 
 ### Chapter 06
 
-* On *p-hacking*, a fantastic story is about a body of research in social psychology written up in [New York Times Magazine](https://www.nytimes.com/2017/10/18/magazine/when-the-revolution-came-for-amy-cuddy.html) in 2017. The review of methods started in 2012 soon led to the birth of data investigation team [Data Colada](https://datacolada.org/about) in 2013 by Profs Uri Simonsohn, Leif Nelson and Joe Simmons. They also wrote a [paper on p-curve](http://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/2019/01/pcp2-P-curve-2-published-.pdf), a tool to analyze a body of literature. Read any other pieces of Data Colada on challenges to reproducibility. Amazing stuff. 
+* On *p-hacking*, a fantastic story is about a body of research in social psychology written up in [New York Times Magazine](https://www.nytimes.com/2017/10/18/magazine/when-the-revolution-came-for-amy-cuddy.html) in 2017. The review of methods started in 2012 soon led to the birth of data investigation team [Data Colada](https://datacolada.org/about) in 2013 by Profs Uri Simonsohn, Leif Nelson and Joe Simmons. They also wrote a [paper on p-curve](http://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/2019/01/pcp2-P-curve-2-published-.pdf), a tool to analyze a body of literature. Read any other pieces of Data Colada on challenges to reproducibility. Here is their [Nature paper](https://www.nature.com/articles/s41562-016-0021) Amazing stuff. 
 
 ## Part II
 
 ### Chapter 09
 
 * Regarding **external validity**, one way to check robustness is to take out 1% of the data and repeat the exercise. The simple take is to do it many times randonly + many times by edge of distribution of key variables. The smart take is suggested by *Tamara Broderick, Ryan Giordano, Rachael Meager in "An Automatic Finite-Sample Robustness Metric: Can Dropping a Little Data Change Conclusions?"* Hard-core statistics. [Preprint](https://arxiv.org/abs/2011.14999)
+
+### Chapter 10
+
+* Interaction term interpretation. It turns out the functional form of $x$ matters a lot. See debate and example with $ln(x)$ vs $x$ by Uri Simonsohn at [Data Colada](https://datacolada.org/123) While aimed at political scientists the core argument shared by debaters is that mistaking functional form is key is there.
+
 
 ## Part III
 
