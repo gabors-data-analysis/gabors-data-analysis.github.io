@@ -37,6 +37,10 @@ A: OLS is based on RMSE, but there are models that correspond to other loss func
 
 A: If flags are different from zero, they signal non-randomly missing. If so what happens next depends on what we expect in live data. If we expect missing values as well in live data, we should keep the flag, and use it as predictor. If we do not expect missing values in live data (rare case), they will not be used in prediction. But in any case, it is wise to investigate the source of missing - maybe data collection could be improved.
 
+>**Q: Is feature consistency part of external validity?**
+
+A: Yes. Feature consistency is about the (i) availibility of variables and (ii) content of variables between 'data at hand' and the 'live data'. Some variables may not be availbe when we use a model and sometimes the content or measurement would change. In practice this means there are benefits of using a smaller set of well established features.
+
 ## Chapter 14
 
 >**Q: For K-fold cross-validation, after randomly reshuffling my data and splitting it to training-tests, can training data in each "K" overlap, or should they be distinct?**
