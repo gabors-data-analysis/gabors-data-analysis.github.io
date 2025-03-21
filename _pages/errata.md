@@ -64,8 +64,10 @@ If you were to find an error, please report us [HERE](https://gabors-data-analys
 |09-01    | 2021-11-05   | Miss reference    | Ch11 | p.239 |  (about SE...) simple formula in that it is smaller the smaller Std[e], the larger Std[x], and the larger $$\sqrt n$$. |  ... A more precise definition would have a degree of freedom correction with $$\sqrt{n-2} $$, see Under the Hood section 9.U4. |
 |10-01    | 2021-03-06   | Typo              | Ch10 | B1 p.293 |  Table 10.6 N=217 |   **N=207**|
 |10-02    | 2021-03-08   | Missing | Ch10 | B1 p.285 |  Graph 10.2 Note, missing info |  **Male: blue, female: green**|
-|11-01    | 2023-04-10   | Typo + explain              | Ch11 | 315 |  Note that a model may be unbiased on average but not well calibrated. For instance, it may underestimate the probability when it’s high and underestimate it when it’s low. |   Note that a model may be unbiased on average but not well calibrated. For instance, it may underestimate the probability when it’s high (e.g. y^p=60% vs y=80%) and at the same time, **overestimate** it when it’s low (e.g. y^p=30% vs y=10%).|
+|11-01    | 2023-04-10   | Typo + explain    | Ch11 | 315 |  Note that a model may be unbiased on average but not well calibrated. For instance, it may underestimate the probability when it’s high and underestimate it when it’s low. |   Note that a model may be unbiased on average but not well calibrated. For instance, it may underestimate the probability when it’s high (e.g. y^p=60% vs y=80%) and at the same time, **overestimate** it when it’s low (e.g. y^p=30% vs y=10%).|
 |11-02    | 2023-06-06   | Typo              | Ch11 | p.312 |  Recall from Chapter 7, Section 4.U1, that goodness of fit |   Recall from Chapter 7, **Section 7.9**, that goodness of fit |
+|07-01   | 2025-02-05   | Imprecise | Ch07 | p.175 |  | The average slope has an important interpretation. Take the yE = f(x) curve and consider different values of x and the corresponding difference in average y. The average slope is the average of these differences, calculated over entire range of x in the data. |
+|07-01   | 2025-03-05   | Language | Ch07 | often |  | Unify language and be more specific. Lowess is a simplified (earlier) version of loess where the local polynomial is linear. A frequent setting in loess for the polynomial is quadratic. |
 
 
 
@@ -92,10 +94,8 @@ If you were to find an error, please report us [HERE](https://gabors-data-analys
 |16-06    | 2021-01-20   | Typo in graph numbers | Ch16 |p.448 |  Figure 16.2a and 16.2b wrong | 16.2a and 16.2b **titles should be swapped**: 16.2a is "Factor variables grouped"; 16.2b is "Top 10 important variables". |
 |16-07    | 2021-02-09   |Imprecise language | Ch16 |p.446-8, Box 16.3. | PDP: it shows "average y,",  about the "$$y-x$$ relationship" conditional on other x variables. |  The PDP shows **average predicted y** ( $$\hat{y}$$),  about the "$$\hat{y} - x$$ relationship" conditional on other variables.  |
 |16-08    | 2021-02-13   | Imprecise sentence | Ch16 | A1-A3 | The currency is USD for price| Actually, local currency (GBP) is used. Recently [clarified](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit#gid=1938308660){:target="_blank"}     |
-<<<<<<< Updated upstream
-|16-09    | 2025-01-24   | Typo in text  | Ch16 |p.451 | "Random forest (atotuned)" | "Random forest (autotuned)"|
-=======
->>>>>>> Stashed changes
+| 16-09 | 2025-01-26 | add precisions | ch15 | p443 | observations there are no reviews. Note... | observations
+there are no reviews. We carried out additional feature engineering such as creating a $f\_bathroom$ for 0, 1-2 and more bathrooms. Note ... |
 |17-01    | 2021-01-21   | Typo numbers | Ch17 |p.479 | "Yields 139 euros higher profit ...  increase of 139 000 euros in profits" | "Yields **135** euros higher profit ...  increase of **135 000** euros in profits " |
 |18-01    | 2021-07-12   | Code vs table  | Ch18 |p.509 | "RMSE result for the VAR is RMSE=4.4" | "RMSE result for the VAR is RMSE=4.5"|
 |18-02    | 2021-07-12   | Code vs table  | Ch18 |p.510 | M7 (var) RMSE line presents results without seasonality ( reads: 13.30, 5.85, 3.52, 4.28, 7.8) |  M7 (var) RMSE line should read: **5.24, 2.51,  5.18,  4.75,  4.5**  |
