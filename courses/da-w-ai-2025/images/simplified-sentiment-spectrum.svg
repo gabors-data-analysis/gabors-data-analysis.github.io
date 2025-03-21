@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
+  <!-- Background -->
+  <rect width="800" height="200" fill="#f8f9fa" rx="10" ry="10" />
+  
+  <!-- Individual colored segments instead of gradient -->
+  <rect x="100" y="70" width="100" height="40" fill="#440154" rx="5" ry="5" />
+  <rect x="200" y="70" width="100" height="40" fill="#414487" rx="0" ry="0" />
+  <rect x="300" y="70" width="100" height="40" fill="#2a788e" rx="0" ry="0" />
+  <rect x="400" y="70" width="100" height="40" fill="#22a884" rx="0" ry="0" />
+  <rect x="500" y="70" width="100" height="40" fill="#7ad151" rx="0" ry="0" />
+  <rect x="600" y="70" width="100" height="40" fill="#fde725" rx="5" ry="5" />
+  
+  <!-- Labels -->
+  <text x="100" y="50" font-family="Arial" font-size="18" fill="#333">Negative</text>
+  <text x="400" y="50" font-family="Arial" font-size="18" text-anchor="middle" fill="#333">Neutral</text>
+  <text x="700" y="50" font-family="Arial" font-size="18" text-anchor="end" fill="#333">Positive</text>
+  
+  <!-- Example Texts -->
+  <text x="120" y="140" font-family="Arial" font-size="14" fill="#333">"We had a lot of problems"</text>
+  <text x="400" y="140" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">"Was a slow game"</text>
+  <text x="680" y="140" font-family="Arial" font-size="14" text-anchor="end" fill="#333">"We were really impressive"</text>
+  
+  <!-- Pointers -->
+  <polygon points="140,70 130,60 150,60" fill="#333" />
+  <polygon points="400,70 390,60 410,60" fill="#333" />
+  <polygon points="660,70 650,60 670,60" fill="#333" />
+</svg>
