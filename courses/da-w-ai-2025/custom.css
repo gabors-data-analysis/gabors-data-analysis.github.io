@@ -76,6 +76,7 @@
 .highlight {
   color: var(--viridis-3);
   font-weight: bold;
+  color: var(--viridis-5);
 }
 
 /* Custom styling for callouts */

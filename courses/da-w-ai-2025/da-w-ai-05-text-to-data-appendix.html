@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="da-w-ai-05-text-to-data_files/libs/clipboard/clipboard.min.js"></script>
-<script src="da-w-ai-05-text-to-data_files/libs/quarto-html/tabby.min.js"></script>
-<script src="da-w-ai-05-text-to-data_files/libs/quarto-html/popper.min.js"></script>
-<script src="da-w-ai-05-text-to-data_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="da-w-ai-05-text-to-data_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="da-w-ai-05-text-to-data_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="da-w-ai-05-text-to-data_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="da-w-ai-05-text-to-data_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="da-w-ai-05-text-to-data-appendix_files/libs/clipboard/clipboard.min.js"></script>
+<script src="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/tabby.min.js"></script>
+<script src="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/popper.min.js"></script>
+<script src="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Gábor Békés (CEU)">
@@ -16,8 +16,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="da-w-ai-05-text-to-data_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="da-w-ai-05-text-to-data_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -96,12 +96,12 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="da-w-ai-05-text-to-data_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="custom.css">
-  <link href="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -394,7 +394,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Data Analysis with AI course</h1>
-  <p class="subtitle">05 using text as data</p>
+  <p class="subtitle">05 Appendix to Using Text as Data</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -407,408 +407,135 @@ Gábor Békés (CEU)
   <p class="date">2025-03-24</p>
 </section>
 <section>
-<section id="motivation" class="title-slide slide level1 center">
-<h1>Motivation</h1>
+<section id="appendix" class="title-slide slide level1 center">
+<h1>Appendix</h1>
 
 </section>
-<section id="why-text-analysis" class="slide level2 center">
-<h2>Why Text Analysis?</h2>
+<section id="domain-specific-lexicons-implementation" class="slide level2 center">
+<h2>Domain-Specific Lexicons: Implementation</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="kw">def</span> sports_sentiment(text):</span>
+<span id="cb1-2"><a href=""></a>    <span class="co"># Tokenize and clean text</span></span>
+<span id="cb1-3"><a href=""></a>    words <span class="op">=</span> preprocess(text)</span>
+<span id="cb1-4"><a href=""></a>    </span>
+<span id="cb1-5"><a href=""></a>    <span class="co"># Check for negations and intensifiers</span></span>
+<span id="cb1-6"><a href=""></a>    <span class="cf">for</span> i, word <span class="kw">in</span> <span class="bu">enumerate</span>(words):</span>
+<span id="cb1-7"><a href=""></a>        <span class="co"># Context-aware scoring logic</span></span>
+<span id="cb1-8"><a href=""></a>        <span class="co"># e.g., "not disappointed" → positive</span></span>
+<span id="cb1-9"><a href=""></a>        <span class="co"># e.g., "very clinical" → strongly positive</span></span>
+<span id="cb1-10"><a href=""></a>    </span>
+<span id="cb1-11"><a href=""></a>    <span class="co"># Calculate sports-specific sentiment score</span></span>
+<span id="cb1-12"><a href=""></a>    <span class="cf">return</span> score</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="bert-for-sentiment-analysis" class="slide level2 center">
+<h2>BERT for Sentiment Analysis</h2>
 <ul>
-<li><strong>Unlocks unstructured data</strong>: Reports, news, social media, interviews</li>
-<li><strong>Quantifies qualitative information</strong>: Sentiment, topics, uncertainty</li>
-<li><strong>Supplements traditional economic data</strong></li>
-<li><strong>Real-world applications</strong>: Central bank communication, market sentiment, policy analysis</li>
+<li>Bidirectional Encoder Representations from Transformers</li>
+<li>Understands context and word relationships</li>
+<li>Pre-trained on massive text corpus</li>
+<li>Fine-tuned for sentiment classification</li>
 </ul>
-</section>
-<section id="example-economic-applications" class="slide level2 center">
-<h2>Example: Economic Applications</h2>
-<ul>
-<li>Analyzing Federal Reserve statements to predict market reactions</li>
-<li>Measuring Economic Policy Uncertainty through news coverage</li>
-<li>Quantifying sentiment in earnings calls</li>
-</ul>
-</section>
-<section id="what-is-nlp" class="slide level2 center">
-<h2>What Is NLP?</h2>
-<ul>
-<li>What is NLP?</li>
-<li><strong>Definition</strong>: Techniques that help computers understand, interpret, and generate human language.</li>
-<li><strong>Applications</strong>:
-<ul>
-<li>Sentiment (positive/negative)</li>
-<li>Topic classification</li>
-<li>Summarization</li>
-</ul></li>
-<li>Examples: analyzing newspaper articles for policy stances or corporate sentiment.</li>
-<li>NLP is the foundation for many AI text applications (chatbots, search engines, etc.).</li>
-</ul>
-</section>
-<section id="todays-case-study" class="slide level2 center">
-<h2>Today’s Case Study</h2>
-<blockquote>
-<p>“In the second half, especially after we scored for 1-1, I thought we were really impressive. We created so many opportunities, good chances. Then [the result] feels like a disappointment.”</p>
-</blockquote>
-</section>
-<section id="todays-case-study-1" class="slide level2 center">
-<h2>Today’s Case Study</h2>
-<blockquote>
-<p>“In the second half, especially after we scored for 1-1, I thought we were really impressive. We created so many opportunities, good chances. Then [the result] feels like a disappointment.”</p>
-</blockquote>
-<p>We’ll analyze a post-match interview with a Premier League manager to:</p>
-<ol type="1">
-<li>Predict the match result</li>
-<li>Analyze sentiment patterns</li>
-<li>Determine if the manager attributes the outcome to luck</li>
-</ol>
-</section>
-<section id="sentiment-analysis" class="slide level2 center">
-<h2>Sentiment Analysis</h2>
-<p><strong>Detecting emotion and tone in text</strong></p>
-<p><strong>Positive segments:</strong> &gt; “In the second half, especially after we scored for 1-1, I thought we were really impressive.” &gt; “PLAYER’s finishing is so clinical.”</p>
-<p><strong>Negative segments:</strong> &gt; “Then [the result] feels like a disappointment.” &gt; “We tried to cope with it, but every time we touched them we got a yellow…”</p>
-<p><strong>Mixed segments:</strong> &gt; “In the first half we had a lot of problems with their intensity, aggressive playing style…”</p>
-</section></section>
-<section>
-<section id="core-concepts-in-text-analysis" class="title-slide slide level1 center">
-<h1>Core Concepts in Text Analysis</h1>
-
-</section>
-<section id="plan" class="slide level2 center">
-<h2>Plan</h2>
-<p>Plan * Different ways to analyze text * Turning text into tokens * Using AI to directly analyze them</p>
-<p>We’ll cover the following concepts:</p>
-<ul>
-<li>Tokenization</li>
-<li>Preprocessing: Stemming vs.&nbsp;Lemmatization</li>
-<li>Feature Extraction: Bag of Words in Depth</li>
-</ul>
-<p>And discuss:</p>
-<ul>
-<li>What these tools give us</li>
-<li>Limitations</li>
-</ul>
-</section>
-<section id="bag-of-words" class="slide level2 center">
-<h2>Bag of words</h2>
-<p><strong>Corpus</strong> The full text material. Here interviews. Could be a book or articles.</p>
-<p><strong>Bag of words:</strong> Text representation that counts word occurrences, ignoring grammar and word order</p>
-<ul>
-<li>Words - tokens</li>
-<li>Tweaks</li>
-</ul>
-</section>
-<section id="tokenization" class="slide level2 center">
-<h2>Tokenization</h2>
-<p>💡 Tokenization is breaking text into meaningful units (tokens)</p>
-<p><strong>Original text from our interview:</strong> &gt; “In the second half, we were really impressive. We created many opportunities.”</p>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p><strong>Tokenized:</strong></p>
-<p><code>["In", "the", "second", "half", ",", "we", "were", "really", "impressive", ".", "We", "created", "many", "opportunities", "."]</code></p>
-</div>
-</div>
-</div>
-<p><strong>Why it matters:</strong> Foundation for all text analysis - determines what counts as a “word”</p>
-</section>
-<section id="preprocessing-stemming-vs.-lemmatization" class="slide level2 center">
-<h2>Preprocessing: Stemming vs.&nbsp;Lemmatization</h2>
-<p>💡 <strong>Stemming:</strong> Algorithmically removes word endings - Fast but sometimes creates non-words</p>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p><strong>Examples from our interview</strong></p>
-<ul>
-<li>“playing” → “play”</li>
-<li>“played” → “play”</li>
-<li>“impressive” → “impress”</li>
-<li>“disappointment” → “disappoint”</li>
-</ul>
-</div>
-</div>
-</div>
-<p><strong>Purpose:</strong> Unifies different forms of the same word to avoid treating them as separate concepts</p>
-</section>
-<section id="preprocessing-stemming-vs.-lemmatization-1" class="slide level2 center">
-<h2>Preprocessing: Stemming vs.&nbsp;Lemmatization</h2>
-<p><strong>Lemmatization:</strong> Converts to dictionary base form - More accurate but computationally intensive</p>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p><strong>Examples from our interview</strong></p>
-<ul>
-<li>“were” → “be”</li>
-<li>“came” → “come”</li>
-<li>“dominated” → “dominate”</li>
-<li>“better” → “good”</li>
-</ul>
-</div>
-</div>
-</div>
-<p><strong>Purpose:</strong> Unifies different variations of the same word to avoid treating them as separate concepts</p>
-</section>
-<section id="why-preprocessing-matters" class="slide level2 center">
-<h2>Why Preprocessing Matters</h2>
-<p>Let’s look at our manager’s interview:</p>
-<p>Original excerpt: &gt; “We tried to cope with it, but every time we touched them we got a yellow and that doesn’t really help for us to be intense then as well.”</p>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p><strong>After preprocessing:</strong></p>
-<p><code>["try", "cope", "touch", "get", "yellow", "help", "intense", "good"]</code></p>
-</div>
-</div>
-</div>
-<p><strong>Benefits:</strong> - Reduces vocabulary size (computational efficiency) - Focuses on meaningful content - Improves pattern detection - Enables comparisons across texts</p>
-</section>
-<section id="feature-extraction-bag-of-words" class="slide level2 center">
-<h2>Feature Extraction: Bag of Words</h2>
-<p><strong>Bag of Words</strong> Text representation that counts word occurrences, ignoring grammar and word order</p>
-<p><strong>Example from our interview:</strong> &gt; “In the first half we had a lot of problems with their intensity, aggressive playing style without the ball – aggressive in a good way.”</p>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p><strong>Bag of Words representation:</strong></p>
-<p>[ “first”: 1, “half”: 1, “lot”: 1, “problems”: 1, “intensity”: 1, “aggressive”: 2, “playing”: 1, “style”: 1, “ball”: 1, “good”: 1, “way”: 1]</p>
-</div>
-</div>
-</div>
-<p><strong>What we can learn:</strong> - Word frequencies (most common terms) - Distinctive vocabulary - Comparison between documents - Simple sentiment indicators</p>
-</section></section>
-<section>
-<section id="bag-of-words-tweaks" class="title-slide slide level1 center">
-<h1>Bag of Words: Tweaks</h1>
-
-</section>
-<section id="limitations-of-bag-of-words" class="slide level2 center">
-<h2>Limitations of Bag of Words</h2>
-<p><strong>What’s missing from our coach’s interview:</strong></p>
-<ol type="1">
-<li><strong>Word order:</strong> “We dominated them” vs.&nbsp;“They dominated us”</li>
-<li><strong>Context:</strong> “not impressive” counts “impressive” as positive</li>
-<li><strong>Phrases:</strong> “Premier League” becomes “premier” and “league”</li>
-<li><strong>Relationships:</strong> Between players, actions, and outcomes</li>
-</ol>
-<p><strong>Extensions to address limitations:</strong></p>
-<ul>
-<li>N-grams capture local word order</li>
-<li>TF-IDF weights words by importance across documents</li>
-<li>Word embeddings capture semantic relationships</li>
-</ul>
-</section>
-<section id="practical-example-word-frequency-analysis" class="slide level2 center">
-<h2>Practical Example: Word Frequency Analysis</h2>
-<p>Let’s analyze the coach’s interview:</p>
-<p>Top 10 most frequent content words:</p>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<ol type="1">
-<li>PLAYER (10 mentions) 2. half (4 mentions) 3. played (3 mentions) 4. well (3 mentions) 5. intense/intensity (3 mentions) 6. good (3 mentions) 7. special (3 mentions) 8. better (2 mentions) 9. difficult (2 mentions) 10. impressive (2 mentions)</li>
-</ol>
-</div>
-</div>
-</div>
-<p><strong>What this tells us:</strong> - Focus on individual player performance - Comparison between first and second half - Emphasis on quality of play and intensity</p>
-</section>
-<section id="n-grams-adding-context" class="slide level2 center">
-<h2>N-grams: Adding Context</h2>
-<p>💡 <strong>Bigrams (2-word phrases) from our interview:</strong> - “good way” (1) - “playing style” (1) - “special player” (1)</p>
-<p><strong>Trigrams (3-word phrases):</strong> - “played much better” (1) - “massive impact game” (1)</p>
-<p><strong>Benefits:</strong> - Captures phrases and contextual relationships - Preserves some word order information - Identifies common expressions and technical terms</p>
-</section>
-<section id="tf-idf-beyond-simple-counts" class="slide level2 center">
-<h2>TF-IDF: Beyond Simple Counts</h2>
-<p>💡 <strong>Term Frequency-Inverse Document Frequency (TF-IDF)</strong> Weights words by importance in a document compared to a collection</p>
-<p>Example: Comparing our interview with other post-match interviews</p>
-<p><strong>Common words in all interviews</strong> (low TF-IDF): - “game”, “played”, “team”, “half”</p>
-<p><strong>Distinctive words in this interview</strong> (high TF-IDF): - “intensity”, “aggressive”, “clinical”, “impressive”</p>
-<p><strong>Benefits:</strong> - Reveals what makes this text unique - Reduces importance of common terms - Identifies signature vocabulary and themes</p>
-</section>
-<section id="what-we-have" class="slide level2 center">
-<h2>What we have</h2>
-<p><strong>What we have</strong> * Bag of words extracted words (tokens) * Use 2-grams to have expressions (“yellow card”) * Select important words</p>
-<p><strong>What we need</strong> * link words to sentiments via dictionary * consider context</p>
-</section></section>
-<section>
-<section id="sentiment-analysis-1" class="title-slide slide level1 center">
-<h1>Sentiment Analysis</h1>
-
-</section>
-<section id="sentiment-analysis-2" class="slide level2 center">
-<h2>Sentiment Analysis</h2>
-<p><strong>Detecting emotion and tone in text</strong></p>
-
-<img data-src="images/simplified-sentiment-spectrum.svg" class="r-stretch quarto-figure-center"><p class="caption">Sentiment</p><p><strong>Positive segments:</strong> &gt; “In the second half, especially after we scored for 1-1, I thought we were really impressive.” &gt; “PLAYER’s finishing is so clinical.”</p>
-<p><strong>Negative segments:</strong> &gt; “Then [the result] feels like a disappointment.” &gt; “We tried to cope with it, but every time we touched them we got a yellow…”</p>
-<p><strong>Mixed segments:</strong> &gt; “In the first half we had a lot of problems with their intensity, aggressive playing style…”</p>
-</section>
-<section class="slide level2 center">
-
-</section></section>
-<section>
-<section id="sentiment-analysis-libraries-and-approaches" class="title-slide slide level1 center">
-<h1>Sentiment Analysis Libraries and Approaches</h1>
-
-</section>
-<section id="from-bag-of-words-to-sentiment-analysis" class="slide level2 center">
-<h2>From Bag of Words to Sentiment Analysis</h2>
-<ul>
-<li>BoW tells us <strong>what</strong> words appear in text</li>
-<li>Sentiment analysis tells us <strong>how</strong> those words convey emotion or opinion</li>
-<li>Connection: Use word frequencies/presence to determine sentiment</li>
-<li>Challenge: Words have different meanings in different contexts</li>
-</ul>
-</section>
-<section id="approaches-to-sentiment-analysis" class="slide level2 center">
-<h2>Approaches to Sentiment Analysis</h2>
-<ol type="1">
-<li><strong>Pre-built Lexicon Libraries</strong></li>
-<li><strong>Domain-Specific Custom Lexicons</strong></li>
-<li><strong>Machine Learning Models</strong></li>
-<li><strong>AI-Assisted Analysis</strong></li>
-</ol>
-</section>
-<section id="approach-1-pre-built-lexicon-libraries" class="slide level2 center">
-<h2>Approach 1: Pre-built Lexicon Libraries</h2>
-<p><strong>Popular Libraries:</strong> - NLTK’s VADER, TextBlob, AFINN, SentiWordNet</p>
-<p><strong>Examples</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a></span>
-<span id="cb1-2"><a href=""></a>const BASIC_LEXICON <span class="op">=</span> {</span>
-<span id="cb1-3"><a href=""></a>  <span class="op">//</span> Positive words</span>
-<span id="cb1-4"><a href=""></a>  positive: [</span>
-<span id="cb1-5"><a href=""></a>    <span class="st">'good'</span>, <span class="st">'great'</span>, <span class="st">'excellent'</span>, <span class="st">'happy'</span>, <span class="st">'pleased'</span>,... <span class="st">'confidence'</span>, <span class="st">'proud'</span>, <span class="st">'amazing'</span>, <span class="st">'fantastic'</span></span>
-<span id="cb1-6"><a href=""></a>  ],</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>code creates sentiment score</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">from</span> nltk.sentiment <span class="im">import</span> SentimentIntensityAnalyzer</span>
-<span id="cb2-2"><a href=""></a></span>
-<span id="cb2-3"><a href=""></a>sia <span class="op">=</span> SentimentIntensityAnalyzer()</span>
-<span id="cb2-4"><a href=""></a>sia.polarity_scores(<span class="st">"The manager was pleased with the performance"</span>)</span>
-<span id="cb2-5"><a href=""></a><span class="co"># {'neg': 0.0, 'neu': 0.508, 'pos': 0.492, 'compound': 0.6249}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="pre-built-libraries-pros-and-cons" class="slide level2 center">
-<h2>Pre-built Libraries: Pros and Cons</h2>
-<p><strong>Advantages:</strong></p>
-<ul>
-<li>Ready to use with minimal setup</li>
-<li>Validated on large datasets</li>
-<li>Handle negations, intensifiers, punctuation</li>
-<li>Work across many domains</li>
-</ul>
-<p><strong>Limitations:</strong></p>
-<ul>
-<li>Miss domain-specific terminology</li>
-<li>May not capture specialized expressions</li>
-<li>Limited contextual understanding</li>
-<li>One-size-fits-all approach</li>
-</ul>
-</section>
-<section id="approach-2-domain-specific-custom-lexicons" class="slide level2 center">
-<h2>Approach 2: Domain-Specific Custom Lexicons</h2>
-<p><strong>Creating a sports-specific lexicon</strong></p>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p><strong>prompt</strong></p>
-<p>Review this uploaded <em>corpus</em>. Create a new specific lexicon to analyse sentiments.</p>
-</div>
-</div>
-</div>
-<p>The result is a piece of code with new lexicons. Or a new dataset we can call.</p>
-</section>
-<section id="approach-2-domain-specific-custom-lexicons-1" class="slide level2 center">
-<h2>Approach 2: Domain-Specific Custom Lexicons</h2>
-<p><strong>Creating a sports-specific lexicon:</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a>sports_positive_terms <span class="op">=</span> [</span>
-<span id="cb3-2"><a href=""></a>    <span class="st">'clinical'</span>, <span class="st">'dominated'</span>, <span class="st">'resilient'</span>, <span class="st">'character'</span>, </span>
-<span id="cb3-3"><a href=""></a>    <span class="st">'intensity'</span>, <span class="st">'pressing'</span>, <span class="st">'quality'</span>, <span class="st">'fight'</span></span>
-<span id="cb3-4"><a href=""></a>]</span>
-<span id="cb3-5"><a href=""></a></span>
-<span id="cb3-6"><a href=""></a>sports_negative_terms <span class="op">=</span> [</span>
-<span id="cb3-7"><a href=""></a>    <span class="st">'lacked'</span>, <span class="st">'mistakes'</span>, <span class="st">'struggled'</span>, <span class="st">'conceded'</span>, </span>
-<span id="cb3-8"><a href=""></a>    <span class="st">'sloppy'</span>, <span class="st">'slow'</span>, <span class="st">'disorganized'</span></span>
-<span id="cb3-9"><a href=""></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="domain-specific-lexicons-pros-and-cons" class="slide level2 center">
-<h2>Domain-Specific Lexicons: Pros and Cons</h2>
-<p><strong>Advantages:</strong></p>
-<ul>
-<li>Captures domain-specific expressions</li>
-<li>More accurate for specialized texts</li>
-<li>Can incorporate domain knowledge</li>
-<li>Customizable scoring logic</li>
-</ul>
-<p><strong>Limitations:</strong></p>
-<ul>
-<li>Requires manual creation/curation</li>
-<li>Less generalizable to other domains</li>
-<li>Needs updates as language evolves</li>
-<li>Time-consuming to build comprehensively</li>
-</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> AutoTokenizer, AutoModelForSequenceClassification</span>
+<span id="cb2-2"><a href=""></a><span class="im">import</span> torch</span>
+<span id="cb2-3"><a href=""></a></span>
+<span id="cb2-4"><a href=""></a>tokenizer <span class="op">=</span> AutoTokenizer.from_pretrained(<span class="st">"nlptown/bert-base-multilingual-uncased-sentiment"</span>)</span>
+<span id="cb2-5"><a href=""></a>model <span class="op">=</span> AutoModelForSequenceClassification.from_pretrained(<span class="st">"nlptown/bert-base-multilingual-uncased-sentiment"</span>)</span>
+<span id="cb2-6"><a href=""></a></span>
+<span id="cb2-7"><a href=""></a>inputs <span class="op">=</span> tokenizer(<span class="st">"The team showed great character today."</span>, return_tensors<span class="op">=</span><span class="st">"pt"</span>)</span>
+<span id="cb2-8"><a href=""></a>outputs <span class="op">=</span> model(<span class="op">**</span>inputs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="approach-3-machine-learning-models" class="slide level2 center">
 <h2>Approach 3: Machine Learning Models</h2>
-<p><strong>Types of ML approaches:</strong></p>
-<ul>
-<li>Traditional ML, Deep Learning (CNN)</li>
-<li>Transformer Models: BERT, RoBERTa – in practice</li>
-</ul>
-<p><strong>Advantages:</strong></p>
-<ul>
-<li>Capture complex patterns and relationships</li>
-<li>Learn from data rather than rules</li>
-<li>Better contextual understanding</li>
-</ul>
-<p><strong>Limitations:</strong></p>
-<ul>
-<li>Require labeled training data</li>
-<li>Domain adaptation challenges</li>
-</ul>
+<p><strong>Types of ML approaches:</strong> - Traditional ML, Deep Learning (CNN) - Transformer Models: BERT, RoBERTa – in practice</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> pipeline</span>
+<span id="cb3-2"><a href=""></a></span>
+<span id="cb3-3"><a href=""></a>classifier <span class="op">=</span> pipeline(<span class="st">'sentiment-analysis'</span>)</span>
+<span id="cb3-4"><a href=""></a>classifier(<span class="st">"We were really impressive in the second half"</span>)</span>
+<span id="cb3-5"><a href=""></a><span class="co"># [{'label': 'POSITIVE', 'score': 0.9998}]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="approach-4-ai-assisted-analysis" class="slide level2 center">
-<h2>Approach 4: AI-Assisted Analysis</h2>
+<section id="machine-learning-models-pros-and-cons" class="slide level2 center">
+<h2>Machine Learning Models: Pros and Cons</h2>
+<p><strong>Advantages:</strong> - Capture complex patterns and relationships - Learn from data rather than rules - Better contextual understanding - Can improve with more training examples</p>
+<p><strong>Limitations:</strong> - Require labeled training data - Computationally expensive - “Black box” decision making - Domain adaptation challenges</p>
+</section>
+<section class="slide level2 center">
+
 <p><strong>Using Large Language Models (LLMs):</strong> - GPT-4, Claude, etc. for sentiment analysis - Feed individual text examples for classification - Ask for nuanced, multi-dimensional analysis</p>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p><strong>prompt</strong> Rate the sentiment of this football manager interview on a scale from -2 (very negative) to +2 (very positive):</p>
-<p>Provide only the numerical score.</p>
-<p>OR</p>
-<p>Provide only the numerical score and an explanation. Offer your level of confidence.</p>
-</div>
-</div>
-</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a><span class="kw">def</span> ai_sentiment_analysis(text):</span>
+<span id="cb4-2"><a href=""></a>    prompt <span class="op">=</span> <span class="ss">f"""</span></span>
+<span id="cb4-3"><a href=""></a><span class="ss">    Rate the sentiment of this football manager interview on a </span></span>
+<span id="cb4-4"><a href=""></a><span class="ss">    scale from -2 (very negative) to +2 (very positive):</span></span>
+<span id="cb4-5"><a href=""></a><span class="ss">    </span></span>
+<span id="cb4-6"><a href=""></a><span class="ss">    "</span><span class="sc">{</span>text<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb4-7"><a href=""></a><span class="ss">    </span></span>
+<span id="cb4-8"><a href=""></a><span class="ss">    Provide only the numerical score.</span></span>
+<span id="cb4-9"><a href=""></a><span class="ss">    """</span></span>
+<span id="cb4-10"><a href=""></a>    response <span class="op">=</span> llm_api_call(prompt)</span>
+<span id="cb4-11"><a href=""></a>    <span class="cf">return</span> parse_response(response)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="ai-assisted-analysis-example" class="slide level2 center">
-<h2>AI-Assisted Analysis: Example</h2>
-<p><strong>Text:</strong></p>
-<blockquote>
-<p>“In the second half, especially after we scored for 1-1, I thought we were really impressive. We created so many opportunities, good chances. Then [the result] feels like a disappointment.”</p>
-</blockquote>
-<div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p><strong>LLM Response:</strong></p>
-<p>The sentiment score is +1 (somewhat positive).</p>
-<p><em>The coach expresses clear satisfaction with the team’s second-half performance (“really impressive”), highlighting positive elements like creating “many opportunities.” However, there’s disappointment about the final result, creating a mixed but predominantly positive sentiment.</em></p>
-</div>
-</div>
-</div>
-</section>
-<section id="ai-assisted-analysis-pros-and-cons" class="slide level2 center">
-<h2>AI-Assisted Analysis: Pros and Cons</h2>
-<p><strong>Advantages:</strong></p>
-<ul>
-<li>Sophisticated understanding of context and nuance</li>
-<li>Adaptable to any domain without retraining</li>
-<li>Can explain reasoning behind classification</li>
-</ul>
-<p><strong>Limitations:</strong></p>
-<ul>
-<li>Need to prompt sequentually (or use APIs)</li>
-<li>Potential for inconsistency across analyses</li>
-<li>Less transparent methodology</li>
-</ul>
+<section id="comparison-of-approaches" class="slide level2 center">
+<h2>Comparison of Approaches</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 15%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Pre-built Libraries</th>
+<th>Custom Lexicons</th>
+<th>ML Models</th>
+<th>AI-Assisted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Setup Complexity</td>
+<td>Low</td>
+<td>Medium</td>
+<td>High</td>
+<td>Low</td>
+</tr>
+<tr class="even">
+<td>Domain Specificity</td>
+<td>Low</td>
+<td>High</td>
+<td>Medium-High</td>
+<td>High</td>
+</tr>
+<tr class="odd">
+<td>Contextual Understanding</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>High</td>
+<td>Very High</td>
+</tr>
+<tr class="even">
+<td>Transparency</td>
+<td>High</td>
+<td>High</td>
+<td>Low</td>
+<td>Medium</td>
+</tr>
+<tr class="odd">
+<td>Scalability</td>
+<td>High</td>
+<td>Medium</td>
+<td>High</td>
+<td>Low-Medium</td>
+</tr>
+<tr class="even">
+<td>Cost</td>
+<td>Free</td>
+<td>Development Time</td>
+<td>Computing Resources</td>
+<td>API Costs</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="selecting-the-right-approach" class="slide level2 center">
 <h2>Selecting the Right Approach</h2>
@@ -816,68 +543,18 @@ Gábor Békés (CEU)
 <ol type="1">
 <li><strong>Domain specificity</strong> required</li>
 <li><strong>Available resources</strong> (time, computing, budget)</li>
-<li><strong>Transparency needs</strong> for your analysis – reproducibility, stabiliy important?</li>
-<li><strong>Scale</strong> of text analysis required: 100 vs 1,000 vs 100,000 pieces of texts</li>
+<li><strong>Transparency needs</strong> for your analysis</li>
+<li><strong>Scale</strong> of text analysis required</li>
 </ol>
-<p><strong>Hybrid approaches often work best:</strong> - Start with pre-built libraries but enhance with domain-specific terms for key concepts - compare with AI models (class 06)</p>
-</section>
-<section id="case-study-football-interview-sentiment" class="slide level2 center">
-<h2>Case Study: Football Interview Sentiment</h2>
-<p><strong>class 05</strong></p>
+<p><strong>Hybrid approaches often work best:</strong></p>
 <ul>
-<li>Look at text and rate – compare with AI</li>
+<li>Use pre-built libraries for initial analysis</li>
+<li>Enhance with domain-specific terms for key concepts</li>
+<li>Validate with ML models or AI assistance for edge cases</li>
 </ul>
-<p><strong>Class 06</strong></p>
-<ul>
-<li>RQ1: how does sentiment vary after win, draw and loss</li>
-<li>RQ2: Is there a difference between men and women coaches (managers)</li>
-</ul>
-</section>
-<section class="slide level2 center">
-
-</section></section>
-<section>
-<section id="summary" class="title-slide slide level1 center">
-<h1>Summary</h1>
-
-</section>
-<section id="how-these-concepts-connect" class="slide level2 center">
-<h2>How These Concepts Connect</h2>
-
-<img data-src="images/nlp-pipeline.svg" class="r-stretch quarto-figure-center"><p class="caption">NLP Pipeline</p><ol type="1">
-<li><strong>Raw Text</strong> → Tokenization</li>
-<li><strong>Tokens</strong> → Preprocessing</li>
-<li><strong>Clean Tokens</strong> → Feature Extraction</li>
-<li><strong>Features</strong> → Analysis (Sentiment)</li>
-<li><strong>Results</strong> → Interpretation</li>
-</ol>
-</section>
-<section id="from-text-to-data-implementation-steps" class="slide level2 center">
-<h2>From Text to Data (Implementation Steps)</h2>
-<p><strong>steps</strong></p>
-<p>1.** Collect Corpus** (manager interviews)<br>
-2. <strong>Preprocess</strong> (clean, tokenize, possibly POS-tag)<br>
-3. <strong>Choose Method</strong> (BoW + library, advanced or LLM-based approach)<br>
-4. <strong>Analysis</strong> (sentiment score 0-1)<br>
-5. <strong>Discussion</strong> (numeric categories)</p>
-<p><strong>key issue</strong></p>
-<ul>
-<li>Code vs LLM</li>
-<li>Result versus “truth”</li>
-</ul>
-</section>
-<section id="wrap-up-discussion" class="slide level2 center">
-<h2>Wrap-Up &amp; Discussion</h2>
-<p><strong>Key Takeaways</strong>:</p>
-<ol type="1">
-<li>Text → Data → Insight</li>
-<li>BoW is a simple start</li>
-<li>Loads of adnaced models –&gt; NLP</li>
-<li>LLMs bring powerful context</li>
-</ol>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p>Gabors Data Analysis with AI - 2025-03-24 v0.3</p>
+<p>Gabors Data Analysis with AI - 2025-03-24, v0.1</p>
 </div>
 </div>
 </section></section>
@@ -885,19 +562,19 @@ Gábor Békés (CEU)
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="da-w-ai-05-text-to-data_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="da-w-ai-05-text-to-data_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
