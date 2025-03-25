@@ -473,9 +473,13 @@ Gábor Békés (CEU)
 <h1>Core Concepts in Text Analysis</h1>
 
 </section>
-<section id="plan" class="slide level2 center">
-<h2>Plan</h2>
-<p>Plan * Different ways to analyze text * Turning text into tokens * Using AI to directly analyze them</p>
+<section id="plan-for-this-class" class="slide level2 center">
+<h2>Plan for this class</h2>
+<ul>
+<li>Different ways to analyze text</li>
+<li>Turning text into tokens</li>
+<li>Using AI to directly analyze them</li>
+</ul>
 <p>We’ll cover the following concepts:</p>
 <ul>
 <li>Tokenization</li>
@@ -559,7 +563,13 @@ Gábor Békés (CEU)
 </div>
 </div>
 </div>
-<p><strong>Benefits:</strong> - Reduces vocabulary size (computational efficiency) - Focuses on meaningful content - Improves pattern detection - Enables comparisons across texts</p>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Reduces vocabulary size (computational efficiency)</li>
+<li>Focuses on meaningful content</li>
+<li>Improves pattern detection</li>
+<li>Enables comparisons across texts</li>
+</ul>
 </section>
 <section id="feature-extraction-bag-of-words" class="slide level2 center">
 <h2>Feature Extraction: Bag of Words</h2>
@@ -573,7 +583,13 @@ Gábor Békés (CEU)
 </div>
 </div>
 </div>
-<p><strong>What we can learn:</strong> - Word frequencies (most common terms) - Distinctive vocabulary - Comparison between documents - Simple sentiment indicators</p>
+<p><strong>What we can learn:</strong></p>
+<ul>
+<li>Word frequencies (most common terms)</li>
+<li>Distinctive vocabulary</li>
+<li>Comparison between documents</li>
+<li>Simple sentiment indicators</li>
+</ul>
 </section></section>
 <section>
 <section id="bag-of-words-tweaks" class="title-slide slide level1 center">
@@ -613,22 +629,56 @@ Gábor Békés (CEU)
 </section>
 <section id="n-grams-adding-context" class="slide level2 center">
 <h2>N-grams: Adding Context</h2>
-<p>💡 <strong>Bigrams (2-word phrases) from our interview:</strong> - “good way” (1) - “playing style” (1) - “special player” (1)</p>
-<p><strong>Trigrams (3-word phrases):</strong> - “played much better” (1) - “massive impact game” (1)</p>
-<p><strong>Benefits:</strong> - Captures phrases and contextual relationships - Preserves some word order information - Identifies common expressions and technical terms</p>
+<p>💡 <strong>Bigrams (2-word phrases) from our interview:</strong></p>
+<ul>
+<li>“good way” (1)</li>
+<li>“playing style” (1)</li>
+<li>“special player” (1)</li>
+</ul>
+<p><strong>Trigrams (3-word phrases):</strong></p>
+<ul>
+<li>“played much better” (1)</li>
+<li>“massive impact game” (1)</li>
+</ul>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Captures phrases and contextual relationships</li>
+<li>Preserves some word order information</li>
+<li>Identifies common expressions and technical terms</li>
+</ul>
 </section>
 <section id="tf-idf-beyond-simple-counts" class="slide level2 center">
 <h2>TF-IDF: Beyond Simple Counts</h2>
 <p>💡 <strong>Term Frequency-Inverse Document Frequency (TF-IDF)</strong> Weights words by importance in a document compared to a collection</p>
 <p>Example: Comparing our interview with other post-match interviews</p>
-<p><strong>Common words in all interviews</strong> (low TF-IDF): - “game”, “played”, “team”, “half”</p>
-<p><strong>Distinctive words in this interview</strong> (high TF-IDF): - “intensity”, “aggressive”, “clinical”, “impressive”</p>
-<p><strong>Benefits:</strong> - Reveals what makes this text unique - Reduces importance of common terms - Identifies signature vocabulary and themes</p>
+<p><strong>Common words in all interviews</strong> (low TF-IDF):</p>
+<ul>
+<li>“game”, “played”, “team”, “half”</li>
+</ul>
+<p><strong>Distinctive words in this interview</strong> (high TF-IDF):</p>
+<ul>
+<li>“intensity”, “aggressive”, “clinical”, “impressive”</li>
+</ul>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>Reveals what makes this text unique</li>
+<li>Reduces importance of common terms</li>
+<li>Identifies signature vocabulary and themes</li>
+</ul>
 </section>
 <section id="what-we-have" class="slide level2 center">
 <h2>What we have</h2>
-<p><strong>What we have</strong> * Bag of words extracted words (tokens) * Use 2-grams to have expressions (“yellow card”) * Select important words</p>
-<p><strong>What we need</strong> * link words to sentiments via dictionary * consider context</p>
+<p><strong>What we have</strong></p>
+<ul>
+<li>Bag of words extracted words (tokens)</li>
+<li>Use 2-grams to have expressions (“yellow card”)</li>
+<li>Select important words</li>
+</ul>
+<p><strong>What we need</strong></p>
+<ul>
+<li>link words to sentiments via dictionary</li>
+<li>consider context</li>
+</ul>
 </section></section>
 <section>
 <section id="sentiment-analysis-1" class="title-slide slide level1 center">
@@ -703,20 +753,39 @@ Gábor Békés (CEU)
 <li>One-size-fits-all approach</li>
 </ul>
 </section>
-<section id="approach-2-domain-specific-custom-lexicons" class="slide level2 center">
-<h2>Approach 2: Domain-Specific Custom Lexicons</h2>
+<section id="approach-1-how-ai-can-help" class="slide level2 center">
+<h2>Approach 1: How AI can help?</h2>
+<p><strong>AI</strong></p>
+<ul>
+<li>Doing a sentiment analysis project used to be pretty advanced analytics job</li>
+<li>AI now writes code to help</li>
+</ul>
+<p><strong>process</strong></p>
+<ul>
+<li>Explain task, show corpus</li>
+<li>Iterate on code structure</li>
+<li>Needs review, debugging</li>
+<li>Great help re <strong>teaching you</strong> key concepts, libraries, explain how they work</li>
+<li>Advantage: requires code design knowledge, experience</li>
+</ul>
+</section>
+<section id="approach-2-domain-specific-custom-lexicons-with-ai" class="slide level2 center">
+<h2>Approach 2: Domain-Specific Custom Lexicons with AI</h2>
 <p><strong>Creating a sports-specific lexicon</strong></p>
 <div class="callout callout-none no-icon callout-style-simple">
 <div class="callout-body">
 <div class="callout-content">
 <p><strong>prompt</strong></p>
-<p>Review this uploaded <em>corpus</em>. Create a new specific lexicon to analyse sentiments.</p>
+<p>Review this uploaded <em>corpus</em>. Create a new specific lexicon to analyse sentiments. Assign sentiment scores. Output is a domain_lexicon.csv.</p>
 </div>
 </div>
 </div>
-<p>The result is a piece of code with new lexicons. Or a new dataset we can call.</p>
+<ul>
+<li>The result is a piece of code with new lexicons.</li>
+<li>Could add more context</li>
+</ul>
 </section>
-<section id="approach-2-domain-specific-custom-lexicons-1" class="slide level2 center">
+<section id="approach-2-domain-specific-custom-lexicons" class="slide level2 center">
 <h2>Approach 2: Domain-Specific Custom Lexicons</h2>
 <p><strong>Creating a sports-specific lexicon:</strong></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a>sports_positive_terms <span class="op">=</span> [</span>
@@ -872,7 +941,7 @@ Gábor Békés (CEU)
 <ol type="1">
 <li>Text → Data → Insight</li>
 <li>BoW is a simple start</li>
-<li>Loads of adnaced models –&gt; NLP</li>
+<li>Loads of advanced models –&gt; Modern NLP methods</li>
 <li>LLMs bring powerful context</li>
 </ol>
 <div class="quarto-auto-generated-content">
