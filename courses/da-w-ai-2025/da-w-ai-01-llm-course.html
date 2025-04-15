@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Gábor Békés (CEU)">
-  <meta name="dcterms.date" content="2025-02-18">
+  <meta name="dcterms.date" content="2025-04-14">
   <title>Data Analysis with AI: Concepts</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -322,6 +322,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/recharts@2.1.12/umd/Recharts.min.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -339,13 +342,17 @@ Gábor Békés (CEU)
 </div>
 </div>
 
-  <p class="date">2025-02-18</p>
+  <p class="date">2025-04-14</p>
 </section>
 <section>
 <section id="intro-to-the-concept-of-llms" class="title-slide slide level1 white center" data-background-color="#3b528b">
 <h1>Intro to the concept of LLMs</h1>
 
 </section>
+<section id="use-of-artificial-intelligence" class="slide level2 center">
+<h2>Use of Artificial Intelligence</h2>
+
+<img data-src="images/ai-college1.jpg" class="r-stretch"></section>
 <section id="why" class="slide level2 center">
 <h2>Why</h2>
 <div>
@@ -359,9 +366,10 @@ Gábor Békés (CEU)
 <li class="fragment">find useful use cases</li>
 <li class="fragment">learn bit more about LLMs and their impact</li>
 </ul></li>
-<li class="fragment"><p>Share cool stuff</p>
+<li class="fragment"><p>Try out different ways to approach a problem</p>
 <ul>
-<li class="fragment">Like this presentation in ‘revealjs’</li>
+<li class="fragment">One prompt vs interaction</li>
+<li class="fragment">Compare human vs machine understanding of a text</li>
 </ul></li>
 </ul>
 </div>
@@ -370,44 +378,65 @@ Gábor Békés (CEU)
 <h2>This class – approach</h2>
 <div>
 <ul>
-<li class="fragment">focus on data analysis: code, stats, reporting</li>
+<li class="fragment">focus on data analysis steps: research question, code, statistics, reporting</li>
 <li class="fragment">self-help group to openly discuss experience and trauma</li>
 <li class="fragment">get you some experience with selected tasks</li>
 <li class="fragment">move from execution as key skill to design and debugging</li>
 <li class="fragment">get you a class you can put into your CV</li>
+<li class="fragment">(extra) talk about topics I care about in data analysis</li>
 </ul>
 </div>
 </section>
 <section id="this-class-topics" class="slide level2 center">
 <h2>This class – topics</h2>
 <ul>
-<li>Week 1: Effectively summarize academic content</li>
-<li>Week 2: Document data – World Values Survey (VWS)</li>
-<li>Week 3: Exploratory data analysis and report creation - VWS</li>
-<li>Week 4: Data manipulation, wrangling – Football games and teams</li>
-<li>Week 5: Text analysis and information extraction – Interviews</li>
-<li>Week 6: Combing data from text and tabular data, text analysis with APIs (TBD) – Interviews</li>
+<li>Week 1: Review LLMs Effectively summarize academic content</li>
+<li>Week 2: EDA and data documentation – <span style="color: #21918c;">World Values Survey (VWS)</span></li>
+<li>Week 3: Analysis and report creation – <span style="color: #21918c;">World Values Survey (VWS)</span></li>
+<li>Week 4: Data manipulation, wrangling – <span style="color: #21918c;">Synthetic Hotels</span></li>
+<li>Week 5: Text analysis and information extraction – <span style="color: #21918c;">Post match interviews (VWS)</span></li>
+<li>Week 6: Different ways of sentiment analysis – <span style="color: #21918c;">Post match interviews (VWS)</span></li>
 </ul>
 </section>
-<section id="evolution-of-language-models" class="slide level2 center" data-background-color="#fcfcfc">
-<h2>Evolution of Language Models</h2>
-
-<img data-src="images/timeline-viz.svg" class="r-stretch"><div class="callout callout-none no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<p><strong>Key Breakthrough: “Attention is All You Need” (2017)</strong></p>
+<section id="llm-development-timeline" class="slide level2 center">
+<h2>LLM Development Timeline</h2>
+<iframe src="timeline.html" width="100%" height="520px" frameborder="0">
+</iframe>
+</section>
+<section id="key-milestones-in-llm-development-i" class="slide level2 center">
+<h2>Key Milestones in LLM Development I</h2>
 <ul>
-<li>Introduced the Transformer architecture</li>
-<li>Eliminated need for sequential processing</li>
-<li>Enabled massive parallelization</li>
-<li>Foundation for all modern LLMs</li>
+<li><p><strong>Neural Language Models (2003)</strong>: First successful application of neural networks to language modeling, establishing the statistical foundations for predicting word sequences based on context.</p></li>
+<li><p><strong>Word Embeddings (2013)</strong>: Development of Word2Vec and distributed representations, enabling words to be mapped into vector spaces where semantic relationships are preserved mathematically.</p></li>
+<li><p><strong>Transformer Architecture (2017)</strong>: Introduction of the Transformer model with self-attention mechanisms, eliminating sequential computation constraints and enabling efficient parallel processing.</p></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="footer">
-<p>Vaswani et al.&nbsp;(2017). “Attention Is All You Need”. NeurIPS 30.</p>
-</div>
+</section>
+<section id="key-milestones-in-llm-development-ii" class="slide level2 center">
+<h2>Key Milestones in LLM Development II</h2>
+<ul>
+<li><p><strong>Pretraining + Fine-tuning (2018)</strong>: BERT - Emergence of the two-stage paradigm where models are first pretrained on vast unlabeled text, then fine-tuned for specific downstream tasks.</p></li>
+<li><p><strong>ChatGPT (2022)</strong>: Release of a conversational AI interface that demonstrated unprecedented natural language capabilities to the general public, driving mainstream adoption.</p></li>
+<li><p><strong>Reinforcement Learning from Human Feedback (2023)</strong>: Refinement of models through human preferences, aligning AI outputs with human values and reducing harmful responses.</p></li>
+</ul>
+</section>
+<section id="references" class="slide level2 center">
+<h2>References</h2>
+<ul>
+<li>[1]: Bengio, Y., Ducharme, R., Vincent, P., &amp; Jauvin, C. (2003). “A Neural Probabilistic Language Model.” Journal of Machine Learning Research.</li>
+<li>[2]: Mikolov, T., Sutskever, I., Chen, K., Corrado, G. S., &amp; Dean, J. (2013). “Distributed Representations of Words and Phrases and their Compositionality.” Advances in Neural Information Processing Systems.</li>
+<li>[3]: Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., &amp; Polosukhin, I. (2017). “Attention Is All You Need.” Advances in Neural Information Processing Systems.</li>
+<li>[4]: Devlin, J., Chang, M. W., Lee, K., &amp; Toutanova, K. (2018). “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.” arXiv preprint.</li>
+<li>[5]: OpenAI. (2022). “ChatGPT: Optimizing Language Models for Dialogue.” OpenAI Blog.</li>
+<li>[6]: Anthropic. (2023). “Constitutional AI: Harmlessness from AI Feedback.” arXiv preprint.</li>
+</ul>
+</section>
+<section id="key-milestones-in-llm-development-iii" class="slide level2 center">
+<h2>Key Milestones in LLM Development III</h2>
+<ul>
+<li>New ideas on using synthetic data to train models</li>
+<li>DeepSeek’s cheaper approach</li>
+<li>Agentic AI</li>
+</ul>
 </section>
 <section id="what-are-large-language-models" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>What are Large Language Models?</h2>
@@ -465,11 +494,12 @@ Gábor Békés (CEU)
 <h2>Token window</h2>
 <ul>
 <li><p>1 token = 4 characters, 4 tokens= 3 words (In English)</p></li>
-<li><p>ChatGPT 2022 window of 4,000 tokens.</p>
+<li><p>ChatGPT 2022 window of 4,000 tokens.</p></li>
+<li><p>ChatGPT 2025 window of 128,000 tokens = 250p book</p></li>
+<li><p>Tokens matter – more context, more relevant answers</p>
 <ul>
 <li>Over limit: hallucinate, off-topic.</li>
 </ul></li>
-<li><p>ChatGPT 2025 – 128,000 tokens = 250p book</p></li>
 </ul>
 </section>
 <section id="hallucination-prediction-errors" class="slide level2 center" data-background-color="#f8f9fa">
@@ -667,27 +697,24 @@ Gábor Békés (CEU)
 <section id="analysis-approaches-centaur-vs-cyborg" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>Analysis Approaches: Centaur vs Cyborg</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:45%;">
 <h3 id="centaur">Centaur 🧑‍💻</h3>
-<p><strong>Planning</strong> 👤 Design research plan<br>
+<p><strong>Plan</strong> 👤 Design research plan<br>
 🤖 Suggest variables</p>
 <p><strong>Data Prep</strong> 👤 Define cleaning rules<br>
-🤖 Execute cleaning code 👤 Validate cleaning</p>
+🤖 Execute cleaning code, 👤 Validate</p>
 <p><strong>Analysis</strong> 👤 Choose methods<br>
-🤖 Implement code<br>
-👤 Validate results</p>
+🤖 Implement code, 👤 Validate results</p>
 <p><strong>Reporting</strong> 👤 Outline findings<br>
 🤖 Draft sections<br>
 👤 Finalize</p>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:55%;">
 <h3 id="cyborg">Cyborg 🦾</h3>
-<p><strong>Planning</strong> 👤🤖 Interactive brainstorming<br>
+<p><strong>Plan</strong> 👤🤖 Interactive brainstorming<br>
 👤🤖 Collaborative refinement</p>
 <p><strong>Data Prep</strong> 👤🤖 Iterative cleaning<br>
-👤🤖 Real-time modification<br>
-👤🤖 Joint discovery</p>
-<p><strong>Analysis</strong> 👤🤖 Exploratory conversation<br>
-👤🤖 Dynamic adjustment<br>
+👤🤖 joint discovery and modification</p>
+<p><strong>Analysis</strong> 👤🤖 Exploratory convo 👤🤖 Dynamic adjustment<br>
 👤🤖 Continuous validation</p>
 <p><strong>Reporting</strong> 👤🤖 Co-writing process<br>
 👤🤖 Real-time feedback<br>
@@ -705,12 +732,25 @@ Gábor Békés (CEU)
 <li>Build experience in prompt engineering <span style="color: #21918c;">📍 this class</span></li>
 </ol>
 </section>
-<section id="practical-guidelines-2025-02" class="slide level2 center">
-<h2>Practical Guidelines (2025-02)</h2>
+<section id="what-is-new-2025-april" class="slide level2 center">
+<h2>What is new: 2025 April</h2>
+<ul>
+<li><p>Agentic AI</p></li>
+<li><p>Have many AI agents “discuss” options and iterate before returning</p></li>
+<li><p>AI as teammate</p></li>
+<li><p>Have a group of people work with AI as a teammate, include in discussion, etc</p>
+<ul>
+<li>Started already with medical teams</li>
+</ul></li>
+</ul>
+</section>
+<section id="practical-guidelines-2025-04" class="slide level2 center">
+<h2>Practical Guidelines (2025-04)</h2>
 <ol type="1">
 <li>Current LLMs good but not perfect</li>
 <li>Hard to fully outsource</li>
 <li>Cyborg is the default mode</li>
+<li>AI as team mate is emerging</li>
 </ol>
 </section>
 <section id="future-of-data-analysis-workflows" class="slide level2 center">
@@ -778,11 +818,11 @@ Gábor Békés (CEU)
 <tbody>
 <tr class="odd">
 <td>Anthropic Claude Artifacts</td>
-<td>• Dedicated output window<br>• Supports text, code, flowcharts, SVG graphics, websites, dashboards<br>• Real-time refinement and modification<br>• Sharing and remixing capabilities</td>
+<td>• Dedicated output window<br>• Supports text, code, flowchart, SVG, website <br>• Real-time refinement and modification<br>• Sharing and remixing capabilities</td>
 </tr>
 <tr class="even">
 <td>ChatGPT Canvas</td>
-<td>• Separate collaboration window<br>• Text editing and coding capabilities<br>• Options for edits, length adjustment, reading level changes<br>• Code review and porting features</td>
+<td>• Separate collaboration window<br>• Text editing and coding capabilities<br>• Options for edits, length adjustment<br>• Code review and porting features</td>
 </tr>
 <tr class="odd">
 <td>OpenAI Advanced Data Analysis</td>
@@ -819,7 +859,7 @@ Gábor Békés (CEU)
 </tr>
 <tr class="odd">
 <td>Microsoft Copilot</td>
-<td>• Assistance in Word, Excel, PowerPoint, etc.<br>• Data analysis, formula construction</td>
+<td>• Assistance in Word, Excel, etc.<br>• Data analysis, formula construction</td>
 </tr>
 <tr class="even">
 <td>Google Gemini for Workspace</td>
@@ -855,17 +895,6 @@ Gábor Békés (CEU)
 <li>To what extent running something yields same result? <span style="color: #21918c;">📍 this class</span></li>
 <li>How good are predictions? <span style="color: #21918c;">📍 this class</span></li>
 </ul>
-</section>
-<section id="llm-vs-human-2024" class="slide level2 center">
-<h2>LLM vs human 2024</h2>
-<div>
-<ul>
-<li class="fragment">LLM were trained on vast amounts of data, most of them low quality</li>
-<li class="fragment">Best = most likely</li>
-<li class="fragment">Human = trained on much less data, but higher quality</li>
-<li class="fragment">Best = learnt from experience, best people</li>
-</ul>
-</div>
 </section>
 <section id="big-debate-on-errors-and-hallucination" class="slide level2 center">
 <h2>Big debate on errors and hallucination</h2>
@@ -903,6 +932,103 @@ Gábor Békés (CEU)
 <li>New methods to improve accuracy</li>
 <li>Solve scientific problems</li>
 <li>Reasoning models, like OpenAI o3</li>
+</ul>
+</section></section>
+<section>
+<section id="ai-use-cases" class="title-slide slide level1 center">
+<h1>AI use cases</h1>
+
+</section>
+<section id="ai-use-cases-student-response" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>AI Use Cases: Student response</h2>
+<ol type="1">
+<li><strong>Coding Assistance &amp; Debugging</strong>
+<ul>
+<li><em>“It helps me with fixing errors in coding.”, “Find small errors I can’t on my own.”</em></li>
+<li><em>“I used it to generate data in Excel to then work with it in Python and R.”</em></li>
+<li><em>“I used it for Python projects .. instead of Google to get answers fast.”</em></li>
+</ul></li>
+<li><strong>Concept Clarification &amp; Learning Support</strong>
+<ul>
+<li><em>““To understand certain topics”, “for clarifications on macroeconomics and data analysis concepts.”</em></li>
+<li><em>“For Micro and Macro courses, to understand graphs easily.”</em></li>
+<li><em>“I uploaded the material and explained what I wanted to do in detail and asked it to create me a study guide”</em></li>
+</ul></li>
+<li><strong>Writing &amp; Proofreading</strong>
+<ul>
+<li><em>“I use AI for text and code touch-ups for smoother language.”</em></li>
+<li><em>“While writing papers, I use ChatGPT as proofreader”, “improving the coherence.”</em></li>
+<li><em>“I usually give an idea and AI makes it perfect.”</em></li>
+</ul></li>
+</ol>
+</section>
+<section id="ai-use-cases-predictions" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>AI Use Cases: Predictions</h2>
+<ol type="1">
+<li><p><strong>Literature Review &amp; Summarization</strong><br>
+AI helps quickly find relevant papers, summarize key arguments, and extract citations, saving time in reviewing large bodies of work.</p></li>
+<li><p><strong>Data Analysis &amp; Coding Assistance</strong><br>
+AI supports coding in R, Python, and Stata, assisting with debugging, automating repetitive tasks, and suggesting statistical methods for empirical research.</p></li>
+<li><p><strong>Writing &amp; Editing Support</strong><br>
+AI aids in drafting, structuring, and refining academic writing, improving clarity, grammar, and coherence while maintaining academic integrity.</p></li>
+</ol>
+</section>
+<section id="how-i-use-it" class="slide level2 center">
+<h2>How I use it?</h2>
+<ul>
+<li><p>All the time, ChatGPT 4o (Canvas), Claude (Projects), ChatGPT o1 (rare), both paid tiers</p></li>
+<li><p>Github Copilot in VSCode and Rstudio</p></li>
+<li><p>This presentation is massively helped by AI</p>
+<ul>
+<li>How can I make a presentation as html –&gt; Quarto and revealjs</li>
+<li>add boxes, etc, create yml, customs.css, add to my website</li>
+<li>Content on RFHL, tokens</li>
+<li>Summary slides on cyborg vs centaur</li>
+</ul></li>
+</ul>
+</section>
+<section id="how-i-use-it-1" class="slide level2 center">
+<h2>How I use it?</h2>
+<ul>
+<li>Ask AI for ideas
+<ul>
+<li>Write first draft fully alone – it helps me think through</li>
+<li>use ai improve sentence by sentence (to avoid blank BS)</li>
+<li>use ai to shorten</li>
+</ul></li>
+<li>Do white board / notebook thinking
+<ul>
+<li>Get AI to OCR and make to text</li>
+</ul></li>
+<li>Write code
+<ul>
+<li>from scratch</li>
+<li>code review</li>
+<li>debug</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-were-bad-experience-with-ai" class="slide level2 center">
+<h2>What were bad experience with AI?</h2>
+<h3 id="topics">Topics</h3>
+<ul>
+<li>Background work</li>
+<li>Coding</li>
+<li>Discussion of topics, results</li>
+<li>…</li>
+</ul>
+</section>
+<section id="my-bad-experience" class="slide level2 center">
+<h2>My bad experience</h2>
+<ul>
+<li>AI written text is typically
+<ul>
+<li>Good grammar</li>
+<li>Convincing structure</li>
+<li>Bland and unoriginal</li>
+</ul></li>
+<li>One paragraph or one page is hard tell apart from a human</li>
+<li>10 pages, 10 papers – easy to see</li>
 </ul>
 </section></section>
 <section>
@@ -954,106 +1080,26 @@ Gábor Békés (CEU)
 </div>
 </div>
 </div>
-</section></section>
-<section>
-<section id="ai-use-cases" class="title-slide slide level1 center">
-<h1>AI use cases</h1>
+</section>
+<section id="ai-in-research-elsevier" class="slide level2 center">
+<h2>AI in research: Elsevier</h2>
+<p>Two key points from <a href="https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals">Elsevier policy</a> generative AI policies for journals</p>
+<ul>
+<li>report for transparency</li>
+<li>supervise, take responsibility</li>
+</ul>
+</section>
+<section id="use-of-artificial-intelligence-in-classes" class="slide level2 center">
+<h2>Use of Artificial Intelligence in classes</h2>
 
-</section>
-<section id="ai-use-cases-student-response" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>AI Use Cases: Student response</h2>
-<ol type="1">
-<li><strong>Coding Assistance &amp; Debugging</strong>
-<ul>
-<li><em>“It helps me with fixing errors in coding.”, “Find small errors I can’t on my own.”</em></li>
-<li><em>“I used it to generate data in Excel to then work with it in Python and R.”</em></li>
-</ul></li>
-<li><strong>Concept Clarification &amp; Learning Support</strong>
-<ul>
-<li><em>““To understand certain topics”, “for clarifications on macroeconomics and data analysis concepts.”</em></li>
-<li><em>“For Micro and Macro courses, to understand graphs easily.”</em></li>
-</ul></li>
-<li><strong>Writing &amp; Proofreading</strong>
-<ul>
-<li><em>“I use AI for text and code touch-ups for smoother language.”</em></li>
-<li><em>“While writing papers, I use ChatGPT as proofreader”, “improving the coherence.”</em></li>
-<li><em>“I usually give an idea and AI makes it perfect.”</em></li>
-</ul></li>
-</ol>
-</section>
-<section id="ai-use-cases-predictions" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>AI Use Cases: Predictions</h2>
-<ol type="1">
-<li><p><strong>Literature Review &amp; Summarization</strong><br>
-AI helps quickly find relevant papers, summarize key arguments, and extract citations, saving time in reviewing large bodies of work.</p></li>
-<li><p><strong>Data Analysis &amp; Coding Assistance</strong><br>
-AI supports coding in R, Python, and Stata, assisting with debugging, automating repetitive tasks, and suggesting statistical methods for empirical research.</p></li>
-<li><p><strong>Writing &amp; Editing Support</strong><br>
-AI aids in drafting, structuring, and refining academic writing, improving clarity, grammar, and coherence while maintaining academic integrity.</p></li>
-</ol>
-</section>
-<section id="how-i-use-it" class="slide level2 center">
-<h2>How I use it?</h2>
-<ul>
-<li><p>All the time, ChatGPT 4o (Canvas), Claude (Projects), ChatGPT o1 (rare), both paid tiers</p></li>
-<li><p>Github Copilot in VSCode and Rstudio</p></li>
-<li><p>This presentation is massively helped by AI</p>
-<ul>
-<li>How can I make a presentation as html –&gt; Quarto and revealjs</li>
-<li>add boxes, etc, create yml, customs.css, add to my website</li>
-<li>Content on RFHL, tokens</li>
-<li>Summary slides on cyborg vs centaur</li>
-</ul></li>
+<img data-src="images/ai-college1.jpg" class="r-stretch"><ul>
+<li><a href="https://aicodeofconduct.mlml.io/">A Harvard lab</a></li>
 </ul>
 </section>
-<section id="what-were-bad-experience-with-ai" class="slide level2 center">
-<h2>What were bad experience with AI?</h2>
-<h3 id="topics">Topics</h3>
-<ul>
-<li>Background work</li>
-<li>Coding</li>
-<li>Discussion of topics, results</li>
-<li>…</li>
-</ul>
-</section></section>
-<section>
-<section id="to-learn-more" class="title-slide slide level1 center">
-<h1>To learn more</h1>
+<section id="you-gotta-stay-a-learning-human" class="slide level2 center">
+<h2>You gotta stay a learning human</h2>
 
-</section>
-<section id="readings" class="slide level2 center">
-<h2>Readings</h2>
-<ul>
-<li>Ethan Mollick “Co-Intelligence: Living and Working with AI” <a href="https://www.penguinrandomhouse.com/books/741805/co-intelligence-by-ethan-mollick/">Penguin Random House 2024</a></li>
-<li>Anton Korinek “Generative AI for Economic Research: Use Cases and Implications for Economists,” <a href="https://doi.org/10.1257/jel.20231736">Journal of Economic Literature 61(4) December 2024 Update 1–74</a></li>
-<li>Many blog posts, videos, papers scattered in presentation</li>
-</ul>
-</section>
-<section id="to-learn-more-1" class="slide level2 center">
-<h2>To learn more:</h2>
-<h3 id="understanding-llms">Understanding LLMs</h3>
-<ul>
-<li><p>Glossary of LLM terms <a href="https://www.vectara.com/glossary-of-llm-terms">Glossary of LLM Terms</a></p></li>
-<li><p><a href="https://ig.ft.com/generative-ai/">Financial Times: How AI Large Language Models Work</a></p></li>
-<li><p><a href="https://www.economist.com/science-and-technology/2024/07/11/researchers-are-figuring-out-how-large-language-models-work">The Economist: How Large Language Models Work</a></p></li>
-<li><p><a href="https://www.oneusefulthing.org/p/thinking-like-an-ai">Thinking like AI</a></p></li>
-<li><p>What’s an LLM context window and why is it getting larger? <a href="https://research.ibm.com/blog/larger-context-window">IBM research on context window</a></p></li>
-<li><p>Strategy in business <a href="https://hbr.org/2023/07/build-a-winning-ai-strategy-for-your-business">Build a winning AI strategy, HBR 2023</a></p></li>
-</ul>
-</section>
-<section id="interviews-podcasts" class="slide level2 center">
-<h2>Interviews, podcasts</h2>
-<ul>
-<li>Review of LLMs by <a href="https://simonwillison.net/2024/Dec/31/llms-in-2024/">Simon Willison</a></li>
-<li>Machines of Loving Grace <a href="https://darioamodei.com/machines-of-loving-grace">Dario Amodei</a></li>
-</ul>
-<h3 id="video-resources">Video Resources</h3>
-<ul>
-<li>Andrej Karpathy “Introduction to Large Language Models” <a href="https://www.youtube.com/watch?v=zjkBMFhNj_g">1hr overview</a></li>
-<li>Andrej Karpathy: <a href="https://www.youtube.com/watch?v=kCc8FmEb1nY">“Let’s build GPT: from scratch, in code, spelled out”</a></li>
-<li>Interview with a great <a href="https://youtu.be/z_svj3NP968?si=cWUoVAImTF4PZ_aw">Sendhil Mullainathan on direction AI</a></li>
-</ul>
-</section></section>
+<img data-src="images/ai-college2.png" class="r-stretch"></section></section>
 <section>
 <section id="conclusions-and-discussion" class="title-slide slide level1 center">
 <h1>Conclusions and discussion</h1>
@@ -1067,38 +1113,55 @@ AI aids in drafting, structuring, and refining academic writing, improving clari
 <li>2025-02 <a href="https://www.oneusefulthing.org/p/which-ai-to-use-now-an-updated-opinionated">Which Ai by Ethan Mollick</a>, especially regarding <a href="https://www.oneusefulthing.org/i/155502334/executes-code-and-does-data-analysis">data analysis</a></li>
 </ul>
 </section>
-<section id="gabors-current-take-1" class="slide level2 center">
-<h2>Gabor’s current take 1</h2>
-<h3 id="ai-is-part-of-life">AI is part of life</h3>
+<section id="to-learn-more" class="slide level2 center">
+<h2>To learn more</h2>
 <ul>
-<li>My <a href="https://gabors-data-analysis.com/aipolicy/">ai policy</a></li>
-</ul>
-<h3 id="evolution-to-continue">Evolution to continue</h3>
-<ul>
-<li>AI tools will evolve in precision but will make errors</li>
-<li>AI tools will be better in finding bugs but make new ones</li>
-<li>Consistency will remain a problem.</li>
-<li>Compute will be cheaper, personal AI on phone (not cloud)</li>
+<li>Look at <a href="https://github.com/gabors-data-analysis/da-w-ai/blob/main/learn-more/beyond.md">beyond</a> where I collect blog posts, videos, books, papers.</li>
 </ul>
 </section>
-<section id="gabors-current-take-2" class="slide level2 center">
-<h2>Gabor’s current take 2</h2>
-<h3 id="your-place">Your place</h3>
-<div>
+<section id="gabors-current-take-i" class="slide level2 center">
+<h2>Gabor’s current take I</h2>
+<h3 id="should-study">Should study</h3>
 <ul>
-<li class="fragment">Without core knowledge you can’t interact</li>
-<li class="fragment">Strong knowledge and experience helps debugging</li>
-<li class="fragment">Cheaper data analysis = more use cases</li>
+<li>You have to learn stuff even if AI can also do it.
+<ul>
+<li>Good writing</li>
+<li>core coding</li>
+</ul></li>
+<li>Be a well rounded educated human</li>
+<li>Because to supervise AI you need to know what to look for</li>
 </ul>
-</div>
+<h3 id="use-of-ai-need-to-report">Use of AI – need to report?</h3>
+<ul>
+<li>My view in 2024. Report what you have done</li>
+<li>My view in 2025. No need to report, AI is now like internet search (or electricity)</li>
+</ul>
 </section>
-<section id="date-stamp" class="slide level2 center">
-<h2>Date stamp</h2>
-<p>This version: 2025-02-18</p>
+<section id="gabors-current-take-ii" class="slide level2 center">
+<h2>Gabor’s current take II</h2>
+<h3 id="your-place-with-ai">Your place with AI</h3>
+<ul>
+<li><p>AI as input, supervision, debugging, responsibility.</p></li>
+<li><p>Without core knowledge you can’t interact</p></li>
+<li><p>Strong knowledge and experience helps debugging</p></li>
+</ul>
+<h3 id="future-more-opportunities">Future: more opportunities</h3>
+<ul>
+<li>Cheaper data analysis = more use cases</li>
+</ul>
+</section>
+<section id="status" class="slide level2 center">
+<h2>Status</h2>
+<ul>
+<li>This is version 0.4.0</li>
+<li>created after teaching the class</li>
+<li>redesigned for 6*100-120 minutes – you can adapt class work and assignments to fit time</li>
+<li>assumes audience familiar with basics of coding and data analysis</li>
+</ul>
 <p><a href="mailto:bekesg@ceu.edu">bekesg@ceu.edu</a></p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p>Gabors Data Analysis with AI - 2025-02-18 v0.3</p>
+<p>Gabors Data Analysis with AI - 2025-04-14 v0.4.0</p>
 </div>
 </div>
 </section></section>
