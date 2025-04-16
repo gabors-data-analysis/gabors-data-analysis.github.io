@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Gábor Békés (CEU)">
-  <meta name="dcterms.date" content="2025-04-14">
+  <meta name="dcterms.date" content="2025-04-16">
   <title>Data Analysis with AI: Concepts</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -342,7 +342,7 @@ Gábor Békés (CEU)
 </div>
 </div>
 
-  <p class="date">2025-04-14</p>
+  <p class="date">2025-04-16</p>
 </section>
 <section>
 <section id="intro-to-the-concept-of-llms" class="title-slide slide level1 white center" data-background-color="#3b528b">
@@ -387,10 +387,10 @@ Gábor Békés (CEU)
 </ul>
 </div>
 </section>
-<section id="this-class-topics" class="slide level2 center">
-<h2>This class – topics</h2>
+<section id="this-class-topics-and-case-studies" class="slide level2 center">
+<h2>This class – topics and case studies</h2>
 <ul>
-<li>Week 1: Review LLMs Effectively summarize academic content</li>
+<li>Week 1: Review LLMs – <span style="color: #21918c;">An FT graph</span></li>
 <li>Week 2: EDA and data documentation – <span style="color: #21918c;">World Values Survey (VWS)</span></li>
 <li>Week 3: Analysis and report creation – <span style="color: #21918c;">World Values Survey (VWS)</span></li>
 <li>Week 4: Data manipulation, wrangling – <span style="color: #21918c;">Synthetic Hotels</span></li>
@@ -494,6 +494,7 @@ Gábor Békés (CEU)
 <h2>Token window</h2>
 <ul>
 <li><p>1 token = 4 characters, 4 tokens= 3 words (In English)</p></li>
+<li><p>varies by models</p></li>
 <li><p>ChatGPT 2022 window of 4,000 tokens.</p></li>
 <li><p>ChatGPT 2025 window of 128,000 tokens = 250p book</p></li>
 <li><p>Tokens matter – more context, more relevant answers</p>
@@ -628,6 +629,25 @@ Gábor Békés (CEU)
 </ul></li>
 </ul>
 </div></div>
+</section>
+<section id="whats-new-2025-04-llm-related-developments" class="slide level2 center">
+<h2>What’s new (2025-04): LLM-Related Developments</h2>
+<ul>
+<li><strong>Enhanced reasoning capabilities</strong> - LLMs demonstrating improved performance on complex causal inference and statistical analysis tasks</li>
+<li><strong>Context window expansion</strong> - Models handling millions of tokens, enabling analysis of entire datasets in a single prompt</li>
+<li><strong>Multi-agent collaborative systems</strong> - LLMs working in coordinated teams with specialized roles to tackle complex analytical problems</li>
+<li><strong>Powerful open source models</strong> - LLama 4, Deepseek v3 – getting closer to frontier</li>
+</ul>
+</section>
+<section id="whats-new-2025-04-ai-as-teammate" class="slide level2 center">
+<h2>What’s new (2025-04): AI as teammate</h2>
+<ul>
+<li>AI as teammate</li>
+<li>Have a group of people work with AI as a teammate, include in discussion, etc
+<ul>
+<li>Started already with medical teams</li>
+</ul></li>
+</ul>
 </section></section>
 <section>
 <section id="working-with-llms" class="title-slide slide level1 white center" data-background-color="#3b528b">
@@ -696,30 +716,42 @@ Gábor Békés (CEU)
 </section>
 <section id="analysis-approaches-centaur-vs-cyborg" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>Analysis Approaches: Centaur vs Cyborg</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<h3 id="centaur">Centaur 🧑‍💻</h3>
-<p><strong>Plan</strong> 👤 Design research plan<br>
-🤖 Suggest variables</p>
-<p><strong>Data Prep</strong> 👤 Define cleaning rules<br>
-🤖 Execute cleaning code, 👤 Validate</p>
-<p><strong>Analysis</strong> 👤 Choose methods<br>
-🤖 Implement code, 👤 Validate results</p>
-<p><strong>Reporting</strong> 👤 Outline findings<br>
-🤖 Draft sections<br>
-👤 Finalize</p>
-</div><div class="column" style="width:55%;">
-<h3 id="cyborg">Cyborg 🦾</h3>
-<p><strong>Plan</strong> 👤🤖 Interactive brainstorming<br>
-👤🤖 Collaborative refinement</p>
-<p><strong>Data Prep</strong> 👤🤖 Iterative cleaning<br>
-👤🤖 joint discovery and modification</p>
-<p><strong>Analysis</strong> 👤🤖 Exploratory convo 👤🤖 Dynamic adjustment<br>
-👤🤖 Continuous validation</p>
-<p><strong>Reporting</strong> 👤🤖 Co-writing process<br>
-👤🤖 Real-time feedback<br>
-👤🤖 Iterative improvement</p>
-</div></div>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>Centaur 🧑‍💻</th>
+<th>Cyborg 🦾</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Plan</strong></td>
+<td>👤 Design research plan<br>🤖 Suggest variables</td>
+<td>👤🤖 Interactive brainstorming<br>👤🤖 Collaborative refinement</td>
+</tr>
+<tr class="even">
+<td><strong>Data Prep</strong></td>
+<td>👤 Define cleaning rules<br>🤖 Execute cleaning code<br>👤 Validate</td>
+<td>👤🤖 Iterative cleaning<br>👤🤖 Joint discovery and modification</td>
+</tr>
+<tr class="odd">
+<td><strong>Analysis</strong></td>
+<td>👤 Choose methods<br>🤖 Implement code<br>👤 Validate results</td>
+<td>👤🤖 Exploratory conversation<br>👤🤖 Dynamic adjustment<br>👤🤖 Continuous validation</td>
+</tr>
+<tr class="even">
+<td><strong>Reporting</strong></td>
+<td>👤 Outline findings<br>🤖 Draft sections<br>👤 Finalize</td>
+<td>👤🤖 Co-writing process<br>👤🤖 Real-time feedback<br>👤🤖 Iterative improvement</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="practical-guidelines" class="slide level2 center">
 <h2>Practical Guidelines</h2>
@@ -731,18 +763,6 @@ Gábor Békés (CEU)
 <li>Always validate critical outputs</li>
 <li>Build experience in prompt engineering <span style="color: #21918c;">📍 this class</span></li>
 </ol>
-</section>
-<section id="what-is-new-2025-april" class="slide level2 center">
-<h2>What is new: 2025 April</h2>
-<ul>
-<li><p>Agentic AI</p></li>
-<li><p>Have many AI agents “discuss” options and iterate before returning</p></li>
-<li><p>AI as teammate</p></li>
-<li><p>Have a group of people work with AI as a teammate, include in discussion, etc</p>
-<ul>
-<li>Started already with medical teams</li>
-</ul></li>
-</ul>
 </section>
 <section id="practical-guidelines-2025-04" class="slide level2 center">
 <h2>Practical Guidelines (2025-04)</h2>
@@ -806,8 +826,8 @@ Gábor Békés (CEU)
 <h3 id="major-ai-platforms">Major AI Platforms</h3>
 <table class="caption-top">
 <colgroup>
-<col style="width: 44%">
-<col style="width: 56%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -839,8 +859,8 @@ Gábor Békés (CEU)
 <h3 id="specialized-tools">Specialized Tools</h3>
 <table class="caption-top">
 <colgroup>
-<col style="width: 44%">
-<col style="width: 56%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -931,7 +951,7 @@ Gábor Békés (CEU)
 <li>LLM also trained on scientific papers, books</li>
 <li>New methods to improve accuracy</li>
 <li>Solve scientific problems</li>
-<li>Reasoning models, like OpenAI o3</li>
+<li>Reasoning models, like OpenAI o1 (o3 to come)</li>
 </ul>
 </section></section>
 <section>
@@ -1161,7 +1181,7 @@ AI aids in drafting, structuring, and refining academic writing, improving clari
 <p><a href="mailto:bekesg@ceu.edu">bekesg@ceu.edu</a></p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p>Gabors Data Analysis with AI - 2025-04-14 v0.4.0</p>
+<p>Gabors Data Analysis with AI - 2025-04-14 v0.4.1</p>
 </div>
 </div>
 </section></section>
