@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Gábor Békés (CEU)">
-  <meta name="dcterms.date" content="2025-04-16">
+  <meta name="dcterms.date" content="2025-04-21">
   <title>Data Analysis with AI: Concepts</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -342,11 +342,43 @@ Gábor Békés (CEU)
 </div>
 </div>
 
-  <p class="date">2025-04-16</p>
+  <p class="date">2025-04-21</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Contents</h2>
+<ul>
+<li><a href="#/hello" id="/toc-hello">Hello</a></li>
+<li><a href="#/intro-to-the-concept-of-llms" id="/toc-intro-to-the-concept-of-llms">Intro to the concept of LLMs</a></li>
+<li><a href="#/working-with-llms" id="/toc-working-with-llms">Working with LLMs</a></li>
+<li><a href="#/key-concepts-for-using-llms" id="/toc-key-concepts-for-using-llms">Key concepts for Using LLMs</a></li>
+<li><a href="#/what-can-go-wrong" id="/toc-what-can-go-wrong">What can go wrong</a></li>
+<li><a href="#/ai-use-cases" id="/toc-ai-use-cases">AI use cases</a></li>
+<li><a href="#/ethich-and-law" id="/toc-ethich-and-law">Ethich and Law</a></li>
+<li><a href="#/updates" id="/toc-updates">Updates</a></li>
+<li><a href="#/conclusions-and-discussion" id="/toc-conclusions-and-discussion">Conclusions and discussion</a></li>
+</ul>
+</nav>
+</section>
+<section class="slide level2 center">
+
+
+<img data-src="images/gabors-data-analysis-with-ai.png" class="r-stretch"></section>
+<section id="about-me-and-this-slideshow" class="slide level2 center">
+<h2>About me and this slideshow</h2>
+<ul>
+<li><a href="https://people.ceu.edu/gabor_bekes">I am an economist</a> and not an AI developer, expert, guru, evangelist</li>
+<li>I am an active AI user in teaching and research</li>
+<li>I teach a series a Data Analysis courses based on <a href="https://gabors-data-analysis.com">my textbook</a>
+<ul>
+<li>This project is closely related to concepts and material in the book, but can be consumed alone. (or with a drink)</li>
+</ul></li>
+<li>This slideshow was created to help students and instructors active in data analysis in education, research, public policy or business</li>
+<li>Enjoy.</li>
+</ul>
 </section>
 <section>
-<section id="intro-to-the-concept-of-llms" class="title-slide slide level1 white center" data-background-color="#3b528b">
-<h1>Intro to the concept of LLMs</h1>
+<section id="hello" class="title-slide slide level1 center">
+<h1>Hello</h1>
 
 </section>
 <section id="use-of-artificial-intelligence" class="slide level2 center">
@@ -374,6 +406,16 @@ Gábor Békés (CEU)
 </ul>
 </div>
 </section>
+<section id="this-class" class="slide level2 center">
+<h2>This class</h2>
+<p>This is designed as first slideshow in a six week course</p>
+<ul>
+<li>100-120 minutes per week.</li>
+<li>5 assignments</li>
+<li>extra readings</li>
+</ul>
+<p>All open source at <a href="https://github.com/gabors-data-analysis/da-w-ai">github.com/gabors-data-analysis/da-w-ai</a></p>
+</section>
 <section id="this-class-approach" class="slide level2 center">
 <h2>This class – approach</h2>
 <div>
@@ -397,6 +439,11 @@ Gábor Békés (CEU)
 <li>Week 5: Text analysis and information extraction – <span style="color: #21918c;">Post match interviews (VWS)</span></li>
 <li>Week 6: Different ways of sentiment analysis – <span style="color: #21918c;">Post match interviews (VWS)</span></li>
 </ul>
+</section></section>
+<section>
+<section id="intro-to-the-concept-of-llms" class="title-slide slide level1 white center" data-background-color="#3b528b">
+<h1>Intro to the concept of LLMs</h1>
+
 </section>
 <section id="llm-development-timeline" class="slide level2 center">
 <h2>LLM Development Timeline</h2>
@@ -502,40 +549,6 @@ Gábor Békés (CEU)
 <li>Over limit: hallucinate, off-topic.</li>
 </ul></li>
 </ul>
-</section>
-<section id="hallucination-prediction-errors" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>Hallucination: Prediction Errors</h2>
-<h3 id="type-i-error-false-positive">Type I Error (False Positive)</h3>
-<ul>
-<li>Generating incorrect but plausible information</li>
-<li>Example: Creating non-existent research citations</li>
-</ul>
-<h3 id="type-ii-error-false-negative">Type II Error (False Negative)</h3>
-<ul>
-<li>Failing to generate correct information</li>
-<li>Example: Missing key facts in training data</li>
-</ul>
-<h3 id="economic-impact-of-errors">Economic Impact of errors</h3>
-<ul>
-<li>Cost of verification (humans, AI), risk assesment</li>
-</ul>
-<aside class="notes">
-<ul>
-<li>Type I errors more common and potentially more dangerous</li>
-<li>Economic costs include both direct verification and opportunity costs</li>
-<li>Trade-off between speed and accuracy crucial for business applications</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="reinforcement-learning-in-llms" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>Reinforcement Learning in LLMs</h2>
@@ -894,6 +907,82 @@ Gábor Békés (CEU)
 <div class="footer" style="font-size: 0.6em;">
 <p>Source: Korinek “Generative AI for Economic Research: Use Cases and Implications for Economists,” Journal of Economic Literature 61(4) December 2024 Update 1–74</p>
 </div>
+</section></section>
+<section>
+<section id="what-can-go-wrong" class="title-slide slide level1 white center" data-background-color="#3b528b">
+<h1>What can go wrong</h1>
+
+</section>
+<section id="hallucination-prediction-errors" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Hallucination: Prediction Errors</h2>
+<h3 id="type-i-error-false-positive">Type I Error (False Positive)</h3>
+<ul>
+<li>Generating incorrect but plausible information</li>
+<li>Example: Creating non-existent research citations</li>
+</ul>
+<h3 id="type-ii-error-false-negative">Type II Error (False Negative)</h3>
+<ul>
+<li>Failing to generate correct information</li>
+<li>Example: Missing key facts in training data</li>
+</ul>
+<h3 id="economic-impact-of-errors">Economic Impact of errors</h3>
+<ul>
+<li>Cost of verification (humans, AI), risk assesment</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Type I errors more common and potentially more dangerous</li>
+<li>Economic costs include both direct verification and opportunity costs</li>
+<li>Trade-off between speed and accuracy crucial for business applications</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="hallucination-of-references-still-claude-3.7-in-2025-04" class="slide level2 center">
+<h2>Hallucination of references (still!) – Claude 3.7 in 2025-04</h2>
+
+<img data-src="images/source1-2-3-claude37-2025-04-15.png" class="r-stretch"></section>
+<section id="hallucination-of-references-still-truth" class="slide level2 center">
+<h2>Hallucination of references (still!) – truth</h2>
+
+<img data-src="images/source1-truth.png" class="r-stretch"></section>
+<section id="big-debate-on-errors-and-hallucination" class="slide level2 center">
+<h2>Big debate on errors and hallucination</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>Is hallucination and errors inherent or may be improved</li>
+<li>Read <a href="https://undark.org/2023/04/06/chatgpt-isnt-hallucinating-its-bullshitting/">Carl T. Bergstrom and C. Brandon Ogbunu: chatgpt isn’t hallucinating it’s bullshitting, 04.06.2023</a></li>
+<li>Even a paper <a href="https://link.springer.com/article/10.1007/s10676-024-09775-5">Michael Townsen Hicks, James Humphries &amp; Joe Slater</a></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<p><img data-src="images/chatgpt-bullshit-paper.png"></p>
+</div></div>
+</section>
+<section id="the-issue-is-important-in-medicine" class="slide level2 center">
+<h2>The issue is important in medicine</h2>
+
+<img data-src="images/bja.png" class="r-stretch"><p><a href="https://www.bjanaesthesia.org.uk/article/S0007-0912(23)00372-0/fulltext">Medical research</a></p>
+</section>
+<section id="hallucination-2025-example" class="slide level2 center">
+<h2>Hallucination 2025 Example</h2>
+<ul>
+<li>Examle with conversations</li>
+</ul>
+<p><a href="https://chatgpt.com/share/67b4402b-9fd4-8000-a5c4-5a8f068a5201">ChatGPT convo on tokens</a></p>
+<ul>
+<li>Use explicit push for calculations</li>
+</ul>
+<p><a href="https://chatgpt.com/share/67b440eb-e474-8000-8461-cc56c56f929e">ChatGPT convo on tokens 2</a></p>
 </section>
 <section id="stochastic-parrot" class="slide level2 center">
 <h2>Stochastic Parrot</h2>
@@ -916,34 +1005,17 @@ Gábor Békés (CEU)
 <li>How good are predictions? <span style="color: #21918c;">📍 this class</span></li>
 </ul>
 </section>
-<section id="big-debate-on-errors-and-hallucination" class="slide level2 center">
-<h2>Big debate on errors and hallucination</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<ul>
-<li>Is hallucination and errors inherent or may be improved</li>
-<li>Read <a href="https://undark.org/2023/04/06/chatgpt-isnt-hallucinating-its-bullshitting/">Carl T. Bergstrom and C. Brandon Ogbunu: chatgpt isn’t hallucinating it’s bullshitting, 04.06.2023</a></li>
-<li>Even a paper <a href="https://link.springer.com/article/10.1007/s10676-024-09775-5">Michael Townsen Hicks, James Humphries &amp; Joe Slater</a></li>
-</ul>
-</div><div class="column" style="width:70%;">
-<p><img data-src="images/chatgpt-bullshit-paper.png"></p>
-</div></div>
-</section>
-<section id="the-issue-is-important-in-medicine" class="slide level2 center">
-<h2>The issue is important in medicine</h2>
-
-<img data-src="images/bja.png" class="r-stretch"><p><a href="https://www.bjanaesthesia.org.uk/article/S0007-0912(23)00372-0/fulltext">Medical research</a></p>
-</section>
 <section id="hallucination-2025" class="slide level2 center">
 <h2>Hallucination 2025</h2>
 <ul>
-<li>You can now ask for more thinking leading to less hallucination</li>
-</ul>
-<p><a href="https://chatgpt.com/share/67b4402b-9fd4-8000-a5c4-5a8f068a5201">ChatGPT convo on tokens</a></p>
+<li>Is a problem
 <ul>
-<li>Use explicit push for calculations</li>
+<li>You can now ask for more thinking, RAG (retrieval augmented generation) leading to less hallucination</li>
+<li>You can set “temperature setting” to “low”</li>
+</ul></li>
+<li>Knowledge (math)</li>
+<li>Learned from training</li>
 </ul>
-<p><a href="https://chatgpt.com/share/67b440eb-e474-8000-8461-cc56c56f929e">ChatGPT convo on tokens 2</a></p>
 </section>
 <section id="llm-vs-human-2025" class="slide level2 center">
 <h2>LLM vs human 2025</h2>
@@ -951,13 +1023,30 @@ Gábor Békés (CEU)
 <li>LLM also trained on scientific papers, books</li>
 <li>New methods to improve accuracy</li>
 <li>Solve scientific problems</li>
-<li>Reasoning models, like OpenAI o1 (o3 to come)</li>
+<li>Reasoning models, like OpenAI o1 (o3 in Updates)</li>
 </ul>
 </section></section>
 <section>
 <section id="ai-use-cases" class="title-slide slide level1 center">
 <h1>AI use cases</h1>
 
+</section>
+<section id="you-have-already-seen-many-use-cases" class="slide level2 center">
+<h2>You have already seen many use cases</h2>
+<p>Some more ideas</p>
+<ul>
+<li><a href="https://docs.anthropic.com/en/docs/about-claude/use-case-guides/overview">Anthropic’s list of use cases</a></li>
+<li><a href="https://cloud.google.com/use-cases/ai-data-analytics">Google’s analytics list</a></li>
+<li><a href="https://www.databricks.com/blog/data-ai-use-cases-worlds-leading-companies">Databricks broader AI Analytics list</a></li>
+</ul>
+<h3 id="economics-research">Economics research</h3>
+<ul>
+<li>Impact of AI on workers – <a href="https://datainnovation.org/2024/06/evidence-shows-productivity-benefits-of-ai/">paper collection (2024-06)</a></li>
+</ul>
+<h3 id="some-business">Some business</h3>
+<ul>
+<li><a href="https://blogs.thomsonreuters.com/en-us/innovation/legal-ai-benchmarking-evaluating-long-context-performance-for-llms/">Thomson Reuters legal</a></li>
+</ul>
 </section>
 <section id="ai-use-cases-student-response" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>AI Use Cases: Student response</h2>
@@ -1121,8 +1210,8 @@ AI aids in drafting, structuring, and refining academic writing, improving clari
 
 <img data-src="images/ai-college2.png" class="r-stretch"></section></section>
 <section>
-<section id="conclusions-and-discussion" class="title-slide slide level1 center">
-<h1>Conclusions and discussion</h1>
+<section id="updates" class="title-slide slide level1 center">
+<h1>Updates</h1>
 
 </section>
 <section id="many-llms-constant-evolution" class="slide level2 center">
@@ -1132,6 +1221,144 @@ AI aids in drafting, structuring, and refining academic writing, improving clari
 <li>2024 summer piece in <a href="https://www.economist.com/science-and-technology/2024/07/31/gpt-claude-llama-how-to-tell-which-ai-model-is-best">The Economist</a></li>
 <li>2025-02 <a href="https://www.oneusefulthing.org/p/which-ai-to-use-now-an-updated-opinionated">Which Ai by Ethan Mollick</a>, especially regarding <a href="https://www.oneusefulthing.org/i/155502334/executes-code-and-does-data-analysis">data analysis</a></li>
 </ul>
+</section>
+<section id="update" class="slide level2 center">
+<h2>2025-04-20 update</h2>
+<p>by ChatGPT o3</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 28%">
+<col style="width: 23%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th><strong>o3</strong> (reasoning‑first)</th>
+<th><strong>GPT‑4o</strong></th>
+<th><strong>GPT 4/4.5</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Design focus</td>
+<td>Built‑in <em>pre‑answer reasoning pass</em> → fewer hallucinations</td>
+<td>Multimodal, real‑time latency</td>
+<td>General‑purpose LLM; turbo = faster/cheaper</td>
+</tr>
+<tr class="even">
+<td>Multimodality</td>
+<td>Text + tool calls</td>
+<td>Text + images + audio (I/O)</td>
+<td>Text (+ images via plugins)</td>
+</tr>
+<tr class="odd">
+<td>Browsing / tools</td>
+<td>Auto‑search for up‑to‑date facts</td>
+<td>Optional; slower when invoked</td>
+<td>Optional</td>
+</tr>
+<tr class="even">
+<td>Default style</td>
+<td>Concise, source‑cited</td>
+<td>Chatty, demo‑friendly</td>
+<td>Flexible, slightly verbose</td>
+</tr>
+<tr class="odd">
+<td>Context window</td>
+<td>32k tokens</td>
+<td>128k tokens</td>
+<td>128k (turbo)</td>
+</tr>
+<tr class="even">
+<td>Strengths</td>
+<td>Step‑wise analysis, audit trail</td>
+<td>multimodal interaction</td>
+<td>Coding &amp; broad knowledge</td>
+</tr>
+<tr class="odd">
+<td>Weak spots</td>
+<td>No native media I/O</td>
+<td>May trade depth for speed</td>
+<td>Still hallucination‑prone</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-3-why-o3-is-especially-handy-for-dataanalysis-projects" class="slide level2 center">
+<h2>Slide&nbsp;3 — Why <em>o3</em> is especially handy for data‑analysis projects</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 43%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Phase</th>
+<th><strong>What o3 auto‑offers</strong></th>
+<th>GPT‑4o /4.5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data ingest</strong></td>
+<td>Reads user‑uploaded CSV / PDF, chooses <code>python</code> or <code>file_search</code> without extra prompting</td>
+<td>Explicit instructions (“Please read the file…”)</td>
+</tr>
+<tr class="even">
+<td><strong>Exploration / cleaning</strong></td>
+<td>Runs private <code>python</code> for stats, shows clean tables via <code>python_user_visible</code></td>
+<td>Manual code requests; reasoning sometimes mixed in output</td>
+</tr>
+<tr class="odd">
+<td><strong>Up‑to‑date context</strong></td>
+<td>Self‑initiates web searches when facts may be stale; cites inline</td>
+<td>User must ask to search; citation less disciplined</td>
+</tr>
+<tr class="even">
+<td><strong>Reproducibility</strong></td>
+<td>Separates <em>analysis</em> vs.&nbsp;<em>user‑visible</em> code ⇒ clear audit trail</td>
+<td>Code &amp; commentary often inter‑mingled</td>
+</tr>
+<tr class="odd">
+<td><strong>Output control</strong></td>
+<td>Defaults to concise bullets &amp; tables; respects Yap score</td>
+<td>Tends toward chattier prose unless steered</td>
+</tr>
+<tr class="even">
+<td><strong>Risk mgmt.</strong></td>
+<td>Built‑in step‑wise reasoning reduces logic slips in pipelines</td>
+<td>More vulnerable to silent errors without “think‑step” prompts</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-promise-of-o3" class="slide level2 center">
+<h2>The promise of o3</h2>
+<p>For data‑analysis projects (eg assignments, initial research), <em>o3</em> itself says it behaves like a careful analyst who</p>
+<ul>
+<li><ol type="a">
+<li>fetches the latest data,</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>runs silent tests, and</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>hands you neat, cited deliverables</li>
+</ol></li>
+</ul>
+<p>Leaving GPT‑4o for flashy multimodal demos and 4‑turbo for rapid code generation.</p>
+</section></section>
+<section>
+<section id="conclusions-and-discussion" class="title-slide slide level1 center">
+<h1>Conclusions and discussion</h1>
+
+</section>
+<section id="ai-is-widely-adopted-in-business" class="slide level2 center">
+<h2>AI is widely adopted in business</h2>
+<p><img data-src="images/mckinsey-2024.png"> Source: <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier">McKinsey Digital</a></p>
 </section>
 <section id="to-learn-more" class="slide level2 center">
 <h2>To learn more</h2>
@@ -1181,7 +1408,7 @@ AI aids in drafting, structuring, and refining academic writing, improving clari
 <p><a href="mailto:bekesg@ceu.edu">bekesg@ceu.edu</a></p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p>Gabors Data Analysis with AI - 2025-04-14 v0.4.1</p>
+<p>Gabors Data Analysis with AI - 2025-04-21 v0.4.3</p>
 </div>
 </div>
 </section></section>
