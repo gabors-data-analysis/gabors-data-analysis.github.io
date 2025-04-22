@@ -10,9 +10,9 @@
 <link href="da-w-ai-02-prompting_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="author" content="Gábor Békés">
-  <meta name="dcterms.date" content="2025-01-01">
-  <title>Data Analysis with AI: Prompting</title>
+  <meta name="author" content="Gábor Békés (CEU)">
+  <meta name="dcterms.date" content="2025-04-21">
+  <title>Data Analysis with AI 02: Prompting</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -322,24 +322,35 @@
       margin-right: 0; 
     }
   </style>
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/recharts@2.1.12/umd/Recharts.min.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Data Analysis with AI: Prompting</h1>
+  <h1 class="title">Data Analysis with AI 02: Prompting</h1>
   <p class="subtitle">Prompting for Data Analysis</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Gábor Békés 
+Gábor Békés (CEU) 
 </div>
 </div>
 </div>
 
-  <p class="date">2025-01-01</p>
+  <p class="date">2025-04-21</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Contents</h2>
+<ul>
+<li><a href="#/prompting-strategies" id="/toc-prompting-strategies">Prompting strategies</a></li>
+<li><a href="#/update-what-is-new-in-2025-2025-04-21" id="/toc-update-what-is-new-in-2025-2025-04-21">Update: What is new in 2025 (2025-04-21)</a></li>
+</ul>
+</nav>
 </section>
 <section>
 <section id="prompting-strategies" class="title-slide slide level1 center">
@@ -464,13 +475,6 @@ Gábor Békés
 </ul>
 </div></div>
 </section>
-<section id="provide-references-a-comment" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>2. Provide References: A comment</h2>
-<ul>
-<li>2025-02 vs 2024-07: Improved</li>
-<li>Increased context window and reduced hallucinations made this much better</li>
-</ul>
-</section>
 <section id="break-complex-tasks" class="slide level2 center" data-background-color="#f8f9fa">
 <h2>3. Break Complex Tasks</h2>
 <div class="columns">
@@ -567,9 +571,67 @@ Gábor Békés
 <li>Sensitivity analysis</li>
 </ul>
 </div></div>
+</section></section>
+<section>
+<section id="update-what-is-new-in-2025-2025-04-21" class="title-slide slide level1 center">
+<h1>Update: What is new in 2025 (2025-04-21)</h1>
+
+</section>
+<section id="provide-references-a-comment" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Provide References: A comment</h2>
+<ul>
+<li>2025-02 vs 2024-07: Improved</li>
+<li>Increased context window and reduced hallucinations made this much better</li>
+</ul>
+</section>
+<section id="agentic-models" class="slide level2 center">
+<h2>Agentic models</h2>
+<ul>
+<li>Various models “collaborate” and offer feedback</li>
+<li>can do more alone</li>
+</ul>
+</section>
+<section id="reasning-models-open-ai-chatgpt-o3-prompting-tips" class="slide level2 center">
+<h2>Reasning model’s (open ai chatgpt o3) Prompting tips</h2>
+<h3 id="gpt-o3">GPT o3</h3>
+<ul>
+<li>State <strong>objective + output format</strong> once; reasoning is automatic.<br>
+</li>
+<li>Less need for “think step‑by‑step” hacks.<br>
+</li>
+<li>Ask explicitly for citations / brevity / tables if required.</li>
+</ul>
+<p>vs</p>
+<h3 id="gpt-4.5">GPT 4.5</h3>
+<ul>
+<li>Classic “let’s think step‑by‑step” improves depth.<br>
+</li>
+<li>Break large tasks into numbered subtasks to stay within context.<br>
+</li>
+<li>Be explicit: “Give only runnable Python; no commentary” to control style.</li>
+</ul>
+</section>
+<section id="agentic-coding-claude" class="slide level2 center">
+<h2>Agentic coding – Claude</h2>
+<ul>
+<li>Claude Code is a command line tool for agentic coding <a href="https://www.anthropic.com/engineering/claude-code-best-practices">Code Best Practices</a> by Anthropic</li>
+</ul>
+</section>
+<section id="should-we-say-thank-you" class="slide level2 center">
+<h2>Should we say thank you?</h2>
+
+<img data-src="images/altman-please-2025-04-20.jpg" class="r-stretch"></section>
+<section id="should-we-say-thank-you-1" class="slide level2 center">
+<h2>Should we say thank you?</h2>
+
+<img data-src="images/robot-war-save-thank-you-cartoon-2025.jpeg" class="r-stretch"></section>
+<section id="date-stamp" class="slide level2 center">
+<h2>Date stamp</h2>
+<p>This version: 2025-04-21 (minor edits from v0.1.2)</p>
+<p><a href="mailto:bekesg@ceu.edu">bekesg@ceu.edu</a></p>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p>Data Analysis with AI - 2025</p>
+<p>Gabors Data Analysis with AI – Prompting – 2025-04-21 v0.3.1</p>
 </div>
 </div>
 </section></section>
