@@ -1,0 +1,375 @@
+/*-- scss:defaults --*/
+
+// GitHub-inspired color variables
+$gh-dark: #0d1117;
+$gh-dark-gray: #161b22;
+$gh-medium-gray: #30363d;
+$gh-light-gray: #8b949e;
+$gh-white: #f0f6fc;
+$gh-blue: #58a6ff;
+$gh-green: #3fb950;
+$gh-red: #f85149;
+$gh-purple: #8957e5;
+$gh-yellow: #e3b341;
+$gh-orange: #ec6547;
+$gh-pink: #db61a2;
+
+// Base variables
+$body-bg: $gh-dark;
+$body-color: $gh-white;
+$link-color: $gh-blue;
+$presentation-heading-color: $gh-white;
+
+// Fonts
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+$font-family-monospace: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+$presentation-heading-font: $font-family-sans-serif;
+
+// Code blocks
+$code-block-bg: $gh-dark-gray;
+$code-block-border-color: $gh-medium-gray;
+
+// Reveal theme settings
+$presentation-heading-font: $font-family-sans-serif;
+$presentation-heading-font-weight: 600;
+$presentation-h1-font-size: 2.5em;
+$presentation-h2-font-size: 1.6em;
+$presentation-h3-font-size: 1.3em;
+$presentation-block-margin: 12px;
+$presentation-slide-text-align: left;
+
+/*-- scss:rules --*/
+
+// Global Styles
+.reveal {
+  font-family: $font-family-sans-serif;
+  background-color: $gh-dark;
+}
+
+.reveal .slide-background {
+  background-color: $gh-dark;
+}
+
+.reveal .slide-number {
+  background-color: $gh-dark-gray;
+  color: $gh-blue;
+  font-family: $font-family-monospace;
+  font-size: 0.8em;
+  border-radius: 4px;
+  padding: 0.3em 0.6em;
+  right: 10px;
+  bottom: 10px;
+}
+
+.reveal .progress {
+  color: $gh-blue;
+}
+
+// Title Slide
+.reveal .slide.title-slide {
+  background: linear-gradient(135deg, $gh-dark 0%, $gh-dark-gray 100%);
+}
+
+.title-slide h1 {
+  font-size: 3.5em;
+  font-weight: 700;
+  color: $gh-white;
+  margin-bottom: 0.2em;
+}
+
+.title-slide h2 {
+  font-size: 1.8em;
+  color: $gh-light-gray;
+  margin-bottom: 1em;
+}
+
+.title-slide h3 {
+  font-size: 1.2em;
+  color: $gh-blue;
+}
+
+// Section Title Slides
+.section-title-slide {
+  background-color: $gh-dark-gray !important;
+  text-align: center !important;
+}
+
+.section-title-slide h1 {
+  font-size: 3em;
+  color: $gh-blue;
+  text-align: center;
+}
+
+// Code blocks
+.reveal pre {
+  background-color: $gh-dark-gray;
+  border-radius: 6px;
+  border: 1px solid $gh-medium-gray;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 0.8em;
+}
+
+.reveal pre code {
+  font-family: $font-family-monospace;
+  font-size: 0.8em;
+}
+
+// Lists
+.reveal ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.reveal ul li {
+  margin-bottom: 0.8em;
+  position: relative;
+  padding-left: 2em;
+}
+
+.reveal ul li::before {
+  content: "•";
+  color: $gh-blue;
+  font-size: 1.2em;
+  position: absolute;
+  left: 0.5em;
+}
+
+// Nested lists
+.reveal ul ul {
+  margin-top: 0.5em;
+  margin-left: 0;
+}
+
+.reveal ul ul li::before {
+  content: "◦";
+  color: $gh-green;
+}
+
+// Highlighted text
+.highlight {
+  color: $gh-blue;
+  font-weight: 600;
+}
+
+.highlight-green {
+  color: $gh-green;
+  font-weight: 600;
+}
+
+.highlight-red {
+  color: $gh-red;
+  font-weight: 600;
+}
+
+// Code-style text
+.code {
+  font-family: $font-family-monospace;
+  background-color: $gh-dark-gray;
+  color: $gh-white;
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+// GitHub Card styling
+.gh-card {
+  background-color: $gh-dark-gray;
+  border: 1px solid $gh-medium-gray;
+  border-radius: 6px;
+  padding: 1em;
+  margin: 1em 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.gh-card-title {
+  font-weight: 600;
+  color: $gh-blue;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid $gh-medium-gray;
+  padding-bottom: 0.5em;
+}
+
+// Special feature - PR style diffs
+.gh-diff {
+  background-color: $gh-dark-gray;
+  border-radius: 6px;
+  padding: 0.8em;
+  font-family: $font-family-monospace;
+  font-size: 0.8em;
+  margin: 1em 0;
+}
+
+.gh-diff-add {
+  background-color: rgba(46, 160, 67, 0.15);
+  color: $gh-green;
+}
+
+.gh-diff-del {
+  background-color: rgba(248, 81, 73, 0.15);
+  color: $gh-red;
+}
+
+// TL;DR boxes
+.tldr {
+  background-color: rgba(88, 166, 255, 0.1);
+  border-left: 3px solid $gh-blue;
+  padding: 0.8em;
+  margin: 1em 0;
+  border-radius: 0 6px 6px 0;
+}
+
+.tldr::before {
+  content: "TL;DR";
+  font-weight: 600;
+  color: $gh-blue;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+// Footer styling
+.footer {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 0.7em;
+  color: $gh-light-gray;
+}
+
+// GitHub logo in corner
+.github-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+// Variable relation styling
+.variable-relation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+.variable {
+  font-family: $font-family-monospace;
+  font-size: 1.2em;
+  font-weight: 600;
+  background-color: $gh-dark-gray;
+  color: $gh-blue;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  margin: 0 0.5em;
+}
+
+.relation-arrow {
+  color: $gh-light-gray;
+  font-size: 1.5em;
+  margin: 0 0.3em;
+}
+
+// Special emphasis
+.important {
+  font-weight: 600;
+  color: $gh-yellow;
+}
+
+.caution {
+  font-weight: 600;
+  color: $gh-orange;
+}
+
+// Quote styling
+blockquote {
+  border-left: 3px solid $gh-blue;
+  background-color: $gh-dark-gray;
+  padding: 0.8em 1em;
+  font-style: italic;
+  margin: 1em 0;
+  border-radius: 0 6px 6px 0;
+}
+
+// Applied math formula styling
+.formula {
+  font-family: $font-family-monospace;
+  background-color: rgba(88, 166, 255, 0.1);
+  padding: 0.8em;
+  text-align: center;
+  margin: 1em 0;
+  border-radius: 6px;
+}
+
+// Image styling
+.reveal img {
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 85%;
+  height: auto;
+}
+
+// Custom classes for layout
+.columns {
+  display: flex;
+  margin-top: 2em;
+}
+
+.col {
+  flex: 1;
+  padding: 0 1em;
+}
+
+// GitHub-style issue badge
+.badge {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  font-size: 0.8em;
+  font-weight: 600;
+  border-radius: 2em;
+  margin-right: 0.5em;
+}
+
+.badge-blue {
+  background-color: $gh-blue;
+  color: $gh-dark;
+}
+
+.badge-green {
+  background-color: $gh-green;
+  color: $gh-dark;
+}
+
+.badge-purple {
+  background-color: $gh-purple;
+  color: $gh-white;
+}
+
+// Variable highlight styles
+.x-var {
+  color: $gh-blue;
+  font-weight: 600;
+}
+
+.y-var {
+  color: $gh-green;
+  font-weight: 600;
+}
+
+.f-var {
+  color: $gh-purple;
+  font-weight: 600;
+}
+
+.i-var {
+  color: $gh-yellow;
+  font-weight: 600;
+}
+
+.n-var {
+  color: $gh-orange;
+  font-weight: 600;
+}
+
+.z-var {
+  color: $gh-pink;
+  font-weight: 600;
+}
