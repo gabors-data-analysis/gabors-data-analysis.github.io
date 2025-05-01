@@ -1,0 +1,162 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="320" fill="#161b22" rx="8" ry="8"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" fill="#f0f6fc" font-size="18" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Dataset Size (N)</text>
+  
+  <!-- Dataset size comparison -->
+  <g>
+    <!-- Small dataset -->
+    <rect x="40" y="60" width="100" height="100" rx="6" fill="#30363d" stroke="#8b949e" stroke-width="1"/>
+    <text x="90" y="80" fill="#f0f6fc" font-size="14" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Small N</text>
+    
+    <!-- Data points -->
+    <g fill="#58a6ff">
+      <circle cx="60" cy="100" r="3"/>
+      <circle cx="80" cy="120" r="3"/>
+      <circle cx="100" cy="90" r="3"/>
+      <circle cx="70" cy="140" r="3"/>
+      <circle cx="120" cy="110" r="3"/>
+      <circle cx="65" cy="95" r="3"/>
+      <circle cx="85" cy="105" r="3"/>
+      <circle cx="105" cy="125" r="3"/>
+      <circle cx="75" cy="135" r="3"/>
+      <circle cx="95" cy="105" r="3"/>
+      <circle cx="115" cy="95" r="3"/>
+      <circle cx="55" cy="115" r="3"/>
+      <circle cx="75" cy="125" r="3"/>
+      <circle cx="95" cy="105" r="3"/>
+      <circle cx="115" cy="115" r="3"/>
+    </g>
+    
+    <text x="90" y="170" fill="#8b949e" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">N = 100</text>
+    
+    <!-- Medium dataset -->
+    <rect x="150" y="60" width="100" height="100" rx="6" fill="#30363d" stroke="#8b949e" stroke-width="1"/>
+    <text x="200" y="80" fill="#f0f6fc" font-size="14" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Medium N</text>
+    
+    <!-- Axes for scatterplot -->
+    <line x1="160" y1="140" x2="240" y2="140" stroke="#8b949e" stroke-width="0.8"/>
+    <line x1="160" y1="140" x2="160" y2="90" stroke="#8b949e" stroke-width="0.8"/>
+    
+    <!-- Scatterplot with positive relationship -->
+    <g fill="#58a6ff" opacity="0.8">
+      <!-- Points showing positive correlation -->
+      <circle cx="163" cy="135" r="1.5" />
+      <circle cx="166" cy="133" r="1.5" />
+      <circle cx="167" cy="137" r="1.5" />
+      <circle cx="169" cy="132" r="1.5" />
+      <circle cx="171" cy="134" r="1.5" />
+      <circle cx="172" cy="130" r="1.5" />
+      <circle cx="173" cy="131" r="1.5" />
+      <circle cx="175" cy="134" r="1.5" />
+      <circle cx="176" cy="128" r="1.5" />
+      <circle cx="178" cy="129" r="1.5" />
+      <circle cx="180" cy="133" r="1.5" />
+      <circle cx="181" cy="127" r="1.5" />
+      <circle cx="183" cy="126" r="1.5" />
+      <circle cx="184" cy="124" r="1.5" />
+      <circle cx="185" cy="129" r="1.5" />
+      <circle cx="186" cy="122" r="1.5" />
+      <circle cx="188" cy="127" r="1.5" />
+      <circle cx="190" cy="123" r="1.5" />
+      <circle cx="192" cy="125" r="1.5" />
+      <circle cx="194" cy="120" r="1.5" />
+      <circle cx="196" cy="122" r="1.5" />
+      <circle cx="197" cy="118" r="1.5" />
+      <circle cx="198" cy="123" r="1.5" />
+      <circle cx="200" cy="119" r="1.5" />
+      <circle cx="201" cy="116" r="1.5" />
+      <circle cx="203" cy="120" r="1.5" />
+      <circle cx="205" cy="114" r="1.5" />
+      <circle cx="207" cy="117" r="1.5" />
+      <circle cx="208" cy="112" r="1.5" />
+      <circle cx="210" cy="116" r="1.5" />
+      <circle cx="212" cy="113" r="1.5" />
+      <circle cx="213" cy="109" r="1.5" />
+      <circle cx="215" cy="112" r="1.5" />
+      <circle cx="216" cy="107" r="1.5" />
+      <circle cx="218" cy="110" r="1.5" />
+      <circle cx="220" cy="105" r="1.5" />
+      <circle cx="221" cy="108" r="1.5" />
+      <circle cx="223" cy="103" r="1.5" />
+      <circle cx="224" cy="106" r="1.5" />
+      <circle cx="226" cy="102" r="1.5" />
+      <circle cx="228" cy="104" r="1.5" />
+      <circle cx="229" cy="100" r="1.5" />
+      <circle cx="231" cy="101" r="1.5" />
+      <circle cx="232" cy="97" r="1.5" />
+      <circle cx="233" cy="99" r="1.5" />
+      <circle cx="235" cy="95" r="1.5" />
+      <circle cx="236" cy="98" r="1.5" />
+      <circle cx="238" cy="94" r="1.5" />
+    </g>
+    
+    
+    
+    <text x="200" y="170" fill="#8b949e" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">N = 10,000</text>
+    
+    <!-- Large dataset -->
+    <rect x="260" y="60" width="100" height="100" rx="6" fill="#30363d" stroke="#8b949e" stroke-width="1"/>
+    <text x="310" y="80" fill="#f0f6fc" font-size="14" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Big N</text>
+    
+    <!-- Dense data visualization -->
+    <g>
+      <rect x="275" y="95" width="70" height="40" fill="#58a6ff" opacity="0.8" rx="3"/>
+      <text x="310" y="120" fill="#f0f6fc" font-size="10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Very dense</text>
+    </g>
+    
+    <text x="310" y="170" fill="#8b949e" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">N = 1,000,000</text>
+  </g>
+  
+  <!-- Benefits visualization -->
+  <g>
+    <!-- Prediction benefit -->
+    <rect x="40" y="190" width="150" height="110" rx="6" fill="#30363d" stroke="#8957e5" stroke-width="2"/>
+    <text x="115" y="210" fill="#8957e5" font-size="14" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Prediction</text>
+    
+    <!-- Y-axis label -->
+    <text x="55" y="250" fill="#8b949e" font-size="10" text-anchor="middle" transform="rotate(-90, 55, 250)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Precision</text>
+    
+    <!-- Axis line -->
+    <line x1="60" y1="275" x2="145" y2="275" stroke="#8b949e" stroke-width="1"/>
+    <line x1="60" y1="275" x2="60" y2="225" stroke="#8b949e" stroke-width="1"/>
+    
+    <!-- Model accuracy visualization -->
+    <rect x="65" y="255" width="25" height="20" fill="#8957e5" opacity="0.3" rx="2"/>
+    <rect x="95" y="245" width="25" height="30" fill="#8957e5" opacity="0.5" rx="2"/>
+    <rect x="125" y="225" width="25" height="50" fill="#8957e5" opacity="0.8" rx="2"/>
+    
+    <text x="77" y="290" fill="#8b949e" font-size="9" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Small</text>
+    <text x="107" y="290" fill="#8b949e" font-size="9" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Medium</text>
+    <text x="137" y="290" fill="#8b949e" font-size="9" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Big</text>
+    
+    <!-- Causality benefit -->
+    <rect x="210" y="190" width="150" height="110" rx="6" fill="#30363d" stroke="#e3b341" stroke-width="2"/>
+    <text x="285" y="210" fill="#e3b341" font-size="14" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Causality</text>
+    
+    <!-- Y-axis label -->
+    <text x="225" y="250" fill="#8b949e" font-size="10" text-anchor="middle" transform="rotate(-90, 225, 250)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Uncertainty</text>
+    
+    <!-- Axis line -->
+    <line x1="230" y1="275" x2="315" y2="275" stroke="#8b949e" stroke-width="1"/>
+    <line x1="230" y1="275" x2="230" y2="225" stroke="#8b949e" stroke-width="1"/>
+    
+    <!-- Confidence interval visualization -->
+    <g>
+      <!-- Small N (high uncertainty) -->
+      <rect x="235" y="225" width="25" height="50" fill="#e3b341" opacity="0.8" rx="2"/>
+      
+      <!-- Medium N (medium uncertainty) -->
+      <rect x="265" y="240" width="25" height="35" fill="#e3b341" opacity="0.5" rx="2"/>
+      
+      <!-- Big N (low uncertainty) -->
+      <rect x="295" y="260" width="25" height="15" fill="#e3b341" opacity="0.3" rx="2"/>
+    </g>
+    
+    <text x="247" y="290" fill="#8b949e" font-size="9" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Small</text>
+    <text x="277" y="290" fill="#8b949e" font-size="9" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Medium</text>
+    <text x="307" y="290" fill="#8b949e" font-size="9" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Big</text>
+  </g>
+</svg>

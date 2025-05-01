@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 300" width="800" height="300">
+  <!-- Background -->
+  <rect width="800" height="300" fill="#f8f9fa"/>
+  
+  <!-- Context Window Box -->
+  <rect x="50" y="50" width="700" height="200" rx="10" fill="none" stroke="#440154" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="60" y="40" font-family="Arial, sans-serif" font-size="16" fill="#440154">Context Window (e.g., 4096 tokens)</text>
+  
+  <!-- Previous Context -->
+  <rect x="70" y="70" width="200" height="160" rx="5" fill="#3b528b" opacity="0.8"/>
+  <text x="170" y="150" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Previous Context</text>
+  
+  <!-- Current Focus -->
+  <rect x="290" y="70" width="200" height="160" rx="5" fill="#21918c"/>
+  <text x="390" y="150" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Current Focus</text>
+  
+  <!-- Next Prediction -->
+  <rect x="510" y="70" width="200" height="160" rx="5" fill="#5ec962" opacity="0.8"/>
+  <text x="610" y="150" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">Next Prediction</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="320" fill="#161b22" rx="8" ry="8"/>
+  
+  <!-- Pipeline diagram -->
+  <g>
+    <!-- Training data -->
+    <rect x="40" y="80" width="100" height="70" fill="#30363d" stroke="#58a6ff" stroke-width="2" rx="6"/>
+    <text x="90" y="115" fill="#f0f6fc" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Training Data</text>
+    <text x="90" y="135" fill="#8b949e" font-size="10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">(x and y known)</text>
+    
+    <!-- Model building -->
+    <rect x="150" y="80" width="100" height="70" fill="#30363d" stroke="#8957e5" stroke-width="2" rx="6"/>
+    <text x="200" y="115" fill="#f0f6fc" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Model Building</text>
+    <text x="200" y="135" fill="#8b949e" font-size="10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">(select best model)</text>
+    
+    <!-- Future/live data -->
+    <rect x="260" y="80" width="100" height="70" fill="#30363d" stroke="#3fb950" stroke-width="2" rx="6"/>
+    <text x="310" y="115" fill="#f0f6fc" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Live Data</text>
+    <text x="310" y="135" fill="#8b949e" font-size="10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">(predict y from x)</text>
+    
+    <!-- Flow arrows -->
+    <line x1="140" y1="115" x2="150" y2="115" stroke="#f0f6fc" stroke-width="2"/>
+    <polygon points="150,115 145,110 145,120" fill="#f0f6fc"/>
+    
+    <line x1="250" y1="115" x2="260" y2="115" stroke="#f0f6fc" stroke-width="2"/>
+    <polygon points="260,115 255,110 255,120" fill="#f0f6fc"/>
+  </g>
+  
+  <!-- Time indicator -->
+  <g>
+    <line x1="40" y1="170" x2="360" y2="170" stroke="#8b949e" stroke-width="1"/>
+    <polygon points="360,170 355,165 355,175" fill="#8b949e"/>
+    <text x="200" y="185" fill="#8b949e" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Time</text>
+  </g>
+  
+  <!-- Data comparison -->
+  <g>
+    <!-- Training data viz -->
+    <rect x="60" y="210" width="120" height="90" fill="#30363d" stroke="#8b949e" stroke-width="1" rx="4"/>
+    
+    <text x="120" y="225" fill="#58a6ff" font-size="10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="bold">Training Data</text>
+    
+    <line x1="80" y1="245" x2="160" y2="245" stroke="#8b949e" stroke-width="1"/>
+    <line x1="80" y1="245" x2="80" y2="285" stroke="#8b949e" stroke-width="1"/>
+    
+    <circle cx="95" cy="275" r="3" fill="#58a6ff"/>
+    <circle cx="110" cy="265" r="3" fill="#58a6ff"/>
+    <circle cx="125" cy="255" r="3" fill="#58a6ff"/>
+    <circle cx="140" cy="270" r="3" fill="#58a6ff"/>
+    
+    <path d="M 80,275 C 95,275 110,255 160,255" stroke="#8957e5" stroke-width="1" fill="none"/>
+    
+    <text x="120" y="300" fill="#f0f6fc" font-size="10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">x and y known</text>
+    
+    <!-- Future data viz -->
+    <rect x="220" y="210" width="120" height="90" fill="#30363d" stroke="#8b949e" stroke-width="1" rx="4"/>
+    
+    <text x="280" y="225" fill="#3fb950" font-size="10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="bold">Live Data</text>
+    
+    <line x1="240" y1="245" x2="320" y2="245" stroke="#8b949e" stroke-width="1"/>
+    <line x1="240" y1="245" x2="240" y2="285" stroke="#8b949e" stroke-width="1"/>
+    
+    <circle cx="255" cy="275" r="3" fill="#3fb950"/>
+    <circle cx="270" cy="265" r="3" fill="#3fb950"/>
+    <circle cx="285" cy="255" r="3" fill="#3fb950"/>
+    <circle cx="300" cy="270" r="3" fill="#3fb950"/>
+    
+    <line x1="285" y1="255" x2="285" y2="245" stroke="#f85149" stroke-width="1" stroke-dasharray="2,1"/>
+    <text x="285" y="240" fill="#f85149" font-size="10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">?</text>
+    
+    <text x="280" y="300" fill="#f0f6fc" font-size="10" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">x known, y predicted</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="30" fill="#f0f6fc" font-size="18" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Prediction Setup</text>
+  <text x="200" y="50" fill="#8b949e" font-size="14" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Modeling for the future</text>
+</svg>

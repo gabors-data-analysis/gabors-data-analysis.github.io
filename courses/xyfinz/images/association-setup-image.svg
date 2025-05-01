@@ -1,0 +1,74 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="320" fill="#161b22" rx="8" ry="8"/>
+  
+  <!-- Association diagram -->
+  <g>
+    <!-- Data table representation -->
+    <rect x="70" y="60" width="260" height="150" fill="#30363d" stroke="#8b949e" stroke-width="1" rx="4"/>
+    
+    <!-- Column headers -->
+    <rect x="70" y="60" width="260" height="30" fill="#0d1117" stroke="#8b949e" stroke-width="1" rx="4"/>
+    <text x="120" y="80" fill="#58a6ff" font-size="14" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="bold">x</text>
+    <text x="200" y="80" fill="#3fb950" font-size="14" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="bold">y</text>
+    <text x="280" y="80" fill="#8b949e" font-size="14" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="bold">Other vars</text>
+    
+    <!-- Row dividers -->
+    <line x1="70" y1="90" x2="330" y2="90" stroke="#8b949e" stroke-width="1"/>
+    <line x1="70" y1="120" x2="330" y2="120" stroke="#8b949e" stroke-width="1"/>
+    <line x1="70" y1="150" x2="330" y2="150" stroke="#8b949e" stroke-width="1"/>
+    <line x1="70" y1="180" x2="330" y2="180" stroke="#8b949e" stroke-width="1"/>
+    
+    <!-- Column dividers -->
+    <line x1="150" y1="60" x2="150" y2="210" stroke="#8b949e" stroke-width="1"/>
+    <line x1="250" y1="60" x2="250" y2="210" stroke="#8b949e" stroke-width="1"/>
+    
+    <!-- Sample data (stylized) -->
+    <text x="120" y="110" fill="#58a6ff" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">10</text>
+    <text x="200" y="110" fill="#3fb950" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">120</text>
+    
+    <text x="120" y="140" fill="#58a6ff" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">25</text>
+    <text x="200" y="140" fill="#3fb950" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">190</text>
+    
+    <text x="120" y="170" fill="#58a6ff" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">40</text>
+    <text x="200" y="170" fill="#3fb950" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">265</text>
+    
+    <text x="120" y="200" fill="#58a6ff" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">55</text>
+    <text x="200" y="200" fill="#3fb950" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">310</text>
+  </g>
+  
+  <!-- Simple scatter plot -->
+  <g>
+    <!-- Axes -->
+    <line x1="120" y1="260" x2="280" y2="260" stroke="#8b949e" stroke-width="1"/>
+    <line x1="120" y1="260" x2="120" y2="220" stroke="#8b949e" stroke-width="1"/>
+    
+    <!-- Points from the table -->
+    <circle cx="140" cy="255" r="4" fill="#f0f6fc" stroke="#58a6ff" stroke-width="1"/>
+    <circle cx="180" cy="245" r="4" fill="#f0f6fc" stroke="#58a6ff" stroke-width="1"/>
+    <circle cx="220" cy="235" r="4" fill="#f0f6fc" stroke="#58a6ff" stroke-width="1"/>
+    <circle cx="260" cy="225" r="4" fill="#f0f6fc" stroke="#58a6ff" stroke-width="1"/>
+    
+    <!-- Fit line -->
+    <line x1="120" y1="260" x2="280" y2="220" stroke="#3fb950" stroke-width="2" stroke-dasharray="4,2"/>
+  </g>
+  
+  <!-- Process indicators -->
+  <g>
+    <!-- From data to analysis flow -->
+    <path d="M 200,210 L 200,220" stroke="#8957e5" stroke-width="2" stroke-dasharray="4,2"/>
+    <polygon points="200,220 195,215 205,215" fill="#8957e5"/>
+  </g>
+  
+  <!-- Labels -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="200" y="30" fill="#f0f6fc" font-size="18" font-weight="bold">Association Analysis</text>
+    <text x="200" y="280" fill="#8b949e" font-size="14">Understanding patterns in data</text>
+    <text x="200" y="300" fill="#8b949e" font-size="14">First step in any analysis</text>
+  </g>
+  
+  <!-- Method indicators -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="350" y="140" fill="#8957e5" font-size="12" text-anchor="start" transform="rotate(90, 350, 140)">Compare conditional means</text>
+  </g>
+</svg>

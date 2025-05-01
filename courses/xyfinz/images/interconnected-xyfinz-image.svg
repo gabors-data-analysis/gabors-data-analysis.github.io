@@ -1,0 +1,70 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="320" fill="#161b22" rx="8" ry="8"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" fill="#f0f6fc" font-size="18" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Interconnected Components</text>
+  
+  <!-- Central hub - all elements connected -->
+  <g>
+    <!-- Individual elements in a circular arrangement -->
+    <!-- x variable -->
+    <circle cx="200" cy="90" r="25" fill="#30363d" stroke="#58a6ff" stroke-width="2"/>
+    <text x="200" y="95" fill="#58a6ff" font-size="16" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">x</text>
+    
+    <!-- y variable -->
+    <circle cx="290" cy="130" r="25" fill="#30363d" stroke="#3fb950" stroke-width="2"/>
+    <text x="290" y="135" fill="#3fb950" font-size="16" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">y</text>
+    
+    <!-- f function -->
+    <circle cx="290" cy="210" r="25" fill="#30363d" stroke="#8957e5" stroke-width="2"/>
+    <text x="290" y="215" fill="#8957e5" font-size="16" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">f</text>
+    
+    <!-- i observation -->
+    <circle cx="200" cy="250" r="25" fill="#30363d" stroke="#db61a2" stroke-width="2"/>
+    <text x="200" y="255" fill="#db61a2" font-size="16" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">i</text>
+    
+    <!-- N dataset size -->
+    <circle cx="110" cy="210" r="25" fill="#30363d" stroke="#e3b341" stroke-width="2"/>
+    <text x="110" y="215" fill="#e3b341" font-size="16" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">N</text>
+    
+    <!-- z confounders -->
+    <circle cx="110" cy="130" r="25" fill="#30363d" stroke="#f85149" stroke-width="2"/>
+    <text x="110" y="135" fill="#f85149" font-size="16" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">z</text>
+  </g>
+  
+  <!-- Connection lines -->
+  <g stroke-width="2" stroke-linecap="round">
+    <!-- Key relationships highlighted -->
+    <line x1="200" y1="115" x2="275" y2="130" stroke="#58a6ff" stroke-dasharray="5,3"/>
+    <line x1="290" y1="155" x2="290" y2="185" stroke="#3fb950" stroke-dasharray="5,3"/>
+    <line x1="265" y1="210" x2="225" y2="240" stroke="#8957e5" stroke-dasharray="5,3"/>
+    <line x1="175" y1="240" x2="130" y2="215" stroke="#db61a2" stroke-dasharray="5,3"/>
+    <line x1="110" y1="185" x2="110" y2="155" stroke="#e3b341" stroke-dasharray="5,3"/>
+    <line x1="130" y1="130" x2="175" y2="100" stroke="#f85149" stroke-dasharray="5,3"/>
+    
+    <!-- All other connections (thinner, less prominent) -->
+    <line x1="220" y1="100" x2="275" y2="195" stroke="#8b949e" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="135" y1="130" x2="265" y2="130" stroke="#8b949e" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="130" y1="190" x2="175" y2="230" stroke="#8b949e" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="200" y1="225" x2="200" y2="115" stroke="#8b949e" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="275" y1="220" x2="135" y2="150" stroke="#8b949e" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="110" y1="155" x2="265" y2="225" stroke="#8b949e" stroke-width="1" stroke-dasharray="3,3"/>
+  </g>
+  
+  <!-- Key relationships text -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle" font-size="10">
+    <text x="240" y="110" fill="#58a6ff">x→y relationship</text>
+    <text x="300" y="170" fill="#3fb950">y modeled by f</text>
+    <text x="250" y="230" fill="#8957e5">f needs observations</text>
+    <text x="150" y="235" fill="#db61a2">i determines N</text>
+    <text x="100" y="170" fill="#e3b341">N affects detection of z</text>
+    <text x="150" y="110" fill="#f85149">z confounds x</text>
+  </g>
+  
+  <!-- Legend at bottom -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" text-anchor="start">
+    <text x="150" y="290" fill="#f0f6fc" font-weight="bold">All elements are interconnected</text>
+    <text x="150" y="305" fill="#8b949e">Changes to one affect all others</text>
+  </g>
+</svg>

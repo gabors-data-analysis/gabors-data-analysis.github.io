@@ -1,0 +1,73 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="320" fill="#161b22" rx="8" ry="8"/>
+  
+  <!-- Stylized causal diagram -->
+  <g>
+    <!-- Intervention/control split -->
+    <rect x="80" y="70" width="100" height="60" rx="8" fill="#30363d" stroke="#db61a2" stroke-width="2"/>
+    <text x="130" y="105" fill="#f0f6fc" font-size="16" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">x = 0</text>
+    
+    <rect x="220" y="70" width="100" height="60" rx="8" fill="#30363d" stroke="#db61a2" stroke-width="2"/>
+    <text x="270" y="105" fill="#f0f6fc" font-size="16" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">x = 1</text>
+    
+    <!-- Group outcomes -->
+    <rect x="60" y="180" width="140" height="90" rx="8" fill="#30363d" stroke="#58a6ff" stroke-width="2"/>
+    <rect x="200" y="180" width="140" height="90" rx="8" fill="#30363d" stroke="#58a6ff" stroke-width="2"/>
+    
+    <!-- Causal arrows -->
+    <line x1="130" y1="130" x2="130" y2="180" stroke="#e3b341" stroke-width="3"/>
+    <polygon points="130,180 125,170 135,170" fill="#e3b341"/>
+    
+    <line x1="270" y1="130" x2="270" y2="180" stroke="#e3b341" stroke-width="3"/>
+    <polygon points="270,180 265,170 275,170" fill="#e3b341"/>
+    
+    <!-- Strong causal arrow from intervention to difference -->
+    <path d="M 200,100 C 250,100 250,225 200,225" stroke="#f85149" stroke-width="3" fill="none" stroke-dasharray="7,3"/>
+    <polygon points="200,225 210,220 210,230" fill="#f85149"/>
+  </g>
+  
+  <!-- Outcome points in each group -->
+  <g>
+    <!-- Control outcomes -->
+    <circle cx="90" cy="210" r="5" fill="#58a6ff"/>
+    <circle cx="110" cy="230" r="5" fill="#58a6ff"/>
+    <circle cx="130" cy="190" r="5" fill="#58a6ff"/>
+    <circle cx="150" cy="220" r="5" fill="#58a6ff"/>
+    <circle cx="170" cy="200" r="5" fill="#58a6ff"/>
+    
+    <!-- Treatment outcomes -->
+    <circle cx="230" cy="190" r="5" fill="#3fb950"/>
+    <circle cx="250" cy="210" r="5" fill="#3fb950"/>
+    <circle cx="270" cy="170" r="5" fill="#3fb950"/>
+    <circle cx="290" cy="200" r="5" fill="#3fb950"/>
+    <circle cx="310" cy="180" r="5" fill="#3fb950"/>
+  </g>
+  
+  <!-- Mean indicators -->
+  <line x1="130" y1="210" x2="130" y2="210" stroke="#f0f6fc" stroke-width="2"/>
+  <line x1="110" y1="210" x2="150" y2="210" stroke="#f0f6fc" stroke-width="2"/>
+  
+  <line x1="270" y1="190" x2="270" y2="190" stroke="#f0f6fc" stroke-width="2"/>
+  <line x1="250" y1="190" x2="290" y2="190" stroke="#f0f6fc" stroke-width="2"/>
+  
+  <!-- Difference highlight -->
+  <line x1="200" y1="210" x2="200" y2="190" stroke="#f85149" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="200" y="228" fill="#f85149" font-size="14" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Causal Effect</text>
+  
+  <!-- Labels -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="200" y="30" fill="#f0f6fc" font-size="18" font-weight="bold">Causality (x ⇒ y)</text>
+    
+    <text x="130" y="250" fill="#58a6ff" font-size="14">Control Group</text>
+    <text x="270" y="250" fill="#3fb950" font-size="14">Treatment Group</text>
+    
+    <!-- Title for diagram elements -->
+    <text x="130" y="60" fill="#db61a2" font-size="14">Intervention</text>
+    <text x="270" y="60" fill="#db61a2" font-size="14">Intervention</text>
+    
+    <!-- Double-headed arrow for causality -->
+    <text x="200" y="280" fill="#e3b341" font-size="16" font-weight="bold">x ⇒ y</text>
+    <text x="200" y="300" fill="#8b949e" font-size="14">Intervention changes outcome</text>
+  </g>
+</svg>

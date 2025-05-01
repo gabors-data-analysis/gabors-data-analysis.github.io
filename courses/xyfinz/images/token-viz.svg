@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 200" width="800" height="200">
+  <!-- Background -->
+  <rect width="800" height="200" fill="#f8f9fa"/>
+  
+  <!-- Text to Tokens -->
+  <text x="50" y="50" font-family="Arial, sans-serif" font-size="16" fill="#333">Input: "econometrics is fascinating"</text>
+  
+  <!-- Boxes for tokens -->
+  <rect x="50" y="70" width="100" height="40" rx="5" fill="#440154" opacity="0.8"/>
+  <text x="100" y="95" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">eco</text>
+  
+  <rect x="160" y="70" width="100" height="40" rx="5" fill="#3b528b" opacity="0.8"/>
+  <text x="210" y="95" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">nom</text>
+  
+  <rect x="270" y="70" width="100" height="40" rx="5" fill="#21918c" opacity="0.8"/>
+  <text x="320" y="95" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">etrics</text>
+  
+  <rect x="380" y="70" width="100" height="40" rx="5" fill="#5ec962" opacity="0.8"/>
+  <text x="430" y="95" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">is</text>
+  
+  <rect x="490" y="70" width="100" height="40" rx="5" fill="#fde725" opacity="0.8"/>
+  <text x="540" y="95" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="black">fascinating</text>
+  
+  <!-- Token IDs -->
+  <text x="100" y="170" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">[287]</text>
+  <text x="210" y="170" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">[892]</text>
+  <text x="320" y="170" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">[1256]</text>
+  <text x="430" y="170" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">[58]</text>
+  <text x="540" y="170" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">[2489]</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="320" fill="#161b22" rx="8" ry="8"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" fill="#f0f6fc" font-size="18" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Confounding Variables (Z)</text>
+  
+  <!-- Main diagram -->
+  <g>
+    <!-- X variable (veggies) -->
+    <circle cx="100" cy="160" r="30" fill="#30363d" stroke="#58a6ff" stroke-width="2"/>
+    <text x="100" y="165" fill="#58a6ff" font-size="16" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">X</text>
+    <text x="100" y="200" fill="#8b949e" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Veggies</text>
+    
+    <!-- Y variable (blood pressure) -->
+    <circle cx="300" cy="160" r="30" fill="#30363d" stroke="#3fb950" stroke-width="2"/>
+    <text x="300" y="165" fill="#3fb950" font-size="16" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Y</text>
+    <text x="300" y="200" fill="#8b949e" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Blood Pressure</text>
+    
+    <!-- Correlation/causal arrow -->
+    <g>
+      <line x1="130" y1="160" x2="270" y2="160" stroke="#e3b341" stroke-width="2"/>
+      <polygon points="270,160 260,155 260,165" fill="#e3b341"/>
+      <text x="200" y="150" fill="#e3b341" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Observed relationship</text>
+    </g>
+    
+    <!-- Z confounding variables -->
+    <circle cx="200" cy="80" r="30" fill="#30363d" stroke="#f85149" stroke-width="2"/>
+    <text x="200" y="85" fill="#f85149" font-size="16" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Z</text>
+    <text x="200" y="60" fill="#8b949e" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Confounders</text>
+    
+    <!-- Confounding paths -->
+    <line x1="175" y1="90" x2="115" y2="145" stroke="#f85149" stroke-width="2" stroke-dasharray="5,3"/>
+    <polygon points="115,145 120,135 125,145" fill="#f85149"/>
+    
+    <line x1="225" y1="90" x2="285" y2="145" stroke="#f85149" stroke-width="2" stroke-dasharray="5,3"/>
+    <polygon points="285,145 275,145 280,135" fill="#f85149"/>
+  </g>
+  
+  <!-- Examples of confounders -->
+  <g>
+    <rect x="80" y="240" width="240" height="60" rx="6" fill="#30363d" stroke="#f85149" stroke-width="1"/>
+    
+    <!-- Exercise confounder -->
+    <circle cx="110" cy="260" r="8" fill="#f85149" opacity="0.7"/>
+    <text x="130" y="263" fill="#f0f6fc" font-size="10" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Exercise habits</text>
+    
+    <!-- Diet confounder -->
+    <circle cx="110" cy="280" r="8" fill="#f85149" opacity="0.7"/>
+    <text x="130" y="283" fill="#f0f6fc" font-size="10" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Other diet factors</text>
+    
+    <!-- Medical care confounder -->
+    <circle cx="210" cy="260" r="8" fill="#f85149" opacity="0.7"/>
+    <text x="230" y="263" fill="#f0f6fc" font-size="10" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Medical care</text>
+    
+    <!-- Genetics confounder -->
+    <circle cx="210" cy="280" r="8" fill="#f85149" opacity="0.7"/>
+    <text x="230" y="283" fill="#f0f6fc" font-size="10" text-anchor="start" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Genetics</text>
+  </g>
+  
+  <!-- Fork causal structure -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="200" y="110" fill="#f85149" font-size="11" font-style="italic">Confounding path</text>
+  </g>
+</svg>

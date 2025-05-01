@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 250" width="800" height="250">
+  <!-- Background -->
+  <rect width="800" height="250" fill="#fcfcfc"/>
+  
+  <!-- Timeline line -->
+  <line x1="50" y1="125" x2="750" y2="125" stroke="#440154" stroke-width="2"/>
+  
+  <!-- Timeline nodes and labels -->
+  <circle cx="100" cy="125" r="8" fill="#440154"/>
+  <text x="100" y="100" font-family="Arial, sans-serif" text-anchor="middle" font-size="12" fill="#440154">1943</text>
+  <text x="100" y="160" font-family="Arial, sans-serif" text-anchor="middle" font-size="11">McCulloch-Pitts</text>
+  <text x="100" y="175" font-family="Arial, sans-serif" text-anchor="middle" font-size="11">Neural Networks</text>
+  
+  <circle cx="400" cy="125" r="12" fill="#21918c"/>
+  <text x="400" y="90" font-family="Arial, sans-serif" text-anchor="middle" font-size="12" fill="#21918c">2017</text>
+  <text x="400" y="160" font-family="Arial, sans-serif" text-anchor="middle" font-size="11">"Attention is All</text>
+  <text x="400" y="175" font-family="Arial, sans-serif" text-anchor="middle" font-size="11">You Need"</text>
+  
+  <circle cx="700" cy="125" r="10" fill="#fde725"/>
+  <text x="700" y="100" font-family="Arial, sans-serif" text-anchor="middle" font-size="12" fill="#fde725">2023-24</text>
+  <text x="700" y="160" font-family="Arial, sans-serif" text-anchor="middle" font-size="11">GPT-4/Claude 3</text>
+  <text x="700" y="175" font-family="Arial, sans-serif" text-anchor="middle" font-size="11">Multimodal</text>
+</svg>

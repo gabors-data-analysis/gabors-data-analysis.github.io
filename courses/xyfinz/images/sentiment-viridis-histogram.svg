@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa" rx="10" ry="10" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">
+    Sentiment Distribution of Post-Game Interviews
+  </text>
+  
+  <!-- Axes -->
+  <line x1="100" y1="380" x2="700" y2="380" stroke="#333" stroke-width="2" />
+  <line x1="100" y1="380" x2="100" y2="80" stroke="#333" stroke-width="2" />
+  
+  <!-- X-axis labels -->
+  <text x="160" y="420" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Very Negative (-2)</text>
+  <text x="280" y="420" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Negative (-1)</text>
+  <text x="400" y="420" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Neutral (0)</text>
+  <text x="520" y="420" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Positive (1)</text>
+  <text x="640" y="420" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Very Positive (2)</text>
+  
+  <!-- Y-axis labels -->
+  <text x="50" y="380" font-family="Arial" font-size="14" text-anchor="end" fill="#333">0</text>
+  <text x="50" y="320" font-family="Arial" font-size="14" text-anchor="end" fill="#333">15</text>
+  <text x="50" y="260" font-family="Arial" font-size="14" text-anchor="end" fill="#333">30</text>
+  <text x="50" y="200" font-family="Arial" font-size="14" text-anchor="end" fill="#333">45</text>
+  <text x="50" y="140" font-family="Arial" font-size="14" text-anchor="end" fill="#333">60</text>
+  <text x="50" y="80" font-family="Arial" font-size="14" text-anchor="end" fill="#333">75</text>
+  
+  <!-- Y-axis title -->
+  <text x="30" y="230" font-family="Arial" font-size="16" text-anchor="middle" fill="#333" transform="rotate(-90, 30, 230)">Count</text>
+  
+  <!-- Grid lines -->
+  <line x1="100" y1="320" x2="700" y2="320" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+  <line x1="100" y1="260" x2="700" y2="260" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+  <line x1="100" y1="140" x2="700" y2="140" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+  <line x1="100" y1="80" x2="700" y2="80" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5" />
+  
+  <!-- Bars using viridis color palette (reversed - yellow for low counts, purple for high) -->
+  <rect x="140" y="376" width="40" height="4" fill="#fde725" /> <!-- 1 count (-2 score) - yellow -->
+  <rect x="260" y="368" width="40" height="12" fill="#7ad151" /> <!-- 3 count (-1 score) - yellow-green -->
+  <rect x="380" y="336" width="40" height="44" fill="#22a884" /> <!-- 11 count (0 score) - teal -->
+  <rect x="500" y="216" width="40" height="164" fill="#414487" /> <!-- 41 count (1 score) - blue -->
+  <rect x="620" y="120" width="40" height="260" fill="#440154" /> <!-- 65 count (2 score) - purple -->
+  
+  <!-- Count labels on top of bars -->
+  <text x="160" y="370" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">1</text>
+  <text x="280" y="362" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">3</text>
+  <text x="400" y="330" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">11</text>
+  <text x="520" y="210" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">41</text>
+  <text x="640" y="114" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">65</text>
+  
+  <!-- Percentage labels inside bars -->
+  <text x="160" y="378" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">0.8%</text>
+  <text x="280" y="374" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">2.5%</text>
+  <text x="400" y="358" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">9.1%</text>
+  <text x="520" y="298" font-family="Arial" font-size="16" text-anchor="middle" fill="white">33.9%</text>
+  <text x="640" y="250" font-family="Arial" font-size="16" text-anchor="middle" fill="white">53.7%</text>
+  
+  <!-- Legend -->
+  <rect x="600" y="460" width="180" height="30" fill="#f8f9fa" stroke="#ddd" stroke-width="1" rx="5" ry="5" />
+  <text x="620" y="480" font-family="Arial" font-size="14" fill="#333">Color: Viridis (reversed)</text>
+</svg>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#fcfcfc"/>
+  
+  <!-- Overlapping circles with gradient -->
+  <circle cx="170" cy="200" r="100" fill="#440154" opacity="0.6"/>
+  <circle cx="230" cy="200" r="100" fill="#21918c" opacity="0.6"/>
+  
+  <!-- Integration zone -->
+  <circle cx="200" cy="200" r="60" fill="#5ec962" opacity="0.4"/>
+  
+  <!-- Connecting arrows in integration zone -->
+  <path d="M 160 180 Q 200 160 240 180" stroke="#3b528b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 240 220 Q 200 240 160 220" stroke="#3b528b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b528b"/>
+    </marker>
+  </defs>
+  
+  <!-- Labels -->
+  <text x="120" y="200" fill="#440154" font-family="Arial" font-size="16">Human</text>
+  <text x="280" y="200" fill="#21918c" font-family="Arial" font-size="16">LLM</text>
+  <text x="200" y="205" text-anchor="middle" fill="#333" font-family="Arial" font-size="14">Continuous</text>
+  <text x="200" y="225" text-anchor="middle" fill="#333" font-family="Arial" font-size="14">Integration</text>
+</svg>

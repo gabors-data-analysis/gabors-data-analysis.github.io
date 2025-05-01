@@ -1,0 +1,70 @@
+<svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="320" fill="#161b22" rx="8" ry="8"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" fill="#f0f6fc" font-size="18" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Missing Information (Z)</text>
+  
+  <!-- Main data visualization -->
+  <g>
+    <!-- Data table with missing information -->
+    <rect x="70" y="60" width="260" height="130" rx="6" fill="#30363d" stroke="#8b949e" stroke-width="1"/>
+    
+    <!-- Table headers -->
+    <rect x="70" y="60" width="260" height="30" fill="#0d1117" stroke="#8b949e" stroke-width="1" rx="6" ry="6"/>
+    <text x="100" y="80" fill="#58a6ff" font-size="12" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Developer</text>
+    <text x="170" y="80" fill="#58a6ff" font-size="12" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Commits</text>
+    <text x="240" y="80" fill="#3fb950" font-size="12" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Salary</text>
+    <text x="300" y="80" fill="#f85149" font-size="12" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Exec?</text>
+    
+    <!-- Table rows with question marks for missing data -->
+    <line x1="70" y1="90" x2="330" y2="90" stroke="#8b949e" stroke-width="1"/>
+    <text x="100" y="110" fill="#f0f6fc" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Dev_A</text>
+    <text x="170" y="110" fill="#f0f6fc" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">156</text>
+    <text x="240" y="110" fill="#f0f6fc" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">$95K</text>
+    <text x="300" y="110" fill="#f85149" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">?</text>
+    
+    <line x1="70" y1="120" x2="330" y2="120" stroke="#8b949e" stroke-width="1"/>
+    <text x="100" y="140" fill="#f0f6fc" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Dev_B</text>
+    <text x="170" y="140" fill="#f0f6fc" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">25</text>
+    <text x="240" y="140" fill="#f0f6fc" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">$150K</text>
+    <text x="300" y="140" fill="#f85149" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">?</text>
+    
+    <line x1="70" y1="150" x2="330" y2="150" stroke="#8b949e" stroke-width="1"/>
+    <text x="100" y="170" fill="#f0f6fc" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Dev_C</text>
+    <text x="170" y="170" fill="#f0f6fc" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">203</text>
+    <text x="240" y="170" fill="#f0f6fc" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">$115K</text>
+    <text x="300" y="170" fill="#f85149" font-size="12" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">?</text>
+    
+    <!-- Column dividers -->
+    <line x1="135" y1="60" x2="135" y2="190" stroke="#8b949e" stroke-width="1"/>
+    <line x1="205" y1="60" x2="205" y2="190" stroke="#8b949e" stroke-width="1"/>
+    <line x1="275" y1="60" x2="275" y2="190" stroke="#8b949e" stroke-width="1"/>
+  </g>
+  
+  <!-- Hidden factors visualization -->
+  <g>
+    <!-- Hidden variable Z -->
+    <circle cx="200" cy="240" r="30" fill="#30363d" stroke="#f85149" stroke-width="2"/>
+    <text x="200" y="245" fill="#f85149" font-size="16" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Z</text>
+    
+    <!-- Connected factors -->
+    <line x1="200" y1="210" x2="200" y2="190" stroke="#f85149" stroke-width="2" stroke-dasharray="5,3"/>
+    
+    <!-- Examples of missing information -->
+    <circle cx="150" cy="240" r="20" fill="#30363d" stroke="#db61a2" stroke-width="1"/>
+    <text x="145" y="240" fill="#f85149" font-size="12" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Exec</text>
+
+    
+    <circle cx="120" cy="270" r="20" fill="#30363d" stroke="#db61a2" stroke-width="1"/>
+    <text x="120" cy="273" fill="#f85149" font-size="12" text-anchor="middle" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">Educ</text>
+
+
+    <circle cx="200" cy="280" r="20" fill="#30363d" stroke="#db61a2" stroke-width="1"/>
+    
+    <circle cx="250" cy="240" r="20" fill="#30363d" stroke="#db61a2" stroke-width="1"/>
+    
+    <circle cx="280" cy="270" r="20" fill="#30363d" stroke="#db61a2" stroke-width="1"/>
+
+  </g>
+</svg>

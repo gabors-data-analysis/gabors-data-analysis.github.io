@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <!-- Background -->
+  <rect width="800" height="300" fill="#f8f9fa" rx="10" ry="10" />
+  
+  <!-- Topic 1: Game Analysis - Viridis colors -->
+  <circle cx="220" cy="150" r="110" fill="#440154" fill-opacity="0.5" stroke="#440154" stroke-width="2" />
+  
+  <!-- Topic 2: Player Evaluation -->
+  <circle cx="400" cy="150" r="110" fill="#2a788e" fill-opacity="0.5" stroke="#2a788e" stroke-width="2" />
+  
+  <!-- Topic 3: Result Discussion -->
+  <circle cx="580" cy="150" r="110" fill="#fde725" fill-opacity="0.5" stroke="#fde725" stroke-width="2" />
+  
+  <!-- Word Clouds -->
+  <!-- Topic 1 Words -->
+  <text x="200" y="120" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Game Analysis</text>
+  <text x="160" y="150" font-family="Arial" font-size="16" fill="white">half</text>
+  <text x="210" y="170" font-family="Arial" font-size="20" fill="white">played</text>
+  <text x="180" y="190" font-family="Arial" font-size="14" fill="white">intensity</text>
+  <text x="230" y="210" font-family="Arial" font-size="18" fill="white">dominated</text>
+  <text x="170" y="130" font-family="Arial" font-size="16" fill="white">aggressive</text>
+  
+  <!-- Topic 2 Words -->
+  <text x="400" y="120" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Player Evaluation</text>
+  <text x="370" y="230" font-family="Arial" font-size="20" fill="white">impact</text>
+  <text x="430" y="160" font-family="Arial" font-size="18" fill="white">special</text>
+  <text x="390" y="180" font-family="Arial" font-size="18" fill="white">clinical</text>
+  <text x="440" y="140" font-family="Arial" font-size="16" fill="white">quality</text>
+  <text x="370" y="170" font-family="Arial" font-size="14" fill="white">fit</text>
+  
+  <!-- Topic 3 Words -->
+  <text x="600" y="120" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Result Discussion</text>
+  <text x="570" y="150" font-family="Arial" font-size="16" fill="#333">scored</text>
+  <text x="630" y="160" font-family="Arial" font-size="14" fill="#333">disappointment</text>
+  <text x="590" y="180" font-family="Arial" font-size="22" fill="#333">result</text>
+  <text x="620" y="140" font-family="Arial" font-size="18" fill="#333">opportunities</text>
+  <text x="565" y="170" font-family="Arial" font-size="14" fill="#333">chances</text>
+  
+  <!-- Overlapping Areas with viridis intermediate colors -->
+  <text x="280" y="150" font-family="Arial" font-size="20" font-weight="bold" fill="#414487">performance</text>
+  <text x="480" y="150" font-family="Arial" font-size="20" font-weight="bold" fill="#22a884">shot</text>
+</svg>

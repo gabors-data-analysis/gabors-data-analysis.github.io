@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#fcfcfc"/>
+  
+  <!-- Circular reference line -->
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#440154" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Jagged frontier line -->
+  <path d="M 200 50 
+           L 300 150
+           L 250 200
+           L 350 250
+           L 250 300
+           L 150 250
+           L 100 300
+           L 50 200
+           L 150 150
+           L 100 100
+           Z" 
+        fill="none" 
+        stroke="#21918c" 
+        stroke-width="3"/>
+  
+  <!-- Task points -->
+  <circle cx="280" cy="180" r="6" fill="#3b528b"/>
+  <text x="290" y="170" font-family="Arial" font-size="12">Data Cleaning</text>
+  
+  <circle cx="120" cy="180" r="6" fill="#fde725"/>
+  <text x="80" y="170" font-family="Arial" font-size="12">Causal Inference</text>
+  
+  <!-- Center point -->
+  <circle cx="200" cy="200" r="4" fill="#440154"/>
+  
+  <!-- Legend -->
+  <text x="20" y="380" font-family="Arial" font-size="12">Inside frontier: LLM capable</text>
+  <text x="20" y="360" font-family="Arial" font-size="12">Outside frontier: Human needed</text>
+</svg>

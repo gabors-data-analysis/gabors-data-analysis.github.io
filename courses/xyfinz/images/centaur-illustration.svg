@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#fcfcfc"/>
+  
+  <!-- Two distinct circles representing Human and AI -->
+  <circle cx="150" cy="200" r="80" fill="#440154" opacity="0.7"/>
+  <circle cx="250" cy="200" r="80" fill="#21918c" opacity="0.7"/>
+  
+  <!-- Labels -->
+  <text x="150" y="205" text-anchor="middle" fill="white" font-family="Arial" font-size="16">Human</text>
+  <text x="250" y="205" text-anchor="middle" fill="white" font-family="Arial" font-size="16">LLM</text>
+  
+  <!-- Task arrows -->
+  <path d="M 150 130 L 150 100 L 250 100 L 250 130" stroke="#3b528b" stroke-width="2" fill="none"/>
+  <text x="200" y="95" text-anchor="middle" font-family="Arial" font-size="12">Planning</text>
+  
+  <path d="M 250 270 L 250 300 L 150 300 L 150 270" stroke="#3b528b" stroke-width="2" fill="none"/>
+  <text x="200" y="315" text-anchor="middle" font-family="Arial" font-size="12">Execution</text>
+  
+  <!-- Boundary line -->
+  <line x1="200" y1="80" x2="200" y2="320" stroke="#440154" stroke-width="2" stroke-dasharray="5,5"/>
+</svg>
