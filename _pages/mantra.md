@@ -1,17 +1,15 @@
-
-
 ---
 layout: single
 classes: wide
 title: "Gábor’s mantra on research with data"
 permalink: /mantra/
-author_profile: true
+author_profile: false
 redirect_from:
   - /md/
   - /mantra.html
 ---
 
-# Doing analysis with data
+## Doing analysis with data
 
 1. Know thy data. Origin stories matter. 
 2. Garbage data + simple stats = garbage. Garbage data + AI = convincing garbage . 
