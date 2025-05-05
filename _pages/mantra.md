@@ -15,10 +15,15 @@ redirect_from:
 
 # Doing analysis with data
 
-1. garbage data + simple stats = garbage. Garbage data + AI = convincing garbage . 
-2. RCT with N=32 << observation study w N== 100k << RCT with 1K. 
-3. RCT is often not doable for ethical or practical reasosns. 
-4. Observational analysis is hard but good data and 100+ years of statistics and econometrics can get you close to a causal interpretation
+1. Know thy data. Origin stories matter. 
+2. Garbage data + simple stats = garbage. Garbage data + AI = convincing garbage . 
+3. Data does not speak. The analyst speaks via data and analysis. 
+
+## Methods
+
+1. RCT with N=32 << observation study w N== 100k << RCT with 1K. 
+2. RCT is often not doable for ethical or practical reasosns. 
+3. Observational analysis is hard but good data and 100+ years of statistics and econometrics can get you close to a causal interpretation
 
 
 ## On acquiring knowledge we can act on
