@@ -11,8 +11,6 @@ redirect_from:
   - /mantra.html
 ---
 
-{% include base_path %}
-
 # Doing analysis with data
 
 1. Know thy data. Origin stories matter. 
