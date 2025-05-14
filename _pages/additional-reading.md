@@ -28,6 +28,8 @@ Life did not stop when we finished the manusdcript. Actually, we keep finding gr
 
 * On *p-hacking*, a fantastic story is about a body of research in social psychology written up in [New York Times Magazine](https://www.nytimes.com/2017/10/18/magazine/when-the-revolution-came-for-amy-cuddy.html) in 2017. The review of methods started in 2012 soon led to the birth of data investigation team [Data Colada](https://datacolada.org/about) in 2013 by Profs Uri Simonsohn, Leif Nelson and Joe Simmons. They also wrote a [paper on p-curve](http://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/2019/01/pcp2-P-curve-2-published-.pdf), a tool to analyze a body of literature. Read any other pieces of Data Colada on challenges to reproducibility. Amazing stuff. 
 
+* Nice and fun piece on the birthday effect in [pudding](https://pudding.cool/2025/04/birthday-effect/) by Russel Samora. There is a commonly held view that you are more likely to die on your birthday? Is this true? Using millions of Massachusetts residents. Great illustration of step-by-step investigation. 
+
 ## Part II
 
 ### Chapter 09
