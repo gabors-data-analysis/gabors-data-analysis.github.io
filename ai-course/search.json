@@ -1,0 +1,1383 @@
+[
+  {
+    "objectID": "week01/index.html",
+    "href": "week01/index.html",
+    "title": "Week 1: LLM Review",
+    "section": "",
+    "text": "Introduction to Large Language Models and their applications in data analysis {.hero-subtitle}",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week01/index.html#learning-objectives",
+    "href": "week01/index.html#learning-objectives",
+    "title": "Week 1: LLM Review",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this session, students will:\n\nUnderstand core concepts and architecture behind large language models (LLMs)\nLearn how to incorporate AI into data analysis workflows\n\nCritically assess capabilities and limitations of AI tools in academic contexts\nExperience the “jagged frontier” of LLM capabilities through hands-on practice",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week01/index.html#class-materials",
+    "href": "week01/index.html#class-materials",
+    "title": "Week 1: LLM Review",
+    "section": "Class Materials",
+    "text": "Class Materials\n\n\n📊 Slideshow\n\n\nLLM Concepts Presentation\nKey Topics Covered: - What are Large Language Models? - The Transformer architecture and tokenization - Cyborg vs Centaur approaches to AI collaboration - The “jagged frontier” of AI capabilities - Prompt engineering fundamentals\n\n\n\n\n📚 Required Reading\n\n\n\nWhich AI Model to Choose? - Updated guide for 2025\nReview the FT graph for class activity (see below)\n\nOptional Background: - Ethan Mollick: “Co-Intelligence: Living and Working with AI” (Chapters 1-2)\n\n\n\n\n🎯 Class Activity\n\n\nThe Financial Times Challenge\nTake a look at this excellent Financial Times visualization showing the market reaction to Trump’s tariff announcements.\nYour Mission: Reproduce this chart as accurately as possible in the shortest time using AI assistance.\nLearning Goals: - Experience AI-assisted data visualization - Practice prompt engineering for specific tasks - Understand the balance between human direction and AI execution",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week01/index.html#assignment",
+    "href": "week01/index.html#assignment",
+    "title": "Week 1: LLM Review",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nAssignment 1: Reproduce the FT Graph\n\n\n\nDue: Before Week 2\nChoose your approach: - Option A (Standard): Use AI to find data and recreate the visualization - Option B (Advanced): Build an interactive dashboard that updates dynamically\nFull Assignment Details",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week01/index.html#preparation",
+    "href": "week01/index.html#preparation",
+    "title": "Week 1: LLM Review",
+    "section": "Preparation",
+    "text": "Preparation\n\n\n\n\n\n\nBefore Class\n\n\n\n\nNo specific preparation required for Week 1\nCome ready to discuss your current experience with AI tools\nBring examples of where you’ve encountered AI in your work/studies",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week01/index.html#discussion-questions",
+    "href": "week01/index.html#discussion-questions",
+    "title": "Week 1: LLM Review",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\nConsider these questions as you engage with the materials:\n\nPersonal AI Experience: How have you already incorporated AI into your routine? Which model feels most natural to you?\nError Management: How do you currently deal with AI hallucinations or imperfect answers?\nThe Jagged Frontier: What tasks do you expect AI to excel at? Where do you think it will struggle?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week01/index.html#tools-and-resources",
+    "href": "week01/index.html#tools-and-resources",
+    "title": "Week 1: LLM Review",
+    "section": "Tools and Resources",
+    "text": "Tools and Resources\nRecommended AI Platforms for this course: - ChatGPT 4o/o1 - Excellent for coding and data analysis - Claude 3.5 Sonnet - Great for research and writing tasks\n- GitHub Copilot - For integrated coding assistance\nGetting Started: - Most tasks can be accomplished with free tiers - Consider paid subscriptions for intensive work ($20/month typical) - See AI Model Comparison Guide for detailed recommendations",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week01/index.html#week-1-outcomes",
+    "href": "week01/index.html#week-1-outcomes",
+    "title": "Week 1: LLM Review",
+    "section": "Week 1 Outcomes",
+    "text": "Week 1 Outcomes\nBy completing Week 1, you should:\n\n✅ Understand what LLMs can and cannot do reliably\n✅ Have experience with AI-assisted data visualization\n\n✅ Recognize the importance of human oversight in AI workflows\n✅ Be prepared to use AI as a collaborative tool throughout the course\n\n\n\n\n\n\n\n\nAcademic Integrity Note\n\n\n\nThis course teaches you to use AI as a powerful assistant while maintaining your responsibility as the analyst and author. Always verify AI outputs, cite your methods, and ensure you understand the analysis you’re presenting.\n\n\nNext Week: Week 2 - Data Discovery and Documentation where we’ll use AI to understand and document complex datasets.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week06/assets/walkthrough-fbref.html",
+    "href": "week06/assets/walkthrough-fbref.html",
+    "title": "Walkthrough: Using soccerdata to Fetch Arsenal’s 2023–24 Match Stats",
+    "section": "",
+    "text": "Below is a simple, step-by-step recipe for pulling Arsenal’s match-by-match team statistics for the 2023–24 Premier League season from FBref, using the soccerdata Python client library. You never write raw HTTP requests—soccerdata handles those for you."
+  },
+  {
+    "objectID": "week06/assets/walkthrough-fbref.html#walkthrough-using-soccerdata-to-fetch-arsenals-202324-match-stats",
+    "href": "week06/assets/walkthrough-fbref.html#walkthrough-using-soccerdata-to-fetch-arsenals-202324-match-stats",
+    "title": "",
+    "section": "Walkthrough: Using soccerdata to Fetch Arsenal’s 2023–24 Match Stats",
+    "text": "Walkthrough: Using soccerdata to Fetch Arsenal’s 2023–24 Match Stats\nBelow is a simple, step-by-step recipe for pulling Arsenal’s match-by-match team statistics for the 2023–24 Premier League season from FBref, using the soccerdata Python client library. You never write raw HTTP requests—soccerdata handles those for you.\n# 1. Install and import the library\n#    Wraps FBref’s REST API in Python methods.\n#    pip install soccerdata\nimport soccerdata as sd\n\n# 2. Initialize the FBref data source\n#    Specify the league and season you want.\nfbref = sd.FBref(leagues=\"ENG-Premier League\", seasons=\"2023-24\")\n\n# 3. Retrieve Arsenal’s match stats\n#    Returns a pandas DataFrame of every fixture.\narsenal_stats = fbref.read_team_match_stats(team=\"Arsenal\")\n\n# 4. Inspect the resulting DataFrame\nprint(arsenal_stats.head())\n\nWhat just happened?\n\nAbstraction over HTTP\nThe FBref class builds the correct URLs, attaches any required headers or API keys, sends HTTP GET requests to FBref’s endpoints, and handles pagination and retries automatically.\nAutomatic data parsing\nJSON responses from FBref are converted into a pandas DataFrame for you—no manual json.loads() or DataFrame construction needed.\nError handling & reliability\nCommon HTTP errors (e.g., timeouts, 404 Not Found) are wrapped in clear exceptions. Transient failures can trigger automatic retries, so your analysis code stays focused on insights, not networking glitches.\nIdiomatic, Pythonic interface\nThe library returns native Python objects (DataFrames, lists, dictionaries) and uses familiar method names, making the API feel intuitive and concise rather than a tangle of raw HTTP mechanics.\n\nUnder the hood, soccerdata still uses an HTTP client (like requests) to interact with the REST API. But by encapsulating all networking, authentication, and JSON-handling logic in a single read_team_match_stats() call, it lets you:\n\nWrite clean, declarative code\n\nDevelop faster with fewer bugs\n\nFocus on analysis and insights instead of HTTP details\n\nThis pattern—installing a client library, instantiating a connector object, invoking a single method, and working with a DataFrame—is common across many Python APIs, from OpenAI to Google Cloud to GitHub. Once you understand it, you can apply it to virtually any web service."
+  },
+  {
+    "objectID": "week06/assets/walkthrough-fbref.html#r-equivalent",
+    "href": "week06/assets/walkthrough-fbref.html#r-equivalent",
+    "title": "Walkthrough: Using soccerdata to Fetch Arsenal’s 2023–24 Match Stats",
+    "section": "R equivalent",
+    "text": "R equivalent\n# 1. Install and load the package\ninstall.packages(\"worldfootballR\")  # different package, same idea\nlibrary(worldfootballR)\n\n# 2. Get Arsenal match results from the Premier League 2023/24\narsenal_matches &lt;- fb_team_match_results(\n  team_url = \"https://fbref.com/en/squads/18bb7c10/Arsenal-Stats\")\n\n# 3. Inspect the data\nhead(arsenal_matches)"
+  },
+  {
+    "objectID": "week06/assets/api-advanced.html",
+    "href": "week06/assets/api-advanced.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "week06/assets/api-advanced.html#http-client-server-communication-and-the-request-response-cycle",
+    "href": "week06/assets/api-advanced.html#http-client-server-communication-and-the-request-response-cycle",
+    "title": "",
+    "section": "HTTP: Client-Server Communication and the Request-Response Cycle",
+    "text": "HTTP: Client-Server Communication and the Request-Response Cycle\nBefore diving into APIs, it’s essential to understand how web communication works at its most basic level. The web runs on HTTP (HyperText Transfer Protocol), a simple, text-based language that lets one computer or application (the client) ask another computer (the server) for data or actions. Whenever you browse a site or call a web service, your client sends an HTTP request and the server answers with an HTTP response.\nAn HTTP request consists of a URL—the address of the resource or endpoint you want—and an HTTP method, which tells the server what you’d like to do. The two most common methods are GET (to fetch data, like loading a webpage) and POST (to submit data, such as filling in a form). By combining the URL and method (e.g. GET https://example.com/data), the client makes its intentions clear.\nWhen the server receives that request, it processes whatever work is needed—retrieving files, querying a database, or running a service—and then sends back a response. Each response begins with a status code (a number indicating success or failure, such as 200 OK for success or 404 Not Found when something is missing) followed by the body containing the actual data or content. For webpages this is usually HTML; for data services (APIs), it’s often JSON (JavaScript Object Notation).\nThis back-and-forth interaction is called the request-response cycle, and it’s entirely stateless—each request is handled on its own, with no memory of previous requests. That stateless design makes HTTP simple and highly scalable, allowing any client that speaks HTTP (from browsers to Python scripts) to interoperate with any server that understands HTTP. When you move on to APIs, you’ll leverage this same cycle to automate large-scale data retrieval and processing.\nListen to Alice Evans explain all things HTTP on this podcast."
+  },
+  {
+    "objectID": "week06/assets/api-advanced.html#how-apis-work-client-server-interaction-requests-and-responses",
+    "href": "week06/assets/api-advanced.html#how-apis-work-client-server-interaction-requests-and-responses",
+    "title": "",
+    "section": "How APIs Work: Client-Server Interaction, Requests, and Responses",
+    "text": "How APIs Work: Client-Server Interaction, Requests, and Responses\nAt its core, an API works through a client-server interaction over the internet. Let’s break down the key concepts:\n\nClient and Server: The client is the part that sends a request (this would be your code or application), and the server is the part that receives the request and provides a response (this is the API’s service, often running on a remote server or in the cloud). In our context, you (or your Python script) are the client, and the API provider’s system is the server.\nRequest: A request is the message the client sends to the server asking for some action or data. Think of it as filling out an order form or making a specific query. A request typically includes:\n\nAn endpoint URL (the address of the API and the specific service you want).\nA method/verb (often one of the HTTP methods like GET to retrieve data or POST to send data).\nParameters or data (any additional information the server needs, such as the text you want analyzed or a query like a city name for a weather API).\nHeaders including an API key if required (more on API keys soon).\n\nResponse: After the server receives your request and processes it, it sends back a response. The response contains:\n\nStatus code – a number that tells you if the request was successful (e.g. 200 OK), or if something went wrong (e.g. 404 Not Found, 401 Unauthorized).\nData – the information you asked for, often in a structured format like JSON (a common text-based data format) or XML. For example, if you requested sentiment analysis, the response data might be a sentiment score or label for your text.\nMetadata or messages – sometimes additional info, like how long the request took or usage details.\n\n\n Client-Server Communication: Your application (client) sends an HTTP request to an API’s server (for example, asking for sentiment analysis on some text). The server then processes that request and sends back an HTTP response containing the result (for instance, the sentiment score). This request-response cycle is the foundation of how we use APIs.\n\nAPI Endpoint: An endpoint is a specific address (URL) that you hit to access a particular service or data from an API. It’s like a function or feature on the server that you can invoke. For example, a sentiment analysis API might have an endpoint like /analyzeSentiment that you call to get a sentiment result. Each endpoint usually corresponds to one type of task or data.\nAPI Documentation: Because you can’t see the “kitchen” (the server’s internal code or database), the API documentation is your guide to what you can request and how to format those requests. It typically lists all available endpoints, what parameters they accept, what kind of output they return, and examples. Good documentation is like a user manual for the API."
+  },
+  {
+    "objectID": "week06/assets/api-advanced.html#rest-apis-the-common-way-to-communicate",
+    "href": "week06/assets/api-advanced.html#rest-apis-the-common-way-to-communicate",
+    "title": "",
+    "section": "REST APIs: The Common Way to Communicate",
+    "text": "REST APIs: The Common Way to Communicate\nWhen people talk about web APIs, they are often referring to REST APIs. REST stands for Representational State Transfer, which is a style of designing networked applications. You don’t need to remember the term, but here’s what it means in practice:\n\nUses HTTP: REST APIs use the same protocol your web browser uses – HTTP. This means you’re often calling URLs (web addresses) just like loading a webpage, but instead of a webpage, you get data.\nEndpoints and Resources: In a REST API, different URLs (endpoints) represent different resources or services. For example, GET https://api.openweathermap.org/data/2.5/weather?q=London might retrieve weather data for London. Here, the endpoint /data/2.5/weather is a resource for weather info, and q=London is a parameter specifying the city.\nHTTP Methods (Verbs): REST APIs make use of HTTP methods such as:\n\nGET – Retrieve data (for example, get information or fetch results; e.g., get the sentiment of a text or fetch a list of comments).\nPOST – Send data or create a new resource (for example, submit a new text to be analyzed, or add a new entry to a database via the API).\nPUT/PATCH – Update an existing resource (for example, update a record in a database).\nDELETE – Delete a resource.\n\nIn our sentiment analysis example, you might use a GET request if the text is included in the URL or a POST request if you are sending the text in the request body. The key idea is that the method indicates what action you want to perform on the resource.\nStateless Communication: REST APIs are stateless, meaning each request is independent. The server doesn’t retain information about your previous requests. This is like each request being a separate, self-contained transaction. For instance, if you call the sentiment analysis API twice with two different texts, the server doesn’t remember the first text when processing the second – you need to send all the information it needs each time. The stateless design makes it easier to scale and ensures that each server can handle any request without needing to know what came before.\n\nREST APIs are popular because they are simple, scalable, and use existing web standards. Almost any programming environment can send HTTP requests, so REST makes it easy to interact with services from different languages and platforms. When you hear about APIs from providers like Google, Twitter, or OpenAI, they are usually implemented as RESTful APIs."
+  },
+  {
+    "objectID": "week06/assets/api-advanced.html#other-api-styles-graphql-and-websockets",
+    "href": "week06/assets/api-advanced.html#other-api-styles-graphql-and-websockets",
+    "title": "",
+    "section": "Other API Styles: GraphQL and WebSockets",
+    "text": "Other API Styles: GraphQL and WebSockets\nREST is the most common approach, but it’s not the only pattern you might encounter. Here are two other API styles, just for your awareness:\n\nGraphQL: GraphQL is an alternative approach where instead of multiple specific endpoints, you have a single endpoint that can handle flexible queries. You send a query describing exactly what data you want, and you get back precisely that data. This can reduce the number of requests needed for complex apps. For example, if a REST API required you to call one endpoint for user info and another for user posts, a GraphQL API could allow you to get both in a single request by specifying that in the query. It’s powerful for complex data fetching, but also a bit more advanced in usage. (In this course we won’t be using GraphQL, but it’s good to know it exists.)\nWebSockets (Real-Time APIs): A WebSocket provides a continuous two-way connection between client and server, allowing data to be sent in real time. This isn’t a request-response model; it’s more like an open channel. WebSockets are useful for applications like live chat, streaming data updates, or multiplayer games – anywhere you want instant, ongoing data flow. For instance, if you were tracking sentiment on a live stream of tweets, a WebSocket connection could stream new analyses continuously. This is more specialized, so we’ll stick to the request/response style in our work, but you might encounter WebSocket APIs in other contexts (e.g., real-time stock price feeds).\n\nFor most data analysis tasks (like fetching data or sending data for analysis), you’ll be using REST APIs, as they cover the majority of use cases and are easier to get started with.\nGreat, I’ll put together a conceptual overview of how API client libraries (especially in Python, with a mention of R) work, including when and why you’d use them, and how they simplify HTTP requests behind the scenes. I’ll be back shortly with the draft section you can add to your markdown."
+  },
+  {
+    "objectID": "week06/assets/api-advanced.html#api-client-libraries",
+    "href": "week06/assets/api-advanced.html#api-client-libraries",
+    "title": "",
+    "section": "API Client Libraries",
+    "text": "API Client Libraries\nWhen working with web APIs, you often have the choice of using API client libraries instead of crafting raw HTTP requests. An API client library (sometimes called an SDK or helper library) is a package provided in a specific programming language that wraps the API’s functionality in convenient functions or classes. In Python especially, many major services offer official or community-maintained libraries to simplify API usage. These libraries act as a language-specific abstraction layer over the API – they break the API’s usual language-agnostic nature to make the developer experience smoother. In practice, this means you can interact with the API using Python objects and methods, rather than manually formatting HTTP requests and parsing responses.\nWhy use a client library? Client libraries simplify and reduce the code you need to write for common API tasks. Instead of manually assembling URLs, query parameters, headers, and JSON payloads for each request, you can call a function or method provided by the library and let it handle those details. For example, a library might provide a method like get_user_tweets(\"Alice\") or openai.ChatCompletion.create(...) – behind the scenes, that method will construct the proper HTTP request (with the correct endpoint and parameters), send it, and parse the result for you. In other words, the library “abstracts away the HTTP requests and offers more convenient interfaces” to work with the API. This abstraction typically covers:\n\nRequest formatting and transport: The library builds the correct HTTP requests (URLs, methods, headers, body) and sends them using an HTTP client, so you don’t have to manually use tools like requests or curl. It also often manages details like authentication headers (API keys, tokens) for you after an initial setup.\nResponse parsing and serialization: Data returned from the API (usually in JSON) is automatically parsed into Python data structures or objects. Similarly, when you provide data to send (like a dictionary or object), the library serializes it to JSON. This spares you from manual JSON formatting.\nError handling and reliability: Good client libraries include error handling logic. They might raise clear exceptions for error responses (rather than you checking HTTP status codes yourself) and handle common issues like rate limiting or retries. This means your code can focus on what you want to do with the API, and the library handles the low-level communication details.\nIdiomatic interface: The library’s functions and classes are designed to feel natural in the given language. For instance, Python libraries will return Python objects (like dictionaries or custom classes) and use Python naming conventions. This makes the API “simple and intuitive to use” in that language, as opposed to treating everything as raw text or HTTP mechanics."
+  },
+  {
+    "objectID": "week06/assets/api-advanced.html#making-an-api-call-a-conceptual-walkthrough",
+    "href": "week06/assets/api-advanced.html#making-an-api-call-a-conceptual-walkthrough",
+    "title": "",
+    "section": "Making an API Call: A Conceptual Walkthrough",
+    "text": "Making an API Call: A Conceptual Walkthrough\nLet’s put all this into a concrete example without diving into code. How would you use an API for a task, say, analyzing sentiment on a large number of texts? Here’s the high-level process:\n\nFind a Suitable API & Read the Documentation: First, you’d identify an API that offers sentiment analysis (or whatever task you need). This could be a cloud service like Azure Cognitive Services, IBM Watson NLU, or OpenAI’s API. You’d read the documentation to find out the endpoint for sentiment analysis, what inputs it expects (maybe it requires a piece of text or a list of texts, and possibly a language or other settings), and what the output looks like.\nObtain Access (API Key): You sign up for the service to get your API key (or other credentials). For example, you might create a free account and receive a key like abcd1234... that identifies you.\nConstruct the Request: Using the information from the docs, you prepare your API request. For example:\n\nDecide on the HTTP method: sentiment analysis might require a POST request because you’re sending data (the text).\nDetermine the endpoint URL: e.g., https://api.some-service.com/v1/sentiment.\nPrepare the data format: the API might require JSON. For instance, you might need to send {\"text\": \"I love this product!\"} in the body of the request. If you have multiple texts, maybe it allows an array of texts.\nInclude your API key as instructed (maybe in a header or as a parameter).\n\nSend the Request (Client side): Now you send the request from your client (which could be a Python script, a command-line tool like curl, or an app like Postman for testing). This is when your program reaches out over the internet to the API’s server with your request details.\nReceive the Response (Server side): The API’s server processes your input. It runs the sentiment analysis on the text you sent. Then it sends back a response. Let’s say the response is a JSON object like: {\"sentiment\": \"positive\", \"confidence\": 0.95}, along with an HTTP status code 200 (meaning success). If something was wrong (e.g., missing the API key or the text was too long), you might get an error response instead of explaining what went wrong.\nIntegrate the Results: Your code receives this response data. Now you can use it in your analysis. For instance, your program can take the \"sentiment\": \"positive\" value and record that this particular review was positive. You might loop through all 10,000 reviews, call the API for each, and collect the results. In the end, you could calculate statistics (like 60% of reviews are positive, 30% neutral, 10% negative, etc.) or visualize the data.\n\nThroughout this process, the heavy work (the actual sentiment computation) is done by the API provider’s servers. Your job is to correctly send requests and process the responses. In practice, you’d likely write a small script to automate steps 3–6 so that you can handle many texts sequentially or in parallel.\nEven without writing code here, hopefully, you can see the pattern: find API -&gt; get access -&gt; request -&gt; response -&gt; use data. Once you learn to do this, you can apply it to countless situations, not just sentiment analysis.\nPlease see our api-use.md file for fundamental information."
+  },
+  {
+    "objectID": "week03/ideas-good-report.html",
+    "href": "week03/ideas-good-report.html",
+    "title": "Some ideas on good report",
+    "section": "",
+    "text": "What is a good data analysis presentation"
+  },
+  {
+    "objectID": "week03/ideas-good-report.html#three-types-of-reserach-questions",
+    "href": "week03/ideas-good-report.html#three-types-of-reserach-questions",
+    "title": "Some ideas on good report",
+    "section": "Three types of reserach questions",
+    "text": "Three types of reserach questions\n\nPatterns of association – focus on pattern discovery\nCausal question – identify the effect of an intervention\n\nExperiment\nObservational data\n\nBuild a predictive model – focus on selection, understand how model works"
+  },
+  {
+    "objectID": "week03/ideas-good-report.html#let-us-focus-on-association",
+    "href": "week03/ideas-good-report.html#let-us-focus-on-association",
+    "title": "Some ideas on good report",
+    "section": "Let us focus on association",
+    "text": "Let us focus on association\nThink questions like * Are people working more hours, make more money/hour? * How much less does a car worth when having 1000km more in odometer? * What is the relationship between hotel prices and location / amenities?\nCausal would be * In an intervention, we make some people work more, will they have a high w/h?\nPrediction would be * Here is wage data, let us build a model for hourly wage"
+  },
+  {
+    "objectID": "week03/ideas-good-report.html#what-to-include-in-a-report",
+    "href": "week03/ideas-good-report.html#what-to-include-in-a-report",
+    "title": "Some ideas on good report",
+    "section": "What to include in a report",
+    "text": "What to include in a report\nConsider a few-page report on an association with some possibility for causal analysis (later)\nKey parts of the report\n\nIntroduction (why interesting)\nResearch question\nData description\n\nsource\nvariables\n\nMethods\n\nwhat method you use (e.g. cross section OLS)\nregression you estimate precisely\n\nResults\n\nInclude exhibits (think about graphs, tables)\nDecide on main result and focus on explaining it (e.g. \\(x\\) coefficient)\n\nHint: think for the reader – what would help them understand?\n\n\nConclusion\n\nShort: 1-2 para\nDiscussion to summarize result (in plain English)\nPlace result in context\n\nis it causal\nexternal validity\n\n(no need for future research)"
+  },
+  {
+    "objectID": "week03/assets/analysis_notebook (1).html",
+    "href": "week03/assets/analysis_notebook (1).html",
+    "title": "Income and Trust: Analysis Notebook",
+    "section": "",
+    "text": "setwd(\"C:/Users/bekes/Documents/GitHub/\")\npath =\"da-w-ai/data/VWS/\"\ndf &lt;- read_csv(paste0(path, \"WVS_GDP_merged_data.csv\"))\n\nRows: 66 Columns: 97\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (2): B_COUNTRY_ALPHA, iso3c\ndbl (95): A_YEAR, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q1...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\ndf &lt;- df %&gt;%\n  mutate(baseline_trust = 2 - Q57,\n         alt_trust = 4 - rowMeans(select(., Q59:Q63), na.rm=TRUE) + 1,\n         log_gdppc = log(GDP_USD_PPP_per_capita))\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 3 rows containing non-finite outside the scale range (`stat_smooth()`).\nRemoved 3 rows containing non-finite outside the scale range (`stat_smooth()`).\n\n\nWarning: Failed to fit group -1.\nCaused by error in `terms.formula()`:\n! argument is not a valid model\n\n\nWarning: Removed 3 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 3 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 3 rows containing non-finite outside the scale range\n(`stat_smooth()`).\n\n\nWarning: Removed 3 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\nsummary(lm(baseline_trust ~ log_gdppc, data = df))\n\n\nCall:\nlm(formula = baseline_trust ~ log_gdppc, data = df)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.23286 -0.09800 -0.01321  0.05304  0.44896 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -0.80042    0.17794  -4.498 3.13e-05 ***\nlog_gdppc    0.10390    0.01806   5.751 3.04e-07 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.1262 on 61 degrees of freedom\n  (3 observations deleted due to missingness)\nMultiple R-squared:  0.3516,    Adjusted R-squared:  0.341 \nF-statistic: 33.08 on 1 and 61 DF,  p-value: 3.044e-07\n\nsummary(lm(alt_trust ~ log_gdppc, data = df))\n\n\nCall:\nlm(formula = alt_trust ~ log_gdppc, data = df)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.53529 -0.12054  0.00505  0.12603  0.45564 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)   1.0880     0.2975   3.657 0.000533 ***\nlog_gdppc     0.1372     0.0302   4.544 2.67e-05 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.2109 on 61 degrees of freedom\n  (3 observations deleted due to missingness)\nMultiple R-squared:  0.2529,    Adjusted R-squared:  0.2406 \nF-statistic: 20.64 on 1 and 61 DF,  p-value: 2.669e-05"
+  },
+  {
+    "objectID": "week02/assets/chatgpt-2025-vws-README-v1.html",
+    "href": "week02/assets/chatgpt-2025-vws-README-v1.html",
+    "title": "World Values Survey Data Analysis",
+    "section": "",
+    "text": "This repository contains data and code for analyzing the World Values Survey (WVS) dataset. The project involves data cleaning, processing, and merging GDP data with survey responses."
+  },
+  {
+    "objectID": "week02/assets/chatgpt-2025-vws-README-v1.html#overview",
+    "href": "week02/assets/chatgpt-2025-vws-README-v1.html#overview",
+    "title": "World Values Survey Data Analysis",
+    "section": "",
+    "text": "This repository contains data and code for analyzing the World Values Survey (WVS) dataset. The project involves data cleaning, processing, and merging GDP data with survey responses."
+  },
+  {
+    "objectID": "week02/assets/chatgpt-2025-vws-README-v1.html#repository-structure",
+    "href": "week02/assets/chatgpt-2025-vws-README-v1.html#repository-structure",
+    "title": "World Values Survey Data Analysis",
+    "section": "Repository Structure",
+    "text": "Repository Structure\n📂 osf-vwvs/                   # Root directory\n ├── 📂 clean/                 # Processed datasets  \n │    ├── WVS_GDP_merged_data.csv    # Merged WVS data with GDP  \n │    ├── WVS_random_subset.csv      # Random subset of WVS data  \n │    ├── WVS_subset.csv             # Subset of WVS data  \n │  \n ├── 📂 documentation/          # Documentation and metadata  \n │    ├── codebook.pdf          # Variable definitions and coding instructions  \n │  \n ├── 📂 raw/                    # Raw data files  \n │    ├── WVS_Cross-National_Wave_7_csv_v6_0.csv  # Original WVS dataset  \n │  \n ├── 📂 code/                   # Scripts for data processing  \n │    ├── cleaning.R            # Script to clean and process WVS data  \n │  \n ├── README.md                  # Project description and instructions"
+  },
+  {
+    "objectID": "week02/assets/chatgpt-2025-vws-README-v1.html#data-description",
+    "href": "week02/assets/chatgpt-2025-vws-README-v1.html#data-description",
+    "title": "World Values Survey Data Analysis",
+    "section": "Data Description",
+    "text": "Data Description\n\nSource: The WVS dataset is publicly available at World Values Survey.\n\nProcessed Data: The clean/ folder contains merged and subsetted datasets used for analysis.\n\nRaw Data: The raw/ folder holds the original dataset in .csv format.\n\nDocumentation: The codebook.pdf explains variable definitions and survey methodology."
+  },
+  {
+    "objectID": "week02/assets/chatgpt-2025-vws-README-v1.html#code-and-reproducibility",
+    "href": "week02/assets/chatgpt-2025-vws-README-v1.html#code-and-reproducibility",
+    "title": "World Values Survey Data Analysis",
+    "section": "Code and Reproducibility",
+    "text": "Code and Reproducibility\n\nMain script: code/cleaning.R cleans and processes the raw WVS data.\nRequirements:\n\nR (version X.X.X)\nRequired packages: tidyverse, haven\n\nRunning the code:\n\nPlace the raw data in the raw/ folder.\nRun cleaning.R to generate the processed datasets."
+  },
+  {
+    "objectID": "week02/assets/chatgpt-2025-vws-README-v1.html#license-and-citation",
+    "href": "week02/assets/chatgpt-2025-vws-README-v1.html#license-and-citation",
+    "title": "World Values Survey Data Analysis",
+    "section": "License and Citation",
+    "text": "License and Citation\n\nThis project follows the MIT License.\nIf using this data or code, please cite the original WVS dataset."
+  },
+  {
+    "objectID": "week02/assets/chatgpt-2025-vws-README-v1.html#contact",
+    "href": "week02/assets/chatgpt-2025-vws-README-v1.html#contact",
+    "title": "World Values Survey Data Analysis",
+    "section": "Contact",
+    "text": "Contact\nFor questions or collaboration, contact: [Your Name] at [Your Email]."
+  },
+  {
+    "objectID": "week03/assets/trust_income_report.html",
+    "href": "week03/assets/trust_income_report.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "week03/assets/trust_income_report.html#introduction",
+    "href": "week03/assets/trust_income_report.html#introduction",
+    "title": "",
+    "section": "Introduction",
+    "text": "Introduction\nWe examine whether national income levels are associated with interpersonal trust. Trust is central to economic performance and social cohesion, and understanding its determinants can inform development policy."
+  },
+  {
+    "objectID": "week03/assets/trust_income_report.html#data-measures",
+    "href": "week03/assets/trust_income_report.html#data-measures",
+    "title": "",
+    "section": "Data & Measures",
+    "text": "Data & Measures\n\nIncome: GDP per capita, PPP (constant USD, log‑scaled).\nBaseline trust: share answering “Most people can be trusted” (Q57).\nAlternative trust index: reverse‑coded average of trust in neighbours, people known personally, first‑time met, other religion, other nationality (Q59–Q63)."
+  },
+  {
+    "objectID": "week03/assets/trust_income_report.html#descriptive-pattern",
+    "href": "week03/assets/trust_income_report.html#descriptive-pattern",
+    "title": "",
+    "section": "Descriptive Pattern",
+    "text": "Descriptive Pattern\n\n\n\nBaseline trust vs income"
+  },
+  {
+    "objectID": "week03/assets/trust_income_report.html#regression-results",
+    "href": "week03/assets/trust_income_report.html#regression-results",
+    "title": "",
+    "section": "Regression Results",
+    "text": "Regression Results\n\nBaseline trust\nβ₁ = 0.104 (SE 0.018, p = 0.000)\n\n\nAlternative trust\nβ₁ = 0.137 (SE 0.030, p = 0.000)"
+  },
+  {
+    "objectID": "week03/assets/trust_income_report.html#discussion",
+    "href": "week03/assets/trust_income_report.html#discussion",
+    "title": "",
+    "section": "Discussion",
+    "text": "Discussion\nThe positive coefficient indicates that richer countries tend to report higher levels of interpersonal trust. A one‑log (≈ 2.7×) increase in GDP per capita is associated with an average increase of 0.104 points in the baseline trust measure (on a 0‑1 scale). Results hold for the broader five‑item trust index."
+  },
+  {
+    "objectID": "week03/assets/trust_income_report.html#conclusion",
+    "href": "week03/assets/trust_income_report.html#conclusion",
+    "title": "",
+    "section": "Conclusion",
+    "text": "Conclusion\nHigher income levels correlate with greater trust. While causality cannot be established here, the pattern supports theories linking economic prosperity to social capital."
+  },
+  {
+    "objectID": "week05/assets/sentiment-guidelines.html",
+    "href": "week05/assets/sentiment-guidelines.html",
+    "title": "Guidelines for Rating:",
+    "section": "",
+    "text": "Positive mentions include praise, satisfaction with performance, optimistic outlook, and appreciation.\nNegative mentions include frustration, disappointment, criticism of performance, or external conditions.\nNeutral statements are neither positive nor negative.\n\n\nExamples:\n\n“I’m extremely proud of how the team played today. Fantastic performance by everyone.” → +2\n“We played well, but there are still areas to improve.” → +1\n“It was a tough match, evenly balanced, nothing much to say.” → 0\n“We weren’t at our best; it was a frustrating game.” → -1\n“I’m very disappointed. Our performance was unacceptable.” → -2\n\n\n\nFinal Notes:\n\nUse 0 if unsure or if sentiment is mixed without clear dominance."
+  },
+  {
+    "objectID": "week05/assets/sentiment-guidelines.html#guidelines-for-rating",
+    "href": "week05/assets/sentiment-guidelines.html#guidelines-for-rating",
+    "title": "",
+    "section": "Guidelines for Rating:",
+    "text": "Guidelines for Rating:\n\nPositive mentions include praise, satisfaction with performance, optimistic outlook, and appreciation.\nNegative mentions include frustration, disappointment, criticism of performance, or external conditions.\nNeutral statements are neither positive nor negative.\n\n\nExamples:\n\n“I’m extremely proud of how the team played today. Fantastic performance by everyone.” → +2\n“We played well, but there are still areas to improve.” → +1\n“It was a tough match, evenly balanced, nothing much to say.” → 0\n“We weren’t at our best; it was a frustrating game.” → -1\n“I’m very disappointed. Our performance was unacceptable.” → -2\n\n\n\nFinal Notes:\n\nUse 0 if unsure or if sentiment is mixed without clear dominance."
+  },
+  {
+    "objectID": "week06/assets/get-ai-api-key.html",
+    "href": "week06/assets/get-ai-api-key.html",
+    "title": "How to get an API key: OpenAI ChatGPT and Anthropic Claude",
+    "section": "",
+    "text": "Below is a comprehensive, step-by-step guide for you to obtain and securely store API keys for both OpenAI ChatGPT and Anthropic Claude. It assumes you already have active accounts but need to know exactly where to navigate in each console to generate keys, fund your projects, and follow best practices for management.\nYou’ll need to spulrge a minimum of $5 to get started. That’s enough for the purpose of this course."
+  },
+  {
+    "objectID": "week06/assets/get-ai-api-key.html#how-to-get-an-api-key-openai-chatgpt",
+    "href": "week06/assets/get-ai-api-key.html#how-to-get-an-api-key-openai-chatgpt",
+    "title": "How to get an API key: OpenAI ChatGPT and Anthropic Claude",
+    "section": "How to get an API key: OpenAI ChatGPT",
+    "text": "How to get an API key: OpenAI ChatGPT\n\nLog in to the OpenAI Platform Go to https://platform.openai.com/account/api-keys and sign in with your ChatGPT credentials if prompted.\nCreate a Project Navigate to https://platform.openai.com/settings/organization/projects and click + Create, enter a project name (e.g., “DA w AI Course”), then click Create.\nSet up Billing (Add Prepaid Credits) In the left-hand menu under Billing, click Add payment method, enter your credit card details, then purchase the minimum $5 to fund your project.\nGenerate Your API Key Within your project, go to the API Keys tab, click + Create new secret key, give it a descriptive name (e.g., “Course Project Key”), and click Create.\nCopy and Secure Your Key The full secret key string will be displayed only once—copy it immediately and store it in a password manager or secure vault. You will not be able to view it again.\n\n\nBest Practices\n\nRotate keys every 90 days and revoke any that are no longer in use to limit exposure if compromised.\nMonitor your usage via the Usage dashboard at https://platform.openai.com/account/usage or the Usage tab under Settings.\nNever commit API keys to version control—add them to .gitignore or use secret-management tools"
+  },
+  {
+    "objectID": "week06/assets/get-ai-api-key.html#how-to-get-an-api-key-anthropic-claude",
+    "href": "week06/assets/get-ai-api-key.html#how-to-get-an-api-key-anthropic-claude",
+    "title": "How to get an API key: OpenAI ChatGPT and Anthropic Claude",
+    "section": "How to get an API key: Anthropic Claude",
+    "text": "How to get an API key: Anthropic Claude\n\nLog in to the Anthropic Console Navigate to https://console.anthropic.com and sign in with your Claude account credentials.\nAccess the API Keys Section Click the key icon in the left-hand navigation.\nGenerate a New API Key On the API Keys page, click + Create Key, enter a descriptive name (e.g., “Course Key”), and click Add.\nCopy and Secure Your Key The full API key string is shown only once—copy it immediately and store it in a secure vault. You will not be able to view it again.\nSet Up Billing or Claim Free Credits In the left navigation, select Billing. If you have trial credits, you may need to verify your phone number to claim them; otherwise, under Buy credits purchase the minimum $5 to fund your usage.\n\n\nBest Practices\n\nRotate keys periodically and delete any unused or compromised keys to maintain security.\nNever expose keys in public repositories—use environment variables or secret managers and add any config files with keys to .gitignore.\nMonitor your credit balance and API usage in Billing to avoid unexpected costs."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Doing Data Analysis with AI",
+    "section": "",
+    "text": "Image"
+  },
+  {
+    "objectID": "index.html#whats-this",
+    "href": "index.html#whats-this",
+    "title": "Doing Data Analysis with AI",
+    "section": "What’s this",
+    "text": "What’s this\nThis course will equip students, who are already versed in core data analysis methods, with experience to harness AI technologies to improve productivity (yes this is classic LLM sentence). But, yeah, the idea is to help students who studied data analysis / econometrics / quant methods and want to think about how to include AI in their analytics routine, and spend time to share experiences.\nAs AI becomes more and more powerful, it is also important to provide a platform to dicuss human agency in data analysis. So a key element of the course and its instructor to lead discussions on the role of AI and humans in various aspects of data analysis."
+  },
+  {
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "Doing Data Analysis with AI",
+    "section": "COURSE DESCRIPTION",
+    "text": "COURSE DESCRIPTION\n\nContent\nThe course focuses on using large language models (LLMs) such as OpenAI’s ChatGPT, Anthropic Claude.ai, Mistral’s Le Chat, and Google’s Gemini) to carry out tasks in data analysis. It includes topics like data extraction and wrangling, data exploration and descriptive statistics, and creating reports as well as turning text to data.\nThere are three case studies that we use (1) a simulated set of data tables on hotels in Austria, (2) The World Value Survey, and (3) A series of interview textst.\nThe course material includes weekly practice assignments.\n\n\nBackground\nYou need a background in Data Analysis / Econometrics, a good introductory course is enough. I, of course, suggest Chapters 1-12 and 19 of Data Analysis for Business, Economics and Policy (Cambridge UP, 2021). Full slideshows, data and code are open source. But consider buying the book. In particular, the course builds on Chapters 1-6 and 7-10, and 19 of Data Analysis but other Introductory Econometrics + basics of data science knowledge is ok.\nStudents are expected to have some basic coding knowledge in Python or R (Stata also fine mostly).\n\n\nRelevance\nAI is everywhere and has become essential, most analytical work will be using it.\n\n\nLearning Outcomes\nKey outcomes. By the end of the course, students will be able to\n\nGain experience and confidence using genAI to carry out key tasks in data analysis.\nBuild AI in coding practice including data wrangling, description and reporting and text analysis\nHave some idea of use cases when AI assistance is (1) greatly useful, (2) helpful, (3) currently problematic.\nHave some idea of use cases when AI assistance is OK to use as is vs needs strong human supervision\nHave an understanding of resources to follow for updates.\n\n\n\nTarget audience\nThis is a couse aimed at 3rd (2nd?) year BA and (A students) in any program with required background.\nBut, anyone can use it with adequate background.\n\n\nAssignments\nAssignments are available for all classes\nImportant to note for assignments:  * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this."
+  },
+  {
+    "objectID": "index.html#week01-llm-review",
+    "href": "index.html#week01-llm-review",
+    "title": "Doing Data Analysis with AI",
+    "section": "Week01: LLM Review",
+    "text": "Week01: LLM Review\nWhat are LLMs, how is the magic happening. A non-technical brief intro. How to work with LLMs? Plus ideas on applications. Includes suggested readings, podcasts, and vids to listen to.\nContent\nWhich AI? See my take on current models. As of May 2025."
+  },
+  {
+    "objectID": "index.html#week02-data-and-code-discovery-and-documentation-with-ai",
+    "href": "index.html#week02-data-and-code-discovery-and-documentation-with-ai",
+    "title": "Doing Data Analysis with AI",
+    "section": "Week02: Data and code discovery and documentation with AI",
+    "text": "Week02: Data and code discovery and documentation with AI\nLearn how to write a clear and professional code and data documentation. LLMs are great help once you know the basics.\nCase study: World Values Survey. Data is at WVS\nContent"
+  },
+  {
+    "objectID": "index.html#week-03-writing-reports",
+    "href": "index.html#week-03-writing-reports",
+    "title": "Doing Data Analysis with AI",
+    "section": "Week 03: Writing Reports",
+    "text": "Week 03: Writing Reports\nYou have your data and task, and need to write a short report. We compare different options with LLM, from one-shot prompt to iteration.\nCase study: World Values Survey. Data is at WVS\nContent"
+  },
+  {
+    "objectID": "index.html#week04-data-wrangling-joining-tables",
+    "href": "index.html#week04-data-wrangling-joining-tables",
+    "title": "Doing Data Analysis with AI",
+    "section": "Week04: Data wrangling, joining tables",
+    "text": "Week04: Data wrangling, joining tables\nWhen asked about what I shall add to my textbook, David Card, the Nobel winning empirical economist told me that I shall spend time with joining tables. Here we go.\nCase study: simulated Austrian hotels. Data is at hotels\nContent"
+  },
+  {
+    "objectID": "index.html#week05-text-as-data-1-intro-lecture",
+    "href": "index.html#week05-text-as-data-1-intro-lecture",
+    "title": "Doing Data Analysis with AI",
+    "section": "Week05: Text as data 1 – intro lecture",
+    "text": "Week05: Text as data 1 – intro lecture\nNo course of mine can escape football (soccer). Here we look at post-game interviews to learn basics of text analysis and apply LLMs in what they are best - context dependent learning. Two class series. First is more intro to natural language processing.\nCase study: football post-game interviews. Data is at interviews\nContent"
+  },
+  {
+    "objectID": "index.html#week06-text-as-data-2-practice",
+    "href": "index.html#week06-text-as-data-2-practice",
+    "title": "Doing Data Analysis with AI",
+    "section": "Week06: Text as data 2 – practice",
+    "text": "Week06: Text as data 2 – practice\nSecond class, now we are in action. How does LLM compare to humans?\nCase study: football post-game interviews. Data is at interviews\nContent"
+  },
+  {
+    "objectID": "index.html#learn-more",
+    "href": "index.html#learn-more",
+    "title": "Doing Data Analysis with AI",
+    "section": "Learn more",
+    "text": "Learn more\nI’m adding material to learn-more folder. You can start with the beyond page."
+  },
+  {
+    "objectID": "index.html#rights-and-acknowledgement",
+    "href": "index.html#rights-and-acknowledgement",
+    "title": "Doing Data Analysis with AI",
+    "section": "Rights and acknowledgement",
+    "text": "Rights and acknowledgement"
+  },
+  {
+    "objectID": "index.html#you-can-use-it-to-teach-and-learn-freely",
+    "href": "index.html#you-can-use-it-to-teach-and-learn-freely",
+    "title": "Doing Data Analysis with AI",
+    "section": "You can use it to teach and learn freely",
+    "text": "You can use it to teach and learn freely\nAttribution: Békés, Gábor: “Doing Data Analysis with AI: a short course”, available at github.com/gabors-data-analysis/da-w-ai/, v0.5, 2025-05-14\nLicense: CC BY-NC-SA 4.0 – share, attribute, non-commercial (contact me for corporate gigs)"
+  },
+  {
+    "objectID": "index.html#thanks",
+    "href": "index.html#thanks",
+    "title": "Doing Data Analysis with AI",
+    "section": "Thanks",
+    "text": "Thanks\nThanks: Developed mostly by me, Gábor Békés Thanks a million to the two wonderful human RAs, Ms Zsuzsa Vadle and Mr Kenneth Colombe, both Phd students. Thanks to Claude.ai that did a great deal of help in creating the simulated dataset. ChatGPT and Claude.ai helped create the slideshows and educated me on NLP.\nThanks for CEU’s teaching grant that allowed me pay humans and AI."
+  },
+  {
+    "objectID": "index.html#questions-and-suggestions",
+    "href": "index.html#questions-and-suggestions",
+    "title": "Doing Data Analysis with AI",
+    "section": "Questions and suggestions",
+    "text": "Questions and suggestions\nThis material is based my course at CEU in Vienna, Austria. I teach it from this Github repo.\nIf you have questions or suggestions or interested to learn more, just fill in this form."
+  },
+  {
+    "objectID": "index.html#and-now-this.",
+    "href": "index.html#and-now-this.",
+    "title": "Doing Data Analysis with AI",
+    "section": "And now, this.",
+    "text": "And now, this.\nAI use is very costly in terms of energy. Yes, it is becoming cheaper. But humanity is also using much more of it."
+  },
+  {
+    "objectID": "week08/index.html",
+    "href": "week08/index.html",
+    "title": "AI as Research companion",
+    "section": "",
+    "text": "TBA",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 8: AI Research Companion"
+    ]
+  },
+  {
+    "objectID": "week06/index.html",
+    "href": "week06/index.html",
+    "title": "Week 06: Text to data with AI",
+    "section": "",
+    "text": "Continue using text for research with AI\n\n\nBy the end of the session, students will:\n\nGain hands-on experience with sentiment analysis.\nHave experience integrating NLP in research\nThink about what is ground truth\n\n\n\n\nDatasets - texts (text_id level) - games info (such as results, text_id level) - class-ratings (human, AI ratio, text_id*student level) - domain-rating (text_id level) - class-rating-aggregated (text_id level)\ncode\ncode that creates the combined data",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 6: Text as Data II"
+    ]
+  },
+  {
+    "objectID": "week06/index.html#overview",
+    "href": "week06/index.html#overview",
+    "title": "Week 06: Text to data with AI",
+    "section": "",
+    "text": "Continue using text for research with AI\n\n\nBy the end of the session, students will:\n\nGain hands-on experience with sentiment analysis.\nHave experience integrating NLP in research\nThink about what is ground truth\n\n\n\n\nDatasets - texts (text_id level) - games info (such as results, text_id level) - class-ratings (human, AI ratio, text_id*student level) - domain-rating (text_id level) - class-rating-aggregated (text_id level)\ncode\ncode that creates the combined data",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 6: Text as Data II"
+    ]
+  },
+  {
+    "objectID": "week06/index.html#preparation",
+    "href": "week06/index.html#preparation",
+    "title": "Week 06: Text to data with AI",
+    "section": "Preparation",
+    "text": "Preparation\n\nDownload the combined data from Moodle\n\nNote: win, draw – need encode loss",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 6: Text as Data II"
+    ]
+  },
+  {
+    "objectID": "week06/index.html#class-tasks",
+    "href": "week06/index.html#class-tasks",
+    "title": "Week 06: Text to data with AI",
+    "section": "Class tasks",
+    "text": "Class tasks\n\nDiscussion 1\n\nYour experience regarding human vs ai ratings.\nWhat was difficult and easy as human rater\n\n\n\nData Analysis\n\nTake the aggregated file and ask AI for a readme. Discuss what is in the data\nCompare human, domain lexicon and AI rating. For human and AI take the average.\nThink of an interesting comparison using AI rating\nCompare results by human and lexicon rating\n\n\n\nDiscussion 2\n\nWhat is ground truth\n\n\n\nHow to integrate AI into research\n\ncombine data with text\nthink RQ and how you’d use AI",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 6: Text as Data II"
+    ]
+  },
+  {
+    "objectID": "week06/index.html#additional-tasks-if-time-permits",
+    "href": "week06/index.html#additional-tasks-if-time-permits",
+    "title": "Week 06: Text to data with AI",
+    "section": "Additional tasks if time permits",
+    "text": "Additional tasks if time permits\n\npredict gender and result\n\nShow AI all texts and ask to predict the gender of speaker\nShow AI all texts and ask to predict the result (manager’s team won, drew, lost)",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 6: Text as Data II"
+    ]
+  },
+  {
+    "objectID": "week04/index.html",
+    "href": "week04/index.html",
+    "title": "Week 04 Join tables",
+    "section": "",
+    "text": "Data wrangling is when you prepare the data for the analysis. A key aspect is joining data tables. AI can help design the process, and give you code to do that.\n\n\nLearn how to organize data in a tidy way, join multiple datasets, choose variables to answer a research question and create a reproducible workflow to analyze data.\n\n\n\n\nLearn how to store information in a tidy way.\nWork with relational data.\nJoin tables\nUse AI to explain complex concepts\n\n\n\n\n\nBackground reading: Békés-Kézdi (2021) Chapter 2\nDownload data-modified.zip from Here. Unzip. It is a set of csv files such as ‘cities_modified’\n\nAlso available on Moodle\n\nThe data description is available here",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 4: Joining Tables"
+    ]
+  },
+  {
+    "objectID": "week04/index.html#about-the-class",
+    "href": "week04/index.html#about-the-class",
+    "title": "Week 04 Join tables",
+    "section": "",
+    "text": "Data wrangling is when you prepare the data for the analysis. A key aspect is joining data tables. AI can help design the process, and give you code to do that.\n\n\nLearn how to organize data in a tidy way, join multiple datasets, choose variables to answer a research question and create a reproducible workflow to analyze data.\n\n\n\n\nLearn how to store information in a tidy way.\nWork with relational data.\nJoin tables\nUse AI to explain complex concepts\n\n\n\n\n\nBackground reading: Békés-Kézdi (2021) Chapter 2\nDownload data-modified.zip from Here. Unzip. It is a set of csv files such as ‘cities_modified’\n\nAlso available on Moodle\n\nThe data description is available here",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 4: Joining Tables"
+    ]
+  },
+  {
+    "objectID": "week04/index.html#class-plan",
+    "href": "week04/index.html#class-plan",
+    "title": "Week 04 Join tables",
+    "section": "Class Plan",
+    "text": "Class Plan\n\nRecap\nDiscuss assignment 03 (20 mins by groups + 10 mins together) * Create 4-member groups. Each groups will read reports by an another team (1–&gt;2, 2–&gt;3, N–&gt;1) * Read the other team’s submissions with a ‘reader’s perspective’ and take notes. * which report did you like the most and why * rank reports in terms of how much AI was involved from low to high and note suspicious examples\n\n\nTask 1: Use AI to understand these terms. Ask examples. (Individual)\n\ntidy data table\nrelational datasets,\n\nschema,\nprimary and foreign key\ncomposite key\n\njoining tables\n\ndifferent types of join\n1:1, 1:m\n\njoining tables in your language (python, R, Stata)\n\nThis is followed by a discussion.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 4: Joining Tables"
+    ]
+  },
+  {
+    "objectID": "week04/index.html#task-2-form-2-3-groups-of-people-using-same-coding-language",
+    "href": "week04/index.html#task-2-form-2-3-groups-of-people-using-same-coding-language",
+    "title": "Week 04 Join tables",
+    "section": "Task 2: Form 2-3 groups of people using same coding language",
+    "text": "Task 2: Form 2-3 groups of people using same coding language\nUse the data you downloaded to carry out joins and inspect results. Use AI but inspect.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 4: Joining Tables"
+    ]
+  },
+  {
+    "objectID": "week04/index.html#section",
+    "href": "week04/index.html#section",
+    "title": "Week 04 Join tables",
+    "section": "1:1",
+    "text": "1:1\n\nJoin hotels and cities. Compare left, right, inner, outer joins.\n\n\nwhat happens to N?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 4: Joining Tables"
+    ]
+  },
+  {
+    "objectID": "week04/index.html#m",
+    "href": "week04/index.html#m",
+    "title": "Week 04 Join tables",
+    "section": "1:m",
+    "text": "1:m\n\nStart: Tabulate the frequency of hotels by city_hotel_counts\nCities to Hotels\n\n\none city joins to multiple hotels\nfilter on 2 cities for easier visibility\n\n\nJoin hotel and occupancy 1\n\n\nm:1\n\n\nJoin hotel and occupancy 2\n\n\nget hotel level\ntrick: aggregate\n\n\nJoin on composite key\n\n\ncreate a data table at city-year-match level showing average occupancy and tourist arrivals",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 4: Joining Tables"
+    ]
+  },
+  {
+    "objectID": "week04/index.html#advice-ideas",
+    "href": "week04/index.html#advice-ideas",
+    "title": "Week 04 Join tables",
+    "section": "Advice, ideas",
+    "text": "Advice, ideas\n\ndiscuss and collect ideas from AI\nlearn to focus on key suggestions (AI can go nuanced and not important points easily)",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 4: Joining Tables"
+    ]
+  },
+  {
+    "objectID": "week04/index.html#home-assignment",
+    "href": "week04/index.html#home-assignment",
+    "title": "Week 04 Join tables",
+    "section": "Home Assignment",
+    "text": "Home Assignment\nSuggested assignment [/assignments/assignment_04.md]",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 4: Joining Tables"
+    ]
+  },
+  {
+    "objectID": "week04/index.html#end-of-week-discussion-points",
+    "href": "week04/index.html#end-of-week-discussion-points",
+    "title": "Week 04 Join tables",
+    "section": "End of Week Discussion points",
+    "text": "End of Week Discussion points\n\nHow useful was AI in teaching skills?\nHow useful was AI in actually joining tables?\nHow can you debug what AI did in terms of executing code?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 4: Joining Tables"
+    ]
+  },
+  {
+    "objectID": "week02/index.html",
+    "href": "week02/index.html",
+    "title": "Week02: Code and data discovery and documentation with AI",
+    "section": "",
+    "text": "Sometimes data is large and discovery is hard. Sometimes you need to write data documentation. LLMs can help. You will learn how to write a clear and professional README. We use a cleaned subset of the 7th Wave of the World Values Survey (WVS). We’ll also talk some tech on documentation.\n\n\n\n\nUnderstand how to document a new dataset using as an example th WVS 7th wave data.\nCreate a README that describes data.\nLearn to refine documentation by incorporating iterative feedback from peers and AI tools.\n\n\n\n\n\n\n\nBackground reading: Békés-Kézdi (2021) Chapters 1-3, in particular core background info\nSome discussion of data types Data Management in Large-Scale Education Research by Crystal Lewis\n\n\n\n\nAccess the VWS dataset 1. Data: WVS_random_subset.csv - random subset (N=2000) - covering all countries 2. Download its official codebook documentation\nIf you prefer datasets are also at OSF, Gabors Data Analysis / World Values Survey",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week02/index.html#summary",
+    "href": "week02/index.html#summary",
+    "title": "Week02: Code and data discovery and documentation with AI",
+    "section": "",
+    "text": "Sometimes data is large and discovery is hard. Sometimes you need to write data documentation. LLMs can help. You will learn how to write a clear and professional README. We use a cleaned subset of the 7th Wave of the World Values Survey (WVS). We’ll also talk some tech on documentation.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week02/index.html#learning-objectives",
+    "href": "week02/index.html#learning-objectives",
+    "title": "Week02: Code and data discovery and documentation with AI",
+    "section": "",
+    "text": "Understand how to document a new dataset using as an example th WVS 7th wave data.\nCreate a README that describes data.\nLearn to refine documentation by incorporating iterative feedback from peers and AI tools.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week02/index.html#preparation-before-class",
+    "href": "week02/index.html#preparation-before-class",
+    "title": "Week02: Code and data discovery and documentation with AI",
+    "section": "",
+    "text": "Background reading: Békés-Kézdi (2021) Chapters 1-3, in particular core background info\nSome discussion of data types Data Management in Large-Scale Education Research by Crystal Lewis\n\n\n\n\nAccess the VWS dataset 1. Data: WVS_random_subset.csv - random subset (N=2000) - covering all countries 2. Download its official codebook documentation\nIf you prefer datasets are also at OSF, Gabors Data Analysis / World Values Survey",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week02/index.html#review-assignment-01",
+    "href": "week02/index.html#review-assignment-01",
+    "title": "Week02: Code and data discovery and documentation with AI",
+    "section": "Review Assignment 01",
+    "text": "Review Assignment 01\n\nFollow instructions.\nHow to get close to original, different ways\nWhy do an app? What to expect from an app\n\nstreamlit\nshinyapps",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week02/index.html#i.-background",
+    "href": "week02/index.html#i.-background",
+    "title": "Week02: Code and data discovery and documentation with AI",
+    "section": "I. Background",
+    "text": "I. Background\n\nAbout Markdown\n\nEditor in R, Python Quarto\nOnline Markdown editor\nAlso: Pandoc\n\n\n\nWhat is a good readme?\nSome examples for reproduction package\n\nBékés-Kézdi (2021) Hotels dataset – show basics\nKoren-Pető (2021) Business disruptions from social distancing as PDF\nSome ideas on readme: Makereadme, Social Science Editors\n\nKey ingredients\n\nOverview of project\nlicense\nAll datasets (data tables) separately discussed\nAll key variables described (name, content, type, coverage (% share missing)\n\nmaybe also: source, extension (csv / xlsx/ parquet)\n\n\n\n\nWhat is a variable dictionary (also called codebook)\n\nmore details of a dataset, often as xlsx\nmetric (euro, %), meaning of values if categorical\nmaybe even mean, min, max\n\nExamples\n\nBékés-Kézdi (2021) Bisnode dataset variables\nReif (2022) illinois-wellness-data",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week02/index.html#ii.-work-on-data",
+    "href": "week02/index.html#ii.-work-on-data",
+    "title": "Week02: Code and data discovery and documentation with AI",
+    "section": "II. Work on data",
+    "text": "II. Work on data\n\nNo AI\n\nDownload and look at the Random Subset data\nStart collecting some info on the data without AI\nStart thinking about an interesting research question (find \\(y\\) and \\(x\\))\n\n\n\nAI: let AI teach you also about\n\nStart asking for skeleton readme, ask about advice\nDiscussion\n\n\n\nAI: Learning and idea generation\n\nTell AI about your plan and need for a readme\n\nexperiment with one-shot vs interaction\n\nDiscussion\n\n\n\nCyborg mode: create a readme with AI\n\nUpload the codebook + random subset data\nGet AI to design a README TEMPLATE for this task.\nGet a draft\nUnderstand and edit draft\n\n\n\nIII additional idea\n\nSometimes, complicated projects have extensive folder structure. Use A to design a folder structure",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week02/index.html#end-of-week-discussion-points",
+    "href": "week02/index.html#end-of-week-discussion-points",
+    "title": "Week02: Code and data discovery and documentation with AI",
+    "section": "End of Week Discussion points",
+    "text": "End of Week Discussion points\n\nWhat was the biggest contribution of AI?\nFirst result vs after iterations – what did improve?\nHow do you feel about learning from AI vs human instructor? Pros and cons?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week03/index.html",
+    "href": "week03/index.html",
+    "title": "Week 03 Reporting your data analysis",
+    "section": "",
+    "text": "How to organize a short data analytics report? The job includes choosing and creating relevant plots, running regression. The class will exlopre how we can use AI to assist in these tasks.\n\n\n\n\nUnderstand how to connect an empirical question to data\nCreate relevant visualizations and tables using AI.\nLearn to critically assess reports with the help of AI tools.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 3: Writing Reports"
+    ]
+  },
+  {
+    "objectID": "week03/index.html#objectives",
+    "href": "week03/index.html#objectives",
+    "title": "Week 03 Reporting your data analysis",
+    "section": "",
+    "text": "How to organize a short data analytics report? The job includes choosing and creating relevant plots, running regression. The class will exlopre how we can use AI to assist in these tasks.\n\n\n\n\nUnderstand how to connect an empirical question to data\nCreate relevant visualizations and tables using AI.\nLearn to critically assess reports with the help of AI tools.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 3: Writing Reports"
+    ]
+  },
+  {
+    "objectID": "week03/index.html#preparation-before-class",
+    "href": "week03/index.html#preparation-before-class",
+    "title": "Week 03 Reporting your data analysis",
+    "section": "Preparation BEFORE class",
+    "text": "Preparation BEFORE class\n\nBackground reading: Békés-Kézdi (2021) Chapters 3-4, 7-10\nDownload the WVS_GDP_merged_data.csv. This is an aggregated, cleaned subset of the 7th Wave of WVS dataset merged with GDP data from World Bank\n\n\nThe data\n\nThis is aggregated data: country level\nYear: Wave 7 of the WVS – survey was conducted at different years.\nCombined with World Bank data: at year when survey was conducted\nGDP: level USD, level USD PPP, level USD PPP per capita\npopulation",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 3: Writing Reports"
+    ]
+  },
+  {
+    "objectID": "week03/index.html#class-plan",
+    "href": "week03/index.html#class-plan",
+    "title": "Week 03 Reporting your data analysis",
+    "section": "Class plan",
+    "text": "Class plan\n\nReview Readme assignment\n\nQ+A\nVerify, verify, verify (AI is good but rarely perfect)\n\n\n\nStarting presentation about prompting\nslideshow\n\n\nHow does a good report look like?\n\nHow to write a good short report: structure\ngood graphs and tables\n\nMake sure precise language. Recap on causal language.\n\n\n\n\nProblems with AI generated reports.\nUse AI as input (like advanced google search) not as output writer\nBecause * Creates “average” / generic / bland / repetitive text * Convincing but not precise * Not your style and not your exact plan * Too broad (like adds further research)\n\n\nNO AI\nForm 2-3 member groups freely\n\nEach group: Choose one these pre-defined research questions:\n\n\nIs there a relationship between income level and trust?\nIs there a relationship between income level and happiness?\nIs there a relationship between income level and gender attitudes?\n\n\nChoose the relevant variables to answer your question (you can use AI to understand variables like in week2\nDesign a plan for a report on the topic: list of exhibits (graphs, tables). Do not write code (yet)\nDiscuss plans\n\n\n\nAI 1\nTry get a report with a single prompt. * Hint: translate your plan into a prompt using ideas from the intro.\n\n\nAI 2\n\nShowcase an iterative process where key exhibits are created",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 3: Writing Reports"
+    ]
+  },
+  {
+    "objectID": "week03/index.html#end-of-week-discussion-points",
+    "href": "week03/index.html#end-of-week-discussion-points",
+    "title": "Week 03 Reporting your data analysis",
+    "section": "End of Week Discussion points",
+    "text": "End of Week Discussion points\n\nCompare single and multi-step approach generating reports?\nHow good is AI in creating good enough vs exactly as planned graphs?\nWhat is happiness? :-)",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 3: Writing Reports"
+    ]
+  },
+  {
+    "objectID": "week05/index.html",
+    "href": "week05/index.html",
+    "title": "Week 05: using text as data",
+    "section": "",
+    "text": "In this lesson, students will be introduced to sentiment analysis, specifically applied to evaluating general positivity or negativity in football managers’ statements about match outcomes.\n\n\nBy the end of the session, students will: - Gain hands-on experience with sentiment analysis. - Understand the complexities and limitations of sentiment analysis.\n\n\n\n\nGeneral Sentiment (positive/negative) rating scale HERE\nCSV files:\n\nstudent_test_5 download from HERE as xlsx HERE as csv, (or from moodle)",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#overview",
+    "href": "week05/index.html#overview",
+    "title": "Week 05: using text as data",
+    "section": "",
+    "text": "In this lesson, students will be introduced to sentiment analysis, specifically applied to evaluating general positivity or negativity in football managers’ statements about match outcomes.\n\n\nBy the end of the session, students will: - Gain hands-on experience with sentiment analysis. - Understand the complexities and limitations of sentiment analysis.\n\n\n\n\nGeneral Sentiment (positive/negative) rating scale HERE\nCSV files:\n\nstudent_test_5 download from HERE as xlsx HERE as csv, (or from moodle)",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#assignment-review",
+    "href": "week05/index.html#assignment-review",
+    "title": "Week 05: using text as data",
+    "section": "Assignment review",
+    "text": "Assignment review\n\nFancy graphs != good graphs (good graph &lt;- careful design)\nPrecise interpretation &gt;&gt; BS\nLess is more\nShow only what you understand deeply",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#lecture-nlp-basics",
+    "href": "week05/index.html#lecture-nlp-basics",
+    "title": "Week 05: using text as data",
+    "section": "Lecture: NLP basics",
+    "text": "Lecture: NLP basics\n\nTopic: Introduction to Sentiment Analysis\nKey points:\n\nImportance of text analysis and its applications\nIntroduction to Natural Language Processing (NLP): definition and applications\nKey concepts in text analysis:\n\nTokenization\nPreprocessing techniques\nFeature extraction\n\nSentiment analysis: detecting emotion and tone in text\nPractical examples from football managers’ post-match interviews\nLimitations and challenges in text analysis, emphasizing contextual interpretation and ambiguity\n\n\nSlides\ndomain lexicon",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#practical-activity",
+    "href": "week05/index.html#practical-activity",
+    "title": "Week 05: using text as data",
+    "section": "Practical Activity",
+    "text": "Practical Activity\n\nManual vs AI Sentiment Analysis Activity\n\nObjective: Practice manually rating football manager statements as positive or negative.\nSteps:\n\nReview general sentiment rating scale provided HERE\nIndividually analyze and rate 5 provided test statements from student_test.csv.\nNow use AI to rate them.\nTry have a better domain lexicon.\n\n\nDiscuss experience, how AI helps, what could go wrong.\n\n\nPrediction of score\n\nModeling choices of results\nThink about how you would do it first\nCheck how AI thinks about, rate the examples and look at explanations\ntake the 5 examples, and compare your predictions vs the AI predictions\n\n\n\nDiscussion: Validation and Sentiment Analysis\n\nObjective: Discuss validation techniques used in sentiment analysis.\nTopics for discussion:\n\nDifferences between manual and AI ratings\nGround Truth\nIntroduction to validation methods:\nIf ground truth – can do confusion maztric, calculate accuracy\nIf no ground truth – measure agreement between humans and AI. test difference.\n\nAI is average, but…\nAI with persona?\nAI biased ?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#end-of-week-discussion-points",
+    "href": "week05/index.html#end-of-week-discussion-points",
+    "title": "Week 05: using text as data",
+    "section": "End of Week Discussion points",
+    "text": "End of Week Discussion points\n\nHow precise is AI in sentiment analysis?\nHow did you compare to AI in terms of scores? How did any difference make you feel?\nCan you think of a past project where AI could have helped you upgrade it?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week07/index.html",
+    "href": "week07/index.html",
+    "title": "Creating dashboards and online simulation apps",
+    "section": "",
+    "text": "TBA",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 7: Dashboards & Apps"
+    ]
+  },
+  {
+    "objectID": "week07/index.html#part-i-dashboard-to-illustrate-economics",
+    "href": "week07/index.html#part-i-dashboard-to-illustrate-economics",
+    "title": "Creating dashboards and online simulation apps",
+    "section": "Part I Dashboard to illustrate economics",
+    "text": "Part I Dashboard to illustrate economics\nTBA",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 7: Dashboards & Apps"
+    ]
+  },
+  {
+    "objectID": "week07/index.html#part-ii-simulation-app-for-a-statistical-property",
+    "href": "week07/index.html#part-ii-simulation-app-for-a-statistical-property",
+    "title": "Creating dashboards and online simulation apps",
+    "section": "Part II Simulation app for a statistical property",
+    "text": "Part II Simulation app for a statistical property\nTBA",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 7: Dashboards & Apps"
+    ]
+  },
+  {
+    "objectID": "week06/assets/walkthrough-wb-fred.html",
+    "href": "week06/assets/walkthrough-wb-fred.html",
+    "title": "Getting GDP data",
+    "section": "",
+    "text": "We’ll show two options: World Bank and FRED"
+  },
+  {
+    "objectID": "week06/assets/walkthrough-wb-fred.html#world-bank-gdp-per-capita-via-wb-api",
+    "href": "week06/assets/walkthrough-wb-fred.html#world-bank-gdp-per-capita-via-wb-api",
+    "title": "Getting GDP data",
+    "section": "World Bank GDP per capita via WB API",
+    "text": "World Bank GDP per capita via WB API\nAPI-based, no key needed, works in both R and Python.\n\nSame data source (World Bank).\nOfficial packages in Python, R\nNo messy HTML scraping.\nClear structure: select indicator → countries → year → get table.\n\n\n📈 GDP per capita (constant 2015 US$), code: NY.GDP.PCAP.KD\n\n\n\nPython (using wbdata or pandas-datareader):\nimport wbdata\nimport pandas as pd\nfrom datetime import datetime\n\n# Set countries and indicator\ncountries = ['USA', 'HUN', 'DEU']\nindicator = {'NY.GDP.PCAP.KD': 'GDP_per_capita'}\n\n# Get data\ndf = wbdata.get_dataframe(indicator, country=countries, data_date=datetime(2021, 1, 1))\nprint(df.head())\n\n\n\nR (using wbstats):\ninstall.packages(\"wbstats\")\nlibrary(wbstats)\n\n# Set indicator and countries\ngdp_data &lt;- wb(indicator = \"NY.GDP.PCAP.KD\", country = c(\"US\", \"HU\", \"DE\"),\n               startdate = 2021, enddate = 2021)\n\nhead(gdp_data)"
+  },
+  {
+    "objectID": "week06/assets/walkthrough-wb-fred.html#fred",
+    "href": "week06/assets/walkthrough-wb-fred.html#fred",
+    "title": "Getting GDP data",
+    "section": "FRED",
+    "text": "FRED\nFRED (Federal Reserve Economic Data) provides economic time series (e.g. GDP, inflation, interest rates).\n\nYou need an API key, but the process is straightforward\nworks in both R and Python with identical logic in both languages: set key → request series → get dataframe.\n\n\n\n🔑 Get API Key\n\nSign up at https://fred.stlouisfed.org/\nGo to your account settings to get your API key.\nCopy your API key, you’ll need it with code\n\n\n\n\n✅ Example: U.S. GDP per capita (A939RC0Q052SBEA)\nDetails at FRED site\n\n\n\nPython (using fredapi)\nfrom fredapi import Fred\n\nfred = Fred(api_key='your_api_key_here')\n\n# GDP per capita\ngdp_pc = fred.get_series('A939RC0Q052SBEA')\nprint(gdp_pc.tail())\n\n\n\nR (using fredr)\ninstall.packages(\"fredr\")\nlibrary(fredr)\n\nfredr_set_key(\"your_api_key_here\")\n\n# GDP per capita\ngdp_pc &lt;- fredr(series_id = \"A939RC0Q052SBEA\")\nhead(gdp_pc)"
+  },
+  {
+    "objectID": "assignments/assignment_05.html",
+    "href": "assignments/assignment_05.html",
+    "title": "Assignment 05",
+    "section": "",
+    "text": "Task\nStudent-Specific Text Sentiment Analysis – Compare manual ratings with AI-generated ratings.\nSteps: * Download the text file of interviews. Randonly generate a series of 25 numbers between 1 and 121 (without replacement). Those will your interviews to rate. Filter those interviews and save the file as lastname_firstname_sentiment_rated.xlsx. * Go through your interviews and manually rate managers’ sentiment (25 total). * Input full manager interviews (without your rating) into the AI of choice and obtain and compare AI-generated sentiment ratings to initial manual assessments. * For both exercises, incorporate the guidelines HERE * Compare your manual and AI generated ratings, and write one paragraph summarizing similarities and deviation.\n\n\nSubmit:\n\nA file with your manual ratings and AI generated ratings: lastname_firstname_sentiment_rated.xlsx.\nA text file with the one paragraph summarizing similarities and deviation: lastname_firstname_sentiment_eval.txt/",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Assignment 5"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment_03.html",
+    "href": "assignments/assignment_03.html",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Continue with the research question you had chosen in class.\nUse AI iteratively to help you create a report.\nImportant * AI is your assistant, use it as input not as output. Don’t submit an AI-generated report as such, always author, review, edit.\n\nTasks\nOption A (easy) * Think in terms of two variables (\\(x\\) and \\(y\\)). * Pick a single variable or a combined index of variables * Pick a GDP variable * Think about a causal link. * Create one carefully designed graph to illustrate the relationship (Graph 1) * At each step, explain your choices/decisions (ie why you chose a certain variable) * Create a Conclusion paragraph where you summarize your work and results in 80-100 words.\nOption B (advanced) * In addition to the tasks in Option A, create another graph to show heterogeneity of country size groups using population (Graph 2) * Run a regression and interpret the coefficient.\n\n\nTo submit\n\nSubmission 1: Submit a maximum 1-1.5 page report in .pdf format (including exhibits) (lastname_firstname_dawai_week03_report.pdf) (12p)\nSubmission 2: Submit your code (or aprovide a link). (4p)\nSubmission 3: What advice would you give to a fellow data analysis student on using AI to create a report? (lastname_firstname_dawai_week01_advice.txt) (4p)\n\nList 2–3 pieces of advice based on your own experience using AI for this specific task.\n\n\nImportant: * Upload your report to the student folder called Reports at moodle * Important: Do not use AI to help you generate the advice. We want to hear your personal examples and reflections, not AI-generated suggestions. * Next class in the first 20 mins each group will read another groups report and discuss the good and bad aspects of the report.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment_01.html",
+    "href": "assignments/assignment_01.html",
+    "title": "Reproduce an FT graph",
+    "section": "",
+    "text": "Look at this graph from Financial Times. Your task is to recreate this figure using real-world data.\n\nOption A (easy)\nUse AI as your assistant to find real-world data that matches or closely resembles the one used in the FT graph, and recreate the same chart using that data.\nwhat to submit * Graph: A PDF version of your recreated graph, name it: “lastname_firstname_dawai_week01_ftfigure.pdf” * Data: A CSV file with the data used to create the graph, with the name (“lastname_firstname_dawai_week01_ftdata.pdf”)\n\n\nOption B (advanced)\nUse AI as your assistant to build an interactive app (dashboard) that mimics the FT graph. * Minimum requirement: the you shall be able to set dates, and hover around values * Ideal: get the app update data and graph dynamically. * could be upload new data * best: automatic via API\nwhat to submit * link to app * you can use tools like steamlit (Python), shinyapps (R), etc",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment_02.html",
+    "href": "assignments/assignment_02.html",
+    "title": "Assignment 2: Creating a readme doc",
+    "section": "",
+    "text": "Task\nIn this assignment, you will create a readme document by asking for AI assistance. * First, consider the VWS Survey we used in class: Codebook, sample data * Second, choose a research question using the VWS data. It can be broad or specific. Ask AI for ideas. * What variables would you use to investigate the research question? Pick the most relevant ones (min 8, max 25) * Considering these variables only create a single README.md (in markdown). In the readme, include:\nOption A (easy) * key info on the dataset itself (you need to figure out what this key info is based on the lecture and examples) * key variables description * table with descriptive statistics for the 5 most important selected variables\nOption B (advanced) * in addition to the points in Option A, describe the folder structure you would use to work with this data\n\n\nTo submit\n\nSubmission 1: a finalized README.md file and code. (lastname_firstname_dawai_week01_readme.md) (16p)\nSubmission 2: What advice would you give to a fellow data analysis student on using AI to create README documents? (lastname_firstname_dawai_week01_advice.txt) (4p)\n\nList 2–3 pieces of advice based on your own experience using AI for this specific task.\n\n\nImportant notice * Do not use AI to help you generate the advice. We want to hear your personal examples and reflections, not AI-generated suggestions.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment_04.html",
+    "href": "assignments/assignment_04.html",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Create groups of 2-3 people who use the same coding language.\n\nTask\nAsk AI to give you a list of research questions that can be answered using many (at least 4) of the hotel data sets provided. Iterate with AI to find an interesting question using a persona. * Write code that joins the required data\nOption A (easy) * Write code to do the analysis (conditional comparison / some simple regression) * Produce a single figure that shows the answer (or a simple version of the answer) to the research question (e.g. scatterplot and regression line, or boxplot, etc) Create a min. 6 - max. 10 pages slide show to illustrate the research question, the merging process, the figure and the conclusion.\nFor example, you can use the following slide show structure, each bit is 1-2 slides: * Research question and why/for whom you picked it * Data and variables * Detailed steps of joining tables to get to the work data (here be specific, include schema, keys used, join types, 2-4 slides) * Steps of creating your variables for analysis * Result and interpretation\nOption B (advanced) * In addition to the tasks in Option A, choose another real-world dataset that could be merged with the hotel data. * Choose an additional question that can be answered using the hotel data and the newly merged dataset. * Add two slides where you 1) describe how you joined the two datasets and 2) include a figure that shows your finding\n\n\nSubmit:\n\nSlideshow in pdf format: “lastname1_lastname2_lastname3_slides.pdf”\nReproducible code “lastname1_lastname2_lastname3_code.pdf”",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Assignment 4"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment_07.html",
+    "href": "assignments/assignment_07.html",
+    "title": "Assignment 07",
+    "section": "",
+    "text": "Create a simulation app of an important statistical phenomenon.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Assignment 7"
+    ]
+  },
+  {
+    "objectID": "week02/assets/da-background.html",
+    "href": "week02/assets/da-background.html",
+    "title": "Data Analysis Background",
+    "section": "",
+    "text": "This is based on Békés-Kézdi: Data Analysis for Business, Econoomics, and Policy (2021, Cambridge University Press), Chapter 02 Preparing data for analysis\nSlideshow is available here: Chapter 02 slides"
+  },
+  {
+    "objectID": "week02/assets/da-background.html#variables",
+    "href": "week02/assets/da-background.html#variables",
+    "title": "Data Analysis Background",
+    "section": "Variables",
+    "text": "Variables\n\nVariable types\n\ncontinuous or discrete or qualitative\nbinary\nflow and stock\n\n\n\nEncoding\n\nbinary\nnumeric\nstring (text)\ncategorical / factor (maybe ordinal)\n\n\n\nMeaning of variable values\n\nwhat are they measuring\nunit of measurement\nsource\n\n\n\nOther Information\n\ndescriptive statistics\ncoverage / share of missing values"
+  },
+  {
+    "objectID": "week04/assets/presentation-plan.html",
+    "href": "week04/assets/presentation-plan.html",
+    "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
+    "section": "",
+    "text": "Data table joins combine information from multiple tables based on matching values.\nKey Terms: - Primary Key: Unique identifier for each row (e.g., hotel_id) - Foreign Key: Column that references a primary key in another table - Join Key: Column(s) used to match rows between tables\nCommon Join Types: - Inner Join: Returns only matching rows - Left Join: Returns all rows from left table, matching rows from right - Right Join: Returns all rows from right table, matching rows from left - Full Join: Returns all rows from both tables"
+  },
+  {
+    "objectID": "week04/assets/presentation-plan.html#slide-1-key-vocabulary",
+    "href": "week04/assets/presentation-plan.html#slide-1-key-vocabulary",
+    "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
+    "section": "",
+    "text": "Data table joins combine information from multiple tables based on matching values.\nKey Terms: - Primary Key: Unique identifier for each row (e.g., hotel_id) - Foreign Key: Column that references a primary key in another table - Join Key: Column(s) used to match rows between tables\nCommon Join Types: - Inner Join: Returns only matching rows - Left Join: Returns all rows from left table, matching rows from right - Right Join: Returns all rows from right table, matching rows from left - Full Join: Returns all rows from both tables"
+  },
+  {
+    "objectID": "week04/assets/presentation-plan.html#slide-2-more-vocabulary",
+    "href": "week04/assets/presentation-plan.html#slide-2-more-vocabulary",
+    "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
+    "section": "Slide 2: More Vocabulary",
+    "text": "Slide 2: More Vocabulary\nRelationship Types:\n\nOne-to-One: Each row in Table A matches exactly one row in Table B\n\nExample: Hotel details and hotel star ratings\n\nOne-to-Many: Each row in Table A matches multiple rows in Table B\n\nExample: Hotel to guest reviews\n\nMany-to-Many: Multiple rows in Table A match multiple rows in Table B\n\nExample: Hotels and amenities (each hotel has many amenities, each amenity exists in many hotels)\n\n\nTidy Data Principles: - Each variable forms a column - Each observation forms a row - Each type of observational unit forms a table"
+  },
+  {
+    "objectID": "week04/assets/presentation-plan.html#slide-3-one-to-one-join-perfect-match",
+    "href": "week04/assets/presentation-plan.html#slide-3-one-to-one-join-perfect-match",
+    "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
+    "section": "Slide 3: One-to-One Join (Perfect Match)",
+    "text": "Slide 3: One-to-One Join (Perfect Match)\nScenario: Two tables with exactly the same hotels\nTable A: Austrian Hotels | hotel_id | hotel_name | city | |———-|—————————-|———–| | 1 | Hotel Sacher | Vienna | | 2 | Hotel Imperial | Vienna | | 3 | Schloss Fuschl Resort | Salzburg | | 4 | Grand Hotel Wien | Vienna | | 5 | Hotel Goldener Hirsch | Salzburg |\nTable B: Hotel Ratings | hotel_id | stars | avg_price_eur | |———-|——-|—————| | 1 | 5 | 450 | | 2 | 5 | 420 | | 3 | 5 | 380 | | 4 | 5 | 350 | | 5 | 5 | 320 |\nInner Join Result (same as Left, Right, and Full Join in this case):\nhotels_with_ratings &lt;- inner_join(hotels, ratings, by = \"hotel_id\")"
+  },
+  {
+    "objectID": "week04/assets/presentation-plan.html#slide-4-one-to-one-join-partial-match",
+    "href": "week04/assets/presentation-plan.html#slide-4-one-to-one-join-partial-match",
+    "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
+    "section": "Slide 4: One-to-One Join (Partial Match)",
+    "text": "Slide 4: One-to-One Join (Partial Match)\nScenario: Some hotels appear in one table but not the other\nTable A: Austrian Hotels | hotel_id | hotel_name | city | |———-|—————————-|———–| | 1 | Hotel Sacher | Vienna | | 2 | Hotel Imperial | Vienna | | 3 | Schloss Fuschl Resort | Salzburg | | 4 | Grand Hotel Wien | Vienna | | 5 | Hotel Goldener Hirsch | Salzburg |\nTable B: Boutique Hotels | hotel_id | is_boutique | room_count | |———-|————|————| | 1 | TRUE | 150 | | 2 | TRUE | 138 | | 5 | TRUE | 70 | | 6 | TRUE | 45 | | 7 | TRUE | 62 |\nDifferent Join Types:\nInner Join (only matching hotel_ids):\nboutique_overlap &lt;- inner_join(hotels, boutique, by = \"hotel_id\")\n# Returns hotels 1, 2, and 5\nLeft Join (all hotels from Table A):\nall_hotels_boutique_info &lt;- left_join(hotels, boutique, by = \"hotel_id\")\n# Returns hotels 1-5, with NULL for boutique info for 3 and 4\nRight Join (all boutique hotels):\nall_boutique_hotel_info &lt;- right_join(hotels, boutique, by = \"hotel_id\")\n# Returns hotels 1, 2, 5, 6, 7 with NULL for hotel info for 6 and 7\nFull Join (all hotels from both tables):\nall_hotels_combined &lt;- full_join(hotels, boutique, by = \"hotel_id\")\n# Returns hotels 1-7, with NULLs where information is missing"
+  },
+  {
+    "objectID": "week04/assets/presentation-plan.html#slide-5-one-to-one-join-summary",
+    "href": "week04/assets/presentation-plan.html#slide-5-one-to-one-join-summary",
+    "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
+    "section": "Slide 5: One-to-One Join summary",
+    "text": "Slide 5: One-to-One Join summary\nInner Join: Only keeps rows that exist in both tables (intersection) Left Join: Keeps all rows from the left table, adds matching data from right Right Join: Keeps all rows from the right table, adds matching data from left Full Join: Keeps all rows from both tables (union)\nEconomic Insight: Join type selection impacts analysis conclusions. For example, calculating average room prices would differ based on which hotels are included in the final dataset."
+  },
+  {
+    "objectID": "week04/assets/presentation-plan.html#slide-6-one-to-many-join",
+    "href": "week04/assets/presentation-plan.html#slide-6-one-to-many-join",
+    "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
+    "section": "Slide 6: One-to-Many Join",
+    "text": "Slide 6: One-to-Many Join\nScenario: Each hotel has multiple guest reviews\nTable A: Austrian Hotels | hotel_id | hotel_name | city | |———-|—————————-|———–| | 1 | Hotel Sacher | Vienna | | 2 | Hotel Imperial | Vienna | | 3 | Schloss Fuschl Resort | Salzburg |\nTable B: Guest Reviews | review_id | hotel_id | rating | review_date | |———–|———-|——–|————-| | 101 | 1 | 4.8 | 2023-06-15 | | 102 | 1 | 4.7 | 2023-07-22 | | 103 | 1 | 4.9 | 2023-08-05 | | 104 | 2 | 4.6 | 2023-06-10 | | 105 | 2 | 4.8 | 2023-07-15 | | 106 | 3 | 4.5 | 2023-08-20 |\nJoin Result:\nhotels_with_reviews &lt;- left_join(hotels, reviews, by = \"hotel_id\")\nThis creates a table with 6 rows (one for each review) where hotel information is duplicated for hotels with multiple reviews."
+  },
+  {
+    "objectID": "week04/assets/presentation-plan.html#slide-7-one-to-many-join-visualization",
+    "href": "week04/assets/presentation-plan.html#slide-7-one-to-many-join-visualization",
+    "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
+    "section": "Slide 7: One-to-Many Join Visualization",
+    "text": "Slide 7: One-to-Many Join Visualization\nKey Points: - The resulting table has more rows than the “one” table - Information from the “one” table gets duplicated for each matching row in the “many” table - Common use: parent-child relationships in data (e.g., cities to buildings, companies to employees)\nData Analysis Impact: - Be careful with aggregations after a one-to-many join"
+  },
+  {
+    "objectID": "week04/assets/presentation-plan.html#slide-8-join-with-composite-keys",
+    "href": "week04/assets/presentation-plan.html#slide-8-join-with-composite-keys",
+    "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
+    "section": "Slide 8: Join with Composite Keys",
+    "text": "Slide 8: Join with Composite Keys\nScenario: Hotels with seasonal pricing\nTable A: Austrian Hotels | hotel_id | hotel_name | city | |———-|—————————-|———–| | 1 | Hotel Sacher | Vienna | | 2 | Hotel Imperial | Vienna | | 3 | Schloss Fuschl Resort | Salzburg |\nTable B: Seasonal Hotel Pricing | hotel_id | season | avg_price_eur | occupancy_rate | |———-|———–|—————|—————-| | 1 | Summer | 520 | 0.92 | | 1 | Winter | 480 | 0.85 | | 1 | Christmas | 650 | 0.98 | | 2 | Summer | 490 | 0.88 | | 2 | Winter | 450 | 0.82 | | 3 | Summer | 420 | 0.95 | | 3 | Winter | 550 | 0.90 |\nComposite Key Join:\nseasonal_hotel_data &lt;- left_join(hotels, seasonal_prices, by = c(\"hotel_id\"))\nThis creates an incorrect result with duplicated rows. Instead, we need both the hotel_id and season to uniquely identify a record in the pricing table.\nProper Use Case: When joining hotel occupancy data that varies by both hotel and date/season."
+  },
+  {
+    "objectID": "week04/assets/presentation-plan.html#slide-9-key-takeaways",
+    "href": "week04/assets/presentation-plan.html#slide-9-key-takeaways",
+    "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
+    "section": "Slide 9: Key Takeaways",
+    "text": "Slide 9: Key Takeaways\n\nChoose the right join type based on your analytical needs:\n\nInner join for strict matching\nLeft/right join when you need to preserve all records from one table\nFull join when you need all possible data\n\nUnderstand your data relationships:\n\nOne-to-one: Simple matching\nOne-to-many: Creates duplication of the “one” side\nMany-to-many: Requires careful handling to avoid combinatorial explosion\n\nComposite keys are essential for:\n\neconomic data at geography* time level\n\nData integrity is crucial:\n\nCheck for unexpected NULLs after joining\nValidate row counts before and after joins\nConsider foreign key constraints in database design"
+  },
+  {
+    "objectID": "week04/assets/presentation-plan.html#ai",
+    "href": "week04/assets/presentation-plan.html#ai",
+    "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
+    "section": "AI:",
+    "text": "AI:\nThis is done with Claude Sonnet 3.7\n“I am working on a presentation for economics students on ways of joining tidy data tables. Have 1 or 2 slides on vocabulary. Then 3 slides on 1:1. First, two tables exact same rows. Then second is fewer but full overlap. Third no full overlap, ie some rows only in 1 some in 2. Show what alternative types of join do. Then do 1 to many. Then join on composite. Create a nice example to carry though. One idea is that rows are hotels in Austria. Nice graphs are useful. No limit in slides, just focus on clarity and make it pretty. Can use tikz.”"
+  },
+  {
+    "objectID": "week05/assets/sentiment-scale.html",
+    "href": "week05/assets/sentiment-scale.html",
+    "title": "General Sentiment Rating Guidelines",
+    "section": "",
+    "text": "Please read each text carefully and rate the overall sentiment of the manager’s statement as positive or negative. Your rating should reflect the manager’s expressed tone, not your judgment of the match."
+  },
+  {
+    "objectID": "week05/assets/sentiment-scale.html#task",
+    "href": "week05/assets/sentiment-scale.html#task",
+    "title": "General Sentiment Rating Guidelines",
+    "section": "",
+    "text": "Please read each text carefully and rate the overall sentiment of the manager’s statement as positive or negative. Your rating should reflect the manager’s expressed tone, not your judgment of the match."
+  },
+  {
+    "objectID": "week05/assets/sentiment-scale.html#rating-scale",
+    "href": "week05/assets/sentiment-scale.html#rating-scale",
+    "title": "General Sentiment Rating Guidelines",
+    "section": "Rating Scale:",
+    "text": "Rating Scale:\n\n\n\n\n\n\n\nScore\nMeaning\n\n\n\n\n2\nStrongly positive sentiment (clear optimism, satisfaction, praise).\n\n\n1\nMildly positive sentiment (generally positive, slight reservations).\n\n\n0\nNeutral or unclear sentiment.\n\n\n-1\nMildly negative sentiment (general disappointment, frustration).\n\n\n-2\nStrongly negative sentiment (clear criticism, significant disappointment)."
+  },
+  {
+    "objectID": "week01/assets/which-ai.html",
+    "href": "week01/assets/which-ai.html",
+    "title": "Which AI model shall we chose?",
+    "section": "",
+    "text": "In what follows, here is my personal take as of date:2025-05-22\nGenerative AI based on Large Language Models (genAI) is great for many tasks. In this course we only focus on aspects of Data Analysis:"
+  },
+  {
+    "objectID": "week01/assets/which-ai.html#different-ai-providers-and-their-models",
+    "href": "week01/assets/which-ai.html#different-ai-providers-and-their-models",
+    "title": "Which AI model shall we chose?",
+    "section": "Different AI providers and their models",
+    "text": "Different AI providers and their models\n\nOpenAI ChatGPT\nThe main current models are 4o, o3, and 4.1\nHere’s an updated, compact guide including o3, o4-mini-high, GPT-4.5, and Deep Research:\nHere ChatGPT’s quick guide to when and why to use which model\n\n🔍 Model Overview\n\n\n\n\n\n\n\n\nModel\nStrengths\nUse When\n\n\n\n\nGPT-4-turbo (4o)\nFast, accurate, handles long prompts and code well\nDefault for coding, EDA, modeling, teaching\n\n\nGPT-4.5\nSlightly better reasoning and math; not always faster\nMore complex logic, multi-step planning\n\n\nGPT-4 (base)\nStable, reliable for structured work\nYou need consistent responses (e.g., templates)\n\n\no3\nCompact, efficient, more creative but can be fuzzy\nBrainstorming, creative prompt design\n\n\no4-mini-high\nLightweight, fast, good for quick checks or when resources are limited\nInstant feedback, code sketching\n\n\nDeep Research\nAccess to full documents, citations, deep factual retrieval\nLiterature reviews, technical deep-dives\n\n\n\n\n\n\n✅ Best Model by Task\n\n\n\n\n\n\n\n\nTask\nBest Model(s)\nNotes\n\n\n\n\nDesigning analysis\n4o / GPT-4.5\nHandles multi-step reasoning well\n\n\nWriting code (R, Python, SQL)\n4o / GPT-4.5 / o4-mini-high\nUse 4o for tidyverse-heavy tasks; o4-mini for quick draft\n\n\nData wrangling\n4o\nVery good with dplyr, data.table, pandas\n\n\nExploratory data analysis\n4o + code interpreter\nVisuals, summaries, and diagnostics\n\n\nModeling (ML, regressions)\nGPT-4.5 / 4o\nClear, structured models and diagnostics\n\n\nCausal inference\nGPT-4.5 / 4o\nHandles DiD, IV, RDD, matching logic well\n\n\nCreating tables and graphs\n4o / GPT-4.5\nKnows LaTeX, Markdown, ggplot2, matplotlib formatting\n\n\nWriting reports / slides\n4o / GPT-4 / o3\n4o for clarity, o3 for more creative text generation\n\n\nLiterature search / citations\nDeep Research\nFinds, summarizes, and cites academic papers\n\n\n\n\n\nAnthropic Claude\nThe main current model is Claude Sonnet 3.7.\nKey tools * Projects: organize files, allow inquiry. One example is full codebase.\n\n\nOthers\nThere are many other models, but I have much less experience."
+  },
+  {
+    "objectID": "week01/assets/which-ai.html#free-vs-pro",
+    "href": "week01/assets/which-ai.html#free-vs-pro",
+    "title": "Which AI model shall we chose?",
+    "section": "Free vs Pro?",
+    "text": "Free vs Pro?\nThe current free models are great for many tasks such as coding, idea generation.\n\nChatGPT\nThe free version offers: access to GPT‑4.1 mini, real-time data from the web with search. Plus * Limited access to GPT‑4o, OpenAI o4-mini, and deep research * Limited access to file uploads, data analysis,\nThe Plus version offers * access to reasoning models (OpenAI o3, OpenAI o4-mini, and OpenAI o4-mini-high) * access Deep Research * higher limits on advanced features: file uploads, and data analysis * access to a research preview of GPT‑4.5 * access to GPT‑4.1, a model optimized for coding tasks * can create and use projects, tasks,\n\n\nClaude\nThe free model can be used for chat and data analysis.\nThe paid tier for Claude\n\nMore usage – for details see limits\naccess to Projects to organize chats and documents\nweb access\nextended thinking for complex work"
+  },
+  {
+    "objectID": "week01/assets/which-ai.html#other-cool-stuff-i-use",
+    "href": "week01/assets/which-ai.html#other-cool-stuff-i-use",
+    "title": "Which AI model shall we chose?",
+    "section": "Other cool stuff I use",
+    "text": "Other cool stuff I use\n\nNotebook LM\n[Google’s Notebook LM] (https://notebooklm.google/) is able to “understand” and summarize any material (such as research paper) and relate it to other topics. Can create fun audo summaries like a podcast. Here is one on a research paper of mine on cultural homophily.\n\n\nGithub Copilot\nGithub Copilot goes inside your code editor such as Rstudio, VSCode, Jupyter Notebook and helps writing code. Great to write frequent stuff like loops or graphs.\nIt has an Education – free access for students: GithubEducation\n\n\nCursor\nCursor AI is the most popular AI code editor, I have very limited experience, but is favored by software developers."
+  },
+  {
+    "objectID": "week01/assets/which-ai.html#feedback",
+    "href": "week01/assets/which-ai.html#feedback",
+    "title": "Which AI model shall we chose?",
+    "section": "Feedback",
+    "text": "Feedback\nDear Reader. I have limited experience. Suggestions are welcome, please post an issue."
+  },
+  {
+    "objectID": "weeks.html",
+    "href": "weeks.html",
+    "title": "Weekly Content",
+    "section": "",
+    "text": "What are LLMs, how is the magic happening. A non-technical brief intro. How to work with LLMs? Plus ideas on applications. Includes suggested readings, podcasts, and vids to listen to.\nContent\nWhich AI? See my take on current models. As of May 2025."
+  },
+  {
+    "objectID": "weeks.html#week01-llm-review",
+    "href": "weeks.html#week01-llm-review",
+    "title": "Weekly Content",
+    "section": "",
+    "text": "What are LLMs, how is the magic happening. A non-technical brief intro. How to work with LLMs? Plus ideas on applications. Includes suggested readings, podcasts, and vids to listen to.\nContent\nWhich AI? See my take on current models. As of May 2025."
+  },
+  {
+    "objectID": "weeks.html#week02-data-and-code-discovery-and-documentation-with-ai",
+    "href": "weeks.html#week02-data-and-code-discovery-and-documentation-with-ai",
+    "title": "Weekly Content",
+    "section": "Week02: Data and code discovery and documentation with AI",
+    "text": "Week02: Data and code discovery and documentation with AI\nLearn how to write a clear and professional code and data documentation. LLMs are great help once you know the basics.\nCase study: World Values Survey. Data is at WVS\nContent"
+  },
+  {
+    "objectID": "weeks.html#week-03-writing-reports",
+    "href": "weeks.html#week-03-writing-reports",
+    "title": "Weekly Content",
+    "section": "Week 03: Writing Reports",
+    "text": "Week 03: Writing Reports\nYou have your data and task, and need to write a short report. We compare different options with LLM, from one-shot prompt to iteration.\nCase study: World Values Survey. Data is at WVS\nContent"
+  },
+  {
+    "objectID": "weeks.html#week04-data-wrangling-joining-tables",
+    "href": "weeks.html#week04-data-wrangling-joining-tables",
+    "title": "Weekly Content",
+    "section": "Week04: Data wrangling, joining tables",
+    "text": "Week04: Data wrangling, joining tables\nWhen asked about what I shall add to my textbook, David Card, the Nobel winning empirical economist told me that I shall spend time with joining tables. Here we go.\nCase study: simulated Austrian hotels. Data is at hotels\nContent"
+  },
+  {
+    "objectID": "weeks.html#week05-text-as-data-1-intro-lecture",
+    "href": "weeks.html#week05-text-as-data-1-intro-lecture",
+    "title": "Weekly Content",
+    "section": "Week05: Text as data 1 – intro lecture",
+    "text": "Week05: Text as data 1 – intro lecture\nNo course of mine can escape football (soccer). Here we look at post-game interviews to learn basics of text analysis and apply LLMs in what they are best - context dependent learning. Two class series. First is more intro to natural language processing.\nCase study: football post-game interviews. Data is at interviews\nContent"
+  },
+  {
+    "objectID": "weeks.html#week06-text-as-data-2-practice",
+    "href": "weeks.html#week06-text-as-data-2-practice",
+    "title": "Weekly Content",
+    "section": "Week06: Text as data 2 – practice",
+    "text": "Week06: Text as data 2 – practice\nSecond class, now we are in action. How does LLM compare to humans?\nCase study: football post-game interviews. Data is at interviews\nContent"
+  },
+  {
+    "objectID": "learn-more/beyond.html",
+    "href": "learn-more/beyond.html",
+    "title": "Beyond",
+    "section": "",
+    "text": "Gábor’s collection of recommended readings, listening. Wide variety from practical to business and nerdy stuff.\nThis version is 0.5.0. (2025-05-10)",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Learn More"
+    ]
+  },
+  {
+    "objectID": "learn-more/beyond.html#basics",
+    "href": "learn-more/beyond.html#basics",
+    "title": "Beyond",
+    "section": "Basics",
+    "text": "Basics\n\nCore readings\n\nEthan Mollick “Co-Intelligence: Living and Working with AI” Penguin Random House 2024\nAnton Korinek “Generative AI for Economic Research: Use Cases and Implications for Economists,” Journal of Economic Literature 61(4) December 2024 Update 1–74\n\n\n\nImportant reviews\n\nReview of LLMs by Simon Willison\nMachines of Loving Grace Dario Amodei\n\n\n\nPrompting\n\nAI Frontiers in Plain English: Prompt Engineering guide from Google with LM Notebook Part 1. LLM output configurations + others\n\n\n\nUnderstanding LLMs\n\nGlossary of LLM terms Glossary of LLM Terms\nFinancial Times: How AI Large Language Models Work\nThe Economist: How Large Language Models Work\nThinking like AI\nWhat’s an LLM context window and why is it getting larger? IBM research on context window\n\n\n\nAI and business / management\n\nStrategy in business Build a winning AI strategy, HBR 2023\nInterview with Rafella Sadun on Reskilling workforce with AI from MIT Sloan Review",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Learn More"
+    ]
+  },
+  {
+    "objectID": "learn-more/beyond.html#additional-readings",
+    "href": "learn-more/beyond.html#additional-readings",
+    "title": "Beyond",
+    "section": "Additional readings",
+    "text": "Additional readings\n\nConsequence of AI\nHow NLP was killed by Transformers/ LLMs in Quant magazine 2025 April\n\n\nBlogs, newsletters\n\nBlog post by Posit Text Summarization, Translation, and Classification using LLMs: mall does it all\nSimon Willis blog post LLM and coding\nEthan Mollick substack: One useful thing\nAlpha Signal newsletter\nHow Andrej Karpathy is adopting AI assisted coding.\n\n\n\nVideo Resources on AI\n\nAndrej Karpathy Introduction to Large Language Models – 1hs overview, a great start\nAndrej Karpathy Deep Dive into LLMs like ChatGPT – 3hs comprehensive updated version of the Intro video\nAndrej Karpathy: “Let’s build GPT: from scratch, in code, spelled out”\nInterview with a great Sendhil Mullainathan on direction AI",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Learn More"
+    ]
+  },
+  {
+    "objectID": "learn-more/beyond.html#deeper-stuff-on-ai",
+    "href": "learn-more/beyond.html#deeper-stuff-on-ai",
+    "title": "Beyond",
+    "section": "deeper stuff on AI",
+    "text": "deeper stuff on AI\n\nArtificial intelligence learns to reason in Science",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Learn More"
+    ]
+  },
+  {
+    "objectID": "code/index.html",
+    "href": "code/index.html",
+    "title": "Code Examples",
+    "section": "",
+    "text": "Code examples and templates for course exercises.",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Code"
+    ]
+  },
+  {
+    "objectID": "code/index.html#interview-analysis",
+    "href": "code/index.html#interview-analysis",
+    "title": "Code Examples",
+    "section": "Interview Analysis",
+    "text": "Interview Analysis\nCode for sentiment analysis of football manager interviews.\nLocation: code/interviews\nFiles include: - API key setup examples - Sentiment analysis scripts - Domain lexicon creation",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Code"
+    ]
+  },
+  {
+    "objectID": "code/index.html#data-analysis-templates",
+    "href": "code/index.html#data-analysis-templates",
+    "title": "Code Examples",
+    "section": "Data Analysis Templates",
+    "text": "Data Analysis Templates\nAdditional code examples will be added as the course progresses.",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Code"
+    ]
+  },
+  {
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Course Assignments",
+    "section": "",
+    "text": "Assignments are available for all classes\nImportant to note for assignments:  * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this."
+  },
+  {
+    "objectID": "assignments.html#assignment-1-reproduce-an-ft-graph",
+    "href": "assignments.html#assignment-1-reproduce-an-ft-graph",
+    "title": "Course Assignments",
+    "section": "Assignment 1: Reproduce an FT graph",
+    "text": "Assignment 1: Reproduce an FT graph\nLook at this graph from Financial Times. Your task is to recreate this figure using real-world data.\nAssignment Details"
+  },
+  {
+    "objectID": "assignments.html#assignment-2-creating-a-readme-doc",
+    "href": "assignments.html#assignment-2-creating-a-readme-doc",
+    "title": "Course Assignments",
+    "section": "Assignment 2: Creating a readme doc",
+    "text": "Assignment 2: Creating a readme doc\nIn this assignment, you will create a readme document by asking for AI assistance.\nAssignment Details"
+  },
+  {
+    "objectID": "assignments.html#assignment-3-create-a-report",
+    "href": "assignments.html#assignment-3-create-a-report",
+    "title": "Course Assignments",
+    "section": "Assignment 3: Create a report",
+    "text": "Assignment 3: Create a report\nContinue with the research question you had chosen in class. Use AI iteratively to help you create a report.\nAssignment Details"
+  },
+  {
+    "objectID": "assignments.html#assignment-4-join-tables-analysis",
+    "href": "assignments.html#assignment-4-join-tables-analysis",
+    "title": "Course Assignments",
+    "section": "Assignment 4: Join tables analysis",
+    "text": "Assignment 4: Join tables analysis\nCreate groups of 2-3 people who use the same coding language. Ask AI to give you a list of research questions that can be answered using many (at least 4) of the hotel data sets provided.\nAssignment Details"
+  },
+  {
+    "objectID": "assignments.html#assignment-5-text-sentiment-analysis",
+    "href": "assignments.html#assignment-5-text-sentiment-analysis",
+    "title": "Course Assignments",
+    "section": "Assignment 5: Text sentiment analysis",
+    "text": "Assignment 5: Text sentiment analysis\nStudent-Specific Text Sentiment Analysis – Compare manual ratings with AI-generated ratings.\nAssignment Details"
+  },
+  {
+    "objectID": "assignments.html#assignment-7-simulation-app",
+    "href": "assignments.html#assignment-7-simulation-app",
+    "title": "Course Assignments",
+    "section": "Assignment 7: Simulation app",
+    "text": "Assignment 7: Simulation app\nCreate a simulation app of an important statistical phenomenon.\nAssignment Details"
+  },
+  {
+    "objectID": "data/index.html",
+    "href": "data/index.html",
+    "title": "Course Datasets",
+    "section": "",
+    "text": "There are three main case studies that we use:",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Data"
+    ]
+  },
+  {
+    "objectID": "data/index.html#simulated-austrian-hotels",
+    "href": "data/index.html#simulated-austrian-hotels",
+    "title": "Course Datasets",
+    "section": "1. Simulated Austrian Hotels",
+    "text": "1. Simulated Austrian Hotels\nA simulated set of data tables on hotels in Austria for practicing data wrangling and joining tables.\nUsed in: Week 4\nLocation: data/austria-hotels",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Data"
+    ]
+  },
+  {
+    "objectID": "data/index.html#world-values-survey-wvs",
+    "href": "data/index.html#world-values-survey-wvs",
+    "title": "Course Datasets",
+    "section": "2. World Values Survey (WVS)",
+    "text": "2. World Values Survey (WVS)\nThe 7th Wave of the World Values Survey dataset merged with GDP data from World Bank.\nUsed in: Week 2, Week 3\nLocation: data/VWS",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Data"
+    ]
+  },
+  {
+    "objectID": "data/index.html#football-manager-interviews",
+    "href": "data/index.html#football-manager-interviews",
+    "title": "Course Datasets",
+    "section": "3. Football Manager Interviews",
+    "text": "3. Football Manager Interviews\nA series of post-game interview texts for text analysis and sentiment analysis practice.\nUsed in: Week 5, Week 6\nLocation: data/interviews",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Data"
+    ]
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "I’m adding material to learn-more folder. You can start with the beyond page."
+  },
+  {
+    "objectID": "resources.html#learn-more",
+    "href": "resources.html#learn-more",
+    "title": "Resources",
+    "section": "",
+    "text": "I’m adding material to learn-more folder. You can start with the beyond page."
+  },
+  {
+    "objectID": "resources.html#data",
+    "href": "resources.html#data",
+    "title": "Resources",
+    "section": "Data",
+    "text": "Data\nCourse datasets are available in the data folder.\nThere are three case studies that we use: 1. A simulated set of data tables on hotels in Austria 2. The World Value Survey 3. A series of interview texts\nData Overview"
+  },
+  {
+    "objectID": "resources.html#code",
+    "href": "resources.html#code",
+    "title": "Resources",
+    "section": "Code",
+    "text": "Code\nCode examples and templates are available in the code folder.\nCode Overview"
+  }
+]

@@ -1,0 +1,20 @@
+---
+title: "Code Examples"
+---
+
+Code examples and templates for course exercises.
+
+## Interview Analysis
+
+Code for sentiment analysis of football manager interviews.
+
+Location: [code/interviews](interviews/)
+
+Files include:
+- API key setup examples
+- Sentiment analysis scripts
+- Domain lexicon creation
+
+## Data Analysis Templates
+
+Additional code examples will be added as the course progresses.
