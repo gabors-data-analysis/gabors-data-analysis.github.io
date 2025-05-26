@@ -1,60 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://gabors-data-analysis.com/ai-course/assignments/assignment_02.html</loc>
-    <lastmod>2025-05-26T07:00:37.967Z</lastmod>
-  </url>
-  <url>
     <loc>https://gabors-data-analysis.com/ai-course/index.html</loc>
     <lastmod>2025-05-26T08:28:25.608Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gabors-data-analysis.com/ai-course/assignments/assignment_05.html</loc>
-    <lastmod>2025-05-26T07:03:52.289Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gabors-data-analysis.com/ai-course/data/index.html</loc>
-    <lastmod>2025-05-26T08:23:24.808Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gabors-data-analysis.com/ai-course/week05/index.html</loc>
-    <lastmod>2025-05-25T16:46:15.455Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gabors-data-analysis.com/ai-course/week03/index.html</loc>
-    <lastmod>2025-05-25T16:44:03.829Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gabors-data-analysis.com/ai-course/week01/index.html</loc>
-    <lastmod>2025-05-25T16:58:57.169Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gabors-data-analysis.com/ai-course/week02/index.html</loc>
-    <lastmod>2025-05-26T07:34:31.510Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gabors-data-analysis.com/ai-course/week04/index.html</loc>
-    <lastmod>2025-05-25T16:44:56.397Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gabors-data-analysis.com/ai-course/assignments/assignment_07.html</loc>
-    <lastmod>2025-05-26T07:04:12.225Z</lastmod>
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/weeks.html</loc>
     <lastmod>2025-05-26T07:05:04.510Z</lastmod>
   </url>
   <url>
-    <loc>https://gabors-data-analysis.com/ai-course/week03/ideas-good-report.html</loc>
-    <lastmod>2025-05-26T07:20:14.989Z</lastmod>
+    <loc>https://gabors-data-analysis.com/ai-course/week06/index.html</loc>
+    <lastmod>2025-05-26T12:31:13.735Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week06/assets/walkthrough-fbref.html</loc>
+    <lastmod>2025-05-25T15:42:51.304Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week06/assets/api-use.html</loc>
+    <lastmod>2025-05-26T12:16:26.574Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week05/assets/sentiment-scale.html</loc>
+    <lastmod>2025-05-25T15:44:43.940Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week04/index.html</loc>
+    <lastmod>2025-05-26T12:36:41.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week03/index.html</loc>
+    <lastmod>2025-05-26T12:35:02.937Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week03/assets/trust_income_report_long.html</loc>
+    <lastmod>2025-04-21T08:23:23.667Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week03/assets/analysis_notebook.html</loc>
+    <lastmod>2025-04-21T08:08:56.592Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week02/index.html</loc>
+    <lastmod>2025-05-26T12:38:34.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week02/assets/chatgpt-2025-vws-README-v1.html</loc>
+    <lastmod>2025-05-26T07:19:49.151Z</lastmod>
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/week01/assets/which-ai.html</loc>
     <lastmod>2025-05-26T07:18:56.013Z</lastmod>
   </url>
   <url>
-    <loc>https://gabors-data-analysis.com/ai-course/learn-more/beyond.html</loc>
-    <lastmod>2025-05-26T07:05:57.904Z</lastmod>
+    <loc>https://gabors-data-analysis.com/ai-course/not-shared/hotel-data-readme.html</loc>
+    <lastmod>2025-03-18T13:27:39.487Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/data/VWS/README_WVS.html</loc>
+    <lastmod>2025-05-25T13:44:28.407Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/data/interviews/index.html</loc>
+    <lastmod>2025-05-26T08:24:06.645Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/data/austria-hotels/index.html</loc>
+    <lastmod>2025-05-26T08:24:47.965Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/code/interviews/index.html</loc>
+    <lastmod>2025-05-26T08:26:26.948Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/assignments.html</loc>
+    <lastmod>2025-05-25T15:58:02.130Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/assignments/assignment_05.html</loc>
+    <lastmod>2025-05-26T07:03:52.289Z</lastmod>
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/assignments/assignment_03.html</loc>
@@ -65,39 +89,87 @@
     <lastmod>2025-05-26T07:00:07.898Z</lastmod>
   </url>
   <url>
+    <loc>https://gabors-data-analysis.com/ai-course/assignments/assignment_02.html</loc>
+    <lastmod>2025-05-26T07:00:37.967Z</lastmod>
+  </url>
+  <url>
     <loc>https://gabors-data-analysis.com/ai-course/assignments/assignment_04.html</loc>
     <lastmod>2025-05-26T07:03:00.268Z</lastmod>
   </url>
   <url>
-    <loc>https://gabors-data-analysis.com/ai-course/resources.html</loc>
-    <lastmod>2025-05-26T07:04:36.835Z</lastmod>
+    <loc>https://gabors-data-analysis.com/ai-course/assignments/assignment_07.html</loc>
+    <lastmod>2025-05-26T07:04:12.225Z</lastmod>
   </url>
   <url>
-    <loc>https://gabors-data-analysis.com/ai-course/week02/assets/chatgpt-2025-vws-README-v1.html</loc>
-    <lastmod>2025-05-26T07:19:49.151Z</lastmod>
+    <loc>https://gabors-data-analysis.com/ai-course/code/index.html</loc>
+    <lastmod>2025-05-25T15:56:33.754Z</lastmod>
   </url>
   <url>
-    <loc>https://gabors-data-analysis.com/ai-course/week04/assets/presentation-plan.html</loc>
-    <lastmod>2025-05-26T07:21:18.470Z</lastmod>
+    <loc>https://gabors-data-analysis.com/ai-course/data/austria-hotels/hotel-data-readme.html</loc>
+    <lastmod>2025-03-18T13:27:39.487Z</lastmod>
   </url>
   <url>
-    <loc>https://gabors-data-analysis.com/ai-course/week06/index.html</loc>
-    <lastmod>2025-05-25T15:15:53.722Z</lastmod>
+    <loc>https://gabors-data-analysis.com/ai-course/data/index.html</loc>
+    <lastmod>2025-05-26T08:23:24.808Z</lastmod>
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/data/VWS/index.html</loc>
     <lastmod>2025-05-26T08:25:08.248Z</lastmod>
   </url>
   <url>
-    <loc>https://gabors-data-analysis.com/ai-course/code/interviews/index.html</loc>
-    <lastmod>2025-05-26T08:26:26.948Z</lastmod>
+    <loc>https://gabors-data-analysis.com/ai-course/learn-more/beyond.html</loc>
+    <lastmod>2025-05-26T07:05:57.904Z</lastmod>
   </url>
   <url>
-    <loc>https://gabors-data-analysis.com/ai-course/data/austria-hotels/index.html</loc>
-    <lastmod>2025-05-26T08:24:47.965Z</lastmod>
+    <loc>https://gabors-data-analysis.com/ai-course/resources.html</loc>
+    <lastmod>2025-05-26T07:04:36.835Z</lastmod>
   </url>
   <url>
-    <loc>https://gabors-data-analysis.com/ai-course/data/interviews/index.html</loc>
-    <lastmod>2025-05-26T08:24:06.645Z</lastmod>
+    <loc>https://gabors-data-analysis.com/ai-course/week01/index.html</loc>
+    <lastmod>2025-05-25T16:58:57.169Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week02/assets/da-background.html</loc>
+    <lastmod>2025-05-25T15:48:48.988Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week03/assets/analysis_notebook (1).html</loc>
+    <lastmod>2025-04-21T12:32:12.684Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week03/assets/trust_income_report.html</loc>
+    <lastmod>2025-04-21T07:59:50.076Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week03/ideas-good-report.html</loc>
+    <lastmod>2025-05-26T07:20:14.989Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week04/assets/presentation-plan.html</loc>
+    <lastmod>2025-05-26T07:21:18.470Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week05/assets/sentiment-guidelines.html</loc>
+    <lastmod>2025-05-25T15:45:09.532Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week06/assets/api-advanced.html</loc>
+    <lastmod>2025-05-26T12:18:31.829Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week06/assets/get-ai-api-key.html</loc>
+    <lastmod>2025-05-25T15:44:02.265Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week06/assets/walkthrough-wb-fred.html</loc>
+    <lastmod>2025-05-25T15:43:19.125Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week07/index.html</loc>
+    <lastmod>2025-05-25T15:16:18.297Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week05/index.html</loc>
+    <lastmod>2025-05-26T12:38:58.126Z</lastmod>
   </url>
 </urlset>

@@ -126,15 +126,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../weeks.qmd"> 
+    <a class="nav-link" href="../weeks.html"> 
 <span class="menu-text">Weekly Content</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../assignments.qmd"> 
+    <a class="nav-link" href="../assignments.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources.qmd"> 
+    <a class="nav-link" href="../resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
 </ul>
@@ -230,37 +230,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../assignments/assignment_01.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../assignments/assignment_01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignment 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../assignments/assignment_02.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../assignments/assignment_02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignment 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../assignments/assignment_03.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../assignments/assignment_03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignment 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../assignments/assignment_04.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../assignments/assignment_04.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignment 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../assignments/assignment_05.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../assignments/assignment_05.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignment 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../assignments/assignment_07.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../assignments/assignment_07.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignment 7</span></a>
   </div>
 </li>
@@ -277,19 +277,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../learn-more/beyond.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../learn-more/beyond.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Learn More</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/index.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../data/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../code/index.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../code/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code</span></a>
   </div>
 </li>
@@ -475,7 +475,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/gabors-data-analysis\.com\/ai-course");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
