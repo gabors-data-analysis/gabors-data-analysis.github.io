@@ -422,7 +422,7 @@
     "href": "index.html#thanks",
     "title": "Doing Data Analysis with AI",
     "section": "Thanks",
-    "text": "Thanks\nThanks: Developed mostly by me, Gábor Békés Thanks a million to the two wonderful human RAs, Ms Zsuzsa Vadle and Mr Kenneth Colombe, both Phd students. Thanks to Claude.ai that did a great deal of help in creating the simulated dataset. ChatGPT and Claude.ai helped create the slideshows and educated me on NLP. This is a beatiful example of collaboration with great young people while heavily benefiting from advanced AI.\nThanks for CEU’s teaching grant that allowed me pay people and AI."
+    "text": "Thanks\nThanks: Developed mostly by me, Gábor Békés Thanks a million to the two wonderful human RAs, Ms Zsuzsanna Vadle and Mr Kenneth Colombe, both Phd students. Thanks to Claude.ai that did a great deal of help in creating the simulated dataset. ChatGPT and Claude.ai helped create the slideshows and educated me on NLP. This is a beatiful example of collaboration with great young people while heavily benefiting from advanced AI.\nThanks for CEU’s teaching grant that allowed me pay people and AI."
   },
   {
     "objectID": "index.html#questions-and-suggestions",
@@ -1309,48 +1309,28 @@
     "href": "data/index.html",
     "title": "Course Datasets",
     "section": "",
-    "text": "There are three main case studies that we use:",
-    "crumbs": [
-      "Home",
-      "Resources",
-      "Data"
-    ]
+    "text": "There are three main case studies used throughout the course:"
   },
   {
     "objectID": "data/index.html#simulated-austrian-hotels",
     "href": "data/index.html#simulated-austrian-hotels",
     "title": "Course Datasets",
     "section": "1. Simulated Austrian Hotels",
-    "text": "1. Simulated Austrian Hotels\nA simulated set of data tables on hotels in Austria for practicing data wrangling and joining tables.\nUsed in: Week 4\nLocation: data/austria-hotels",
-    "crumbs": [
-      "Home",
-      "Resources",
-      "Data"
-    ]
+    "text": "1. Simulated Austrian Hotels\nA realistic simulated dataset of hotels across Austria for practicing data wrangling and table joins. Contains 8 related tables with hotels, cities, occupancy, tourism, and economic data.\nUsed in: Week 4 (Joining Tables)\nKey features: Multiple join types, one-to-many relationships, composite keys\nFiles: 200 hotels across 10 Austrian cities with 2 years of monthly data\n→ Explore Austrian Hotels Data"
   },
   {
     "objectID": "data/index.html#world-values-survey-wvs",
     "href": "data/index.html#world-values-survey-wvs",
     "title": "Course Datasets",
     "section": "2. World Values Survey (WVS)",
-    "text": "2. World Values Survey (WVS)\nThe 7th Wave of the World Values Survey dataset merged with GDP data from World Bank.\nUsed in: Week 2, Week 3\nLocation: data/VWS",
-    "crumbs": [
-      "Home",
-      "Resources",
-      "Data"
-    ]
+    "text": "2. World Values Survey (WVS)\nThe 7th Wave of the World Values Survey dataset, cleaned and merged with World Bank GDP data. Available both as individual responses and country-level aggregations.\nUsed in: Week 2 (Data Documentation), Week 3 (Report Writing)\nKey features: International survey data, economic indicators, multiple aggregation levels\nFiles: Individual responses (~2,000 sample) and country-year summaries\n→ Explore WVS Data"
   },
   {
     "objectID": "data/index.html#football-manager-interviews",
     "href": "data/index.html#football-manager-interviews",
     "title": "Course Datasets",
     "section": "3. Football Manager Interviews",
-    "text": "3. Football Manager Interviews\nA series of post-game interview texts for text analysis and sentiment analysis practice.\nUsed in: Week 5, Week 6\nLocation: data/interviews",
-    "crumbs": [
-      "Home",
-      "Resources",
-      "Data"
-    ]
+    "text": "3. Football Manager Interviews\nPost-match interview texts from football managers for sentiment analysis and NLP practice. Includes multiple rating systems for comparison and validation.\nUsed in: Week 5 (Text as Data I), Week 6 (Text as Data II)\nKey features: Sentiment analysis, API integration, human vs AI comparison\nFiles: Interview texts, domain lexicons, rating comparisons\n→ Explore Interview Data"
   },
   {
     "objectID": "resources.html",
@@ -1379,5 +1359,222 @@
     "title": "Resources",
     "section": "Code",
     "text": "Code\nCode examples and templates are available in the code folder.\nCode Overview"
+  },
+  {
+    "objectID": "data/VWS/index.html",
+    "href": "data/VWS/index.html",
+    "title": "World Values Survey (WVS) Data",
+    "section": "",
+    "text": "This folder contains cleaned and processed data from the 7th Wave of the World Values Survey, merged with World Bank GDP indicators. The WVS is a global research project that explores people’s values and beliefs across different countries and cultures.\nUsed in: Week 2 (Data Documentation), Week 3 (Report Writing)"
+  },
+  {
+    "objectID": "data/VWS/index.html#overview",
+    "href": "data/VWS/index.html#overview",
+    "title": "World Values Survey (WVS) Data",
+    "section": "",
+    "text": "This folder contains cleaned and processed data from the 7th Wave of the World Values Survey, merged with World Bank GDP indicators. The WVS is a global research project that explores people’s values and beliefs across different countries and cultures.\nUsed in: Week 2 (Data Documentation), Week 3 (Report Writing)"
+  },
+  {
+    "objectID": "data/VWS/index.html#files",
+    "href": "data/VWS/index.html#files",
+    "title": "World Values Survey (WVS) Data",
+    "section": "Files",
+    "text": "Files\n\nProcessed Data\n\nWVS_random_subset2000.csv - Random subset of 2,000 respondents stratified by country\nWVS_GDP_merged_data.csv - Country-level aggregated data merged with GDP and population indicators\nWVS_subset.csv - Selected variables from full dataset (all respondents, waves 1-7)\n\n\n\nDocumentation\n\ncodebook.pdf - Official WVS codebook with variable definitions and survey methodology\nREADME_WVS.md - Data processing documentation and variable descriptions\n\n\n\nCode\n\ncleaning.R - R script that processes raw WVS data and creates the cleaned datasets"
+  },
+  {
+    "objectID": "data/VWS/index.html#data-structure",
+    "href": "data/VWS/index.html#data-structure",
+    "title": "World Values Survey (WVS) Data",
+    "section": "Data Structure",
+    "text": "Data Structure\n\nWVS_random_subset2000.csv\n\nObservations: ~2,000 individual respondents\nVariables: Demographics (country, interview date, weights) + survey items (Q1-Q89, Q260-Q290)\nPurpose: Manageable sample for exploration and practice\n\n\n\nWVS_GDP_merged_data.csv\n\nObservations: Country-year level (Wave 7 only)\nVariables: Aggregated survey responses + World Bank indicators\nKey variables:\n\nB_COUNTRY_ALPHA: ISO3 country code\nA_YEAR: Survey year (varies by country, 2017-2023)\nQ1-Q89: Aggregated survey responses (means for numeric, modes for categorical)\nGDP_USD_PPP_per_capita: GDP per capita in PPP terms\nPopulation: Country population"
+  },
+  {
+    "objectID": "data/VWS/index.html#usage-notes",
+    "href": "data/VWS/index.html#usage-notes",
+    "title": "World Values Survey (WVS) Data",
+    "section": "Usage Notes",
+    "text": "Usage Notes\n\nNegative codes (-1 to -5) in original data have been recoded as NA\nRandom sampling uses seed 20250124 for reproducibility\nGDP data covers 2017-2023 to match survey timing variations\nSee README_WVS.md for detailed processing steps"
+  },
+  {
+    "objectID": "data/VWS/index.html#research-applications",
+    "href": "data/VWS/index.html#research-applications",
+    "title": "World Values Survey (WVS) Data",
+    "section": "Research Applications",
+    "text": "Research Applications\nCommon research questions using this data: - Relationship between income level and trust/happiness - Cultural differences in gender attitudes - Economic development and social values"
+  },
+  {
+    "objectID": "data/index.html#data-access",
+    "href": "data/index.html#data-access",
+    "title": "Course Datasets",
+    "section": "Data Access",
+    "text": "Data Access\nAll datasets are included in the course repository. Each folder contains: - Raw and processed data files - Detailed documentation and codebooks\n- Example code for data processing - README files with usage instructions"
+  },
+  {
+    "objectID": "data/index.html#technical-notes",
+    "href": "data/index.html#technical-notes",
+    "title": "Course Datasets",
+    "section": "Technical Notes",
+    "text": "Technical Notes\n\nData formats: CSV, Excel (.xlsx), R scripts\nAll code tested with R (tidyverse) and Python (pandas)\nReproducible workflows with documented processing steps\nAPI examples require OpenAI account (budget ~$5 for course)"
+  },
+  {
+    "objectID": "code/interviews/index.html",
+    "href": "code/interviews/index.html",
+    "title": "Interview Analysis Code",
+    "section": "",
+    "text": "Code examples for sentiment analysis of football manager interviews, supporting both R and Python workflows.\nRelated to: Week 5-6 (Text as Data)"
+  },
+  {
+    "objectID": "code/interviews/index.html#overview",
+    "href": "code/interviews/index.html#overview",
+    "title": "Interview Analysis Code",
+    "section": "",
+    "text": "Code examples for sentiment analysis of football manager interviews, supporting both R and Python workflows.\nRelated to: Week 5-6 (Text as Data)"
+  },
+  {
+    "objectID": "code/interviews/index.html#api-setup",
+    "href": "code/interviews/index.html#api-setup",
+    "title": "Interview Analysis Code",
+    "section": "API Setup",
+    "text": "API Setup\n\napi-key.R\nTemplate for setting up OpenAI API credentials in R.\n# Set your API key\nSys.setenv(OPENAI_API_KEY = \"sk-....\")\nImportant: Copy to my-openai-api-key.R and add to .gitignore"
+  },
+  {
+    "objectID": "code/interviews/index.html#r-scripts",
+    "href": "code/interviews/index.html#r-scripts",
+    "title": "Interview Analysis Code",
+    "section": "R Scripts",
+    "text": "R Scripts\n\nsentiment-analysis.R\nComplete sentiment analysis workflow using OpenAI API.\nFeatures: - API key setup and validation - Batch processing with progress tracking - Sentiment classification function (-2 to +2 scale) - Error handling and retry logic - Comparison between multiple API runs\nKey functions: - classify_text(): Sends text to OpenAI for sentiment rating - Handles API errors with exponential backoff - Saves results to CSV for further analysis\n\n\ndomain_lexicon.r\nCreates football-specific sentiment lexicon.\nOutput: domain_lexicon.csv with: - 100+ football-specific terms - Positive terms (goals, win, excellent): scores 1.2-1.9 - Negative terms (lose, poor, mistake): scores -1.9 to -1.2 - Neutral terms (match, team, play): score 0"
+  },
+  {
+    "objectID": "code/interviews/index.html#python-scripts",
+    "href": "code/interviews/index.html#python-scripts",
+    "title": "Interview Analysis Code",
+    "section": "Python Scripts",
+    "text": "Python Scripts\n\nclassify_manager_sentiment.py\nPython equivalent of R sentiment analysis.\nFeatures: - OpenAI API integration using openai library - Logging and progress tracking with tqdm - Robust error handling - Same rating guidelines as R version\nDependencies:\npip install openai pandas tqdm python-dotenv\n\n\nmanager_sentiment_api.md\nDocumentation and code template for Python API usage."
+  },
+  {
+    "objectID": "code/interviews/index.html#usage-notes",
+    "href": "code/interviews/index.html#usage-notes",
+    "title": "Interview Analysis Code",
+    "section": "Usage Notes",
+    "text": "Usage Notes\n\nAPI Key Management\n\nStore keys in environment variables\nNever commit keys to version control\nBudget ~$5 for course exercises\n\n\n\nRate Limiting\n\nBoth scripts include retry logic\nExponential backoff for failed requests\nMonitor usage through OpenAI dashboard\n\n\n\nReproducibility\n\nSet temperature=0 for consistent results\nSave intermediate results\nDocument model versions used"
+  },
+  {
+    "objectID": "code/interviews/index.html#output-files",
+    "href": "code/interviews/index.html#output-files",
+    "title": "Interview Analysis Code",
+    "section": "Output Files",
+    "text": "Output Files\nScripts generate: - manager_sentiment_results.csv: Individual text ratings - sentiment_comparison.csv: Comparison between runs - classification.log: Detailed processing logs"
+  },
+  {
+    "objectID": "code/interviews/index.html#integration-with-course-data",
+    "href": "code/interviews/index.html#integration-with-course-data",
+    "title": "Interview Analysis Code",
+    "section": "Integration with Course Data",
+    "text": "Integration with Course Data\nThese scripts work with: - /data/interviews/interview-texts-only.xlsx (input) - /data/interviews/domain_lexicon.csv (lexicon) - Student rating files for comparison analysis"
+  },
+  {
+    "objectID": "data/austria-hotels/index.html",
+    "href": "data/austria-hotels/index.html",
+    "title": "Austrian Hotels Dataset",
+    "section": "",
+    "text": "This dataset contains realistic simulated data on hotels across Austria, designed for practicing data wrangling and table joins. The dataset consists of multiple related tables that can be combined using various join operations.\nUsed in: Week 4 (Joining Tables)\nGenerated by: Claude AI (Sonnet 3.7) with realistic relationships between variables"
+  },
+  {
+    "objectID": "data/austria-hotels/index.html#overview",
+    "href": "data/austria-hotels/index.html#overview",
+    "title": "Austrian Hotels Dataset",
+    "section": "",
+    "text": "This dataset contains realistic simulated data on hotels across Austria, designed for practicing data wrangling and table joins. The dataset consists of multiple related tables that can be combined using various join operations.\nUsed in: Week 4 (Joining Tables)\nGenerated by: Claude AI (Sonnet 3.7) with realistic relationships between variables"
+  },
+  {
+    "objectID": "data/austria-hotels/index.html#dataset-structure",
+    "href": "data/austria-hotels/index.html#dataset-structure",
+    "title": "Austrian Hotels Dataset",
+    "section": "Dataset Structure",
+    "text": "Dataset Structure\nThe dataset includes 8 related tables with hotels across Austrian cities, covering occupancy, pricing, tourism statistics, and economic indicators.\n\nCore Tables\n\n\n\n\n\n\n\n\n\nFile\nDescription\nRows\nKey Columns\n\n\n\n\nhotels.csv\nBasic hotel information\n200\nhotel_id (PK)\n\n\ncities.csv\nCity information\n10\ncity (PK)\n\n\nmonthly_occupancy.csv\nMonthly hotel performance metrics\n~3,800\nhotel_id, month, year\n\n\ncity_tourism.csv\nMonthly tourism statistics by city\n240\ncity, month, year\n\n\neconomic_indicators.csv\nMonthly economic indicators\n24\nmonth, year\n\n\nreviews.csv\nHotel guest reviews\n~1,700\nreview_id (PK), hotel_id (FK)\n\n\namenities.csv\nList of possible hotel amenities\n10\namenity_id (PK)\n\n\nhotel_amenities.csv\nHotel-amenity relationships\n~1,000\nhotel_id, amenity_id"
+  },
+  {
+    "objectID": "data/austria-hotels/index.html#key-relationships",
+    "href": "data/austria-hotels/index.html#key-relationships",
+    "title": "Austrian Hotels Dataset",
+    "section": "Key Relationships",
+    "text": "Key Relationships\n\nOne-to-One: Hotels ↔︎ Cities (through city name)\nOne-to-Many: Hotels → Monthly Occupancy, Hotels → Reviews\nMany-to-Many: Hotels ↔︎ Amenities (through hotel_amenities)\nComposite Keys: Monthly data requires (hotel_id, month, year) or (city, month, year)"
+  },
+  {
+    "objectID": "data/austria-hotels/index.html#documentation",
+    "href": "data/austria-hotels/index.html#documentation",
+    "title": "Austrian Hotels Dataset",
+    "section": "Documentation",
+    "text": "Documentation\n\nhotel-data-readme.md - Detailed schema documentation with column descriptions and data types"
+  },
+  {
+    "objectID": "data/austria-hotels/index.html#learning-objectives",
+    "href": "data/austria-hotels/index.html#learning-objectives",
+    "title": "Austrian Hotels Dataset",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nThis dataset allows students to practice: - Inner, left, right, and full joins - One-to-one and one-to-many relationships - Composite key joins - Data aggregation after joins - Handling missing values in joins"
+  },
+  {
+    "objectID": "data/austria-hotels/index.html#sample-research-questions",
+    "href": "data/austria-hotels/index.html#sample-research-questions",
+    "title": "Austrian Hotels Dataset",
+    "section": "Sample Research Questions",
+    "text": "Sample Research Questions\n\nHow do hotel prices vary by city and season?\nWhat’s the relationship between amenities and guest ratings?\nHow do economic indicators affect hotel occupancy rates?\nWhich cities have the highest tourism-to-hotel capacity ratios?"
+  },
+  {
+    "objectID": "data/interviews/index.html",
+    "href": "data/interviews/index.html",
+    "title": "Interview Analysis Code",
+    "section": "",
+    "text": "Code examples for sentiment analysis of football manager interviews, supporting both R and Python workflows.\nRelated to: Week 5-6 (Text as Data)"
+  },
+  {
+    "objectID": "data/interviews/index.html#overview",
+    "href": "data/interviews/index.html#overview",
+    "title": "Interview Analysis Code",
+    "section": "",
+    "text": "Code examples for sentiment analysis of football manager interviews, supporting both R and Python workflows.\nRelated to: Week 5-6 (Text as Data)"
+  },
+  {
+    "objectID": "data/interviews/index.html#api-setup",
+    "href": "data/interviews/index.html#api-setup",
+    "title": "Interview Analysis Code",
+    "section": "API Setup",
+    "text": "API Setup\n\napi-key.R\nTemplate for setting up OpenAI API credentials in R.\n# Set your API key\nSys.setenv(OPENAI_API_KEY = \"sk-....\")\nImportant: Copy to my-openai-api-key.R and add to .gitignore"
+  },
+  {
+    "objectID": "data/interviews/index.html#r-scripts",
+    "href": "data/interviews/index.html#r-scripts",
+    "title": "Interview Analysis Code",
+    "section": "R Scripts",
+    "text": "R Scripts\n\nsentiment-analysis.R\nComplete sentiment analysis workflow using OpenAI API.\nFeatures: - API key setup and validation - Batch processing with progress tracking - Sentiment classification function (-2 to +2 scale) - Error handling and retry logic - Comparison between multiple API runs\nKey functions: - classify_text(): Sends text to OpenAI for sentiment rating - Handles API errors with exponential backoff - Saves results to CSV for further analysis\n\n\ndomain_lexicon.r\nCreates football-specific sentiment lexicon.\nOutput: domain_lexicon.csv with: - 100+ football-specific terms - Positive terms (goals, win, excellent): scores 1.2-1.9 - Negative terms (lose, poor, mistake): scores -1.9 to -1.2 - Neutral terms (match, team, play): score 0"
+  },
+  {
+    "objectID": "data/interviews/index.html#python-scripts",
+    "href": "data/interviews/index.html#python-scripts",
+    "title": "Interview Analysis Code",
+    "section": "Python Scripts",
+    "text": "Python Scripts\n\nclassify_manager_sentiment.py\nPython equivalent of R sentiment analysis.\nFeatures: - OpenAI API integration using openai library - Logging and progress tracking with tqdm - Robust error handling - Same rating guidelines as R version\nDependencies:\npip install openai pandas tqdm python-dotenv\n\n\nmanager_sentiment_api.md\nDocumentation and code template for Python API usage."
+  },
+  {
+    "objectID": "data/interviews/index.html#usage-notes",
+    "href": "data/interviews/index.html#usage-notes",
+    "title": "Interview Analysis Code",
+    "section": "Usage Notes",
+    "text": "Usage Notes\n\nAPI Key Management\n\nStore keys in environment variables\nNever commit keys to version control\nBudget ~$5 for course exercises\n\n\n\nRate Limiting\n\nBoth scripts include retry logic\nExponential backoff for failed requests\nMonitor usage through OpenAI dashboard\n\n\n\nReproducibility\n\nSet temperature=0 for consistent results\nSave intermediate results\nDocument model versions used"
+  },
+  {
+    "objectID": "data/interviews/index.html#output-files",
+    "href": "data/interviews/index.html#output-files",
+    "title": "Interview Analysis Code",
+    "section": "Output Files",
+    "text": "Output Files\nScripts generate: - manager_sentiment_results.csv: Individual text ratings - sentiment_comparison.csv: Comparison between runs - classification.log: Detailed processing logs"
+  },
+  {
+    "objectID": "data/interviews/index.html#integration-with-course-data",
+    "href": "data/interviews/index.html#integration-with-course-data",
+    "title": "Interview Analysis Code",
+    "section": "Integration with Course Data",
+    "text": "Integration with Course Data\nThese scripts work with: - /data/interviews/interview-texts-only.xlsx (input) - /data/interviews/domain_lexicon.csv (lexicon) - Student rating files for comparison analysis"
   }
 ]
