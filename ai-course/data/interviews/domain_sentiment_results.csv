@@ -1,0 +1,122 @@
+"text_id","domain_score","domain_rating","domain_sentiment","words_matched"
+1,0.68,2,"Strongly positive",5
+2,0.342857142857143,1,"Mildly positive",7
+3,0.835714285714286,2,"Strongly positive",14
+4,1.44,2,"Strongly positive",5
+5,1.3,2,"Strongly positive",14
+6,0.522222222222222,1,"Mildly positive",9
+7,0.525,1,"Mildly positive",4
+8,0.84,2,"Strongly positive",5
+9,1.5,2,"Strongly positive",1
+10,-1.5,-2,"Strongly negative",1
+11,0.891666666666667,2,"Strongly positive",12
+12,1.19375,2,"Strongly positive",16
+13,1.27142857142857,2,"Strongly positive",7
+14,1.85,2,"Strongly positive",2
+15,1.1,2,"Strongly positive",2
+16,1.9,2,"Strongly positive",1
+17,0.3,1,"Mildly positive",2
+18,0.575,1,"Mildly positive",4
+19,0,0,"Neutral",0
+20,0,0,"Neutral",0
+21,0.52,1,"Mildly positive",5
+22,0.72,2,"Strongly positive",5
+23,-0.2,0,"Neutral",4
+24,1.15,2,"Strongly positive",8
+25,-0.566666666666667,-1,"Mildly negative",3
+26,0.544444444444445,1,"Mildly positive",9
+27,0.3,1,"Mildly positive",5
+28,0.74375,2,"Strongly positive",16
+29,-0.52,-1,"Mildly negative",5
+30,0.830769230769231,2,"Strongly positive",13
+31,0.7,2,"Strongly positive",16
+32,-0.3,-1,"Mildly negative",4
+33,1.51428571428571,2,"Strongly positive",7
+34,1.25,2,"Strongly positive",2
+35,-0.1,0,"Neutral",6
+36,0,0,"Neutral",6
+37,1.6,2,"Strongly positive",8
+38,1.43333333333333,2,"Strongly positive",3
+39,1.38571428571429,2,"Strongly positive",7
+40,-1.8,-2,"Strongly negative",1
+41,1.43333333333333,2,"Strongly positive",9
+42,1.5,2,"Strongly positive",2
+43,1,2,"Strongly positive",2
+44,0.588888888888889,1,"Mildly positive",9
+45,1,2,"Strongly positive",2
+46,0.633333333333333,2,"Strongly positive",3
+47,0.05,0,"Neutral",4
+48,0,0,"Neutral",0
+49,0,0,"Neutral",0
+50,1.8,2,"Strongly positive",1
+51,-0.35,-1,"Mildly negative",2
+52,1.2,2,"Strongly positive",2
+53,0.52,1,"Mildly positive",5
+54,1.8,2,"Strongly positive",2
+55,1,2,"Strongly positive",1
+56,0.375,1,"Mildly positive",8
+57,-1.63333333333333,-2,"Strongly negative",6
+58,1.48333333333333,2,"Strongly positive",6
+59,-1.75,-2,"Strongly negative",2
+60,0.3625,1,"Mildly positive",8
+61,-0.05,0,"Neutral",2
+62,0.26,1,"Mildly positive",5
+63,1.5625,2,"Strongly positive",16
+64,0.245454545454545,1,"Mildly positive",11
+65,1,2,"Strongly positive",1
+66,0.655555555555556,2,"Strongly positive",9
+67,-0.533333333333333,-1,"Mildly negative",3
+68,1.8,2,"Strongly positive",2
+69,-1.06,-2,"Strongly negative",5
+70,1.26666666666667,2,"Strongly positive",9
+71,1,2,"Strongly positive",5
+72,1.3,2,"Strongly positive",3
+73,0.75,2,"Strongly positive",4
+74,0.95,2,"Strongly positive",6
+75,1.16666666666667,2,"Strongly positive",6
+76,0.857142857142857,2,"Strongly positive",7
+77,0.566666666666667,1,"Mildly positive",6
+78,1,2,"Strongly positive",2
+79,1.8,2,"Strongly positive",3
+80,1.26666666666667,2,"Strongly positive",6
+81,1,2,"Strongly positive",3
+82,-4.43655528981068e-17,0,"Neutral",5
+83,0.625,2,"Strongly positive",4
+84,-0.0285714285714286,0,"Neutral",7
+85,1.16,2,"Strongly positive",5
+86,1.35,2,"Strongly positive",8
+87,0.7,2,"Strongly positive",5
+88,1.74,2,"Strongly positive",5
+89,0.075,0,"Neutral",8
+90,1,2,"Strongly positive",1
+91,0.511111111111111,1,"Mildly positive",9
+92,0.633333333333333,2,"Strongly positive",6
+93,0.342857142857143,1,"Mildly positive",7
+94,1.26666666666667,2,"Strongly positive",9
+95,1.45,2,"Strongly positive",4
+96,1.56666666666667,2,"Strongly positive",3
+97,1.02,2,"Strongly positive",5
+98,1.525,2,"Strongly positive",4
+99,1.5,2,"Strongly positive",2
+100,1.5,2,"Strongly positive",2
+101,1.46,2,"Strongly positive",5
+102,0.788888888888889,2,"Strongly positive",9
+103,1.5,2,"Strongly positive",4
+104,0.3,1,"Mildly positive",2
+105,1.8,2,"Strongly positive",1
+106,0.333333333333333,1,"Mildly positive",3
+107,0.873333333333333,2,"Strongly positive",15
+108,-1.8,-2,"Strongly negative",3
+109,1.4,2,"Strongly positive",1
+110,1.6875,2,"Strongly positive",8
+111,0.533333333333333,1,"Mildly positive",9
+112,1.4,2,"Strongly positive",6
+113,1.15,2,"Strongly positive",4
+114,1.4,2,"Strongly positive",3
+115,0.625,2,"Strongly positive",4
+116,1.5,2,"Strongly positive",2
+117,0.525,1,"Mildly positive",4
+118,1.33333333333333,2,"Strongly positive",6
+119,0.655555555555556,2,"Strongly positive",9
+120,1.16666666666667,2,"Strongly positive",3
+121,0.366666666666667,1,"Mildly positive",3

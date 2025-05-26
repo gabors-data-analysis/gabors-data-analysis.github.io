@@ -1,0 +1,418 @@
+/*-- scss:defaults --*/
+
+// GitHub-inspired color variables
+$gh-dark: #0d1117;
+$gh-dark-gray: #161b22;
+$gh-medium-gray: #30363d;
+$gh-light-gray: #8b949e;
+$gh-white: #f0f6fc;
+$gh-blue: #58a6ff;
+$gh-green: #3fb950;
+$gh-red: #f85149;
+$gh-purple: #8957e5;
+$gh-yellow: #e3b341;
+$gh-orange: #ec6547;
+$gh-pink: #db61a2;
+
+// Base variables
+$body-bg: $gh-dark;
+$body-color: $gh-white;
+$link-color: $gh-blue;
+$presentation-heading-color: $gh-white;
+
+// Font size adjustments - REDUCED SIZES for GitHub rendering
+$presentation-font-size-base: 0.85em; // Reduced base font size
+$presentation-font-smaller: 0.75;
+
+// Fonts
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+$font-family-monospace: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+$presentation-heading-font: $font-family-sans-serif;
+
+// Code blocks
+$code-block-bg: $gh-dark-gray;
+$code-block-border-color: $gh-medium-gray;
+
+// Reveal theme settings
+$presentation-heading-font: $font-family-sans-serif;
+$presentation-heading-font-weight: 600;
+$presentation-h1-font-size: 2.2em; // Reduced from 2.5em
+$presentation-h2-font-size: 1.5em; // Reduced from 1.6em
+$presentation-h3-font-size: 1.2em; // Reduced from 1.3em
+$presentation-block-margin: 8px; // Reduced from 12px
+$presentation-slide-text-align: left;
+
+// Tighter line height for better space usage
+$line-height-base: 1.3;
+
+/*-- scss:rules --*/
+
+// Global Styles
+.reveal {
+  font-family: $font-family-sans-serif;
+  background-color: $gh-dark;
+  font-size: $presentation-font-size-base;
+  line-height: $line-height-base;
+}
+
+.reveal p {
+  margin-bottom: 0.6em; // Reduced paragraph spacing
+}
+
+.reveal .slide-background {
+  background-color: $gh-dark;
+}
+
+.reveal .slide-number {
+  background-color: $gh-dark-gray;
+  color: $gh-blue;
+  font-family: $font-family-monospace;
+  font-size: 0.7em; // Reduced from 0.8em
+  border-radius: 4px;
+  padding: 0.2em 0.5em; // Smaller padding
+  right: 8px;
+  bottom: 8px;
+}
+
+.reveal .progress {
+  color: $gh-blue;
+}
+
+// Title Slide
+.reveal .slide.title-slide {
+  background: linear-gradient(135deg, $gh-dark 0%, $gh-dark-gray 100%);
+}
+
+.title-slide h1 {
+  font-size: 3.2em; // Reduced from 3.5em
+  font-weight: 700;
+  color: $gh-white;
+  margin-bottom: 0.2em;
+}
+
+.title-slide h2 {
+  font-size: 1.6em; // Reduced from 1.8em
+  color: $gh-light-gray;
+  margin-bottom: 0.8em; // Reduced from 1em
+}
+
+.title-slide h3 {
+  font-size: 1.1em; // Reduced from 1.2em
+  color: $gh-blue;
+}
+
+// Section Title Slides
+.section-title-slide {
+  background-color: $gh-dark-gray !important;
+  text-align: center !important;
+}
+
+.section-title-slide h1 {
+  font-size: 2.7em; // Reduced from 3em
+  color: $gh-blue;
+  text-align: center;
+}
+
+// Code blocks
+.reveal pre {
+  background-color: $gh-dark-gray;
+  border-radius: 6px;
+  border: 1px solid $gh-medium-gray;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 0.6em; // Reduced from 0.8em
+  margin: 0.6em 0; // Added smaller margin
+}
+
+.reveal pre code {
+  font-family: $font-family-monospace;
+  font-size: 0.7em; // Reduced from 0.8em
+}
+
+// Lists
+.reveal ul {
+  list-style-type: none;
+  margin-left: 0;
+  margin-bottom: 0.6em; // Reduced list bottom margin
+}
+
+.reveal ul li {
+  margin-bottom: 0.6em; // Reduced from 0.8em
+  position: relative;
+  padding-left: 1.5em; // Reduced from 2em
+}
+
+.reveal ul li::before {
+  content: "•";
+  color: #58a6ff;
+  font-size: 1.1em; // Reduced from 1.2em
+  position: absolute;
+  left: 0.4em; // Reduced from 0.5em
+}
+
+// Nested lists
+.reveal ul ul {
+  margin-top: 0.4em; // Reduced from 0.5em
+  margin-left: 0;
+}
+
+.reveal ul ul li::before {
+  content: "◦";
+  color: #3fb950;
+}
+
+// Highlighted text
+.highlight {
+  color: #58a6ff;
+  font-weight: 600;
+}
+
+.highlight-green {
+  color: #3fb950;
+  font-weight: 600;
+}
+
+.highlight-red {
+  color: #f85149;
+  font-weight: 600;
+}
+
+// Code-style text
+.code {
+  font-family: $font-family-monospace;
+  background-color: #161b22;
+  color: #f0f6fc;
+  padding: 0.1em 0.3em; // Reduced padding
+  border-radius: 3px;
+  font-size: 0.85em; // Reduced from 0.9em
+}
+
+// GitHub Card styling with reduced spacing
+.gh-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 0.4em; // Reduced from 0.5em
+  margin: 0.4em 0; // Reduced from 0.5em
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.gh-card-title {
+  font-weight: 600;
+  color: #58a6ff;
+  margin-bottom: 0.2em; // Reduced from 0.25em
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 0.2em; // Reduced from 0.25em
+  font-size: 0.85em; // Reduced from 0.9em
+}
+
+// Special feature - PR style diffs
+.gh-diff {
+  background-color: #161b22;
+  border-radius: 6px;
+  padding: 0.6em; // Reduced from 0.8em
+  font-family: $font-family-monospace;
+  font-size: 0.75em; // Reduced from 0.8em
+  margin: 0.8em 0; // Reduced from 1em
+}
+
+.gh-diff-add {
+  background-color: rgba(46, 160, 67, 0.15);
+  color: #3fb950;
+}
+
+.gh-diff-del {
+  background-color: rgba(248, 81, 73, 0.15);
+  color: #f85149;
+}
+
+// TL;DR boxes
+.tldr {
+  background-color: rgba(88, 166, 255, 0.1);
+  border-left: 3px solid #58a6ff;
+  padding: 0.6em; // Reduced from 0.8em
+  margin: 0.8em 0; // Reduced from 1em
+  border-radius: 0 6px 6px 0;
+}
+
+.tldr::before {
+  content: "TL;DR";
+  font-weight: 600;
+  color: #58a6ff;
+  display: block;
+  margin-bottom: 0.4em; // Reduced from 0.5em
+}
+
+// Footer styling
+.footer {
+  position: absolute;
+  bottom: 8px; // Reduced from 10px
+  left: 8px; // Reduced from 10px
+  font-size: 0.65em; // Reduced from 0.7em
+  color: #8b949e;
+}
+
+// GitHub logo in corner
+.github-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  transform: scale(0.9); // Scale down the logo by 10%
+}
+
+// Variable relation styling
+.variable-relation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.8em 0; // Reduced from 1em
+}
+
+.variable {
+  font-family: $font-family-monospace;
+  font-size: 1.1em; // Reduced from 1.2em
+  font-weight: 600;
+  background-color: #161b22;
+  color: #58a6ff;
+  padding: 0.2em 0.5em; // Reduced from 0.3em 0.6em
+  border-radius: 4px;
+  margin: 0 0.4em; // Reduced from 0.5em
+}
+
+.relation-arrow {
+  color: #8b949e;
+  font-size: 1.3em; // Reduced from 1.5em
+  margin: 0 0.2em; // Reduced from 0.3em
+}
+
+// Special emphasis
+.important {
+  font-weight: 600;
+  color: #e3b341;
+}
+
+.caution {
+  font-weight: 600;
+  color: #ec6547;
+}
+
+// Quote styling
+blockquote {
+  border-left: 3px solid #58a6ff;
+  background-color: #161b22;
+  padding: 0.6em 0.8em; // Reduced from 0.8em 1em
+  font-style: italic;
+  margin: 0.8em 0; // Reduced from 1em
+  border-radius: 0 6px 6px 0;
+}
+
+// Applied math formula styling
+.formula {
+  font-family: $font-family-monospace;
+  background-color: rgba(88, 166, 255, 0.1);
+  padding: 0.6em; // Reduced from 0.8em
+  text-align: center;
+  margin: 0.8em 0; // Reduced from 1em
+  border-radius: 6px;
+}
+
+// Image styling
+.reveal img {
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 85%;
+  height: auto;
+}
+
+// Custom classes for layout
+.columns {
+  display: flex;
+  margin-top: 1.5em; // Reduced from 2em
+  gap: 1em; // Added gap for better spacing
+}
+
+.col {
+  flex: 1;
+  padding: 0 0.8em; // Reduced from 1em
+}
+
+// GitHub-style issue badge
+.badge {
+  display: inline-block;
+  padding: 0.15em 0.4em; // Reduced from 0.2em 0.5em
+  font-size: 0.75em; // Reduced from 0.8em
+  font-weight: 600;
+  border-radius: 2em;
+  margin-right: 0.4em; // Reduced from 0.5em
+}
+
+.badge-blue {
+  background-color: $gh-blue;
+  color: $gh-dark;
+}
+
+.badge-green {
+  background-color: $gh-green;
+  color: $gh-dark;
+}
+
+.badge-purple {
+  background-color: $gh-purple;
+  color: $gh-white;
+}
+
+// Variable highlight styles
+.x-var {
+  color: $gh-blue;
+  font-weight: 600;
+}
+
+.y-var {
+  color: $gh-green;
+  font-weight: 600;
+}
+
+.f-var {
+  color: $gh-purple;
+  font-weight: 600;
+}
+
+.i-var {
+  color: $gh-yellow;
+  font-weight: 600;
+}
+
+.n-var {
+  color: $gh-orange;
+  font-weight: 600;
+}
+
+.z-var {
+  color: $gh-pink;
+  font-weight: 600;
+}
+
+// Additional space optimization for GitHub rendering
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  padding: 15px 20px; // Reduced padding for slides
+}
+
+// Fix icon sizing
+.reveal i.fas {
+  line-height: 1.1;
+}
+
+// Make section title slides more compact
+.section-title-slide h1 {
+  margin-bottom: 0.2em;
+}
+
+// Optimize slide transitions for smoother performance
+.reveal .slides > section, 
+.reveal .slides > section > section {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
