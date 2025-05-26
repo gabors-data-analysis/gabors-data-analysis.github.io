@@ -335,7 +335,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="learn-more" class="level2">
 <h2 class="anchored" data-anchor-id="learn-more">Learn more</h2>
-<p>I’m adding material to <a href="learn-more/">learn-more</a> folder. You can start with the <a href="./learn-more/beyond.html">beyond</a> page.</p>
+<p>I’m adding material to <a href="learn-more/">learn-more</a> folder. You can start with the <a href="learn-more/beyond.html">beyond</a> page.</p>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
@@ -497,7 +497,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/gabors-data-analysis\.com\/ai-course");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -831,7 +831,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learn more</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>I'm adding material to <span class="co">[</span><span class="ot">learn-more</span><span class="co">](learn-more/)</span> folder. You can start with the <span class="co">[</span><span class="ot">beyond</span><span class="co">](learn-more/beyond.qmd)</span> page. </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>I'm adding material to <span class="co">[</span><span class="ot">learn-more</span><span class="co">](learn-more/)</span> folder. You can start with the <span class="co">[</span><span class="ot">beyond</span><span class="co">](learn-more/beyond.html)</span> page. </span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>

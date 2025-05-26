@@ -126,15 +126,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../weeks.qmd"> 
+    <a class="nav-link" href="../weeks.html"> 
 <span class="menu-text">Weekly Content</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../assignments.qmd"> 
+    <a class="nav-link" href="../assignments.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources.qmd"> 
+    <a class="nav-link" href="../resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
 </ul>
@@ -277,19 +277,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../learn-more/beyond.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../learn-more/beyond.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Learn More</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/index.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../data/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../code/index.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../code/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code</span></a>
   </div>
 </li>
@@ -336,12 +336,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="option-a-easy" class="level3">
 <h3 class="anchored" data-anchor-id="option-a-easy">Option A (easy)</h3>
 <p>Use AI as your assistant to find real-world data that matches or closely resembles the one used in the FT graph, and recreate the same chart using that data.</p>
-<p><strong>what to submit</strong> * Graph: A PDF version of your recreated graph, name it: “lastname_firstname_dawai_week01_ftfigure.pdf” * Data: A CSV file with the data used to create the graph, with the name (“lastname_firstname_dawai_week01_ftdata.pdf”)</p>
+<p><strong>what to submit</strong></p>
+<ul>
+<li>Graph: A PDF version of your recreated graph, name it: “lastname_firstname_dawai_week01_ftfigure.pdf”</li>
+<li>Data: A CSV file with the data used to create the graph, with the name (“lastname_firstname_dawai_week01_ftdata.pdf”)</li>
+</ul>
 </section>
 <section id="option-b-advanced" class="level3">
 <h3 class="anchored" data-anchor-id="option-b-advanced">Option B (advanced)</h3>
-<p>Use AI as your assistant to build an interactive app (dashboard) that mimics the FT graph. * Minimum requirement: the you shall be able to set dates, and hover around values * Ideal: get the app update data and graph dynamically. * could be upload new data * best: automatic via API</p>
-<p><strong>what to submit</strong> * link to app * you can use tools like steamlit (Python), shinyapps (R), etc</p>
+<p>Use AI as your assistant to build an interactive app (dashboard) that mimics the FT graph.</p>
+<ul>
+<li>Minimum requirement: the you shall be able to set dates, and hover around values</li>
+<li>Ideal: get the app update data and graph dynamically.</li>
+<li>could be upload new data</li>
+<li>best: automatic via API</li>
+</ul>
+<p><strong>what to submit</strong></p>
+<ul>
+<li>link to app</li>
+<li>you can use tools like steamlit (Python), shinyapps (R), etc</li>
+</ul>
 
 
 <!-- -->
@@ -492,7 +506,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/gabors-data-analysis\.com\/ai-course");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -827,23 +841,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Look at <span class="co">[</span><span class="ot">this graph</span><span class="co">](/week01/assets/ft-liberation-day-usd-yield-2025-04-11.jpg)</span> from Financial Times. Your task is to recreate this figure using real-world data. </span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">### Option A (easy)</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Use AI as your assistant to find real-world data that matches or closely resembles the one used in the FT graph, and recreate the same chart using that data.</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>**what to submit**</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Graph: A PDF version of your recreated graph, name it: "lastname_firstname_dawai_week01_ftfigure.pdf"</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Data: A CSV file with the data used to create the graph, with the name ("lastname_firstname_dawai_week01_ftdata.pdf")</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">### Option B (advanced)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Use AI as your assistant to find real-world data that matches or closely resembles the one used in the FT graph, and recreate the same chart using that data.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>**what to submit**</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Graph: A PDF version of your recreated graph, name it: "lastname_firstname_dawai_week01_ftfigure.pdf"</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Data: A CSV file with the data used to create the graph, with the name ("lastname_firstname_dawai_week01_ftdata.pdf")</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Use AI as your assistant to build an interactive app (dashboard) that mimics the FT graph. </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Minimum requirement: the you shall be able to set dates, and hover around values</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Ideal: get the app update data and graph dynamically.</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss"> * </span>could be upload new data</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss"> * </span>best: automatic via API</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>**what to submit**</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>link to app</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>you can use tools like steamlit (Python), shinyapps (R), etc</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">### Option B (advanced)</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Use AI as your assistant to build an interactive app (dashboard) that mimics the FT graph. </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Minimum requirement: the you shall be able to set dates, and hover around values</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Ideal: get the app update data and graph dynamically.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss"> * </span>could be upload new data</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss"> * </span>best: automatic via API</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>**what to submit**</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>link to app</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>you can use tools like steamlit (Python), shinyapps (R), etc</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

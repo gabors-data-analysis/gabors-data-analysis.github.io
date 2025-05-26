@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 05 – Doing Data Analysis with AI</title>
+<title>Student-Specific Sentiment Analysis – Doing Data Analysis with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -315,7 +315,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../assignments/assignment_01.html">Assignments</a></li><li class="breadcrumb-item"><a href="../assignments/assignment_05.html">Assignment 5</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Assignment 05</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Student-Specific Sentiment Analysis</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -334,8 +334,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="task" class="level3">
 <h3 class="anchored" data-anchor-id="task">Task</h3>
-<p>Student-Specific Text Sentiment Analysis – Compare manual ratings with AI-generated ratings.</p>
-<p>Steps: * Download the text <a href="..\data/interviews/interview-texts-only.xlsx">file of interviews</a>. Randonly generate a series of 25 numbers between 1 and 121 (<em>without replacement</em>). Those will your interviews to rate. Filter those interviews and save the file as lastname_firstname_sentiment_rated.xlsx. * Go through your interviews and manually rate managers’ sentiment (25 total). * Input full manager interviews (without your rating) into the AI of choice and obtain and compare AI-generated sentiment ratings to initial manual assessments. * For both exercises, incorporate the guidelines <a href="../week05/assets/sentiment-guidelines.html">HERE</a> * Compare your manual and AI generated ratings, and write one paragraph summarizing similarities and deviation.</p>
+<p>Student-Specific Sentiment Analysis of a series of texts – Compare manual ratings with AI-generated ratings.</p>
+<p>Steps:</p>
+<ul>
+<li>Download the text <a href="..\data/interviews/interview-texts-only.xlsx">file of interviews</a>. Randonly generate a series of 25 numbers between 1 and 121 (<em>without replacement</em>). Those will your interviews to rate. Filter those interviews and save the file as lastname_firstname_sentiment_rated.xlsx.</li>
+<li>Go through your interviews and manually rate managers’ sentiment (25 total).</li>
+<li>Input full manager interviews (without your rating) into the AI of choice and obtain and compare AI-generated sentiment ratings to initial manual assessments.</li>
+<li>For both exercises, incorporate the guidelines <a href="..\week05/assets/sentiment-guidelines.html">HERE</a></li>
+<li>Compare your manual and AI generated ratings, and write one paragraph summarizing similarities and deviation.</li>
+</ul>
 </section>
 <section id="submit" class="level3">
 <h3 class="anchored" data-anchor-id="submit">Submit:</h3>
@@ -822,22 +829,25 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Assignment 05"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Student-Specific Sentiment Analysis"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Student-Specific Text Sentiment Analysis -- Compare manual ratings with AI-generated ratings.</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Steps:</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Download the text <span class="co">[</span><span class="ot">file of interviews</span><span class="co">](/data/interviews/interview-texts-only.xlsx)</span>. Randonly generate a series of 25 numbers between 1 and 121 (_without replacement_). Those will your interviews to rate. Filter those interviews and save the file as lastname_firstname_sentiment_rated.xlsx.</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Go through your interviews and manually rate managers' sentiment (25 total).</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Input full manager interviews (without your rating) into the AI of choice and obtain and compare AI-generated sentiment ratings to initial manual assessments.</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>For both exercises, incorporate the guidelines <span class="co">[</span><span class="ot">HERE</span><span class="co">](/week05/assets/sentiment-guidelines.md)</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Compare your manual and AI generated ratings, and write one paragraph summarizing similarities and deviation.</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">### Submit:</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>A file with your manual ratings and AI generated ratings: lastname_firstname_sentiment_rated.xlsx.</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>A text file with the one paragraph summarizing similarities and deviation: lastname_firstname_sentiment_eval.txt/</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Student-Specific Sentiment Analysis of a series of texts -- Compare manual ratings with AI-generated ratings.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Steps:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Download the text <span class="co">[</span><span class="ot">file of interviews</span><span class="co">](/data/interviews/interview-texts-only.xlsx)</span>. Randonly generate a series of 25 numbers between 1 and 121 (_without replacement_). Those will your interviews to rate. Filter those interviews and save the file as lastname_firstname_sentiment_rated.xlsx.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Go through your interviews and manually rate managers' sentiment (25 total).</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Input full manager interviews (without your rating) into the AI of choice and obtain and compare AI-generated sentiment ratings to initial manual assessments.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>For both exercises, incorporate the guidelines <span class="co">[</span><span class="ot">HERE</span><span class="co">](/week05/assets/sentiment-guidelines.html)</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Compare your manual and AI generated ratings, and write one paragraph summarizing similarities and deviation.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### Submit:</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>A file with your manual ratings and AI generated ratings: lastname_firstname_sentiment_rated.xlsx.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>A text file with the one paragraph summarizing similarities and deviation: lastname_firstname_sentiment_eval.txt/</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

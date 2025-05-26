@@ -127,15 +127,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../weeks.qmd"> 
+    <a class="nav-link" href="../../weeks.html"> 
 <span class="menu-text">Weekly Content</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../assignments.qmd"> 
+    <a class="nav-link" href="../../assignments.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../resources.qmd"> 
+    <a class="nav-link" href="../../resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
 </ul>
@@ -278,19 +278,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../learn-more/beyond.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../../learn-more/beyond.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Learn More</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../data/index.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../../data/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../code/index.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../../code/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Code</span></a>
   </div>
 </li>
@@ -505,7 +505,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="chatgpt" class="level3">
 <h3 class="anchored" data-anchor-id="chatgpt">ChatGPT</h3>
 <p>The free version offers: access to GPT‑4.1 mini, real-time data from the web with search. Plus * Limited access to GPT‑4o, OpenAI o4-mini, and deep research * Limited access to file uploads, data analysis,</p>
-<p>The <a href="https://openai.com/chatgpt/pricing/">Plus version</a> offers * access to reasoning models (OpenAI o3, OpenAI o4-mini, and OpenAI o4-mini-high) * access Deep Research * higher limits on advanced features: file uploads, and data analysis * access to a research preview of GPT‑4.5 * access to GPT‑4.1, a model optimized for coding tasks * can create and use projects, tasks,</p>
+<p>The <a href="https://openai.com/chatgpt/pricing/">Plus version</a> offers</p>
+<ul>
+<li>access to reasoning models (OpenAI o3, OpenAI o4-mini, and OpenAI o4-mini-high)</li>
+<li>access Deep Research</li>
+<li>higher limits on advanced features: file uploads, and data analysis</li>
+<li>access to a research preview of GPT‑4.5</li>
+<li>access to GPT‑4.1, a model optimized for coding tasks</li>
+<li>can create and use projects, tasks,</li>
+</ul>
 </section>
 <section id="claude" class="level3">
 <h3 class="anchored" data-anchor-id="claude">Claude</h3>
@@ -688,7 +696,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/gabors-data-analysis\.com\/ai-course");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -1096,42 +1104,43 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Limited access to file uploads, data analysis,</span>
 <span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">Plus version</span><span class="co">](https://openai.com/chatgpt/pricing/)</span> offers</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>access to reasoning models  (OpenAI o3, OpenAI o4-mini, and OpenAI o4-mini-high)</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>access Deep Research</span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>higher limits on advanced features:  file uploads, and data analysis</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>access to a research preview of GPT‑4.5</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>access to GPT‑4.1, a model optimized for coding tasks</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>can create and use projects, tasks, </span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="fu">### Claude</span></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>The free model can be used for chat and data analysis. </span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>The paid tier for Claude</span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>More usage -- for details see <span class="co">[</span><span class="ot">limits</span><span class="co">](https://support.anthropic.com/en/articles/9797557-usage-limit-best-practices)</span></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>access to Projects to organize chats and documents</span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>web access</span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>extended thinking for complex work</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## Other cool stuff I use</span></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="fu">### Notebook LM</span></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Google's Notebook LM</span><span class="co">]</span> (https://notebooklm.google/) is able to "understand" and summarize any material (such as research paper) and relate it to other topics. Can create fun audo summaries like a podcast. Here is one on a <span class="co">[</span><span class="ot">research paper of mine on cultural homophily</span><span class="co">](https://notebooklm.google.com/notebook/655d48f9-bff7-4ac3-908b-5b9bc48e5be4/audio)</span>. </span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="fu">### Github Copilot</span></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>Github Copilot goes inside your code editor such as Rstudio, VSCode, Jupyter Notebook and helps writing code. Great to write frequent stuff like loops or graphs. </span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>It has an Education -- free access for students: <span class="co">[</span><span class="ot">GithubEducation</span><span class="co">](https://github.com/education/students)</span></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="fu">### Cursor </span></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Cursor AI</span><span class="co">](https://www.cursor.com/)</span> is the most popular AI code editor, I have very limited experience, but is favored by software developers. </span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="fu">## Feedback</span></span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>Dear Reader. I have limited experience. Suggestions are welcome, please post an issue.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>access to reasoning models  (OpenAI o3, OpenAI o4-mini, and OpenAI o4-mini-high)</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>access Deep Research</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>higher limits on advanced features:  file uploads, and data analysis</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>access to a research preview of GPT‑4.5</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>access to GPT‑4.1, a model optimized for coding tasks</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>can create and use projects, tasks, </span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="fu">### Claude</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>The free model can be used for chat and data analysis. </span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>The paid tier for Claude</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>More usage -- for details see <span class="co">[</span><span class="ot">limits</span><span class="co">](https://support.anthropic.com/en/articles/9797557-usage-limit-best-practices)</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>access to Projects to organize chats and documents</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>web access</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>extended thinking for complex work</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="fu">## Other cool stuff I use</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="fu">### Notebook LM</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Google's Notebook LM</span><span class="co">]</span> (https://notebooklm.google/) is able to "understand" and summarize any material (such as research paper) and relate it to other topics. Can create fun audo summaries like a podcast. Here is one on a <span class="co">[</span><span class="ot">research paper of mine on cultural homophily</span><span class="co">](https://notebooklm.google.com/notebook/655d48f9-bff7-4ac3-908b-5b9bc48e5be4/audio)</span>. </span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="fu">### Github Copilot</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>Github Copilot goes inside your code editor such as Rstudio, VSCode, Jupyter Notebook and helps writing code. Great to write frequent stuff like loops or graphs. </span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>It has an Education -- free access for students: <span class="co">[</span><span class="ot">GithubEducation</span><span class="co">](https://github.com/education/students)</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="fu">### Cursor </span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Cursor AI</span><span class="co">](https://www.cursor.com/)</span> is the most popular AI code editor, I have very limited experience, but is favored by software developers. </span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="fu">## Feedback</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>Dear Reader. I have limited experience. Suggestions are welcome, please post an issue.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

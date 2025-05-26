@@ -4,7 +4,7 @@
     "href": "week01/index.html",
     "title": "Week 1: LLM Review",
     "section": "",
-    "text": "Introduction to Large Language Models and their applications in data analysis :::\n\n\n\nBy the end of this session, students will:\n\nUnderstand core concepts and architecture behind large language models (LLMs)\nLearn how to incorporate AI into data analysis workflows\n\nCritically assess capabilities and limitations of AI tools in academic contexts\nExperience the “jagged frontier” of LLM capabilities through hands-on practice\n\n\n\n\n\n\n📊 Slideshow\n\n\nLLM Concepts Presentation\nKey Topics Covered:\n\nWhat are Large Language Models?\nThe Transformer architecture and tokenization\nCyborg vs Centaur approaches to AI collaboration\nThe “jagged frontier” of AI capabilities\nPrompt engineering fundamentals\n\n\n\n\n\n📚 Required Reading\n\n\n\nWhich AI Model to Choose?\nUpdated guide for 2025\nReview the FT graph for class activity (see below)\n\nOptional Background:\n\nEthan Mollick: “Co-Intelligence: Living and Working with AI” (Chapters 1-2)\n\n\n\n\n\n🎯 Class Activity\n\n\nThe Financial Times Challenge\nTake a look at this excellent Financial Times visualization showing the market reaction to Trump’s tariff announcements.\nYour Mission:\nReproduce this chart as accurately as possible in the shortest time using AI assistance.\nLearning Goals:\n\nExperience AI-assisted data visualization\nPractice prompt engineering for specific tasks\nUnderstand the balance between human direction and AI execution\n\n\n\n\n\n\n\n\n\n\n\n\nAssignment 1: Reproduce the FT Graph\n\n\n\nDue: Before Week 2\nChoose your approach:\n\nOption A (Standard): Use AI to find data and recreate the visualization\nOption B (Advanced): Build an interactive dashboard that updates dynamically\n\nFull Assignment Details\n\n\n\n\n\n\n\n\n\n\n\nBefore Class\n\n\n\n\nNo specific preparation required for Week 1\nCome ready to discuss your current experience with AI tools\nBring examples of where you’ve encountered AI in your work/studies\n\n\n\n\n\n\nConsider these questions as you engage with the materials:\n\nPersonal AI Experience: How have you already incorporated AI into your routine? Which model feels most natural to you?\nError Management: How do you currently deal with AI hallucinations or imperfect answers?\nThe Jagged Frontier: What tasks do you expect AI to excel at? Where do you think it will struggle?\n\n\n\n\nRecommended AI Platforms for this course:\n\nChatGPT 4o/o1 - Excellent for coding and data analysis\nClaude 3.5 Sonnet - Great for research and writing tasks\n\nGitHub Copilot - For integrated coding assistance\n\nGetting Started:\n\nMost tasks can be accomplished with free tiers\nConsider paid subscriptions for intensive work ($20/month typical)\nSee AI Model Comparison Guide for detailed recommendations\n\n\n\n\nBy completing Week 1, you should:\n\n✅ Understand what LLMs can and cannot do reliably\n✅ Have experience with AI-assisted data visualization\n\n✅ Recognize the importance of human oversight in AI workflows\n✅ Be prepared to use AI as a collaborative tool throughout the course\n\n\n\n\n\n\n\n\nAcademic Integrity Note\n\n\n\nThis course teaches you to use AI as a powerful assistant while maintaining your responsibility as the analyst and author. Always verify AI outputs, cite your methods, and ensure you understand the analysis you’re presenting.\n\n\nNext Week: Week 2 - Data Discovery and Documentation where we’ll use AI to understand and document complex datasets.",
+    "text": "Week 1: LLM Review\n\n\nIntroduction to Large Language Models and their applications in data analysis",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -15,8 +15,8 @@
     "objectID": "week01/index.html#learning-objectives",
     "href": "week01/index.html#learning-objectives",
     "title": "Week 1: LLM Review",
-    "section": "",
-    "text": "By the end of this session, students will:\n\nUnderstand core concepts and architecture behind large language models (LLMs)\nLearn how to incorporate AI into data analysis workflows\n\nCritically assess capabilities and limitations of AI tools in academic contexts\nExperience the “jagged frontier” of LLM capabilities through hands-on practice",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this session, students will:\n\nUnderstand core concepts and architecture behind large language models (LLMs)\nLearn how to incorporate AI into data analysis workflows\n\nCritically assess capabilities and limitations of AI tools in academic contexts\nExperience the “jagged frontier” of LLM capabilities through hands-on practice",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -27,8 +27,8 @@
     "objectID": "week01/index.html#class-materials",
     "href": "week01/index.html#class-materials",
     "title": "Week 1: LLM Review",
-    "section": "",
-    "text": "📊 Slideshow\n\n\nLLM Concepts Presentation\nKey Topics Covered:\n\nWhat are Large Language Models?\nThe Transformer architecture and tokenization\nCyborg vs Centaur approaches to AI collaboration\nThe “jagged frontier” of AI capabilities\nPrompt engineering fundamentals\n\n\n\n\n\n📚 Required Reading\n\n\n\nWhich AI Model to Choose?\nUpdated guide for 2025\nReview the FT graph for class activity (see below)\n\nOptional Background:\n\nEthan Mollick: “Co-Intelligence: Living and Working with AI” (Chapters 1-2)\n\n\n\n\n\n🎯 Class Activity\n\n\nThe Financial Times Challenge\nTake a look at this excellent Financial Times visualization showing the market reaction to Trump’s tariff announcements.\nYour Mission:\nReproduce this chart as accurately as possible in the shortest time using AI assistance.\nLearning Goals:\n\nExperience AI-assisted data visualization\nPractice prompt engineering for specific tasks\nUnderstand the balance between human direction and AI execution",
+    "section": "Class Materials",
+    "text": "Class Materials\n\n\n📊 Slideshow\n\n\nLLM Concepts Presentation\nKey Topics Covered:\n\nWhat are Large Language Models?\nThe Transformer architecture and tokenization\nCyborg vs Centaur approaches to AI collaboration\nThe “jagged frontier” of AI capabilities\nPrompt engineering fundamentals\n\n\n\n\n\n📚 Required Reading\n\n\n\nWhich AI Model to Choose?\nUpdated guide for 2025\nReview the FT graph for class activity (see below)\n\nOptional Background:\n\nEthan Mollick: “Co-Intelligence: Living and Working with AI” (Chapters 1-2)\n\n\n\n\n\n🎯 Class Activity\n\n\nThe Financial Times Challenge\nTake a look at this excellent Financial Times visualization showing the market reaction to Trump’s tariff announcements.\nYour Mission:\nReproduce this chart as accurately as possible in the shortest time using AI assistance.\nLearning Goals:\n\nExperience AI-assisted data visualization\nPractice prompt engineering for specific tasks\nUnderstand the balance between human direction and AI execution",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -39,8 +39,8 @@
     "objectID": "week01/index.html#assignment",
     "href": "week01/index.html#assignment",
     "title": "Week 1: LLM Review",
-    "section": "",
-    "text": "Assignment 1: Reproduce the FT Graph\n\n\n\nDue: Before Week 2\nChoose your approach:\n\nOption A (Standard): Use AI to find data and recreate the visualization\nOption B (Advanced): Build an interactive dashboard that updates dynamically\n\nFull Assignment Details",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nAssignment 1: Reproduce the FT Graph\n\n\n\nDue: Before Week 2\nChoose your approach:\n\nOption A (Standard): Use AI to find data and recreate the visualization\nOption B (Advanced): Build an interactive dashboard that updates dynamically\n\nFull Assignment Details",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -51,8 +51,8 @@
     "objectID": "week01/index.html#preparation",
     "href": "week01/index.html#preparation",
     "title": "Week 1: LLM Review",
-    "section": "",
-    "text": "Before Class\n\n\n\n\nNo specific preparation required for Week 1\nCome ready to discuss your current experience with AI tools\nBring examples of where you’ve encountered AI in your work/studies",
+    "section": "Preparation",
+    "text": "Preparation\n\n\n\n\n\n\nBefore Class\n\n\n\n\nNo specific preparation required for Week 1\nCome ready to discuss your current experience with AI tools\nBring examples of where you’ve encountered AI in your work/studies",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -63,8 +63,8 @@
     "objectID": "week01/index.html#discussion-questions",
     "href": "week01/index.html#discussion-questions",
     "title": "Week 1: LLM Review",
-    "section": "",
-    "text": "Consider these questions as you engage with the materials:\n\nPersonal AI Experience: How have you already incorporated AI into your routine? Which model feels most natural to you?\nError Management: How do you currently deal with AI hallucinations or imperfect answers?\nThe Jagged Frontier: What tasks do you expect AI to excel at? Where do you think it will struggle?",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\nConsider these questions as you engage with the materials:\n\nPersonal AI Experience: How have you already incorporated AI into your routine? Which model feels most natural to you?\nError Management: How do you currently deal with AI hallucinations or imperfect answers?\nThe Jagged Frontier: What tasks do you expect AI to excel at? Where do you think it will struggle?",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -75,8 +75,8 @@
     "objectID": "week01/index.html#tools-and-resources",
     "href": "week01/index.html#tools-and-resources",
     "title": "Week 1: LLM Review",
-    "section": "",
-    "text": "Recommended AI Platforms for this course:\n\nChatGPT 4o/o1 - Excellent for coding and data analysis\nClaude 3.5 Sonnet - Great for research and writing tasks\n\nGitHub Copilot - For integrated coding assistance\n\nGetting Started:\n\nMost tasks can be accomplished with free tiers\nConsider paid subscriptions for intensive work ($20/month typical)\nSee AI Model Comparison Guide for detailed recommendations",
+    "section": "Tools and Resources",
+    "text": "Tools and Resources\nRecommended AI Platforms for this course:\n\nChatGPT 4o/o1 - Excellent for coding and data analysis\nClaude 3.5 Sonnet - Great for research and writing tasks\n\nGitHub Copilot - For integrated coding assistance\n\nGetting Started:\n\nMost tasks can be accomplished with free tiers\nConsider paid subscriptions for intensive work ($20/month typical)\nSee AI Model Comparison Guide for detailed recommendations",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -87,8 +87,8 @@
     "objectID": "week01/index.html#week-1-outcomes",
     "href": "week01/index.html#week-1-outcomes",
     "title": "Week 1: LLM Review",
-    "section": "",
-    "text": "By completing Week 1, you should:\n\n✅ Understand what LLMs can and cannot do reliably\n✅ Have experience with AI-assisted data visualization\n\n✅ Recognize the importance of human oversight in AI workflows\n✅ Be prepared to use AI as a collaborative tool throughout the course\n\n\n\n\n\n\n\n\nAcademic Integrity Note\n\n\n\nThis course teaches you to use AI as a powerful assistant while maintaining your responsibility as the analyst and author. Always verify AI outputs, cite your methods, and ensure you understand the analysis you’re presenting.\n\n\nNext Week: Week 2 - Data Discovery and Documentation where we’ll use AI to understand and document complex datasets.",
+    "section": "Week 1 Outcomes",
+    "text": "Week 1 Outcomes\nBy completing Week 1, you should:\n\n✅ Understand what LLMs can and cannot do reliably\n✅ Have experience with AI-assisted data visualization\n\n✅ Recognize the importance of human oversight in AI workflows\n✅ Be prepared to use AI as a collaborative tool throughout the course\n\n\n\n\n\n\n\n\nAcademic Integrity Note\n\n\n\nThis course teaches you to use AI as a powerful assistant while maintaining your responsibility as the analyst and author. Always verify AI outputs, cite your methods, and ensure you understand the analysis you’re presenting.\n\n\nNext Week: Week 2 - Data Discovery and Documentation where we’ll use AI to understand and document complex datasets.",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -184,7 +184,7 @@
     "href": "week03/ideas-good-report.html#let-us-focus-on-association",
     "title": "Some ideas on good report",
     "section": "Let us focus on association",
-    "text": "Let us focus on association\nThink questions like * Are people working more hours, make more money/hour? * How much less does a car worth when having 1000km more in odometer? * What is the relationship between hotel prices and location / amenities?\nCausal would be * In an intervention, we make some people work more, will they have a high w/h?\nPrediction would be * Here is wage data, let us build a model for hourly wage"
+    "text": "Let us focus on association\nThink questions like\n\nAre people working more hours, make more money/hour?\nHow much less does a car worth when having 1000km more in odometer?\nWhat is the relationship between hotel prices and location / amenities?\n\nCausal would be\n\nIn an intervention, we make some people work more, will they have a high w/h?\n\nPrediction would be\n\nHere is wage data, let us build a model for hourly wage"
   },
   {
     "objectID": "week03/ideas-good-report.html#what-to-include-in-a-report",
@@ -415,21 +415,21 @@
     "href": "index.html#you-can-use-it-to-teach-and-learn-freely",
     "title": "Doing Data Analysis with AI",
     "section": "You can use it to teach and learn freely",
-    "text": "You can use it to teach and learn freely\nAttribution: Békés, Gábor: “Doing Data Analysis with AI: a short course”, available at github.com/gabors-data-analysis/da-w-ai/, v0.5, 2025-05-14\nLicense: CC BY-NC-SA 4.0 – share, attribute, non-commercial (contact me for corporate gigs)"
+    "text": "You can use it to teach and learn freely\nAttribution: Békés, Gábor: “Doing Data Analysis with AI: a short course”, available at github.com/gabors-data-analysis/da-w-ai/, v0.5, 2025-05-14\nLicense: CC BY-NC-SA 4.0 – share, attribute, non-commercial (contact me for corporate gigs)\nTextbook Please check out the textbook behind all this, buy it if you can. If interested teaching contact the Cambridge UP or me."
   },
   {
     "objectID": "index.html#thanks",
     "href": "index.html#thanks",
     "title": "Doing Data Analysis with AI",
     "section": "Thanks",
-    "text": "Thanks\nThanks: Developed mostly by me, Gábor Békés Thanks a million to the two wonderful human RAs, Ms Zsuzsa Vadle and Mr Kenneth Colombe, both Phd students. Thanks to Claude.ai that did a great deal of help in creating the simulated dataset. ChatGPT and Claude.ai helped create the slideshows and educated me on NLP.\nThanks for CEU’s teaching grant that allowed me pay humans and AI."
+    "text": "Thanks\nThanks: Developed mostly by me, Gábor Békés Thanks a million to the two wonderful human RAs, Ms Zsuzsa Vadle and Mr Kenneth Colombe, both Phd students. Thanks to Claude.ai that did a great deal of help in creating the simulated dataset. ChatGPT and Claude.ai helped create the slideshows and educated me on NLP. This is a beatiful example of collaboration with great young people while heavily benefiting from advanced AI.\nThanks for CEU’s teaching grant that allowed me pay people and AI."
   },
   {
     "objectID": "index.html#questions-and-suggestions",
     "href": "index.html#questions-and-suggestions",
     "title": "Doing Data Analysis with AI",
     "section": "Questions and suggestions",
-    "text": "Questions and suggestions\nThis material is based my course at CEU in Vienna, Austria. I teach it from this Github repo.\nIf you have questions or suggestions or interested to learn more, just fill in this form."
+    "text": "Questions and suggestions\nThis material is based my course at CEU in Vienna, Austria.\nIf you have questions or suggestions or interested to learn more, just fill in this form."
   },
   {
     "objectID": "index.html#and-now-this.",
@@ -906,9 +906,9 @@
   {
     "objectID": "assignments/assignment_05.html",
     "href": "assignments/assignment_05.html",
-    "title": "Assignment 05",
+    "title": "Student-Specific Sentiment Analysis",
     "section": "",
-    "text": "Task\nStudent-Specific Text Sentiment Analysis – Compare manual ratings with AI-generated ratings.\nSteps: * Download the text file of interviews. Randonly generate a series of 25 numbers between 1 and 121 (without replacement). Those will your interviews to rate. Filter those interviews and save the file as lastname_firstname_sentiment_rated.xlsx. * Go through your interviews and manually rate managers’ sentiment (25 total). * Input full manager interviews (without your rating) into the AI of choice and obtain and compare AI-generated sentiment ratings to initial manual assessments. * For both exercises, incorporate the guidelines HERE * Compare your manual and AI generated ratings, and write one paragraph summarizing similarities and deviation.\n\n\nSubmit:\n\nA file with your manual ratings and AI generated ratings: lastname_firstname_sentiment_rated.xlsx.\nA text file with the one paragraph summarizing similarities and deviation: lastname_firstname_sentiment_eval.txt/",
+    "text": "Task\nStudent-Specific Sentiment Analysis of a series of texts – Compare manual ratings with AI-generated ratings.\nSteps:\n\nDownload the text file of interviews. Randonly generate a series of 25 numbers between 1 and 121 (without replacement). Those will your interviews to rate. Filter those interviews and save the file as lastname_firstname_sentiment_rated.xlsx.\nGo through your interviews and manually rate managers’ sentiment (25 total).\nInput full manager interviews (without your rating) into the AI of choice and obtain and compare AI-generated sentiment ratings to initial manual assessments.\nFor both exercises, incorporate the guidelines HERE\nCompare your manual and AI generated ratings, and write one paragraph summarizing similarities and deviation.\n\n\n\nSubmit:\n\nA file with your manual ratings and AI generated ratings: lastname_firstname_sentiment_rated.xlsx.\nA text file with the one paragraph summarizing similarities and deviation: lastname_firstname_sentiment_eval.txt/",
     "crumbs": [
       "Home",
       "Assignments",
@@ -918,9 +918,9 @@
   {
     "objectID": "assignments/assignment_03.html",
     "href": "assignments/assignment_03.html",
-    "title": "Assignment 3",
+    "title": "Creating a report",
     "section": "",
-    "text": "Continue with the research question you had chosen in class.\nUse AI iteratively to help you create a report.\nImportant * AI is your assistant, use it as input not as output. Don’t submit an AI-generated report as such, always author, review, edit.\n\nTasks\nOption A (easy) * Think in terms of two variables (\\(x\\) and \\(y\\)). * Pick a single variable or a combined index of variables * Pick a GDP variable * Think about a causal link. * Create one carefully designed graph to illustrate the relationship (Graph 1) * At each step, explain your choices/decisions (ie why you chose a certain variable) * Create a Conclusion paragraph where you summarize your work and results in 80-100 words.\nOption B (advanced) * In addition to the tasks in Option A, create another graph to show heterogeneity of country size groups using population (Graph 2) * Run a regression and interpret the coefficient.\n\n\nTo submit\n\nSubmission 1: Submit a maximum 1-1.5 page report in .pdf format (including exhibits) (lastname_firstname_dawai_week03_report.pdf) (12p)\nSubmission 2: Submit your code (or aprovide a link). (4p)\nSubmission 3: What advice would you give to a fellow data analysis student on using AI to create a report? (lastname_firstname_dawai_week01_advice.txt) (4p)\n\nList 2–3 pieces of advice based on your own experience using AI for this specific task.\n\n\nImportant: * Upload your report to the student folder called Reports at moodle * Important: Do not use AI to help you generate the advice. We want to hear your personal examples and reflections, not AI-generated suggestions. * Next class in the first 20 mins each group will read another groups report and discuss the good and bad aspects of the report.",
+    "text": "Continue with the research question you had chosen in class.\nUse AI iteratively to help you create a report.\nImportant\n\nAI is your assistant, use it as input not as output. Don’t submit an AI-generated report as such, always author, review, edit.\n\n\nTasks\nOption A (easy)\n\nThink in terms of two variables (\\(x\\) and \\(y\\)).\n\nPick a single variable or a combined index of variables\nPick a GDP variable\nThink about a causal link.\n\nCreate one carefully designed graph to illustrate the relationship (Graph 1)\nAt each step, explain your choices/decisions (ie why you chose a certain variable)\nCreate a Conclusion paragraph where you summarize your work and results in 80-100 words.\n\nOption B (advanced)\n\nIn addition to the tasks in Option A, create another graph to show heterogeneity of country size groups using population (Graph 2)\nRun a regression and interpret the coefficient.\n\n\n\nTo submit\n\nSubmission 1: Submit a maximum 1-1.5 page report in .pdf format (including exhibits) (lastname_firstname_dawai_week03_report.pdf) (12p)\nSubmission 2: Submit your code (or aprovide a link). (4p)\nSubmission 3: What advice would you give to a fellow data analysis student on using AI to create a report? (lastname_firstname_dawai_week01_advice.txt) (4p)\n\nList 2–3 pieces of advice based on your own experience using AI for this specific task.\n\n\nImportant:\n\nUpload your report to the student folder called Reports at moodle or similar service if applicable. This is for the next class\nImportant: Do not use AI to help you generate the advice. We want to hear your personal examples and reflections, not AI-generated suggestions.\nNext class in the first 20 mins each group will read another groups report and discuss the good and bad aspects of the report.",
     "crumbs": [
       "Home",
       "Assignments",
@@ -932,7 +932,7 @@
     "href": "assignments/assignment_01.html",
     "title": "Reproduce an FT graph",
     "section": "",
-    "text": "Look at this graph from Financial Times. Your task is to recreate this figure using real-world data.\n\nOption A (easy)\nUse AI as your assistant to find real-world data that matches or closely resembles the one used in the FT graph, and recreate the same chart using that data.\nwhat to submit * Graph: A PDF version of your recreated graph, name it: “lastname_firstname_dawai_week01_ftfigure.pdf” * Data: A CSV file with the data used to create the graph, with the name (“lastname_firstname_dawai_week01_ftdata.pdf”)\n\n\nOption B (advanced)\nUse AI as your assistant to build an interactive app (dashboard) that mimics the FT graph. * Minimum requirement: the you shall be able to set dates, and hover around values * Ideal: get the app update data and graph dynamically. * could be upload new data * best: automatic via API\nwhat to submit * link to app * you can use tools like steamlit (Python), shinyapps (R), etc",
+    "text": "Look at this graph from Financial Times. Your task is to recreate this figure using real-world data.\n\nOption A (easy)\nUse AI as your assistant to find real-world data that matches or closely resembles the one used in the FT graph, and recreate the same chart using that data.\nwhat to submit\n\nGraph: A PDF version of your recreated graph, name it: “lastname_firstname_dawai_week01_ftfigure.pdf”\nData: A CSV file with the data used to create the graph, with the name (“lastname_firstname_dawai_week01_ftdata.pdf”)\n\n\n\nOption B (advanced)\nUse AI as your assistant to build an interactive app (dashboard) that mimics the FT graph.\n\nMinimum requirement: the you shall be able to set dates, and hover around values\nIdeal: get the app update data and graph dynamically.\ncould be upload new data\nbest: automatic via API\n\nwhat to submit\n\nlink to app\nyou can use tools like steamlit (Python), shinyapps (R), etc",
     "crumbs": [
       "Home",
       "Assignments",
@@ -944,7 +944,7 @@
     "href": "assignments/assignment_02.html",
     "title": "Assignment 2: Creating a readme doc",
     "section": "",
-    "text": "Task\nIn this assignment, you will create a readme document by asking for AI assistance. * First, consider the VWS Survey we used in class: Codebook, sample data * Second, choose a research question using the VWS data. It can be broad or specific. Ask AI for ideas. * What variables would you use to investigate the research question? Pick the most relevant ones (min 8, max 25) * Considering these variables only create a single README.md (in markdown). In the readme, include:\nOption A (easy) * key info on the dataset itself (you need to figure out what this key info is based on the lecture and examples) * key variables description * table with descriptive statistics for the 5 most important selected variables\nOption B (advanced) * in addition to the points in Option A, describe the folder structure you would use to work with this data\n\n\nTo submit\n\nSubmission 1: a finalized README.md file and code. (lastname_firstname_dawai_week01_readme.md) (16p)\nSubmission 2: What advice would you give to a fellow data analysis student on using AI to create README documents? (lastname_firstname_dawai_week01_advice.txt) (4p)\n\nList 2–3 pieces of advice based on your own experience using AI for this specific task.\n\n\nImportant notice * Do not use AI to help you generate the advice. We want to hear your personal examples and reflections, not AI-generated suggestions.",
+    "text": "Task\nIn this assignment, you will create a readme document by asking for AI assistance.\n\nFirst, consider the VWS Survey we used in class: Codebook, sample data\nSecond, choose a research question using the VWS data. It can be broad or specific. Ask AI for ideas.\nWhat variables would you use to investigate the research question? Pick the most relevant ones (min 8, max 25)\nConsidering these variables only create a single README.md (in markdown). In the readme, include:\n\nOption A (easy)\n\nkey info on the dataset itself (you need to figure out what this key info is based on the lecture and examples)\nkey variables description\ntable with descriptive statistics for the 5 most important selected variables\n\nOption B (advanced)\n\nin addition to the points in Option A, describe the folder structure you would use to work with this data\n\n\n\nTo submit\n\nSubmission 1: a finalized README.md file and code. (lastname_firstname_dawai_week01_readme.md) (16p)\nSubmission 2: What advice would you give to a fellow data analysis student on using AI to create README documents? (lastname_firstname_dawai_week01_advice.txt) (4p)\n\nList 2–3 pieces of advice based on your own experience using AI for this specific task.\n\n\nImportant notice\n\nDo not use AI to help you generate the advice. We want to hear your personal examples and reflections, not AI-generated suggestions.",
     "crumbs": [
       "Home",
       "Assignments",
@@ -954,9 +954,9 @@
   {
     "objectID": "assignments/assignment_04.html",
     "href": "assignments/assignment_04.html",
-    "title": "Assignment 3",
+    "title": "Research presentation after joining tables",
     "section": "",
-    "text": "Create groups of 2-3 people who use the same coding language.\n\nTask\nAsk AI to give you a list of research questions that can be answered using many (at least 4) of the hotel data sets provided. Iterate with AI to find an interesting question using a persona. * Write code that joins the required data\nOption A (easy) * Write code to do the analysis (conditional comparison / some simple regression) * Produce a single figure that shows the answer (or a simple version of the answer) to the research question (e.g. scatterplot and regression line, or boxplot, etc) Create a min. 6 - max. 10 pages slide show to illustrate the research question, the merging process, the figure and the conclusion.\nFor example, you can use the following slide show structure, each bit is 1-2 slides: * Research question and why/for whom you picked it * Data and variables * Detailed steps of joining tables to get to the work data (here be specific, include schema, keys used, join types, 2-4 slides) * Steps of creating your variables for analysis * Result and interpretation\nOption B (advanced) * In addition to the tasks in Option A, choose another real-world dataset that could be merged with the hotel data. * Choose an additional question that can be answered using the hotel data and the newly merged dataset. * Add two slides where you 1) describe how you joined the two datasets and 2) include a figure that shows your finding\n\n\nSubmit:\n\nSlideshow in pdf format: “lastname1_lastname2_lastname3_slides.pdf”\nReproducible code “lastname1_lastname2_lastname3_code.pdf”",
+    "text": "Create groups of 2-3 people who use the same coding language.\n\nTask\nAsk AI to give you a list of research questions that can be answered using many (at least 4) of the hotel data sets provided. Iterate with AI to find an interesting question using a persona. * Write code that joins the required data\nOption A (easy)\n\nWrite code to do the analysis (conditional comparison / some simple regression)\nProduce a single figure that shows the answer (or a simple version of the answer) to the research question (e.g. scatterplot and regression line, or boxplot, etc) Create a min. 6 - max. 10 pages slide show to illustrate the research question, the merging process, the figure and the conclusion.\n\nFor example, you can use the following slide show structure, each bit is 1-2 slides:\n\nResearch question and why/for whom you picked it\nData and variables\nDetailed steps of joining tables to get to the work data (here be specific, include schema, keys used, join types, 2-4 slides)\nSteps of creating your variables for analysis\nResult and interpretation\n\nOption B (advanced)\n\nIn addition to the tasks in Option A, choose another real-world dataset that could be merged with the hotel data.\nChoose an additional question that can be answered using the hotel data and the newly merged dataset.\nAdd two slides where you 1) describe how you joined the two datasets and 2) include a figure that shows your finding\n\n\n\nSubmit:\n\nSlideshow in pdf format: “lastname1_lastname2_lastname3_slides.pdf”\nReproducible code “lastname1_lastname2_lastname3_code.pdf”",
     "crumbs": [
       "Home",
       "Assignments",
@@ -966,7 +966,7 @@
   {
     "objectID": "assignments/assignment_07.html",
     "href": "assignments/assignment_07.html",
-    "title": "Assignment 07",
+    "title": "Simulation app",
     "section": "",
     "text": "Create a simulation app of an important statistical phenomenon.",
     "crumbs": [
@@ -994,14 +994,14 @@
     "href": "week04/assets/presentation-plan.html",
     "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
     "section": "",
-    "text": "Data table joins combine information from multiple tables based on matching values.\nKey Terms: - Primary Key: Unique identifier for each row (e.g., hotel_id) - Foreign Key: Column that references a primary key in another table - Join Key: Column(s) used to match rows between tables\nCommon Join Types: - Inner Join: Returns only matching rows - Left Join: Returns all rows from left table, matching rows from right - Right Join: Returns all rows from right table, matching rows from left - Full Join: Returns all rows from both tables"
+    "text": "Data table joins combine information from multiple tables based on matching values.\nKey Terms:\n\nPrimary Key: Unique identifier for each row (e.g., hotel_id)\nForeign Key: Column that references a primary key in another table\nJoin Key: Column(s) used to match rows between tables\n\nCommon Join Types:\n\nInner Join: Returns only matching rows\nLeft Join: Returns all rows from left table, matching rows from right\nRight Join: Returns all rows from right table, matching rows from left\nFull Join: Returns all rows from both tables"
   },
   {
     "objectID": "week04/assets/presentation-plan.html#slide-1-key-vocabulary",
     "href": "week04/assets/presentation-plan.html#slide-1-key-vocabulary",
     "title": "Joining Data Tables: A Visual Guide with Austrian Hotels",
     "section": "",
-    "text": "Data table joins combine information from multiple tables based on matching values.\nKey Terms: - Primary Key: Unique identifier for each row (e.g., hotel_id) - Foreign Key: Column that references a primary key in another table - Join Key: Column(s) used to match rows between tables\nCommon Join Types: - Inner Join: Returns only matching rows - Left Join: Returns all rows from left table, matching rows from right - Right Join: Returns all rows from right table, matching rows from left - Full Join: Returns all rows from both tables"
+    "text": "Data table joins combine information from multiple tables based on matching values.\nKey Terms:\n\nPrimary Key: Unique identifier for each row (e.g., hotel_id)\nForeign Key: Column that references a primary key in another table\nJoin Key: Column(s) used to match rows between tables\n\nCommon Join Types:\n\nInner Join: Returns only matching rows\nLeft Join: Returns all rows from left table, matching rows from right\nRight Join: Returns all rows from right table, matching rows from left\nFull Join: Returns all rows from both tables"
   },
   {
     "objectID": "week04/assets/presentation-plan.html#slide-2-more-vocabulary",
@@ -1106,7 +1106,7 @@
     "href": "week01/assets/which-ai.html#free-vs-pro",
     "title": "Which AI model shall we chose?",
     "section": "Free vs Pro?",
-    "text": "Free vs Pro?\nThe current free models are great for many tasks such as coding, idea generation.\n\nChatGPT\nThe free version offers: access to GPT‑4.1 mini, real-time data from the web with search. Plus * Limited access to GPT‑4o, OpenAI o4-mini, and deep research * Limited access to file uploads, data analysis,\nThe Plus version offers * access to reasoning models (OpenAI o3, OpenAI o4-mini, and OpenAI o4-mini-high) * access Deep Research * higher limits on advanced features: file uploads, and data analysis * access to a research preview of GPT‑4.5 * access to GPT‑4.1, a model optimized for coding tasks * can create and use projects, tasks,\n\n\nClaude\nThe free model can be used for chat and data analysis.\nThe paid tier for Claude\n\nMore usage – for details see limits\naccess to Projects to organize chats and documents\nweb access\nextended thinking for complex work"
+    "text": "Free vs Pro?\nThe current free models are great for many tasks such as coding, idea generation.\n\nChatGPT\nThe free version offers: access to GPT‑4.1 mini, real-time data from the web with search. Plus * Limited access to GPT‑4o, OpenAI o4-mini, and deep research * Limited access to file uploads, data analysis,\nThe Plus version offers\n\naccess to reasoning models (OpenAI o3, OpenAI o4-mini, and OpenAI o4-mini-high)\naccess Deep Research\nhigher limits on advanced features: file uploads, and data analysis\naccess to a research preview of GPT‑4.5\naccess to GPT‑4.1, a model optimized for coding tasks\ncan create and use projects, tasks,\n\n\n\nClaude\nThe free model can be used for chat and data analysis.\nThe paid tier for Claude\n\nMore usage – for details see limits\naccess to Projects to organize chats and documents\nweb access\nextended thinking for complex work"
   },
   {
     "objectID": "week01/assets/which-ai.html#other-cool-stuff-i-use",
@@ -1174,7 +1174,7 @@
   {
     "objectID": "learn-more/beyond.html",
     "href": "learn-more/beyond.html",
-    "title": "Beyond",
+    "title": "Beyond: suggested readings and resources to learn more",
     "section": "",
     "text": "Gábor’s collection of recommended readings, listening. Wide variety from practical to business and nerdy stuff.\nThis version is 0.5.0. (2025-05-10)",
     "crumbs": [
@@ -1186,7 +1186,7 @@
   {
     "objectID": "learn-more/beyond.html#basics",
     "href": "learn-more/beyond.html#basics",
-    "title": "Beyond",
+    "title": "Beyond: suggested readings and resources to learn more",
     "section": "Basics",
     "text": "Basics\n\nCore readings\n\nEthan Mollick “Co-Intelligence: Living and Working with AI” Penguin Random House 2024\nAnton Korinek “Generative AI for Economic Research: Use Cases and Implications for Economists,” Journal of Economic Literature 61(4) December 2024 Update 1–74\n\n\n\nImportant reviews\n\nReview of LLMs by Simon Willison\nMachines of Loving Grace Dario Amodei\n\n\n\nPrompting\n\nAI Frontiers in Plain English: Prompt Engineering guide from Google with LM Notebook Part 1. LLM output configurations + others\n\n\n\nUnderstanding LLMs\n\nGlossary of LLM terms Glossary of LLM Terms\nFinancial Times: How AI Large Language Models Work\nThe Economist: How Large Language Models Work\nThinking like AI\nWhat’s an LLM context window and why is it getting larger? IBM research on context window\n\n\n\nAI and business / management\n\nStrategy in business Build a winning AI strategy, HBR 2023\nInterview with Rafella Sadun on Reskilling workforce with AI from MIT Sloan Review",
     "crumbs": [
@@ -1198,7 +1198,7 @@
   {
     "objectID": "learn-more/beyond.html#additional-readings",
     "href": "learn-more/beyond.html#additional-readings",
-    "title": "Beyond",
+    "title": "Beyond: suggested readings and resources to learn more",
     "section": "Additional readings",
     "text": "Additional readings\n\nConsequence of AI\nHow NLP was killed by Transformers/ LLMs in Quant magazine 2025 April\n\n\nBlogs, newsletters\n\nBlog post by Posit Text Summarization, Translation, and Classification using LLMs: mall does it all\nSimon Willis blog post LLM and coding\nEthan Mollick substack: One useful thing\nAlpha Signal newsletter\nHow Andrej Karpathy is adopting AI assisted coding.\n\n\n\nVideo Resources on AI\n\nAndrej Karpathy Introduction to Large Language Models – 1hs overview, a great start\nAndrej Karpathy Deep Dive into LLMs like ChatGPT – 3hs comprehensive updated version of the Intro video\nAndrej Karpathy: “Let’s build GPT: from scratch, in code, spelled out”\nInterview with a great Sendhil Mullainathan on direction AI",
     "crumbs": [
@@ -1210,9 +1210,9 @@
   {
     "objectID": "learn-more/beyond.html#deeper-stuff-on-ai",
     "href": "learn-more/beyond.html#deeper-stuff-on-ai",
-    "title": "Beyond",
-    "section": "deeper stuff on AI",
-    "text": "deeper stuff on AI\n\nArtificial intelligence learns to reason in Science",
+    "title": "Beyond: suggested readings and resources to learn more",
+    "section": "Deeper stuff on AI",
+    "text": "Deeper stuff on AI\n\nArtificial intelligence learns to reason in Science",
     "crumbs": [
       "Home",
       "Resources",
