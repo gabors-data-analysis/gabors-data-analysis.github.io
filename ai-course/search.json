@@ -1105,7 +1105,7 @@
     "href": "code/index.html",
     "title": "Code Used for case studies",
     "section": "",
-    "text": "Code for sentiment analysis of football manager interviews.\nLocation: code/interviews\nFiles include:\n\n\nDomain lexicon creation in R\nscript in R requires API key setup in R\nScript in Pythin – make sure you set your own API key",
+    "text": "Code for sentiment analysis of football manager interviews.\nLocation: code/interviews\nFiles include:\n\n\n\nScripts:\n\nDomain lexicon creation in R\nscript in R requires API key setup in R\nScript in Pythin – make sure you set your own API key",
     "crumbs": [
       "Home",
       "Resources",
@@ -1117,7 +1117,7 @@
     "href": "code/index.html#interview-analysis",
     "title": "Code Used for case studies",
     "section": "",
-    "text": "Code for sentiment analysis of football manager interviews.\nLocation: code/interviews\nFiles include:\n\n\nDomain lexicon creation in R\nscript in R requires API key setup in R\nScript in Pythin – make sure you set your own API key",
+    "text": "Code for sentiment analysis of football manager interviews.\nLocation: code/interviews\nFiles include:\n\n\n\nScripts:\n\nDomain lexicon creation in R\nscript in R requires API key setup in R\nScript in Pythin – make sure you set your own API key",
     "crumbs": [
       "Home",
       "Resources",
@@ -1917,6 +1917,18 @@
     "title": "Week 06: Sentiment Analysis with AI",
     "section": "Interview Analysis",
     "text": "Interview Analysis\nCode for sentiment analysis of football manager interviews, here: interview scripts\n\nDomain lexicon creation in R\nscript in R requires API key setup in R\nScript in Pythin – make sure you set your own API key",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 6: Text as Data II"
+    ]
+  },
+  {
+    "objectID": "week06/index.html#assignment-review",
+    "href": "week06/index.html#assignment-review",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Assignment review",
+    "text": "Assignment review\n\nReview of transformation options\n\nlexicon based counting numbers –&gt; generate a transparent script\nMachine-learning classifiers, n-grams etc.\nLLM (transformer-based) one-shot: treating the LLM like a giant classifier: you hand it raw text and ask classes of sentiment. (Deep contextual understanding—word embeddings, attention across the whole sentence etc decide the sentiment.) No separate sentiment lexicon; it’s all encoded in the model weights.\nYou can also take a pretrained LLM and continue training it on thousands of labeled review. See our example guidelines HERE\n\n\n\n\nLet us discuss the concept ground truth (again): AI vs humans vs “truth”",
     "crumbs": [
       "Home",
       "Course Weeks",
