@@ -106,6 +106,8 @@ We plan several smaller improvements. Mostly adding some examples, better explan
 | 16 | ensemble for OLS |  For linear models in prediction, we can also have an ensemble model, ln+log (as assignment for cars) |
 | 16 | cloud comp|  Add run time in google colabs / amazon cloud for Table 16.4 |
 | 16 | advice |  Add pointers on what can go wrong: leakage (+ how ols r2, varimp helps), variable content/availability change in live data,  why not filter on target |
+| 17 | F1 |  Add F1 to accuracy. Compare the role of Acc, F1, and AUC when (a) asymmetric loss fn, (b) class imbalance |
+| 18 | ML for TS | Discuss the role of ML like Boosting for time series data. The fact that it does not take temporal aspects into account. Mention other specific models exists. |
 
 
 ### Part 4
