@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/index.html</loc>
-    <lastmod>2025-05-27T06:53:50.335Z</lastmod>
+    <lastmod>2025-05-30T16:05:16.271Z</lastmod>
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/weeks.html</loc>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/week02/index.html</loc>
-    <lastmod>2025-05-27T06:33:34.780Z</lastmod>
+    <lastmod>2025-05-31T08:08:03.330Z</lastmod>
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/week02/assets/chatgpt-2025-vws-README-v1.html</loc>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/assignments/assignment_01.html</loc>
-    <lastmod>2025-05-26T07:00:07.898Z</lastmod>
+    <lastmod>2025-05-30T14:52:51.519Z</lastmod>
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/assignments/assignment_02.html</loc>
@@ -126,7 +126,7 @@
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/week01/index.html</loc>
-    <lastmod>2025-05-27T07:31:23.455Z</lastmod>
+    <lastmod>2025-05-31T07:53:04.426Z</lastmod>
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/week02/assets/da-background.html</loc>
@@ -179,5 +179,21 @@
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/assignments/assignment_08.html</loc>
     <lastmod>2025-05-27T06:23:02.019Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week08/index.html</loc>
+    <lastmod>2025-05-27T17:43:47.895Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/code/creating-code-sentiment-analysis.html</loc>
+    <lastmod>2025-05-27T17:58:10.769Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week01/0index.html</loc>
+    <lastmod>2025-05-27T07:31:23.455Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week02/index - Copy.html</loc>
+    <lastmod>2025-05-27T06:33:34.780Z</lastmod>
   </url>
 </urlset>

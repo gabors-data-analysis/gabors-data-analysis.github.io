@@ -18,7 +18,7 @@
     "href": "index.html#course-description",
     "title": "Doing Data Analysis with AI",
     "section": "Course description",
-    "text": "Course description\n\nContent\nThe course focuses on using large language models (LLMs) such as OpenAI’s ChatGPT, Anthropic Claude.ai, Mistral’s Le Chat, and Google’s Gemini) to carry out tasks in data analysis. It includes topics like data extraction and wrangling, data exploration and descriptive statistics, and creating reports as well as turning text to data.\nThere are three case studies that we use (1) a simulated set of data tables on hotels in Austria, (2) The World Value Survey, and (3) A series of interview textst.\nThe course material includes weekly practice assignments.\n\n\nBackground\nYou need a background in Data Analysis / Econometrics, a good introductory course is enough. I, of course, suggest Chapters 1-12 and 19 of Data Analysis for Business, Economics and Policy (Cambridge UP, 2021). Full slideshows, data and code are open source. But consider buying the book. In particular, the course builds on Chapters 1-6 and 7-10, and 19 of Data Analysis but other Introductory Econometrics + basics of data science knowledge is ok.\nStudents are expected to have some basic coding knowledge in Python or R (Stata also fine mostly).\n\n\nRelevance\nAI is everywhere and has become essential, most analytic work will be using it. It’s like the Internet a while back. Does not solve all problems, but almost all intellectual tasks will rely on inputs from it.\n\n\nLearning Outcomes\nKey outcomes. By the end of the course, students will be able to\n\nGain experience and confidence using genAI to carry out key tasks in data analysis.\nBuild AI in coding practice including data wrangling, description and reporting and text analysis\nHave some idea of use cases when AI assistance is (1) greatly useful, (2) helpful, (3) currently problematic.\nHave some idea of use cases when AI assistance is OK to use as is vs needs strong human supervision\nHave an understanding of resources to follow for updates.\n\n\n\nTarget audience\nThis is a course aimed at 3rd (2nd?) year BA and MA students in any program with required background. Economics, Quantitative Social science, Political Science, Sociology, History. To be frank, all students shall learn data analysis and be comfortable using AI.\nBut, anyone can use it with adequate background.\n\n\nAssignments\nAssignments are available for all classes\nImportant to note for assignments:  * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this."
+    "text": "Course description\n\nContent\nThe course focuses on using large language models (LLMs) such as OpenAI’s ChatGPT, Anthropic Claude.ai, Mistral’s Le Chat, and Google’s Gemini) to carry out tasks in data analysis. It includes topics like data extraction and wrangling, data exploration and descriptive statistics, and creating reports as well as turning text to data.\nThere are three case studies that we use (1) a simulated set of data tables on hotels in Austria, (2) The World Value Survey, and (3) A series of interview textst.\nThe course material includes weekly practice assignments.\n\n\nBackground\nYou need a background in Data Analysis / Econometrics, a good introductory course is enough. I, of course, suggest Chapters 1-12 and 19 of Data Analysis for Business, Economics and Policy (Cambridge UP, 2021). Full slideshows, data and code are open source. But consider buying the book. In particular, the course builds on Chapters 1-6 and 7-10, and 19 of Data Analysis but other Introductory Econometrics + basics of data science knowledge is ok.\nStudents are expected to have some basic coding knowledge in Python or R (Stata also fine mostly).\n\n\nRelevance\nAI is everywhere and has become essential, most analytic work will be using it. It’s like the Internet a while back. Does not solve all problems, but almost all intellectual tasks will rely on inputs from it.\n\n\nLearning Outcomes\nKey outcomes. By the end of the course, students will be able to\n\nGain experience and confidence using genAI to carry out key tasks in data analysis.\nBuild AI in coding practice including data wrangling, description and reporting and text analysis\nHave some idea of use cases when AI assistance is (1) greatly useful, (2) helpful, (3) currently problematic.\nHave some idea of use cases when AI assistance is OK to use as is vs needs strong human supervision\nHave an understanding of resources to follow for updates.\n\n\n\nTarget audience\nThis is a course aimed at 3rd (2nd?) year BA and MA students in any program with required background. Economics, Quantitative Social science, Political Science, Sociology, History. To be frank, all students shall learn data analysis and be comfortable using AI.\nBut, anyone can use it with adequate background.\n\n\nCourse Context & Trajectory\nWhat’s Coming Next:\n\nWeek 1: LLM Review and short task to recrate a graph\nWeek 2: Use AI to understand and document the World Values Survey dataset\nWeek 3: AI-assisted report writing with WVS data\nWeek 4: Multi-table joins with Austrian hotel data\nWeeks 5-6: Text analysis of football manager interviews\nWeek 7: Developing dashboards\nWeek 7: AI as applied metrics consultant\n\nSkills Development Arc:\n\nWeeks 1-2: Foundation (AI concepts, data exploration)\nWeeks 3-4: Core analysis (reporting, data wrangling)\n\nWeeks 5-6: Advanced applications (text analysis, APIs)\nWeeks 5-6: Helping research and presentation\n\nAssignments\nAssignments are available for all classes\nImportant to note for assignments: * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this."
   },
   {
     "objectID": "index.html#week01-llm-review",
@@ -571,7 +571,7 @@
     "href": "week02/index.html#summary",
     "title": "Week02: Discovery and documentation",
     "section": "Summary",
-    "text": "Summary\nSometimes data is large and discovery is hard. Sometimes you need to write data documentation. LLMs can help. You will learn how to write a clear and professional README. We use a cleaned subset of the 7th Wave of the World Values Survey (WVS). We’ll also talk some tech on documentation.",
+    "text": "Summary\nSometimes data is large and discovery is hard. Sometimes you need to write data documentation. LLMs can help. You will learn how to write a clear and professional README. We use a cleaned subset of the 7th Wave of the World Values Survey (WVS). We’ll also talk some tech on documentation. We’ll use AI as a research assistantto bravely face a codebook with hundreds of variables.",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -583,7 +583,7 @@
     "href": "week02/index.html#learning-objectives",
     "title": "Week02: Discovery and documentation",
     "section": "Learning Objectives:",
-    "text": "Learning Objectives:\n\nUnderstand how to document a new dataset using as an example th WVS 7th wave data.\nCreate a README that describes data.\nLearn to refine documentation by incorporating iterative feedback from peers and AI tools.",
+    "text": "Learning Objectives:\n\nUnderstand how to document a new dataset using as an example th WVS 7th wave data.\nCreate a README that describes data.\nLearn to refine documentation by incorporating iterative feedback from peers and AI tools.\nDevelop skills in using AI to translate complex materials into accessible documentation",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -594,8 +594,8 @@
     "objectID": "week02/index.html#preparation-before-class",
     "href": "week02/index.html#preparation-before-class",
     "title": "Week02: Discovery and documentation",
-    "section": "Preparation BEFORE class",
-    "text": "Preparation BEFORE class\n\nReading and review\n\nBackground reading: Békés-Kézdi (2021) Chapters 1-3, in particular core background info\nSome discussion of data types Data Management in Large-Scale Education Research by Crystal Lewis\n\n\n\nGet data and info:\nAccess the VWS dataset 1. Data: WVS_random_subset.csv - random subset (N=2000) - covering all countries 2. Download its official codebook documentation\nIf you prefer datasets are also at OSF, Gabors Data Analysis / World Values Survey",
+    "section": "Preparation / Before Class",
+    "text": "Preparation / Before Class\n\n\n📚 Required Reading\n\n\n\nBackground reading: Békés-Kézdi (2021) Chapters 1-3, in particular core background info. Focus on Chapter 2 sections on data structure and variable types - this becomes crucial when documenting data.\nSome discussion of data types Data Management in Large-Scale Education Research by Crystal Lewis\n\n\n\n\n\n📊 Data Setup\n\n\nAccess the VWS dataset\n\nData: WVS_random_subset.csv - random subset (N=2000) - covering all countries\nDownload its official codebook documentation\nTake 10 minutes to browse the data structure before class - note what confuses you about variable names and definitions.\n\nIf you prefer datasets are also at OSF, Gabors Data Analysis / World Values Survey",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -1057,7 +1057,7 @@
     "href": "assignments/assignment_01.html",
     "title": "Reproduce an FT graph",
     "section": "",
-    "text": "Look at this graph from Financial Times. Your task is to recreate this figure using real-world data.\n\nOption A (easy)\nUse AI as your assistant to find real-world data that matches or closely resembles the one used in the FT graph, and recreate the same chart using that data.\nwhat to submit\n\nGraph: A PDF version of your recreated graph, name it: “lastname_firstname_dawai_week01_ftfigure.pdf”\nData: A CSV file with the data used to create the graph, with the name (“lastname_firstname_dawai_week01_ftdata.pdf”)\n\n\n\nOption B (advanced)\nUse AI as your assistant to build an interactive app (dashboard) that mimics the FT graph.\n\nMinimum requirement: the you shall be able to set dates, and hover around values\nIdeal: get the app update data and graph dynamically.\ncould be upload new data\nbest: automatic via API\n\nwhat to submit\n\nlink to app\nyou can use tools like steamlit (Python), shinyapps (R), etc",
+    "text": "Look at this graph from Financial Times. Your task is to recreate this figure using real-world data.\n\nOption A (easy)\nUse AI as your assistant to find real-world data that matches or closely resembles the one used in the FT graph, and recreate the same chart using that data.\nwhat to submit\n\nGraph: A PDF version of your recreated graph, name it: “lastname_firstname_dawai_week01_ftfigure.pdf”\nData: A CSV file with the data used to create the graph, with the name (“lastname_firstname_dawai_week01_ftdata.pdf”)\n\n\n\nOption B (advanced)\nUse AI as your assistant to build an interactive app (dashboard) that mimics the FT graph.\n\nMinimum requirement: the you shall be able to set dates, and hover around values\nIdeal: get the app update data and graph dynamically.\ncould be upload new data\nbest: automatic via API\n\n\n\nGrading\nSuccess Criteria: - Data accuracy: Real Treasury yield and tariff announcement data - Design fidelity: Similar visual style, annotations, and layout - Code quality: Reproducible workflow with clear documentation\nWhat we’re evaluating: - Problem-solving approach with AI assistance - Quality of human oversight and iteration - Documentation of AI usage and limitations\nwhat to submit\n\nlink to app\nyou can use tools like steamlit (Python), shinyapps (R), etc",
     "crumbs": [
       "Home",
       "Assignments",
@@ -1350,9 +1350,9 @@
   {
     "objectID": "week01/index.html",
     "href": "week01/index.html",
-    "title": "Week 1: LLM Review",
+    "title": "Week 01: LLM Review",
     "section": "",
-    "text": "Week 1: LLM Review\n\n\nIntroduction to Large Language Models and their applications in data analysis",
+    "text": "Week 01: LLM Review\n\n\nIntroduction to Large Language Models and their applications in data analysis",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -1362,9 +1362,9 @@
   {
     "objectID": "week01/index.html#learning-objectives",
     "href": "week01/index.html#learning-objectives",
-    "title": "Week 1: LLM Review",
+    "title": "Week 01: LLM Review",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of this session, students will:\n\nUnderstand core concepts and architecture behind large language models (LLMs)\nLearn how to incorporate AI into data analysis workflows\n\nCritically assess capabilities and limitations of AI tools in academic contexts\nExperience the “jagged frontier” of LLM capabilities through hands-on practice",
+    "text": "Learning Objectives\nBy the end of this session, students will:\n\nUnderstand core concepts and architecture behind large language models (LLMs)\nLearn how to incorporate AI into data analysis workflows effectively\nDistinguish between “Cyborg” and “Centaur” approaches to AI collaboration\nExperience the “jagged frontier” of LLM capabilities through hands-on practice\nCritically assess capabilities and limitations of AI tools in academic contexts\nDevelop foundational prompt engineering skills for data analysis tasks",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -1386,9 +1386,9 @@
   {
     "objectID": "week01/index.html#assignment",
     "href": "week01/index.html#assignment",
-    "title": "Week 1: LLM Review",
+    "title": "Week 01: LLM Review",
     "section": "Assignment",
-    "text": "Assignment\n\n\n\n\n\n\nAssignment 1: Reproduce the FT Graph\n\n\n\nDue: Before Week 2\nChoose your approach:\n\nOption A (Standard): Use AI to find data and recreate the visualization\nOption B (Advanced): Build an interactive dashboard that updates dynamically\n\nFull Assignment Details",
+    "text": "Assignment\n\n\n\n\n\n\nAssignment 1: Reproduce the FT Graph\n\n\n\nDue: Before Week 2\nChoose your approach:\n\nOption A (Standard): Use AI to find data and recreate the visualization with same design principles\nOption B (Advanced): Build an interactive dashboard that updates dynamically\n\nFull Assignment Details",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -1410,9 +1410,9 @@
   {
     "objectID": "week01/index.html#discussion-questions",
     "href": "week01/index.html#discussion-questions",
-    "title": "Week 1: LLM Review",
+    "title": "Week 01: LLM Review",
     "section": "Discussion Questions",
-    "text": "Discussion Questions\nConsider these questions as you engage with the materials:\n\nPersonal AI Experience: How have you already incorporated AI into your routine? Which model feels most natural to you?\nError Management: How do you currently deal with AI hallucinations or imperfect answers?\nThe Jagged Frontier: What tasks do you expect AI to excel at? Where do you think it will struggle?",
+    "text": "Discussion Questions\nEnd of Week Reflection:\n\nPersonal AI Experience: How have you already incorporated AI into your routine? Which model feels most natural to you?\nError Management: How do you currently deal with AI hallucinations or imperfect answers? What strategies emerged during the FT graph exercise?\nThe Jagged Frontier: What tasks do you expect AI to excel at? Where do you think it will struggle? Did the visualization exercise match your expectations?",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -1934,5 +1934,320 @@
       "Course Weeks",
       "Week 6: Text as Data II"
     ]
+  },
+  {
+    "objectID": "week01/index.html#preparation-before-class",
+    "href": "week01/index.html#preparation-before-class",
+    "title": "Week 01: LLM Review",
+    "section": "Preparation / Before Class",
+    "text": "Preparation / Before Class\n\n\n📚 No Required Reading\n\n\nThis is Week 1 - come ready to explore and discuss!\nReflection Preparation:\n\nThink about your current experience with AI tools (if any)\nConsider examples where you’ve encountered AI in your work/studies\nIdentify one data analysis task you find time-consuming or repetitive\n\nOptional Background:\n\nEthan Mollick: “Co-Intelligence: Living and Working with AI” (Chapters 1-2)",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week01/index.html#class-material",
+    "href": "week01/index.html#class-material",
+    "title": "Week 01: LLM Review",
+    "section": "Class Material",
+    "text": "Class Material\n\n\n📊 Core LLM Concepts (60 min)\n\n\nSlideshow: LLM Concepts and Applications\nKey Topics Covered:\n\nWhat are LLMs? Statistical models predicting next tokens from massive training data\nThe Transformer Revolution: How 2017’s “Attention is All You Need” changed everything\nContext Windows: From 4k tokens (2022) to 128k+ tokens (2025) - why this matters for data analysis\nTraining Process: Pre-training → Fine-tuning → RLHF (Reinforcement Learning from Human Feedback)\n\nCollaborative Frameworks:\n\nCyborg Approach: Deep human-AI integration with continuous feedback\nCentaur Approach: Clear division of tasks based on strengths\nThe Jagged Frontier: Why AI excels at some tasks but fails at others unpredictably\n\n\n\n\n\n🔧 Hands-on: FT Graph Challenge (25 min)\n\n\nThe Challenge:\nRecreate the Financial Times tariff/yield visualization as accurately as possible using AI assistance.\n\nNote the sophisticated design: multiple data series, annotations, professional styling\nConsider: What would you need to recreate this manually vs. with AI assistance?\n\nLearning Approach:\n\nAnalyze the original - what data sources, what design elements?\nUse AI to find data and generate initial code\nIterate and refine based on results",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week01/index.html#background-tools-and-resources",
+    "href": "week01/index.html#background-tools-and-resources",
+    "title": "Week 01: LLM Review",
+    "section": "Background, Tools and Resources",
+    "text": "Background, Tools and Resources\n🤖 Recommended for Data Analysis:\n\n\n\n\n\n\n\n\n\nPlatform\nStrengths\nBest For\nCost\n\n\n\n\nChatGPT 4o/o1\nExcellent coding, data analysis tools\nR/Python code, statistical methods\n$20/month\n\n\nClaude 4 Sonnet\nGreat reasoning, document analysis\nResearch, writing, complex prompts\n$20/month\n\n\nGitHub Copilot\nIntegrated coding assistance\nReal-time code completion\n$10/month\n\n\n\nFree Tier Capabilities:\n\nMost course tasks achievable with free versions\nPaid subscriptions recommended for intensive work – maybe try during this course\nStart free, upgrade if you hit limits\n\nDetailed Comparison:\nAI Model Selection Guide\n\nAcademic Integrity and AI use\nCourse Philosophy:\n\nAI as Assistant: Use AI to enhance your capabilities, not replace your thinking\nMaintain Authority: You remain responsible for all outputs and interpretations\nVerify Everything: Always validate AI suggestions, especially statistical claims\nDocument Usage: Keep track of how AI helped - useful for methodology sections\n\nRed Lines:\n\nNever submit unverified AI output as your own work\nAlways understand the analysis you’re presenting\nCite AI assistance appropriately (we’ll discuss standards as they evolve)\n\nThe Goal:\nBecome a more capable data analyst who can leverage AI tools effectively while maintaining scientific rigor.\nNext Week:\nWeek 2 - Data Discovery and Documentation where we’ll use AI to understand and document complex datasets.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week08/index.html",
+    "href": "week08/index.html",
+    "title": "AI as Research companion",
+    "section": "",
+    "text": "We will cover two topics: Creating difference-in-differences models, and thinking about finding instrumental variables. Both are key topics in empirical work in applied economics, political science, and beyond.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 8: AI Research Companion"
+    ]
+  },
+  {
+    "objectID": "week08/index.html#tasks",
+    "href": "week08/index.html#tasks",
+    "title": "AI as Research companion",
+    "section": "",
+    "text": "We will cover two topics: Creating difference-in-differences models, and thinking about finding instrumental variables. Both are key topics in empirical work in applied economics, political science, and beyond.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 8: AI Research Companion"
+    ]
+  },
+  {
+    "objectID": "week08/index.html#did-design",
+    "href": "week08/index.html#did-design",
+    "title": "AI as Research companion",
+    "section": "DiD design",
+    "text": "DiD design\nDifference-in-differences (DiD) models",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 8: AI Research Companion"
+    ]
+  },
+  {
+    "objectID": "week08/index.html#iv-design",
+    "href": "week08/index.html#iv-design",
+    "title": "AI as Research companion",
+    "section": "IV design",
+    "text": "IV design\nIV",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 8: AI Research Companion"
+    ]
+  },
+  {
+    "objectID": "index.html#detailed-overview",
+    "href": "index.html#detailed-overview",
+    "title": "Doing Data Analysis with AI",
+    "section": "Detailed overview",
+    "text": "Detailed overview\n\nWeek01: LLM Review\nWhat are LLMs, how is the magic happening. A non-technical brief intro. How to work with LLMs? Plus ideas on applications. Includes suggested readings, podcasts, and vids to listen to.\nContent\nWhich AI?\nSee my take on current models. As of May 2025.\n\n\nWeek02: Data and code discovery and documentation with AI\nLearn how to write a clear and professional code and data documentation. LLMs are great help once you know the basics.\nCase study: World Values Survey. Data is at WVS\nContent\n\n\nWeek 03: Writing Reports\nYou have your data and task, and need to write a short report. We compare different options with LLM, from one-shot prompt to iteration.\nCase study: World Values Survey. Data is at WVS\nContent\n\n\nWeek04: Data wrangling, joining tables\nWhen asked about what I shall add to my textbook, David Card, the Nobel winning empirical economist told me that I shall spend time with joining tables. Here we go.\nCase study: simulated Austrian hotels. Data is at hotels\nContent\n\n\nWeek05: Text as data 1 – intro lecture\nNo course of mine can escape football (soccer). Here we look at post-game interviews to learn basics of text analysis and apply LLMs in what they are best - context dependent learning. Two class series. First is more intro to natural language processing.\nCase study: football post-game interviews. Data is at interviews\nContent\n\n\nWeek06: Text as data 2 – practice\nSecond class, now we are in action. How does LLM compare to humans?\nCase study: football post-game interviews. Data is at interviews\nContent\n\n\nWeek07: Creating simulations with apps and dashboards\nTBA\n\n\nWeek08: AI as research companion\nTBA"
+  },
+  {
+    "objectID": "code/creating-code-sentiment-analysis.html",
+    "href": "code/creating-code-sentiment-analysis.html",
+    "title": "creating-code-sentiment-analysis",
+    "section": "",
+    "text": "Here are some prompts we created. Follow them. Need debugging.\nFirst download interview-texts-only.xlsx from data/interviews\n\nWrite a Python script for sentiment analysis of post-match manager quotes using OpenAI’s GPT API. Follow these detailed specifications:\n\n\nClassify each quote on a sentiment scale from -2 to 2 based on the manager’s tone, not the game result.\nThe script should process the xlsx file and produce a new CSV with sentiment scores.\n\n\n\nLoad interview-texts-only.xlsx .\nUse utf-8 encoding.\nSkip malformed lines when reading.\n\n\n\nUse OpenAI’s gpt-4.1-2025-04-14 model (or fallback-compatible GPT-4 model).\nConstruct a detailed prompt that:"
+  },
+  {
+    "objectID": "code/creating-code-sentiment-analysis.html#writing-code-to-run-sentiment-analysis-via-apis.",
+    "href": "code/creating-code-sentiment-analysis.html#writing-code-to-run-sentiment-analysis-via-apis.",
+    "title": "creating-code-sentiment-analysis",
+    "section": "",
+    "text": "Here are some prompts we created. Follow them. Need debugging.\nFirst download interview-texts-only.xlsx from data/interviews\n\nWrite a Python script for sentiment analysis of post-match manager quotes using OpenAI’s GPT API. Follow these detailed specifications:\n\n\nClassify each quote on a sentiment scale from -2 to 2 based on the manager’s tone, not the game result.\nThe script should process the xlsx file and produce a new CSV with sentiment scores.\n\n\n\nLoad interview-texts-only.xlsx .\nUse utf-8 encoding.\nSkip malformed lines when reading.\n\n\n\nUse OpenAI’s gpt-4.1-2025-04-14 model (or fallback-compatible GPT-4 model).\nConstruct a detailed prompt that:"
+  },
+  {
+    "objectID": "code/creating-code-sentiment-analysis.html#task",
+    "href": "code/creating-code-sentiment-analysis.html#task",
+    "title": "creating-code-sentiment-analysis",
+    "section": "Task:",
+    "text": "Task:\nPlease read each text carefully and rate the overall sentiment of the manager’s statement as positive or negative. Your rating should reflect the manager’s expressed tone, not your judgment of the match."
+  },
+  {
+    "objectID": "code/creating-code-sentiment-analysis.html#rating-scale",
+    "href": "code/creating-code-sentiment-analysis.html#rating-scale",
+    "title": "creating-code-sentiment-analysis",
+    "section": "Rating Scale:",
+    "text": "Rating Scale:\n\n\n\n\n\n\n\nScore\nMeaning\n\n\n\n\n2\nStrongly positive sentiment (clear optimism, satisfaction, praise).\n\n\n1\nMildly positive sentiment (generally positive, slight reservations).\n\n\n0\nNeutral or unclear sentiment.\n\n\n-1\nMildly negative sentiment (general disappointment, frustration).\n\n\n-2\nStrongly negative sentiment (clear criticism, significant disappointment).\n\n\n\n\nFinal Notes:\n\nUse 0 if unsure or if sentiment is mixed without clear dominance.\n\n\n\nRetry up to 3 times if API call fails, using exponential backoff (e.g., wait 1s, 2s, 4s).\n\nIf the response is not an integer, return None.\n\n\n🔐 API Authentication\n\n\nUse the openai Python package (v1+).\n\nLoad API key securely from .env file with key OPENAI_API_KEY.\n\nIf the key is missing, exit with an error.\n\n\n🧪 Processing & Output\n\n\nIterate through all rows using tqdm for progress.\n\nFor each row, call the GPT model and collect the result.\n\nSave results (text_id, score) to manager_sentiment_results.csv.\n\nAt end, print and log score frequency table.\n\n\n🪵 Logging\n\n\nUse Python’s logging module.\n\nConfigure it to:\n\n\nLog to both console (stdout) and to file classification.log (overwrite mode).\n\nUse format: [timestamp] [level] [message]\n\nSet level to INFO.\n\n\n\nLog key events:\n\n\nStart of API call\n\nAPI responses\n\nNumber of rows processed\n\nMissing columns\n\nFinal distribution of scores\n\n\n\n\n📦 Dependencies\n\n\npandas\n\ntqdm\n\nopenai\n\ndotenv\n\n\n🔁 Extras\n\n\nUse functions for:\n\n\nLoading CSV,\n\nClassifying text,\n\nError handling.\n\n\n\nEnsure script can be run directly with #!/usr/bin/env python3 at the top.\n\n\n\nLet me know if you want me to generate the exact prompt message string or turn this into a README section."
+  },
+  {
+    "objectID": "week01/0index.html",
+    "href": "week01/0index.html",
+    "title": "Week 1: LLM Review",
+    "section": "",
+    "text": "Week 1: LLM Review\n\n\nIntroduction to Large Language Models and their applications in data analysis"
+  },
+  {
+    "objectID": "week01/0index.html#learning-objectives",
+    "href": "week01/0index.html#learning-objectives",
+    "title": "Week 1: LLM Review",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this session, students will:\n\nUnderstand core concepts and architecture behind large language models (LLMs)\nLearn how to incorporate AI into data analysis workflows\n\nCritically assess capabilities and limitations of AI tools in academic contexts\nExperience the “jagged frontier” of LLM capabilities through hands-on practice"
+  },
+  {
+    "objectID": "week01/0index.html#class-materials",
+    "href": "week01/0index.html#class-materials",
+    "title": "Week 1: LLM Review",
+    "section": "Class Materials",
+    "text": "Class Materials\n\n\n📊 Slideshow\n\n\nLLM Concepts Presentation\nKey Topics Covered:\n\nWhat are Large Language Models?\nThe Transformer architecture and tokenization\nCyborg vs Centaur approaches to AI collaboration\nThe “jagged frontier” of AI capabilities\nPrompt engineering fundamentals\nAI as bs generator and Brandolini’s Law\n\n\n\n\n\n📚 Required Reading\n\n\n\nWhich AI Model to Choose?\nUpdated guide for 2025\nReview the FT graph for class activity (see below)\n\nOptional Background:\n\nEthan Mollick: “Co-Intelligence: Living and Working with AI” (Chapters 1-2)\n\n\n\n\n\n🎯 Class Activity\n\n\nThe Financial Times Challenge\nTake a look at this excellent Financial Times visualization showing the market reaction to Trump’s tariff announcements.\nYour Mission:\nReproduce this chart as accurately as possible in the shortest time using AI assistance.\nLearning Goals:\n\nExperience AI-assisted data visualization\nPractice prompt engineering for specific tasks\nUnderstand the balance between human direction and AI execution, risks of relying too much on AI"
+  },
+  {
+    "objectID": "week01/0index.html#assignment",
+    "href": "week01/0index.html#assignment",
+    "title": "Week 1: LLM Review",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nAssignment 1: Reproduce the FT Graph\n\n\n\nDue: Before Week 2\nChoose your approach:\n\nOption A (Standard): Use AI to find data and recreate the visualization\nOption B (Advanced): Build an interactive dashboard that updates dynamically\n\nFull Assignment Details"
+  },
+  {
+    "objectID": "week01/0index.html#preparation",
+    "href": "week01/0index.html#preparation",
+    "title": "Week 1: LLM Review",
+    "section": "Preparation",
+    "text": "Preparation\n\n\n\n\n\n\nBefore Class\n\n\n\n\nNo specific preparation required for Week 1\nCome ready to discuss your current experience with AI tools\nBring examples of where you’ve encountered AI in your work/studies"
+  },
+  {
+    "objectID": "week01/0index.html#discussion-questions",
+    "href": "week01/0index.html#discussion-questions",
+    "title": "Week 1: LLM Review",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\nConsider these questions as you engage with the materials:\n\nPersonal AI Experience: How have you already incorporated AI into your routine? Which model feels most natural to you?\nError Management: How do you currently deal with AI hallucinations or imperfect answers?\nThe Jagged Frontier: What tasks do you expect AI to excel at? Where do you think it will struggle?"
+  },
+  {
+    "objectID": "week01/0index.html#tools-and-resources",
+    "href": "week01/0index.html#tools-and-resources",
+    "title": "Week 1: LLM Review",
+    "section": "Tools and Resources",
+    "text": "Tools and Resources\nRecommended AI Platforms for this course:\n\nChatGPT 4o/o1 - Excellent for coding and data analysis\nClaude 3.5 Sonnet - Great for research and writing tasks\n\nGitHub Copilot - For integrated coding assistance\n\nGetting Started:\n\nMost tasks can be accomplished with free tiers\nConsider paid subscriptions for intensive work ($20/month typical)\nSee AI Model Comparison Guide for detailed recommendations"
+  },
+  {
+    "objectID": "week01/0index.html#week-1-outcomes",
+    "href": "week01/0index.html#week-1-outcomes",
+    "title": "Week 1: LLM Review",
+    "section": "Week 1 Outcomes",
+    "text": "Week 1 Outcomes\nBy completing Week 1, you should:\n\n✅ Understand what LLMs can and cannot do reliably\n✅ Have experience with AI-assisted data visualization\n\n✅ Recognize the importance of human oversight in AI workflows\n✅ Be prepared to use AI as a collaborative tool throughout the course\n\n\n\n\n\n\n\n\nAcademic Integrity Note\n\n\n\nThis course teaches you to use AI as a powerful assistant while maintaining your responsibility as the analyst and author. Always verify AI outputs, cite your methods, and ensure you understand the analysis you’re presenting.\n\n\nNext Week: Week 2 - Data Discovery and Documentation where we’ll use AI to understand and document complex datasets."
+  },
+  {
+    "objectID": "week01/index.html#the-final-bit-to-think-about",
+    "href": "week01/index.html#the-final-bit-to-think-about",
+    "title": "Week 01: LLM Review",
+    "section": "The final bit to think about",
+    "text": "The final bit to think about\nIt was an AI (Claude Sonnet 4.0) that suggest to include the last bit on Academic Integrity and it wrote many lines such as having red lines.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week02/index.html#class-material",
+    "href": "week02/index.html#class-material",
+    "title": "Week02: Discovery and documentation",
+    "section": "Class Material",
+    "text": "Class Material\n\n\n📈 Assignment Review (10 min)\n\n\n\nFollow instructions.\nHow to get close to original, different ways\nWhy do an app? What to expect from an app\n\nstreamlit\nshinyapps\n\nHow was AI assistance helpful?\n\n\n\n\n\n📖 Documentation Fundamentals (20 min)\n\n\n\nAbout Markdown\n\nEditor in R, Python Quarto\nOnline Markdown editor\nAlso: Pandoc\n\n\n\nWhat is a good readme?\nSome examples for reproduction package\n\nBékés-Kézdi (2021) Hotels dataset – show basics\nKoren-Pető (2021) Business disruptions from social distancing as PDF\nSome ideas on readme: Makereadme, Social Science Editors\n\nKey ingredients\n\nOverview of project\nlicense\nAll datasets (data tables) separately discussed\nAll key variables described (name, content, type, coverage (% share missing)\n\nmaybe also: source, extension (csv / xlsx/ parquet)\n\nData lineage “provenance” : source → processing → final structure\n\n\n\nWhat is a variable dictionary (also called codebook)\n\nmore details of a dataset, often as xlsx\nmetric (euro, %), meaning of values if categorical\nmaybe even mean, min, max\n\nExamples\n\nBékés-Kézdi (2021) Bisnode dataset variables\nReif (2022) illinois-wellness-data\n\n\n\n\n\n\n🤝 Hands-on Documentation Workshop (50 min)\n\n\n\nNo AI\n\nDownload and look at the Random Subset data\nStart collecting some info on the data without AI\nStart thinking about an interesting research question (find \\(y\\) and \\(x\\))\nIdentify 3 variables that seem important but are unclear from names alone.\n\n\n\nAI: let AI teach you also about\n\nStart asking for skeleton readme, ask about advice\nTest AI’s understanding: “Explain the difference between Q6 and Q7 in simple terms” - this reveals whether AI actually understands the codebook.\nDiscussion\n\n\n\nAI: Learning and idea generation\n\nTell AI about your plan and need for a readme\n\nexperiment with one-shot vs interaction\n\nDiscussion\n\n\n\nCyborg mode: create a readme with AI\n\nUpload the codebook + random subset data\nGet AI to design a README TEMPLATE for this task.\nGet a draft\nFocus on the “Variables” section - this is where AI excels at summarizing complex definitions while you provide oversight for accuracy.\nUnderstand and edit draft\n\n\n\nIII additional idea\n\nSometimes, complicated projects have extensive folder structure. Use A to design a folder structure",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week02/index.html#discussion-questions",
+    "href": "week02/index.html#discussion-questions",
+    "title": "Week02: Discovery and documentation",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\nEnd of Week Reflection:\n\nWhat was the biggest contribution of AI?\nFirst result vs after iterations – what did improve?\nHow do you feel about learning from AI vs human instructor? Pros and cons?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week02/index.html#assignment",
+    "href": "week02/index.html#assignment",
+    "title": "Week02: Discovery and documentation",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nAssignment 2: Creating Documentation\n\n\n\nDue: Before Week 3\nChoose a research question using the WVS data and create professional documentation focusing on relevant variables.\nFull Assignment Details",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week02/index.html#background-tools-and-resources",
+    "href": "week02/index.html#background-tools-and-resources",
+    "title": "Week02: Discovery and documentation",
+    "section": "Background, Tools and Resources",
+    "text": "Background, Tools and Resources\nWVS Data Specifics:\n\nCheck how AI understands nuances of encoding\nReview survey timing and discuss consequences\n\nAI-Assisted Documentation Workflow, use AI to:\n\nconvert dense codebook language into accessible descriptions.\nsuggest folder structures for complex projects.\ncheck consistency across variable descriptions\n\nAlways verify technical details, because AI makes some mistakes.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week02/index.html#some-personal-comments-on-ai-and-this-class",
+    "href": "week02/index.html#some-personal-comments-on-ai-and-this-class",
+    "title": "Week02: Discovery and documentation",
+    "section": "Some personal comments on AI and this class",
+    "text": "Some personal comments on AI and this class\n\nWe (Zsuzsi and me) first developed this material in August 2024. At that time, there were many hiccups in variable understanding and selection. I was gonna suggest careful human oversight. By the time of first teaching it in February 2025, AI got extremely good at reading a 400 page codebook.\nAI suggested the point “Test AI’s understanding”",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 2: Data Documentation"
+    ]
+  },
+  {
+    "objectID": "week01/index.html#some-personal-comments-on-ai-and-this-class",
+    "href": "week01/index.html#some-personal-comments-on-ai-and-this-class",
+    "title": "Week 01: LLM Review",
+    "section": "Some personal comments on AI and this class",
+    "text": "Some personal comments on AI and this class\n\nI needed to rewrtite, edit the slideshow every other month. Bloddy hell, this course material is tricky. (While Gosset’s t-test has been around since 1908…)\nIt was an AI (Claude Sonnet 4.0) that suggest to include the last bit on Academic Integrity and it wrote many lines such as having red lines.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 1: LLM Review"
+    ]
+  },
+  {
+    "objectID": "week02/index - Copy.html",
+    "href": "week02/index - Copy.html",
+    "title": "Week02: Discovery and documentation",
+    "section": "",
+    "text": "Week02: Discovery and documentation\n\n\nData discovery and data and code documentation with AI"
+  },
+  {
+    "objectID": "week02/index - Copy.html#summary",
+    "href": "week02/index - Copy.html#summary",
+    "title": "Week02: Discovery and documentation",
+    "section": "Summary",
+    "text": "Summary\nSometimes data is large and discovery is hard. Sometimes you need to write data documentation. LLMs can help. You will learn how to write a clear and professional README. We use a cleaned subset of the 7th Wave of the World Values Survey (WVS). We’ll also talk some tech on documentation."
+  },
+  {
+    "objectID": "week02/index - Copy.html#learning-objectives",
+    "href": "week02/index - Copy.html#learning-objectives",
+    "title": "Week02: Discovery and documentation",
+    "section": "Learning Objectives:",
+    "text": "Learning Objectives:\n\nUnderstand how to document a new dataset using as an example th WVS 7th wave data.\nCreate a README that describes data.\nLearn to refine documentation by incorporating iterative feedback from peers and AI tools."
+  },
+  {
+    "objectID": "week02/index - Copy.html#preparation-before-class",
+    "href": "week02/index - Copy.html#preparation-before-class",
+    "title": "Week02: Discovery and documentation",
+    "section": "Preparation BEFORE class",
+    "text": "Preparation BEFORE class\n\nReading and review\n\nBackground reading: Békés-Kézdi (2021) Chapters 1-3, in particular core background info\nSome discussion of data types Data Management in Large-Scale Education Research by Crystal Lewis\n\n\n\nGet data and info:\nAccess the VWS dataset 1. Data: WVS_random_subset.csv - random subset (N=2000) - covering all countries 2. Download its official codebook documentation\nIf you prefer datasets are also at OSF, Gabors Data Analysis / World Values Survey"
+  },
+  {
+    "objectID": "week02/index - Copy.html#review-assignment-01",
+    "href": "week02/index - Copy.html#review-assignment-01",
+    "title": "Week02: Discovery and documentation",
+    "section": "Review Assignment 01",
+    "text": "Review Assignment 01\n\nFollow instructions.\nHow to get close to original, different ways\nWhy do an app? What to expect from an app\n\nstreamlit\nshinyapps"
+  },
+  {
+    "objectID": "week02/index - Copy.html#i.-background",
+    "href": "week02/index - Copy.html#i.-background",
+    "title": "Week02: Discovery and documentation",
+    "section": "I. Background",
+    "text": "I. Background\n\nAbout Markdown\n\nEditor in R, Python Quarto\nOnline Markdown editor\nAlso: Pandoc\n\n\n\nWhat is a good readme?\nSome examples for reproduction package\n\nBékés-Kézdi (2021) Hotels dataset – show basics\nKoren-Pető (2021) Business disruptions from social distancing as PDF\nSome ideas on readme: Makereadme, Social Science Editors\n\nKey ingredients\n\nOverview of project\nlicense\nAll datasets (data tables) separately discussed\nAll key variables described (name, content, type, coverage (% share missing)\n\nmaybe also: source, extension (csv / xlsx/ parquet)\n\n\n\n\nWhat is a variable dictionary (also called codebook)\n\nmore details of a dataset, often as xlsx\nmetric (euro, %), meaning of values if categorical\nmaybe even mean, min, max\n\nExamples\n\nBékés-Kézdi (2021) Bisnode dataset variables\nReif (2022) illinois-wellness-data"
+  },
+  {
+    "objectID": "week02/index - Copy.html#ii.-work-on-data",
+    "href": "week02/index - Copy.html#ii.-work-on-data",
+    "title": "Week02: Discovery and documentation",
+    "section": "II. Work on data",
+    "text": "II. Work on data\n\nNo AI\n\nDownload and look at the Random Subset data\nStart collecting some info on the data without AI\nStart thinking about an interesting research question (find \\(y\\) and \\(x\\))\n\n\n\nAI: let AI teach you also about\n\nStart asking for skeleton readme, ask about advice\nDiscussion\n\n\n\nAI: Learning and idea generation\n\nTell AI about your plan and need for a readme\n\nexperiment with one-shot vs interaction\n\nDiscussion\n\n\n\nCyborg mode: create a readme with AI\n\nUpload the codebook + random subset data\nGet AI to design a README TEMPLATE for this task.\nGet a draft\nUnderstand and edit draft\n\n\n\nIII additional idea\n\nSometimes, complicated projects have extensive folder structure. Use A to design a folder structure"
+  },
+  {
+    "objectID": "week02/index - Copy.html#end-of-week-discussion-points",
+    "href": "week02/index - Copy.html#end-of-week-discussion-points",
+    "title": "Week02: Discovery and documentation",
+    "section": "End of Week Discussion points",
+    "text": "End of Week Discussion points\n\nWhat was the biggest contribution of AI?\nFirst result vs after iterations – what did improve?\nHow do you feel about learning from AI vs human instructor? Pros and cons?"
   }
 ]
