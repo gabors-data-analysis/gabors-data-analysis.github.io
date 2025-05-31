@@ -328,7 +328,7 @@
     "href": "week04/index.html",
     "title": "Week 04: Joining tables",
     "section": "",
-    "text": "Week 04: Joining tables\n\n\nCombing data tables, and understanding what can go wrong with AI",
+    "text": "Week 04: Joining tables\n\n\nCombining (joining) data tables, and understanding what can go wrong with AI",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -340,7 +340,7 @@
     "href": "week04/index.html#about-the-class",
     "title": "Week 04: Joining tables",
     "section": "About the class",
-    "text": "About the class\nData wrangling is when you prepare the data for the analysis. A key aspect is joining data tables. AI can help design the process, and give you code to do that.\n\nObjectives summary:\nLearn how to organize data in a tidy way, join multiple datasets, choose variables to answer a research question and create a reproducible workflow to analyze data.\n\n\nLearning Objectives\n\nLearn how to store information in a tidy way.\nWork with relational data.\nJoin tables\nUse AI to explain complex concepts\n\n\n\nBefore class\n\nBackground reading: Békés-Kézdi (2021) Chapter 2\nDownload data-modified.zip from Here. Unzip. It is a set of csv files such as ‘cities_modified’\n\nAlso available on Moodle\n\nThe data description is available here",
+    "text": "About the class\nData wrangling is the process of preparing data for the analysis. A key task is joining data tables. It looks simple, but in practice, has many challenges. AI can help design the process, and give you code to do that.\n\nObjectives summary:\nLearn how to organize data in a tidy way, join multiple datasets, choose variables to answer a research question and create a reproducible workflow to analyze data.\n\n\nLearning Objectives\n\nLearn how to store information in a tidy way.\nWork with relational data.\nJoin tables\nUse AI to explain complex concepts\n\n\n\nBefore class\n\nBackground reading: Békés-Kézdi (2021) Chapter 2\nDownload data-modified.zip from Here. Unzip. It is a set of csv files such as ‘cities_modified’\n\nAlso available on Moodle\n\nThe data description is available here – have a look before class",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -352,7 +352,7 @@
     "href": "week04/index.html#class-plan",
     "title": "Week 04: Joining tables",
     "section": "Class Plan",
-    "text": "Class Plan\n\nRecap\nDiscuss assignment 03 (20 mins by groups + 10 mins together) * Create 4-member groups. Each groups will read reports by an another team (1–&gt;2, 2–&gt;3, N–&gt;1) * Read the other team’s submissions with a ‘reader’s perspective’ and take notes. * which report did you like the most and why * rank reports in terms of how much AI was involved from low to high and note suspicious examples\n\n\nTask 1: Use AI to understand these terms. Ask examples. (Individual)\n\ntidy data table\nrelational datasets,\n\nschema,\nprimary and foreign key\ncomposite key\n\njoining tables\n\ndifferent types of join\n1:1, 1:m\n\njoining tables in your language (python, R, Stata)\n\nThis is followed by a discussion.",
+    "text": "Class Plan\n\n\n🤝 Recap and dicussion (10 min)\n\n\nRecap\nDiscuss assignment 03 (20 mins by groups + 10 mins together)\n\nCreate 3-4-member groups. Each groups will read reports by an another team (1–&gt;2, 2–&gt;3, … , N–&gt;1)\nRead the other team’s submissions with a ‘reader’s perspective’ and take notes.\nWhich report did you like the most and why\nRank reports in terms of how much AI was involved from low to high and note suspicious examples\nNote examples where AI usage was obvious (even made things worse) vs. well-integrated.\n\n\n\n\n\n🤝 Understanding challenges (20 min)\n\n\nTask 1: Use AI to understand these terms. Ask examples. (Individual)\n\ntidy data table\nrelational datasets,\n\nschema,\nprimary and foreign key\ncomposite key\n\njoining tables\n\ndifferent types of join\n1:1, 1:m\n\njoining tables in your language (python, R, Stata)\ndifficulties of generating primary keys\n\nThis is followed by a discussion.\n\n\n\n\n🤝 Using AI help join tables (30 min)\n\n\n\nTask 2: Form 2-3 groups of people using same coding language\nUse the data you downloaded to carry out joins and inspect results. Use AI but inspect.\n\n\n1:1\n\nJoin hotels and cities. Compare left, right, inner, outer joins.\n\n\nwhat happens to N?\ncompare all four join types - which hotels/cities disappear with each approach?\n\n\n\n1:m\n\nStart: Tabulate the frequency of hotels by city_hotel_counts\nCities to Hotels\n\n\none city joins to multiple hotels\nfilter on 2 cities for easier visibility\n\n\nJoin hotel and occupancy 1\n\n\nm:1\n\n\nJoin hotel and occupancy 2\n\n\nget hotel level\ntrick: aggregate\n\n\nJoin on composite key\n\n\ncreate a data table at city-year-match level showing average occupancy and tourist arrivals\ncan you include economic indicators by month?\n\n\n\nAdvice, ideas\n\ndiscuss and collect ideas from AI\nlearn to focus on key suggestions (AI can go nuanced and not important points easily)",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -376,7 +376,7 @@
     "href": "week04/index.html#section",
     "title": "Week 04: Joining tables",
     "section": "1:1",
-    "text": "1:1\n\nJoin hotels and cities. Compare left, right, inner, outer joins.\n\n\nwhat happens to N?",
+    "text": "1:1\n\nJoin hotels and cities. Compare left, right, inner, outer joins.\n\n\nwhat happens to N?\ncompare all four join types - which hotels/cities disappear with each approach?",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -388,7 +388,7 @@
     "href": "week04/index.html#m",
     "title": "Week 04: Joining tables",
     "section": "1:m",
-    "text": "1:m\n\nStart: Tabulate the frequency of hotels by city_hotel_counts\nCities to Hotels\n\n\none city joins to multiple hotels\nfilter on 2 cities for easier visibility\n\n\nJoin hotel and occupancy 1\n\n\nm:1\n\n\nJoin hotel and occupancy 2\n\n\nget hotel level\ntrick: aggregate\n\n\nJoin on composite key\n\n\ncreate a data table at city-year-match level showing average occupancy and tourist arrivals",
+    "text": "1:m\n\nStart: Tabulate the frequency of hotels by city_hotel_counts\nCities to Hotels\n\n\none city joins to multiple hotels\nfilter on 2 cities for easier visibility\n\n\nJoin hotel and occupancy 1\n\n\nm:1\n\n\nJoin hotel and occupancy 2\n\n\nget hotel level\ntrick: aggregate\n\n\nJoin on composite key\n\n\ncreate a data table at city-year-match level showing average occupancy and tourist arrivals\ncan you include economic indicators by month?",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -424,7 +424,7 @@
     "href": "week04/index.html#end-of-week-discussion-points",
     "title": "Week 04: Joining tables",
     "section": "End of Week Discussion points",
-    "text": "End of Week Discussion points\n\nHow useful was AI in teaching skills?\nHow useful was AI in actually joining tables?\nHow can you debug what AI did in terms of executing code?",
+    "text": "End of Week Discussion points\n\nHow useful was AI in teaching skills?\nHow useful was AI in actually joining tables?\nHow can you debug what AI did in terms of executing code?\nWhen joins produced unexpected row counts, how did you diagnose the problem? What AI prompts helped most?",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -448,7 +448,7 @@
     "href": "week03/index.html#objectives",
     "title": "Week 03: Reporting your data analysis",
     "section": "Objectives",
-    "text": "Objectives\n\nSummary:\nHow to organize a short data analytics report? The job includes choosing and creating relevant plots, running regression. The class will exlopre how we can use AI to assist in these tasks.\n\n\nDetails\n\nUnderstand how to connect an empirical question to data\nCreate relevant visualizations and tables using AI.\nLearn to critically assess reports with the help of AI tools.",
+    "text": "Objectives\n\nSummary:\nHow to organize a short data analytics report? The job includes choosing and creating relevant plots, running regression. The class will exlopre how we can use AI to assist in these tasks, and get the distinction between using AI as input vs. output in report writing.\n\n\nDetails\n\nUnderstand how to connect an empirical question to data\nCreate relevant visualizations and tables using AI.\nLearn to critically assess reports with the help of AI tools. We’ll especially focus on half-truths: convincing, looks okay, is okay-ish, but not 100% true",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -460,7 +460,7 @@
     "href": "week03/index.html#preparation-before-class",
     "title": "Week 03: Reporting your data analysis",
     "section": "Preparation BEFORE class",
-    "text": "Preparation BEFORE class\n\nBackground reading: Békés-Kézdi (2021) Chapters 3-4, 7-10\nDownload the WVS_GDP_merged_data.csv. This is an aggregated, cleaned subset of the 7th Wave of WVS dataset merged with GDP data from World Bank\n\n\nThe data\n\nThis is aggregated data: country level\nYear: Wave 7 of the WVS – survey was conducted at different years.\nCombined with World Bank data: at year when survey was conducted\nGDP: level USD, level USD PPP, level USD PPP per capita\npopulation",
+    "text": "Preparation BEFORE class\n\nBackground reading: Békés-Kézdi (2021) Chapters 3-4, 7-10. Pay special attention to Chapter 4’s discussion of good vs. bad graphs and Chapter 10 on interpreting regression coefficients precisely.\nDownload the WVS_GDP_merged_data.csv. This is an aggregated, cleaned subset of the 7th Wave of WVS dataset merged with GDP data from World Bank\n\n\nThe data\n\nThis is aggregated data: country level\nYear: Wave 7 of the WVS – survey was conducted at different years.\nCombined with World Bank data: at year when survey was conducted\nGDP: level USD, level USD PPP, level USD PPP per capita.\npopulation",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -472,7 +472,7 @@
     "href": "week03/index.html#class-plan",
     "title": "Week 03: Reporting your data analysis",
     "section": "Class plan",
-    "text": "Class plan\n\nReview Readme assignment\n\nQ+A\nVerify, verify, verify (AI is good but rarely perfect)\n\n\n\nStarting presentation about prompting\nslideshow\n\n\nHow does a good report look like?\n\nHow to write a good short report: structure\ngood graphs and tables\n\nMake sure precise language. Recap on causal language.\n\n\n\n\nProblems with AI generated reports.\nUse AI as input (like advanced google search) not as output writer\nBecause * Creates “average” / generic / bland / repetitive text * Convincing but not precise * Not your style and not your exact plan * Too broad (like adds further research)\n\n\nNO AI\nForm 2-3 member groups freely\n\nEach group: Choose one these pre-defined research questions:\n\n\nIs there a relationship between income level and trust?\nIs there a relationship between income level and happiness?\nIs there a relationship between income level and gender attitudes?\n\n\nChoose the relevant variables to answer your question (you can use AI to understand variables like in week2\nDesign a plan for a report on the topic: list of exhibits (graphs, tables). Do not write code (yet)\nDiscuss plans\n\n\n\nAI 1\nTry get a report with a single prompt. * Hint: translate your plan into a prompt using ideas from the intro.\n\n\nAI 2\n\nShowcase an iterative process where key exhibits are created",
+    "text": "Class plan\n\n\n🤝 Review on readmes (30 min)\n\n\n\nReview Readme assignment\n\nQ+A\nCommon AI errors in data documentation?\nVerify, verify, verify (AI is good but rarely perfect)\n\n\n\nStarting presentation about prompting\nslideshow\n\n\nHow does a good report look like?\n\nHow to write a good short report: structure\ngood graphs and tables\n\nMake sure precise language. Recap on causal language.\n\n\n\n\nProblems with AI generated reports.\nUse AI as input (like advanced google search) not as output writer, because\n\nCreates “average” / generic / bland / repetitive text\nConvincing but not precise\nNot your style and not your exact plan\nToo broad (like adds further research)\nnot precise enough, especially using causal language inappropriately.\n\n\n\n\n\n\n🤝 No AI vs AI prompting strategies to create a report (50 min)\n\n\n\nNO AI\nForm 2-3 member groups freely\n\nEach group: Choose one these pre-defined research questions:\n\n\nIs there a relationship between income level and trust?\nIs there a relationship between income level and happiness?\nIs there a relationship between income level and gender attitudes?\n\n\nChoose the relevant variables to answer your question (you can use AI to understand variables like in week2 (Use your Week 2 AI skills to understand complex variable definitions.)\nDesign a plan for a report on the topic: list of exhibits (graphs, tables). Do not write code (yet)\nDiscuss plans\n\n\n\nAI 1\nTry get a report with a single prompt. * Hint 1: translate your plan into a prompt using ideas from the intro. * Hint 2: Look for impressive-looking but problematic results.\n\n\nAI 2\n\nShowcase an iterative process where key exhibits are created\nHint 3: get AI to create precisely the exhibits you designed, not what it thinks you need.",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -643,7 +643,7 @@
     "href": "week02/index.html#end-of-week-discussion-points",
     "title": "Week02: Discovery and documentation",
     "section": "End of Week Discussion points",
-    "text": "End of Week Discussion points\n\nWhat was the biggest contribution of AI?\nFirst result vs after iterations – what did improve?\nHow do you feel about learning from AI vs human instructor? Pros and cons?",
+    "text": "End of Week Discussion points\nEnd of Week Reflection:\n\nWhat was the biggest contribution of AI?\nFirst result vs after iterations – what did improve?\nHow do you feel about learning from AI vs human instructor? Pros and cons?",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -2249,5 +2249,249 @@
     "title": "Week02: Discovery and documentation",
     "section": "End of Week Discussion points",
     "text": "End of Week Discussion points\n\nWhat was the biggest contribution of AI?\nFirst result vs after iterations – what did improve?\nHow do you feel about learning from AI vs human instructor? Pros and cons?"
+  },
+  {
+    "objectID": "week06/index - Copy.html",
+    "href": "week06/index - Copy.html",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "",
+    "text": "Week 06: Sentiment Analysis with AI\n\n\nUsing API to AI to create data from text"
+  },
+  {
+    "objectID": "week06/index - Copy.html#overview",
+    "href": "week06/index - Copy.html#overview",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Overview",
+    "text": "Overview\nContinue using text for research with AI\n\nLearning Outcomes\nBy the end of the session, students will:\n\nGain hands-on experience with sentiment analysis.\nHave experience integrating NLP in research\nThink about what is ground truth"
+  },
+  {
+    "objectID": "week06/index - Copy.html#assignment-review",
+    "href": "week06/index - Copy.html#assignment-review",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Assignment review",
+    "text": "Assignment review\n\nReview of transformation options\n\nlexicon based counting numbers –&gt; generate a transparent script\nMachine-learning classifiers, n-grams etc.\nLLM (transformer-based) one-shot: treating the LLM like a giant classifier: you hand it raw text and ask classes of sentiment. (Deep contextual understanding—word embeddings, attention across the whole sentence etc decide the sentiment.) No separate sentiment lexicon; it’s all encoded in the model weights.\nYou can also take a pretrained LLM and continue training it on thousands of labeled review. See our example guidelines HERE\n\n\n\n\nLet us discuss the concept ground truth (again): AI vs humans vs “truth”"
+  },
+  {
+    "objectID": "week06/index - Copy.html#using-apis",
+    "href": "week06/index - Copy.html#using-apis",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Using APIs",
+    "text": "Using APIs\n\nBasics and setup\nHow to use APIs\nGet an API Key (ChatGPT and Claude)\n\n\nExamples\nSimple walkthrough with GDP data – uses World Bank and FRED APIs\nBit harder walkthrough with football data – uses FBREF soccer data. Guess the club for example.\n\n\nMore advanced stuff\nMore advanced knowledge on APIs – how APIs work\n\n\nMaterials\nDatasets\n\ntexts (text_id level)\ngames info (such as results, text_id level)\nclass-ratings (human, AI ratio, text_id*student level)\ndomain-rating (text_id level)\nclass-rating-aggregated (text_id level)\n\ncode"
+  },
+  {
+    "objectID": "week06/index - Copy.html#interview-analysis",
+    "href": "week06/index - Copy.html#interview-analysis",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Interview Analysis",
+    "text": "Interview Analysis\nCode for sentiment analysis of football manager interviews, here: interview scripts\n\nDomain lexicon creation in R\nscript in R requires API key setup in R\nScript in Pythin – make sure you set your own API key"
+  },
+  {
+    "objectID": "week06/index - Copy.html#preparation",
+    "href": "week06/index - Copy.html#preparation",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Preparation",
+    "text": "Preparation\n\nDownload the combined data from Moodle\n\nNote: win, draw – need encode loss"
+  },
+  {
+    "objectID": "week06/index - Copy.html#class-tasks",
+    "href": "week06/index - Copy.html#class-tasks",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Class tasks",
+    "text": "Class tasks\n\nDiscussion 1\n\nYour experience regarding human vs ai ratings.\nWhat was difficult and easy as human rater\n\n\n\nData Analysis\n\nTake the aggregated file and ask AI for a readme. Discuss what is in the data\nCompare human, domain lexicon and AI rating. For human and AI take the average.\nThink of an interesting comparison using AI rating\nCompare results by human and lexicon rating\n\n\n\nDiscussion 2\n\nWhat is ground truth\n\n\n\nHow to integrate AI into research\n\ncombine data with text\nthink RQ and how you’d use AI"
+  },
+  {
+    "objectID": "week06/index - Copy.html#additional-tasks-if-time-permits",
+    "href": "week06/index - Copy.html#additional-tasks-if-time-permits",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Additional tasks if time permits",
+    "text": "Additional tasks if time permits\n\npredict gender and result\n\nShow AI all texts and ask to predict the gender of speaker\nShow AI all texts and ask to predict the result (manager’s team won, drew, lost)"
+  },
+  {
+    "objectID": "week04/index.html#assignment",
+    "href": "week04/index.html#assignment",
+    "title": "Week 04: Joining tables",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nNote\n\n\n\nAssignment [/assignments/assignment_04.md]",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 4: Joining Tables"
+    ]
+  },
+  {
+    "objectID": "week04/index.html#some-personal-comments-on-ai-and-this-class",
+    "href": "week04/index.html#some-personal-comments-on-ai-and-this-class",
+    "title": "Week 04: Joining tables",
+    "section": "Some personal comments on AI and this class",
+    "text": "Some personal comments on AI and this class\n\nYou may wonder why this topic? I’ll tell you. David Card, Nobel-prize winning economist visited me at CEU. I asked what I shall I add to my textbook. Some new fancy econometric method? He said in his experience, people have the hardest time joining tables, and in business applications, it’s crucial.\nThis is also a place to show how AI can help expanding on key concepts. One must know about the problem of joining tables. But what is left vs right, what is primary vs secondary key – well ask AI.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 4: Joining Tables"
+    ]
+  },
+  {
+    "objectID": "week03/index.html#assignment",
+    "href": "week03/index.html#assignment",
+    "title": "Week 03: Reporting your data analysis",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nNote\n\n\n\nAssignment 3: Creating a Report\nCritical Note: Reports will be shared for peer review in Week 4 - upload to Moodle student folder.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 3: Writing Reports"
+    ]
+  },
+  {
+    "objectID": "week03/index.html#some-personal-comments-on-ai-and-this-class",
+    "href": "week03/index.html#some-personal-comments-on-ai-and-this-class",
+    "title": "Week 03: Reporting your data analysis",
+    "section": "Some personal comments on AI and this class",
+    "text": "Some personal comments on AI and this class\n\nThe AI (Claude 4.0) suggested to add “Pay special attention to Chapter 4’s discussion of good vs. bad graphs and Chapter 10 on interpreting regression coefficients precisely.” Well. We indeed have bits on good graphs in Chapter4 but not really on bad ones. It is Chapter 07 that builds coefficient estimation, albeit we have some stuff in Chapter 10 for multiple coefficients. I asked AI about errors. It noted that it predicted them based on knowing about the core summary of our book + contents of “typical econometrics textbook”. Instructive re half-truth danger.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 3: Writing Reports"
+    ]
+  },
+  {
+    "objectID": "week03/index - Copy.html",
+    "href": "week03/index - Copy.html",
+    "title": "Week 03: Reporting your data analysis",
+    "section": "",
+    "text": "Week 03: Reporting your data analysis\n\n\nCreating inputs and organizing a short data analytics report with AI"
+  },
+  {
+    "objectID": "week03/index - Copy.html#objectives",
+    "href": "week03/index - Copy.html#objectives",
+    "title": "Week 03: Reporting your data analysis",
+    "section": "Objectives",
+    "text": "Objectives\n\nSummary:\nHow to organize a short data analytics report? The job includes choosing and creating relevant plots, running regression. The class will exlopre how we can use AI to assist in these tasks.\n\n\nDetails\n\nUnderstand how to connect an empirical question to data\nCreate relevant visualizations and tables using AI.\nLearn to critically assess reports with the help of AI tools."
+  },
+  {
+    "objectID": "week03/index - Copy.html#preparation-before-class",
+    "href": "week03/index - Copy.html#preparation-before-class",
+    "title": "Week 03: Reporting your data analysis",
+    "section": "Preparation BEFORE class",
+    "text": "Preparation BEFORE class\n\nBackground reading: Békés-Kézdi (2021) Chapters 3-4, 7-10\nDownload the WVS_GDP_merged_data.csv. This is an aggregated, cleaned subset of the 7th Wave of WVS dataset merged with GDP data from World Bank\n\n\nThe data\n\nThis is aggregated data: country level\nYear: Wave 7 of the WVS – survey was conducted at different years.\nCombined with World Bank data: at year when survey was conducted\nGDP: level USD, level USD PPP, level USD PPP per capita\npopulation"
+  },
+  {
+    "objectID": "week03/index - Copy.html#class-plan",
+    "href": "week03/index - Copy.html#class-plan",
+    "title": "Week 03: Reporting your data analysis",
+    "section": "Class plan",
+    "text": "Class plan\n\nReview Readme assignment\n\nQ+A\nVerify, verify, verify (AI is good but rarely perfect)\n\n\n\nStarting presentation about prompting\nslideshow\n\n\nHow does a good report look like?\n\nHow to write a good short report: structure\ngood graphs and tables\n\nMake sure precise language. Recap on causal language.\n\n\n\n\nProblems with AI generated reports.\nUse AI as input (like advanced google search) not as output writer\nBecause * Creates “average” / generic / bland / repetitive text * Convincing but not precise * Not your style and not your exact plan * Too broad (like adds further research)\n\n\nNO AI\nForm 2-3 member groups freely\n\nEach group: Choose one these pre-defined research questions:\n\n\nIs there a relationship between income level and trust?\nIs there a relationship between income level and happiness?\nIs there a relationship between income level and gender attitudes?\n\n\nChoose the relevant variables to answer your question (you can use AI to understand variables like in week2\nDesign a plan for a report on the topic: list of exhibits (graphs, tables). Do not write code (yet)\nDiscuss plans\n\n\n\nAI 1\nTry get a report with a single prompt. * Hint: translate your plan into a prompt using ideas from the intro.\n\n\nAI 2\n\nShowcase an iterative process where key exhibits are created"
+  },
+  {
+    "objectID": "week03/index - Copy.html#end-of-week-discussion-points",
+    "href": "week03/index - Copy.html#end-of-week-discussion-points",
+    "title": "Week 03: Reporting your data analysis",
+    "section": "End of Week Discussion points",
+    "text": "End of Week Discussion points\n\nCompare single and multi-step approach generating reports?\nHow good is AI in creating good enough vs exactly as planned graphs?\nWhat is happiness? :-)"
+  },
+  {
+    "objectID": "week04/index - Copy.html",
+    "href": "week04/index - Copy.html",
+    "title": "Week 04: Joining tables",
+    "section": "",
+    "text": "Week 04: Joining tables\n\n\nCombing data tables, and understanding what can go wrong with AI"
+  },
+  {
+    "objectID": "week04/index - Copy.html#about-the-class",
+    "href": "week04/index - Copy.html#about-the-class",
+    "title": "Week 04: Joining tables",
+    "section": "About the class",
+    "text": "About the class\nData wrangling is when you prepare the data for the analysis. A key aspect is joining data tables. AI can help design the process, and give you code to do that.\n\nObjectives summary:\nLearn how to organize data in a tidy way, join multiple datasets, choose variables to answer a research question and create a reproducible workflow to analyze data.\n\n\nLearning Objectives\n\nLearn how to store information in a tidy way.\nWork with relational data.\nJoin tables\nUse AI to explain complex concepts\n\n\n\nBefore class\n\nBackground reading: Békés-Kézdi (2021) Chapter 2\nDownload data-modified.zip from Here. Unzip. It is a set of csv files such as ‘cities_modified’\n\nAlso available on Moodle\n\nThe data description is available here"
+  },
+  {
+    "objectID": "week04/index - Copy.html#class-plan",
+    "href": "week04/index - Copy.html#class-plan",
+    "title": "Week 04: Joining tables",
+    "section": "Class Plan",
+    "text": "Class Plan\n\nRecap\nDiscuss assignment 03 (20 mins by groups + 10 mins together) * Create 4-member groups. Each groups will read reports by an another team (1–&gt;2, 2–&gt;3, N–&gt;1) * Read the other team’s submissions with a ‘reader’s perspective’ and take notes. * which report did you like the most and why * rank reports in terms of how much AI was involved from low to high and note suspicious examples\n\n\nTask 1: Use AI to understand these terms. Ask examples. (Individual)\n\ntidy data table\nrelational datasets,\n\nschema,\nprimary and foreign key\ncomposite key\n\njoining tables\n\ndifferent types of join\n1:1, 1:m\n\njoining tables in your language (python, R, Stata)\n\nThis is followed by a discussion."
+  },
+  {
+    "objectID": "week04/index - Copy.html#task-2-form-2-3-groups-of-people-using-same-coding-language",
+    "href": "week04/index - Copy.html#task-2-form-2-3-groups-of-people-using-same-coding-language",
+    "title": "Week 04: Joining tables",
+    "section": "Task 2: Form 2-3 groups of people using same coding language",
+    "text": "Task 2: Form 2-3 groups of people using same coding language\nUse the data you downloaded to carry out joins and inspect results. Use AI but inspect."
+  },
+  {
+    "objectID": "week04/index - Copy.html#section",
+    "href": "week04/index - Copy.html#section",
+    "title": "Week 04: Joining tables",
+    "section": "1:1",
+    "text": "1:1\n\nJoin hotels and cities. Compare left, right, inner, outer joins.\n\n\nwhat happens to N?"
+  },
+  {
+    "objectID": "week04/index - Copy.html#m",
+    "href": "week04/index - Copy.html#m",
+    "title": "Week 04: Joining tables",
+    "section": "1:m",
+    "text": "1:m\n\nStart: Tabulate the frequency of hotels by city_hotel_counts\nCities to Hotels\n\n\none city joins to multiple hotels\nfilter on 2 cities for easier visibility\n\n\nJoin hotel and occupancy 1\n\n\nm:1\n\n\nJoin hotel and occupancy 2\n\n\nget hotel level\ntrick: aggregate\n\n\nJoin on composite key\n\n\ncreate a data table at city-year-match level showing average occupancy and tourist arrivals"
+  },
+  {
+    "objectID": "week04/index - Copy.html#advice-ideas",
+    "href": "week04/index - Copy.html#advice-ideas",
+    "title": "Week 04: Joining tables",
+    "section": "Advice, ideas",
+    "text": "Advice, ideas\n\ndiscuss and collect ideas from AI\nlearn to focus on key suggestions (AI can go nuanced and not important points easily)"
+  },
+  {
+    "objectID": "week04/index - Copy.html#home-assignment",
+    "href": "week04/index - Copy.html#home-assignment",
+    "title": "Week 04: Joining tables",
+    "section": "Home Assignment",
+    "text": "Home Assignment\nSuggested assignment [/assignments/assignment_04]"
+  },
+  {
+    "objectID": "week04/index - Copy.html#end-of-week-discussion-points",
+    "href": "week04/index - Copy.html#end-of-week-discussion-points",
+    "title": "Week 04: Joining tables",
+    "section": "End of Week Discussion points",
+    "text": "End of Week Discussion points\n\nHow useful was AI in teaching skills?\nHow useful was AI in actually joining tables?\nHow can you debug what AI did in terms of executing code?"
+  },
+  {
+    "objectID": "week05/index - Copy.html",
+    "href": "week05/index - Copy.html",
+    "title": "Week 05: using text as data",
+    "section": "",
+    "text": "Week 05: using text as data\n\n\nTurning a series of short texts into tabular data: humans vs AI"
+  },
+  {
+    "objectID": "week05/index - Copy.html#overview",
+    "href": "week05/index - Copy.html#overview",
+    "title": "Week 05: using text as data",
+    "section": "Overview",
+    "text": "Overview\nIn this lesson, students will be introduced to sentiment analysis, specifically applied to evaluating general positivity or negativity in football managers’ statements about match outcomes.\n\nLearning Outcomes\nBy the end of the session, students will: - Gain hands-on experience with sentiment analysis. - Understand the complexities and limitations of sentiment analysis.\n\n\nMaterials\n\nGeneral Sentiment (positive/negative) rating scale HERE\nCSV files:\n\nstudent_test_5 download from HERE as xlsx HERE as csv, (or from moodle)"
+  },
+  {
+    "objectID": "week05/index - Copy.html#assignment-review",
+    "href": "week05/index - Copy.html#assignment-review",
+    "title": "Week 05: using text as data",
+    "section": "Assignment review",
+    "text": "Assignment review\n\nFancy graphs != good graphs (good graph &lt;- careful design)\nPrecise interpretation &gt;&gt; BS\nLess is more\nShow only what you understand deeply"
+  },
+  {
+    "objectID": "week05/index - Copy.html#lecture-nlp-basics",
+    "href": "week05/index - Copy.html#lecture-nlp-basics",
+    "title": "Week 05: using text as data",
+    "section": "Lecture: NLP basics",
+    "text": "Lecture: NLP basics\n\nTopic: Introduction to Sentiment Analysis\nKey points:\n\nImportance of text analysis and its applications\nIntroduction to Natural Language Processing (NLP): definition and applications\nKey concepts in text analysis:\n\nTokenization\nPreprocessing techniques\nFeature extraction\n\nSentiment analysis: detecting emotion and tone in text\nPractical examples from football managers’ post-match interviews\nLimitations and challenges in text analysis, emphasizing contextual interpretation and ambiguity\n\n\nSlides\ndomain lexicon"
+  },
+  {
+    "objectID": "week05/index - Copy.html#practical-activity",
+    "href": "week05/index - Copy.html#practical-activity",
+    "title": "Week 05: using text as data",
+    "section": "Practical Activity",
+    "text": "Practical Activity\n\nManual vs AI Sentiment Analysis Activity\n\nObjective: Practice manually rating football manager statements as positive or negative.\nSteps:\n\nReview general sentiment rating scale provided HERE\nIndividually analyze and rate 5 provided test statements from student_test.csv.\nNow use AI to rate them.\nTry have a better domain lexicon.\n\n\nDiscuss experience, how AI helps, what could go wrong.\n\n\nPrediction of score\n\nModeling choices of results\nThink about how you would do it first\nCheck how AI thinks about, rate the examples and look at explanations\ntake the 5 examples, and compare your predictions vs the AI predictions\n\n\n\nDiscussion: Validation and Sentiment Analysis\n\nObjective: Discuss validation techniques used in sentiment analysis.\nTopics for discussion:\n\nDifferences between manual and AI ratings\nGround Truth\nIntroduction to validation methods:\nIf ground truth – can do confusion maztric, calculate accuracy\nIf no ground truth – measure agreement between humans and AI. test difference.\n\nAI is average, but…\nAI with persona?\nAI biased ?"
+  },
+  {
+    "objectID": "week05/index - Copy.html#end-of-week-discussion-points",
+    "href": "week05/index - Copy.html#end-of-week-discussion-points",
+    "title": "Week 05: using text as data",
+    "section": "End of Week Discussion points",
+    "text": "End of Week Discussion points\n\nHow precise is AI in sentiment analysis?\nHow did you compare to AI in terms of scores? How did any difference make you feel?\nCan you think of a past project where AI could have helped you upgrade it?"
   }
 ]
