@@ -18,7 +18,7 @@
     "href": "index.html#course-description",
     "title": "Doing Data Analysis with AI",
     "section": "Course description",
-    "text": "Course description\n\nContent\nThe course focuses on using large language models (LLMs) such as OpenAI’s ChatGPT, Anthropic Claude.ai, Mistral’s Le Chat, and Google’s Gemini) to carry out tasks in data analysis. It includes topics like data extraction and wrangling, data exploration and descriptive statistics, and creating reports as well as turning text to data.\nThere are three case studies that we use (1) a simulated set of data tables on hotels in Austria, (2) The World Value Survey, and (3) A series of interview textst.\nThe course material includes weekly practice assignments.\n\n\nBackground\nYou need a background in Data Analysis / Econometrics, a good introductory course is enough. I, of course, suggest Chapters 1-12 and 19 of Data Analysis for Business, Economics and Policy (Cambridge UP, 2021). Full slideshows, data and code are open source. But consider buying the book. In particular, the course builds on Chapters 1-6 and 7-10, and 19 of Data Analysis but other Introductory Econometrics + basics of data science knowledge is ok.\nStudents are expected to have some basic coding knowledge in Python or R (Stata also fine mostly).\n\n\nRelevance\nAI is everywhere and has become essential, most analytic work will be using it. It’s like the Internet a while back. Does not solve all problems, but almost all intellectual tasks will rely on inputs from it.\n\n\nLearning Outcomes\nKey outcomes. By the end of the course, students will be able to\n\nGain experience and confidence using genAI to carry out key tasks in data analysis.\nBuild AI in coding practice including data wrangling, description and reporting and text analysis\nHave some idea of use cases when AI assistance is (1) greatly useful, (2) helpful, (3) currently problematic.\nHave some idea of use cases when AI assistance is OK to use as is vs needs strong human supervision\nHave an understanding of resources to follow for updates.\n\n\n\nTarget audience\nThis is a course aimed at 3rd (2nd?) year BA and MA students in any program with required background. Economics, Quantitative Social science, Political Science, Sociology, History. To be frank, all students shall learn data analysis and be comfortable using AI.\nBut, anyone can use it with adequate background.\n\n\nCourse Context & Trajectory\nWhat’s Coming Next:\n\nWeek 1: LLM Review and short task to recrate a graph\nWeek 2: Use AI to understand and document the World Values Survey dataset\nWeek 3: AI-assisted report writing with WVS data\nWeek 4: Multi-table joins with Austrian hotel data\nWeeks 5-6: Text analysis of football manager interviews\nWeek 7: Developing dashboards\nWeek 7: AI as applied metrics consultant\n\nSkills Development Arc:\n\nWeeks 1-2: Foundation (AI concepts, data exploration)\nWeeks 3-4: Core analysis (reporting, data wrangling)\n\nWeeks 5-6: Advanced applications (text analysis, APIs)\nWeeks 5-6: Helping research and presentation\n\nAssignments\nAssignments are available for all classes\nImportant to note for assignments: * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this."
+    "text": "Course description\n\nContent\nThe course focuses on using large language models (LLMs) such as OpenAI’s ChatGPT, Anthropic Claude.ai, Mistral’s Le Chat, and Google’s Gemini) to carry out tasks in data analysis. It includes topics like data extraction and wrangling, data exploration and descriptive statistics, and creating reports as well as turning text to data.\nThere are three case studies that we use (1) a simulated set of data tables on hotels in Austria, (2) The World Value Survey, and (3) A series of interview textst.\nThe course material includes weekly practice assignments.\n\n\nBackground: data analysis / econometrics\nYou need a background in Data Analysis / Econometrics, a good introductory course is enough. I, of course, suggest Chapters 1-12 and 19 of Data Analysis for Business, Economics and Policy (Cambridge UP, 2021). Full slideshows, data and code are open source. But consider buying the book!🤝\nIn particular, the course builds on Chapters 1-6 and 7-10, and 19 of Data Analysis but other Introductory Econometrics + basics of data science knowledge is ok.\n\n\nBackground: coding\nStudents are expected to have some basic coding knowledge in Python or R (Stata also fine mostly).\n\n\nRelevance\nAI is everywhere and has become essential, most analytic work will be using it. It’s like the Internet a while back. Does not solve all problems, but almost all intellectual tasks will rely on inputs from it.\n\n\nLearning Outcomes\nKey outcomes. By the end of the course, students will be able to\n\nGain experience and confidence using genAI to carry out key tasks in data analysis.\nBuild AI in coding practice including data wrangling, description and reporting and text analysis\nHave some idea of use cases when AI assistance is (1) greatly useful, (2) helpful, (3) currently problematic.\nHave some idea of use cases when AI assistance is OK to use as is vs needs strong human supervision\nHave an understanding of resources to follow for updates.\n\n\n\nTarget audience\nThis is a course aimed at 3rd (2nd?) year BA and MA students in any program with required background. Economics, Quantitative Social science, Political Science, Sociology, History. To be frank, all students shall learn data analysis and be comfortable using AI.\nBut, anyone can use it with adequate background.\n\n\nCourse Context & Trajectory\nWhat’s Coming Next:\n\nWeek 0: Using AI for Coding – this may not be part of the curriculum\nWeek 1: LLM Review and short task to recrate a graph\nWeek 2: Use AI to understand and document the World Values Survey dataset\nWeek 3: AI-assisted report writing with WVS data\nWeek 4: Multi-table joins with Austrian hotel data\nWeeks 5-6: Text analysis of football manager interviews\nWeek 7: Developing dashboards\nWeek 7: AI as applied metrics consultant\n\nSkills Development Arc:\n\nWeeks 0:  Background prep: Writing code with AI\nWeeks 1-2: Foundation (AI concepts, data exploration)\nWeeks 3-4: Core analysis (reporting, data wrangling)\n\nWeeks 5-6: Advanced applications (text analysis, APIs)\nWeeks 5-6: Helping research and presentation\n\nAssignments\nAssignments are available for all classes\nImportant to note for assignments: * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this."
   },
   {
     "objectID": "index.html#week01-llm-review",
@@ -170,7 +170,7 @@
     "href": "week06/index.html#overview",
     "title": "Week 06: Sentiment Analysis with AI",
     "section": "Overview",
-    "text": "Overview\nContinue using text for research with AI\n\nLearning Outcomes\nBy the end of the session, students will:\n\nGain hands-on experience with sentiment analysis.\nHave experience integrating NLP in research\nThink about what is ground truth",
+    "text": "Overview\nContinue using text for research with AI. [SUGGESTED ADDITION] Scaling text analysis with APIs: from 20 texts to 10,000+ and understanding the economics of when manual analysis becomes infeasible.\n\nLearning Outcomes\nBy the end of the session, students will:\n\nGain hands-on experience with sentiment analysis.\nHave experience integrating NLP in research\nThink about what is ground truth\nGet a taste of building an analytical pipeline with API usage",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -1105,7 +1105,7 @@
     "href": "code/index.html",
     "title": "Code Used for case studies",
     "section": "",
-    "text": "Code for sentiment analysis of football manager interviews.\nLocation: code/interviews\nFiles include:\n\n\n\nScripts:\n\nDomain lexicon creation in R\nscript in R requires API key setup in R\nScript in Pythin – make sure you set your own API key",
+    "text": "Code for sentiment analysis of football manager interviews.\nLocation: code/interviews\nFiles include:\n\n\n\nScripts:\n\nDomain lexicon creation in R\nscript in R requires API key setup in R\nScript in Python – make sure you set your own API key",
     "crumbs": [
       "Home",
       "Resources",
@@ -1117,7 +1117,7 @@
     "href": "code/index.html#interview-analysis",
     "title": "Code Used for case studies",
     "section": "",
-    "text": "Code for sentiment analysis of football manager interviews.\nLocation: code/interviews\nFiles include:\n\n\n\nScripts:\n\nDomain lexicon creation in R\nscript in R requires API key setup in R\nScript in Pythin – make sure you set your own API key",
+    "text": "Code for sentiment analysis of football manager interviews.\nLocation: code/interviews\nFiles include:\n\n\n\nScripts:\n\nDomain lexicon creation in R\nscript in R requires API key setup in R\nScript in Python – make sure you set your own API key",
     "crumbs": [
       "Home",
       "Resources",
@@ -1776,7 +1776,7 @@
     "href": "week05/index.html#overview",
     "title": "Week 05: using text as data",
     "section": "Overview",
-    "text": "Overview\nIn this lesson, students will be introduced to sentiment analysis, specifically applied to evaluating general positivity or negativity in football managers’ statements about match outcomes.\n\nLearning Outcomes\nBy the end of the session, students will: - Gain hands-on experience with sentiment analysis. - Understand the complexities and limitations of sentiment analysis.\n\n\nMaterials\n\nGeneral Sentiment (positive/negative) rating scale HERE\nCSV files:\n\nstudent_test_5 download from HERE as xlsx HERE as csv, (or from moodle)",
+    "text": "Overview\nIn this lesson, students will be introduced to sentiment analysis, specifically applied to evaluating general positivity or negativity in football managers’ statements about match outcomes. [SUGGESTED ADDITION] Learn when AI excels at text analysis vs. where human judgment remains essential, and develop skills in prompt engineering for consistent text classification.\n\nLearning Outcomes\nBy the end of the session, students will:\n\nUnderstand core NLP concepts: tokenization, preprocessing, bag-of-words, and feature extraction in practical context.\nGain hands-on experience with sentiment analysis.\nUnderstand the complexities and limitations of sentiment analysis.",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -1824,7 +1824,7 @@
     "href": "week05/index.html#end-of-week-discussion-points",
     "title": "Week 05: using text as data",
     "section": "End of Week Discussion points",
-    "text": "End of Week Discussion points\n\nHow precise is AI in sentiment analysis?\nHow did you compare to AI in terms of scores? How did any difference make you feel?\nCan you think of a past project where AI could have helped you upgrade it?",
+    "text": "End of Week Discussion points\n\nHow precise is AI in sentiment analysis?\nHow did you compare to AI in terms of scores? How did any difference make you feel?\nCan you think of a past project where AI could have helped you upgrade it?\nDid AI provide consistent explanations for its ratings? When did its reasoning seem flawed? Did you feel it was mostly OK / half-truths?",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -1952,7 +1952,7 @@
     "href": "week01/index.html#class-material",
     "title": "Week 01: LLM Review",
     "section": "Class Material",
-    "text": "Class Material\n\n\n📊 Core LLM Concepts (60 min)\n\n\nSlideshow: LLM Concepts and Applications\nKey Topics Covered:\n\nWhat are LLMs? Statistical models predicting next tokens from massive training data\nThe Transformer Revolution: How 2017’s “Attention is All You Need” changed everything\nContext Windows: From 4k tokens (2022) to 128k+ tokens (2025) - why this matters for data analysis\nTraining Process: Pre-training → Fine-tuning → RLHF (Reinforcement Learning from Human Feedback)\n\nCollaborative Frameworks:\n\nCyborg Approach: Deep human-AI integration with continuous feedback\nCentaur Approach: Clear division of tasks based on strengths\nThe Jagged Frontier: Why AI excels at some tasks but fails at others unpredictably\n\n\n\n\n\n🔧 Hands-on: FT Graph Challenge (25 min)\n\n\nThe Challenge:\nRecreate the Financial Times tariff/yield visualization as accurately as possible using AI assistance.\n\nNote the sophisticated design: multiple data series, annotations, professional styling\nConsider: What would you need to recreate this manually vs. with AI assistance?\n\nLearning Approach:\n\nAnalyze the original - what data sources, what design elements?\nUse AI to find data and generate initial code\nIterate and refine based on results",
+    "text": "Class Material\n\n\n📊 Core LLM Concepts (60 min)\n\n\nSlideshow: LLM Concepts and Applications\nKey Topics Covered:\n\nWhat are LLMs? Statistical models predicting next tokens from massive training data\nThe Transformer Revolution: How 2017’s “Attention is All You Need” changed everything\nContext Windows: why this matters for data analysis\nTraining Process: Resources and human feedback\nCollaborative Frameworks: How to integrate human and AI work\n\n\n\n\n\n🔧 Hands-on: FT Graph Challenge (25 min)\n\n\nThe Challenge:\nRecreate the Financial Times tariff/yield visualization as accurately as possible using AI assistance.\n\nNote the sophisticated design: multiple data series, annotations, professional styling\nConsider: What would you need to recreate this manually vs. with AI assistance?\n\nLearning Approach:\n\nAnalyze the original - what data sources, what design elements?\nUse AI to find data and generate initial code\nIterate and refine based on results",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -2024,7 +2024,7 @@
     "href": "index.html#detailed-overview",
     "title": "Doing Data Analysis with AI",
     "section": "Detailed overview",
-    "text": "Detailed overview\n\nWeek01: LLM Review\nWhat are LLMs, how is the magic happening. A non-technical brief intro. How to work with LLMs? Plus ideas on applications. Includes suggested readings, podcasts, and vids to listen to.\nContent\nWhich AI?\nSee my take on current models. As of May 2025.\n\n\nWeek02: Data and code discovery and documentation with AI\nLearn how to write a clear and professional code and data documentation. LLMs are great help once you know the basics.\nCase study: World Values Survey. Data is at WVS\nContent\n\n\nWeek 03: Writing Reports\nYou have your data and task, and need to write a short report. We compare different options with LLM, from one-shot prompt to iteration.\nCase study: World Values Survey. Data is at WVS\nContent\n\n\nWeek04: Data wrangling, joining tables\nWhen asked about what I shall add to my textbook, David Card, the Nobel winning empirical economist told me that I shall spend time with joining tables. Here we go.\nCase study: simulated Austrian hotels. Data is at hotels\nContent\n\n\nWeek05: Text as data 1 – intro lecture\nNo course of mine can escape football (soccer). Here we look at post-game interviews to learn basics of text analysis and apply LLMs in what they are best - context dependent learning. Two class series. First is more intro to natural language processing.\nCase study: football post-game interviews. Data is at interviews\nContent\n\n\nWeek06: Text as data 2 – practice\nSecond class, now we are in action. How does LLM compare to humans?\nCase study: football post-game interviews. Data is at interviews\nContent\n\n\nWeek07: Creating simulations with apps and dashboards\nTBA\n\n\nWeek08: AI as research companion\nTBA"
+    "text": "Detailed overview\n\nWeek00: AI for coding\nUsing AI for code. May not be covered in this class, as it had often been already covered in coding classes.\nContent\n\n\nWeek01: LLM Review\nWhat are LLMs, how is the magic happening. A non-technical brief intro. How to work with LLMs? Plus ideas on applications. Includes suggested readings, podcasts, and vids to listen to.\nContent\nWhich AI?\nSee my take on current models. As of May 2025.\n\n\nWeek02: Data and code discovery and documentation with AI\nLearn how to write a clear and professional code and data documentation. LLMs are great help once you know the basics.\nCase study: World Values Survey. Data is at WVS\nContent\n\n\nWeek 03: Writing Reports\nYou have your data and task, and need to write a short report. We compare different options with LLM, from one-shot prompt to iteration.\nCase study: World Values Survey. Data is at WVS\nContent\n\n\nWeek04: Data wrangling, joining tables\nJoining data tables is maybe the most basic yet rather complicated part of data wrangling.\nCase study: simulated Austrian hotels. Data is at hotels\nContent\n\n\nWeek05: Text as data 1 – intro lecture\nNo course of mine can escape football (soccer). Here we look at post-game interviews to learn basics of text analysis and apply LLMs in what they are best - context dependent learning. Two class series. First is more intro to natural language processing.\nCase study: football post-game interviews. Data is at interviews\nContent\n\n\nWeek06: Text as data 2 – practice\nSecond class, now we are in action. How does LLM compare to humans?\nCase study: football post-game interviews. Data is at interviews\nContent\n\n\nWeek07: Creating simulations with apps and dashboards\nTBA\n\n\nWeek08: AI as research companion\nTBA"
   },
   {
     "objectID": "code/creating-code-sentiment-analysis.html",
@@ -2187,7 +2187,7 @@
     "href": "week01/index.html#some-personal-comments-on-ai-and-this-class",
     "title": "Week 01: LLM Review",
     "section": "Some personal comments on AI and this class",
-    "text": "Some personal comments on AI and this class\n\nI needed to rewrtite, edit the slideshow every other month. Bloddy hell, this course material is tricky. (While Gosset’s t-test has been around since 1908…)\nIt was an AI (Claude Sonnet 4.0) that suggest to include the last bit on Academic Integrity and it wrote many lines such as having red lines.",
+    "text": "Some personal comments on AI and this class\n\nI needed to rewrtite, edit the slideshow every other month. Bloddy hell, this course material is tricky. (While Gosset’s t-test has been around since 1908…)\nIt was an AI (Claude Sonnet 4.0) that suggest to include the last bit on Academic Integrity and it wrote many lines such as having red lines. Hahh.",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -2347,7 +2347,7 @@
     "href": "week03/index.html#some-personal-comments-on-ai-and-this-class",
     "title": "Week 03: Reporting your data analysis",
     "section": "Some personal comments on AI and this class",
-    "text": "Some personal comments on AI and this class\n\nThe AI (Claude 4.0) suggested to add “Pay special attention to Chapter 4’s discussion of good vs. bad graphs and Chapter 10 on interpreting regression coefficients precisely.” Well. We indeed have bits on good graphs in Chapter4 but not really on bad ones. It is Chapter 07 that builds coefficient estimation, albeit we have some stuff in Chapter 10 for multiple coefficients. I asked AI about errors. It noted that it predicted them based on knowing about the core summary of our book + contents of “typical econometrics textbook”. Instructive re half-truth danger.",
+    "text": "Some personal comments on AI and this class\n\nThe AI (Claude 4.0) suggested to add “Pay special attention to Chapter 4’s discussion of good vs. bad graphs and Chapter 10 on interpreting regression coefficients precisely.” Well. We indeed have bits on good graphs in Chapter4 but not really on bad ones. It is Chapter 07 that builds coefficient estimation, albeit we have some stuff in Chapter 10 for multiple coefficients. I asked AI about errors. It noted that it predicted them based on knowing about the core summary of our book + contents of”typical econometrics textbook”. Instructive re half-truth danger.",
     "crumbs": [
       "Home",
       "Course Weeks",
@@ -2493,5 +2493,285 @@
     "title": "Week 05: using text as data",
     "section": "End of Week Discussion points",
     "text": "End of Week Discussion points\n\nHow precise is AI in sentiment analysis?\nHow did you compare to AI in terms of scores? How did any difference make you feel?\nCan you think of a past project where AI could have helped you upgrade it?"
+  },
+  {
+    "objectID": "week05/index.html#preparation-before-class",
+    "href": "week05/index.html#preparation-before-class",
+    "title": "Week 05: using text as data",
+    "section": "Preparation / Before Class",
+    "text": "Preparation / Before Class\n\n\n📚 Background Reading\n\n\nNo specific readings required - we’ll learn by doing\n\nNo need for natural language processing background.\nThinking ahead: How would you manually determine if someone sounds “positive” or “negative” about something?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#review",
+    "href": "week05/index.html#review",
+    "title": "Week 05: using text as data",
+    "section": "Review",
+    "text": "Review\n\n\n📈 Assignment Review (15 min)\n\n\nKey Learning Points:\n\nFancy graphs != good graphs (good graph ← careful design)\nPrecise interpretation &gt;&gt; BS\nLess is more\nShow only what you understand deeply\n[SUGGESTED ADDITION] How did multi-table workflows change your research questions?\n\nLess is More Principle: Simplicity often reveals insights better than complexity",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#class-material",
+    "href": "week05/index.html#class-material",
+    "title": "Week 05: using text as data",
+    "section": "Class Material",
+    "text": "Class Material\n\n\n📊 Materials Setup\n\n\nData Context:\n\nThese are real post-match interviews from Premier League managers discussing game results.\nEach text represents one manager’s full response to journalists after a match.\nPreprocessing: Replaced player and team names with “PLAYER” and “TEAM” - removes potential bias\n\nPractice Dataset: Contains 5 post-match interviews from football managers\n\nStudent test file (CSV)\nStudent test file (Excel)\n\nReference Materials:\n\nGeneral sentiment rating scale - our classification framework\nDomain-specific lexicon - football-specific sentiment terms\n\n\n\n\n\n📖 NLP Fundamentals Lecture (25 min)\n\n\nSlideshow: Text to Data\nKey Concepts Covered:\n\nTokenization: Breaking text into meaningful units\nPreprocessing: Stemming, lemmatization, stop word removal\n\nBag of Words: Converting text to numerical features\nDomain knowledge: Why football-specific terms matter\nSentiment Analysis: Methods from simple dictionaries to AI models\n\nPractical Focus: How these concepts apply to manager interviews\n\n\n\n\n⚽ Manual vs. AI Sentiment Workshop (40 min)\n\n\nPhase 1: Human Rating (15 min)\n\nIndividual work: Rate the 5 provided manager statements using the sentiment scale\n5-unit scale: -2 (very negative) to +2 (very positive)\n\nPhase 2: AI Rating (15 min)\n\nUse your preferred AI to rate the same 5 statements\nTry different prompting approaches: simple vs. detailed instructions\nCompare AI’s reasoning with your own thought process\n\nPhase 3: Domain Lexicon Exploration (10 min)\n\nExamine the football-specific lexicon\nDiscuss how domain knowledge affects interpretation\n\nDiscussion: Validation and Sentiment Analysis\n\nObjective: Discuss validation techniques used in sentiment analysis.\nTopics for discussion:\n\nDifferences between manual and AI ratings\nGround Truth\nIntroduction to validation methods:\nIf ground truth – can do confusion maztric, calculate accuracy\nIf no ground truth – measure agreement between humans and AI. test difference.\n\nAI is average, but…\nAI with persona?\nAI biased ?\n\n\n\nExtra: Prediction of score\nIf time permits: look at predicting score\n\nModeling choices of results\nThink about how you would do it first\nCheck how AI thinks about, rate the examples and look at explanations\ntake the 5 examples, and compare your predictions vs the AI predictions",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#discussion-questions",
+    "href": "week05/index.html#discussion-questions",
+    "title": "Week 05: using text as data",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\nEnd of Week Reflection:\n\nHow precise is AI in sentiment analysis?\nHow did you compare to AI in terms of scores? How did any difference make you feel?\nCan you think of a past project where AI could have helped you upgrade it?\n[SUGGESTED ADDITION] How important was football knowledge for accurate rating? Would someone unfamiliar with the sport rate differently?\n[SUGGESTED ADDITION] Did AI provide consistent explanations for its ratings? When did its reasoning seem flawed?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#assignment",
+    "href": "week05/index.html#assignment",
+    "title": "Week 05: using text as data",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nAssignment 5: Student-Specific Sentiment Analysis\n\n\n\nDue: Before Week 6\nCompare manual ratings with AI-generated ratings on your own random sample of 25 interview texts.\nFull Assignment Details",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#background-tools-and-resources",
+    "href": "week05/index.html#background-tools-and-resources",
+    "title": "Week 05: using text as data",
+    "section": "Background, Tools and Resources",
+    "text": "Background, Tools and Resources\nUnderstanding Manager Interviews:\n\n[SUGGESTED ADDITION] Post-match context matters: Managers speak differently after wins vs. losses vs. draws\n[SUGGESTED ADDITION] Tactical language: “We dominated possession” (positive) vs. “They dominated us” (negative)\n[SUGGESTED ADDITION] Defensive comments: Managers often protect players while expressing frustration with officiating or luck\n\nText Preprocessing for Football Data:\n\n[SUGGESTED ADDITION] Player names: Replaced with “PLAYER” in our dataset - why might this matter for sentiment analysis?\n[SUGGESTED ADDITION] Team names: Replaced with “TEAM” - removes potential bias\n[SUGGESTED ADDITION] Punctuation and tone: Ellipses (…) often indicate pauses or frustration\n\nSentiment Analysis Approaches Comparison:\n\n\n\n\n\n\n\n\nApproach\nStrengths\nBest Use for Football Interviews\n\n\n\n\nManual Rating\nContext-aware, domain expertise\nSmall samples, validation\n\n\nDomain Lexicon\nFast, transparent, detects obvious sentiment\nBaseline analysis, large samples\n\n\nAI Models\nHandles context, mixed sentiments\nComplex emotional nuance",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week06/index.html#preparation-before-class",
+    "href": "week06/index.html#preparation-before-class",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Preparation / Before Class",
+    "text": "Preparation / Before Class\n\n\n🔧 API Setup\n\n\nAPI Access Setup:\n\nHow to get AI API keys (OpenAI ChatGPT and Anthropic Claude)\nBudget: ~$5 minimum for course exercises\n\nAPI Learning Resources:\n\nIntroduction to APIs - fundamental concepts\nAdvanced API knowledge - how APIs work under the hood\n\n\n\n\n\n📊 Preparation\n\n\nMaterials from Moodle/Course Repository:\n\nCombined interview dataset (text_id level)\nGame information with results (win/draw/loss encoding)\nCombined student ratings from Week 5 assignments (aggregated, anonymized)\nDomain lexicon ratings\n\nData Structure:\n\ntexts: Individual interview transcripts with metadata\ngames: Match results and context information (soccer has 3 outcomes: win, draw, loss – impcation for result encoding)\nratings: Human ratings, AI ratings, lexicon scores by text_id\n\nCode Examples Available:\n\nR implementation requires API key setup in R\nPython implementation\n\ntext and prompts\n\nsentiment guidelines\n\nOther\n\nMore advanced knowledge on APIs – how APIs work",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 6: Text as Data II"
+    ]
+  },
+  {
+    "objectID": "week06/index.html#review",
+    "href": "week06/index.html#review",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Review",
+    "text": "Review\n\n\n💬 Assignment 5 Discussion (20 min)\n\n\nReview of transformation options\n\nlexicon based counting numbers –&gt; generate a transparent script\nMachine-learning classifiers, n-grams etc.\nLLM (transformer-based) one-shot: treating the LLM like a giant classifier: you hand it raw text and ask classes of sentiment. (Deep contextual understanding—word embeddings, attention across the whole sentence etc decide the sentiment.) No separate sentiment lexicon; it’s all encoded in the model weights.\nYou can also take a pretrained LLM and continue training it on thousands of labeled review. See our example guidelines HERE\n\nSharing Experiences:\n\nHuman vs. AI rating differences: Where did you disagree most?\nRating challenges: What aspects of manager interviews were hardest to classify?\nConsistency issues: Did you rate similar texts consistently? Did AI? Was there a consistent gap?\nDomain knowledge impact: How much did football expertise affect your ratings?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 6: Text as Data II"
+    ]
+  },
+  {
+    "objectID": "week06/index.html#class-material",
+    "href": "week06/index.html#class-material",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Class Material",
+    "text": "Class Material\n\n\n🔍 API Walkthrough Sessions (30 min)\n\n\nIntroduction\n\nHow to use APIs\n\nBeginner-Friendly Examples:\n\nSimple walkthrough with GDP data – uses World Bank and FRED APIs\nBit harder walkthrough with football data – uses FBREF soccer data. Guess the club for example.\n\nMore advanced stuff\n\nMore advanced knowledge on APIs – how APIs work\n\n\n\n\n\n📈 Data Analysis Workshop (30 min)\n\n\nData Integration Task:\n\nTake the aggregated file and ask AI for a readme. Discuss what is in the data\nCompare human, domain lexicon and AI rating. For human and AI take the average.\nThink of an interesting comparison using AI rating\nCompare results by human and lexicon rating\n\nDiscussion 2\n\nWhat is ground truth\n\nHow to integrate AI into research\n\ncombine data with text\nthink RQ and how you’d use AI\n\n\n\n\n\n🎯 Advanced Applications (20 min)\n\n\nAdditional tasks if time permits\nPredict gender and result\nNote: Men’s teams have male managers, women’s teams have female managers in this dataset\n\nShow AI all texts and ask to predict the gender of speaker\nShow AI all texts and ask to predict the result (manager’s team won, drew, lost)\n\nDiscussion:\nWhat linguistic cues might reveal gender? Are these reliable?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 6: Text as Data II"
+    ]
+  },
+  {
+    "objectID": "week06/index.html#end-of-week-discussion-points",
+    "href": "week06/index.html#end-of-week-discussion-points",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "End of Week Discussion points",
+    "text": "End of Week Discussion points\n\nGround Truth Problem: In sentiment analysis, what constitutes the “correct” answer? How do we validate when humans disagree?\nAPI Integration: What are the benefits and costs (risks) of using API to scale text analysis?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 6: Text as Data II"
+    ]
+  },
+  {
+    "objectID": "week06/index.html#assignment",
+    "href": "week06/index.html#assignment",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nAssignment 6: Gender Classification Pipeline\n\n\n\nDue: Optional extension exercise\nCreate a similar pipeline for predicting manager gender from interview text, including AI explanations of classification decisions.\nFull Assignment Details",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 6: Text as Data II"
+    ]
+  },
+  {
+    "objectID": "week06/index.html#some-personal-comments-on-ai-and-this-class",
+    "href": "week06/index.html#some-personal-comments-on-ai-and-this-class",
+    "title": "Week 06: Sentiment Analysis with AI",
+    "section": "Some personal comments on AI and this class",
+    "text": "Some personal comments on AI and this class\n\nAI helped writing the Python code and translating to R. But it needed a great deal of debugging: working with tests and building stable pipelines are hard.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 6: Text as Data II"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#some-personal-comments-on-ai-and-this-class",
+    "href": "week05/index.html#some-personal-comments-on-ai-and-this-class",
+    "title": "Week 05: using text as data",
+    "section": "Some personal comments on AI and this class",
+    "text": "Some personal comments on AI and this class\n\nIt’s worth noting that my knowledge on NLP was bag of words, bigrams and TF-IDF. AI really helped making the jump.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Text as Data I"
+    ]
+  },
+  {
+    "objectID": "week00/index.html",
+    "href": "week00/index.html",
+    "title": "Week 00: AI-Assisted Coding Prep",
+    "section": "",
+    "text": "Week 00: AI-Assisted Coding Prep\n\n\nBoosting coding for data analysis with AI tools",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 0: Coding with AI"
+    ]
+  },
+  {
+    "objectID": "week00/index.html#preparation-before-class",
+    "href": "week00/index.html#preparation-before-class",
+    "title": "Week 00: AI-Assisted Coding Prep",
+    "section": "Preparation / Before Class",
+    "text": "Preparation / Before Class\n\n\n🔧 Tool Setup\n\n\nRequired Access: - ChatGPT account (free tier sufficient for testing) - Claude account (free tier sufficient)\nRecommended Setup: - GitHub account for Copilot (free for students) - VSCode, RStudio, or Jupyter Notebook installed - Your preferred data analysis language ready (R/Python)\nOptional but Valuable: - Cursor AI editor (free trial available)",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 0: Coding with AI"
+    ]
+  },
+  {
+    "objectID": "week00/index.html#class-material",
+    "href": "week00/index.html#class-material",
+    "title": "Week 00: AI-Assisted Coding Prep",
+    "section": "Class Material",
+    "text": "Class Material\n\n\n🤖 Why AI + Data Analysis Coding Works (20 min)\n\n\nCovers key set of tasks:\n\nRepetitive patterns: Data analysis has common workflows (load → clean → analyze → visualize)\nWell-documented libraries: pandas, scikit-learn, as well as dplyr, ggplot2, are extensively covered in AI training data (had been in use for a while). With updates, it knows more recent libraries from tensorflow to fixest (R)\nClear intentions: “Create a scatterplot with regression line” is specific enough for good code generation. Well established “good practice”\nIterative nature: Data analysis involves lots of tweaking and refinement – chat aspect helpful.\n\nWhat AI Excels At:\n\nBoilerplate code and setup\nSyntax reminders and library imports\n\nStandard statistical procedures\nData manipulation and cleaning\nBasic visualization code\n\nHuman Oversight and Decisions are Needed:\n\nResearch design decisions\nStatistical / econometric interpretation\nDomain-specific logic\nFinalize question (vs bland suggestions)\nQuality control and validation\n\n\n\n\n\n📝 Effective Prompting for Data Analysis (25 min)\n\n\nModel Recommendations:\n\nChatGPT 4o / Claude Sonnet 4. works about equally fine.\n\nPrompting Best Practices:\n\nBe specific about libraries: “Using pandas and seaborn…” vs. “Using R and ggplot2…”\nInclude data structure: “DataFrame with columns: date, price, volume”\nInclude data structure 2: Show, upload a small bit of data, like 1/1000 random sample\nSpecify output format: “Save as PNG for publication” or “Return as tidy dataframe”\nAsk for comments: “Include detailed comments explaining each step”\n\n\nExample prompts\nExample Prompt 1: broad\n\"Here is some sales data, summarize regional variation.\nvs\nExample Prompt 2: with details\n\"Create Python (R) code using pandas (dplyr) to: \n1) Load CSV with columns id, date, sales, region\n2) Filter for 2023 data  \n3) Group by region and calculate mean sales\n4) Create a bar chart with plotnine / ggplot2\"\nWhat are the pros and cons of each?\n\n\n\n\n\n💡 Data Analysis Use Cases (15 min)\n\n\n4 Common Scenarios:\n1. Data Cleaning Pipeline\nPrompt: \"Clean this dataset: remove duplicates, handle missing values in numeric columns with median imputation, standardize date formats\"\nResult: Complete pandas/dplyr cleaning workflow with validation checks\n2. Exploratory Data Analysis\nPrompt: \"Create EDA for housing dataset: summary statistics, correlation matrix heatmap, distribution plots for price by neighborhood\"\nResult: Comprehensive analysis with publication-ready visualizations\n3. Statistical Modeling\nPrompt: \"Run OLS regression with robust standard errors: dependent variable is log_wage, controls are experience, education, gender\"\nResult: Complete analysis with assumption checks and interpretation-ready output\n4. Machine Learning Pipeline\nPrompt: \"Build random forest for classification: split data 80/20, hyperparameter tuning with cross-validation, feature importance plot\"  \nResult: Full ML workflow with model evaluation and visualization\n\n\n\n\n🛠️ AI Coding Tools Showcase (30 min)\n\n\nChatGPT Tools:\n\nCanvas: Collaborative coding environment for iterative development\nAdvanced Data Analysis: Upload datasets, generate analysis with code execution\nGPT-4.1: Optimized specifically for coding tasks\n\nClaude Tools: - Projects: Upload full datasets and documentation for context-aware coding - Artifacts: Code generation with real-time preview and editing - Claude 4 Sonnet: Strong reasoning for complex analytical workflows\nSpecialized Coding Tools: - Cursor AI: AI-first code editor with context-aware suggestions - GitHub Copilot: Inline code completion integrated into your existing editor - Replit: Browser-based coding with AI assistance\nHands-on Demo: - Upload sample dataset to ChatGPT Advanced Data Analysis - Create Claude Project with course data - Compare code generation approaches\n\n\n\n\n⚡ GitHub Copilot Integration (20 min)\n\n\nSetup in Different Environments:\nVSCode:\n\nInstall GitHub Copilot extension\nAuthenticate with GitHub account\nUse Ctrl+Space for suggestions, Tab to accept\n\nJupyter Notebook:\n\nInstall via VS Code Jupyter extension or JupyterLab extension\nInline suggestions while typing\nCopilot Chat for longer explanations\n\nRStudio:\n\nEnable GitHub Copilot in Global Options &gt; Code &gt; Completion\nWorks with R scripts and R Markdown\nSuggests tidyverse and base R patterns\n\nWorkflow Best Practices:\n\nWrite descriptive comments before code blocks\nUse meaningful variable names to guide suggestions\nAccept suggestions, then modify as needed\nUse Copilot Chat for explanations and debugging",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 0: Coding with AI"
+    ]
+  },
+  {
+    "objectID": "week00/index.html#discussion-questions",
+    "href": "week00/index.html#discussion-questions",
+    "title": "Week 00: AI-Assisted Coding Prep",
+    "section": "Discussion Questions",
+    "text": "Discussion Questions\nReflection:\n\nWhich AI tool felt most natural for your coding style?\nWhere did AI suggestions surprise you (positively or negatively)?\nHow might this change your typical data analysis workflow?\nWhat validation steps would you add when using AI-generated code?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 0: Coding with AI"
+    ]
+  },
+  {
+    "objectID": "week00/index.html#practice-exercises",
+    "href": "week00/index.html#practice-exercises",
+    "title": "Week 00: AI-Assisted Coding Prep",
+    "section": "Practice Exercises",
+    "text": "Practice Exercises\n\n\n\n\n\n\nMini Coding Challenges\n\n\n\nTry these with different AI tools:\n\nData Import & Clean: Load a CSV, handle missing values, create summary statistics\nVisualization: Create a publication-ready scatterplot with trend line\nStatistical Test: Run appropriate test comparing two groups\nSimple ML: Train and evaluate a basic prediction model\n\nCompare: Which tool gave the best code for each task?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 0: Coding with AI"
+    ]
+  },
+  {
+    "objectID": "week00/index.html#background-tools-and-resources",
+    "href": "week00/index.html#background-tools-and-resources",
+    "title": "Week 00: AI-Assisted Coding Prep",
+    "section": "Background, Tools and Resources",
+    "text": "Background, Tools and Resources\nGetting Started: - GitHub Student Pack - Free Copilot access - Cursor AI - AI-first code editor - OpenAI Codex Cookbook - Advanced prompting examples\nKey Insight: AI coding assistance is most powerful when you understand the underlying concepts. Use AI to accelerate implementation, not replace understanding.\nNext Week: Week 1 - LLM Review where we’ll explore broader AI concepts for data analysis.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 0: Coding with AI"
+    ]
+  },
+  {
+    "objectID": "week00/index.html#some-personal-comments-on-ai-and-this-class",
+    "href": "week00/index.html#some-personal-comments-on-ai-and-this-class",
+    "title": "Week 00: AI-Assisted Coding Prep",
+    "section": "Some personal comments on AI and this class",
+    "text": "Some personal comments on AI and this class\n\nWhile this class is called week00, it was created last. You may have guessed.\nAI (Claude 4.0) created a great deal of this class following a detailed prompt. I also asked whether to keep it as week00 or change all numbering. Great answers.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 0: Coding with AI"
+    ]
+  },
+  {
+    "objectID": "week00/assets/week00-ask-ai.html#nameing",
+    "href": "week00/assets/week00-ask-ai.html#nameing",
+    "title": "The name of week00",
+    "section": "Nameing",
+    "text": "Nameing\n\n\n🔧 Is name week00 OK? ::: ::: {.card-body}\nGábor:\n“I’m struggling with this decision. Shall I add it as week00 or rename all weeks (01–&gt;02 etc) and have this as 01. what do you think?”**\nClaude:\nI’d recommend keeping it as Week 00 for several practical and pedagogical reasons:\n\n✅ Arguments for Week 00:\nPractical Benefits: - No disruption: Keeps all existing numbering, assignments, internal links intact - Less work: Avoids the error-prone task of updating references throughout - Flexibility: Students with strong AI coding experience could potentially skip/skim\nPedagogical Logic: - Common convention: Week 00 is standard in CS courses for “setup” content - Clear signaling: “This is foundational preparation, not optional” - Entry point flexibility: Students can assess their own readiness\n\n\n🎯 Make Week 00 Feel Essential:\nIn course description/syllabus: - “Week 00 (REQUIRED): AI-Assisted Coding Fundamentals” - “Essential preparation for all subsequent weeks”\nIn Week 01 intro: - “This course assumes familiarity with AI coding tools covered in Week 00” - Brief recap/check that students completed the prep\nCross-references: - Link back to Week 00 techniques throughout other weeks - “As we covered in Week 00’s prompting strategies…”\n\n\n⚖️ Alternative Consideration:\nThe only reason I’d consider renumbering is if you find that students consistently skip Week 00 and then struggle. But you can address this with: - Clear communication about importance - Quick competency check in Week 01 - Making Week 00 content prerequisite for assignments\nRecommendation: Start with Week 00, see how it works in practice, and renumber later if needed. Much easier to go from 00→01 than to undo a full renumbering.\nWhat’s your gut feeling on student behavior - would they skip something labeled “Week 00”?"
+  },
+  {
+    "objectID": "week00/assets/week00-ask-ai.html#arguments-for-week-00",
+    "href": "week00/assets/week00-ask-ai.html#arguments-for-week-00",
+    "title": "The name of week00",
+    "section": "✅ Arguments for Week 00:",
+    "text": "✅ Arguments for Week 00:\nPractical Benefits: - No disruption: Keeps all existing numbering, assignments, internal links intact - Less work: Avoids the error-prone task of updating references throughout - Flexibility: Students with strong AI coding experience could potentially skip/skim\nPedagogical Logic: - Common convention: Week 00 is standard in CS courses for “setup” content - Clear signaling: “This is foundational preparation, not optional” - Entry point flexibility: Students can assess their own readiness"
+  },
+  {
+    "objectID": "week00/assets/week00-ask-ai.html#make-week-00-feel-essential",
+    "href": "week00/assets/week00-ask-ai.html#make-week-00-feel-essential",
+    "title": "The name of week00",
+    "section": "🎯 Make Week 00 Feel Essential:",
+    "text": "🎯 Make Week 00 Feel Essential:\nIn course description/syllabus: - “Week 00 (REQUIRED): AI-Assisted Coding Fundamentals” - “Essential preparation for all subsequent weeks”\nIn Week 01 intro: - “This course assumes familiarity with AI coding tools covered in Week 00” - Brief recap/check that students completed the prep\nCross-references: - Link back to Week 00 techniques throughout other weeks - “As we covered in Week 00’s prompting strategies…”"
+  },
+  {
+    "objectID": "week00/assets/week00-ask-ai.html#alternative-consideration",
+    "href": "week00/assets/week00-ask-ai.html#alternative-consideration",
+    "title": "The name of week00",
+    "section": "⚖️ Alternative Consideration:",
+    "text": "⚖️ Alternative Consideration:\nThe only reason I’d consider renumbering is if you find that students consistently skip Week 00 and then struggle. But you can address this with: - Clear communication about importance - Quick competency check in Week 01 - Making Week 00 content prerequisite for assignments\nRecommendation: Start with Week 00, see how it works in practice, and renumber later if needed. Much easier to go from 00→01 than to undo a full renumbering.\nWhat’s your gut feeling on student behavior - would they skip something labeled “Week 00”?"
+  },
+  {
+    "objectID": "week00/index.html#learning-objectives",
+    "href": "week00/index.html#learning-objectives",
+    "title": "Week 00: AI-Assisted Coding Prep",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this session, students will:\n\nUnderstand how AI transforms coding workflows for data analysis tasks\nLearn effective prompting strategies for data analysis code generation\nExperience key AI coding tools: ChatGPT Canvas, Claude Projects, GitHub Copilot\nPractice AI-assisted coding for common data analysis tasks\nSet up integrated development environments with AI assistance\nFocus on R and Python. But mostly applicable to Stata. AI also great for SQL.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 0: Coding with AI"
+    ]
   }
 ]
