@@ -171,6 +171,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../week00/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 0: Coding with AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../week01/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1: LLM Review</span></a>
   </div>
@@ -260,8 +266,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../assignments/assignment_06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment 6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../assignments/assignment_07.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignment 7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../assignments/assignment_08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment 8</span></a>
   </div>
 </li>
       </ul>
@@ -340,7 +358,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="why-apis" class="level2">
 <h2 class="anchored" data-anchor-id="why-apis">Why APIs?</h2>
-<p>Previously, we manually examined a sample of just 20 texts and tried using an LLM for sentiment analysis. How long did this take you? Would it still be doable if there were 75 texts? Likely, yes. However, imagine you have <strong>10,000</strong> texts to analyze for sentiment. Analyzing 10,000 texts one by one (or copying them into a tool manually) would be nearly impossible – it would take endless hours and be prone to error. We need a way to <strong>automate and scale</strong> the process. This is where <strong>APIs</strong> come in. By leveraging an API, we can send those thousands of texts to a powerful external service that analyzes sentiment and returns results in seconds. A nice recent example of this in economics research is <a href="./American Life Histories by Lagakos%2C Michalopoulos%2C and Voth.pdf">a recent working paper</a> that used as data over 1,400 American life narratives from the 1930s to uncover common themes about what it means to live a meaningful life.</p>
+<p>Previously, we manually examined a sample of just 20 texts and tried using an LLM for sentiment analysis. How long did this take you? Would it still be doable if there were 75 texts? Likely, yes. However, imagine you have <strong>10,000</strong> texts to analyze for sentiment. Analyzing 10,000 texts one by one (or copying them into a tool manually) would be nearly impossible – it would take endless hours and be prone to error. We need a way to <strong>automate and scale</strong> the process. This is where <strong>APIs</strong> come in. By leveraging an API, we can send those thousands of texts to a powerful external service that analyzes sentiment and returns results in seconds. A nice recent example of this in economics research is <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5103580">a recent working paper</a> that used as data over 1,400 American life narratives from the 1930s to uncover common themes about what it means to live a meaningful life.</p>
 <p>Our baseline approach is for Python, but R is pretty similar (see below)</p>
 </section>
 <section id="what-is-an-api" class="level2">
@@ -890,7 +908,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why APIs?</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Previously, we manually examined a sample of just 20 texts and tried using an LLM for sentiment analysis. How long did this take you? Would it still be doable if there were 75 texts? Likely, yes. However, imagine you have **10,000** texts to analyze for sentiment. Analyzing 10,000 texts one by one (or copying them into a tool manually) would be nearly impossible – it would take endless hours and be prone to error. We need a way to **automate and scale** the process. This is where **APIs** come in. By leveraging an API, we can send those thousands of texts to a powerful external service that analyzes sentiment and returns results in seconds. A nice recent example of this in economics research is <span class="co">[</span><span class="ot">a recent working paper</span><span class="co">](./American%20Life%20Histories%20by%20Lagakos%2C%20Michalopoulos%2C%20and%20Voth.pdf)</span> that used as data over 1,400 American life narratives from the 1930s to uncover common themes about what it means to live a meaningful life.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Previously, we manually examined a sample of just 20 texts and tried using an LLM for sentiment analysis. How long did this take you? Would it still be doable if there were 75 texts? Likely, yes. However, imagine you have **10,000** texts to analyze for sentiment. Analyzing 10,000 texts one by one (or copying them into a tool manually) would be nearly impossible – it would take endless hours and be prone to error. We need a way to **automate and scale** the process. This is where **APIs** come in. By leveraging an API, we can send those thousands of texts to a powerful external service that analyzes sentiment and returns results in seconds. A nice recent example of this in economics research is <span class="co">[</span><span class="ot">a recent working paper</span><span class="co">](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5103580)</span> that used as data over 1,400 American life narratives from the 1930s to uncover common themes about what it means to live a meaningful life.</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Our baseline approach is for Python, but R is pretty similar (see below)</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
