@@ -35,6 +35,11 @@ Some stuff in the textbook is close to the frontier of knowledge. But this fonti
 
 * We talk about **surveys** quite a bit in Chapter 01, giving some practical advice as well. But, of course, there is more. In many jobs, private and public!, you will be asked to design surveys. A great review is "How to run survey: A guide to creating your own identifying variation and revelealing the invisible", [NBER DP Stefanie Stantcheva](https://www.nber.org/system/files/working_papers/w30527/w30527.pdf). With ideas, and cautionary tales. 
 
+### Chapter 02
+
+* Data wrangling decisions are important. There are several studies that compare how analytical results may change based on different choices by authors regarding sample design, modelling. A great project is by Nick Huntington-Klein, the [Many Economists Project](https://nickch-k.github.io/ManyEconomists/) testing several junctions that can lead to variation in design [NBER WP](https://www.nber.org/papers/w33729).  Another one in epidemiology: [Does marital status influence the incidence of cardiovascular disease?](https://link.springer.com/article/10.1007/s10654-025-01235-8) was asked by Kowall et al (2025) with a rather unified data approach using SHARE data (that we used in Chapter 11). Beyond sample design issues, another culprit for instability of results is that the research question may be executed in several ways. “Are soccer referees more likely to give red cards to players with dark skin tone than light skin tone?" was posed in [Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results by R. Silberzahn et al](https://journals.sagepub.com/doi/10.1177/2515245917747646) to show again a substantial distribution of results. A nice summary is [What can be learned when multiple analysts arrive at different estimates](https://link.springer.com/article/10.1007/s10654-025-01249-2) by Rohrer, Smith &  Munafo (2025). 
+
+
 
 ### Chapter 06
 
