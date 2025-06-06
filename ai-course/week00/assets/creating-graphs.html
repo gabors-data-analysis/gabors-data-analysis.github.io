@@ -331,7 +331,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#let-us-do-graphs" id="toc-let-us-do-graphs" class="nav-link" data-scroll-target="#let-us-do-graphs">Let us do graphs</a></li>
   <li><a href="#heatmap" id="toc-heatmap" class="nav-link" data-scroll-target="#heatmap">Heatmap</a></li>
   <li><a href="#other-ideas" id="toc-other-ideas" class="nav-link" data-scroll-target="#other-ideas">Other ideas</a></li>
-  <li><a href="#discussion-points" id="toc-discussion-points" class="nav-link" data-scroll-target="#discussion-points">Discussion points</a></li>
+  </ul></li>
+  <li><a href="#now-with-claude" id="toc-now-with-claude" class="nav-link" data-scroll-target="#now-with-claude">Now with Claude</a></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
+  <li><a href="#discussion-points" id="toc-discussion-points" class="nav-link" data-scroll-target="#discussion-points">Discussion points</a>
+  <ul class="collapse">
   <li><a href="#bonus" id="toc-bonus" class="nav-link" data-scroll-target="#bonus">Bonus</a></li>
   </ul></li>
   </ul>
@@ -650,15 +654,45 @@ Then create bins for education.</code></pre>
 <li>Create an interesting and well-done scatterplot (turn o3 on or use Claude Sonnet)</li>
 </ul>
 </section>
-<section id="discussion-points" class="level3">
-<h3 class="anchored" data-anchor-id="discussion-points">Discussion points</h3>
+</section>
+<section id="now-with-claude" class="level2">
+<h2 class="anchored" data-anchor-id="now-with-claude">Now with Claude</h2>
+<pre><code>Show me an interesting scatterplot. Make it well done.</code></pre>
+<p><strong>The Education-Earnings Gradient</strong></p>
+<iframe src="cps-earnings-plot.html" width="100%" height="800" frameborder="0"></iframe>
+</section>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<p>This visualization reveals several important patterns in the 2014 labor market:</p>
+<ol type="1">
+<li><strong>Clear Education Gradient</strong>: Higher education levels consistently associate with higher earnings</li>
+<li><strong>Hours Variation</strong>: More educated workers tend to work slightly longer hours</li>
+<li><strong>Within-Group Variation</strong>: Substantial earnings variation exists within each education category</li>
+<li><strong>Age Effects</strong>: Older workers (larger circles) often earn more within education levels</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The college earnings premium shown here (47%) aligns with established labor economics research on returns to education.</p>
+</div>
+</div>
+<p>Not perfect. But amazing.</p>
+</section>
+<section id="discussion-points" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-points">Discussion points</h2>
 <p>Think about this for each iterations.</p>
 <ul>
 <li>Is the code correct</li>
 <li>What do we like and dislike in this graph? Look carefully on all aspects. How would you change it?</li>
 <li>Go through the process and improve each graph to presenation quality.</li>
 </ul>
-</section>
 <section id="bonus" class="level3">
 <h3 class="anchored" data-anchor-id="bonus">Bonus</h3>
 <p>You made it till the end. Your bonus track is <a href="https://www.youtube.com/watch?v=omfz62qu_Bc">California Love</a></p>
@@ -1141,348 +1175,377 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Creating Graphs"</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2025-06-06"</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## An example</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">### The task</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>Is there a difference between how much men and women make? How does it vary by age?</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>The topic is related to the case study on <span class="co">[</span><span class="ot">gender gap in earnings</span><span class="co">](https://gabors-data-analysis.com/casestudies/#ch09a-estimating-gender-and-age-differences-in-earnings)</span>.</span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="fu">### Preparation</span></span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>As a case study, consider the earnings case study from the Data Analysis textbook</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Have a look at the info <span class="co">[</span><span class="ot">readme</span><span class="co">](https://osf.io/cgfrq)</span></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Download <span class="in">`morg-2014-emp.csv`</span> from <span class="co">[</span><span class="ot">earnings data</span><span class="co">](https://osf.io/4ay9x)</span></span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Download cpsx.pdf, which is an <span class="co">[</span><span class="ot">old school codebook</span><span class="co">](https://osf.io/uqe8z)</span></span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>read in morg-2014-emp.csv</span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>**One state**</span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>Let us start filtering on the largest state</span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
-<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="in">1. Create an ordered freq table of state, and filter on the largest one</span></span>
-<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>I used RStudio with Github copilot to write all three code snippets. It automatically guessed the third bit.</span>
-<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a><span class="in"># setup</span></span>
-<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a><span class="in">library(tidyverse)</span></span>
-<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a><span class="in"># ordered freq table of state</span></span>
-<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a><span class="in">morg %&gt;%</span></span>
-<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a><span class="in">  group_by(state) %&gt;%</span></span>
-<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a><span class="in">  summarise(n = n()) %&gt;%</span></span>
-<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a><span class="in">  arrange(desc(n)) %&gt;%</span></span>
-<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a><span class="in">  mutate(state = fct_reorder(state, n)) %&gt;%</span></span>
-<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a><span class="in">  ggplot(aes(x = state, y = n)) +</span></span>
-<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_col() +</span></span>
-<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a><span class="in">  coord_flip() +</span></span>
-<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(title = "Number of Employees by State in Morg",</span></span>
-<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a><span class="in">       x = "State",</span></span>
-<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a><span class="in">       y = "Number of Employees") +</span></span>
-<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_minimal()</span></span>
-<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a><span class="in"># find the largest state in terms of number of obs</span></span>
-<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a><span class="in">state_max=morg %&gt;%</span></span>
-<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a><span class="in">  group_by(state) %&gt;%</span></span>
-<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a><span class="in">  summarise(n = n()) %&gt;%</span></span>
-<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a><span class="in">  arrange(desc(n)) %&gt;%</span></span>
-<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a><span class="in">  slice(1) %&gt;%</span></span>
-<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a><span class="in">  pull(state)</span></span>
-<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a><span class="in"># filter morg for the largest state</span></span>
-<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a><span class="in">morg_largest_state &lt;- morg %&gt;%</span></span>
-<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(state == state_max)</span></span>
-<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a>Hold, what is does max state=5 mean? Ask ChatGPT.</span>
-<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a><span class="al">![](../../images/earnings-state5.png)</span></span>
-<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a>Save this file as <span class="in">`morg-2014-emp-state5.csv`</span>. You can find it also <span class="co">[</span><span class="ot">at the data section here</span><span class="co">](/data/earnings/morg-2014-emp-state5.csv)</span></span>
-<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-76"><a href="#cb13-76" aria-hidden="true" tabindex="-1"></a>**Get to know the file**</span>
-<span id="cb13-77"><a href="#cb13-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-78"><a href="#cb13-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Upload the file** and ask for a variable dictionary. After 2 iterations, I used this. </span>
-<span id="cb13-79"><a href="#cb13-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-80"><a href="#cb13-80" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-81"><a href="#cb13-81" aria-hidden="true" tabindex="-1"></a><span class="in">Create a variable dictionary. Use the pdf i shared earlier. Output as markdown. For each variable: varname, labels, type, coverage (% missing), mean and mode. Round up numbers. Look at cps and provide short labels. Get me an .md I can download.</span></span>
-<span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-83"><a href="#cb13-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-84"><a href="#cb13-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">ChatGPT</span><span class="co">](/week00/assets/variable-dictionary-chatgpt.html)</span> created a table, yes. </span>
-<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>But <span class="co">[</span><span class="ot">look at what Claude did</span><span class="co">](/week00/assets/variable-dictionary-claude4.html)</span>, amazing.</span>
-<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-90"><a href="#cb13-90" aria-hidden="true" tabindex="-1"></a><span class="fu">### Let us do graphs</span></span>
-<span id="cb13-91"><a href="#cb13-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-92"><a href="#cb13-92" aria-hidden="true" tabindex="-1"></a>**First try**</span>
-<span id="cb13-93"><a href="#cb13-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-94"><a href="#cb13-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-95"><a href="#cb13-95" aria-hidden="true" tabindex="-1"></a><span class="in">Is there a gender gap in earnings? Show me a graph.</span></span>
-<span id="cb13-96"><a href="#cb13-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-97"><a href="#cb13-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-98"><a href="#cb13-98" aria-hidden="true" tabindex="-1"></a>ChatGPT will run Data Analysis -- create a short Python script and display a graph.</span>
-<span id="cb13-99"><a href="#cb13-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-100"><a href="#cb13-100" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb13-101"><a href="#cb13-101" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.pyplot as plt</span></span>
-<span id="cb13-102"><a href="#cb13-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-103"><a href="#cb13-103" aria-hidden="true" tabindex="-1"></a><span class="in"># Check for gender and earnings columns</span></span>
-<span id="cb13-104"><a href="#cb13-104" aria-hidden="true" tabindex="-1"></a><span class="in">if "sex" in df.columns and "earnwke" in df.columns:</span></span>
-<span id="cb13-105"><a href="#cb13-105" aria-hidden="true" tabindex="-1"></a><span class="in">    # Drop rows with missing or zero earnings</span></span>
-<span id="cb13-106"><a href="#cb13-106" aria-hidden="true" tabindex="-1"></a><span class="in">    df_filtered = df[(df["earnwke"].notna()) &amp; (df["earnwke"] &gt; 0)]</span></span>
-<span id="cb13-107"><a href="#cb13-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-108"><a href="#cb13-108" aria-hidden="true" tabindex="-1"></a><span class="in">    # Group by sex and calculate mean earnings</span></span>
-<span id="cb13-109"><a href="#cb13-109" aria-hidden="true" tabindex="-1"></a><span class="in">    gender_earnings = df_filtered.groupby("sex")["earnwke"].mean().reset_index()</span></span>
-<span id="cb13-110"><a href="#cb13-110" aria-hidden="true" tabindex="-1"></a><span class="in">    gender_earnings["earnwke"] = gender_earnings["earnwke"].round(2)</span></span>
-<span id="cb13-111"><a href="#cb13-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-112"><a href="#cb13-112" aria-hidden="true" tabindex="-1"></a><span class="in">    # Create a bar plot</span></span>
-<span id="cb13-113"><a href="#cb13-113" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.figure(figsize=(6, 4))</span></span>
-<span id="cb13-114"><a href="#cb13-114" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.bar(gender_earnings["sex"], gender_earnings["earnwke"])</span></span>
-<span id="cb13-115"><a href="#cb13-115" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.title("Average Weekly Earnings by Gender")</span></span>
-<span id="cb13-116"><a href="#cb13-116" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.xlabel("Sex (1 = Male, 2 = Female)")</span></span>
-<span id="cb13-117"><a href="#cb13-117" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.ylabel("Mean Weekly Earnings")</span></span>
-<span id="cb13-118"><a href="#cb13-118" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.grid(axis="y", linestyle="--", alpha=0.7)</span></span>
-<span id="cb13-119"><a href="#cb13-119" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.tight_layout()</span></span>
-<span id="cb13-120"><a href="#cb13-120" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.show()</span></span>
-<span id="cb13-121"><a href="#cb13-121" aria-hidden="true" tabindex="-1"></a><span class="in">else:</span></span>
-<span id="cb13-122"><a href="#cb13-122" aria-hidden="true" tabindex="-1"></a><span class="in">    raise ValueError("Required columns 'sex' and 'earnwke' not found in dataset.")</span></span>
-<span id="cb13-123"><a href="#cb13-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-124"><a href="#cb13-124" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-125"><a href="#cb13-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-126"><a href="#cb13-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-127"><a href="#cb13-127" aria-hidden="true" tabindex="-1"></a>Here is the chart</span>
-<span id="cb13-128"><a href="#cb13-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-129"><a href="#cb13-129" aria-hidden="true" tabindex="-1"></a><span class="al">![The graph I was created](../../images/earnings-by-gender.png)</span></span>
-<span id="cb13-130"><a href="#cb13-130" aria-hidden="true" tabindex="-1"></a>Followed by this text</span>
-<span id="cb13-131"><a href="#cb13-131" aria-hidden="true" tabindex="-1"></a>"Here is the graph showing the gender gap in weekly earnings. Males (1) earn more on average than females (2) in this sample. Let me know if you want to adjust for hours worked or other covariates. "</span>
-<span id="cb13-132"><a href="#cb13-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-133"><a href="#cb13-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-134"><a href="#cb13-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-135"><a href="#cb13-135" aria-hidden="true" tabindex="-1"></a><span class="in">Yes, adjust by age.</span></span>
-<span id="cb13-136"><a href="#cb13-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-137"><a href="#cb13-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-138"><a href="#cb13-138" aria-hidden="true" tabindex="-1"></a><span class="al">![The graph I was created](../../images/earnings-by-gender-age1.png)</span></span>
-<span id="cb13-139"><a href="#cb13-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-140"><a href="#cb13-140" aria-hidden="true" tabindex="-1"></a>Now what? By now, you have some idea, what you'd like. For me it was</span>
-<span id="cb13-141"><a href="#cb13-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-142"><a href="#cb13-142" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-143"><a href="#cb13-143" aria-hidden="true" tabindex="-1"></a><span class="in">Maybe binscatter by year, start 21. fit loess for makes and females</span></span>
-<span id="cb13-144"><a href="#cb13-144" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-145"><a href="#cb13-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-146"><a href="#cb13-146" aria-hidden="true" tabindex="-1"></a>Try it!</span>
-<span id="cb13-147"><a href="#cb13-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-148"><a href="#cb13-148" aria-hidden="true" tabindex="-1"></a>For me, it turns out it needed some adjustments after several iterations to get this. Add CI. Add Footnote. Increase FN font size. Add N of obs. Change color scheme. </span>
-<span id="cb13-149"><a href="#cb13-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-150"><a href="#cb13-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb13-151"><a href="#cb13-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-152"><a href="#cb13-152" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.cm as cm</span></span>
-<span id="cb13-153"><a href="#cb13-153" aria-hidden="true" tabindex="-1"></a><span class="in">from matplotlib.colors import to_hex</span></span>
-<span id="cb13-154"><a href="#cb13-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-155"><a href="#cb13-155" aria-hidden="true" tabindex="-1"></a><span class="in"># Get viridis colors</span></span>
-<span id="cb13-156"><a href="#cb13-156" aria-hidden="true" tabindex="-1"></a><span class="in">viridis = cm.get_cmap("viridis", 2)</span></span>
-<span id="cb13-157"><a href="#cb13-157" aria-hidden="true" tabindex="-1"></a><span class="in">color_male = to_hex(viridis(0.1))</span></span>
-<span id="cb13-158"><a href="#cb13-158" aria-hidden="true" tabindex="-1"></a><span class="in">color_female = to_hex(viridis(0.8))</span></span>
-<span id="cb13-159"><a href="#cb13-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-160"><a href="#cb13-160" aria-hidden="true" tabindex="-1"></a><span class="in"># Count observations</span></span>
-<span id="cb13-161"><a href="#cb13-161" aria-hidden="true" tabindex="-1"></a><span class="in">n_obs = len(reg_data)</span></span>
-<span id="cb13-162"><a href="#cb13-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-163"><a href="#cb13-163" aria-hidden="true" tabindex="-1"></a><span class="in"># Updated footnote</span></span>
-<span id="cb13-164"><a href="#cb13-164" aria-hidden="true" tabindex="-1"></a><span class="in">footnote = (</span></span>
-<span id="cb13-165"><a href="#cb13-165" aria-hidden="true" tabindex="-1"></a><span class="in">    f"Notes: Residual hourly wages from a linear regression controlling for occupation (C(occ2012))\n"</span></span>
-<span id="cb13-166"><a href="#cb13-166" aria-hidden="true" tabindex="-1"></a><span class="in">    f"and education (C(grade92)), using 2014 CPS MORG data from California (N = {n_obs}). Residuals smoothed by\n"</span></span>
-<span id="cb13-167"><a href="#cb13-167" aria-hidden="true" tabindex="-1"></a><span class="in">    f"LOESS (span = 0.3), with 95% CI from 100 bootstrap replications. Sample restricted to individuals aged\n"</span></span>
-<span id="cb13-168"><a href="#cb13-168" aria-hidden="true" tabindex="-1"></a><span class="in">    f"21–80 with positive usual weekly hours and earnings."</span></span>
-<span id="cb13-169"><a href="#cb13-169" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
-<span id="cb13-170"><a href="#cb13-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-171"><a href="#cb13-171" aria-hidden="true" tabindex="-1"></a><span class="in"># Plot</span></span>
-<span id="cb13-172"><a href="#cb13-172" aria-hidden="true" tabindex="-1"></a><span class="in">plt.figure(figsize=(9, 6))</span></span>
-<span id="cb13-173"><a href="#cb13-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-174"><a href="#cb13-174" aria-hidden="true" tabindex="-1"></a><span class="in">plt.plot(x_m, y_m, label="Men", color=color_male, linewidth=2)</span></span>
-<span id="cb13-175"><a href="#cb13-175" aria-hidden="true" tabindex="-1"></a><span class="in">plt.fill_between(x_m, l_m, u_m, color=color_male, alpha=0.2)</span></span>
-<span id="cb13-176"><a href="#cb13-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-177"><a href="#cb13-177" aria-hidden="true" tabindex="-1"></a><span class="in">plt.plot(x_f, y_f, label="Women", color=color_female, linewidth=2)</span></span>
-<span id="cb13-178"><a href="#cb13-178" aria-hidden="true" tabindex="-1"></a><span class="in">plt.fill_between(x_f, l_f, u_f, color=color_female, alpha=0.2)</span></span>
-<span id="cb13-179"><a href="#cb13-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-180"><a href="#cb13-180" aria-hidden="true" tabindex="-1"></a><span class="in">plt.axhline(0, color="black", linestyle="--", linewidth=0.8)</span></span>
-<span id="cb13-181"><a href="#cb13-181" aria-hidden="true" tabindex="-1"></a><span class="in">plt.title("Adjusted Gender Wage Gap Across Age", fontsize=15)</span></span>
-<span id="cb13-182"><a href="#cb13-182" aria-hidden="true" tabindex="-1"></a><span class="in">plt.xlabel("Age", fontsize=12)</span></span>
-<span id="cb13-183"><a href="#cb13-183" aria-hidden="true" tabindex="-1"></a><span class="in">plt.ylabel("Residual Hourly Wage (USD)", fontsize=12)</span></span>
-<span id="cb13-184"><a href="#cb13-184" aria-hidden="true" tabindex="-1"></a><span class="in">plt.xticks(fontsize=10)</span></span>
-<span id="cb13-185"><a href="#cb13-185" aria-hidden="true" tabindex="-1"></a><span class="in">plt.yticks(fontsize=10)</span></span>
-<span id="cb13-186"><a href="#cb13-186" aria-hidden="true" tabindex="-1"></a><span class="in">plt.grid(True, linestyle="--", alpha=0.5)</span></span>
-<span id="cb13-187"><a href="#cb13-187" aria-hidden="true" tabindex="-1"></a><span class="in">plt.legend(title="Gender", labels=["Men", "Women"], fontsize=10, title_fontsize=11)</span></span>
-<span id="cb13-188"><a href="#cb13-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-189"><a href="#cb13-189" aria-hidden="true" tabindex="-1"></a><span class="in"># Updated footnote with larger font</span></span>
-<span id="cb13-190"><a href="#cb13-190" aria-hidden="true" tabindex="-1"></a><span class="in">plt.figtext(0.01, -0.12, footnote, fontsize=10, ha="left", va="top")</span></span>
-<span id="cb13-191"><a href="#cb13-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-192"><a href="#cb13-192" aria-hidden="true" tabindex="-1"></a><span class="in">plt.tight_layout(rect=[0, 0.12, 1, 1])</span></span>
-<span id="cb13-193"><a href="#cb13-193" aria-hidden="true" tabindex="-1"></a><span class="in">plt.savefig("/mnt/data/gender_wage_gap_viridis_residuals.png", dpi=300, bbox_inches="tight")</span></span>
-<span id="cb13-194"><a href="#cb13-194" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
-<span id="cb13-195"><a href="#cb13-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-196"><a href="#cb13-196" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-197"><a href="#cb13-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-198"><a href="#cb13-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-199"><a href="#cb13-199" aria-hidden="true" tabindex="-1"></a>It took some iterations, starting with</span>
-<span id="cb13-200"><a href="#cb13-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-201"><a href="#cb13-201" aria-hidden="true" tabindex="-1"></a><span class="al">![Fourth iteration](../../images/earnings-by-gender-age2a.png)</span></span>
-<span id="cb13-202"><a href="#cb13-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-203"><a href="#cb13-203" aria-hidden="true" tabindex="-1"></a>To get to something I liked. It made errors, forgot labels, and made coding errors. Check the process. </span>
-<span id="cb13-204"><a href="#cb13-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-205"><a href="#cb13-205" aria-hidden="true" tabindex="-1"></a><span class="al">![Fourth iteration](../../images/earnings-by-gender-age4.png)</span></span>
-<span id="cb13-206"><a href="#cb13-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-207"><a href="#cb13-207" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb13-208"><a href="#cb13-208" aria-hidden="true" tabindex="-1"></a><span class="in">import statsmodels.api as sm</span></span>
-<span id="cb13-209"><a href="#cb13-209" aria-hidden="true" tabindex="-1"></a><span class="in">from sklearn.utils import resample</span></span>
-<span id="cb13-210"><a href="#cb13-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-211"><a href="#cb13-211" aria-hidden="true" tabindex="-1"></a><span class="in"># Restrict and prepare data for regression</span></span>
-<span id="cb13-212"><a href="#cb13-212" aria-hidden="true" tabindex="-1"></a><span class="in">reg_data = df[</span></span>
-<span id="cb13-213"><a href="#cb13-213" aria-hidden="true" tabindex="-1"></a><span class="in">    ['age', 'earnwke', 'uhours', 'sex', 'grade92', 'occ2012']</span></span>
-<span id="cb13-214"><a href="#cb13-214" aria-hidden="true" tabindex="-1"></a><span class="in">].dropna()</span></span>
-<span id="cb13-215"><a href="#cb13-215" aria-hidden="true" tabindex="-1"></a><span class="in">reg_data = reg_data[</span></span>
-<span id="cb13-216"><a href="#cb13-216" aria-hidden="true" tabindex="-1"></a><span class="in">    (reg_data['age'] &gt;= 21) &amp; (reg_data['age'] &lt;= 62) &amp;</span></span>
-<span id="cb13-217"><a href="#cb13-217" aria-hidden="true" tabindex="-1"></a><span class="in">    (reg_data['uhours'] &gt; 0) &amp; (reg_data['earnwke'] &gt; 0)</span></span>
-<span id="cb13-218"><a href="#cb13-218" aria-hidden="true" tabindex="-1"></a><span class="in">].copy()</span></span>
-<span id="cb13-219"><a href="#cb13-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-220"><a href="#cb13-220" aria-hidden="true" tabindex="-1"></a><span class="in"># Compute hourly wage</span></span>
-<span id="cb13-221"><a href="#cb13-221" aria-hidden="true" tabindex="-1"></a><span class="in">reg_data['hourly'] = reg_data['earnwke'] / reg_data['uhours']</span></span>
-<span id="cb13-222"><a href="#cb13-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-223"><a href="#cb13-223" aria-hidden="true" tabindex="-1"></a><span class="in"># Residualize hourly wage on occ and grade</span></span>
-<span id="cb13-224"><a href="#cb13-224" aria-hidden="true" tabindex="-1"></a><span class="in">X = pd.get_dummies(reg_data[['grade92', 'occ2012']].astype("category"), drop_first=True)</span></span>
-<span id="cb13-225"><a href="#cb13-225" aria-hidden="true" tabindex="-1"></a><span class="in">X = sm.add_constant(X)</span></span>
-<span id="cb13-226"><a href="#cb13-226" aria-hidden="true" tabindex="-1"></a><span class="in">model = sm.OLS(reg_data['hourly'], X).fit()</span></span>
-<span id="cb13-227"><a href="#cb13-227" aria-hidden="true" tabindex="-1"></a><span class="in">reg_data['resid'] = model.resid</span></span>
-<span id="cb13-228"><a href="#cb13-228" aria-hidden="true" tabindex="-1"></a><span class="in">reg_data['gender'] = reg_data['sex'].map({1: 'Male', 2: 'Female'})</span></span>
-<span id="cb13-229"><a href="#cb13-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-230"><a href="#cb13-230" aria-hidden="true" tabindex="-1"></a><span class="in"># Define bootstrap function</span></span>
-<span id="cb13-231"><a href="#cb13-231" aria-hidden="true" tabindex="-1"></a><span class="in">def bootstrap_loess(data, gender, x_col, y_col, span=0.3, n_boot=100):</span></span>
-<span id="cb13-232"><a href="#cb13-232" aria-hidden="true" tabindex="-1"></a><span class="in">    from statsmodels.nonparametric.smoothers_lowess import lowess</span></span>
-<span id="cb13-233"><a href="#cb13-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-234"><a href="#cb13-234" aria-hidden="true" tabindex="-1"></a><span class="in">    subset = data[data['gender'] == gender]</span></span>
-<span id="cb13-235"><a href="#cb13-235" aria-hidden="true" tabindex="-1"></a><span class="in">    x_vals = np.linspace(21, 80, 60)</span></span>
-<span id="cb13-236"><a href="#cb13-236" aria-hidden="true" tabindex="-1"></a><span class="in">    y_boot = np.zeros((n_boot, len(x_vals)))</span></span>
-<span id="cb13-237"><a href="#cb13-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-238"><a href="#cb13-238" aria-hidden="true" tabindex="-1"></a><span class="in">    for i in range(n_boot):</span></span>
-<span id="cb13-239"><a href="#cb13-239" aria-hidden="true" tabindex="-1"></a><span class="in">        boot_sample = resample(subset)</span></span>
-<span id="cb13-240"><a href="#cb13-240" aria-hidden="true" tabindex="-1"></a><span class="in">        smoothed = lowess(boot_sample[y_col], boot_sample[x_col], frac=span, return_sorted=True)</span></span>
-<span id="cb13-241"><a href="#cb13-241" aria-hidden="true" tabindex="-1"></a><span class="in">        y_interp = np.interp(x_vals, smoothed[:, 0], smoothed[:, 1])</span></span>
-<span id="cb13-242"><a href="#cb13-242" aria-hidden="true" tabindex="-1"></a><span class="in">        y_boot[i, :] = y_interp</span></span>
-<span id="cb13-243"><a href="#cb13-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-244"><a href="#cb13-244" aria-hidden="true" tabindex="-1"></a><span class="in">    y_mean = y_boot.mean(axis=0)</span></span>
-<span id="cb13-245"><a href="#cb13-245" aria-hidden="true" tabindex="-1"></a><span class="in">    y_low = np.percentile(y_boot, 2.5, axis=0)</span></span>
-<span id="cb13-246"><a href="#cb13-246" aria-hidden="true" tabindex="-1"></a><span class="in">    y_high = np.percentile(y_boot, 97.5, axis=0)</span></span>
-<span id="cb13-247"><a href="#cb13-247" aria-hidden="true" tabindex="-1"></a><span class="in">    return x_vals, y_mean, y_low, y_high</span></span>
-<span id="cb13-248"><a href="#cb13-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-249"><a href="#cb13-249" aria-hidden="true" tabindex="-1"></a><span class="in"># Run bootstrap LOESS for both genders</span></span>
-<span id="cb13-250"><a href="#cb13-250" aria-hidden="true" tabindex="-1"></a><span class="in">x_m, y_m, l_m, u_m = bootstrap_loess(reg_data, 'Male', 'age', 'resid')</span></span>
-<span id="cb13-251"><a href="#cb13-251" aria-hidden="true" tabindex="-1"></a><span class="in">x_f, y_f, l_f, u_f = bootstrap_loess(reg_data, 'Female', 'age', 'resid')</span></span>
-<span id="cb13-252"><a href="#cb13-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-253"><a href="#cb13-253" aria-hidden="true" tabindex="-1"></a><span class="in"># Colors and footnote</span></span>
-<span id="cb13-254"><a href="#cb13-254" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.cm as cm</span></span>
-<span id="cb13-255"><a href="#cb13-255" aria-hidden="true" tabindex="-1"></a><span class="in">from matplotlib.colors import to_hex</span></span>
-<span id="cb13-256"><a href="#cb13-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-257"><a href="#cb13-257" aria-hidden="true" tabindex="-1"></a><span class="in">viridis = cm.get_cmap("viridis", 2)</span></span>
-<span id="cb13-258"><a href="#cb13-258" aria-hidden="true" tabindex="-1"></a><span class="in">color_male = to_hex(viridis(0.1))</span></span>
-<span id="cb13-259"><a href="#cb13-259" aria-hidden="true" tabindex="-1"></a><span class="in">color_female = to_hex(viridis(0.8))</span></span>
-<span id="cb13-260"><a href="#cb13-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-261"><a href="#cb13-261" aria-hidden="true" tabindex="-1"></a><span class="in">n_obs = len(reg_data)</span></span>
-<span id="cb13-262"><a href="#cb13-262" aria-hidden="true" tabindex="-1"></a><span class="in">footnote = (</span></span>
-<span id="cb13-263"><a href="#cb13-263" aria-hidden="true" tabindex="-1"></a><span class="in">    f"Notes: Residual hourly wages from a linear regression controlling for occupation (C(occ2012))\n"</span></span>
-<span id="cb13-264"><a href="#cb13-264" aria-hidden="true" tabindex="-1"></a><span class="in">    f"and education (C(grade92)), using 2014 CPS MORG data from California (N = {n_obs}). Residuals smoothed by\n"</span></span>
-<span id="cb13-265"><a href="#cb13-265" aria-hidden="true" tabindex="-1"></a><span class="in">    f"LOESS (span = 0.3), with 95% CI from 100 bootstrap replications. Sample restricted to individuals aged\n"</span></span>
-<span id="cb13-266"><a href="#cb13-266" aria-hidden="true" tabindex="-1"></a><span class="in">    f"21–80 with positive usual weekly hours and earnings."</span></span>
-<span id="cb13-267"><a href="#cb13-267" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
-<span id="cb13-268"><a href="#cb13-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-269"><a href="#cb13-269" aria-hidden="true" tabindex="-1"></a><span class="in"># Plot</span></span>
-<span id="cb13-270"><a href="#cb13-270" aria-hidden="true" tabindex="-1"></a><span class="in">plt.figure(figsize=(9, 6))</span></span>
-<span id="cb13-271"><a href="#cb13-271" aria-hidden="true" tabindex="-1"></a><span class="in">plt.plot(x_m, y_m, label="Men", color=color_male, linewidth=2)</span></span>
-<span id="cb13-272"><a href="#cb13-272" aria-hidden="true" tabindex="-1"></a><span class="in">plt.fill_between(x_m, l_m, u_m, color=color_male, alpha=0.2)</span></span>
-<span id="cb13-273"><a href="#cb13-273" aria-hidden="true" tabindex="-1"></a><span class="in">plt.plot(x_f, y_f, label="Women", color=color_female, linewidth=2)</span></span>
-<span id="cb13-274"><a href="#cb13-274" aria-hidden="true" tabindex="-1"></a><span class="in">plt.fill_between(x_f, l_f, u_f, color=color_female, alpha=0.2)</span></span>
-<span id="cb13-275"><a href="#cb13-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-276"><a href="#cb13-276" aria-hidden="true" tabindex="-1"></a><span class="in">plt.axhline(0, color="black", linestyle="--", linewidth=0.8)</span></span>
-<span id="cb13-277"><a href="#cb13-277" aria-hidden="true" tabindex="-1"></a><span class="in">plt.title("Adjusted Gender Wage Gap Across Age", fontsize=15)</span></span>
-<span id="cb13-278"><a href="#cb13-278" aria-hidden="true" tabindex="-1"></a><span class="in">plt.xlabel("Age", fontsize=12)</span></span>
-<span id="cb13-279"><a href="#cb13-279" aria-hidden="true" tabindex="-1"></a><span class="in">plt.ylabel("Residual Hourly Wage (USD)", fontsize=12)</span></span>
-<span id="cb13-280"><a href="#cb13-280" aria-hidden="true" tabindex="-1"></a><span class="in">plt.xticks(fontsize=10)</span></span>
-<span id="cb13-281"><a href="#cb13-281" aria-hidden="true" tabindex="-1"></a><span class="in">plt.yticks(fontsize=10)</span></span>
-<span id="cb13-282"><a href="#cb13-282" aria-hidden="true" tabindex="-1"></a><span class="in">plt.grid(True, linestyle="--", alpha=0.5)</span></span>
-<span id="cb13-283"><a href="#cb13-283" aria-hidden="true" tabindex="-1"></a><span class="in">plt.legend(title="Gender", labels=["Men", "Women"], fontsize=10, title_fontsize=11)</span></span>
-<span id="cb13-284"><a href="#cb13-284" aria-hidden="true" tabindex="-1"></a><span class="in">plt.figtext(0.01, -0.12, footnote, fontsize=10, ha="left", va="top")</span></span>
-<span id="cb13-285"><a href="#cb13-285" aria-hidden="true" tabindex="-1"></a><span class="in">plt.tight_layout(rect=[0, 0.12, 1, 1])</span></span>
-<span id="cb13-286"><a href="#cb13-286" aria-hidden="true" tabindex="-1"></a><span class="in">plt.savefig("/mnt/data/gender_wage_gap_viridis_residuals.png", dpi=300, bbox_inches="tight")</span></span>
-<span id="cb13-287"><a href="#cb13-287" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
-<span id="cb13-288"><a href="#cb13-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-289"><a href="#cb13-289" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-290"><a href="#cb13-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-291"><a href="#cb13-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-292"><a href="#cb13-292" aria-hidden="true" tabindex="-1"></a>**Final thoughts **</span>
-<span id="cb13-293"><a href="#cb13-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-294"><a href="#cb13-294" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>While AI is great, it needed some iterations to get **what I want** not just something. </span>
-<span id="cb13-295"><a href="#cb13-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-296"><a href="#cb13-296" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Oh, and you can go further. Think about this graph. Is the econonometrics of it okay? </span>
-<span id="cb13-297"><a href="#cb13-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-298"><a href="#cb13-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-299"><a href="#cb13-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-300"><a href="#cb13-300" aria-hidden="true" tabindex="-1"></a><span class="fu">### Heatmap</span></span>
-<span id="cb13-301"><a href="#cb13-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-302"><a href="#cb13-302" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-303"><a href="#cb13-303" aria-hidden="true" tabindex="-1"></a><span class="in"> Ok now show a heatmap of hourly wages by occupation and education level. Keep viridis. </span></span>
-<span id="cb13-304"><a href="#cb13-304" aria-hidden="true" tabindex="-1"></a><span class="in"> ```</span></span>
-<span id="cb13-305"><a href="#cb13-305" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb13-306"><a href="#cb13-306" aria-hidden="true" tabindex="-1"></a>Not great</span>
-<span id="cb13-307"><a href="#cb13-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-308"><a href="#cb13-308" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-309"><a href="#cb13-309" aria-hidden="true" tabindex="-1"></a><span class="in">Create a few distinct categories of occupation.</span></span>
-<span id="cb13-310"><a href="#cb13-310" aria-hidden="true" tabindex="-1"></a><span class="in">Then create bins for education.</span></span>
-<span id="cb13-311"><a href="#cb13-311" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-312"><a href="#cb13-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-313"><a href="#cb13-313" aria-hidden="true" tabindex="-1"></a>Almost</span>
-<span id="cb13-314"><a href="#cb13-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-315"><a href="#cb13-315" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-316"><a href="#cb13-316" aria-hidden="true" tabindex="-1"></a><span class="in">Swap colors</span></span>
-<span id="cb13-317"><a href="#cb13-317" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-318"><a href="#cb13-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-319"><a href="#cb13-319" aria-hidden="true" tabindex="-1"></a>Now we are talking:</span>
-<span id="cb13-320"><a href="#cb13-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-321"><a href="#cb13-321" aria-hidden="true" tabindex="-1"></a><span class="al">![Fourth iteration](../../images/earnings-heatmap.png)</span></span>
-<span id="cb13-322"><a href="#cb13-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-323"><a href="#cb13-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-324"><a href="#cb13-324" aria-hidden="true" tabindex="-1"></a><span class="fu">### Other ideas</span></span>
-<span id="cb13-325"><a href="#cb13-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-326"><a href="#cb13-326" aria-hidden="true" tabindex="-1"></a>Many other options. Two extremes. </span>
-<span id="cb13-327"><a href="#cb13-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-328"><a href="#cb13-328" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Describe age. In a graph. (Hint: think about binsize)</span>
-<span id="cb13-329"><a href="#cb13-329" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Create an interesting and well-done scatterplot (turn o3 on or use Claude Sonnet) </span>
-<span id="cb13-330"><a href="#cb13-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-331"><a href="#cb13-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-332"><a href="#cb13-332" aria-hidden="true" tabindex="-1"></a><span class="fu">### Discussion points</span></span>
-<span id="cb13-333"><a href="#cb13-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-334"><a href="#cb13-334" aria-hidden="true" tabindex="-1"></a>Think about this for each iterations. </span>
-<span id="cb13-335"><a href="#cb13-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-336"><a href="#cb13-336" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Is the code correct</span>
-<span id="cb13-337"><a href="#cb13-337" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What do we like and dislike in this graph? Look carefully on all aspects. How would you change it? </span>
-<span id="cb13-338"><a href="#cb13-338" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Go through the process and improve each graph to presenation quality. </span>
-<span id="cb13-339"><a href="#cb13-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-340"><a href="#cb13-340" aria-hidden="true" tabindex="-1"></a><span class="fu">### Bonus</span></span>
-<span id="cb13-341"><a href="#cb13-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-342"><a href="#cb13-342" aria-hidden="true" tabindex="-1"></a>You made it till the end. Your bonus track is <span class="co">[</span><span class="ot">California Love</span><span class="co">](https://www.youtube.com/watch?v=omfz62qu_Bc)</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Creating Graphs"</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2025-06-06"</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## An example</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">### The task</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>Is there a difference between how much men and women make? How does it vary by age?</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>The topic is related to the case study on <span class="co">[</span><span class="ot">gender gap in earnings</span><span class="co">](https://gabors-data-analysis.com/casestudies/#ch09a-estimating-gender-and-age-differences-in-earnings)</span>.</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="fu">### Preparation</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>As a case study, consider the earnings case study from the Data Analysis textbook</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Have a look at the info <span class="co">[</span><span class="ot">readme</span><span class="co">](https://osf.io/cgfrq)</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Download <span class="in">`morg-2014-emp.csv`</span> from <span class="co">[</span><span class="ot">earnings data</span><span class="co">](https://osf.io/4ay9x)</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Download cpsx.pdf, which is an <span class="co">[</span><span class="ot">old school codebook</span><span class="co">](https://osf.io/uqe8z)</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>read in morg-2014-emp.csv</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>**One state**</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>Let us start filtering on the largest state</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="in">1. Create an ordered freq table of state, and filter on the largest one</span></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>I used RStudio with Github copilot to write all three code snippets. It automatically guessed the third bit.</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="in"># setup</span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="in"># ordered freq table of state</span></span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a><span class="in">morg %&gt;%</span></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a><span class="in">  group_by(state) %&gt;%</span></span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a><span class="in">  summarise(n = n()) %&gt;%</span></span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a><span class="in">  arrange(desc(n)) %&gt;%</span></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a><span class="in">  mutate(state = fct_reorder(state, n)) %&gt;%</span></span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a><span class="in">  ggplot(aes(x = state, y = n)) +</span></span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_col() +</span></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a><span class="in">  coord_flip() +</span></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a><span class="in">  labs(title = "Number of Employees by State in Morg",</span></span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a><span class="in">       x = "State",</span></span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a><span class="in">       y = "Number of Employees") +</span></span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a><span class="in">  theme_minimal()</span></span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a><span class="in"># find the largest state in terms of number of obs</span></span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a><span class="in">state_max=morg %&gt;%</span></span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a><span class="in">  group_by(state) %&gt;%</span></span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a><span class="in">  summarise(n = n()) %&gt;%</span></span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a><span class="in">  arrange(desc(n)) %&gt;%</span></span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a><span class="in">  slice(1) %&gt;%</span></span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a><span class="in">  pull(state)</span></span>
+<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a><span class="in"># filter morg for the largest state</span></span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a><span class="in">morg_largest_state &lt;- morg %&gt;%</span></span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(state == state_max)</span></span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>Hold, what is does max state=5 mean? Ask ChatGPT.</span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a><span class="al">![](../../images/earnings-state5.png)</span></span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>Save this file as <span class="in">`morg-2014-emp-state5.csv`</span>. You can find it also <span class="co">[</span><span class="ot">at the data section here</span><span class="co">](/data/earnings/morg-2014-emp-state5.csv)</span></span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a>**Get to know the file**</span>
+<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Upload the file** and ask for a variable dictionary. After 2 iterations, I used this. </span>
+<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a><span class="in">Create a variable dictionary. Use the pdf i shared earlier. Output as markdown. For each variable: varname, labels, type, coverage (% missing), mean and mode. Round up numbers. Look at cps and provide short labels. Get me an .md I can download.</span></span>
+<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">ChatGPT</span><span class="co">](/week00/assets/variable-dictionary-chatgpt.html)</span> created a table, yes. </span>
+<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>But <span class="co">[</span><span class="ot">look at what Claude did</span><span class="co">](/week00/assets/variable-dictionary-claude4.html)</span>, amazing.</span>
+<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a><span class="fu">### Let us do graphs</span></span>
+<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a>**First try**</span>
+<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a><span class="in">Is there a gender gap in earnings? Show me a graph.</span></span>
+<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a>ChatGPT will run Data Analysis -- create a short Python script and display a graph.</span>
+<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.pyplot as plt</span></span>
+<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a><span class="in"># Check for gender and earnings columns</span></span>
+<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a><span class="in">if "sex" in df.columns and "earnwke" in df.columns:</span></span>
+<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a><span class="in">    # Drop rows with missing or zero earnings</span></span>
+<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a><span class="in">    df_filtered = df[(df["earnwke"].notna()) &amp; (df["earnwke"] &gt; 0)]</span></span>
+<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a><span class="in">    # Group by sex and calculate mean earnings</span></span>
+<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a><span class="in">    gender_earnings = df_filtered.groupby("sex")["earnwke"].mean().reset_index()</span></span>
+<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a><span class="in">    gender_earnings["earnwke"] = gender_earnings["earnwke"].round(2)</span></span>
+<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a><span class="in">    # Create a bar plot</span></span>
+<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.figure(figsize=(6, 4))</span></span>
+<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.bar(gender_earnings["sex"], gender_earnings["earnwke"])</span></span>
+<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.title("Average Weekly Earnings by Gender")</span></span>
+<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.xlabel("Sex (1 = Male, 2 = Female)")</span></span>
+<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.ylabel("Mean Weekly Earnings")</span></span>
+<span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.grid(axis="y", linestyle="--", alpha=0.7)</span></span>
+<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.tight_layout()</span></span>
+<span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a><span class="in">    plt.show()</span></span>
+<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a><span class="in">else:</span></span>
+<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a><span class="in">    raise ValueError("Required columns 'sex' and 'earnwke' not found in dataset.")</span></span>
+<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a>Here is the chart</span>
+<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a><span class="al">![The graph I was created](../../images/earnings-by-gender.png)</span></span>
+<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a>Followed by this text</span>
+<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a>"Here is the graph showing the gender gap in weekly earnings. Males (1) earn more on average than females (2) in this sample. Let me know if you want to adjust for hours worked or other covariates. "</span>
+<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a><span class="in">Yes, adjust by age.</span></span>
+<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a><span class="al">![The graph I was created](../../images/earnings-by-gender-age1.png)</span></span>
+<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a>Now what? By now, you have some idea, what you'd like. For me it was</span>
+<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a><span class="in">Maybe binscatter by year, start 21. fit loess for makes and females</span></span>
+<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a>Try it!</span>
+<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a>For me, it turns out it needed some adjustments after several iterations to get this. Add CI. Add Footnote. Increase FN font size. Add N of obs. Change color scheme. </span>
+<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.cm as cm</span></span>
+<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a><span class="in">from matplotlib.colors import to_hex</span></span>
+<span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a><span class="in"># Get viridis colors</span></span>
+<span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a><span class="in">viridis = cm.get_cmap("viridis", 2)</span></span>
+<span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a><span class="in">color_male = to_hex(viridis(0.1))</span></span>
+<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a><span class="in">color_female = to_hex(viridis(0.8))</span></span>
+<span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-160"><a href="#cb14-160" aria-hidden="true" tabindex="-1"></a><span class="in"># Count observations</span></span>
+<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a><span class="in">n_obs = len(reg_data)</span></span>
+<span id="cb14-162"><a href="#cb14-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a><span class="in"># Updated footnote</span></span>
+<span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a><span class="in">footnote = (</span></span>
+<span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a><span class="in">    f"Notes: Residual hourly wages from a linear regression controlling for occupation (C(occ2012))\n"</span></span>
+<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a><span class="in">    f"and education (C(grade92)), using 2014 CPS MORG data from California (N = {n_obs}). Residuals smoothed by\n"</span></span>
+<span id="cb14-167"><a href="#cb14-167" aria-hidden="true" tabindex="-1"></a><span class="in">    f"LOESS (span = 0.3), with 95% CI from 100 bootstrap replications. Sample restricted to individuals aged\n"</span></span>
+<span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a><span class="in">    f"21–80 with positive usual weekly hours and earnings."</span></span>
+<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
+<span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a><span class="in"># Plot</span></span>
+<span id="cb14-172"><a href="#cb14-172" aria-hidden="true" tabindex="-1"></a><span class="in">plt.figure(figsize=(9, 6))</span></span>
+<span id="cb14-173"><a href="#cb14-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a><span class="in">plt.plot(x_m, y_m, label="Men", color=color_male, linewidth=2)</span></span>
+<span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a><span class="in">plt.fill_between(x_m, l_m, u_m, color=color_male, alpha=0.2)</span></span>
+<span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a><span class="in">plt.plot(x_f, y_f, label="Women", color=color_female, linewidth=2)</span></span>
+<span id="cb14-178"><a href="#cb14-178" aria-hidden="true" tabindex="-1"></a><span class="in">plt.fill_between(x_f, l_f, u_f, color=color_female, alpha=0.2)</span></span>
+<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a><span class="in">plt.axhline(0, color="black", linestyle="--", linewidth=0.8)</span></span>
+<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a><span class="in">plt.title("Adjusted Gender Wage Gap Across Age", fontsize=15)</span></span>
+<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a><span class="in">plt.xlabel("Age", fontsize=12)</span></span>
+<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a><span class="in">plt.ylabel("Residual Hourly Wage (USD)", fontsize=12)</span></span>
+<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a><span class="in">plt.xticks(fontsize=10)</span></span>
+<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a><span class="in">plt.yticks(fontsize=10)</span></span>
+<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a><span class="in">plt.grid(True, linestyle="--", alpha=0.5)</span></span>
+<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a><span class="in">plt.legend(title="Gender", labels=["Men", "Women"], fontsize=10, title_fontsize=11)</span></span>
+<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a><span class="in"># Updated footnote with larger font</span></span>
+<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a><span class="in">plt.figtext(0.01, -0.12, footnote, fontsize=10, ha="left", va="top")</span></span>
+<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a><span class="in">plt.tight_layout(rect=[0, 0.12, 1, 1])</span></span>
+<span id="cb14-193"><a href="#cb14-193" aria-hidden="true" tabindex="-1"></a><span class="in">plt.savefig("/mnt/data/gender_wage_gap_viridis_residuals.png", dpi=300, bbox_inches="tight")</span></span>
+<span id="cb14-194"><a href="#cb14-194" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
+<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a>It took some iterations, starting with</span>
+<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a><span class="al">![Fourth iteration](../../images/earnings-by-gender-age2a.png)</span></span>
+<span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a>To get to something I liked. It made errors, forgot labels, and made coding errors. Check the process. </span>
+<span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a><span class="al">![Fourth iteration](../../images/earnings-by-gender-age4.png)</span></span>
+<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a><span class="in">import statsmodels.api as sm</span></span>
+<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a><span class="in">from sklearn.utils import resample</span></span>
+<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a><span class="in"># Restrict and prepare data for regression</span></span>
+<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a><span class="in">reg_data = df[</span></span>
+<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a><span class="in">    ['age', 'earnwke', 'uhours', 'sex', 'grade92', 'occ2012']</span></span>
+<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a><span class="in">].dropna()</span></span>
+<span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a><span class="in">reg_data = reg_data[</span></span>
+<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a><span class="in">    (reg_data['age'] &gt;= 21) &amp; (reg_data['age'] &lt;= 62) &amp;</span></span>
+<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a><span class="in">    (reg_data['uhours'] &gt; 0) &amp; (reg_data['earnwke'] &gt; 0)</span></span>
+<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a><span class="in">].copy()</span></span>
+<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a><span class="in"># Compute hourly wage</span></span>
+<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a><span class="in">reg_data['hourly'] = reg_data['earnwke'] / reg_data['uhours']</span></span>
+<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a><span class="in"># Residualize hourly wage on occ and grade</span></span>
+<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a><span class="in">X = pd.get_dummies(reg_data[['grade92', 'occ2012']].astype("category"), drop_first=True)</span></span>
+<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a><span class="in">X = sm.add_constant(X)</span></span>
+<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a><span class="in">model = sm.OLS(reg_data['hourly'], X).fit()</span></span>
+<span id="cb14-227"><a href="#cb14-227" aria-hidden="true" tabindex="-1"></a><span class="in">reg_data['resid'] = model.resid</span></span>
+<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a><span class="in">reg_data['gender'] = reg_data['sex'].map({1: 'Male', 2: 'Female'})</span></span>
+<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a><span class="in"># Define bootstrap function</span></span>
+<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a><span class="in">def bootstrap_loess(data, gender, x_col, y_col, span=0.3, n_boot=100):</span></span>
+<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a><span class="in">    from statsmodels.nonparametric.smoothers_lowess import lowess</span></span>
+<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a><span class="in">    subset = data[data['gender'] == gender]</span></span>
+<span id="cb14-235"><a href="#cb14-235" aria-hidden="true" tabindex="-1"></a><span class="in">    x_vals = np.linspace(21, 80, 60)</span></span>
+<span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a><span class="in">    y_boot = np.zeros((n_boot, len(x_vals)))</span></span>
+<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-238"><a href="#cb14-238" aria-hidden="true" tabindex="-1"></a><span class="in">    for i in range(n_boot):</span></span>
+<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a><span class="in">        boot_sample = resample(subset)</span></span>
+<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a><span class="in">        smoothed = lowess(boot_sample[y_col], boot_sample[x_col], frac=span, return_sorted=True)</span></span>
+<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a><span class="in">        y_interp = np.interp(x_vals, smoothed[:, 0], smoothed[:, 1])</span></span>
+<span id="cb14-242"><a href="#cb14-242" aria-hidden="true" tabindex="-1"></a><span class="in">        y_boot[i, :] = y_interp</span></span>
+<span id="cb14-243"><a href="#cb14-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-244"><a href="#cb14-244" aria-hidden="true" tabindex="-1"></a><span class="in">    y_mean = y_boot.mean(axis=0)</span></span>
+<span id="cb14-245"><a href="#cb14-245" aria-hidden="true" tabindex="-1"></a><span class="in">    y_low = np.percentile(y_boot, 2.5, axis=0)</span></span>
+<span id="cb14-246"><a href="#cb14-246" aria-hidden="true" tabindex="-1"></a><span class="in">    y_high = np.percentile(y_boot, 97.5, axis=0)</span></span>
+<span id="cb14-247"><a href="#cb14-247" aria-hidden="true" tabindex="-1"></a><span class="in">    return x_vals, y_mean, y_low, y_high</span></span>
+<span id="cb14-248"><a href="#cb14-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-249"><a href="#cb14-249" aria-hidden="true" tabindex="-1"></a><span class="in"># Run bootstrap LOESS for both genders</span></span>
+<span id="cb14-250"><a href="#cb14-250" aria-hidden="true" tabindex="-1"></a><span class="in">x_m, y_m, l_m, u_m = bootstrap_loess(reg_data, 'Male', 'age', 'resid')</span></span>
+<span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a><span class="in">x_f, y_f, l_f, u_f = bootstrap_loess(reg_data, 'Female', 'age', 'resid')</span></span>
+<span id="cb14-252"><a href="#cb14-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a><span class="in"># Colors and footnote</span></span>
+<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.cm as cm</span></span>
+<span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a><span class="in">from matplotlib.colors import to_hex</span></span>
+<span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a><span class="in">viridis = cm.get_cmap("viridis", 2)</span></span>
+<span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a><span class="in">color_male = to_hex(viridis(0.1))</span></span>
+<span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a><span class="in">color_female = to_hex(viridis(0.8))</span></span>
+<span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-261"><a href="#cb14-261" aria-hidden="true" tabindex="-1"></a><span class="in">n_obs = len(reg_data)</span></span>
+<span id="cb14-262"><a href="#cb14-262" aria-hidden="true" tabindex="-1"></a><span class="in">footnote = (</span></span>
+<span id="cb14-263"><a href="#cb14-263" aria-hidden="true" tabindex="-1"></a><span class="in">    f"Notes: Residual hourly wages from a linear regression controlling for occupation (C(occ2012))\n"</span></span>
+<span id="cb14-264"><a href="#cb14-264" aria-hidden="true" tabindex="-1"></a><span class="in">    f"and education (C(grade92)), using 2014 CPS MORG data from California (N = {n_obs}). Residuals smoothed by\n"</span></span>
+<span id="cb14-265"><a href="#cb14-265" aria-hidden="true" tabindex="-1"></a><span class="in">    f"LOESS (span = 0.3), with 95% CI from 100 bootstrap replications. Sample restricted to individuals aged\n"</span></span>
+<span id="cb14-266"><a href="#cb14-266" aria-hidden="true" tabindex="-1"></a><span class="in">    f"21–80 with positive usual weekly hours and earnings."</span></span>
+<span id="cb14-267"><a href="#cb14-267" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
+<span id="cb14-268"><a href="#cb14-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-269"><a href="#cb14-269" aria-hidden="true" tabindex="-1"></a><span class="in"># Plot</span></span>
+<span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a><span class="in">plt.figure(figsize=(9, 6))</span></span>
+<span id="cb14-271"><a href="#cb14-271" aria-hidden="true" tabindex="-1"></a><span class="in">plt.plot(x_m, y_m, label="Men", color=color_male, linewidth=2)</span></span>
+<span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a><span class="in">plt.fill_between(x_m, l_m, u_m, color=color_male, alpha=0.2)</span></span>
+<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a><span class="in">plt.plot(x_f, y_f, label="Women", color=color_female, linewidth=2)</span></span>
+<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a><span class="in">plt.fill_between(x_f, l_f, u_f, color=color_female, alpha=0.2)</span></span>
+<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a><span class="in">plt.axhline(0, color="black", linestyle="--", linewidth=0.8)</span></span>
+<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a><span class="in">plt.title("Adjusted Gender Wage Gap Across Age", fontsize=15)</span></span>
+<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a><span class="in">plt.xlabel("Age", fontsize=12)</span></span>
+<span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a><span class="in">plt.ylabel("Residual Hourly Wage (USD)", fontsize=12)</span></span>
+<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a><span class="in">plt.xticks(fontsize=10)</span></span>
+<span id="cb14-281"><a href="#cb14-281" aria-hidden="true" tabindex="-1"></a><span class="in">plt.yticks(fontsize=10)</span></span>
+<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a><span class="in">plt.grid(True, linestyle="--", alpha=0.5)</span></span>
+<span id="cb14-283"><a href="#cb14-283" aria-hidden="true" tabindex="-1"></a><span class="in">plt.legend(title="Gender", labels=["Men", "Women"], fontsize=10, title_fontsize=11)</span></span>
+<span id="cb14-284"><a href="#cb14-284" aria-hidden="true" tabindex="-1"></a><span class="in">plt.figtext(0.01, -0.12, footnote, fontsize=10, ha="left", va="top")</span></span>
+<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a><span class="in">plt.tight_layout(rect=[0, 0.12, 1, 1])</span></span>
+<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a><span class="in">plt.savefig("/mnt/data/gender_wage_gap_viridis_residuals.png", dpi=300, bbox_inches="tight")</span></span>
+<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
+<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a>**Final thoughts **</span>
+<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>While AI is great, it needed some iterations to get **what I want** not just something. </span>
+<span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Oh, and you can go further. Think about this graph. Is the econonometrics of it okay? </span>
+<span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-300"><a href="#cb14-300" aria-hidden="true" tabindex="-1"></a><span class="fu">### Heatmap</span></span>
+<span id="cb14-301"><a href="#cb14-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-302"><a href="#cb14-302" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a><span class="in"> Ok now show a heatmap of hourly wages by occupation and education level. Keep viridis. </span></span>
+<span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a><span class="in"> ```</span></span>
+<span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a>Not great</span>
+<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a><span class="in">Create a few distinct categories of occupation.</span></span>
+<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a><span class="in">Then create bins for education.</span></span>
+<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a>Almost</span>
+<span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a><span class="in">Swap colors</span></span>
+<span id="cb14-317"><a href="#cb14-317" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-319"><a href="#cb14-319" aria-hidden="true" tabindex="-1"></a>Now we are talking:</span>
+<span id="cb14-320"><a href="#cb14-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-321"><a href="#cb14-321" aria-hidden="true" tabindex="-1"></a><span class="al">![Fourth iteration](../../images/earnings-heatmap.png)</span></span>
+<span id="cb14-322"><a href="#cb14-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-323"><a href="#cb14-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-324"><a href="#cb14-324" aria-hidden="true" tabindex="-1"></a><span class="fu">### Other ideas</span></span>
+<span id="cb14-325"><a href="#cb14-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-326"><a href="#cb14-326" aria-hidden="true" tabindex="-1"></a>Many other options. Two extremes. </span>
+<span id="cb14-327"><a href="#cb14-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-328"><a href="#cb14-328" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Describe age. In a graph. (Hint: think about binsize)</span>
+<span id="cb14-329"><a href="#cb14-329" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Create an interesting and well-done scatterplot (turn o3 on or use Claude Sonnet) </span>
+<span id="cb14-330"><a href="#cb14-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-331"><a href="#cb14-331" aria-hidden="true" tabindex="-1"></a><span class="fu">## Now with Claude</span></span>
+<span id="cb14-332"><a href="#cb14-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-333"><a href="#cb14-333" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-334"><a href="#cb14-334" aria-hidden="true" tabindex="-1"></a><span class="in">Show me an interesting scatterplot. Make it well done.</span></span>
+<span id="cb14-335"><a href="#cb14-335" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-336"><a href="#cb14-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-337"><a href="#cb14-337" aria-hidden="true" tabindex="-1"></a>**The Education-Earnings Gradient**</span>
+<span id="cb14-338"><a href="#cb14-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-339"><a href="#cb14-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-340"><a href="#cb14-340" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
+<span id="cb14-341"><a href="#cb14-341" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;iframe src="cps-earnings-plot.html" width="100%" height="800" frameborder="0"&gt;&lt;/iframe&gt;</span></span>
+<span id="cb14-342"><a href="#cb14-342" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-343"><a href="#cb14-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-344"><a href="#cb14-344" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key Findings</span></span>
+<span id="cb14-345"><a href="#cb14-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-346"><a href="#cb14-346" aria-hidden="true" tabindex="-1"></a>This visualization reveals several important patterns in the 2014 labor market:</span>
+<span id="cb14-347"><a href="#cb14-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-348"><a href="#cb14-348" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Clear Education Gradient**: Higher education levels consistently associate with higher earnings</span>
+<span id="cb14-349"><a href="#cb14-349" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Hours Variation**: More educated workers tend to work slightly longer hours</span>
+<span id="cb14-350"><a href="#cb14-350" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Within-Group Variation**: Substantial earnings variation exists within each education category</span>
+<span id="cb14-351"><a href="#cb14-351" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Age Effects**: Older workers (larger circles) often earn more within education levels</span>
+<span id="cb14-352"><a href="#cb14-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-353"><a href="#cb14-353" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb14-354"><a href="#cb14-354" aria-hidden="true" tabindex="-1"></a>The college earnings premium shown here (47%) aligns with established labor economics research on returns to education.</span>
+<span id="cb14-355"><a href="#cb14-355" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-356"><a href="#cb14-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-357"><a href="#cb14-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-358"><a href="#cb14-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-359"><a href="#cb14-359" aria-hidden="true" tabindex="-1"></a>Not perfect. But amazing. </span>
+<span id="cb14-360"><a href="#cb14-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-361"><a href="#cb14-361" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion points</span></span>
+<span id="cb14-362"><a href="#cb14-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-363"><a href="#cb14-363" aria-hidden="true" tabindex="-1"></a>Think about this for each iterations. </span>
+<span id="cb14-364"><a href="#cb14-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-365"><a href="#cb14-365" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Is the code correct</span>
+<span id="cb14-366"><a href="#cb14-366" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What do we like and dislike in this graph? Look carefully on all aspects. How would you change it? </span>
+<span id="cb14-367"><a href="#cb14-367" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Go through the process and improve each graph to presenation quality. </span>
+<span id="cb14-368"><a href="#cb14-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-369"><a href="#cb14-369" aria-hidden="true" tabindex="-1"></a><span class="fu">### Bonus</span></span>
+<span id="cb14-370"><a href="#cb14-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-371"><a href="#cb14-371" aria-hidden="true" tabindex="-1"></a>You made it till the end. Your bonus track is <span class="co">[</span><span class="ot">California Love</span><span class="co">](https://www.youtube.com/watch?v=omfz62qu_Bc)</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
