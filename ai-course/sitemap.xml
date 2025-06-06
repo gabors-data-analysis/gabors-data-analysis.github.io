@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/index.html</loc>
-    <lastmod>2025-06-03T05:48:14.774Z</lastmod>
+    <lastmod>2025-06-06T14:02:28.847Z</lastmod>
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/weeks.html</loc>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/week02/index.html</loc>
-    <lastmod>2025-05-31T14:21:11.990Z</lastmod>
+    <lastmod>2025-06-06T15:43:31.789Z</lastmod>
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/week02/assets/chatgpt-2025-vws-README-v1.html</loc>
@@ -214,10 +214,26 @@
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/week00/index.html</loc>
-    <lastmod>2025-06-02T15:52:55.160Z</lastmod>
+    <lastmod>2025-06-06T15:47:03.381Z</lastmod>
   </url>
   <url>
     <loc>https://gabors-data-analysis.com/ai-course/week00/assets/week00-ask-ai.html</loc>
     <lastmod>2025-06-01T13:11:53.797Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week00/assets/creating-graphs.html</loc>
+    <lastmod>2025-06-06T15:45:51.837Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week00/assets/variable-dictionary-claude4.html</loc>
+    <lastmod>2025-06-06T15:37:47.187Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week00/assets/variable_dictionary-chatgpt.html</loc>
+    <lastmod>2025-06-06T15:44:54.558Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gabors-data-analysis.com/ai-course/week00/assets/variable-dictionary-chatgpt.html</loc>
+    <lastmod>2025-06-06T15:44:54.558Z</lastmod>
   </url>
 </urlset>
