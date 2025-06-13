@@ -21,14 +21,27 @@ The most important plan will be correcting typos and errors based on the [errata
 * improve unclear sentences 
 * add a few lines of explanation when needed
 
-## Data Analysis with AI
+## Math
 
-Each chapter will get a new section, which talks about how AI (LLM) might help one or more methods in the chapter. A section will be 0.5 to 1 page long and include a link to a chat. Examples
+My plan is to add more math. This is to help better courses, students get what they need to pursue more advanced courses. 
 
-* (Chapter 03) Data discovery with AI. We show a dataset and chat about variables, possible wrnagling and cleaning issues. 
-* (Chapter 06) Look for statistics with AI. We discussed the t-test in the material. Now we ask how to run tests in more complicated scenarios
+* It'll be a mix of math and explanations. Often sketching the proof. 
+* They will go 80% to Under the Hood sections. 
 
-I'm still thinkin about the best pedagogical approach. (But this is not about how LLMs work at all.)
+## Data Analysis with AI BOX
+
+I do not plan to have separate sections on AI. This is because things have changed so much and are changing rapidly. 
+However, there will be "Data Analysis with AI" boxes scattered throughout the text (we need a new color...)  They will talk about how AI can help in the given task. It reflect my take of not considering data analysis and AI separate, but AI as a new tool to help along the way.  
+
+There will be AI exercises at the end such as creating a dashboard to simulate a bit of theory. 
+
+```
+**Chapter 01**
+AI is often used to encode information from text. One such example is to extract sentiments, emotions or values. The large language models will not only capture keywords but understand semantics of a sentence and even context. 
+
+Describe how AI could be used to encode WMS scores from interview transcripts instead of relying on trained graduate students' judgement.
+```
+
 
 ## Beyond
 
@@ -36,19 +49,24 @@ Each section will get a *Beyond* bit replacing *Further readings*. This will be 
 
 ## Applications
 
-Short new bit at the end part of the section. Basically a list of application for methods covered. Kind of a "What for" learning outcome. Sometimes comparing with previously covered methods. 
+Short new bit at the end part of many sections. Basically a list of application for methods covered. Kind of a "What for" learning outcome. Sometimes comparing with previously covered methods. 
 
 * (chapter 03) we showed histogram, here is an example from The economist. 
 * (chapter 12) we showed you TS analysis here is an application to XX sales data
 
 
+## Dashboards
+
+The ecosystem will grow with a series of Dashboards / apps to practice the material, or have interactive sessions. 
+
 ## Broad issues I'm thinking about
 
 1. Chapter 10 is too large, and is set to be bigger. Some instructors say 07-09 is too slow (but maybe not for students!). Some magic rearrangement: merge 07 and 08, and cut ch 10 into two? 
-2. More maths. Some users advised to add more derivation to Under the Hood sections to avoid the need for another textbook in more advanced metrics classes. Okay, which ones?
-3. Case studies: Add 2-3 case studies. 
-  * topics: climate/evnvironment, finance 
-  * region: Asia/Pacific, Africa / Middle East
+
+2. Case studies: Add 2-3 case studies. 
+* World Values Survey
+* ...
+  
 
 
 ## Improvements and additions
