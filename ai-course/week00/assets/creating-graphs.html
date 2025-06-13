@@ -383,12 +383,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Have a look at the info <a href="https://osf.io/cgfrq">readme</a></li>
 <li>Download <code>morg-2014-emp.csv</code> from <a href="https://osf.io/4ay9x">earnings data</a></li>
 <li>Download cpsx.pdf, which is an <a href="https://osf.io/uqe8z">old school codebook</a></li>
-<li>read in morg-2014-emp.csv</li>
+<li>Read in morg-2014-emp.csv</li>
 </ul>
 <p><strong>One state</strong></p>
 <p>Let us start filtering on the largest state</p>
-<pre><code>1. Create an ordered freq table of state, and filter on the largest one</code></pre>
-<p>I used RStudio with Github copilot to write all three code snippets. It automatically guessed the third bit.</p>
+<pre><code>1. Create an ordered frequency table of the state, and filter on the largest one</code></pre>
+<p>I used RStudio with GitHub Copilot to write all three code snippets. It automatically guessed the third bit.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="in"># setup</span></span>
@@ -423,9 +423,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="in">  filter(state == state_max)</span></span>
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Hold, what is does max state=5 mean? Ask ChatGPT.</p>
+<p>Hold on, what does max state=5 mean? Ask ChatGPT.</p>
 <p><img src="../../images/earnings-state5.png" class="img-fluid"></p>
-<p>Save this file as <code>morg-2014-emp-state5.csv</code>. You can find it also <a href="../..\data/earnings/morg-2014-emp-state5.csv">at the data section here</a></p>
+<p>Save this file as <code>morg-2014-emp-state5.csv</code>. You can also find it <a href="../..\data/earnings/morg-2014-emp-state5.csv">at the data section here</a></p>
 <p><strong>Get to know the file</strong></p>
 <ul>
 <li><strong>Upload the file</strong> and ask for a variable dictionary. After 2 iterations, I used this.</li>
@@ -467,7 +467,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="in">    raise ValueError("Required columns 'sex' and 'earnwke' not found in dataset.")</span></span>
 <span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Here is the chart</p>
+<p>Here is the chart:</p>
 <p><img src="../../images/earnings-by-gender.png" class="img-fluid" alt="The graph I was created"> Followed by this text “Here is the graph showing the gender gap in weekly earnings. Males (1) earn more on average than females (2) in this sample. Let me know if you want to adjust for hours worked or other covariates.”</p>
 <pre><code>Yes, adjust by age.</code></pre>
 <div class="quarto-figure quarto-figure-center">
@@ -476,10 +476,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>The graph I was created</figcaption>
 </figure>
 </div>
-<p>Now what? By now, you have some idea, what you’d like. For me it was</p>
-<pre><code>Maybe binscatter by year, start 21. fit loess for makes and females</code></pre>
+<p>Now what? By now, you have some idea, what you’d like. For me, it was:</p>
+<pre><code>Maybe binscatter by year, start 21. fit loess for males and females</code></pre>
 <p>Try it!</p>
-<p>For me, it turns out it needed some adjustments after several iterations to get this. Add CI. Add Footnote. Increase FN font size. Add N of obs. Change color scheme.</p>
+<p>For me, it turns out that it needed some adjustments after several iterations to get this. Add CI. Add Footnote. Increase FN font size. Add N of obs. Change color scheme.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="in">import matplotlib.cm as cm</span></span>
@@ -527,7 +527,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a><span class="in">plt.show()</span></span>
 <span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>It took some iterations, starting with</p>
+<p>It took some iterations, starting with:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../images/earnings-by-gender-age2a.png" class="img-fluid figure-img"></p>
@@ -626,17 +626,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Final thoughts </strong></p>
 <ul>
-<li><p>While AI is great, it needed some iterations to get <strong>what I want</strong> not just something.</p></li>
-<li><p>Oh, and you can go further. Think about this graph. Is the econonometrics of it okay?</p></li>
+<li><p>While AI is great, it needed some iterations to get <strong>what I want</strong>, not just something.</p></li>
+<li><p>Oh, and you can go further. Think about this graph. Is the econometrics of it okay?</p></li>
 </ul>
 </section>
 <section id="heatmap" class="level3">
 <h3 class="anchored" data-anchor-id="heatmap">Heatmap</h3>
 <pre><code> Ok now show a heatmap of hourly wages by occupation and education level. Keep viridis. </code></pre>
-<p>Not great</p>
+<p>Not great.</p>
 <pre><code>Create a few distinct categories of occupation.
 Then create bins for education.</code></pre>
-<p>Almost</p>
+<p>Almost.</p>
 <pre><code>Swap colors</code></pre>
 <p>Now we are talking:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -687,11 +687,11 @@ Note
 </section>
 <section id="discussion-points" class="level2">
 <h2 class="anchored" data-anchor-id="discussion-points">Discussion points</h2>
-<p>Think about this for each iterations.</p>
+<p>Think about this for each iteration.</p>
 <ul>
 <li>Is the code correct</li>
-<li>What do we like and dislike in this graph? Look carefully on all aspects. How would you change it?</li>
-<li>Go through the process and improve each graph to presenation quality.</li>
+<li>What do we like and dislike in this graph? Look carefully at all aspects. How would you change it?</li>
+<li>Go through the process and improve each graph to presentation quality.</li>
 </ul>
 <section id="bonus" class="level3">
 <h3 class="anchored" data-anchor-id="bonus">Bonus</h3>
@@ -1195,17 +1195,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Have a look at the info <span class="co">[</span><span class="ot">readme</span><span class="co">](https://osf.io/cgfrq)</span></span>
 <span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Download <span class="in">`morg-2014-emp.csv`</span> from <span class="co">[</span><span class="ot">earnings data</span><span class="co">](https://osf.io/4ay9x)</span></span>
 <span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Download cpsx.pdf, which is an <span class="co">[</span><span class="ot">old school codebook</span><span class="co">](https://osf.io/uqe8z)</span></span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>read in morg-2014-emp.csv</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Read in morg-2014-emp.csv</span>
 <span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>**One state**</span>
 <span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>Let us start filtering on the largest state</span>
 <span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="in">```         </span></span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="in">1. Create an ordered freq table of state, and filter on the largest one</span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="in">1. Create an ordered frequency table of the state, and filter on the largest one</span></span>
 <span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>I used RStudio with Github copilot to write all three code snippets. It automatically guessed the third bit.</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>I used RStudio with GitHub Copilot to write all three code snippets. It automatically guessed the third bit.</span>
 <span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a></span>
@@ -1243,11 +1243,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>Hold, what is does max state=5 mean? Ask ChatGPT.</span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>Hold on, what does max state=5 mean? Ask ChatGPT.</span>
 <span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a><span class="al">![](../../images/earnings-state5.png)</span></span>
 <span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>Save this file as <span class="in">`morg-2014-emp-state5.csv`</span>. You can find it also <span class="co">[</span><span class="ot">at the data section here</span><span class="co">](/data/earnings/morg-2014-emp-state5.csv)</span></span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>Save this file as <span class="in">`morg-2014-emp-state5.csv`</span>. You can also find it <span class="co">[</span><span class="ot">at the data section here</span><span class="co">](/data/earnings/morg-2014-emp-state5.csv)</span></span>
 <span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a>**Get to know the file**</span>
@@ -1301,7 +1301,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a>Here is the chart</span>
+<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a>Here is the chart:</span>
 <span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a><span class="al">![The graph I was created](../../images/earnings-by-gender.png)</span></span>
 <span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a>Followed by this text</span>
@@ -1314,15 +1314,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a><span class="al">![The graph I was created](../../images/earnings-by-gender-age1.png)</span></span>
 <span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a>Now what? By now, you have some idea, what you'd like. For me it was</span>
+<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a>Now what? By now, you have some idea, what you'd like. For me, it was:</span>
 <span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a><span class="in">Maybe binscatter by year, start 21. fit loess for makes and females</span></span>
+<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a><span class="in">Maybe binscatter by year, start 21. fit loess for males and females</span></span>
 <span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a>Try it!</span>
 <span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a>For me, it turns out it needed some adjustments after several iterations to get this. Add CI. Add Footnote. Increase FN font size. Add N of obs. Change color scheme. </span>
+<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a>For me, it turns out that it needed some adjustments after several iterations to get this. Add CI. Add Footnote. Increase FN font size. Add N of obs. Change color scheme. </span>
 <span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
 <span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a></span>
@@ -1373,7 +1373,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a>It took some iterations, starting with</span>
+<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a>It took some iterations, starting with:</span>
 <span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a><span class="al">![Fourth iteration](../../images/earnings-by-gender-age2a.png)</span></span>
 <span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a></span>
@@ -1468,9 +1468,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a>**Final thoughts **</span>
 <span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>While AI is great, it needed some iterations to get **what I want** not just something. </span>
+<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>While AI is great, it needed some iterations to get **what I want**, not just something. </span>
 <span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Oh, and you can go further. Think about this graph. Is the econonometrics of it okay? </span>
+<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Oh, and you can go further. Think about this graph. Is the econometrics of it okay? </span>
 <span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a></span>
@@ -1480,14 +1480,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a><span class="in"> Ok now show a heatmap of hourly wages by occupation and education level. Keep viridis. </span></span>
 <span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a><span class="in"> ```</span></span>
 <span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a>Not great</span>
+<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a>Not great.</span>
 <span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a><span class="in">Create a few distinct categories of occupation.</span></span>
 <span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a><span class="in">Then create bins for education.</span></span>
 <span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a>Almost</span>
+<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a>Almost.</span>
 <span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a><span class="in">Swap colors</span></span>
@@ -1537,11 +1537,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb14-360"><a href="#cb14-360" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-361"><a href="#cb14-361" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion points</span></span>
 <span id="cb14-362"><a href="#cb14-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-363"><a href="#cb14-363" aria-hidden="true" tabindex="-1"></a>Think about this for each iterations. </span>
+<span id="cb14-363"><a href="#cb14-363" aria-hidden="true" tabindex="-1"></a>Think about this for each iteration. </span>
 <span id="cb14-364"><a href="#cb14-364" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-365"><a href="#cb14-365" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Is the code correct</span>
-<span id="cb14-366"><a href="#cb14-366" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What do we like and dislike in this graph? Look carefully on all aspects. How would you change it? </span>
-<span id="cb14-367"><a href="#cb14-367" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Go through the process and improve each graph to presenation quality. </span>
+<span id="cb14-366"><a href="#cb14-366" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What do we like and dislike in this graph? Look carefully at all aspects. How would you change it? </span>
+<span id="cb14-367"><a href="#cb14-367" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Go through the process and improve each graph to presentation quality. </span>
 <span id="cb14-368"><a href="#cb14-368" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-369"><a href="#cb14-369" aria-hidden="true" tabindex="-1"></a><span class="fu">### Bonus</span></span>
 <span id="cb14-370"><a href="#cb14-370" aria-hidden="true" tabindex="-1"></a></span>
