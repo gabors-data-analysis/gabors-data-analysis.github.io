@@ -12,8 +12,8 @@ redirect_from:
 {% include base_path %}
 
 
-* V.0.3.0.  08. August 2025. 
-* This is a policy is written for my advanced classes: Applied Economics with Sports Data, Data Analysis 3 Prediction and ML. Data Analysis 4 Causal Analysis. It also applies to term papers and theses.  
+* v. 0.3.0.  06. August 2025. 
+* This is a policy is written for my advanced classes: Applied Economics with Sports Data, Data Analysis 3 Prediction and ML. Data Analysis 4 Causal Analysis. 
 * Gábor Békés (Central European University, BekesG@ceu.edu)
 * Licence: CC BY-NC 4.0 free to share and adapt. 
 
@@ -22,11 +22,13 @@ redirect_from:
 
 This policy is aimed at more advanced classes and assume that you already have core coding and statistics/econometrics skills. The abundance of AI means that the process of doing data analysis projects has changed, and these tools are becoming essential help. 
 
-AI has become part of our lives, and most people are using it regularly. I assume you will use AI as a tool to enhance your work. Moreover, the ability to use “AI” as copilot, carry out prompt engineering is a new and important skill to learn and practice.
+AI has become part of our lives, and most people are using it regularly. **I assume you will use AI as a tool to enhance your work**. Moreover, the ability to use “AI” as copilot, carry out prompt engineering is a new and important skill to learn and practice.
 
-However, you should my course to develop skills in understanding applied economics and data analysis, master econometric methods and get experience working with data. You will learn how to think about connecting ideas, methods and find appropriate data to test them. **You are responsible** for all aspects of your work. AI is like search, it's helpful but use it as an input. You must carefully check and debug any input from AI. 
+However, you should use my courses to develop skills in understanding applied economics and data analysis, master econometric methods and get experience working with data. You will learn how to think about connecting ideas, methods and find appropriate data to test them. 
 
-AI can help you in all the steps, but you need strong foundations to become a scholar or an applied economist who uses AI but is not just a vehicle for LLMs. My advice is to use new tools but at the same time remain able to do most work without them. **Enjoy “AI” with moderation**: find a balance between learning the material as well as get practice with AI tools.
+**You are responsible** for all aspects of your work. AI is like advanced search, it's helpful but use it as an input. You must carefully check and debug any input from AI. 
+
+AI can help you in all the steps, but **you need strong foundations to become a scholar or an applied economist who uses AI but is not just a vehicle for LLMs.** My advice is to use new tools but at the same time remain able to do most work without them. **Enjoy “AI” with moderation: find a balance** between learning the material as well as get practice with AI tools.
 
 In my view, there is no way to police the use of “AI” tools, so no point in trying. Yes, I can often attach a higher likelihood of AI use but not certain enough to act on it. This implies **ethical consideration** for students -- they shall be encouraged to show self-restraint for the benefit of their future self.  
 
@@ -98,4 +100,4 @@ Here as well, I urge you to try do as much as possible without AI first, and use
 
 # More
 
-Check out my [Data Analysis with AI course])(https://gabors-data-analysis.com/ai-course/)
+Check out my [Data Analysis with AI course](https://gabors-data-analysis.com/ai-course/)
