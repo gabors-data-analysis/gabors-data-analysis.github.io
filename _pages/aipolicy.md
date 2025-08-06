@@ -12,7 +12,7 @@ redirect_from:
 {% include base_path %}
 
 
-* v. 0.3.0.  06. August 2025. 
+* v. 0.3.1.  06. August 2025. 
 * This is a policy is written for my advanced classes: Applied Economics with Sports Data, Data Analysis 3 Prediction and ML. Data Analysis 4 Causal Analysis. 
 * Gábor Békés (Central European University, BekesG@ceu.edu)
 * Licence: CC BY-NC 4.0 free to share and adapt. 
