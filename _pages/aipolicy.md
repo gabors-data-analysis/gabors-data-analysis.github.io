@@ -98,6 +98,14 @@ In terms of discussing your results, AI will be very good (like "A-", sometimes 
 
 Here as well, I urge you to try do as much as possible without AI first, and use AI as tutor (who can I do better) and reviewer (check if this makes sense). See the first point: you shall learn to do most alone so that you can confidently evaluate AI later. 
 
+## AI attribution statement
+
+I will ask all submitted work to include an AI attribution statement. In it you shall list what AI tools you used, and in what capacity. 
+[You can use IBM's version](https://aiattribution.github.io/), see [description here](https://research.ibm.com/blog/AI-attribution-toolkit)
+
+It is mostly for statistical purposes. It will NOT affect your grade. It might also help you clarify how you are using AI. 
+
+
 # More
 
 Check out my [Data Analysis with AI course](https://gabors-data-analysis.com/ai-course/)
