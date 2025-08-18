@@ -33,7 +33,7 @@ Our work centers on developing comprehensive educational resources tied to the D
 * Márton Nagy, analyst
 * Tatyana Yakushina, analyst 
 
-## Alumni
+### Alumni
 
 * Endre Borza (Data scientist, Corvinus, Hungary)
 * Kenneth Colombe (Phd Student, Bonn, Germany)
@@ -44,4 +44,10 @@ Our work centers on developing comprehensive educational resources tied to the D
 * Kinga Ritter (data scientist, Spain)
 * Zsuzsa Vadle (Phd Student, CEU, Austria)
 * Ádám Víg (data scientist, Google, Hungary)
+
+## Partners
+
+* CEU Department of Economics, funding since 2013
+* CEU Teaching Development Grant, grant 2024
+* Cambridge University Press, textbook publisher
 
