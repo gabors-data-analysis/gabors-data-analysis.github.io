@@ -8,17 +8,23 @@ redirect_from:
 ---
 ___
 
+
+***Accelerating data analysis and AI learning through innovative and open educational resources.***
+
 ## About
 
-**Gabors Data Analysis and AI Lab** is a research and education initiative housed within the Economics Department of Central European University. The lab brings together economists, quantitative social scientists, and data science professionals united by a core mission:  making data analysis and data science education and research capabilities widely accessible. The lab serves as a bridge between academia and business, and between research and teaching. We create high-quality teaching materials for data analysis and econometrics, study the use of AI for analysis and education and support AI-intensive research projects in economics and social sciences.
+**Gabors Data Analysis and AI Lab** is a research and education initiative housed within the Economics Department of Central European University. The lab brings together economists, quantitative social scientists, and data science professionals united by a core mission:  making data analysis and data science education and research capabilities widely accessible. The lab serves as a bridge between academia and business, and between research and teaching. We create high-quality and innovative teaching materials for data analysis and econometrics and support data sciene and AI intensive research projects in economics and social sciences. 
 
 ## What we do
 
-Our work centers on developing comprehensive educational resources tied to the Data Analysis for Business, Economics, and Policy textbook ecosystem. We create and maintain open-source code repositories, setup documentation, case studies, and practice materials, alongside instructor dashboards (dashboards.gabors-data-analysis.com) that support teaching worldwide. The lab co-organizes an annual Data Analytics event at CEU and has launched an innovative [Data Analysis with AI](https://gabors-data-analysis.com/ai-course/) course reflecting our commitment to integrating artificial intelligence into quantitative education and research support. All our materials are free and open-source. We train the next generation of applied data analysts: our research assistants and associates launch careers as data scientists in business, pursue PhDs, or conduct policy research. 
+Our work centers on developing comprehensive educational resources tied to the Data Analysis for Business, Economics, and Policy textbook ecosystem. We create and maintain open-source code repositories, setup documentation, case studies, and practice materials, alongside instructor dashboards (dashboards.gabors-data-analysis.com) that support teaching worldwide. We launched an innovative [Data Analysis with AI](https://gabors-data-analysis.com/ai-course/) course reflecting our commitment to integrating artificial intelligence into quantitative education and research support. All our materials are free and open-source. We train the next generation of applied data analysts: our research assistants and associates launch careers as data scientists in business, pursue PhDs, or conduct policy research. 
+
 
 ## Where we are
 
 We work in Vienna (AT), Budapest (HU) and online. 
+
+
 
 ## Staff and alumni
 
@@ -55,3 +61,6 @@ We work in Vienna (AT), Budapest (HU) and online.
 * CEU Teaching Development Grant, grant 2024
 * Cambridge University Press, textbook publisher
 
+## Events
+
+* Data Analystics in Business Jamboree, CEU 2025
