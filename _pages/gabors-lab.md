@@ -10,10 +10,7 @@ ___
 
 ## About
 
-Gabors Data Analysis and AI Lab is a research and education initiative housed within the Economics Department of Central European University. The lab brings together economists, quantitative social scientists, and data science professionals united by a core mission: democratizing data science education and research. We focus on creating high-quality teaching materials for data analysis and econometrics, supporting AI-intensive research in economics and social sciences, and training the next generation of applied data analysts for both academic research and business applications.
-
-
-Gabors Data Analysis and AI Lab is a research and education initiative housed within the Economics Department of Central European University. The lab brings together economists, quantitative social scientists, and data science professionals united by a core mission:  making data analysis and data science education and research capabilities widely accessible. The lab serves as a bridge between academia and business, and between research and teaching. We create high-quality teaching materials for data analysis and econometrics, study the use of AI for analysis and education and support AI-intensive research projects in economics and social sciences.
+**Gabors Data Analysis and AI Lab** is a research and education initiative housed within the Economics Department of Central European University. The lab brings together economists, quantitative social scientists, and data science professionals united by a core mission:  making data analysis and data science education and research capabilities widely accessible. The lab serves as a bridge between academia and business, and between research and teaching. We create high-quality teaching materials for data analysis and econometrics, study the use of AI for analysis and education and support AI-intensive research projects in economics and social sciences.
 
 ## What we do
 
