@@ -6,7 +6,6 @@ author_profile: false
 redirect_from:
   - /gabors-lab.html
 ---
-___
 
 
 ***Accelerating data analysis and AI learning through innovative and open educational resources.***
@@ -19,6 +18,7 @@ ___
 
 Our work centers on developing comprehensive educational resources tied to the Data Analysis for Business, Economics, and Policy textbook ecosystem. We create and maintain open-source code repositories, setup documentation, case studies, and practice materials, alongside instructor dashboards (dashboards.gabors-data-analysis.com) that support teaching worldwide. We launched an innovative [Data Analysis with AI](https://gabors-data-analysis.com/ai-course/) course reflecting our commitment to integrating artificial intelligence into quantitative education and research support. All our materials are free and open-source. We train the next generation of applied data analysts: our research assistants and associates launch careers as data scientists in business, pursue PhDs, or conduct policy research. 
 
+For more details, see [our projetcs](/gabors-lab-projects.md)
 
 ## Where we are
 
