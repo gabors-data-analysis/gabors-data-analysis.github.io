@@ -28,6 +28,14 @@ Developed new course material
 * Case study and exercise development
 * Testing across platforms
 
+### Code teaching courses
+
+* Data Analysis [with Python](https://github.com/gabors-data-analysis/da-coding-python), [with R](https://github.com/gabors-data-analysis/da-coding-rstats), [with Stata](https://github.com/gabors-data-analysis/da-coding-stata) 
+
+### Tutorials 
+
+* [Python setup](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-python.md) for beginners. 
+
 ### Practice question
 
 Create practice questions, and testing tools

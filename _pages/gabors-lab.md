@@ -28,7 +28,7 @@ For more details, see [our projetcs](/gabors-lab-projects.md)
 ## Where we are
 
 We work in Vienna (AT), Budapest (HU) and online. 
-
+We are at [LinkedIn]()
 
 
 ## Staff and alumni
@@ -44,21 +44,23 @@ We work in Vienna (AT), Budapest (HU) and online.
 
 ### Current analysts and associates
 
-* Daniel Barabás, associate 
+* Daniel Barabás, associate
 * Márton Nagy, analyst
-* Tatyana Yakushina, analyst 
+* Tatyana Yakushina, analyst
 
 ### Alumni
 
-* Endre Borza (Data scientist, Corvinus, Hungary)
+* Endre Borza ([Research Data Engineer, Corvinus Uni](https://www.linkedin.com/in/endremborza/), Hungary)
 * Kenneth Colombe (Phd Student, Bonn, Germany)
-* Zsuzsa Holler (data scientist, SAS, Hungary)
-* Zsóia Kőműves (economist, Cambridge Econometrics, Hungary)
-* Eszter Pázmándi (data scientist, Spain)
+* János Divényi ([Data scientist, SAP](https://www.linkedin.com/in/janosdivenyi/), Budapest)
+* Zsuzsa Holler ([Data scientist, SAS](https://www.linkedin.com/in/zsuzsa-holler-70bba031/), Hungary)
+* Zsóia Kőműves ([Senior economist, Cambridge Econometrics](https://www.linkedin.com/in/zsofia-komuves-05651339/), Hungary)
+* Eszter Pázmándi ([data scientist, Pepsico](https://www.linkedin.com/in/eszterpazmandi/), Spain)
 * Ágoston Reguly (AP, Corvinus, Hungary)
-* Kinga Ritter (data scientist, Spain)
+* Kinga Ritter ([Data PM, Job and Talent](https://www.linkedin.com/in/eszterpazmandi/), Spain)
 * Zsuzsa Vadle (Phd Student, CEU, Austria)
-* Ádám Víg (data scientist, Google, Hungary)
+* Ádám Víg ([Data analyst/AI, Google](https://www.linkedin.com/in/adam-vig-250729196/), Hungary)
+
 
 ## Partners
 
