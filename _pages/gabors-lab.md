@@ -31,15 +31,19 @@ We work in Vienna (AT), Budapest (HU) and online.
 We are at [LinkedIn]()
 
 
-## Staff and alumni
+## Staff
 
 ### Senior staff
 
 * Gábor Békés, Director
 
+### Board
+
+* Eduardo de la Rubia (CEU, ex-Meta / Facebook)
+
 ### Founders
 
-* Gábor Békés (CEU, Austria; KRTK, Hungary and CEPR, UK)
+* Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK](https://www.gaborbekes.com))
 * [Gábor Kézdi](https://kezdigabor.life/) (formerly: Corvinus, CEU, KRTK and U Michigan, USA) 
 
 ### Current analysts and associates
@@ -48,17 +52,17 @@ We are at [LinkedIn]()
 * Márton Nagy, analyst
 * Tatyana Yakushina, analyst
 
-### Alumni
+## Alumni
 
 * Endre Borza ([Research Data Engineer, Corvinus Uni](https://www.linkedin.com/in/endremborza/), Hungary)
-* Kenneth Colombe (Phd Student, Bonn, Germany)
+* Kenneth Colombe ([Phd Student, Bonn](https://www.linkedin.com/in/kenneth-colombe/), Germany)
 * János Divényi ([Data scientist, SAP](https://www.linkedin.com/in/janosdivenyi/), Budapest)
 * Zsuzsa Holler ([Data scientist, SAS](https://www.linkedin.com/in/zsuzsa-holler-70bba031/), Hungary)
 * Zsóia Kőműves ([Senior economist, Cambridge Econometrics](https://www.linkedin.com/in/zsofia-komuves-05651339/), Hungary)
 * Eszter Pázmándi ([data scientist, Pepsico](https://www.linkedin.com/in/eszterpazmandi/), Spain)
-* Ágoston Reguly (AP, Corvinus, Hungary)
+* Ágoston Reguly ([Assistant Professor, Corvinus Uni](https://regulyagoston.github.io/), Hungary)
 * Kinga Ritter ([Data PM, Job and Talent](https://www.linkedin.com/in/eszterpazmandi/), Spain)
-* Zsuzsa Vadle (Phd Student, CEU, Austria)
+* Zsuzsa Vadle ([Phd Student, CEU](https://www.linkedin.com/in/zsuzsannavadle/), Austria)
 * Ádám Víg ([Data analyst/AI, Google](https://www.linkedin.com/in/adam-vig-250729196/), Hungary)
 
 
