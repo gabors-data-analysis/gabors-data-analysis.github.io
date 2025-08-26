@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-** Creating innovative open-source educational resources and supporting research in data analysis, data science, and AI for economics and social sciences.**
+**Creating innovative open-source educational resources and supporting research in data analysis, data science, and AI for economics and social sciences.**
 
 ![lab cover](images/lab-image1.png){:height="100%" width="100%"}
 
