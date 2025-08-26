@@ -8,8 +8,7 @@ redirect_from:
 ---
 
 
-***Accelerating data analysis and AI learning through innovative and open educational resources.***
-
+** Creating innovative open-source educational resources and supporting research in data analysis, data science, and AI for economics and social sciences.**
 
 ![lab cover](images/lab-image1.png){:height="100%" width="100%"}
 
@@ -17,7 +16,13 @@ redirect_from:
 
 ## About
 
-**Gabors Data Analysis and AI Lab** is a research and education initiative housed within the Economics Department of Central European University. The lab brings together economists, quantitative social scientists, and data science professionals united by a core mission:  making data analysis and data science education and research capabilities widely accessible. The lab serves as a bridge between academia and business, and between research and teaching. We create high-quality and innovative teaching materials for data analysis and econometrics and support data sciene and AI intensive research projects in economics and social sciences. 
+**Gabors Data Analysis and AI Lab** is a research and education initiative housed within the Economics Department of Central European University. The lab brings together economists, quantitative social scientists, and data science professionals. Our mission is "Creating innovative open-source educational resources and supporting research in data analysis, data science, and AI for economics and social sciences." The lab serves as a bridge between academia and business, and between research and teaching. We create high-quality and innovative teaching materials for data analysis and econometrics and support data sciene and AI intensive research projects in economics and social sciences. 
+
+The lab was founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK](https://www.gaborbekes.com)) and [Gábor Kézdi](https://kezdigabor.life/) (formerly: Corvinus, CEU, KRTK and U Michigan, USA) 
+
+## Mission
+
+Our mission is to 
 
 ## What we do
 
@@ -28,23 +33,20 @@ For more details, see [our projetcs](/gabors-lab-projects.md)
 ## Where we are
 
 We work in Vienna (AT), Budapest (HU) and online. 
-We are at [LinkedIn]()
+
+We are at [LinkedIn](https://www.linkedin.com/company/gabors-data-lab/)
 
 
 ## Staff
 
 ### Senior staff
 
-* Gábor Békés, Director
+* Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK](https://www.gaborbekes.com)) , Managing Director
 
-### Board
 
-* Eduardo de la Rubia (CEU, ex-Meta / Facebook)
+### Board of directors
 
-### Founders
-
-* Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK](https://www.gaborbekes.com))
-* [Gábor Kézdi](https://kezdigabor.life/) (formerly: Corvinus, CEU, KRTK and U Michigan, USA) 
+* Eduardo Ariño de la Rubia [(CEU, ex-Meta / Facebook)](https://www.linkedin.com/in/earino/)
 
 ### Current analysts and associates
 
