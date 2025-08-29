@@ -91,10 +91,10 @@ We are at [LinkedIn](https://www.linkedin.com/company/gabors-data-lab/)
 
 ## Events
 
-* [Data Analystics in Business Jamboree, CEU 2025](https://events.ceu.edu/2025-01-10/ceu-data-analytics-business-jamboree)
+**[Data Analystics in Business Jamboree, CEU 2025](https://events.ceu.edu/2025-01-10/ceu-data-analytics-business-jamboree)**
 
-<!--- ![Jamboree 2025 January](images/ceu-jamboree-2025-jan.jpeg){:height="80%" width="80%"} --->
+![Jamboree 2025 January](images/ceu-jamboree-2025-jan.jpeg){:height="80%" width="80%"}
 
-* Gabors Data Pizza
+**Gabors Data Pizza**
 
-<!--- ![gabors pizza 2025 summer](images/gabors-pizza-2025-aug.jpg){:height="80%" width="80%"} --->
+![gabors pizza 2025 summer](images/gabors-pizza-2025-aug.jpg){:height="80%" width="80%"} 
