@@ -57,21 +57,29 @@ We are at [LinkedIn](https://www.linkedin.com/company/gabors-data-lab/)
 
 ## Alumni
 
+This project started in 2013, and we had the pleasure to work with great many talented young people. 
+
 * Endre Borza ([Research Data Engineer, Corvinus Uni](https://www.linkedin.com/in/endremborza/), Hungary)
 * Kenneth Colombe ([Phd Student, Bonn](https://www.linkedin.com/in/kenneth-colombe/), Germany)
 * János Divényi ([Data scientist, SAP](https://www.linkedin.com/in/janosdivenyi/), Hungary)
 * Zsuzsa Holler ([Data scientist, SAP](https://www.linkedin.com/in/zsuzsa-holler-70bba031/), Hungary)
 * Zsóia Kőműves ([Senior economist, Cambridge Econometrics](https://www.linkedin.com/in/zsofia-komuves-05651339/), Hungary)
+* Benedek Pásztor ([Senior Data Scientist, vestas](https://www.linkedin.com/in/benedek-pasztor/), Portugal)
 * Eszter Pázmándi ([data scientist, Pepsico](https://www.linkedin.com/in/eszterpazmandi/), Spain)
 * Ágoston Reguly ([Assistant Professor, Corvinus Uni](https://regulyagoston.github.io/), Hungary)
 * Kinga Ritter ([Data PM, Job and Talent](https://www.linkedin.com/in/eszterpazmandi/), Spain)
 * Zsuzsa Vadle ([Phd Student, CEU](https://www.linkedin.com/in/zsuzsannavadle/), Austria)
 * Ádám Víg ([Data analyst/AI, Google](https://www.linkedin.com/in/adam-vig-250729196/), Hungary)
 
-## Senior advisors
+## Senior advisers 
+
+Past and present
 
 * Péter Duronelly ([FinOps Lead, Magyar Telekom](https://www.linkedin.com/in/peter-duronelly-44a98188/), Hungary)
 * Gergely Daróczi ([Project Lead, SpareCores, CEU](https://www.linkedin.com/in/daroczig/), Hungary)
+* Miklós Koren ([Professor of Economics, CEU](https://www.linkedin.com/in/miklos-koren-b535a42a/), Austria)
+* Robert Lieli ([Professor of Economics, CEU](https://people.ceu.edu/robert_lieli), Austria)
+
 
 ## Partners
 
