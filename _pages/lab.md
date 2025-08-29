@@ -51,16 +51,16 @@ We are at [LinkedIn](https://www.linkedin.com/company/gabors-data-lab/)
 
 ### Current analysts and associates
 
-* Daniel Barabás, associate
-* Márton Nagy, analyst
-* Tatyana Yakushina, analyst
+* Daniel Barabás ([associate](https://www.linkedin.com/in/barab%C3%A1s-d%C3%A1niel-853179211/), Hungary)
+* Márton Nagy, ([analyst](https://www.linkedin.com/in/nagymarton/), Hungary) 
+* Tatyana Yakushina, ([analyst](https://www.linkedin.com/in/tatyana-yakushina/), Austria) analyst
 
 ## Alumni
 
 * Endre Borza ([Research Data Engineer, Corvinus Uni](https://www.linkedin.com/in/endremborza/), Hungary)
 * Kenneth Colombe ([Phd Student, Bonn](https://www.linkedin.com/in/kenneth-colombe/), Germany)
-* János Divényi ([Data scientist, SAP](https://www.linkedin.com/in/janosdivenyi/), Budapest)
-* Zsuzsa Holler ([Data scientist, SAS](https://www.linkedin.com/in/zsuzsa-holler-70bba031/), Hungary)
+* János Divényi ([Data scientist, SAP](https://www.linkedin.com/in/janosdivenyi/), Hungary)
+* Zsuzsa Holler ([Data scientist, SAP](https://www.linkedin.com/in/zsuzsa-holler-70bba031/), Hungary)
 * Zsóia Kőműves ([Senior economist, Cambridge Econometrics](https://www.linkedin.com/in/zsofia-komuves-05651339/), Hungary)
 * Eszter Pázmándi ([data scientist, Pepsico](https://www.linkedin.com/in/eszterpazmandi/), Spain)
 * Ágoston Reguly ([Assistant Professor, Corvinus Uni](https://regulyagoston.github.io/), Hungary)
@@ -68,13 +68,33 @@ We are at [LinkedIn](https://www.linkedin.com/company/gabors-data-lab/)
 * Zsuzsa Vadle ([Phd Student, CEU](https://www.linkedin.com/in/zsuzsannavadle/), Austria)
 * Ádám Víg ([Data analyst/AI, Google](https://www.linkedin.com/in/adam-vig-250729196/), Hungary)
 
+## Senior advisors
+
+* Péter Duronelly ([FinOps Lead, Magyar Telekom](https://www.linkedin.com/in/peter-duronelly-44a98188/), Hungary)
+* Gergely Daróczi ([Project Lead, SpareCores, CEU](https://www.linkedin.com/in/daroczig/), Hungary)
 
 ## Partners
 
-* CEU Department of Economics, funding since 2013
-* CEU Teaching Development Grant, grant 2024
-* Cambridge University Press, textbook publisher
+### Education
+
+* [CEU Department of Economics](https://economics.ceu.edu/), funding since 2013
+* [CEU Teaching Development Grant](https://elkana.ceu.edu/), grant 2024
+* [Cambridge University Press](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20#overview), textbook publisher
+
+### Technology
+
+* [SpareCores](https://sparecores.com/), technology partner
+
+### Case studies
+
+* [World Management Survey](https://worldmanagementsurvey.org/)
 
 ## Events
 
-* Data Analystics in Business Jamboree, CEU 2025
+* [Data Analystics in Business Jamboree, CEU 2025](https://events.ceu.edu/2025-01-10/ceu-data-analytics-business-jamboree)
+
+<!--- ![Jamboree 2025 January](images/ceu-jamboree-2025-jan.jpeg){:height="80%" width="80%"} --->
+
+* Gabors Data Pizza
+
+<!--- ![gabors pizza 2025 summer](images/gabors-pizza-2025-aug.jpg){:height="80%" width="80%"} --->
