@@ -27,7 +27,13 @@ The lab was founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK
 
 ## What we do
 
-Our work centers on developing comprehensive educational resources tied to the Data Analysis for Business, Economics, and Policy textbook ecosystem. We create and maintain open-source code repositories, setup documentation, case studies, and practice materials, alongside instructor dashboards (dashboards.gabors-data-analysis.com) that support teaching worldwide. We launched an innovative [Data Analysis with AI](https://gabors-data-analysis.com/ai-course/) course reflecting our commitment to integrating artificial intelligence into quantitative education and research support. All our materials are free and open-source. We train the next generation of applied data analysts: our research assistants and associates launch careers as data scientists in business, pursue PhDs, or conduct policy research. 
+Our work centers on developing comprehensive educational resources tied to the Data Analysis for Business, Economics, and Policy textbook ecosystem. We create and maintain [open-source code repositories](https://github.com/gabors-data-analysis/), setup documentation, case studies, and practice materials, alongside interactive [dashboards](dashboards.gabors-data-analysis.com) that support teaching worldwide. We create coding courses [like this](https://github.com/gabors-data-analysis/da-coding-python) and guides [like this Python setup]](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-python.md) for educators and researchers. We launched an innovative [Data Analysis with AI](https://gabors-data-analysis.com/ai-course/) course reflecting our commitment to integrating artificial intelligence into quantitative education. We build tools and support materials for social science researcher relying more and more on data science and AI, like this on [APIs](https://gabors-data-analysis.com/ai-course/week06/assets/api-use.html) or [LLMs](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html#/title-slide).  
+
+All our materials are free and open-source.
+
+We train the next generation of applied data analysts: our research assistants and associates launch careers as data scientists in business, pursue PhDs, or conduct policy research. 
+
+
 
 For more details, see [our projetcs](/gabors-lab-projects.md)
 
