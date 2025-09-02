@@ -31,6 +31,9 @@ Our work centers on developing comprehensive educational resources tied to the D
 
 For more details, see [our projetcs](/gabors-lab-projects.md)
 
+We are recruiting [corporate partners](lab-partners.md). For more information or to explore partnership opportunities, contact us at [gabor.bekes@ceu.edu](mailto:gabor.bekes@ceu.edu).
+
+
 ## Where we are
 
 We work in Vienna (AT), Budapest (HU) and online. 
