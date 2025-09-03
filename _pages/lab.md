@@ -10,10 +10,7 @@ redirect_from:
 # Gabors Data Analysis and AI Lab
 
 
-**Creating innovative open-source educational resources and supporting research in data analysis, data science, and AI for economics and social sciences.**
-
 ![lab cover](images/lab-image1.png){:height="100%" width="100%"}
-
 
 ## About
 
@@ -31,9 +28,12 @@ The Lab was founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK
 
 **AI-Enhanced Data Analysis Research**: We pioneer research into how artificial intelligence can support, extend, and augment every stage of the data analysis pipeline—from data collection and cleaning to model design, analysis, and reporting. This includes developing [AI-integrated coursework](https://gabors-data-analysis.com/ai-course/) and producing accessible reviews of AI tools for academic and policy applications.
 
-**Next-Generation Data Practitioners Training**: We train applied data analysts who launch careers as data scientists in business, pursue advanced academic research, or conduct evidence-based policy work. Our research assistants and associates gain hands-on experience with cutting-edge methodologies while contributing to our open-source mission.
+**Next-Generation Data User Training**: We train applied data analysts who launch careers as data scientists in business, pursue advanced academic research, or conduct evidence-based policy work. Our research assistants and associates gain hands-on experience with cutting-edge methodologies while contributing to our open-source mission.
 
 All our materials are freely available and open-source, removing barriers to high-quality quantitative education globally.
+
+
+## Next
 
 For more details, see [our projetcs](/gabors-lab-projects.md)
 
