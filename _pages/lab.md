@@ -16,18 +16,20 @@ redirect_from:
 
 ## About
 
-**Gabors Data Analysis and AI Lab** is a research and education initiative housed within the Economics Department of Central European University. The lab brings together economists, quantitative social scientists, and data science professionals. 
+**Gabors Data Analysis and AI Lab** is a research and education initiative housed within the Economics Department of Central European University. 
+The lab serves as a bridge between academia and business, and between research and teaching, and brings together economists, quantitative social scientists, and data science professionals. 
 
 Our mission is "Creating innovative open-source educational resources and supporting research in data analysis, data science, and AI for economics and social sciences." 
+We create high-quality and innovative teaching materials for data analysis, AI and econometrics. 
+We support data sciene and AI intensive research projects in economics and social sciences. 
+We research and test how AI can help data analysis. 
 
-The lab serves as a bridge between academia and business, and between research and teaching. We create high-quality and innovative teaching materials for data analysis and econometrics and support data sciene and AI intensive research projects in economics and social sciences. 
-
-The lab was founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK](https://www.gaborbekes.com)) and [Gábor Kézdi](https://kezdigabor.life/) (formerly: Corvinus, CEU, KRTK and U Michigan, USA) 
-
+The forerunner of this Lab was a collective founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK](https://www.gaborbekes.com)) and [Gábor Kézdi](https://kezdigabor.life/) (formerly: Corvinus, CEU, KRTK and U Michigan, USA) 
 
 ## What we do
 
-Our work centers on developing comprehensive educational resources tied to the Data Analysis for Business, Economics, and Policy textbook ecosystem. We create and maintain [open-source code repositories](https://github.com/gabors-data-analysis/), setup documentation, case studies, and practice materials, alongside interactive [dashboards](dashboards.gabors-data-analysis.com) that support teaching worldwide. We create coding courses [like this](https://github.com/gabors-data-analysis/da-coding-python) and guides [like this Python setup]](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-python.md) for educators and researchers. We launched an innovative [Data Analysis with AI](https://gabors-data-analysis.com/ai-course/) course reflecting our commitment to integrating artificial intelligence into quantitative education. We build tools and support materials for social science researcher relying more and more on data science and AI, like this on [APIs](https://gabors-data-analysis.com/ai-course/week06/assets/api-use.html) or [LLMs](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html#/title-slide).  
+Our work centers on developing comprehensive educational resources tied to the Data Analysis for Business, Economics, and Policy textbook ecosystem. 
+We create and maintain [open-source code repositories](https://github.com/gabors-data-analysis/), setup documentation, case studies, and practice materials, alongside interactive [dashboards](dashboards.gabors-data-analysis.com) that support teaching worldwide. We create coding courses [like this](https://github.com/gabors-data-analysis/da-coding-python) and guides [like this Python setup]](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-python.md) for educators and researchers. We launched an innovative [Data Analysis with AI](https://gabors-data-analysis.com/ai-course/) course reflecting our commitment to integrating artificial intelligence into quantitative education. We build tools and support materials for social science researcher relying more and more on data science and AI, like this on [APIs](https://gabors-data-analysis.com/ai-course/week06/assets/api-use.html) or [LLMs](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html#/title-slide).  
 
 All our materials are free and open-source.
 
