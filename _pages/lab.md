@@ -7,34 +7,33 @@ redirect_from:
   - /lab.html
 ---
 
+# Gabors Data Analysis and AI Lab
+
 
 **Creating innovative open-source educational resources and supporting research in data analysis, data science, and AI for economics and social sciences.**
 
 ![lab cover](images/lab-image1.png){:height="100%" width="100%"}
 
 
-
 ## About
 
-**Gabors Data Analysis and AI Lab** is a research and education initiative housed within the Economics Department of Central European University. 
-The lab serves as a bridge between academia and business, and between research and teaching, and brings together economists, quantitative social scientists, and data science professionals. 
+**Gabors Data Analysis and AI Lab** is a research and education initiative housed within the Economics Department of Central European University, serving as Europe's emerging hub for open-source data analysis education in economics.
 
-Our mission is "Creating innovative open-source educational resources and supporting research in data analysis, data science, and AI for economics and social sciences." 
-We create high-quality and innovative teaching materials for data analysis, AI and econometrics. 
-We support data sciene and AI intensive research projects in economics and social sciences. 
-We research and test how AI can help data analysis. 
+Built on the foundation of the acclaimed "Data Analysis for Business, Economics, and Policy" textbook ecosystem, the Lab creates and maintains the world's most comprehensive open-source educational infrastructure for quantitative social science. We develop teaching materials, case studies, coding resources, and interactive tools that enable educators and researchers worldwide to integrate modern data science and AI techniques into their work.
 
-The forerunner of this Lab was a collective founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK](https://www.gaborbekes.com)) and [Gábor Kézdi](https://kezdigabor.life/) (formerly: Corvinus, CEU, KRTK and U Michigan, USA) 
+Our unique position in Europe allows us to bridge academic rigor with practical application, connecting researchers across continents while advancing the frontier of how AI can augment and enhance data analysis processes. From our bases in Vienna and Budapest, we serve a global community of educators, students, and practitioners.
 
-## What we do
+The Lab was founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK](https://www.gaborbekes.com)) and [Gábor Kézdi](https://kezdigabor.life/) (formerly: Corvinus, CEU, KRTK and U Michigan, USA), continuing their decade-long collaboration in advancing data analysis education.
 
-Our work centers on developing comprehensive educational resources tied to the Data Analysis for Business, Economics, and Policy textbook ecosystem. We create and maintain [open-source code repositories](https://github.com/gabors-data-analysis/), setup documentation, case studies, and practice materials, alongside interactive [dashboards](dashboards.gabors-data-analysis.com) that support teaching worldwide. We create coding courses [like this](https://github.com/gabors-data-analysis/da-coding-python) and guides [like this Python setup](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-python.md) for educators and researchers. We launched an innovative [Data Analysis with AI](https://gabors-data-analysis.com/ai-course/) course reflecting our commitment to integrating artificial intelligence into quantitative education. We build tools and support materials for social science researcher relying more and more on data science and AI, like this on [APIs](https://gabors-data-analysis.com/ai-course/week06/assets/api-use.html) or [LLMs](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html#/title-slide).  
+## What We Do
 
-All our materials are free and open-source.
+**Educational Ecosystem Development**: We create and maintain comprehensive [open-source educational resources](https://github.com/gabors-data-analysis/) including the complete Data Analysis textbook ecosystem—from foundational case studies and datasets to advanced coding tutorials and [interactive dashboards](dashboards.gabors-data-analysis.com). Our materials support thousands of educators teaching quantitative methods worldwide.
 
-We train the next generation of applied data analysts: our research assistants and associates launch careers as data scientists in business, pursue PhDs, or conduct policy research. 
+**AI-Enhanced Data Analysis Research**: We pioneer research into how artificial intelligence can support, extend, and augment every stage of the data analysis pipeline—from data collection and cleaning to model design, analysis, and reporting. This includes developing [AI-integrated coursework](https://gabors-data-analysis.com/ai-course/) and producing accessible reviews of AI tools for academic and policy applications.
 
+**Next-Generation Data Practitioners Training**: We train applied data analysts who launch careers as data scientists in business, pursue advanced academic research, or conduct evidence-based policy work. Our research assistants and associates gain hands-on experience with cutting-edge methodologies while contributing to our open-source mission.
 
+All our materials are freely available and open-source, removing barriers to high-quality quantitative education globally.
 
 For more details, see [our projetcs](/gabors-lab-projects.md)
 
