@@ -7,8 +7,7 @@ redirect_from:
   - /lab.html
 ---
 
-# Gabors Data Analysis and AI Lab
-
+**Gabors Data Analysis and AI Lab**: *Empowering researchers, educators, and practitioners with the tools and guidance needed to integrate data analysis and AI into their work.*
 
 ![lab cover](images/lab-image1.png){:height="100%" width="100%"}
 
@@ -33,7 +32,7 @@ The Lab was founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK
 All our materials are freely available and open-source, removing barriers to high-quality quantitative education globally.
 
 
-## Next
+## More 
 
 For more details, see [our projetcs](/gabors-lab-projects.md)
 
@@ -53,7 +52,6 @@ We are at [LinkedIn](https://www.linkedin.com/company/gabors-data-lab/)
 
 * Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK](https://www.gaborbekes.com)) , Managing Director
 
-
 ### Board of directors
 
 * Eduardo Ariño de la Rubia [(CEU, ex-Meta / Facebook)](https://www.linkedin.com/in/earino/)
@@ -63,6 +61,18 @@ We are at [LinkedIn](https://www.linkedin.com/company/gabors-data-lab/)
 * Daniel Barabás ([associate](https://www.linkedin.com/in/barab%C3%A1s-d%C3%A1niel-853179211/), Hungary)
 * Márton Nagy, ([analyst](https://www.linkedin.com/in/nagymarton/), Hungary) 
 * Tatyana Yakushina, ([analyst](https://www.linkedin.com/in/tatyana-yakushina/), Austria) analyst
+
+We'll be hiring. Calls will be out by end of September 2025. Check back if interested. 
+
+## Senior advisers 
+
+Past and present
+
+* Péter Duronelly ([FinOps Lead, Magyar Telekom](https://www.linkedin.com/in/peter-duronelly-44a98188/), Hungary)
+* Gergely Daróczi ([Project Lead, SpareCores, CEU](https://www.linkedin.com/in/daroczig/), Hungary)
+* Miklós Koren ([Professor of Economics, CEU](https://www.linkedin.com/in/miklos-koren-b535a42a/), Austria)
+* Robert Lieli ([Professor of Economics, CEU](https://people.ceu.edu/robert_lieli), Austria)
+
 
 ## Alumni
 
@@ -79,15 +89,6 @@ This project started in 2013, and we had the pleasure to work with great many ta
 * Kinga Ritter ([Data PM, Job and Talent](https://www.linkedin.com/in/eszterpazmandi/), Spain)
 * Zsuzsa Vadle ([Phd Student, CEU](https://www.linkedin.com/in/zsuzsannavadle/), Austria)
 * Ádám Víg ([Data analyst/AI, Google](https://www.linkedin.com/in/adam-vig-250729196/), Hungary)
-
-## Senior advisers 
-
-Past and present
-
-* Péter Duronelly ([FinOps Lead, Magyar Telekom](https://www.linkedin.com/in/peter-duronelly-44a98188/), Hungary)
-* Gergely Daróczi ([Project Lead, SpareCores, CEU](https://www.linkedin.com/in/daroczig/), Hungary)
-* Miklós Koren ([Professor of Economics, CEU](https://www.linkedin.com/in/miklos-koren-b535a42a/), Austria)
-* Robert Lieli ([Professor of Economics, CEU](https://people.ceu.edu/robert_lieli), Austria)
 
 
 ## Partners
