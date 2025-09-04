@@ -25,7 +25,7 @@ The Lab was founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK
 
 **Educational Ecosystem Development**: We create and maintain comprehensive [open-source educational resources](https://github.com/gabors-data-analysis/) including the complete Data Analysis textbook ecosystem—from foundational case studies and datasets to advanced coding tutorials and [interactive dashboards](dashboards.gabors-data-analysis.com). Our materials support thousands of educators teaching quantitative methods worldwide.
 
-**AI-Enhanced Data Analysis Research**: We pioneer research into how artificial intelligence can support, extend, and augment every stage of the data analysis pipeline—from data collection and cleaning to model design, analysis, and reporting. This includes developing [AI-integrated coursework](https://gabors-data-analysis.com/ai-course/) and producing accessible reviews of AI tools for academic and policy applications.
+**Research and Education on Applying AI in Data Analysis**: We pioneer research into how artificial intelligence can support, extend, and augment every stage of the data analysis pipeline—from data collection and cleaning to model design, analysis, and reporting. This includes developing [AI-integrated coursework](https://gabors-data-analysis.com/ai-course/) and producing accessible reviews of AI tools for academic and policy applications.
 
 **Next-Generation Data User Training**: We train applied data analysts who launch careers as data scientists in business, pursue advanced academic research, or conduct evidence-based policy work. Our research assistants and associates gain hands-on experience with cutting-edge methodologies while contributing to our open-source mission.
 
