@@ -29,8 +29,6 @@ The Lab was founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK
 
 **Research and Education on Applying AI in Data Analysis**: We pioneer research into how artificial intelligence can support, extend, and augment every stage of the data analysis pipeline—from data collection and cleaning to model design, analysis, and reporting. This includes developing [AI-integrated coursework](https://gabors-data-analysis.com/ai-course/) and producing accessible reviews of AI tools for academic and policy applications.
 
-**Case study based learning**: We believe students learn best through real-world case studies. Our collection of 42 case studies (with more in development) primarily teach data analysis and econometrics methods along with the necessary coding and data science tools. They also explore substantive topics like wage inequality, market dynamics, and policy interventions, with global coverage spanning diverse economic contexts.
-
 **Next-Generation Data User Training**: We train applied data analysts who launch careers as data scientists in business, pursue advanced academic research, or conduct evidence-based policy work. Our research assistants and associates gain hands-on experience with cutting-edge methodologies while contributing to our open-source mission.
 
 All our materials are freely available and open-source, removing barriers to high-quality quantitative education globally.
