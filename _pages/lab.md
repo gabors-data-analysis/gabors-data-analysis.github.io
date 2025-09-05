@@ -13,17 +13,19 @@ redirect_from:
 
 ## About
 
-**Gabors Data Analysis and AI Lab** is a research and education initiative housed within the Economics Department of Central European University, serving as Europe's emerging hub for open-source data analysis education in economics.
+**Gabors Data Analysis and AI Lab** is a research and education initiative housed within the Economics Department of Central European University, serving as Europe's emerging hub for open-source data analysis and AI education in the social sciences.
 
-Built on the foundation of the acclaimed "Data Analysis for Business, Economics, and Policy" textbook ecosystem, the Lab creates and maintains the world's most comprehensive open-source educational infrastructure for quantitative social science. We develop teaching materials, case studies, coding resources, and interactive tools that enable educators and researchers worldwide to integrate modern data science and AI techniques into their work.
+Built on the foundation of the "Data Analysis for Business, Economics, and Policy" textbook ecosystem, the Lab creates and maintains comprehensive open-source educational infrastructure for quantitative social science. We democratize access to data analysis and AI education. We develop teaching materials, case studies, coding resources, and interactive tools that enable educators and researchers worldwide to integrate modern data science and AI techniques into their work. 
 
-Our unique position in Europe allows us to bridge academic rigor with practical application, connecting researchers across continents while advancing the frontier of how AI can augment and enhance data analysis processes. From our bases in Vienna and Budapest, we serve a global community of educators, students, and practitioners.
+We bridge academic rigor with practical application, translating complex methods into accessible resources and implementation guidance for practitioners worldwide. 
+
+From our bases in Vienna and Budapest, we serve a global community of educators, students, and practitioners by providing practical guidance on integrating AI into data analysis workflows. Our European base provides international partners with diverse perspectives and approaches to analytics use cases and AI implementation.
 
 The Lab was founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK](https://www.gaborbekes.com)) and [Gábor Kézdi](https://kezdigabor.life/) (formerly: Corvinus, CEU, KRTK and U Michigan, USA), continuing their decade-long collaboration in advancing data analysis education.
 
 ## What We Do
 
-**Educational Ecosystem Development**: We create and maintain comprehensive [open-source educational resources](https://github.com/gabors-data-analysis/) including the complete Data Analysis textbook ecosystem—from foundational case studies and datasets to advanced coding tutorials and [interactive dashboards](dashboards.gabors-data-analysis.com). Our materials support thousands of educators teaching quantitative methods worldwide.
+**Educational Ecosystem Development**: We create and maintain comprehensive [open-source educational resources](https://github.com/gabors-data-analysis/) including the complete Data Analysis textbook ecosystem—from foundational case studies and datasets to advanced coding tutorials and [interactive dashboards](dashboards.gabors-data-analysis.com). Our materials support hundreds of educators teaching quantitative methods worldwide.
 
 **Research and Education on Applying AI in Data Analysis**: We pioneer research into how artificial intelligence can support, extend, and augment every stage of the data analysis pipeline—from data collection and cleaning to model design, analysis, and reporting. This includes developing [AI-integrated coursework](https://gabors-data-analysis.com/ai-course/) and producing accessible reviews of AI tools for academic and policy applications.
 
@@ -40,6 +42,8 @@ We are recruiting [corporate partners](lab-partners.md). For more information or
 
 
 ## Where we are
+
+Built at [Central European University](https://www.ceu.edu/) —an international, English-language institution that combines American academic traditions, open society values and European perspectives. 
 
 We work in Vienna (AT), Budapest (HU) and online. 
 
