@@ -13,6 +13,8 @@ redirect_from:
 
 ## Case study development 
 
+We believe students learn best through real-world case studies. Our collection of 42 case studies (with more in development) primarily teach data analysis and econometrics methods along with the necessary coding and data science tools. They also explore substantive topics like wage inequality, market dynamics, and policy interventions, with global coverage spanning diverse economic contexts.
+
 We develop the case studies that power the Data Analysis ecosystem. 
 
 * Idea development, background reviews, domain knowledge
