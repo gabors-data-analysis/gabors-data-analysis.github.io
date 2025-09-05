@@ -15,29 +15,17 @@ redirect_from:
 
 We believe students learn best through real-world case studies. Our collection of 42 case studies (with more in development) primarily teach data analysis and econometrics methods along with the necessary coding and data science tools. They also explore substantive topics like wage inequality, market dynamics, and policy interventions, with global coverage spanning diverse economic contexts.
 
-We develop the case studies that power the Data Analysis ecosystem. 
+We develop the case studies that power the Data Analysis ecosystem: Idea development, background reviews, domain knowledge + Data collection + Code writing and testing (Python, R, Stata) +  Reports, case study documents, slides
 
-* Idea development, background reviews, domain knowledge
-* Data collection
-* Code writing and testing (Python, R, Stata)
-* Reports, case study documents, slides
+Current [case studies](https://gabors-data-analysis.com/casestudies/)
 
-### Current projects
-
-* IPOs and stock price
-* World Values Survey 
-* More football
 
 ## Course and study material development
 
 ### Data Analysis with AI
 
-Developed new course material
-* Idea collection
-* Review of literature and discussions on LLMs and their use
-* Teaching materials 
-* Case study and exercise development
-* Testing across platforms
+New course, still in development: [Data Analysis with AI](https://gabors-data-analysis.com/ai-course/). From getting to code with AI to reporting, text analysis and supporting causal inference. 
+
 
 ## Teaching support
 
@@ -54,9 +42,10 @@ These [dashboards](https://dashboards.gabors-data-analysis.com/) illustrate what
   * [with R](https://github.com/gabors-data-analysis/da-coding-rstats), 
   * [with Stata](https://github.com/gabors-data-analysis/da-coding-stata) 
 
-### Tutorials 
+### Tutorials, data science help 
 
 * [Python setup](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-python.md) for beginners. 
+* [APIs](https://gabors-data-analysis.com/ai-course/week06/assets/api-use.html), [LLM API keys](https://gabors-data-analysis.com/ai-course/week06/assets/get-ai-api-key.html)
 
 ### Practice question
 
