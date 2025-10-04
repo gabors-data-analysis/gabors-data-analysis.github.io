@@ -1,4 +1,4 @@
-
+---
 layout: single
 classes: #wide
 permalink: /casestudies/
@@ -9,7 +9,7 @@ author_profile: false
 redirect_from:
   - /casestudies.md/
   - /casestudies.html
-
+---
 
 {% include base_path %}
 
