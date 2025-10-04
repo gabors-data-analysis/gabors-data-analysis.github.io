@@ -20,10 +20,10 @@ This textbook provides future data analysts with the **tools, methods, and skill
 **Data used in case studies [avilable on OSF.io](https://osf.io/7epdj/)**  
 **Full codebase [available in Stata, R, and Python on Github](https://github.com/gabors-data-analysis/da_case_studies)**  
 **Open online courses from zero to hero: [Coding for Data Analysis with R / Python / Stata](/code-courses/) and on [Python](https://github.com/gabors-data-analysis/da-coding-python), [R](https://github.com/gabors-data-analysis/da-coding-rstats) and [Stata](https://github.com/gabors-data-analysis/da-coding-stata)**  
-**Data Analysis with AI [Full course material](/ai-course))**
-**Ideas for the [second edition](https://gabors-data-analysis.com/second-edition/). Such as collecting what's [beyond](https://gabors-data-analysis.com/beyond)**
+**started to collect ideas for the [second edition](https://gabors-data-analysis.com/second-edition/). Such as collecting what's [beyond](https://gabors-data-analysis.com/beyond)**
+**NEW Data Analysis with AI [Full course material](/ai-course))**
 
-![textbook cover](images/cover-full_hd.png){:height="80%" width="80%"}
+![textbook cover]({{ "/images/cover-full_hd.png" | relative_url }}){:height="80%" width="80%"}
 
 
 
@@ -37,8 +37,8 @@ The textbook offers a complete, curated curriculum from data collection to machi
 **More info: [Front Matter](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf), [Table of contents](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf), [PDF of sample chapters](https://www.book2look.com/vbook.aspx?id=9781108483018)**   
 
 
-![textbook cover](images/bekes-kezdi-data-analysis-flyer-2022.jpg){:height="60%" width="60%"}
-**[Download the flyer in PDF](files/bekes-kezdi-data-analysis-flyer-2022.pdf)**   
+![textbook cover]({{ "/images/bekes-kezdi-data-analysis-flyer-2022.jpg" | relative_url }}){:height="60%" width="60%"}
+**[Download the flyer in PDF]({{ "/files/bekes-kezdi-data-analysis-flyer-2022.pdf" | relative_url }})**   
 
 
 ## Case studies with a global coverage on diverse topics  
@@ -71,7 +71,7 @@ Working through case studies is the best way to learn data analysis. Thus, a cor
 [**Reviews by instructors**](/instructor-reviews)
 
 
-![textbook cover](images/book-withpix2.jpg){:height="80%" width="80%"}
+![textbook cover]({{ "/images/book-withpix2.jpg" | relative_url }}){:height="80%" width="80%"}
 
 
 ## Taught in MA/BA Economics, Finance, Analytics, Business, Public Policy

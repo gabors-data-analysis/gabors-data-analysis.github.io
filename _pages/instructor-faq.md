@@ -1,7 +1,8 @@
 ---
 permalink: /instructor-faq/
 title: "FAQ for instructors"
-toc: false
+toc: true
+class: wide
 author_profile: false
 redirect_from:
   - /instructor-faq.html

@@ -1,6 +1,7 @@
 ---
 permalink: /additional-reading
 title: "Additional Reading Suggestions"
+classes: [wide, fullbleed]
 toc: false
 author_profile: false
 redirect_from:
@@ -11,7 +12,7 @@ ___
 
 
 
-Life did not stop when we finished the manusdcript. Actually, we keep finding great stuff. So let us make some suggestion for additional readings per chapters. 
+Life did not stop when we finished the manuscript. Actually, we keep finding great stuff. So let us make some suggestion for additional readings per chapters. 
 
 ## Part I
 

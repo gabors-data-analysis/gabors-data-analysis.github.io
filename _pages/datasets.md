@@ -1,9 +1,9 @@
 ---
 permalink: /datasets/
-title: "Datasets summary"
+# title: "Datasets summary"
 excerpt: "Datasets details for case studiesa"
 toc: true
-toc_sticky: false
+toc_sticky: true
 author_profile: false
 redirect_from: 
   - "/datasets.md/"
@@ -12,25 +12,25 @@ redirect_from:
 ---
 
 {% include base_path %}
-
+Each dataset entry shows its content and coverage, key variables, related case studies, data access, source, and copyright, with links to the full description.
 
 ## airbnb
-**Content and coverage**: The airbnb dataset includes information on the price and feature of apartments let out via airbnb. It covers Greater London. The full London data has N=51 646 observations. It is a single data table. The data refer to rental prices for one night in March 2017. 
 
-**Key variables**: price per night per person, number of people that can be accomodated, apartment features, location (borough).
+**Content and coverage**: The airbnb dataset includes information on the price and feature of apartments let out via airbnb. It covers Greater London. It is a single data table. The data refer to rental prices for one night in March 2017. `N=51,646` [*more about the data →*](/datasets/airbnb/){: .btn .btn--success} [access dataset (OSF)](https://osf.io/qyca8/){: .btn .btn--plum target="_blank" rel="noopener" } 
+[data dictionary](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit#gid=1938308660){: .btn .btn--plum target="_blank" rel="noopener" }
 
-**Used in case studies**:
-[Predicting AirBnB apartment prices: selecting a regression model](link)
-[Predicting Airbnb apartment prices with random forest](link)
+<!-- **Data**: [access dataset (OSF)](https://osf.io/qyca8/){: .btn .btn--plum target="_blank" rel="noopener" } 
+[data library](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit#gid=1938308660){: .btn .btn--plum target="_blank" rel="noopener" }   -->
 
-**Data**: [Access dataset](https://osf.io/qyca8/){:target="_blank"}
+**Key variables**: `price per night per person`, `number of people that can be accomodated`, `apartment features`, `location (borough)`.
 
-**Source**: Downloaded from web [inside airbnb](http://insideairbnb.com/get-the-data.html){:target="_blank"}.    
-**Copyright**: "The data behind the Inside Airbnb site is sourced from publicly available information from the Airbnb site. The data has been analyzed, cleansed and aggregated where appropriate to faciliate public discussion. Creative Commons CC0 1.0 Universal (CC0 1.0) "Public Domain Dedication" license."
+**Case studies**:  
+[CH14B]({{ '/casestudies/#ch14b-predicting-airbnb-apartment-prices-selecting-a-regression-model' | relative_url }}){: .btn .btn--accent } - predicting AirBnB apartment prices: selecting a regression model  
+[CH16B]({{ '/casestudies/#ch16a-predicting-apartment-prices-with-random-forest' | relative_url }}){: .btn .btn--accent } - predicting Airbnb apartment prices with random forest
 
+<small>**Source**: downloaded from web [*Inside Airbnb*](http://insideairbnb.com/get-the-data.html){:target="_blank"}.    
+**Copyright**: "The data behind the Inside Airbnb site is sourced from publicly available information from the Airbnb site. The data has been analyzed, cleansed and aggregated where appropriate to faciliate public discussion. Creative Commons CC0 1.0 Universal (CC0 1.0) 'Public Domain Dedication' license."</small>
 
-[MORE about the data](/datasets/airbnb/)
-[Data library](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit#gid=1938308660){:target="_blank"}
 
 ## airline-tickets-usa
 **Content and coverage**: The US-airlines dataset is a 10 percent sample of all tickets sold on the US market taken in each quarter, starting with 2010. For a single quarter, the raw data on tickets has about 3–3.5 million observations. The total data used for the case study has the size of around 15 GB.

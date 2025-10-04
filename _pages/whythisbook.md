@@ -4,17 +4,14 @@ layout: single
 classes: wide
 title: "Why use this book?"
 author_profile: true
+toc: true
+toc_sticky: true
 redirect_from:
   - /md/
   - /whythisbook.html
 ---
 
-
-![textbook front](/images/book-front.jpg){:height="80%" width="80%"}
-
-
-
-## An applied data analysis textbook for future professionals
+## Why this book matters?
 
 **Data analysis is a process**. It starts with formulating a question and collecting appropriate data, or assessing whether the available data can help answer the question. Then comes cleaning and organizing the data, tedious but essential tasks that affect the results of the analysis as much as any other step in the process. Exploratory data analysis gives context to the eventual results and helps deciding the details of the analytical method to be applied. The main analysis consists of choosing and implementing the method to answer the question, with potential robustness checks. Along the way, correct interpretation and effective presentation of the results are crucial. Carefully crafted data visualization help summarize our findings and convey key messages. The final task is to answer the original question, with potential qualifications and directions for future inquiries.
 
@@ -24,8 +21,9 @@ Our approach has a **different focus compared to the typical textbooks** in econ
 
 To cover all of the steps that are necessary to carry out an actual data analysis project, we **lean on a set of fully developed case studies**. While each case study focuses on the particular method discussed in the chapter, they illustrate all elements of the process from question through analysis to conclusion. We facilitate individual work by **sharing all data and code in Stata, R, and Python**.
 
+![textbook front]({{ "/images/book-front.jpg" | relative_url }}){: .align-center height="60%" width="60%"}
 
-## Curated content and focus for the modern data analyst
+## How the book is organized?
 
 Our textbook focuses on the most relevant tools and methods. Instead of dumping many methods on the students, we selected the most widely used methods that tend to work well in many situations. That choice allowed us to discuss each method in detail so students can gain a deep understanding of when, why, and how those methods work. It also allows us to compare the different methods both in general and in the course of our case studies.
 
@@ -33,12 +31,11 @@ The textbook is divided into four parts. The first part starts with data collect
 
 When deciding on which methods to discuss and in what depth, we drew on our own experience as well as the advice of many people. We have taught Data Analysis and Econometrics to students in Master’s programs for years in Europe and the US, and trained experts in business analytics, economics, and economic policy. We used earlier versions of this textbook in many courses with students who differed in background, interest, and career plans. In addition, we have talked to many experts both in academia and in industry: teachers, researchers, analysts, and users of data analysis results. As a result, this textbook offers **a curated content that reflects the views of data analysts with a wide range of experiences**.
 
-
-## Real life case studies in a central role
+## Learn through real case studies
 
 A cornerstone of this textbook are 47 case studies spreading over one-third of our material. This reflects our view that working through case studies is the best way to learn data analysis. Each of our case studies starts with a relevant question and answers it in the end, using real life data and applying the tools and methods covered in the particular chapter.
 
-![Case studies](/images/book-withpix1.jpg){:height="70%" width="70%"}
+![Case studies]({{ "/images/book-withpix1.jpg" | relative_url }}){: .align-center height="60%" width="60%"}
 
 Similarly to other textbooks, our case studies illustrate the methods covered in the textbook. In contrast with other textbooks, though, they are much more than that.
 
@@ -46,13 +43,13 @@ Each of our case studies is a fully developed story linking business or policy q
 
 Our case studies are different also because they cover a wide range of topics, with a potential appeal to a wide range of students. They cover **consumer decision, economic and social policy, finance, business and management, health, and sport**. Their regional coverage is also wider than usual: one third is from the U.S.A., one third is from Europe and the U.K., and one third is from other countries or includes all countries from Australia to Thailand.
 
+## Support material with ready-to-use data and code
 
-## Support material with data and code shared
 We offer a truly comprehensive material with data, code for all case studies, 360 **practice questions**, 112 **data exercises**, derivations for advanced materials and reading suggestions. Each chapter ends with practice questions that help revise the material with a focus on theory. They are followed by data exercises that invite students to carry out analysis on their own, in the form of robustness checks or replicating the analysis using other data.
 
 We share all raw and cleaned data we use in the case studies. We also share the codes that clean the data and produce all results, tables, and graphs in **Stata, R, and Python** so students can tinker with our code and compare the solutions in the different software.
 
-All data and code are available [HERE](/data-and-code)
+All data and code are available [*here*]({{ '/data-and-code/' | relative_url }})
 
 ## Who is this book for?
 
@@ -62,9 +59,10 @@ The textbook includes formulae to define methods and tools, but it **explains al
 
 This textbook could be useful for university students in graduate programs as **core text** in applied statistics and econometrics, quantitative methods, or data analysis. The textbook is best used as core text for non-research degree Masters programs or part of the curriculum in a Phd or research Masters programs. It may also **complement online courses** that teach specific methods to give more context and explanation. Undergraduate courses can also make use of this textbook, even though the workload on students exceeds the typical undergraduate workload. Finally, the textbook can serve as a **handbook for practitioners** to guide them through all steps of real-life data analysis.
 
-## Finally, take the advice from Hal Varian 
+## Advice from Hal Varian
+
 Hal Varian has been the chief data scientist at Google, but before he wrote on of the best and most popular textbooks in Economics. 
 
-![textbook front](/images/varian.jpg){:height="80%" width="80%"}
+<!-- ![textbook front]({{ "/images/varian.jpg" | relative_url }}){:height="40%" width="40%"} -->
 
-
+> “If you are looking for a career where your services will be in high demand, you should find something where you provide a scarce, complementary service to something that is getting ubiquitous and cheap. So what's getting ubiquitous and cheap? Data. And what is complementary to data? Analysis. So my recommendation is to take lots of courses about how to manipulate and analyze data: databases, machine learning, econometrics, statistics, visualization, and so on.”  

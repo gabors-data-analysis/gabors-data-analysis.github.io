@@ -12,7 +12,7 @@ redirect_from:
 
 Paperback, hardcover, or e-book.
 
-![textbook xmas](/images/book-xmas.jpg){:height="80%" width="80%"}
+![textbook xmas](/images/book-xmas.jpg){:height="60%" width="60%"}
 
 
 
