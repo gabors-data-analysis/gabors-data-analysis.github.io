@@ -1,33 +1,237 @@
-/* ==========================================================================
-   Aqua skin
-   ========================================================================== */
+// /* ==========================================================================
+//    Aqua skin
+//    ========================================================================== */
 
-/* Colors */
-$gray                       : #3a5e8c   !default;
-$dark-gray                  : mix(#000, $gray, 40%) !default;
-$darker-gray                : mix(#000, $gray, 60%) !default;
-$light-gray                 : mix(#fff, $gray, 50%) !default;
-$lighter-gray               : mix(#fff, $gray, 90%) !default;
-/*#f2e6d9*/
-$body-color                 : #fff !default;
-$background-color           : #c2dede !default;
+/* Neutrals (make these truly gray, not blue) */
+$gray         : #4b5563 !default;  /* neutral gray */
+$dark-gray    : mix(#000, $gray, 40%) !default;
+$darker-gray  : mix(#000, $gray, 60%) !default;
+$light-gray   : mix(#fff, $gray, 50%) !default;
+$lighter-gray : mix(#fff, $gray, 90%) !default;
+
+/* Base surfaces + text */
+$body-color         : #ffffff !default;         /* page surface */
+/* $background-color   : #ffffff !default;  */       /* <- PURE WHITE */
+$background-color: #f7f9fc !default;       /* <- VERY LIGHT GRAY (alt) */
 $code-background-color      : $lighter-gray !default;
 $code-background-color-dark : $light-gray !default;
-$text-color                 : $dark-gray !default;
-$border-color               : $lighter-gray !default;
+$text-color        : #344174 !default;
+$border-color      : #e5e7eb !default;
+
+/* Brand palette (your book colors) for highlights */
+$primary-color  : #3D4D8A !default;  /* main brand / links */
+$success-color  : #3fb369 !default; // #43BF71 original color
+$warning-color  : #e67e22 !default;
+$danger-color   : #c0392b !default; // #440154 (purple)
+$info-color     : #23888E !default;
+
+/* Links: keep color in the highlights only */
+$masthead-link-color: $primary-color !default;
+$masthead-link-color-hover: #43BF71 !default; // keep color; we'll show state via underline
+
+$link-color                : #3fb369 !default;
+$link-color-hover          : mix(#000, $link-color, 15%) !default;
+$link-color-visited        : mix(#fff, $link-color, 15%) !default;
 
 
-$primary-color              : $gray !default;
-$success-color              : #27ae60 !default;
-$warning-color              : #e67e22 !default;
-$danger-color               : #c0392b !default;
-$info-color                 : #541352 !default;
+/* ==========================================================================
+   Custom Slides Button
+   ========================================================================== */
+.btn-slides {
+  @extend .btn;
+  @extend .btn--small;
 
-/* links */
-$link-color                 : $info-color !default;
-$link-color-hover           : mix(#000, $link-color, 25%) !default;
-$link-color-visited         : mix(#fff, $link-color, 25%) !default;
-$masthead-link-color        : $primary-color !default;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%) !default;
+  background-color: #3a5e8c;    /* main background */
+  border: 0.2px solid #3a5e8c;    /* border matches */
+  color: #fff;                  /* white text */
+
+  &:hover,
+  &:focus {
+    background-color: lighten(#3a5e8c, 8%); /* brighter on hover */
+    border-color: lighten(#3a5e8c, 8%);
+    color: #fff;
+  }
+}
+
+/* === Buttons (Minimal Mistakes overrides) === */
+
+/* Primary (Blue) */
+$btn-primary-bg: #3a5e8c !default; // or: $btn-primary-bg: $primary-color;
+
+.btn--primary,
+a.btn--primary,
+.btn--primary:visited,
+a.btn--primary:visited,
+.btn--primary:hover,
+a.btn--primary:hover,
+.btn--primary:focus,
+a.btn--primary:focus {
+  background-color: $btn-primary-bg;
+  color: #fff !important;       /* <- force white text in all states */
+  border: none;
+  text-decoration: none;        /* <- kill underline */
+}
+.btn--primary:hover,
+a.btn--primary:hover,
+.btn--primary:focus,
+a.btn--primary:focus {
+  background-color: darken($btn-primary-bg, 8%);
+}
+/* compact button size */
+.btn--sm {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  border-radius: 6px;
+}
+
+
+/* Success / Green button (exact brand green) */
+$btn-success-bg: #3fb369 !default;
+$btn-success-fg: #fff !default; 
+
+.btn--success,
+a.btn--success,
+.btn--success:visited {
+  background-color: darken($btn-success-bg, 8%) !important;
+  color: $btn-success-fg !important;
+  border: none;
+  text-decoration: none;
+}
+
+.btn--success:hover,
+a.btn--success:hover,
+.btn--success:focus {
+  background-color: darken($btn-success-bg, 16%) !important;
+  color: $btn-success-fg !important;
+}
+
+/* Purple button (#440154) */
+$btn-plum-bg: #440154 !default;
+.btn--plum,
+a.btn--plum,
+.btn--plum:visited,
+a.btn--plum:visited {
+  background-color: $btn-plum-bg !important;  /* 440154FF → use #440154 */
+  color: #fff !important;
+  border: none;
+  text-decoration: none;
+}
+.btn--plum:hover,
+a.btn--plum:hover,
+.btn--plum:focus,
+a.btn--plum:focus {
+  background-color: lighten($btn-plum-bg, 8%) !important;
+  color: #fff !important;
+}
+/* optional: strong focus ring */
+a.btn--plum:focus-visible { outline: 3px solid #ffcf20; outline-offset: 2px; }
+
+
+/* Secondary (filled teal, white text) */
+$btn-secondary-bg: #287c82 !default; /* darkened from #2f9aa0 for contrast */
+
+.btn--secondary,
+a.btn--secondary,
+.btn--secondary:visited,
+a.btn--secondary:visited {
+  background-color: $btn-secondary-bg !important;
+  color: #fff !important;
+  border: none;
+  text-decoration: none;
+}
+
+.btn--secondary:hover,
+a.btn--secondary:hover,
+.btn--secondary:focus,
+a.btn--secondary:focus {
+  background-color: darken($btn-secondary-bg, 8%) !important;
+  color: #fff !important;
+}
+
+
+/* Accent/Callout (Yellow with dark navy text) */
+$btn-accent-bg: #ffcf20 !default;
+$btn-accent-fg: #344174 !default;   // your text color
+.btn--accent {
+  background-color: $btn-accent-bg;
+  color: $btn-accent-fg !important;
+  border: none;
+}
+.btn--accent:hover,
+.btn--accent:focus {
+  background-color: darken($btn-accent-bg, 8%);
+  color: $btn-accent-fg !important;
+}
+
+/* Accessibility: clear focus ring for keyboard users */
+a.btn:focus,
+a.btn:focus-visible {
+  outline: 3px solid #ffcf20;   /* brand yellow */
+  outline-offset: 2px;
+}
+
+// /* Ensure link styles don't bleed into buttons */
+// .page__content a.btn,
+// .page__content a.btn:visited,
+// .page__content a.btn:hover,
+// .page__content a.btn:focus { text-decoration: none; }
+
+
+/* Compact size + not bold for all content buttons */
+.page__content a.btn,
+.page__content .btn {
+  padding: 0.3rem 0.5rem !important;  /* shorter height */
+  font-size: 0.7rem;                   /* slightly smaller text */
+  line-height: 1;                     /* tighter vertical rhythm */
+  font-weight: 400 !important;          /* NOT bold */
+  border-radius: 6px;                   /* a bit less round */
+  text-transform: none;                 /* ensure no accidental caps */
+}
+
+/* Keep the same in interactive states */
+.page__content a.btn:visited,
+.page__content a.btn:hover,
+.page__content a.btn:focus {
+  font-weight: 400 !important;
+  text-decoration: none;
+}
+
+
+
+// /* Optional: ensure all chrome stays neutral */
+// // $masthead-background-color : #3D4D8A !default; // #ffffff !default;
+// $masthead-background-color: darken(#3D4D8A, 18%) !default;
+// $footer-background-color   : #43BF71 !default;
+// $sidebar-background-color  : #43BF71 !default;
+
+
+// /* Colors */
+// $gray                       : #3a5e8c   !default;
+// $dark-gray                  : mix(#000, $gray, 40%) !default;
+// $darker-gray                : mix(#000, $gray, 60%) !default;
+// $light-gray                 : mix(#fff, $gray, 50%) !default;
+// $lighter-gray               : mix(#fff, $gray, 90%) !default;
+// /*#f2e6d9*/
+// $body-color                 : #fff !default;
+// $background-color           : #c2dede !default;
+// $code-background-color      : $lighter-gray !default;
+// $code-background-color-dark : $light-gray !default;
+// $text-color                 : $dark-gray !default;
+// $border-color               : $lighter-gray !default;
+
+
+// $primary-color              : $gray !default;
+// $success-color              : #27ae60 !default;
+// $warning-color              : #e67e22 !default;
+// $danger-color               : #c0392b !default;
+// $info-color                 : #541352 !default;
+
+// /* links */
+// $link-color                 : $info-color !default;
+// $link-color-hover           : mix(#000, $link-color, 25%) !default;
+// $link-color-visited         : mix(#fff, $link-color, 25%) !default;
+// $masthead-link-color        : $primary-color !default;
+// $masthead-link-color-hover  : mix(#000, $primary-color, 25%) !default;
 
   
