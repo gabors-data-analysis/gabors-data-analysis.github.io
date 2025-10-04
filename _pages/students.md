@@ -14,7 +14,7 @@ All the resources you need as a student using **Data Analysis for Business, Econ
 ## Quick links
 
 - [Chapters & Slides]({{ '/chapters/' | relative_url }}){: .btn .btn--primary style="margin-top:0.1rem; display:inline-block;"}  
-- [Case studies]({{ '/case-studies/' | relative_url }}){: .btn .btn--accent style="margin-top:0.1rem; display:inline-block;"}  
+- [Case studies]({{ '/casestudies/' | relative_url }}){: .btn .btn--accent style="margin-top:0.1rem; display:inline-block;"}  
 - [Data & code]({{ '/data-and-code/' | relative_url }}){: .btn .btn--secondary style="margin-top:0.1rem; display:inline-block;"}  [GitHub repository](https://github.com/gabors-data-analysis/da_case_studies){: .btn .btn--secondary target="_blank" rel="noopener noreferrer"}
 - [Datasets on OSF](https://osf.io/7epdj/){: .btn .btn--plum target="_blank" rel="noopener noreferrer"}  [Dataset summaries]({{ '/datasets/' | relative_url }}){: .btn .btn--plum target="_blank" rel="noopener noreferrer"} 
 
@@ -24,7 +24,7 @@ All the resources you need as a student using **Data Analysis for Business, Econ
 
 This textbook supports independent study with clear explanations, practical advice, coding practice, and exercises.
 
-1. **Open your chapter**: go to the **[Chapters]({{ '/chapters/' | relative_url }})** overview or pick a **[case study]({{ '/case-studies/' | relative_url }})**.  
+1. **Open your chapter**: go to the **[Chapters]({{ '/chapters/' | relative_url }})** overview or pick a **[case study]({{ '/casestudies/' | relative_url }})**.  
 
 2. **Set up and get the materials**: choose *Stata*, *R*, or *Python* follow the [setup guides]({{ '/data-and-code/' | relative_url }}#full-setup-guides), and download the datasets and scripts from **[Data & Code]({{ '/data-and-code/' | relative_url }})** — the same files used in the book.  
 
@@ -47,7 +47,7 @@ This textbook supports independent study with clear explanations, practical advi
 
 All data and code are open and reproducible. You will use the same repositories instructors use.
  
-- **Case study code (R, Python, Stata):** [Case studies]({{ '/case-studies/' | relative_url }}){: .btn .btn--accent style="margin-top:0.1rem; display:inline-block;"} · [GitHub repository](https://github.com/gabors-data-analysis/da_case_studies){: .btn .btn--secondary target="_blank" rel="noopener noreferrer"}
+- **Case study code (R, Python, Stata):** [Case studies]({{ '/casestudies/' | relative_url }}){: .btn .btn--accent style="margin-top:0.1rem; display:inline-block;"} · [GitHub repository](https://github.com/gabors-data-analysis/da_case_studies){: .btn .btn--secondary target="_blank" rel="noopener noreferrer"}
 - **Datasets:** [Datasets on OSF](https://osf.io/7epdj/){: .btn .btn--plum target="_blank" rel="noopener noreferrer"} · [Dataset summaries]({{ '/datasets/' | relative_url }}){: .btn .btn--plum target="_blank" rel="noopener noreferrer"} 
 
 See the [*Data & Code page*]({{ '/data-and-code/' | relative_url }}) for details on downloading data, organizing folders, and checking out the GitHub repo.  
