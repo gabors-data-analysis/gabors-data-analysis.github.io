@@ -36,11 +36,21 @@ Do online and offline prices of the same products tend to be the same? To answer
 This case study illustrates how to combine **different data collection methods** and what the challenges are with such data collection. [*More*](#){: .read-more-link }<span class="more-inline" style="display:none;"> It discusses how products were selected and how prices were measured, and what those methods imply for coverage of observations and reliability of variables. There is no dataset to analyze in this case study. Case study 6A will use the data described here to investigate whether online and offline prices tend to be the same.
 </span> 
 
+[chapter]({{ '/chapters/#chapter-01-origins-of-data' | relative_url }}){: .btn .btn--success}
+[slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch01-v3-2023.pdf){: .btn .btn--primary target="_blank" rel="noopener"}
+[code](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch01b-offline-online-prices){: .btn .btn--secondary target="_blank" rel="noopener"}
+[billion-prices](/datasets/#billion-prices){: .btn .btn--plum target="_blank" rel="noopener"}
+
 ### CH01C Management quality: data collection
 How different are firms and other organizations in the terms of their management practices? Is the quality of management related to how large the firms are? Is it affected by whether the owners are the company founders or their families? To answer these, and many related, questions, we need data on management quality. Such data was collected by the World Management Survey (WMS; https://worldmanagementsurvey.org/), an international research intitative to measure the differences in management practices across organizations and countries.
 
 This case study illustrates how to collect data by **surveys**. [*More*](#){: .read-more-link }<span class="more-inline" style="display:none;"> It discusses **sampling** and its practical issues, and how to use a set of survey questions to measure and abstract concept such as the quality of management. This case study, similarly to the other case studies in this chapter, illustrates the choices and trade-offs data collection involves, practical issues that may arise during implementation, and how all that may affect data quality. There is no dataset to analyze in this case study. Case studies 4A and 21A will use the data described here to investigate how management quality is related to firm size and how it is affected by ownership. 
 </span>
+
+[chapter]({{ '/chapters/#chapter-01-origins-of-data' | relative_url }}){: .btn .btn--success}
+[slides](https://gabors-data-analysis.com/images/slides-public/da-public-slides-ch01-v3-2023.pdf){: .btn .btn--primary target="_blank" rel="noopener"}
+[code](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch01c-management-quality-survey){: .btn .btn--secondary target="_blank" rel="noopener"}
+[wms-management-survey](/datasets/#wms-management-survey){: .btn .btn--plum target="_blank" rel="noopener"}
 
 ### CH02A Finding a good deal among hotels: data preparation
 Continuing with our search for a hotel that is underpriced relative to its location and quality in Vienna, we have scraped data from the web, and we've got a data table. But how should we start working with this data? In particular, how should we identify hotels, how should we make sure each hotel features only once in the data, and how should we select the variables we would consider for our future analysis? 
