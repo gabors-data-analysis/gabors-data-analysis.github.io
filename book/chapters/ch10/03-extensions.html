@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chapter 10: Multiple Linear Regression</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="03-extensions_files/libs/clipboard/clipboard.min.js"></script>
+<script src="03-extensions_files/libs/quarto-html/tabby.min.js"></script>
+<script src="03-extensions_files/libs/quarto-html/popper.min.js"></script>
+<script src="03-extensions_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="03-extensions_files/libs/quarto-html/anchor.min.js"></script>
+<link href="03-extensions_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="03-extensions_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="03-extensions_files/libs/quarto-html/quarto-html-435ba6093e6f0817aa7405139811e7b1.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="03-extensions_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../_assets/styles.css">
+</head>
+
+<body>
+
+
+<header id="title-block-header">
+<h1 class="title">Chapter 10: Multiple Linear Regression</h1>
+<p class="subtitle">Sections 10.7-10.10 - Extensions &amp; Interactions</p>
+
+</header>
+
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sections-10.7-10.10-extensions-interactions" id="toc-sections-10.7-10.10-extensions-interactions"><span class="header-section-number">1</span> Sections 10.7-10.10: Extensions &amp; Interactions</a>
+  <ul>
+  <li><a href="#sec-10-7" id="toc-sec-10-7"><span class="header-section-number">1.1</span> 10.7 Multiple linear regression with three or more explanatory variables</a></li>
+  <li><a href="#sec-10-8" id="toc-sec-10-8"><span class="header-section-number">1.2</span> 10.8 Nonlinear patterns and multiple linear regression</a></li>
+  <li><a href="#case-study-a3-understanding-the-gender-difference-in-earnings" id="toc-case-study-a3-understanding-the-gender-difference-in-earnings"><span class="header-section-number">1.3</span> Case Study A3: Understanding the Gender Difference in Earnings</a>
+  <ul>
+  <li><a href="#interpretation-of-results" id="toc-interpretation-of-results"><span class="header-section-number">1.3.1</span> Interpretation of Results</a></li>
+  </ul></li>
+  <li><a href="#sec-10-9" id="toc-sec-10-9"><span class="header-section-number">1.4</span> 10.9 Qualitative right-hand-side variables</a></li>
+  <li><a href="#case-study-a4-understanding-the-gender-difference-in-earnings" id="toc-case-study-a4-understanding-the-gender-difference-in-earnings"><span class="header-section-number">1.5</span> Case Study A4: Understanding the Gender Difference in Earnings</a>
+  <ul>
+  <li><a href="#interpretation" id="toc-interpretation"><span class="header-section-number">1.5.1</span> Interpretation</a></li>
+  </ul></li>
+  <li><a href="#sec-10-10" id="toc-sec-10-10"><span class="header-section-number">1.6</span> 10.10 Interactions: Uncovering different slopes across groups</a>
+  <ul>
+  <li><a href="#without-interaction-parallel-lines" id="toc-without-interaction-parallel-lines"><span class="header-section-number">1.6.1</span> Without Interaction: Parallel Lines</a></li>
+  <li><a href="#with-interaction-different-slopes" id="toc-with-interaction-different-slopes"><span class="header-section-number">1.6.2</span> With Interaction: Different Slopes</a></li>
+  </ul></li>
+  <li><a href="#case-study-a5-understanding-the-gender-difference-in-earnings" id="toc-case-study-a5-understanding-the-gender-difference-in-earnings"><span class="header-section-number">1.7</span> Case Study A5: Understanding the Gender Difference in Earnings</a>
+  <ul>
+  <li><a href="#interpretation-1" id="toc-interpretation-1"><span class="header-section-number">1.7.1</span> Interpretation</a></li>
+  <li><a href="#calculating-gender-differences-by-age" id="toc-calculating-gender-differences-by-age"><span class="header-section-number">1.7.2</span> Calculating Gender Differences by Age</a></li>
+  <li><a href="#nonlinear-age-patterns-with-interactions" id="toc-nonlinear-age-patterns-with-interactions"><span class="header-section-number">1.7.3</span> Nonlinear Age Patterns with Interactions</a></li>
+  </ul></li>
+  <li><a href="#summary-what-we-learned" id="toc-summary-what-we-learned"><span class="header-section-number">1.8</span> Summary: What We Learned</a></li>
+  </ul></li>
+  </ul>
+</nav>
+<!-- 
+File: 03-extensions.qmd
+Version: 1.0
+Created: 2025-10-20
+Iterations: 1
+Model: Claude Sonnet 4.5 (2025-10-20)
+Notes: Sections 10.7-10.10 from original LaTeX
+       Includes case studies A3, A4, A5
+       All math properly configured with MathJax
+-->
+<p><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Oswald:wght@300;400;500;600;700&amp;family=Roboto+Condensed:wght@300;400;700&amp;family=Lora:wght@400;600&amp;display=swap" rel="stylesheet"></p>
+<h1 class="chapter-title" data-number="1" id="sections-10.7-10.10-extensions-interactions"><span class="header-section-number">1</span> Sections 10.7-10.10: Extensions &amp; Interactions</h1>
+<p><strong>Multiple explanatory variables, nonlinear patterns, categorical variables, and interactions</strong></p>
+<hr>
+<h2 data-number="1.1" id="sec-10-7" class="anchored"><span class="header-section-number">1.1</span> 10.7 Multiple linear regression with three or more explanatory variables</h2>
+<p>We spent a lot of time on multiple regression with two right-hand-side variables. That’s because that regression shows all the important differences between simple regression and multiple regression in intuitive ways. In practice, however, we rarely estimate regressions with exactly two right-hand-side variables. The number of right-hand-side variables in a multiple regression varies from case to case, but it’s typically more than two. In this section we describe multiple regressions with three or more right-hand-side variables. Their general form is</p>
+<p><span class="math display">\[
+y^E = \beta_0+\beta_1 x_1+\beta_2 x_2 +\beta_3 x_3+...
+\]</span></p>
+<p>All of the results, language, and interpretations discussed so far carry forward to multiple linear regressions with three or more explanatory variables. Interpreting the slope of <span class="math inline">\(x_1\)</span>: on average, <span class="math inline">\(y\)</span> is <span class="math inline">\(\beta_{1}\)</span> units larger in the data for observations with one unit larger <span class="math inline">\(x_1\)</span> but with the same value for all other <span class="math inline">\(x\)</span> variables. The interpretation of the other slope coefficients is analogous. The language of multiple regression is the same, including the concepts of conditioning, controlling, omitted, or confounder variables.</p>
+<p>The standard error of coefficients may be estimated by bootstrap or a formula. As always, the appropriate formula is the robust SE formula. But the simple formula contains the things that make even the robust SE larger or smaller. For any slope coefficient <span class="math inline">\(\hat{\beta}_k\)</span> the simple SE formula is</p>
+<p><span class="math display">\[
+SE(\hat{\beta}_k)=\frac{Std[e]}{\sqrt{n}Std[x_k]\sqrt{1-R_{k}^2}}
+\]</span></p>
+<p>Almost all is the same as with two right-hand-side variables. In particular, The SE is smaller, the smaller the standard deviation of the residuals (the better the fit of the regression), the larger the sample, and the larger the standard deviation of <span class="math inline">\(x_k\)</span>. The new-looking thing is <span class="math inline">\(R_{k}^2\)</span>. But that’s simply the generalization of <span class="math inline">\(R_{1}^2\)</span> in the previous formula. It is the R-squared of the regression of <span class="math inline">\(x_k\)</span> on all other <span class="math inline">\(x\)</span> variables. The smaller that R-squared, the smaller the SE.</p>
+<div class="review-box">
+<div class="review-box-title">
+Multiple Linear Regression with Three or More Explanatory Variables
+</div>
+<p><strong>Equation:</strong></p>
+<p><span class="math display">\[
+y^E = \beta_0+\beta_1 x_1+\beta_2 x_2 +\beta_3 x_3+...
+\]</span></p>
+<p><strong>Interpretation of <span class="math inline">\(\beta_{k}\)</span> (slope of <span class="math inline">\(x_k\)</span>):</strong></p>
+<ul>
+<li>On average, <span class="math inline">\(y\)</span> is <span class="math inline">\(\beta_{k}\)</span> units larger in the data for observations with one unit larger <span class="math inline">\(x_k\)</span> but with the same value for all other <span class="math inline">\(x\)</span> variables.</li>
+</ul>
+<p><strong>Standard Error:</strong></p>
+<p><span class="math display">\[
+SE(\hat{\beta}_k)=\frac{Std[e]}{\sqrt{n}Std[x_k]\sqrt{1-R_{k}^2}}
+\]</span></p>
+<p>where <span class="math inline">\(e\)</span> is the regression residual and <span class="math inline">\(R_{k}^2\)</span> is the R-squared of the regression of <span class="math inline">\(x_k\)</span> on all other <span class="math inline">\(x\)</span> variables.</p>
+</div>
+<div class="ai-task">
+<p><span class="ai-task-icon">🤖 AI PRACTICE TASK #7</span></p>
+<p><strong>Prompt:</strong> “I’m estimating a regression with 5 explanatory variables. One of them (education) is highly correlated with the others. How will this affect the standard error of the education coefficient? Explain using the SE formula.”</p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('I\'m estimating a regression with 5 explanatory variables. One of them (education) is highly correlated with the others. How will this affect the standard error of the education coefficient? Explain using the SE formula.'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
+</div>
+<hr>
+<h2 data-number="1.2" id="sec-10-8" class="anchored"><span class="header-section-number">1.2</span> 10.8 Nonlinear patterns and multiple linear regression</h2>
+<p>In Chapter 8 we introduced piecewise linear splines, quadratics, and other polynomials to approximate a nonlinear <span class="math inline">\(y^E=f(x)\)</span> regression.</p>
+<p>From a substantive point of view, piecewise linear splines and polynomials of a single explanatory variable are not multiple regressions. They do not uncover differences with respect to one right-hand-side variable conditional on one or more other right-hand-side variables. Their slope coefficients cannot be interpreted as the coefficients of multiple regressions: it does not make sense to compare observations that have the same <span class="math inline">\(x\)</span> but a different <span class="math inline">\(x^2\)</span>.</p>
+<p>But such regressions are multiple linear regressions from a technical point of view. This means that the way their coefficients are calculated is the exact same way the coefficients of multiple linear regressions are calculated. Their standard errors are calculated the same way, too and so are their confidence intervals, test statistics, and p-values.</p>
+<p>Testing hypotheses can be especially useful here, as it can help choose the functional form. With a piecewise linear spline, we can test whether the slopes are the same in adjacent line segments. If we can’t reject the null that they are the same, we may as well join them instead of having separate line segments. Testing hypotheses helps in choosing a polynomial, too. Here an additional complication is that the coefficients don’t have an easy interpretation in themselves. However, testing if all nonlinear coefficients are zero may help decide whether to include them at all.</p>
+<p>However, testing hypotheses to decide whether to include a higher-order polynomial has its issues. Recall that a multiple linear regression requires that the right-hand-side variables are not perfectly collinear. In other words, they cannot be linear functions of each other. With a polynomial on the right-hand side, those variables are exact functions of each other: <span class="math inline">\(x^2\)</span> is the square of <span class="math inline">\(x\)</span>. But they are not a linear function of each other, so, technically, they are not perfectly collinear. That’s why we can include both <span class="math inline">\(x\)</span> and <span class="math inline">\(x^2\)</span> and, if needed, its higher order terms, in a linear regression. While they are not perfectly collinear, explanatory variables in a polynomial are often highly correlated. That multicollinearity results in high standard errors, wide confidence intervals, and high p-values. As with all kinds of multicollinearity, there isn’t anything we can do about that once we have settled on a functional form.</p>
+<p>Importantly, when thinking about functional form, we should always keep in mind the substantive focus of our analysis. As we emphasized in Chapter 8, Section 8.3, we should go back to that original focus when deciding whether we want to include a piecewise linear spline or a polynomial to approximate a nonlinear pattern. There we said that we want our regression to have a good approximation to a nonlinear pattern in <span class="math inline">\(x\)</span> if our goal is prediction or analyzing residuals. We may not want that if all we care about is the average association between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, except if that nonlinearity messes up the average association. This last point is a bit subtle, but usually means that we may want to transform variables to relative changes or take logs if the distribution of <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span> is very skewed.</p>
+<p>Here we have multiple <span class="math inline">\(x\)</span> variables. Should we care about whether each is related to average <span class="math inline">\(y\)</span> in a nonlinear fashion? The answer is the same as earlier: yes, if we want to do prediction or analyze residuals; no, if we care about average associations (except we may want to have transformed variables here, too). In addition, when we focus on a single average association (with, say, <span class="math inline">\(x_1\)</span>) and all the other variables (<span class="math inline">\(x_2\)</span>, <span class="math inline">\(x_3\)</span>, …) are covariates to condition on, the only thing that matters is the coefficient on <span class="math inline">\(x_1\)</span>. Even if nonlinearities matter for <span class="math inline">\(x_2\)</span> and <span class="math inline">\(x_3\)</span> themselves, they only matter for us if they make a difference in the estimated coefficient on <span class="math inline">\(x_1\)</span>. Sometimes they do; very often they don’t.</p>
+<div>
+<blockquote>
+<p><strong>Key Takeaway: When Does Functional Form Matter?</strong></p>
+<p><strong>Functional form matters when:</strong> 1. Goal is <strong>prediction</strong> → Use best-fitting nonlinear patterns 2. Goal is <strong>residual analysis</strong> → Capture all patterns well 3. Nonlinearity affects <strong>the coefficient you care about</strong></p>
+<p><strong>Functional form matters less when:</strong> 1. Goal is <strong>average association</strong> only 2. Nonlinearity in covariates doesn’t affect main coefficient 3. Focus is on <strong>direction</strong> not precise magnitude</p>
+</blockquote>
+</div>
+<div class="ai-task">
+<p><span class="ai-task-icon">🤖 AI PRACTICE TASK #8</span></p>
+<p><strong>Prompt:</strong> “I’m studying the effect of class size on test scores, controlling for school funding and teacher experience. Should I use a polynomial specification for the control variables? Explain your reasoning.”</p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('I\'m studying the effect of class size on test scores, controlling for school funding and teacher experience. Should I use a polynomial specification for the control variables? Explain your reasoning.'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
+</div>
+<hr>
+<h2 class="case-study anchored" data-number="1.3" id="case-study-a3-understanding-the-gender-difference-in-earnings"><span class="header-section-number">1.3</span> Case Study A3: Understanding the Gender Difference in Earnings</h2>
+<div class="case-study-title">
+CASE STUDY A3: GENDER GAP - NONLINEAR AGE PATTERNS
+</div>
+<p><strong>Does nonlinear age pattern affect gender gap estimates?</strong></p>
+<p>This step in our case study illustrates the point we made in the previous section. The regressions in Table 10.2 enter age in linear ways. Using part of the same data, in Chapter 9, Section 9.2 we found that log earnings and age follow a nonlinear pattern. In particular, there we found that average log earnings are a positive and steep function of age for younger people, but the pattern becomes gradually flatter for the middle-aged and may become completely flat, or even negative, among older employees.</p>
+<p>Should we worry about the non-linear age-earnings pattern when our question is the average earnings difference between men and women? We investigated the gender gap conditional on age. Table 10.2 shows the results for multiple ways of doing it. Column (1) shows the regression with the unconditional difference from Table 10.1, for reference. Column (2) enters age in linear form. Column (3) enters it as quadratic. Column (4) enters it as a fourth-order polynomial.</p>
+<div class="code-block">
+<div class="code-header">
+📊 REPLICATE TABLE 10.2
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R Code to replicate Table 10.2</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(estimatr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"cps_earnings_grad.csv"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 1: Unconditional (for reference)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> female, <span class="at">data =</span> data)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 2: Linear age</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> female <span class="sc">+</span> age, <span class="at">data =</span> data)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 3: Quadratic age</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> female <span class="sc">+</span> age <span class="sc">+</span> <span class="fu">I</span>(age<span class="sc">^</span><span class="dv">2</span>), <span class="at">data =</span> data)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 4: 4th-order polynomial</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>model4 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> female <span class="sc">+</span> age <span class="sc">+</span> <span class="fu">I</span>(age<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> <span class="fu">I</span>(age<span class="sc">^</span><span class="dv">3</span>) <span class="sc">+</span> <span class="fu">I</span>(age<span class="sc">^</span><span class="dv">4</span>), </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> data)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">modelsummary</span>(<span class="fu">list</span>(model1, model2, model3, model4),</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>             <span class="at">stars =</span> <span class="fu">c</span>(<span class="st">'***'</span> <span class="ot">=</span> <span class="fl">0.01</span>, <span class="st">'**'</span> <span class="ot">=</span> <span class="fl">0.05</span>, <span class="st">'*'</span> <span class="ot">=</span> <span class="fl">0.1</span>),</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>             <span class="at">gof_omit =</span> <span class="st">"IC|Log|F|RMSE"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-gender-earnings-understand/ch10-gender-earnings-multireg.ipynb" class="code-link" target="_blank">🚀 OPEN IN CODESPACE</a></p>
+</div>
+<p><strong>Table 10.2: Gender differences in earnings – log earnings and age, various functional forms</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>(1) ln w</th>
+<th>(2) ln w</th>
+<th>(3) ln w</th>
+<th>(4) ln w</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>female</strong></td>
+<td>-0.195***</td>
+<td>-0.185***</td>
+<td>-0.180***</td>
+<td>-0.180***</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.008)</td>
+<td>(0.008)</td>
+<td>(0.008)</td>
+<td>(0.008)</td>
+</tr>
+<tr class="odd">
+<td><strong>age</strong></td>
+<td></td>
+<td>0.007***</td>
+<td>-0.014</td>
+<td>0.167**</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>(0.000)</td>
+<td>(0.010)</td>
+<td>(0.075)</td>
+</tr>
+<tr class="odd">
+<td><strong>age²</strong></td>
+<td></td>
+<td></td>
+<td>0.000</td>
+<td>-0.008**</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>(0.000)</td>
+<td>(0.003)</td>
+</tr>
+<tr class="odd">
+<td><strong>age³</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.000**</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>(0.000)</td>
+</tr>
+<tr class="odd">
+<td><strong>age⁴</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td>-0.000*</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>(0.000)</td>
+</tr>
+<tr class="odd">
+<td><strong>Constant</strong></td>
+<td>3.514***</td>
+<td>3.198***</td>
+<td>3.717***</td>
+<td>2.152*</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.006)</td>
+<td>(0.018)</td>
+<td>(0.202)</td>
+<td>(1.113)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Observations</strong></td>
+<td>18,241</td>
+<td>18,241</td>
+<td>18,241</td>
+<td>18,241</td>
+</tr>
+<tr class="odd">
+<td><strong>R-squared</strong></td>
+<td>0.028</td>
+<td>0.046</td>
+<td>0.048</td>
+<td>0.051</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: All employees with a graduate degree. Robust standard error estimates in parentheses. *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1</em></p>
+<p><em>Source: cps-earnings dataset. 2014 U.S.A.</em></p>
+<h3 data-number="1.3.1" id="interpretation-of-results" class="anchored"><span class="header-section-number">1.3.1</span> Interpretation of Results</h3>
+<p>The unconditional difference is -19.5%; the conditional difference is -18% according to column (2), and the same -18% according to columns (3) and (4). The various estimates of the conditional difference are the same up to two digits of rounding, and all of them are within each others’ confidence intervals. Thus, apparently, the functional form for age does not really matter if we are interested in the average gender gap.</p>
+<p>At the same time, all coefficient estimates of the high order polynomials are statistically significant, meaning that the nonlinear pattern is very likely true in the population and not just a chance event in the particular dataset. The R-squared of the more complicated regressions are larger. These indicate that the complicated polynomial specifications are better at capturing the patterns. That would certainly matter if our goal was to predict earnings. But it does not matter for uncovering the gender difference in average earnings.</p>
+<div>
+<blockquote>
+<p><strong>Key Insight</strong></p>
+<p>The nonlinear age-earnings relationship is <strong>real</strong> (statistically significant), but it doesn’t substantially affect our estimate of the gender wage gap. Why?</p>
+<ol type="1">
+<li>The nonlinearity affects men and women similarly</li>
+<li>Age differences by gender are small</li>
+<li>Our focus is the gender coefficient, not perfect prediction</li>
+</ol>
+<p><strong>Bottom line:</strong> Functional form choices for control variables often don’t matter much when estimating treatment effects or group differences.</p>
+</blockquote>
+</div>
+<div class="ai-task">
+<p><span class="ai-task-icon">🤖 AI PRACTICE TASK #9</span></p>
+<p><strong>Prompt:</strong> “Looking at Table 10.2, explain why the R-squared increases from column (2) to column (4), but the gender coefficient stays essentially the same. What does this tell us about when functional form matters?”</p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('Looking at regression results where R-squared increases from 0.046 to 0.051 as we add polynomial terms in age, but the coefficient on female stays at -0.18 in all specifications. Explain why R-squared increases but the gender coefficient stays the same. What does this tell us about when functional form matters?'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
+</div>
+<hr>
+<h2 data-number="1.4" id="sec-10-9" class="anchored"><span class="header-section-number">1.4</span> 10.9 Qualitative right-hand-side variables</h2>
+<p>A great advantage of multiple linear regression is that it can deal with binary and other qualitative explanatory variables (also called categories, factor variables), together with quantitative variables, on the right-hand-side.</p>
+<p>To include such variables in the regression, we need to have them as binary, zero-one variables – also called <strong>dummy variables</strong> in the regression context. That’s straightforward for variables that are binary to begin with: assign values zero and one (as we did with <span class="math inline">\(female\)</span> in the case study). We need to transform qualitative variables into binary ones, too, each denoting whether the observation belongs to that category (one) or not (zero). Then we need to include all those binary variables in the regression. Well, all except one.</p>
+<p>We should select one binary variable denoting one category as a <strong>reference category</strong>, or <strong>reference group</strong> – also known as the “left-out category.” Then we have to include the binary variables for all other categories but not the reference category. That way the slope coefficient of a binary variable created from a qualitative variable shows the difference between observations in the category captured by the binary variable and the reference category. If we condition on other explanatory variables, too, the interpretation changes in the usual way: we compare observations that are similar in those other explanatory variables.</p>
+<p>As an example, suppose that <span class="math inline">\(x\)</span> is a categorical variable measuring the level of education with three values <span class="math inline">\(x=\{low, medium, high\}\)</span>. We need to create binary variables and include two of the three in the regression. Let the binary variable <span class="math inline">\(x_{med}\)</span> denote if <span class="math inline">\(x=medium\)</span>, and let the binary <span class="math inline">\(x_{high}\)</span> variable denote if <span class="math inline">\(x = high\)</span>. Include <span class="math inline">\(x_{med}\)</span> and <span class="math inline">\(x_{high}\)</span> in the regression. The third potential variable for <span class="math inline">\(x=low\)</span> is not included. It is the reference category.</p>
+<p><span class="math display">\[
+y^E = \beta_0 + \beta_1 x_{med} + \beta_2 x_{high}
+\]</span></p>
+<p>Let us start with the constant, <span class="math inline">\(\beta_0\)</span>; this shows average <span class="math inline">\(y\)</span> in the reference category. Here, <span class="math inline">\(\beta_0\)</span> is average <span class="math inline">\(y\)</span> when both <span class="math inline">\(x_{med}=0\)</span> and <span class="math inline">\(x_{high}=0\)</span>: this is when <span class="math inline">\(x=low\)</span>.</p>
+<p><span class="math inline">\(\beta_1\)</span> is the difference in average <span class="math inline">\(y\)</span> between observations that are different in <span class="math inline">\(x_{med}\)</span> but the same in <span class="math inline">\(x_{high}\)</span>. Thus <span class="math inline">\(\beta_1\)</span> shows the difference of average <span class="math inline">\(y\)</span> between observations with <span class="math inline">\(x=medium\)</span> and <span class="math inline">\(x=low\)</span>, the reference category. Similarly, <span class="math inline">\(\beta_2\)</span> shows the difference of average <span class="math inline">\(y\)</span> between observations with <span class="math inline">\(x=high\)</span> and <span class="math inline">\(x=low\)</span>, the reference category.</p>
+<p>Which category to choose for the reference? In principle that should not matter: choose a category and all others are compared to that, but we can easily compute other comparisons from those. For example, the difference in <span class="math inline">\(y^E\)</span> between observations with <span class="math inline">\(x=high\)</span> and <span class="math inline">\(x=medium\)</span> in the example above is simply <span class="math inline">\(\beta_2 - \beta_1\)</span> (both coefficients compare to <span class="math inline">\(x=low\)</span>, and that drops out of their difference). But the choice may matter for practical purposes. Two guiding principles may help this choice, one substantive, one statistical. The substantive guide is simple: we should choose the category to which we want to compare the rest. Examples include the home country, the capital city, the lowest or highest value group. The statistical guide is to choose a category with a large number of observations. That is relevant when we want to infer differences from the data for the population, or general pattern, it represents. If the reference category has very few observations, the coefficients that compare to it will have large standard errors, wide confidence intervals, and large p-values.</p>
+<div class="review-box">
+<div class="review-box-title">
+Qualitative Right-Hand-Side Variables in Multiple Linear Regression
+</div>
+<ul>
+<li>We should include qualitative right-hand-side variables with more categories as a series of binary (“dummy”) variables.</li>
+<li>For a qualitative right-hand-side variable with <span class="math inline">\(k\)</span> categories, we should enter <span class="math inline">\(k-1\)</span> binary variables; the category not represented by those binary variables is the reference category.</li>
+<li>Coefficients on each of the <span class="math inline">\(k-1\)</span> binary variables show average differences in <span class="math inline">\(y\)</span> compared to the reference category.</li>
+</ul>
+<p><strong>Example:</strong> Education with 3 levels (Low, Medium, High) * Create: <span class="math inline">\(x_{med}\)</span> (=1 if Medium), <span class="math inline">\(x_{high}\)</span> (=1 if High) * Leave out: Low (reference category) * Regression: <span class="math inline">\(y^E = \beta_0 + \beta_1 x_{med} + \beta_2 x_{high}\)</span> * Interpretation: - <span class="math inline">\(\beta_0\)</span> = Average <span class="math inline">\(y\)</span> for Low education - <span class="math inline">\(\beta_1\)</span> = Difference: Medium - Low - <span class="math inline">\(\beta_2\)</span> = Difference: High - Low - <span class="math inline">\(\beta_2 - \beta_1\)</span> = Difference: High - Medium</p>
+</div>
+<div class="ai-task">
+<p><span class="ai-task-icon">🤖 AI PRACTICE TASK #10</span></p>
+<p><strong>Prompt:</strong> “I have a categorical variable ‘region’ with 5 regions: North, South, East, West, Central. I want to include this in a regression. Show me how to set it up as dummy variables, explain which category to choose as reference, and interpret one coefficient.”</p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('I have a categorical variable region with 5 regions: North, South, East, West, Central. I want to include this in a regression. Show me how to set it up as dummy variables, explain which category to choose as reference, and interpret one coefficient.'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
+</div>
+<hr>
+<h2 class="case-study anchored" data-number="1.5" id="case-study-a4-understanding-the-gender-difference-in-earnings"><span class="header-section-number">1.5</span> Case Study A4: Understanding the Gender Difference in Earnings</h2>
+<div class="case-study-title">
+CASE STUDY A4: GENDER GAP - EDUCATION CATEGORIES
+</div>
+<p><strong>How do different graduate degrees relate to earnings?</strong></p>
+<p>Let’s use our case study to illustrate qualitative variables as we examine earnings differences by categories of educational degree. Recall that our data contains employees with graduate degrees. The dataset differentiates three such degrees: master’s (including graduate teaching degrees, MAs, MScs, MBAs etc.), professional (including MDs), and PhDs.</p>
+<p>Table 10.3 shows the results from three regressions. As a starting point, column (1) repeats the results of the simple regression with <span class="math inline">\(female\)</span> on the right-hand-side. Column (2) includes two education categories <span class="math inline">\(ed\_Profess\)</span> and <span class="math inline">\(ed\_PhD\)</span>; Column (3) includes another set of education categories, <span class="math inline">\(ed\_Profess\)</span> and <span class="math inline">\(ed\_MA\)</span>. The reference category is MA degree in column (2) and PhD in column (3).</p>
+<div class="code-block">
+<div class="code-header">
+📊 REPLICATE TABLE 10.3
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R Code to replicate Table 10.3</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(estimatr)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"cps_earnings_grad.csv"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure education is a factor with MA as reference</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>education <span class="ot">&lt;-</span> <span class="fu">factor</span>(data<span class="sc">$</span>grad_degree, </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                        <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"MA"</span>, <span class="st">"Professional"</span>, <span class="st">"PhD"</span>))</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 1: Baseline (gender only)</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> female, <span class="at">data =</span> data)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 2: Gender + education (MA reference)</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> female <span class="sc">+</span> education, <span class="at">data =</span> data)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 3: Gender + education (PhD reference)</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>education_phd_ref <span class="ot">&lt;-</span> <span class="fu">relevel</span>(data<span class="sc">$</span>education, <span class="at">ref =</span> <span class="st">"PhD"</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> female <span class="sc">+</span> education_phd_ref, <span class="at">data =</span> data)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">modelsummary</span>(<span class="fu">list</span>(model1, model2, model3),</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>             <span class="at">stars =</span> <span class="fu">c</span>(<span class="st">'***'</span> <span class="ot">=</span> <span class="fl">0.01</span>, <span class="st">'**'</span> <span class="ot">=</span> <span class="fl">0.05</span>, <span class="st">'*'</span> <span class="ot">=</span> <span class="fl">0.1</span>),</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>             <span class="at">gof_omit =</span> <span class="st">"IC|Log|F|RMSE"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-gender-earnings-understand/ch10-gender-earnings-multireg.ipynb" class="code-link" target="_blank">🚀 OPEN IN CODESPACE</a></p>
+</div>
+<p><strong>Table 10.3: Gender differences in earnings – log earnings, gender and education</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>(1) ln w</th>
+<th>(2) ln w</th>
+<th>(3) ln w</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>female</strong></td>
+<td>-0.195***</td>
+<td>-0.182***</td>
+<td>-0.182***</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.008)</td>
+<td>(0.008)</td>
+<td>(0.008)</td>
+</tr>
+<tr class="odd">
+<td><strong>ed_Profess</strong></td>
+<td></td>
+<td>0.134***</td>
+<td>0.002</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>(0.012)</td>
+<td>(0.012)</td>
+</tr>
+<tr class="odd">
+<td><strong>ed_PhD</strong></td>
+<td></td>
+<td>0.136***</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>(0.011)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>ed_MA</strong></td>
+<td></td>
+<td></td>
+<td>-0.136***</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>(0.011)</td>
+</tr>
+<tr class="odd">
+<td><strong>Constant</strong></td>
+<td>3.514***</td>
+<td>3.434***</td>
+<td>3.570***</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.006)</td>
+<td>(0.008)</td>
+<td>(0.010)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Observations</strong></td>
+<td>18,241</td>
+<td>18,241</td>
+<td>18,241</td>
+</tr>
+<tr class="odd">
+<td><strong>R-squared</strong></td>
+<td>0.028</td>
+<td>0.046</td>
+<td>0.046</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: The data includes employees with a graduate degree. MA, Professional and PhD are three categories of graduate degree. Column (2): MA is the reference category. Column (3): PhD is the reference category. Robust standard error estimates in parentheses. *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1</em></p>
+<p><em>Source: cps-earnings data. U.S.A., 2014.</em></p>
+<h3 data-number="1.5.1" id="interpretation" class="anchored"><span class="header-section-number">1.5.1</span> Interpretation</h3>
+<p>The coefficients in column (2) of Table 10.3 show that comparing employees of the same gender, those with a professional degree earn, on average, 13.4% more than employees with an MA degree, and those with a PhD degree earn, on average, 13.6% more than employees with an MA degree. The coefficients in column (3) show that, among employees of the same gender, those with an MA degree earn, on average, 13.6% less than those with a PhD degree, and those with a professional degree earn about the same on average as those with a PhD degree. These differences are consistent with each other.</p>
+<p>This is a large dataset so confidence intervals are rather narrow whichever group we choose as a reference category. Note that the coefficient on <span class="math inline">\(female\)</span> is smaller, <span class="math inline">\(-0.182\)</span>, when education is included in the regression. This suggests that part of the gender difference is due to the fact that women are somewhat more likely to be in the lower-earner MA group than in the higher-earner professional or PhD groups. But only a small part. We shall return to this finding later when we try to understand the causes of gender differences in earnings.</p>
+<div>
+<blockquote>
+<p><strong>Practical Tip: Choosing Reference Categories</strong></p>
+<p><strong>Good reference categories:</strong> 1. Natural baseline (e.g., lowest education level) 2. Largest group (more observations = smaller SE) 3. Group you want to compare all others to 4. Control group in experiments</p>
+<p><strong>Computing other comparisons:</strong> - From column (2): Professional vs PhD = <span class="math inline">\(0.134 - 0.136 = -0.002\)</span> (essentially the same) - This matches the Professional coefficient in column (3): <span class="math inline">\(0.002\)</span></p>
+</blockquote>
+</div>
+<hr>
+<h2 data-number="1.6" id="sec-10-10" class="anchored"><span class="header-section-number">1.6</span> 10.10 Interactions: Uncovering different slopes across groups</h2>
+<p>Including binary variables for various categories of a qualitative variable uncover average differences in <span class="math inline">\(y\)</span>. But sometimes we want to know something more: whether and how much the slope with respect to a third variable differs by those categories. Multiple linear regression can uncover that too, with appropriate definition of the variables.</p>
+<p>More generally, we can use the method of linear regression analysis to uncover how association between <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> varies by values of a third variable <span class="math inline">\(z\)</span>. Such variation is called an <strong>interaction</strong>, as it shows how <span class="math inline">\(x\)</span> and <span class="math inline">\(z\)</span> interact in shaping average <span class="math inline">\(y\)</span>. In medicine, when estimating the effect of <span class="math inline">\(x\)</span> on <span class="math inline">\(y\)</span>, if that effect varies by a third variable <span class="math inline">\(z\)</span>, that <span class="math inline">\(z\)</span> is called a <strong>moderator variable</strong>. Examples include whether malnutrition, immune deficiency, or smoking can decrease the effect of a drug to treat an illness. Non-medical examples of interactions include whether and how the effect of monetary policy differs by the openness of a country, or whether and how the way customer ratings are related to hotel prices differs by hotel stars.</p>
+<p>Multiple regression offers the possibility to uncover such differences in patterns. For the simplest case, consider a regression with two explanatory variables: <span class="math inline">\(x_1\)</span> is quantitative; <span class="math inline">\(x_2\)</span> is binary. We wonder if the relationship between average <span class="math inline">\(y\)</span> and <span class="math inline">\(x_1\)</span> is different for observations with <span class="math inline">\(x_2=1\)</span> than for <span class="math inline">\(x_2=0\)</span>. How shall we uncover that difference?</p>
+<h3 data-number="1.6.1" id="without-interaction-parallel-lines" class="anchored"><span class="header-section-number">1.6.1</span> Without Interaction: Parallel Lines</h3>
+<p>A multiple regression that includes <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> estimates two parallel lines for the <span class="math inline">\(y\)</span> – <span class="math inline">\(x_1\)</span> pattern: one for those with <span class="math inline">\(x_2=0\)</span> and one for those with <span class="math inline">\(x_2=1\)</span>.</p>
+<p><span class="math display">\[
+y^E = \beta_0+\beta_1 x_1+\beta_2 x_2
+\]</span></p>
+<p>The slope of <span class="math inline">\(x_1\)</span> is <span class="math inline">\(\beta_1\)</span> and is the same in this regression for observations in the <span class="math inline">\(x_2=0\)</span> group and observations in the <span class="math inline">\(x_2=1\)</span> group. <span class="math inline">\(\beta_2\)</span> shows the average difference in <span class="math inline">\(y\)</span> between observations that are different in <span class="math inline">\(x_2\)</span> but have the same <span class="math inline">\(x_1\)</span>. Since the slope of <span class="math inline">\(x_1\)</span> is the same for the two <span class="math inline">\(x_2\)</span> groups, this <span class="math inline">\(\beta_2\)</span> difference is the same across the range of <span class="math inline">\(x_1\)</span>. This regression does not allow for the slope in <span class="math inline">\(x_1\)</span> to be different for the two groups. Thus, this regression cannot uncover whether the <span class="math inline">\(y\)</span> – <span class="math inline">\(x_1\)</span> pattern differs in the two groups.</p>
+<p>Denote the expected <span class="math inline">\(y\)</span> conditional on <span class="math inline">\(x_1\)</span> in the <span class="math inline">\(x_2=0\)</span> group as <span class="math inline">\(y^E_0\)</span>, and denote the expected <span class="math inline">\(y\)</span> conditional on <span class="math inline">\(x_1\)</span> in the <span class="math inline">\(x_2=1\)</span> group as <span class="math inline">\(y^E_1\)</span>. Then, the regression above implies that the intercept is different (higher by <span class="math inline">\(\beta_2\)</span> in the <span class="math inline">\(x_2=1\)</span> group) but the slopes are the same:</p>
+<p><strong>First group, <span class="math inline">\(x_2=0\)</span>:</strong> <span class="math display">\[
+y^E_0 = \beta_0 + \beta_1 x_1
+\]</span></p>
+<p><strong>Second group, <span class="math inline">\(x_2=1\)</span>:</strong> <span class="math display">\[
+y^E_1 = \beta_0 + \beta_2 \times 1 + \beta_1 x_1
+\]</span></p>
+<h3 data-number="1.6.2" id="with-interaction-different-slopes" class="anchored"><span class="header-section-number">1.6.2</span> With Interaction: Different Slopes</h3>
+<p>If we want to <strong>allow for different slopes</strong> in the two <span class="math inline">\(x_2\)</span> groups, we have to do something different. That difference is including the interaction term. An interaction term is a new variable that is created from two other variables, by multiplying one by the other. In our case:</p>
+<p><span class="math display">\[
+y^E = \beta_0+\beta_1 x_1+\beta_2 x_2 + \beta_3 x_1 x_2
+\]</span></p>
+<p>Not only the intercepts are different; the slopes are different, too.</p>
+<p><strong>First group, <span class="math inline">\(x_2=0\)</span>:</strong> <span class="math display">\[
+y^E_0 = \beta_0 + \beta_1 x_1
+\]</span></p>
+<p><strong>Second group, <span class="math inline">\(x_2=1\)</span>:</strong> <span class="math display">\[
+y^E_1 = \beta_0 + \beta_2 + (\beta_1 + \beta_3) x_1
+\]</span></p>
+<p>It turns out that the coefficients of this regression can be related to the coefficients of two simple regressions of <span class="math inline">\(y\)</span> on <span class="math inline">\(x_1\)</span>, estimated separately in the two <span class="math inline">\(x_2\)</span> groups.</p>
+<p><strong>Separate regressions:</strong> <span class="math display">\[
+\begin{aligned}
+y^E_0 &amp;= \gamma_0+\gamma_1 x_1 \\
+y^E_1 &amp;= \gamma_2+\gamma_3 x_1
+\end{aligned}
+\]</span></p>
+<p>What we have is <span class="math inline">\(\gamma_0=\beta_0\)</span>; <span class="math inline">\(\gamma_1=\beta_1\)</span> ; <span class="math inline">\(\gamma_2=\beta_0+\beta_2\)</span>; and <span class="math inline">\(\gamma_3=\beta_1+\beta_3\)</span>;</p>
+<p>In other words, the separate regressions in the two groups and the regression that pools observations but includes an interaction term yield exactly the same coefficient estimates. The coefficients of the separate regressions are easier to interpret. But the pooled regression with interaction allows for a direct test of whether the slopes are the same. <span class="math inline">\(H_0: \beta_3 = 0\)</span> is the null hypothesis for that test; thus the simple t-test answers this question.</p>
+<p>We can mix these tools to build ever more complicated multiple regressions. Binary variables can be interacted with other binary variables. Binary variables created from qualitative explanatory variables with multiple categories can all be interacted with other variables. Piecewise linear splines or polynomials may be interacted with binary variables. More than two variables may be interacted as well. Furthermore, quantitative variables can also be interacted with each other, although the interpretation of such interactions is more complicated.</p>
+<div class="review-box">
+<div class="review-box-title">
+Interactions of Right-Hand-Side Variables in Multiple Linear Regression
+</div>
+<p><strong>General form:</strong> <span class="math display">\[
+y^E = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_1 x_2
+\]</span></p>
+<p><strong>Interpretation:</strong> * <span class="math inline">\(\beta_1\)</span> shows average differences in <span class="math inline">\(y\)</span> corresponding to a one-unit difference in <span class="math inline">\(x_1\)</span> when <span class="math inline">\(x_2=0\)</span>. * <span class="math inline">\(\beta_2\)</span> shows average differences in <span class="math inline">\(y\)</span> corresponding to a one-unit difference in <span class="math inline">\(x_2\)</span> when <span class="math inline">\(x_1=0\)</span>. * <span class="math inline">\(\beta_3\)</span> is the coefficient on the interaction term. It shows the additional average differences in <span class="math inline">\(y\)</span> corresponding to a one-unit difference in <span class="math inline">\(x_1\)</span> when <span class="math inline">\(x_2\)</span> is one unit larger, too. (It’s symmetrical in <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span>.)</p>
+<p><strong>When one variable is binary (<span class="math inline">\(x_2=0\)</span> or <span class="math inline">\(1\)</span>):</strong> * <span class="math inline">\(\beta_1\)</span> shows average differences in <span class="math inline">\(y\)</span> per unit of <span class="math inline">\(x_1\)</span> when <span class="math inline">\(x_2=0\)</span> * <span class="math inline">\(\beta_1 + \beta_3\)</span> shows average differences in <span class="math inline">\(y\)</span> per unit of <span class="math inline">\(x_1\)</span> when <span class="math inline">\(x_2=1\)</span> * Equivalent to running separate regressions for each group</p>
+<p><strong>Testing for different slopes:</strong> * <span class="math inline">\(H_0: \beta_3 = 0\)</span> tests whether slopes are the same * Reject → slopes differ by group * Fail to reject → parallel lines okay</p>
+</div>
+<div class="ai-task">
+<p><span class="ai-task-icon">🤖 AI PRACTICE TASK #11</span></p>
+<p><strong>Prompt:</strong> “Explain interaction terms using this example: I’m studying how study hours affect test scores, and I suspect the effect might be different for students who attend tutoring vs those who don’t. Write out the regression equation with an interaction term and interpret each coefficient.”</p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('Explain interaction terms using this example: I am studying how study hours affect test scores, and I suspect the effect might be different for students who attend tutoring vs those who do not. Write out the regression equation with an interaction term and interpret each coefficient.'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
+</div>
+<hr>
+<h2 class="case-study anchored" data-number="1.7" id="case-study-a5-understanding-the-gender-difference-in-earnings"><span class="header-section-number">1.7</span> Case Study A5: Understanding the Gender Difference in Earnings</h2>
+<div class="case-study-title">
+CASE STUDY A5: GENDER GAP - AGE INTERACTIONS
+</div>
+<p><strong>Does the gender wage gap vary with age?</strong></p>
+<p>We turn to illustrating the use of interactions as we consider the question of whether the patterns with age are similar or different for men versus women. As we discussed, we can investigate this in two ways that should lead to the same result: estimating regressions separately for men and women and estimating a regression that includes age interacted with gender. This regression model with an interaction is:</p>
+<p><span class="math display">\[
+(\ln w)^E = \beta_0 + \beta_1 \times age + \beta_2 \times female + \beta_3 \times age \times female
+\]</span></p>
+<p>Table 10.4 shows the results with age entered in a linear fashion. Column (1) shows the results for women, column (2) for men, column (3) for women and men pooled, with interactions. To have a better sense of the differences, which are often small, the table shows coefficients up to three digits.</p>
+<div class="code-block">
+<div class="code-header">
+📊 REPLICATE TABLE 10.4
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R Code to replicate Table 10.4</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(estimatr)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"cps_earnings_grad.csv"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 1: Women only</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> age, <span class="at">data =</span> <span class="fu">subset</span>(data, female <span class="sc">==</span> <span class="dv">1</span>))</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 2: Men only</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> age, <span class="at">data =</span> <span class="fu">subset</span>(data, female <span class="sc">==</span> <span class="dv">0</span>))</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 3: Pooled with interaction</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> age <span class="sc">+</span> female <span class="sc">+</span> age<span class="sc">:</span>female, <span class="at">data =</span> data)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">modelsummary</span>(<span class="fu">list</span>(model1, model2, model3),</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>             <span class="at">stars =</span> <span class="fu">c</span>(<span class="st">'***'</span> <span class="ot">=</span> <span class="fl">0.01</span>, <span class="st">'**'</span> <span class="ot">=</span> <span class="fl">0.05</span>, <span class="st">'*'</span> <span class="ot">=</span> <span class="fl">0.1</span>),</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>             <span class="at">gof_omit =</span> <span class="st">"IC|Log|F|RMSE"</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>             <span class="at">fmt =</span> <span class="dv">3</span>)  <span class="co"># Show 3 decimal places</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-gender-earnings-understand/ch10-gender-earnings-multireg.ipynb" class="code-link" target="_blank">🚀 OPEN IN CODESPACE</a></p>
+</div>
+<p><strong>Table 10.4: Gender differences in earnings – log earnings, gender, age, and their interaction</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>(1) Women</th>
+<th>(2) Men</th>
+<th>(3) Pooled</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>age</strong></td>
+<td>0.006***</td>
+<td>0.009***</td>
+<td>0.009***</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.001)</td>
+<td>(0.001)</td>
+<td>(0.001)</td>
+</tr>
+<tr class="odd">
+<td><strong>female</strong></td>
+<td></td>
+<td></td>
+<td>-0.036</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>(0.042)</td>
+</tr>
+<tr class="odd">
+<td><strong>age × female</strong></td>
+<td></td>
+<td></td>
+<td>-0.003***</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>(0.001)</td>
+</tr>
+<tr class="odd">
+<td><strong>Constant</strong></td>
+<td>3.081***</td>
+<td>3.117***</td>
+<td>3.117***</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.030)</td>
+<td>(0.023)</td>
+<td>(0.023)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Observations</strong></td>
+<td>7,874</td>
+<td>10,367</td>
+<td>18,241</td>
+</tr>
+<tr class="odd">
+<td><strong>R-squared</strong></td>
+<td>0.004</td>
+<td>0.012</td>
+<td>0.032</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Employees with a graduate degree. Column (1) is women only; column (2) is men only; column (3) includes all employees. Robust standard error estimates in parentheses. *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1</em></p>
+<p><em>Source: cps-earnings data. U.S.A., 2014.</em></p>
+<h3 data-number="1.7.1" id="interpretation-1" class="anchored"><span class="header-section-number">1.7.1</span> Interpretation</h3>
+<p>According to column (1) of Table 10.4, women who are one year older earn 0.6 percent more, on average. According to column (2), men who are one year older earn 0.9 percent more, on average. Column (3) repeats the age coefficient for men. Then it shows that the slope of the log earnings – age pattern is, on average, 0.003 less positive for women, meaning that the earnings advantage of women who are one year older is 0.3 percentage points smaller than the earnings advantage of men who are one year older.</p>
+<p>The advantage of the pooled regression, is its ability to allow for direct inference about gender differences. The 95% CI of the gender difference in the average pattern of ln wages and age is [-0.005,-0.001]. Among employees with post-graduate degree in the U.S.A. in 2014, the wage difference corresponding to a one year difference in age was 0.1 to 0.5 percentage points less positive for women than for men. This confidence interval does not include zero. Accordingly, the t-test of whether the difference is zero rejects its null at the 5% level, suggesting that we can safely consider the difference as real in the population (as opposed to a chance event in the particular dataset); we are less than 5% likely to make a mistake by doing so.</p>
+<p>The coefficient on the <span class="math inline">\(female\)</span> variable in the pooled regression is <span class="math inline">\(-0.036\)</span>. This is equal to the difference of the two regression constants: <span class="math inline">\(3.081\)</span> for women and <span class="math inline">\(3.117\)</span> for men. Those regression constants do not have a clear interpretation here (average log earnings when age is zero are practically meaningless). Their difference, which is actually the coefficient on <span class="math inline">\(female\)</span> in the pooled regression, shows the average gender difference between employees with zero age. Similarly to the constants in the separate regressions, the coefficient is meaningless for any substantive purpose. Nevertheless, the regression needs it to have an intercept with the <span class="math inline">\(\ln w\)</span> axis.</p>
+<h3 data-number="1.7.2" id="calculating-gender-differences-by-age" class="anchored"><span class="header-section-number">1.7.2</span> Calculating Gender Differences by Age</h3>
+<p>Taking the coefficients on <span class="math inline">\(female\)</span>, <span class="math inline">\(age\)</span>, and <span class="math inline">\(female \times age\)</span> together, the regression allows us to calculate the average gender difference by age. This exercise takes the linear functional form seriously, an assumption we know is false. We shall repeat this exercise with a better approximation of the nonlinear patterns. For now, let’s stick to the linear specification, for educational purposes.</p>
+<p>The youngest people in our sample are 25 years old. Starting with the separate regressions, the predicted log wage for women of age 25 is <span class="math inline">\(3.081 + 25 \times 0.006 \approx 3.231\)</span>. For men, <span class="math inline">\(3.117 + 25 \times 0.009 \approx 3.342\)</span>. The difference is <span class="math inline">\(-0.11\)</span>. We get the same number from the pooled regression: the gender difference at age 25 should be the gender difference at age zero implied by the coefficient on <span class="math inline">\(female\)</span> plus 25 times the difference in the slope by age, the coefficient on the interaction term <span class="math inline">\(female \times age\)</span>: <span class="math inline">\(-0.036 + 25 \times -0.003 \approx -0.11\)</span>. Carrying out the same calculations for age 45 yields a difference of <span class="math inline">\(-0.17\)</span>. These results imply that the gender difference in average earnings is wider for older ages.</p>
+<figure>
+<img src="../../figures/Ch10_figures/ch10-figure-2a-earnings-interact1.png" alt="Gender wage gap linear" width="100%">
+<figcaption>
+<strong>Figure 10.2a:</strong> Earning differences by gender: linear model in age. Employees with a graduate degree. Predicted values and 95% confidence intervals from a regression of log earnings on age interacted with gender. Source: cps-earnings data. U.S.A., 2014. N=18,241
+</figcaption>
+</figure>
+<p>Figure 10.2a shows the relationship graphically. It includes two lines with a growing gap: earnings difference is higher for older age. Remember, our regression can capture this growing gap because it includes the interaction. Without the interaction, we would not be able to see this, as that specification would force two parallel lines at constant distance.</p>
+<h3 data-number="1.7.3" id="nonlinear-age-patterns-with-interactions" class="anchored"><span class="header-section-number">1.7.3</span> Nonlinear Age Patterns with Interactions</h3>
+<p>However, we know that the pattern on age and (log) earnings is not linear. Our earlier results indicate that a fourth-order polynomial is a better approximation to that pattern. To explore whether the shapes of the age-earnings profiles are different between women and men, we re-estimated the regression with age in a fourth-order polynomial interacted with gender:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(\ln w)^E = &amp;\beta_0 + \beta_1 age + \beta_2 age^2 + \beta_3 age^3 + \beta_4 age^4 + \beta_5 female \\
+&amp;+ \beta_6 female \times age + \beta_7 female \times age^2 \\
+&amp;+ \beta_8 female \times age^3 + \beta_9 female \times age^4
+\end{aligned}
+\]</span></p>
+<p>This is a complicated regression with coefficients that are practically impossible to interpret. We don’t show the coefficient estimates here. Instead we visualize the results. The graph in Figure 10.2b shows the predicted pattern (the regression curves) for women and men, together with the confidence intervals of the regression lines (curves here), as introduced in Chapter 9, Section 9.4.</p>
+<figure>
+<img src="../../figures/Ch10_figures/ch10-figure-2b-earnings-interact2.png" alt="Gender wage gap polynomial" width="100%">
+<figcaption>
+<strong>Figure 10.2b:</strong> Earning differences by gender: polynomial model in age. Employees with a graduate degree. Predicted values and 95% confidence intervals from a regression of log earnings on a 4th-order polynomial of age interacted with gender. Source: cps-earnings data. U.S.A., 2014. N=18,241
+</figcaption>
+</figure>
+<p>Figure 10.2b suggests that the average earnings difference is a little less than 10% between ages 25 and 30, increases to around 15% by age 40, and reaches 22% by age 50, from where it decreases slightly to age 60 and more by age 65. These differences are likely similar in the population represented by the data as the confidence intervals around the regression curves are rather narrow, except at the two ends.</p>
+<p>These results are very informative. Many factors may cause women with a graduate degree to earn less than men. Some of those factors are present at young age, but either they are more important in middle age, or additional factors start playing a role by then.</p>
+<div>
+<blockquote>
+<p><strong>Key Findings from Case Study A5</strong></p>
+<ol type="1">
+<li><strong>The gender wage gap grows with age</strong> (from ~10% at age 25 to ~22% at age 50)</li>
+<li><strong>The interaction is statistically significant</strong> (p &lt; 0.01)</li>
+<li><strong>This pattern is robust</strong> to different functional forms (linear vs polynomial)</li>
+<li><strong>Policy implications:</strong> The growing gap suggests factors that accumulate over careers (promotion barriers, family responsibilities, discrimination)</li>
+</ol>
+<p><strong>What we can’t determine from this analysis:</strong> - Whether this is cohort effect vs age effect - Exact mechanisms causing the growing gap - Causal vs correlational interpretation</p>
+</blockquote>
+</div>
+<div class="ai-task">
+<p><span class="ai-task-icon">🤖 AI PRACTICE TASK #12</span></p>
+<p><strong>Prompt:</strong> “Looking at Figure 10.2b, explain why the confidence intervals are wider at the ends (ages 25 and 65) compared to the middle ages. What does this tell us about the reliability of our estimates?”</p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('Looking at a regression plot with confidence intervals, explain why the confidence intervals are wider at age 25 and age 65 compared to ages 40-50. What does this tell us about the reliability of our estimates at different ages?'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
+</div>
+<hr>
+<h2 data-number="1.8" id="summary-what-we-learned" class="anchored"><span class="header-section-number">1.8</span> Summary: What We Learned</h2>
+<p>In this section we covered:</p>
+<ol type="1">
+<li><strong>Multiple regression with many variables</strong> (Section 10.7)
+<ul>
+<li>Same interpretation principles apply</li>
+<li>SE affected by correlation with all other variables</li>
+</ul></li>
+<li><strong>Nonlinear patterns</strong> (Section 10.8)
+<ul>
+<li>Functional form matters more for prediction than coefficients</li>
+<li>Test whether nonlinearity affects your main variable</li>
+</ul></li>
+<li><strong>Categorical variables</strong> (Section 10.9)
+<ul>
+<li>Use k-1 dummy variables for k categories</li>
+<li>Choose reference category carefully</li>
+<li>All comparisons can be computed</li>
+</ul></li>
+<li><strong>Interactions</strong> (Section 10.10)
+<ul>
+<li>Allow slopes to differ across groups</li>
+<li>Equivalent to separate regressions</li>
+<li>Test whether slopes actually differ</li>
+</ul></li>
+<li><strong>Gender wage gap insights</strong> (Case Studies A3-A5)
+<ul>
+<li>Gap doesn’t depend much on age functional form</li>
+<li>Education explains small part of gap</li>
+<li>Gap grows with age (10% → 22% from age 25 to 50)</li>
+</ul></li>
+</ol>
+<p><strong>Next:</strong> In the final section, we’ll discuss how multiple regression relates to causal analysis and prediction.</p>
+<hr>
+<div>
+<blockquote>
+<p><strong>🔗 Explore Further</strong></p>
+<p><strong>Interactive Dashboard:</strong> Visualize interactions and categorical variables<br>
+<a href="https://dashboards.gabors-data-analysis.com/ch10">Open Dashboard</a></p>
+<p><strong>Run the Analysis:</strong> Replicate all regressions yourself<br>
+<a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-gender-earnings-understand/ch10-gender-earnings-multireg.ipynb">Open in GitHub Codespace</a></p>
+<p><strong>Download the Data:</strong> cps-earnings dataset<br>
+<a href="https://osf.io/4vt9a/">Get Data</a></p>
+</blockquote>
+</div>
+<hr>
+<div class="page-nav">
+<div class="page-nav-prev">
+<pre><code>&lt;a href="02-inference.html"&gt;← Previous: Page 2 - Statistical Inference&lt;/a&gt;</code></pre>
+</div>
+<div class="page-nav-next">
+<pre><code>&lt;a href="04-applications.html"&gt;Next: Page 4 - Applications →&lt;/a&gt;</code></pre>
+</div>
+</div>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+
+
+
+
+</body></html>

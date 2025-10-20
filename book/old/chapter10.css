@@ -1,0 +1,30 @@
+
+:root{
+  --bg:#ffffff; --fg:#111; --muted:#555; --border:#e6e6e6; --accent:#1f6feb;
+  --toc-bg:#f8f9fb;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;color:var(--fg);background:var(--bg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{display:grid;grid-template-columns:280px 1fr;gap:24px;max-width:1400px;margin:0 auto;padding:0 16px}
+header.site{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--border);z-index:10}
+header .inner{display:flex;align-items:center;justify-content:space-between;max-width:1400px;margin:0 auto;padding:12px 16px}
+.brand{font-weight:700}
+.nav-links a{margin-left:12px}
+aside.toc{position:sticky;top:56px;height:calc(100vh - 56px);overflow:auto;background:var(--toc-bg);padding:16px;border-right:1px solid var(--border)}
+aside.toc h2{font-size:14px;margin:0 0 8px 0;text-transform:uppercase;color:var(--muted);letter-spacing:.06em}
+.toc a{display:block;padding:4px 4px;border-radius:6px;color:var(--fg)}
+.toc a.active{background:#eaf2ff}
+main{padding:24px 0;max-width:900px}
+h1{font-size:30px;margin-top:0}
+h2{margin-top:2em}
+figure{margin:1em 0}
+.img-placeholder{width:100%;padding-top:56%;background:#ececec;border:1px dashed #bbb;border-radius:8px;display:block}
+.table{margin:1em 0;overflow:auto}
+table{border-collapse:collapse;width:100%}
+td,th{border:1px solid var(--border);padding:6px 8px;vertical-align:top}
+pre{background:#f6f8fa;border:1px solid var(--border);padding:12px;border-radius:8px;overflow:auto}
+code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+footer.site{border-top:1px solid var(--border);padding:24px 16px;color:var(--muted)}
+.badge{font-size:12px;color:#fff;background:var(--accent);padding:2px 6px;border-radius:999px}

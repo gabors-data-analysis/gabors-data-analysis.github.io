@@ -1,0 +1,748 @@
+/* ====================================
+   DATA ANALYSIS TEXTBOOK STYLESHEET
+   Created: 2025-10-17
+   Version: 1.1 - Added dashboard styles
+   Updated: 2025-10-20
+   Author: Gábor Békés
+   ==================================== */
+
+/* ====================================
+   COLOR PALETTE - Wes Anderson Style
+   ==================================== */
+:root {
+    --wes-cream: #F7F3E9;
+    --wes-coral: #D63384;
+    --wes-mint: #20C997;
+    --wes-yellow: #FFC107;
+    --wes-navy: #2C3E50;
+    --wes-gray: #ADB5BD;
+    --wes-purple: #6F42C1;
+    
+    /* Light variants for backgrounds */
+    --wes-light-coral: rgba(214, 51, 132, 0.1);
+    --wes-light-mint: rgba(32, 201, 151, 0.1);
+    --wes-light-yellow: rgba(255, 193, 7, 0.15);
+    --wes-light-purple: rgba(111, 66, 193, 0.1);
+    --wes-light-navy: rgba(44, 62, 80, 0.05);
+    
+    /* Shadows */
+    --wes-shadow: rgba(44, 62, 80, 0.15);
+    --wes-shadow-strong: rgba(44, 62, 80, 0.25);
+}
+
+/* ====================================
+   BASE STYLES
+   ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', Georgia, serif;
+    background: var(--wes-cream);
+    color: var(--wes-navy);
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 0;
+}
+
+/* ====================================
+   TYPOGRAPHY
+   ==================================== */
+
+/* Main headers - Anton (bold, display) */
+h1, .chapter-title {
+    font-family: 'Anton', 'Impact', sans-serif;
+    font-size: 3rem;
+    color: var(--wes-coral);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 2rem 0 1rem 0;
+    line-height: 1.2;
+}
+
+/* Section headers - Oswald (medium weight) */
+h2 {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--wes-navy);
+    margin: 2.5rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--wes-coral);
+}
+
+/* Subsection headers - Oswald */
+h3 {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--wes-mint);
+    margin: 2rem 0 0.75rem 0;
+}
+
+/* Small headers - Roboto Condensed */
+h4 {
+    font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--wes-navy);
+    margin: 1.5rem 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Body text - Lora (serif, readable) */
+p {
+    font-family: 'Lora', Georgia, serif;
+    margin: 0 0 1.2rem 0;
+    text-align: justify;
+}
+
+/* Links */
+a {
+    color: var(--wes-coral);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+a:hover {
+    border-bottom-color: var(--wes-coral);
+}
+
+/* Strong/Bold */
+strong, b {
+    font-weight: 600;
+    color: var(--wes-navy);
+}
+
+/* Emphasis/Italic */
+em, i {
+    font-style: italic;
+}
+
+/* Code inline */
+code {
+    font-family: 'Courier New', monospace;
+    background: var(--wes-light-navy);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* ====================================
+   LAYOUT
+   ==================================== */
+
+/* Main container */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Wide container for tables/figures */
+.wide-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ====================================
+   CALLOUT BOXES (Quarto)
+   ==================================== */
+
+/* Motivation box - Yellow */
+.callout-note {
+    background: var(--wes-light-yellow);
+    border-left: 5px solid var(--wes-yellow);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.callout-note .callout-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--wes-navy);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Important box - Coral */
+.callout-important {
+    background: var(--wes-light-coral);
+    border-left: 5px solid var(--wes-coral);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.callout-important .callout-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--wes-coral);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Tip box - Mint */
+.callout-tip {
+    background: var(--wes-light-mint);
+    border-left: 5px solid var(--wes-mint);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.callout-tip .callout-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--wes-mint);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Warning box - Purple */
+.callout-warning {
+    background: var(--wes-light-purple);
+    border-left: 5px solid var(--wes-purple);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.callout-warning .callout-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--wes-purple);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ====================================
+   CUSTOM BOXES
+   ==================================== */
+
+/* Review box - Navy border */
+.review-box {
+    background: white;
+    border: 3px solid var(--wes-navy);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--wes-shadow);
+}
+
+.review-box-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--wes-navy);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Case study box - Coral accent */
+.case-study {
+    background: white;
+    border: 3px solid var(--wes-coral);
+    padding: 2rem;
+    margin: 3rem 0;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px var(--wes-shadow);
+}
+
+.case-study-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    color: var(--wes-coral);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* AI Task box - Purple */
+.ai-task {
+    background: linear-gradient(135deg, var(--wes-light-purple) 0%, white 100%);
+    border: 2px solid var(--wes-purple);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.ai-task-icon {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--wes-purple);
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ai-task-copy {
+    background: var(--wes-purple);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.75rem;
+    transition: all 0.3s;
+}
+
+.ai-task-copy:hover {
+    background: var(--wes-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--wes-shadow);
+}
+
+/* ====================================
+   CODE BLOCKS
+   ==================================== */
+
+/* Code block container */
+.code-block {
+    background: var(--wes-navy);
+    color: var(--wes-cream);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    overflow-x: auto;
+    position: relative;
+}
+
+.code-block pre {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.code-header {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: var(--wes-mint);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--wes-mint);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.code-link {
+    background: var(--wes-mint);
+    color: var(--wes-navy);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.code-link:hover {
+    background: var(--wes-coral);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--wes-shadow);
+}
+
+/* ====================================
+   BUTTONS & INTERACTIVE ELEMENTS
+   ==================================== */
+
+/* Primary button - Coral */
+.btn-primary {
+    background: var(--wes-coral);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: var(--wes-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--wes-shadow);
+}
+
+/* Secondary button - Mint */
+.btn-secondary {
+    background: var(--wes-mint);
+    color: var(--wes-navy);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background: var(--wes-coral);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--wes-shadow);
+}
+
+/* Dashboard button - Yellow */
+.btn-dashboard {
+    background: var(--wes-yellow);
+    color: var(--wes-navy);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+    box-shadow: 0 4px 8px var(--wes-shadow);
+}
+
+.btn-dashboard:hover {
+    background: var(--wes-coral);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px var(--wes-shadow-strong);
+}
+
+/* ====================================
+   TABLES
+   ==================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px var(--wes-shadow);
+}
+
+thead {
+    background: var(--wes-navy);
+    color: white;
+}
+
+thead th {
+    padding: 1rem;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--wes-light-navy);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--wes-light-navy);
+}
+
+tbody tr:hover {
+    background: var(--wes-light-coral);
+}
+
+tbody td {
+    padding: 0.75rem 1rem;
+    font-family: 'Lora', serif;
+}
+
+/* Regression table specific styling */
+.regression-table {
+    font-size: 0.95rem;
+}
+
+.regression-table td:first-child {
+    font-weight: 600;
+    color: var(--wes-navy);
+}
+
+.regression-table td:not(:first-child) {
+    text-align: center;
+}
+
+/* ====================================
+   FIGURES & IMAGES
+   ==================================== */
+
+figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px var(--wes-shadow);
+}
+
+figcaption {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.95rem;
+    color: var(--wes-gray);
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+/* ====================================
+   DASHBOARDS & IFRAMES
+   ==================================== */
+
+/* Dashboard container - Yellow theme */
+.dashboard-container {
+    background: white;
+    border: 3px solid var(--wes-yellow);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 3rem 0;
+    box-shadow: 0 6px 16px var(--wes-shadow);
+}
+
+.dashboard-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8rem;
+    color: var(--wes-yellow);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.dashboard-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    color: var(--wes-gray);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-iframe {
+    width: 100%;
+    height: 600px;
+    border: 2px solid var(--wes-light-yellow);
+    border-radius: 8px;
+    background: var(--wes-cream);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Dashboard callout box - Yellow theme */
+.dashboard-box {
+    background: linear-gradient(135deg, var(--wes-light-yellow) 0%, white 100%);
+    border: 3px solid var(--wes-yellow);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+.dashboard-box-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+    color: var(--wes-yellow);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.dashboard-link {
+    background: var(--wes-yellow);
+    color: var(--wes-navy);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+    box-shadow: 0 4px 8px var(--wes-shadow);
+    text-decoration: none;
+    margin: 0.5rem;
+}
+
+.dashboard-link:hover {
+    background: var(--wes-coral);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px var(--wes-shadow-strong);
+    border-bottom: none;
+}
+
+/* Responsive dashboard */
+@media (max-width: 768px) {
+    .dashboard-iframe {
+        height: 500px;
+    }
+    
+    .dashboard-container {
+        padding: 1rem;
+    }
+    
+    .dashboard-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* ====================================
+   NAVIGATION
+   ==================================== */
+
+/* Page navigation */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0 2rem 0;
+    padding: 1rem 0;
+    border-top: 3px solid var(--wes-coral);
+    border-bottom: 3px solid var(--wes-coral);
+}
+
+.page-nav-prev,
+.page-nav-next {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--wes-coral);
+    transition: all 0.3s;
+}
+
+.page-nav-prev:hover,
+.page-nav-next:hover {
+    color: var(--wes-mint);
+    transform: translateX(5px);
+}
+
+/* ====================================
+   LISTS
+   ==================================== */
+
+ul, ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+/* ====================================
+   EQUATIONS (MathJax styling)
+   ==================================== */
+
+.MathJax {
+    color: var(--wes-navy);
+}
+
+/* Display equations */
+.MathJax_Display {
+    margin: 1.5rem 0;
+}
+
+/* ====================================
+   RESPONSIVE DESIGN
+   ==================================== */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    h1, .chapter-title {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    .main-content,
+    .wide-content {
+        padding: 1rem;
+    }
+    
+    table {
+        font-size: 0.85rem;
+    }
+    
+    thead th,
+    tbody td {
+        padding: 0.5rem;
+    }
+}
+
+/* ====================================
+   PRINT STYLES
+   ==================================== */
+
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .page-nav,
+    .btn-primary,
+    .btn-secondary,
+    .btn-dashboard,
+    .ai-task-copy,
+    .code-link,
+    .dashboard-iframe {
+        display: none;
+    }
+}

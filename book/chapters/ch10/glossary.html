@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chapter 10 Glossary</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="glossary_files/libs/clipboard/clipboard.min.js"></script>
+<script src="glossary_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="glossary_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="glossary_files/libs/quarto-html/popper.min.js"></script>
+<script src="glossary_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="glossary_files/libs/quarto-html/anchor.min.js"></script>
+<link href="glossary_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="glossary_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="glossary_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="glossary_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="glossary_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Chapter 10 Glossary</h1>
+<p class="subtitle lead">Key Terms and Concepts in Multiple Linear Regression</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Oswald:wght@300;400;500;600;700&amp;family=Roboto+Condensed:wght@300;400;700&amp;family=Lora:wght@400;600&amp;display=swap" rel="stylesheet"></p>
+<section id="chapter-10-glossary" class="level1 chapter-title">
+<h1 class="chapter-title">Chapter 10 Glossary</h1>
+<p><strong>Quick reference for all key terms and concepts</strong></p>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How to Use This Glossary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Alphabetical order</strong> – Terms are organized A-Z for easy lookup</li>
+<li><strong>Bold terms</strong> – Important concepts from the chapter</li>
+<li><strong>One-sentence definitions</strong> – Clear, concise explanations</li>
+<li><strong>Cross-references</strong> – Links to related terms</li>
+<li><strong>Section references</strong> – Where to find detailed explanations in the chapter</li>
+</ul>
+<p><strong>Tip:</strong> Use Ctrl+F (Cmd+F on Mac) to search for specific terms</p>
+</div>
+</div>
+<hr>
+<section id="a" class="level2">
+<h2 class="anchored" data-anchor-id="a">A</h2>
+<p><strong>Average Treatment Effect (ATE)</strong><br>
+The average difference in outcomes between treated and untreated units in a causal analysis framework.<br>
+<em>See: Section 10.11</em></p>
+<hr>
+</section>
+<section id="b" class="level2">
+<h2 class="anchored" data-anchor-id="b">B</h2>
+<p><strong>Bad Conditioning Variable (Bad Control Variable)</strong><br>
+A variable that should not be included in a regression as a covariate because it is part of the causal mechanism or affected by the treatment variable, leading to biased estimates of causal effects.<br>
+<em>See: Section 10.11</em></p>
+<p><strong>Binary Variable</strong><br>
+A variable that takes only two values, typically coded as 0 and 1, used to represent categories or groups in regression analysis.<br>
+<em>See: Dummy Variable</em></p>
+<hr>
+</section>
+<section id="c" class="level2">
+<h2 class="anchored" data-anchor-id="c">C</h2>
+<p><strong>Case Study</strong><br>
+A detailed empirical analysis using real data to illustrate concepts and methods, with six case studies (A1-A6 on gender earnings, B1 on hotels) featured in this chapter.<br>
+<em>See: All sections</em></p>
+<p><strong>Categorical Variable</strong><br>
+A qualitative variable that takes values from a finite set of categories (e.g., education level, occupation, industry), entered in regression using dummy variables.<br>
+<em>See: Section 10.9</em></p>
+<p><strong>Ceteris Paribus</strong><br>
+Latin phrase meaning “all else equal,” referring to holding all other variables constant when examining the effect of one variable on another.<br>
+<em>See: Section 10.11</em></p>
+<p><strong>Coefficient</strong><br>
+A numerical parameter in a regression equation that measures the relationship between an explanatory variable and the dependent variable.<br>
+<em>See: Sections 10.2, 10.7</em></p>
+<p><strong>Conditional Difference</strong><br>
+The difference in average y between observations with different values of x₁ but the same values of other explanatory variables (x₂, x₃, etc.).<br>
+<em>See: Section 10.4</em></p>
+<p><strong>Confidence Interval (CI)</strong><br>
+A range of values that, with a specified probability (typically 95%), contains the true population parameter being estimated.<br>
+<em>See: Section 10.5</em></p>
+<p><strong>Confounder</strong><br>
+A variable that is correlated with both the dependent variable and an explanatory variable of interest, potentially biasing estimates if omitted from the regression.<br>
+<em>See: Section 10.4</em></p>
+<p><strong>Controlled Difference</strong><br>
+Same as conditional difference; the difference in y by x₁ while controlling for other variables.<br>
+<em>See: Section 10.4</em></p>
+<p><strong>Covariate</strong><br>
+An explanatory variable included in a multiple regression to control for its effects, typically when the focus is on a different explanatory variable.<br>
+<em>See: Section 10.4</em></p>
+<hr>
+</section>
+<section id="d" class="level2">
+<h2 class="anchored" data-anchor-id="d">D</h2>
+<p><strong>Degrees of Freedom</strong><br>
+The number of observations minus the number of parameters estimated, relevant for calculating standard errors and test statistics (n - k - 1 in multiple regression with k explanatory variables).<br>
+<em>See: Section 10.5</em></p>
+<p><strong>Dependent Variable</strong><br>
+The outcome variable (y) being explained or predicted in a regression; also called the target variable or left-hand-side variable.<br>
+<em>See: All sections</em></p>
+<p><strong>Dummy Variable</strong><br>
+A binary (0/1) variable used to represent categories of a qualitative variable in regression analysis.<br>
+<em>See: Section 10.9</em></p>
+<p><strong>Dummy Variable Trap</strong><br>
+The problem of perfect collinearity that arises when all categories of a qualitative variable are included as dummy variables, requiring one category to be omitted as the reference.<br>
+<em>See: Section 10.9</em></p>
+<hr>
+</section>
+<section id="e" class="level2">
+<h2 class="anchored" data-anchor-id="e">E</h2>
+<p><strong>Explanatory Variable</strong><br>
+A variable (x) used to explain variation in the dependent variable; also called independent variable, predictor, or right-hand-side variable.<br>
+<em>See: All sections</em></p>
+<p><strong>Expected Value</strong><br>
+The average or mean value of y conditional on specific values of the explanatory variables, denoted as y^E.<br>
+<em>See: Sections 10.2, 10.7</em></p>
+<hr>
+</section>
+<section id="f" class="level2">
+<h2 class="anchored" data-anchor-id="f">F</h2>
+<p><strong>F-statistic</strong><br>
+A test statistic used in hypothesis testing for joint hypotheses about multiple regression coefficients.<br>
+<em>See: Section 10.6</em></p>
+<p><strong>F-test</strong><br>
+A hypothesis test based on the F-statistic, used to test whether multiple coefficients are simultaneously equal to zero or satisfy other joint restrictions.<br>
+<em>See: Section 10.6</em></p>
+<p><strong>Factor Variable</strong><br>
+Another term for a categorical or qualitative variable.<br>
+<em>See: Section 10.9</em></p>
+<p><strong>Fitted Value</strong><br>
+The predicted value of y from a regression equation, denoted as ŷ, calculated by plugging observed x values into the estimated regression equation.<br>
+<em>See: Section 10.12</em></p>
+<p><strong>Functional Form</strong><br>
+The mathematical specification of how explanatory variables enter the regression, including whether they are linear, quadratic, logarithmic, or in other transformations.<br>
+<em>See: Section 10.8</em></p>
+<hr>
+</section>
+<section id="g" class="level2">
+<h2 class="anchored" data-anchor-id="g">G</h2>
+<p><strong>Global F-test</strong><br>
+The F-test of the null hypothesis that all slope coefficients in a regression are zero, testing whether the regression as a whole explains any variation in y.<br>
+<em>See: Section 10.6</em></p>
+<hr>
+</section>
+<section id="h" class="level2">
+<h2 class="anchored" data-anchor-id="h">H</h2>
+<p><strong>Heteroskedasticity</strong><br>
+A situation where the variance of regression residuals differs across observations, violating the homoskedasticity assumption of simple standard error formulas.<br>
+<em>See: Section 10.5</em></p>
+<p><strong>Homoskedasticity</strong><br>
+A situation where the variance of regression residuals is constant across all observations, an assumption required for simple standard error formulas to be valid.<br>
+<em>See: Section 10.5</em></p>
+<p><strong>Hypothesis Test</strong><br>
+A statistical procedure for determining whether data provide evidence against a null hypothesis, typically using a t-statistic or p-value.<br>
+<em>See: Section 10.6</em></p>
+<hr>
+</section>
+<section id="i" class="level2">
+<h2 class="anchored" data-anchor-id="i">I</h2>
+<p><strong>Interaction Term</strong><br>
+A variable created by multiplying two explanatory variables, included in regression to allow the effect of one variable on y to differ by values of another variable.<br>
+<em>See: Section 10.10</em></p>
+<p><strong>Intercept</strong><br>
+The constant term (β₀) in a regression equation, representing the expected value of y when all explanatory variables equal zero.<br>
+<em>See: Sections 10.2, 10.7</em></p>
+<hr>
+</section>
+<section id="j" class="level2">
+<h2 class="anchored" data-anchor-id="j">J</h2>
+<p><strong>Joint Hypothesis</strong><br>
+A hypothesis that involves multiple parameters simultaneously, such as testing whether several slope coefficients are all zero.<br>
+<em>See: Section 10.6</em></p>
+<hr>
+</section>
+<section id="l" class="level2">
+<h2 class="anchored" data-anchor-id="l">L</h2>
+<p><strong>Left-out Category</strong><br>
+Same as reference category; the category of a qualitative variable not represented by a dummy variable in regression.<br>
+<em>See: Section 10.9</em></p>
+<p><strong>Linear Regression</strong><br>
+A regression model where the dependent variable is a linear function of the parameters (coefficients), though explanatory variables can be transformed nonlinearly.<br>
+<em>See: All sections</em></p>
+<p><strong>Log-linear Model</strong><br>
+A regression with log-transformed dependent variable, where coefficients can be interpreted approximately as percentage changes.<br>
+<em>See: Case Studies A1-A6</em></p>
+<hr>
+</section>
+<section id="m" class="level2">
+<h2 class="anchored" data-anchor-id="m">M</h2>
+<p><strong>Moderator Variable</strong><br>
+In medical and social science terminology, a variable that affects the strength or direction of the relationship between an explanatory variable and the dependent variable.<br>
+<em>See: Section 10.10</em></p>
+<p><strong>Multicollinearity</strong><br>
+High but imperfect correlation among explanatory variables, leading to large standard errors and imprecise coefficient estimates.<br>
+<em>See: Section 10.5</em></p>
+<p><strong>Multiple Linear Regression</strong><br>
+A regression model with more than one explanatory variable: y^E = β₀ + β₁x₁ + β₂x₂ + … + βₖxₖ.<br>
+<em>See: All sections</em></p>
+<hr>
+</section>
+<section id="o" class="level2">
+<h2 class="anchored" data-anchor-id="o">O</h2>
+<p><strong>Observational Data</strong><br>
+Data generated from non-experimental settings where the researcher does not control assignment to treatment, making causal inference more challenging than with experimental data.<br>
+<em>See: Section 10.11</em></p>
+<p><strong>Omitted Variable</strong><br>
+A variable that affects y and is correlated with included explanatory variables but is not included in the regression, potentially causing omitted variable bias.<br>
+<em>See: Section 10.3</em></p>
+<p><strong>Omitted Variable Bias (OVB)</strong><br>
+The bias in estimated coefficients that arises when a relevant variable is omitted from a regression; the bias equals δβ₂ where δ is the coefficient in the x-x regression and β₂ is the coefficient on the omitted variable in the multiple regression.<br>
+<em>See: Section 10.3</em></p>
+<p><strong>Overfitting</strong><br>
+Including too many explanatory variables or too flexible functional forms in a regression, leading to excellent fit in the sample but poor prediction for new observations.<br>
+<em>See: Section 10.12</em></p>
+<hr>
+</section>
+<section id="p" class="level2">
+<h2 class="anchored" data-anchor-id="p">P</h2>
+<p><strong>P-value</strong><br>
+The probability of observing data as extreme as what was observed if the null hypothesis were true; small p-values (typically &lt; 0.05) provide evidence against the null hypothesis.<br>
+<em>See: Section 10.6</em></p>
+<p><strong>Perfect Collinearity</strong><br>
+A situation where explanatory variables are exact linear functions of each other, making it impossible to estimate regression coefficients.<br>
+<em>See: Section 10.5</em></p>
+<p><strong>Piecewise Linear Spline</strong><br>
+A nonlinear functional form created by splitting the range of a variable into segments and allowing different linear slopes in each segment.<br>
+<em>See: Section 10.8</em></p>
+<p><strong>Polynomial</strong><br>
+A functional form that includes a variable and its powers (x, x², x³, etc.) to capture nonlinear patterns.<br>
+<em>See: Section 10.8</em></p>
+<p><strong>Predicted Value</strong><br>
+Same as fitted value; the value of y predicted by the regression equation for given values of explanatory variables.<br>
+<em>See: Section 10.12</em></p>
+<p><strong>Prediction</strong><br>
+Using a regression model to estimate the value of the dependent variable for observations with known values of explanatory variables but unknown y.<br>
+<em>See: Section 10.12</em></p>
+<hr>
+</section>
+<section id="q" class="level2">
+<h2 class="anchored" data-anchor-id="q">Q</h2>
+<p><strong>Qualitative Variable</strong><br>
+A variable that takes values from a finite set of categories rather than numerical values; entered in regression using dummy variables.<br>
+<em>See: Section 10.9</em></p>
+<p><strong>Quantitative Variable</strong><br>
+A variable that takes numerical values, such as age, price, or distance.<br>
+<em>See: Section 10.9</em></p>
+<hr>
+</section>
+<section id="r" class="level2">
+<h2 class="anchored" data-anchor-id="r">R</h2>
+<p><strong>R-squared (R²)</strong><br>
+The proportion of variation in y explained by the regression, ranging from 0 to 1; calculated as Var(ŷ)/Var(y) or 1 - Var(e)/Var(y).<br>
+<em>See: Section 10.12</em></p>
+<p><strong>Reference Category (Reference Group)</strong><br>
+The category of a qualitative variable that is omitted when creating dummy variables, serving as the baseline for comparison in interpreting dummy variable coefficients.<br>
+<em>See: Section 10.9</em></p>
+<p><strong>Regression Line</strong><br>
+The line (or curve) representing the expected value of y as a function of x values in a regression model.<br>
+<em>See: All sections</em></p>
+<p><strong>Residual</strong><br>
+The difference between the observed value of y and its predicted value from the regression: e = y - ŷ.<br>
+<em>See: Section 10.12</em></p>
+<p><strong>Right-hand-side Variable</strong><br>
+Same as explanatory variable; a variable on the right side of the regression equation.<br>
+<em>See: All sections</em></p>
+<p><strong>Robust Standard Error</strong><br>
+A standard error formula that produces valid inference under heteroskedasticity, recommended as the default choice over simple standard errors.<br>
+<em>See: Section 10.5</em></p>
+<hr>
+</section>
+<section id="s" class="level2">
+<h2 class="anchored" data-anchor-id="s">S</h2>
+<p><strong>Significance Level</strong><br>
+The probability threshold (commonly 0.05 or 5%) used to determine whether to reject a null hypothesis based on p-values or test statistics.<br>
+<em>See: Section 10.6</em></p>
+<p><strong>Simple Linear Regression</strong><br>
+A regression model with only one explanatory variable: y^E = α + βx.<br>
+<em>See: Section 10.3</em></p>
+<p><strong>Slope Coefficient</strong><br>
+A parameter in a regression equation (β₁, β₂, etc.) measuring how much y changes, on average, when an explanatory variable increases by one unit.<br>
+<em>See: Sections 10.2, 10.7</em></p>
+<p><strong>Standard Error (SE)</strong><br>
+A measure of the uncertainty in a coefficient estimate, used to construct confidence intervals and test statistics.<br>
+<em>See: Section 10.5</em></p>
+<p><strong>Statistical Inference</strong><br>
+The process of using sample data to draw conclusions about population parameters, typically through confidence intervals and hypothesis tests.<br>
+<em>See: Sections 10.5, 10.6</em></p>
+<hr>
+</section>
+<section id="t" class="level2">
+<h2 class="anchored" data-anchor-id="t">T</h2>
+<p><strong>T-statistic</strong><br>
+A test statistic calculated as the estimated coefficient divided by its standard error, used to test hypotheses about individual coefficients.<br>
+<em>See: Section 10.6</em></p>
+<p><strong>Target Variable</strong><br>
+Same as dependent variable; the variable being predicted or explained.<br>
+<em>See: Section 10.12</em></p>
+<hr>
+</section>
+<section id="u" class="level2">
+<h2 class="anchored" data-anchor-id="u">U</h2>
+<p><strong>Unconditional Difference</strong><br>
+The difference in average y between observations with different values of x₁ without controlling for other variables.<br>
+<em>See: Section 10.3</em></p>
+<hr>
+</section>
+<section id="v" class="level2">
+<h2 class="anchored" data-anchor-id="v">V</h2>
+<p><strong>Variable Selection</strong><br>
+The process of choosing which explanatory variables and functional forms to include in a regression model.<br>
+<em>See: Sections 10.8, 10.11, 10.12</em></p>
+<hr>
+</section>
+<section id="x" class="level2">
+<h2 class="anchored" data-anchor-id="x">X</h2>
+<p><strong>X-X Regression</strong><br>
+A regression of one explanatory variable (x₂) on another explanatory variable (x₁), used to understand omitted variable bias.<br>
+<em>See: Section 10.3</em></p>
+<hr>
+</section>
+<section id="y" class="level2">
+<h2 class="anchored" data-anchor-id="y">Y</h2>
+<p><strong>Y-hat (ŷ)</strong><br>
+Notation for the predicted or fitted value of y from a regression.<br>
+<em>See: Section 10.12</em></p>
+<p><strong>Y-hat minus Y plot (ŷ - y plot)</strong><br>
+A scatter plot with predicted values (ŷ) on the horizontal axis and actual values (y) on the vertical axis, used to visualize regression fit with the 45-degree line showing perfect predictions.<br>
+<em>See: Section 10.12</em></p>
+<hr>
+</section>
+<section id="mathematical-notation" class="level2">
+<h2 class="anchored" data-anchor-id="mathematical-notation">Mathematical Notation</h2>
+<p><strong>β (Beta)</strong><br>
+Greek letter used to denote regression coefficients in population or theoretical models.<br>
+<em>See: All sections</em></p>
+<p><strong>β̂ (Beta-hat)</strong><br>
+Estimated regression coefficient from sample data.<br>
+<em>See: All sections</em></p>
+<p><strong>e</strong><br>
+Regression residual (e = y - ŷ).<br>
+<em>See: Sections 10.5, 10.12</em></p>
+<p><strong>E (Superscript)</strong><br>
+Denotes expected or average value, as in y^E for expected y.<br>
+<em>See: All sections</em></p>
+<p><strong>n</strong><br>
+Sample size (number of observations).<br>
+<em>See: Section 10.5</em></p>
+<p><strong>k</strong><br>
+Number of explanatory variables in a regression.<br>
+<em>See: Section 10.5</em></p>
+<p><strong>Var[ ]</strong><br>
+Variance of a variable.<br>
+<em>See: Sections 10.5, 10.12</em></p>
+<p><strong>Std[ ]</strong><br>
+Standard deviation of a variable.<br>
+<em>See: Section 10.5</em></p>
+<hr>
+</section>
+<section id="common-abbreviations" class="level2">
+<h2 class="anchored" data-anchor-id="common-abbreviations">Common Abbreviations</h2>
+<p><strong>CI</strong><br>
+Confidence Interval<br>
+<em>See: Section 10.5</em></p>
+<p><strong>OLS</strong><br>
+Ordinary Least Squares (the standard method for estimating regression coefficients)<br>
+<em>See: All sections</em></p>
+<p><strong>OVB</strong><br>
+Omitted Variable Bias<br>
+<em>See: Section 10.3</em></p>
+<p><strong>SE</strong><br>
+Standard Error<br>
+<em>See: Section 10.5</em></p>
+<hr>
+</section>
+<section id="related-concepts-from-other-chapters" class="level2">
+<h2 class="anchored" data-anchor-id="related-concepts-from-other-chapters">Related Concepts from Other Chapters</h2>
+<p><strong>Correlation</strong><br>
+A measure of linear association between two variables, related to but distinct from regression coefficients.<br>
+<em>See: Chapter 4</em></p>
+<p><strong>Causality</strong><br>
+The relationship where one variable directly causes changes in another, difficult to establish with observational data even using multiple regression.<br>
+<em>See: Chapter 19</em></p>
+<p><strong>External Validity</strong><br>
+The extent to which results from analyzing one sample can be generalized to other populations or settings.<br>
+<em>See: Chapter 9</em></p>
+<p><strong>Internal Validity</strong><br>
+The extent to which estimated relationships in a sample accurately reflect true relationships in the population being studied.<br>
+<em>See: Chapter 9</em></p>
+<hr>
+</section>
+<section id="dataset-specific-terms" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-specific-terms">Dataset-Specific Terms</h2>
+<p><strong>CPS (Current Population Survey)</strong><br>
+The U.S. survey data used in Case Studies A1-A6 on gender earnings differences.<br>
+<em>See: Case Studies A1-A6</em></p>
+<p><strong>Graduate Degree</strong><br>
+In the CPS data, includes professional degrees (e.g., MD), master’s degrees (e.g., MA, MBA), and doctoral degrees (PhD), used to define the sample in Case Studies A1-A6.<br>
+<em>See: Case Studies A1-A6</em></p>
+<p><strong>Log Earnings</strong><br>
+Natural logarithm of earnings, used as the dependent variable in Case Studies A1-A6 to allow interpretation of coefficients as approximate percentage differences.<br>
+<em>See: Case Studies A1-A6</em></p>
+<p><strong>Stars (Hotel Rating)</strong><br>
+A categorical measure of hotel quality (3, 3.5, or 4 stars) used in Case Study B1.<br>
+<em>See: Case Study B1</em></p>
+<p><strong>Customer Rating</strong><br>
+Average customer review score for hotels, used as a continuous measure of quality in Case Study B1.<br>
+<em>See: Case Study B1</em></p>
+<hr>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Quick Reference by Topic
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Core Concepts:</strong><br>
+Multiple Linear Regression, Coefficient, Conditional Difference, Covariate, Omitted Variable Bias</p>
+<p><strong>Statistical Inference:</strong><br>
+Standard Error, Confidence Interval, Hypothesis Test, P-value, T-statistic, F-test, Robust Standard Error</p>
+<p><strong>Variables and Data:</strong><br>
+Dummy Variable, Reference Category, Interaction Term, Categorical Variable, Binary Variable</p>
+<p><strong>Model Specification:</strong><br>
+Functional Form, Polynomial, Piecewise Linear Spline, Multicollinearity, Perfect Collinearity</p>
+<p><strong>Applications:</strong><br>
+Prediction, Residual, R-squared, Y-hat minus Y plot, Overfitting, Ceteris Paribus</p>
+<p><strong>Causality:</strong><br>
+Confounder, Bad Conditioning Variable, Observational Data, Omitted Variable</p>
+</div>
+</div>
+<hr>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Most Critical Terms to Master
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you can only memorize a few terms, focus on these:</p>
+<ol type="1">
+<li><strong>Multiple Linear Regression</strong> – The core method of this chapter</li>
+<li><strong>Omitted Variable Bias</strong> – Why simple regression can be misleading<br>
+</li>
+<li><strong>Conditional/Controlled Difference</strong> – What multiple regression actually estimates</li>
+<li><strong>Robust Standard Error</strong> – Essential for valid inference</li>
+<li><strong>Interaction Term</strong> – Allows different slopes for different groups</li>
+<li><strong>Dummy Variable</strong> – How to include categories in regression</li>
+<li><strong>Ceteris Paribus</strong> – The ideal of “all else equal” comparison</li>
+<li><strong>Covariate</strong> – Variables we control for in analysis</li>
+<li><strong>R-squared</strong> – Measure of regression fit</li>
+<li><strong>Multicollinearity</strong> – Why high correlation among x variables causes problems</li>
+</ol>
+<p>Master these ten concepts and you’ll understand 80% of what matters in multiple regression!</p>
+</div>
+</div>
+<hr>
+<div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: #F7F3E9; border-radius: 8px;">
+<p><strong>📚 Return to:</strong> <a href="index.html">Chapter 10 Index</a> | <a href="01-foundation.html">Page 1: Foundation</a></p>
+<p><strong>Need more detail?</strong> Each term links to the section where it’s explained fully.</p>
+</div>
+<hr>
+<!-- 
+File: glossary.qmd
+Purpose: Comprehensive glossary for Chapter 10
+Version: 1.0
+Created: 2025-10-20
+Model: Claude Sonnet 4.5
+Project: DA Textbook HTML Edition (Chapter 10 pilot)
+Notes: All key terms with 1-sentence definitions, cross-referenced and linked to sections
+-->
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

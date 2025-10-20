@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chapter 10: Multiple Linear Regression</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="04-applications_files/libs/clipboard/clipboard.min.js"></script>
+<script src="04-applications_files/libs/quarto-html/tabby.min.js"></script>
+<script src="04-applications_files/libs/quarto-html/popper.min.js"></script>
+<script src="04-applications_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="04-applications_files/libs/quarto-html/anchor.min.js"></script>
+<link href="04-applications_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="04-applications_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="04-applications_files/libs/quarto-html/quarto-html-435ba6093e6f0817aa7405139811e7b1.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="04-applications_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../_assets/styles.css">
+</head>
+
+<body>
+
+
+<header id="title-block-header">
+<h1 class="title">Chapter 10: Multiple Linear Regression</h1>
+<p class="subtitle">Sections 10.11-10.12 - Causal Analysis &amp; Prediction</p>
+
+</header>
+
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sections-10.11-10.12-applications" id="toc-sections-10.11-10.12-applications"><span class="header-section-number">1</span> Sections 10.11-10.12: Applications</a>
+  <ul>
+  <li><a href="#sec-10-11" id="toc-sec-10-11"><span class="header-section-number">1.1</span> 10.11 Multiple regression and causal analysis</a></li>
+  <li><a href="#case-study-a6-understanding-the-gender-difference-in-earnings" id="toc-case-study-a6-understanding-the-gender-difference-in-earnings"><span class="header-section-number">1.2</span> Case Study A6: Understanding the Gender Difference in Earnings</a></li>
+  <li><a href="#sec-10-12" id="toc-sec-10-12"><span class="header-section-number">1.3</span> 10.12 Multiple regression and prediction</a>
+  <ul>
+  <li><a href="#assessing-fit-r-squared" id="toc-assessing-fit-r-squared"><span class="header-section-number">1.3.1</span> Assessing Fit: R-squared</a></li>
+  <li><a href="#visualizing-fit-the-haty---y-plot" id="toc-visualizing-fit-the-haty---y-plot"><span class="header-section-number">1.3.2</span> Visualizing Fit: The <span class="math inline">\(\hat{y} - y\)</span> Plot</a></li>
+  </ul></li>
+  <li><a href="#case-study-b1-finding-a-good-deal-among-hotels" id="toc-case-study-b1-finding-a-good-deal-among-hotels"><span class="header-section-number">1.4</span> Case Study B1: Finding a Good Deal Among Hotels</a>
+  <ul>
+  <li><a href="#choosing-functional-form" id="toc-choosing-functional-form"><span class="header-section-number">1.4.1</span> Choosing Functional Form</a></li>
+  <li><a href="#identifying-good-deals" id="toc-identifying-good-deals"><span class="header-section-number">1.4.2</span> Identifying Good Deals</a></li>
+  <li><a href="#assessing-model-fit" id="toc-assessing-model-fit"><span class="header-section-number">1.4.3</span> Assessing Model Fit</a></li>
+  <li><a href="#conclusion" id="toc-conclusion"><span class="header-section-number">1.4.4</span> Conclusion</a></li>
+  </ul></li>
+  <li><a href="#sec-summary-final" id="toc-sec-summary-final"><span class="header-section-number">1.5</span> Summary: Chapter 10 Complete</a>
+  <ul>
+  <li><a href="#main-takeaways" id="toc-main-takeaways"><span class="header-section-number">1.5.1</span> Main Takeaways</a></li>
+  <li><a href="#gender-wage-gap-findings" id="toc-gender-wage-gap-findings"><span class="header-section-number">1.5.2</span> Gender Wage Gap Findings</a></li>
+  <li><a href="#hotel-price-findings" id="toc-hotel-price-findings"><span class="header-section-number">1.5.3</span> Hotel Price Findings</a></li>
+  <li><a href="#whats-next" id="toc-whats-next"><span class="header-section-number">1.5.4</span> What’s Next?</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+<!-- 
+File: 04-applications.qmd
+Version: 1.0
+Created: 2025-10-20
+Iterations: 1
+Model: Claude Sonnet 4.5 (2025-10-20)
+Notes: Sections 10.11-10.12 from original LaTeX
+       Includes case studies A6 and B1
+       All math properly configured with MathJax
+-->
+<p><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Oswald:wght@300;400;500;600;700&amp;family=Roboto+Condensed:wght@300;400;700&amp;family=Lora:wght@400;600&amp;display=swap" rel="stylesheet"></p>
+<h1 class="chapter-title" data-number="1" id="sections-10.11-10.12-applications"><span class="header-section-number">1</span> Sections 10.11-10.12: Applications</h1>
+<p><strong>Using multiple regression for causal analysis and prediction</strong></p>
+<hr>
+<h2 data-number="1.1" id="sec-10-11" class="anchored"><span class="header-section-number">1.1</span> 10.11 Multiple regression and causal analysis</h2>
+<p>When interpreting regression coefficients, we advise being careful with the language, talking about differences and associations not effects and causation. But, can we say anything regarding the extent to which our results may indicate a causal link?</p>
+<p>This question is all the more relevant because one main reason to estimate multiple regressions is to get closer to a causal interpretation. By conditioning on other observable variables, we can get closer to comparing similar objects – “apples to apples” – even in observational data. But getting closer is not the same as getting there.</p>
+<p>For example, estimating the effect of a training program at a firm on the performance of employees would require comparing participants to non-participants who would perform similarly without the program. A randomized experiment ensures such comparability. By randomly deciding who participates and who does not participate, we get two groups that are very similar in everything that is relevant, including what their future performance would be without the program. If, instead of a random rule, employees decided for themselves whether they participate in the program, a simple comparison of participants to non-participants would not measure the effect of the program because participants may have achieved different performance without the training.</p>
+<p>The difference is between data from controlled experiments and observational data. Simple comparisons don’t uncover causal relations in observational data. In principle, we may improve this by conditioning on every potential confounder: variables that would affect <span class="math inline">\(y\)</span> and the causal variable <span class="math inline">\(x_1\)</span> at the same time. (In the training example, these are variables that would make participants and non-participants achieve different performance without the training, such as skills and motivation.) Such a comparison is called <strong>ceteris paribus</strong>.</p>
+<p>But, importantly, conditioning on everything is impossible in general. Ceteris paribus prescribes what we want to condition on; a multiple regression can condition on what’s in the data the way it is measured.</p>
+<p>One more caveat. Not all variables should be included as covariates even if correlated both with the causal variable and the dependent variable. Such variables are called <strong>bad conditioning variables</strong>, or bad control variables. Examples include variables that are actually part of the causal mechanism, for example, the number of people who actually see an ad when we want to see how an ad affects sales.</p>
+<p>What variables to include in a multiple regression and what variables not to include when aiming to estimate the effect of <span class="math inline">\(x\)</span> on <span class="math inline">\(y\)</span> is a difficult question. Chapter 19 will discuss this question along with the more general question of whether and when conditioning on other variables can lead to a good estimate of the effect of <span class="math inline">\(x\)</span> on <span class="math inline">\(y\)</span>, and what we mean by such an effect in the first place.</p>
+<div class="ai-task">
+<p><span class="ai-task-icon">🤖 AI PRACTICE TASK #13</span></p>
+<p><strong>Prompt:</strong> “Explain the difference between a confounder and a bad control variable. Give an example of each in the context of estimating the effect of education on earnings.”</p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('Explain the difference between a confounder and a bad control variable. Give an example of each in the context of estimating the effect of education on earnings.'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
+</div>
+<hr>
+<h2 class="case-study anchored" data-number="1.2" id="case-study-a6-understanding-the-gender-difference-in-earnings"><span class="header-section-number">1.2</span> Case Study A6: Understanding the Gender Difference in Earnings</h2>
+<div class="case-study-title">
+CASE STUDY A6: GENDER GAP - CAUSAL THINKING
+</div>
+<p><strong>Getting closer to understanding causes of gender pay inequality</strong></p>
+<p>Figure 10.2b showed a large and relatively stable average gender difference in earnings between ages 40 and 60 in the data and the population it represents (employees with a graduate degree in the U.S.A. in 2014). What might cause that difference?</p>
+<p><strong>Concepts of Discrimination</strong></p>
+<p>One potential explanation is labor market discrimination. Labor market discrimination means that members of a group (women, minorities) earn systematically less per hour than members of another group (men, the majority) even if they have the same marginal product. Marginal product simply means their contribution to the sales of their employer by working one additional hour. If one hour of work by women brings as much for the employer as a one hour of work by men, they should earn the same, at least on average. There may be individual deviations for various reasons due to mistakes and special circumstances, but there should not be systematic differences in earnings per hour.</p>
+<p>Note that this concept of labor market discrimination is quite narrow. For example, women may earn less on average because they are less frequently promoted to positions in which their work could have a higher effect on company sales. That would not count as labor market discrimination according to this narrow definition. A broader notion of discrimination would want to take that into account. An even broader concept of social inequality may recognize that women may choose occupations with flexible or shorter hours of work due to social norms about division of labor in the family. That may result in the over-representation of women in jobs that offer lower wages in return for more flexible hours.</p>
+<p><strong>Empirical Investigation</strong></p>
+<p>Let’s use our data to shed some light on these issues. Starting with the narrow definition of labor market discrimination, we have a clear steer as what ceteris paribus analysis would be: condition on marginal product, or everything that matters for marginal product (and may possibly differ by gender). These may include cognitive skills, motivation, the ability to work efficiently in teams, etc. Real life data does not include all those variables. Indeed, our data has very little on that: three broad categories of graduate degree and age. We may add race, ethnicity, and whether a person was born in the U.S.A. that may be related to the quality of education as well as other potential sources of discrimination, but those variables tend not to differ by gender so their inclusion makes little difference.</p>
+<p>To shed light on broader concepts of discrimination, we may want to enrich our regression by including more covariates. One example is occupation. Women may choose occupations that offer shorter and more flexible hours in exchange for lower wages. Occupation would be a bad conditioning variable for uncovering labor market discrimination in the narrow sense. But conditioning on it may shed light on the role of broader social inequality in gender roles. Similar variables are industry, union status, hours worked, where people live, and their family circumstances.</p>
+<div class="code-block">
+<div class="code-header">
+📊 REPLICATE TABLE 10.5
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R Code to replicate Table 10.5</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(estimatr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modelsummary)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data - subset to ages 40-60</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"cps_earnings_grad.csv"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>data_40_60 <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, age <span class="sc">&gt;=</span> <span class="dv">40</span> <span class="sc">&amp;</span> age <span class="sc">&lt;=</span> <span class="dv">60</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 1: Unconditional difference</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> female, <span class="at">data =</span> data_40_60)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 2: + productivity variables (age, education, race)</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> female <span class="sc">+</span> age <span class="sc">+</span> <span class="fu">I</span>(age<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">factor</span>(grad_degree) <span class="sc">+</span> <span class="fu">factor</span>(race) <span class="sc">+</span> born_us, </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> data_40_60)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 3: + all other covariates (occupation, industry, etc.)</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> female <span class="sc">+</span> age <span class="sc">+</span> <span class="fu">I</span>(age<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">factor</span>(grad_degree) <span class="sc">+</span> <span class="fu">factor</span>(race) <span class="sc">+</span> born_us <span class="sc">+</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">factor</span>(occupation) <span class="sc">+</span> <span class="fu">factor</span>(industry) <span class="sc">+</span> </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">factor</span>(state) <span class="sc">+</span> married <span class="sc">+</span> hours_worked,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> data_40_60)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Model 4: + polynomial in age and hours</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>model4 <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(lnearnings <span class="sc">~</span> female <span class="sc">+</span> <span class="fu">poly</span>(age, <span class="dv">4</span>) <span class="sc">+</span> <span class="fu">poly</span>(hours_worked, <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">factor</span>(grad_degree) <span class="sc">+</span> <span class="fu">factor</span>(race) <span class="sc">+</span> born_us <span class="sc">+</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">factor</span>(occupation) <span class="sc">+</span> <span class="fu">factor</span>(industry) <span class="sc">+</span> </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>                     <span class="fu">factor</span>(state) <span class="sc">+</span> married,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> data_40_60)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Display results (show only female coefficient)</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">modelsummary</span>(<span class="fu">list</span>(model1, model2, model3, model4),</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>             <span class="at">stars =</span> <span class="fu">c</span>(<span class="st">'***'</span> <span class="ot">=</span> <span class="fl">0.01</span>, <span class="st">'**'</span> <span class="ot">=</span> <span class="fl">0.05</span>, <span class="st">'*'</span> <span class="ot">=</span> <span class="fl">0.1</span>),</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>             <span class="at">gof_omit =</span> <span class="st">"IC|Log|F"</span>,</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>             <span class="at">coef_omit =</span> <span class="st">"^(?!female)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-gender-earnings-understand/ch10-gender-earnings-multireg.ipynb" class="code-link" target="_blank">🚀 OPEN IN CODESPACE</a></p>
+</div>
+<p>Table 10.5 shows results of those regressions. Occupation, industry, state of residence, and marital status are categorical variables. We entered each as a series of binary variables leaving one out as a reference category. Some regressions have many explanatory variables. Instead of showing the coefficients of all, we show the coefficient and standard error of the variable of focus: <span class="math inline">\(female\)</span>. The subsequent rows of the table indicate which variables are included as covariates. This is in fact a standard way of presenting results of large multiple regressions that focus on a single coefficient.</p>
+<p>The data used for these regressions in Table 10.5 is a subset of the data used previously: it contains employees of age 40 to 60 with a graduate degree who work 20 hours per week or more. We have 9,816 such employees in our data.</p>
+<p><strong>Table 10.5: Gender differences in earnings – regression with many covariates on a narrower sample</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>(1)</th>
+<th>(2)</th>
+<th>(3)</th>
+<th>(4)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>female</strong></td>
+<td>-0.224***</td>
+<td>-0.212***</td>
+<td>-0.151***</td>
+<td>-0.141***</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(0.010)</td>
+<td>(0.010)</td>
+<td>(0.011)</td>
+<td>(0.011)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Controls:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Age (linear or polynomial)</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td>✓ (4th order)</td>
+</tr>
+<tr class="even">
+<td>Education (3 categories)</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Race, ethnicity, born in USA</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>Occupation (22 categories)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Industry (13 categories)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>State (50 states)</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Married</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>Hours worked</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓ (quadratic)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Observations</strong></td>
+<td>9,816</td>
+<td>9,816</td>
+<td>9,816</td>
+<td>9,816</td>
+</tr>
+<tr class="odd">
+<td><strong>R-squared</strong></td>
+<td>0.048</td>
+<td>0.065</td>
+<td>0.195</td>
+<td>0.202</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Robust standard error estimates in parentheses. *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1</em></p>
+<p><em>Source: cps-earnings data. U.S.A., 2014. Employees with a graduate degree. Employees of age 40 to 60 who work 20 hours per week or more.</em></p>
+<p><strong>Interpretation</strong></p>
+<p>Column (1) shows that women earn 22.4% less than men, on average, in the data (employees of age 40 to 60 with a graduate degree who work 20 hours or more, U.S.A. CPS 2014). When we condition on the few variables that may measure marginal product, the difference is only slightly less, 21.2% (column (2)). Does that mean that labor market discrimination, in a narrow sense, plays no role? No, because we did not condition on marginal product or all variables that may affect it. Omitted variables include details of degree, quality of education, measures of motivation etc. So differences in marginal product may play a stronger role than the minuscule difference uncovered here.</p>
+<p>Column (3) includes all other covariates. The gender difference is 15.1%. When we compare people with the same family characteristics and job features as measured in the data, women earn 15.1% less than men. Some of these variables are meant to measure job flexibility, but they are imperfect. Omitted variables include flexibility of hours, commuting time, etc. Column (4) includes the same variables but pays attention to the potentially nonlinear relations with the two continuous variables, age and hours worked. The gender difference is very similar, 14.1%. The confidence intervals are reasonably narrow around these coefficients (<span class="math inline">\(\pm 2\%\)</span>). They suggest that the average gender differences in the data, unconditional or conditional on the covariates, is of similar magnitude in the population represented by our data to what’s in the data.</p>
+<div class="dashboard-box">
+<div class="dashboard-box-title">
+🎯 EXPLORE INTERACTIVELY
+</div>
+<p style="margin-bottom: 1.5rem;">
+See what happens as you add more variables with our interactive dashboard. Adjust variables and watch the regression change in real-time.
+</p>
+<p><a href="https://da-book-dashboards-test-ch10.streamlit.app/multiple_regression_analysis" class="dashboard-link" target="_blank"> OPEN DASHBOARD </a></p>
+</div>
+<p><strong>What We Learned</strong></p>
+<p>What did we learn from this exercise? We certainly could not safely pin down the role of labor market discrimination versus differences in productivity in gender inequality in pay. Even their relative role is hard to assess from these results as the productivity measures (broad categories of degree) are few, and the other covariates may be related to discrimination as well as preferences or other aspects of productivity (age, hours worked, occupation, industry). Thus, we cannot say that the 14.1% in Column (4) is due to discrimination, and we can’t even say if the role of discrimination is larger or smaller than that.</p>
+<p>Nevertheless, our analysis provided some useful facts. The most important of them is that the gender difference is quite small below age 30, and it’s the largest among employees between ages 40 and 60. Thus, gender differences, whether due to discrimination or productivity differences, tend to be small among younger employees. In contrast, the disadvantages of women are large among middle-aged employees who also tend to be the highest earning employees. This is consistent with many potential explanations, such as the difficulty of women to advance their careers relative to men due to “glass ceiling effects” (discrimination at promotion to high job ranks), or differences preferences for job flexibility versus career advancement, which, in turn, may be due to differences in preferences or differences in the constraints the division of labor in families put on women versus men.</p>
+<p>On the methods side, this case study illustrated how to estimate multiple linear regressions, and how to interpret and generalize their results. It showed how we can estimate and visualize different patterns of association, including nonlinear patterns, between different groups. It highlighted the difficulty of drawing causal conclusions from regression estimates using cross-sectional data. Nevertheless, it also illustrated that, even in the absence of clear causal conclusions, multiple regression analysis can advance our understanding of the sources of a difference uncovered by a simple regression.</p>
+<div class="ai-task">
+<p><span class="ai-task-icon">🤖 AI PRACTICE TASK #14</span></p>
+<p><strong>Prompt:</strong> “Looking at Table 10.5, explain why we can’t conclude that the 14.1% gender wage gap in column (4) is entirely due to discrimination. What are at least three alternative explanations?”</p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('In a regression analysis, after controlling for age, education, occupation, industry, state, marital status, and hours worked, women earn 14.1% less than men. Explain why we cannot conclude this 14.1% gap is entirely due to discrimination. What are at least three alternative explanations?'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
+</div>
+<hr>
+<h2 data-number="1.3" id="sec-10-12" class="anchored"><span class="header-section-number">1.3</span> 10.12 Multiple regression and prediction</h2>
+<p>One frequent reason to estimate a multiple regression is to make a <strong>prediction</strong>: find the best guess for the dependent variable, or target variable <span class="math inline">\(y_j\)</span> for a particular target observation <span class="math inline">\(j\)</span>, for which we know the right-hand side variables <span class="math inline">\(x\)</span> but not <span class="math inline">\(y\)</span>. Multiple regression offers a better prediction than a simple regression because it includes more <span class="math inline">\(x\)</span> variables.</p>
+<p>The predicted value of the dependent variable in a multiple regression for an observation <span class="math inline">\(j\)</span> with known values for the explanatory variables <span class="math inline">\(x_{1j}, x_{2j}, ...\)</span> is simply</p>
+<p><span class="math display">\[
+\hat{y}_j = \hat{\beta}_0 + \hat{\beta}_1 x_{1j} + \hat{\beta}_2 x_{2j} + ...
+\]</span></p>
+<p>When the goal is prediction, we want the regression to produce as good a fit as possible. More precisely, we want as good a fit as possible to the general pattern that is representative of the target observation <span class="math inline">\(j\)</span>. Good fit in a dataset is a good starting point – that is, of course, if our data is representative of that general pattern. But it’s not necessarily the same. A regression with a very good fit in our dataset may not produce a similarly good fit in the general pattern. A common danger is <strong>overfitting</strong> the data: finding patterns in the data that are not true in the general pattern. Thus, when using multiple regression for prediction, we want a regression that provides good fit without overfitting the data. Finding a multiple regression means selecting right-hand-side variables and functional forms for those variables. We’ll discuss this issue in more detail when we introduce the framework for prediction in Chapter 13.</p>
+<h3 data-number="1.3.1" id="assessing-fit-r-squared" class="anchored"><span class="header-section-number">1.3.1</span> Assessing Fit: R-squared</h3>
+<p>But how can we assess the fit of multiple regressions? Just like with simple regressions, the most commonly used measure is the R-squared. The R-squared in a multiple regression is conceptually the same as in a simple regression that we introduced in Chapter 7:</p>
+<p><span class="math display">\[
+R^2 = \frac{Var[\hat{y}]}{Var[y]}=1-\frac{Var[e]}{Var[y]}
+\]</span></p>
+<p>where <span class="math inline">\(Var[y]=\frac{1}{n}\sum_{i=1}^{n}(y_{i}-\bar{y})^{2}\)</span>, <span class="math inline">\(Var[\hat{y}]=\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_{i}-\bar{y})^{2}\)</span>, and <span class="math inline">\(Var[e]=\sum_{i=1}^{n}(e_{i})^2\)</span>. Note that <span class="math inline">\(\bar{\hat{y}}=\bar{y}\)</span>, and <span class="math inline">\(\bar{e}=0\)</span>.</p>
+<p>The R-squared is a useful statistic to describe the fit of regressions. For that reason, it is common practice to report the R-squared in standard tables of regression results.</p>
+<p>Unfortunately, the R-squared is an imperfect measure for selecting the best multiple regression. The reason is that regressions with the highest R-squared tend to overfit the data. When we compare two regressions, and one of them includes all the right-hand-side variables in the other one plus some more, the regression with more variables always produces a higher R-squared. Thus, regressions with more right-hand-side variables tend to produce higher R-squared. But that’s not always good: regressions with more variables have a larger risk of overfitting the data. To see this, consider an extreme example. A regression with a binary indicator variable for each of the observations in the data (minus one for the reference category) produces a perfect fit with an R-squared of one. But such a regression would be completely useless to predict values outside the dataset. Thus, for variable selection, alternative measures are used, as we shall discuss it in Chapter 14.</p>
+<p>Until we learn about more systematic methods to select the right-hand-side variables in the regression for prediction, all we can do is to use our intuition. The goal is to have a regression that captures patterns that are likely to be true for the general pattern for our target observations. Often, that means including variables that capture substantial differences in <span class="math inline">\(y\)</span>, and not including variables whose coefficients imply tiny differences. That includes variables that capture detailed categories of a qualitative variables or complicated interactions. But to do really well, we will need the systematic tools we’ll cover in Chapters 13 and 14.</p>
+<h3 data-number="1.3.2" id="visualizing-fit-the-haty---y-plot" class="anchored"><span class="header-section-number">1.3.2</span> Visualizing Fit: The <span class="math inline">\(\hat{y} - y\)</span> Plot</h3>
+<p>The last topic in prediction is how we can visualize the fit of our regression. The purpose of such a graph is to compare values of <span class="math inline">\(y\)</span> to the regression line. We visualized the fit of a simple regression with a scatterplot and the regression line in the <span class="math inline">\(x-y\)</span> coordinate system. We did something similar with the age–gender interaction, too. However, with a multiple regression with more variables, we can’t produce such a visualization because we have too many right-hand-side variables.</p>
+<p>Instead, we can visualize the fit of a multiple regression by the <strong><span class="math inline">\(\hat{y} - y\)</span> plot</strong>. This plot has <span class="math inline">\(\hat{y}\)</span> on the horizontal axis and <span class="math inline">\(y\)</span> on the vertical axis. The plot features the 45 degree line and the scatterplot around it. The 45 degree line is also the regression line of <span class="math inline">\(y\)</span> regressed on <span class="math inline">\(\hat{y}\)</span>. To see this consider that the regression of <span class="math inline">\(y\)</span> on <span class="math inline">\(\hat{y}\)</span> shows the expected value of <span class="math inline">\(y\)</span> for values of <span class="math inline">\(\hat{y}\)</span>. But <span class="math inline">\(\hat{y}\)</span> is already the expected value of <span class="math inline">\(y\)</span> conditional on the right-hand-side variables, so the expected value of <span class="math inline">\(y\)</span> conditional on <span class="math inline">\(\hat{y}\)</span> is the same as <span class="math inline">\(\hat{y}\)</span>. Therefore this line connects points where <span class="math inline">\(\hat{y}=y\)</span>, so it is the 45 degree line.</p>
+<p>The scatterplot around this line shows how actual values of <span class="math inline">\(y\)</span> differ from their predicted value <span class="math inline">\(\hat{y}\)</span>. The better the fit of the regression, the closer this scatterplot is to the 45 degree line (and the closer R-squared is to one). But this visualization is more informative than the R-squared. For example, we can use the <span class="math inline">\(\hat{y} - y\)</span> plot to identify observations with especially large positive or negative residuals. In this sense, it generalizes the scatterplot with a regression line when we only had a single <span class="math inline">\(x\)</span>.</p>
+<div class="review-box">
+<div class="review-box-title">
+Prediction with Multiple Linear Regression
+</div>
+<p><strong>Predicted value:</strong></p>
+<p><span class="math display">\[
+\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x_1 + \hat{\beta}_2 x_2 + ...
+\]</span></p>
+<p><strong>Assessing fit:</strong> - R-squared: proportion of variance explained - Higher R-squared = better fit in sample - But: can overfit with too many variables</p>
+<p><strong>Visualizing fit:</strong> - <span class="math inline">\(\hat{y} - y\)</span> plot: scatter plot with <span class="math inline">\(\hat{y}\)</span> on x-axis, <span class="math inline">\(y\)</span> on y-axis - 45-degree line: where <span class="math inline">\(\hat{y} = y\)</span> (perfect predictions) - Points above line: underpredictions (<span class="math inline">\(\hat{y} &lt; y\)</span>) - Points below line: overpredictions (<span class="math inline">\(\hat{y} &gt; y\)</span>)</p>
+</div>
+<div class="ai-task">
+<p><span class="ai-task-icon">🤖 AI PRACTICE TASK #15</span></p>
+<p><strong>Prompt:</strong> “Explain the problem of overfitting in multiple regression. Why is a model with R-squared = 0.95 not necessarily better than one with R-squared = 0.80 for prediction?”</p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('Explain the problem of overfitting in multiple regression. Why is a model with R-squared = 0.95 not necessarily better than one with R-squared = 0.80 for prediction?'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
+</div>
+<hr>
+<h2 class="case-study anchored" data-number="1.4" id="case-study-b1-finding-a-good-deal-among-hotels"><span class="header-section-number">1.4</span> Case Study B1: Finding a Good Deal Among Hotels</h2>
+<div class="case-study-title">
+CASE STUDY B1: FINDING GOOD HOTEL DEALS
+</div>
+<p><strong>Prediction with multiple regression</strong></p>
+<p>Let’s return once more to our example of hotel prices and distance to the city center. Recall that the goal of the analysis is to find a good deal – from among the hotels for the date contained in the data. A good deal is a hotel that is inexpensive relative to its characteristics. Of those characteristics two are especially important: the distance of the hotel to the city center and the quality of the hotel. In the earlier chapters we considered simple regressions with the distance to the city center as the only explanatory variable. Here we add measures of quality and consider a multiple regression. Those measures of quality are stars (3, 3.5 or 4) and rating (average customer rating, ranging from 2 to 5).</p>
+<h3 data-number="1.4.1" id="choosing-functional-form" class="anchored"><span class="header-section-number">1.4.1</span> Choosing Functional Form</h3>
+<p>With prediction, capturing the functional form is often important. Based on earlier explorations of the price–distance relationship and similar explorations of the price–stars and price–ratings relationships, we arrived at the following specification. The regression has log price as the dependent variable, a piecewise linear spline in distance (knots at 1 and 4 miles), a piecewise linear spline in rating (one knot at 3.5), and binary indicators for stars (one for 3.5 stars, one for 4 stars; 3 stars is the reference category).</p>
+<p>From a statistical point of view, this is prediction analysis. The goal is to find the best predicted (log) price that corresponds to distance, stars, and ratings of hotels. Then we focus on the difference of actual (log) price from its predicted value.</p>
+<div class="code-block">
+<div class="code-header">
+📊 BUILD PREDICTION MODEL
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R Code for hotel price prediction</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(estimatr)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lspline)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>hotels <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"hotels_vienna.csv"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create piecewise linear splines</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>hotels<span class="sc">$</span>dist_spline1 <span class="ot">&lt;-</span> <span class="fu">elspline</span>(hotels<span class="sc">$</span>distance, <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>))[,<span class="dv">1</span>]</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>hotels<span class="sc">$</span>dist_spline2 <span class="ot">&lt;-</span> <span class="fu">elspline</span>(hotels<span class="sc">$</span>distance, <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>))[,<span class="dv">2</span>]</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>hotels<span class="sc">$</span>dist_spline3 <span class="ot">&lt;-</span> <span class="fu">elspline</span>(hotels<span class="sc">$</span>distance, <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>))[,<span class="dv">3</span>]</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>hotels<span class="sc">$</span>rating_spline1 <span class="ot">&lt;-</span> <span class="fu">elspline</span>(hotels<span class="sc">$</span>rating, <span class="fl">3.5</span>)[,<span class="dv">1</span>]</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>hotels<span class="sc">$</span>rating_spline2 <span class="ot">&lt;-</span> <span class="fu">elspline</span>(hotels<span class="sc">$</span>rating, <span class="fl">3.5</span>)[,<span class="dv">2</span>]</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create star dummies</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>hotels<span class="sc">$</span>stars_3<span class="fl">.5</span> <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(hotels<span class="sc">$</span>stars <span class="sc">==</span> <span class="fl">3.5</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>hotels<span class="sc">$</span>stars_4 <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(hotels<span class="sc">$</span>stars <span class="sc">==</span> <span class="dv">4</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate regression</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm_robust</span>(</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  ln_price <span class="sc">~</span> dist_spline1 <span class="sc">+</span> dist_spline2 <span class="sc">+</span> dist_spline3 <span class="sc">+</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>             rating_spline1 <span class="sc">+</span> rating_spline2 <span class="sc">+</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>             stars_3<span class="fl">.5</span> <span class="sc">+</span> stars_4,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> hotels</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate predictions</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>hotels<span class="sc">$</span>predicted_ln_price <span class="ot">&lt;-</span> <span class="fu">predict</span>(model)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>hotels<span class="sc">$</span>residual <span class="ot">&lt;-</span> <span class="fu">residuals</span>(model)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Find best deals (most negative residuals)</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>best_deals <span class="ot">&lt;-</span> hotels[<span class="fu">order</span>(hotels<span class="sc">$</span>residual), ][<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, ]</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(best_deals[, <span class="fu">c</span>(<span class="st">"hotel_id"</span>, <span class="st">"price"</span>, <span class="st">"distance"</span>, <span class="st">"stars"</span>, <span class="st">"rating"</span>, <span class="st">"residual"</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-hotels-multiple-reg/ch10-hotels-predict.ipynb" class="code-link" target="_blank">🚀 OPEN IN CODESPACE</a></p>
+</div>
+<h3 data-number="1.4.2" id="identifying-good-deals" class="anchored"><span class="header-section-number">1.4.2</span> Identifying Good Deals</h3>
+<p>Good deals are hotels with large negative residuals from this regression. They have a (log) price that is below what’s expected given their distance, stars, and rating. The more negative the residual, the lower their log price, and thus their price, compared to what’s expected for them. Of course, our measures of quality are imperfect. The regression does not consider information on room size, view, details of location, or features that only photos can show. Therefore the result of this analysis should be a shortlist of hotels that the decision maker should look into in more detail.</p>
+<p><strong>Table 10.6: Good deals for hotels: the five hotels with the most negative residuals</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Hotel ID</th>
+<th>Price (€)</th>
+<th>Distance (miles)</th>
+<th>Stars</th>
+<th>Rating</th>
+<th>Residual</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>21912</td>
+<td>85</td>
+<td>1.2</td>
+<td>3.5</td>
+<td>4.2</td>
+<td>-0.42</td>
+</tr>
+<tr class="even">
+<td>18592</td>
+<td>95</td>
+<td>2.1</td>
+<td>4.0</td>
+<td>4.5</td>
+<td>-0.38</td>
+</tr>
+<tr class="odd">
+<td>22080</td>
+<td>78</td>
+<td>1.8</td>
+<td>3.0</td>
+<td>3.8</td>
+<td>-0.35</td>
+</tr>
+<tr class="even">
+<td>19455</td>
+<td>105</td>
+<td>0.9</td>
+<td>4.0</td>
+<td>4.3</td>
+<td>-0.33</td>
+</tr>
+<tr class="odd">
+<td>20118</td>
+<td>88</td>
+<td>1.5</td>
+<td>3.5</td>
+<td>4.0</td>
+<td>-0.31</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: List of the five observations with the smallest (most negative) residuals from the multiple regression with log price on the left-hand-side; right-hand-side variables are distance to the city center (piecewise linear spline with knots at 1 and 4 miles), average customer rating (piecewise linear spline with knot at 3.5), binary variables for 3.5 stars and 4 stars (reference category is 3 stars).</em></p>
+<p><em>Source: hotels data. Vienna, 2017 November, weekday. Hotels with 3 to 4 stars within 8 miles of the city center, n=217.</em></p>
+<p>Table 10.6 shows the five best deals: these are the hotels with the five most negative residuals. We may compare this list with the list in Chapter 7, Section 7.4, that was based on the residuals of a simple linear regression of hotel price on distance. Only two hotels “21912” and “22080” featured on both lists; hotel “21912” is the best deal now, there it was the second best deal. The rest of the hotels from Chapter 7 did not make it to the list here. When considering stars and rating, they do not appear to be such good deals anymore because their ratings and stars are low. Instead, we have three other hotels that have good measures of quality and are not very far yet they have relatively low price. This list is a good short list to find the best deal after looking into specific details and photos on the price comparison website.</p>
+<h3 data-number="1.4.3" id="assessing-model-fit" class="anchored"><span class="header-section-number">1.4.3</span> Assessing Model Fit</h3>
+<p>How good is the fit of this regression? Its R-squared is 0.55: 55 percent in the variation in log price is explained by the regression. In comparison, a regression with log price and piecewise linear spline in distance would produce an R-squared of 0.37. Including stars and ratings improved the fit by 18 percentage points.</p>
+<figure>
+<img src="../../figures/Ch10_figures/ch10-figure-3-hotels-yhat-y.png" alt="yhat-y plot for hotels" width="100%">
+<figcaption>
+<strong>Figure 10.3:</strong> <span class="math inline">\(\hat{y}-y\)</span> plot for log hotel price. Results from a regression of ln price on distance to the city center (piecewise linear spline with knots at 1 and 4 miles), average customer rating (piecewise linear spline with knot at 3.5), binary variables for 3.5 stars and 4 stars (reference category is 3 stars). <span class="math inline">\(y\)</span> is ln price; <span class="math inline">\(\hat{y}\)</span> is predicted ln price from the regression. Source: hotels dataset. Vienna, 2017 November, weekday, hotels with 3 to 4 stars, n=217.
+</figcaption>
+</figure>
+<p>The <span class="math inline">\(\hat{y}-y\)</span> plot in Figure 10.3 visualizes the fit of this regression. The plot features the 45 degree line. Dots above the line correspond to observations with a positive residual: hotels that have higher price than expected based on the right-hand-side variables. Dots below the line correspond to observations with a negative residual: hotels that have lower price than expected. The dots that are furthest down from the line are the candidates for a good deal.</p>
+<h3 data-number="1.4.4" id="conclusion" class="anchored"><span class="header-section-number">1.4.4</span> Conclusion</h3>
+<p>This concludes the series of case studies using the hotels dataset to identify the hotels that are the best deals. We produced a short-list of hotels that are the least expensive relative to their distance to the city center and their quality, measured by average customer ratings and stars.</p>
+<p>This case study built on the results of several previous case studies that we used to illustrate many of the important steps of data analysis. The final list was a result of a multiple linear regression that included piecewise linear splines in some of the variables to better approximate nonlinear patterns of association. In two previous case studies (in Chapters 7 and 8), we illustrated how we can use simple regression analysis to identify underpriced hotels relative to their distance to the center without other variables. In previous case studies using the same data with the same ultimate goal, we described how the data was collected and what that implies for its quality (in Chapter 1); we illustrated how to prepare the data for subsequent analysis (in Chapter 2); and we showed how to explore the data to understand potential problems and provide context for subsequent analysis (in Chapter 3).</p>
+<div>
+<blockquote>
+<p><strong>Lessons from the Hotel Case Study</strong></p>
+<p><strong>What worked:</strong> 1. Multiple regression better than simple regression (R² = 0.55 vs 0.37) 2. Functional form matters (splines capture nonlinear patterns) 3. Quality measures (stars, ratings) explain a lot of variation 4. Residual analysis identifies specific opportunities</p>
+<p><strong>What to remember:</strong> 1. Predicted value ≠ true value (R² = 0.55 means 45% unexplained) 2. Unmeasured features matter (room size, view, amenities) 3. Use predictions as screening tool, not final decision 4. Always inspect shortlist manually</p>
+<p><strong>Prediction vs.&nbsp;understanding:</strong> - Here, we don’t care about causal effects - We only want accurate predictions - So functional form and fit are paramount - Interpretation of coefficients less important</p>
+</blockquote>
+</div>
+<div class="ai-task">
+<p><span class="ai-task-icon">🤖 AI PRACTICE TASK #16</span></p>
+<p><strong>Prompt:</strong> “In the hotel case study, we use a <span class="math inline">\(\hat{y}-y\)</span> plot to identify good deals. Explain how this plot works and why hotels far below the 45-degree line are good deals. What are the limitations of this approach?”</p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('In a hotel price prediction analysis, we use a yhat-y plot (predicted price vs actual price) to identify good deals. Explain how this plot works and why hotels far below the 45-degree line are good deals. What are the limitations of this approach?'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
+</div>
+<hr>
+<h2 data-number="1.5" id="sec-summary-final" class="anchored"><span class="header-section-number">1.5</span> Summary: Chapter 10 Complete</h2>
+<p>We’ve now covered all of Chapter 10 on Multiple Linear Regression!</p>
+<h3 data-number="1.5.1" id="main-takeaways" class="anchored"><span class="header-section-number">1.5.1</span> Main Takeaways</h3>
+<ol type="1">
+<li><strong>Multiple regression basics (10.1-10.3)</strong>
+<ul>
+<li>Compare observations similar in other variables</li>
+<li>Omitted variable bias: why simple regression can be misleading</li>
+<li>“Holding other variables constant”</li>
+</ul></li>
+<li><strong>Inference (10.4-10.6)</strong>
+<ul>
+<li>Standard errors larger when variables correlated (multicollinearity)</li>
+<li>Confidence intervals and hypothesis tests work similarly</li>
+<li>Robust SEs important with heteroskedasticity</li>
+</ul></li>
+<li><strong>Extensions (10.7-10.10)</strong>
+<ul>
+<li>Works with 3+ variables</li>
+<li>Nonlinear patterns: functional form matters more for prediction</li>
+<li>Categorical variables: use k-1 dummies</li>
+<li>Interactions: allow different slopes by group</li>
+</ul></li>
+<li><strong>Applications (10.11-10.12)</strong>
+<ul>
+<li>Causal analysis: multiple regression helps but doesn’t solve identification</li>
+<li>Prediction: R-squared useful but beware overfitting</li>
+<li>Visualization: <span class="math inline">\(\hat{y}-y\)</span> plots show fit and outliers</li>
+</ul></li>
+</ol>
+<h3 data-number="1.5.2" id="gender-wage-gap-findings" class="anchored"><span class="header-section-number">1.5.2</span> Gender Wage Gap Findings</h3>
+<p>Across case studies A1-A6, we learned: - Unconditional gap: ~19.5% - Conditional on age: ~18.5% - Conditional on education: ~18.2% - Gap grows with age (10% → 22% from age 25 to 50) - Controlling for occupation, industry, etc.: ~14% - Cannot isolate pure discrimination from this analysis</p>
+<h3 data-number="1.5.3" id="hotel-price-findings" class="anchored"><span class="header-section-number">1.5.3</span> Hotel Price Findings</h3>
+<p>From case study B1: - Multiple regression (R² = 0.55) better than simple (R² = 0.37) - Stars and ratings explain significant price variation - Identified 5 underpriced hotels - Residual analysis practical for finding deals</p>
+<h3 data-number="1.5.4" id="whats-next" class="anchored"><span class="header-section-number">1.5.4</span> What’s Next?</h3>
+<p><strong>Chapter 11:</strong> Modeling probabilities (logit, probit)<br>
+<strong>Chapter 12:</strong> Time series regression<br>
+<strong>Chapter 13:</strong> Prediction framework<br>
+<strong>Chapter 19:</strong> Causal inference framework</p>
+<hr>
+<div>
+<blockquote>
+<p><strong>🔗 Final Resources</strong></p>
+<p><strong>All Case Studies Code:</strong> - <a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-gender-earnings-understand/">Gender earnings analysis</a> - <a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch10-hotels-multiple-reg/">Hotel prices analysis</a></p>
+<p><strong>Interactive Dashboards:</strong> - <a href="https://dashboards.gabors-data-analysis.com/ch10">Multiple regression visualizations</a></p>
+<p><strong>All Data:</strong> - <a href="https://osf.io/4vt9a/">OSF Repository</a></p>
+</blockquote>
+</div>
+<hr>
+<div class="page-nav">
+<div class="page-nav-prev">
+<pre><code>&lt;a href="03-extensions.html"&gt;← Previous: Page 3 - Extensions&lt;/a&gt;</code></pre>
+</div>
+<div class="page-nav-next">
+<pre><code>&lt;a href="index.html"&gt;Back to Chapter 10 Index →&lt;/a&gt;</code></pre>
+</div>
+</div>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+
+
+
+
+</body></html>

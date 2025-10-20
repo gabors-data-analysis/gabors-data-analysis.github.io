@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Gábor Békés">
+<meta name="author" content="Gábor Kézdi">
+<meta name="dcterms.date" content="2025-01-01">
+
+<title>Data Analysis for Business, Economics, and Policy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html-29c5cb07d3aa4ec9316f6656a8fc1744.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-234273d1456647dabc34a594ac50e507.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+
+
+<link rel="stylesheet" href="_assets/styles.css">
+</head>
+
+<body>
+
+
+<header id="title-block-header">
+<h1 class="title">Data Analysis for Business, Economics, and Policy</h1>
+<p class="subtitle">Interactive HTML Edition</p>
+<p class="author">Gábor Békés</p>
+<p class="author">Gábor Kézdi</p>
+
+<p class="date">2025-01-01</p>
+</header>
+
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#welcome-to-the-interactive-data-analysis-textbook" id="toc-welcome-to-the-interactive-data-analysis-textbook"><span class="header-section-number">1</span> Welcome to the Interactive Data Analysis Textbook</a></li>
+  <li><a href="#about-this-edition" id="toc-about-this-edition"><span class="header-section-number">1.1</span> About This Edition</a></li>
+  <li><a href="#book-structure" id="toc-book-structure"><span class="header-section-number">1.2</span> 📚 Book Structure</a>
+  <ul>
+  <li><a href="#part-i-data-exploration" id="toc-part-i-data-exploration"><span class="header-section-number">1.2.1</span> PART I: DATA EXPLORATION</a></li>
+  <li><a href="#part-ii-regression-analysis" id="toc-part-ii-regression-analysis"><span class="header-section-number">1.2.2</span> PART II: REGRESSION ANALYSIS</a></li>
+  <li><a href="#part-iii-prediction" id="toc-part-iii-prediction"><span class="header-section-number">1.2.3</span> PART III: PREDICTION</a></li>
+  <li><a href="#part-iv-causal-analysis" id="toc-part-iv-causal-analysis"><span class="header-section-number">1.2.4</span> PART IV: CAUSAL ANALYSIS</a></li>
+  </ul></li>
+  <li><a href="#getting-started" id="toc-getting-started"><span class="header-section-number">1.3</span> 🚀 Getting Started</a>
+  <ul>
+  <li><a href="#for-students" id="toc-for-students"><span class="header-section-number">1.3.1</span> For Students</a></li>
+  <li><a href="#for-instructors" id="toc-for-instructors"><span class="header-section-number">1.3.2</span> For Instructors</a></li>
+  </ul></li>
+  <li><a href="#about-the-textbook" id="toc-about-the-textbook"><span class="header-section-number">1.4</span> 📖 About the Textbook</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources"><span class="header-section-number">1.5</span> 🔗 Additional Resources</a>
+  <ul>
+  <li><a href="#main-resources" id="toc-main-resources"><span class="header-section-number">1.5.1</span> Main Resources</a></li>
+  <li><a href="#learning-tools" id="toc-learning-tools"><span class="header-section-number">1.5.2</span> Learning Tools</a></li>
+  </ul></li>
+  <li><a href="#about-the-authors" id="toc-about-the-authors"><span class="header-section-number">1.6</span> 👥 About the Authors</a></li>
+  <li><a href="#current-status" id="toc-current-status"><span class="header-section-number">1.7</span> 📊 Current Status</a></li>
+  <li><a href="#development-roadmap" id="toc-development-roadmap"><span class="header-section-number">1.8</span> 🎯 Development Roadmap</a>
+  <ul>
+  <li><a href="#phase-1-core-regression-chapters-current" id="toc-phase-1-core-regression-chapters-current"><span class="header-section-number">1.8.1</span> Phase 1: Core Regression Chapters (Current)</a></li>
+  <li><a href="#phase-2-expand-coverage" id="toc-phase-2-expand-coverage"><span class="header-section-number">1.8.2</span> Phase 2: Expand Coverage</a></li>
+  <li><a href="#phase-3-advanced-topics" id="toc-phase-3-advanced-topics"><span class="header-section-number">1.8.3</span> Phase 3: Advanced Topics</a></li>
+  <li><a href="#phase-4-enhanced-features" id="toc-phase-4-enhanced-features"><span class="header-section-number">1.8.4</span> Phase 4: Enhanced Features</a></li>
+  </ul></li>
+  <li><a href="#feedback-contact" id="toc-feedback-contact"><span class="header-section-number">1.9</span> 📧 Feedback &amp; Contact</a></li>
+  <li><a href="#license-citation" id="toc-license-citation"><span class="header-section-number">1.10</span> 📜 License &amp; Citation</a></li>
+  <li><a href="#ready-to-learn" id="toc-ready-to-learn"><span class="header-section-number">1.11</span> Ready to Learn?</a></li>
+  </ul>
+</nav>
+<p><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Oswald:wght@300;400;500;600;700&amp;family=Roboto+Condensed:wght@300;400;700&amp;family=Lora:wght@400;600&amp;display=swap" rel="stylesheet"></p>
+<section id="welcome-to-the-interactive-data-analysis-textbook" class="hero-banner" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Welcome to the Interactive Data Analysis Textbook</h1>
+<p><strong>By Gábor Békés &amp; Gábor Kézdi</strong></p>
+<p>This is an interactive HTML version of the textbook “Data Analysis for Business, Economics, and Policy” — enhanced with code examples, AI practice tasks, and interactive dashboards.</p>
+</section>
+<hr>
+<h2 data-number="1.1" id="about-this-edition" class="anchored"><span class="header-section-number">1.1</span> About This Edition</h2>
+<p>This interactive edition transforms the textbook into an engaging online learning experience:</p>
+<ul>
+<li>🎨 <strong>Modern Design</strong> - Beautiful, readable interface with responsive layout</li>
+<li>💻 <strong>Integrated Code</strong> - Direct links to GitHub Codespaces for hands-on practice</li>
+<li>🤖 <strong>AI Learning Tasks</strong> - Practice problems you can work through with AI assistants</li>
+<li>📊 <strong>Interactive Dashboards</strong> - Explore data visualizations (coming soon)</li>
+<li>📱 <strong>Mobile-Friendly</strong> - Learn anywhere, on any device</li>
+<li>🔗 <strong>Hyperlinked</strong> - Easy navigation between sections and references</li>
+</ul>
+<hr>
+<h2 data-number="1.2" id="book-structure" class="anchored"><span class="header-section-number">1.2</span> 📚 Book Structure</h2>
+<h3 data-number="1.2.1" id="part-i-data-exploration" class="anchored"><span class="header-section-number">1.2.1</span> PART I: DATA EXPLORATION</h3>
+<div class="chapter-list">
+<p><strong>Chapter 1: Origins of Data</strong><br>
+<em>Coming soon</em> - Data collection, quality, sampling, and ethical issues</p>
+<p><strong>Chapter 2: Preparing Data for Analysis</strong><br>
+<em>Coming soon</em> - Data cleaning, transformation, and preparation</p>
+<p><strong>Chapter 3: Exploratory Data Analysis</strong><br>
+<em>Coming soon</em> - Visualization, summarization, and initial insights</p>
+<p><strong>Chapter 4: Comparison and Correlation</strong><br>
+<em>Coming soon</em> - Comparing groups and measuring associations</p>
+<p><strong>Chapter 5: Generalizing from Data</strong><br>
+<em>Coming soon</em> - Statistical inference and sampling distributions</p>
+<p><strong>Chapter 6: Testing Hypotheses</strong><br>
+<em>Coming soon</em> - Hypothesis testing framework and applications</p>
+</div>
+<hr>
+<h3 data-number="1.2.2" id="part-ii-regression-analysis" class="anchored"><span class="header-section-number">1.2.2</span> PART II: REGRESSION ANALYSIS</h3>
+<div class="chapter-list">
+<p><strong>Chapter 7: Simple Regression</strong><br>
+<em>Coming soon</em> - Introduction to regression analysis</p>
+<p><strong>Chapter 8: Complicated Patterns and Messy Data</strong><br>
+<em>Coming soon</em> - Nonlinear patterns and robust methods</p>
+<p><strong>Chapter 9: Generalizing Results of a Regression</strong><br>
+<em>Coming soon</em> - Statistical inference in regression</p>
+<p><strong><a href="chapters/ch10/index.html">Chapter 10: Multiple Linear Regression</a></strong> ✅ <strong>LIVE</strong><br>
+Understanding associations while controlling for multiple factors</p>
+<p><strong>Chapter 11: Modeling Probabilities</strong><br>
+<em>Coming soon</em> - Binary outcomes and probability models</p>
+<p><strong>Chapter 12: Regression with Time Series Data</strong><br>
+<em>Coming soon</em> - Time series patterns and forecasting</p>
+</div>
+<hr>
+<h3 data-number="1.2.3" id="part-iii-prediction" class="anchored"><span class="header-section-number">1.2.3</span> PART III: PREDICTION</h3>
+<div class="chapter-list">
+<p><strong>Chapter 13: A Framework for Prediction</strong><br>
+<em>Coming soon</em> - Machine learning fundamentals</p>
+<p><strong>Chapter 14: Model Building for Prediction</strong><br>
+<em>Coming soon</em> - Feature engineering and model selection</p>
+<p><strong>Chapter 15: Regression Trees</strong><br>
+<em>Coming soon</em> - Decision trees and CART</p>
+<p><strong>Chapter 16: Random Forest and Boosting</strong><br>
+<em>Coming soon</em> - Ensemble methods</p>
+<p><strong>Chapter 17: Probability Prediction and Classification</strong><br>
+<em>Coming soon</em> - Classification problems and metrics</p>
+<p><strong>Chapter 18: Forecasting from Time Series Data</strong><br>
+<em>Coming soon</em> - Advanced time series forecasting</p>
+</div>
+<hr>
+<h3 data-number="1.2.4" id="part-iv-causal-analysis" class="anchored"><span class="header-section-number">1.2.4</span> PART IV: CAUSAL ANALYSIS</h3>
+<div class="chapter-list">
+<p><strong>Chapter 19: A Framework for Causal Analysis</strong><br>
+<em>Coming soon</em> - Causality, confounding, and identification</p>
+<p><strong>Chapter 20: Designing and Analyzing Experiments</strong><br>
+<em>Coming soon</em> - Randomized controlled trials</p>
+<p><strong>Chapter 21: Regression and Matching with Observational Data</strong><br>
+<em>Coming soon</em> - Quasi-experimental methods</p>
+<p><strong>Chapter 22: Difference-in-Differences</strong><br>
+<em>Coming soon</em> - Panel data and policy evaluation</p>
+<p><strong>Chapter 23: Methods for Panel Data</strong><br>
+<em>Coming soon</em> - Fixed effects and instrumental variables</p>
+<p><strong>Chapter 24: Appropriate Control Groups for Panel Data</strong><br>
+<em>Coming soon</em> - Synthetic control and advanced methods</p>
+</div>
+<hr>
+<h2 data-number="1.3" id="getting-started" class="anchored"><span class="header-section-number">1.3</span> 🚀 Getting Started</h2>
+<h3 data-number="1.3.1" id="for-students" class="anchored"><span class="header-section-number">1.3.1</span> For Students</h3>
+<ol type="1">
+<li><strong>Navigate</strong> - Use the sidebar to browse chapters and sections</li>
+<li><strong>Practice</strong> - Work through AI practice tasks for deeper understanding</li>
+<li><strong>Code</strong> - Click “Open in Codespace” to run code examples</li>
+<li><strong>Explore</strong> - Try the interactive dashboards (coming soon)</li>
+</ol>
+<h3 data-number="1.3.2" id="for-instructors" class="anchored"><span class="header-section-number">1.3.2</span> For Instructors</h3>
+<p>This interactive edition can: - Supplement your course materials - Provide students with hands-on practice - Enable self-paced learning - Track student progress (coming soon)</p>
+<hr>
+<h2 data-number="1.4" id="about-the-textbook" class="anchored"><span class="header-section-number">1.4</span> 📖 About the Textbook</h2>
+<p><strong>“Data Analysis for Business, Economics, and Policy”</strong> teaches:</p>
+<ul>
+<li>How to collect, clean, and explore data</li>
+<li>Regression analysis from basics to advanced techniques</li>
+<li>Machine learning for prediction</li>
+<li>Causal inference and policy evaluation</li>
+</ul>
+<p><strong>Target audience:</strong> - Undergraduate and graduate students in economics, business, and policy - Data analysts and researchers - Anyone wanting to learn modern data analysis</p>
+<p><strong>Approach:</strong> - Practical, hands-on learning - Real-world case studies - Emphasis on interpretation and critical thinking - Accessible to students with basic statistics background</p>
+<hr>
+<h2 data-number="1.5" id="additional-resources" class="anchored"><span class="header-section-number">1.5</span> 🔗 Additional Resources</h2>
+<h3 data-number="1.5.1" id="main-resources" class="anchored"><span class="header-section-number">1.5.1</span> Main Resources</h3>
+<ul>
+<li><strong>Textbook Website:</strong> <a href="https://gabors-data-analysis.com">gabors-data-analysis.com</a></li>
+<li><strong>Code Repository:</strong> <a href="https://github.com/gabors-data-analysis/da_case_studies">GitHub</a></li>
+<li><strong>Data Repository:</strong> <a href="https://osf.io/4vt9a/">OSF</a></li>
+<li><strong>Dashboards:</strong> <a href="https://dashboards.gabors-data-analysis.com">dashboards.gabors-data-analysis.com</a> <em>(coming soon)</em></li>
+</ul>
+<h3 data-number="1.5.2" id="learning-tools" class="anchored"><span class="header-section-number">1.5.2</span> Learning Tools</h3>
+<ul>
+<li><strong>R Codebooks:</strong> Step-by-step R code for all case studies</li>
+<li><strong>Python Codebooks:</strong> Python versions of all analyses</li>
+<li><strong>Stata Codebooks:</strong> Stata code for regression-focused analyses</li>
+<li><strong>Datasets:</strong> All data cleaned and ready to use</li>
+</ul>
+<hr>
+<h2 data-number="1.6" id="about-the-authors" class="anchored"><span class="header-section-number">1.6</span> 👥 About the Authors</h2>
+<p><strong>Gábor Békés</strong> is Professor of Economics and Data Science at Central European University. His research focuses on firm dynamics, international trade, and data analysis methods.</p>
+<p><strong>Gábor Kézdi</strong> (1967-2021) was Professor of Economics at the University of Michigan. He made fundamental contributions to econometrics, labor economics, and education policy.</p>
+<hr>
+<h2 data-number="1.7" id="current-status" class="anchored"><span class="header-section-number">1.7</span> 📊 Current Status</h2>
+<div class="status-grid">
+<p><strong>PART I</strong><br>
+0 / 6 chapters<br>
+<em>In development</em></p>
+<p><strong>PART II</strong><br>
+1 / 6 chapters ✅<br>
+<em>Ch10 live, others coming</em></p>
+<p><strong>PART III</strong><br>
+0 / 6 chapters<br>
+<em>Planned</em></p>
+<p><strong>PART IV</strong><br>
+0 / 6 chapters<br>
+<em>Planned</em></p>
+</div>
+<hr>
+<h2 data-number="1.8" id="development-roadmap" class="anchored"><span class="header-section-number">1.8</span> 🎯 Development Roadmap</h2>
+<h3 data-number="1.8.1" id="phase-1-core-regression-chapters-current" class="anchored"><span class="header-section-number">1.8.1</span> Phase 1: Core Regression Chapters (Current)</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Chapter 10: Multiple Linear Regression ✅</label></li>
+<li><label><input type="checkbox">Chapter 7: Simple Regression</label></li>
+<li><label><input type="checkbox">Chapter 9: Generalizing Regression Results</label></li>
+</ul>
+<h3 data-number="1.8.2" id="phase-2-expand-coverage" class="anchored"><span class="header-section-number">1.8.2</span> Phase 2: Expand Coverage</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Complete Part I (Data Exploration)</label></li>
+<li><label><input type="checkbox">Complete Part II (Regression Analysis)</label></li>
+</ul>
+<h3 data-number="1.8.3" id="phase-3-advanced-topics" class="anchored"><span class="header-section-number">1.8.3</span> Phase 3: Advanced Topics</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Part III (Prediction/Machine Learning)</label></li>
+<li><label><input type="checkbox">Part IV (Causal Analysis)</label></li>
+</ul>
+<h3 data-number="1.8.4" id="phase-4-enhanced-features" class="anchored"><span class="header-section-number">1.8.4</span> Phase 4: Enhanced Features</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Interactive dashboards</label></li>
+<li><label><input type="checkbox">Progress tracking</label></li>
+<li><label><input type="checkbox">Quizzes and assessments</label></li>
+<li><label><input type="checkbox">Video supplements</label></li>
+</ul>
+<hr>
+<h2 data-number="1.9" id="feedback-contact" class="anchored"><span class="header-section-number">1.9</span> 📧 Feedback &amp; Contact</h2>
+<p>We welcome your feedback on this interactive edition!</p>
+<ul>
+<li><strong>Report issues:</strong> Use the GitHub repository</li>
+<li><strong>Suggest improvements:</strong> Contact via the main website</li>
+<li><strong>Ask questions:</strong> Check the Q&amp;A section</li>
+</ul>
+<hr>
+<h2 data-number="1.10" id="license-citation" class="anchored"><span class="header-section-number">1.10</span> 📜 License &amp; Citation</h2>
+<p><strong>Copyright:</strong> © 2025 Gábor Békés &amp; Gábor Kézdi</p>
+<p><strong>Citation:</strong></p>
+<pre><code>Békés, G., &amp; Kézdi, G. (2021). Data Analysis for Business, Economics, 
+and Policy. Cambridge University Press.</code></pre>
+<p><strong>Interactive Edition:</strong></p>
+<pre><code>Békés, G., &amp; Kézdi, G. (2025). Data Analysis for Business, Economics, 
+and Policy: Interactive HTML Edition. https://your-url-here.com</code></pre>
+<hr>
+<section id="ready-to-learn" class="cta-box" data-number="1.11">
+<h2 data-number="1.11" class="anchored"><span class="header-section-number">1.11</span> Ready to Learn?</h2>
+<p><strong><a href="chapters/ch10/index.html">Start with Chapter 10: Multiple Linear Regression →</a></strong></p>
+<p>The first complete chapter is live and ready to explore!</p>
+</section>
+<hr>
+<div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #F7F3E9; border-radius: 8px;">
+<p><strong>Built with</strong> <a href="https://quarto.org">Quarto</a> | <strong>Styled with</strong> Wes Anderson colors<br>
+<strong>Last updated:</strong> October 2025</p>
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+
+
+
+
+</body></html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Chapter 10 – Contents</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<style>
+:root{
+  --bg:#ffffff; --fg:#111; --muted:#555; --border:#e6e6e6; --accent:#1f6feb; --toc-bg:#f8f9fb;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;color:var(--fg);background:var(--bg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{display:grid;grid-template-columns:280px 1fr;gap:24px;max-width:1400px;margin:0 auto;padding:0 16px}
+header.site{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--border);z-index:10}
+header .inner{display:flex;align-items:center;justify-content:space-between;max-width:1400px;margin:0 auto;padding:12px 16px}
+.brand{font-weight:700}
+.nav-links a{margin-left:12px}
+aside.toc{position:sticky;top:56px;height:calc(100vh - 56px);overflow:auto;background:var(--toc-bg);padding:16px;border-right:1px solid var(--border)}
+aside.toc h2{font-size:14px;margin:0 0 8px 0;text-transform:uppercase;color:var(--muted);letter-spacing:.06em}
+.toc a{display:block;padding:4px 4px;border-radius:6px;color:var(--fg)}
+.toc a.active{background:#eaf2ff}
+main{padding:24px 0;max-width:900px}
+h1{font-size:30px;margin-top:0}
+h2{margin-top:2em}
+figure{margin:1em 0}
+.img-placeholder{width:100%;padding-top:56%;background:#ececec;border:1px dashed #bbb;border-radius:8px;display:block}
+.table{margin:1em 0;overflow:auto}
+table{border-collapse:collapse;width:100%}
+td,th{border:1px solid var(--border);padding:6px 8px;vertical-align:top}
+pre{background:#f6f8fa;border:1px solid var(--border);padding:12px;border-radius:8px;overflow:auto}
+code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+footer.site{border-top:1px solid var(--border);padding:24px 16px;color:var(--muted)}
+.badge{font-size:12px;color:#fff;background:var(--accent);padding:2px 6px;border-radius:999px}
+.boxed{border:2px solid var(--border);padding:12px;border-radius:8px;background:#fffef7;margin:1em 0}
+.reviewbox{border-left:4px solid var(--accent);padding:12px;background:#f0f6ff;margin:1em 0;border-radius:8px}
+.minipage{padding:8px}
+.nav-arrows{display:flex;justify-content:space-between;gap:8px;margin:16px 0}
+.nav-arrows a{padding:8px 10px;border:1px solid var(--border);border-radius:8px;text-decoration:none}
+</style>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['\\[','\\]'], ['$$','$$']] },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <div class="brand">GDA Textbook <span class="badge">Draft</span></div>
+  </div>
+</header>
+<div class="container">
+  <aside class="toc"><h2>On this page</h2><div id="toc"></div></aside>
+  <main>
+    <h1>Chapter 10 – Contents</h1>
+    <ol>
+      <li><a href="00-preface.html">Preface</a></li><li><a href="02-multiple-regression-why-and-when.html">Multiple regression: why and when?</a></li><li><a href="03-multiple-linear-regression-with-two-explanatory-variables.html">Multiple linear regression with two explanatory variables</a></li><li><a href="04-multiple-regression-and-simple-regression-omitted-variable-bias.html">Multiple regression and simple regression: Omitted variable bias</a></li><li><a href="05-a1-case-study----understanding-the-gender-difference-in-earnings.html">A1 Case Study -- Understanding the gender difference in earnings</a></li><li><a href="06-multiple-linear-regression-terminology.html">Multiple linear regression terminology</a></li><li><a href="07-standard-errors-and-confidence-intervals-in-multiple-linear-regression.html">Standard errors and confidence intervals in multiple linear regression</a></li><li><a href="08-hypothesis-testing-in-multiple-linear-regression.html">Hypothesis testing in multiple linear regression</a></li><li><a href="09-a2-case-study----understanding-the-gender-difference-in-earnings.html">A2 Case Study -- Understanding the gender difference in earnings</a></li><li><a href="10-multiple-linear-regression-with-three-or-more-explanatory-variables.html">Multiple linear regression with three or more explanatory variables</a></li><li><a href="11-nonlinear-patterns-and-multiple-linear-regression.html">Nonlinear patterns and multiple linear regression</a></li><li><a href="12-a3-case-study----understanding-the-gender-difference-in-earnings.html">A3 Case Study -- Understanding the gender difference in earnings</a></li><li><a href="13-qualitative-right-hand-side-variables.html">Qualitative right-hand-side variables</a></li><li><a href="14-a4-case-study----understanding-the-gender-difference-in-earnings.html">A4 Case Study -- Understanding the gender difference in earnings</a></li><li><a href="15-interactions-uncovering-different-slopes-across-groups.html">Interactions: Uncovering different slopes across groups</a></li><li><a href="16-a5-case-study----understanding-the-gender-difference-in-earnings.html">A5 Case Study -- Understanding the gender difference in earnings</a></li><li><a href="17-multiple-regression-and-causal-analysis.html">Multiple regression and causal analysis</a></li><li><a href="18-a6-case-study----understanding-the-gender-difference-in-earnings.html">A6 Case Study -- Understanding the gender difference in earnings</a></li><li><a href="19-multiple-regression-and-prediction.html">Multiple regression and prediction</a></li><li><a href="20-b1-case-study----finding-a-good-deal-among-hotels-with-multiple-regression.html">B1 Case Study -- Finding a good deal among hotels with multiple regression</a></li><li><a href="21-summary-and-practice.html">Summary and practice</a></li><li><a href="22-under-the-hood-a-two-step-procedure-to-get-the-multiple-regression-coefficient.html">Under the hood: A two-step procedure to get the multiple regression coefficient</a></li><li><a href="23-references-and-further-reading.html">References and further reading</a></li>
+    </ol>
+  </main>
+</div>
+<footer class="site"><div style="max-width:1400px;margin:0 auto;">© Gábor Békés.</div></footer>
+<script>
+(function(){
+  const toc = document.querySelector('#toc');
+  if (!toc) return;
+  const headers = document.querySelectorAll('main h1, main h2, main h3, main h4');
+  headers.forEach(h => {
+    if (!h.id) { h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-'); }
+    const a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    a.style.marginLeft = (parseInt(h.tagName.substring(1))-1) * 10 + 'px';
+    toc.appendChild(a);
+  });
+  const links = toc.querySelectorAll('a');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href')==='#'+e.target.id));
+      }
+    });
+  }, {rootMargin: '-40% 0px -55% 0px', threshold: 0.01});
+  document.querySelectorAll('main h1, main h2, main h3').forEach(h => obs.observe(h));
+})();
+</script>
+</body>
+</html>
