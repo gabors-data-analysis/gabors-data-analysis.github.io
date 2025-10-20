@@ -1,6 +1,7 @@
 ---
 permalink: /languages/
 title: "About coding languages"
+classes: wide
 author_profile: false
 redirect_from:
   - "/nmpp/"
@@ -14,19 +15,19 @@ This textbook is coding language neutral. This means, that the book does not inc
 ## Stata
 Social scientists, especially economists like Stata for its power and sophisticated econometrics capabilities. It has a great interface, it is very easy to start doing analysis. It has a click and point user interface, too.  
 [Learn more about  Stata](https://www.stata.com/why-use-stata/)   
-[How to set up for Stata?](/howto-stata/)
+[How to set up for Stata?](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-stata.md)
 
 ## R
 Social scientists, data scienctists, statisticans like R for its great mix of data managament,  statitical, and   vizualization capacities. It has a large array of machine learning or natural language processing tools, it is great for web scraping or creating dashboards. It has a neatly assembled set of libraries, called Tidyverse, which helps learning elementary tools fast. R is free an open source. 
 [Learn more about  R](https://www.r-project.org/about.html)   
-[How to set up for R?](/howto-r/)
+[How to set up for R?](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-r.md)
 
 
 ## Python
 Python is the number one coding language for computer scientists and is widely used in data science applications from banking and finance to Industry of Things. Python is great for web scraping, building and maintaing databases, or all tasks of machine learning. Python is free an open source.  
 We show code in python notebooks.   
 [Learn more about  Python](https://www.python.org/about/)  
-[How to set up for Python?](/howto-python/)
+[How to set up for Python?](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-python.md)
 
 ## R vs Python vs Stata - which coding language to use?
 Super hard question. AcademicTwitter and EconTwitter is full of discussions and burns on all sides. We have no preference either (hence the provision of codes in all three languages).

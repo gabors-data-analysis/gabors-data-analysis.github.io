@@ -22,9 +22,11 @@ name                     : "Gabors Data Analysis"
 description              : "A comprehensive textbook on data analysis for business, applied economics and public policy students, that uses case studies with real-world data."
 port                     : 4000
 host                     : "0.0.0.0"
+
 url                      :  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  :  # the subpath of your site, e.g. "/blog"
 repository               : "gabors-data-analysis"
+
 teaser                   : "images/cover-small.jpg"
 logo                     : "images/cover-small.jpg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -95,33 +97,26 @@ analytics:
 
 # Site Author
 author:
-  name             : "Gábor Békés and Gábor Kézdi"
-  avatar           : "images/cover-small.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "CEU and U Michigan"
-  #location         : "Vienna and Ann Arbor"
-  email            :
+  name   : "Gábor Békés and Gábor Kézdi"
+  avatar : "images/cover-small.jpg"   # path of avatar image
+  bio    : "CEU and U Michigan"
   links:
-    - label: "bekesg@ceu.edu"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    #- label: "Website"
-    #  icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/Gabors_Data"
-    - label: "GaborBekes"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/GaborBekes"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/gaborsdata/"
     - label: "Github"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/orgs/gabors-data-analysis/"
-    #- label: "Instagram"
-     # icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    - label: "@Gabors_Data"
+      icon: "fab fa-fw fa-x-twitter"   # Twitter/X new icon in FA 6, fallback: fa-twitter
+      url: "https://twitter.com/Gabors_Data"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      url: "https://www.facebook.com/gaborsdata/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:bekesg@ceu.edu"
+    - label: "GaborBekes"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/GaborBekes"
+
 
 # Site Footer
 footer:
@@ -206,6 +201,16 @@ collections:
   content:
     output: true
     permalink: /:collection/:path/
+
+# defaults:
+#   - scope:
+#       path: ""
+#       type: pages
+#     values:
+#       layout: single
+#       author_profile: true
+#       sidebar:
+#         nav: "sidebar"
 
 # Defaults
 defaults:

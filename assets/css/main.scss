@@ -81,3 +81,26 @@
 .chapter-card:nth-child(n+19):nth-child(-n+24) {
   border-left: 5px solid #ffcf20; /* Viridis yellow */
 }
+
+figcaption {
+  font-size: 1rem;           /* same as body */
+  font-style: normal;        /* remove italics */
+  color: inherit;            /* use body color */
+  font-family: inherit;      /* match body font */
+  text-align: center;        /* optional: center under images */
+}
+
+
+/* Font size overrides */
+body {
+  font-size: 0.95rem;   /* default is ~1rem (16px), so this is ~14px */
+}
+
+/* Make book cover larger in sidebar (home page only) */
+.home-cover .author__avatar img {
+  max-width: 120px;   /* adjust size */
+  width: 100%;
+  height: auto;
+  border-radius: 0;   /* keep rectangular cover */
+  box-shadow: none;   /* remove avatar shadow */
+}

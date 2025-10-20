@@ -1,98 +1,101 @@
 # main links links
 main:
+  - title: "Chapters"
+    url: /chapters/
+
   - title: "Case Studies"
     url: /casestudies/
 
   - title: "Data and Code"
     url: /data-and-code/
 
-  - title: "Chapters"
-    url: /chapters/
+  - title: "Students"
+    url: /students/
 
-  - title: "Why this book?"
-    url: /whythisbook/
+  - title: "Instructors"
+    url: /instructors/
 
-  - title: "Teaching"
-    url: /resources/
+  # - title: "Why this book?"
+  #   url: /whythisbook/
 
-  - title: "Blog"
-    url: /blog/
+  # - title: "Blog"
+  #   url: /blog/
 
-sidebar:
-  - title: About
-    url: /
-    children:
-      - title: Authors
-        url: /authors/
-      - title: "Endorsements"
-        url: /endorsements
-      - title: "Why this book?"
-        url: /whythisbook/
-      - title: "Order the book"
-        url: /preorder
-      - title: "Contact us"
-        url: /contact-us
-      - title: "Our thanks"
-        url: /our-thanks
-      - title: "Errors we made"
-        url: /errata
+# sidebar:
+#   - title: About
+#     url: /
+#     children:
+#       - title: Authors
+#         url: /authors/
+#       - title: "Endorsements"
+#         url: /endorsements
+#       - title: "Why this book?"
+#         url: /whythisbook/
+#       - title: "Order the book"
+#         url: /preorder
+#       - title: "Contact us"
+#         url: /contact-us
+#       - title: "Our thanks"
+#         url: /our-thanks
+#       - title: "Errors we made"
+#         url: /errata
 
-  - title: Teaching guide
-    url: /
-    children:     
-      - title: "Teaching guide"
-        url: /teaching-guide/
-      - title: "Sample Chapters"
-        url: https://www.book2look.com/vbook.aspx?id=9781108483018
-      - title: "Instructor FAQ"
-        url: /instructor-faq/
+#   - title: Teaching guide
+#     url: /
+#     children:     
+#       - title: "Teaching guide"
+#         url: /teaching-guide/
+#       - title: "Sample Chapters"
+#         url: https://www.book2look.com/vbook.aspx?id=9781108483018
+#       - title: "Instructor FAQ"
+#         url: /instructor-faq/
     
-  - title: Data and code
-    url: /data-and-code/
-    children:
-      - title: "How get data, code"
-        url: /data-and-code/
-      - title: "Datasets used"
-        url: /datasets
-      - title: "Link to code"
-        url: https://github.com/gabors-data-analysis/da_case_studies
-      - title: "Link to data"
-        url: https://osf.io/7epdj/
+#   - title: Data and code
+#     url: /data-and-code/
+#     children:
+#       - title: "How get data, code"
+#         url: /data-and-code/
+#       - title: "Datasets used"
+#         url: /datasets
+#       - title: "Link to code"
+#         url: https://github.com/gabors-data-analysis/da_case_studies
+#       - title: "Link to data"
+#         url: https://osf.io/7epdj/
       
 
-  - title: Chapters
-    url: /chapters/
-    children:
-      - title: "Part I"
-        url: /chapters/part-I
-      - title: "Part II"
-        url: /chapters/part-II
-      - title: "Part III"
-        url: /chapters/part-III
-      - title: "Part IV"
-        url: /chapters/part-IV
+  # - title: Chapters
+  #   url: /chapters/
+  #   children:
+  #     - title: "Part I"
+  #       url: /chapters/part-I
+  #     - title: "Part II"
+  #       url: /chapters/part-II
+  #     - title: "Part III"
+  #       url: /chapters/part-III
+  #     - title: "Part IV"
+  #       url: /chapters/part-IV
 
-  - title: Case studies
-    url: /casestudies/
-    children:
-      - title: "Part I"
-        url: /casestudies/part-I
-      - title: "Part II"
-        url: /casestudies/part-II
-      - title: "Part III"
-        url: /casestudies/part-III
-      - title: "Part IV"
-        url: /casestudies/part-IV
+  # - title: Case studies
+  #   url: /casestudies/
+  #   children:
+  #     - title: "Part I"
+  #       url: /casestudies/part-I
+  #     - title: "Part II"
+  #       url: /casestudies/part-II
+  #     - title: "Part III"
+  #       url: /casestudies/part-III
+  #     - title: "Part IV"
+  #       url: /casestudies/part-IV
 
-  - title: Blog 
-    url: /blog
+  # - title: Blog 
+  #   url: /blog
 
-  - title: Setup
-    url: /data-and-code/
-    children:
-    - title: "Setup with R"
-      url: /howto-r/
-    - title: "Setup with Stata"
-      url: /howto-stata/
-    - title: "Setup with Python"
-      url: /howto-python/
+  # - title: Setup
+  #   url: /data-and-code/
+  #   children:
+  #   - title: "Setup with R"
+  #     url: /howto-r/
+  #   - title: "Setup with Stata"
+  #     url: /howto-stata/
+  #   - title: "Setup with Python"
+  #     url: /howto-python/
