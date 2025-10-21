@@ -20,6 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
 /* CSS for syntax highlighting */
 html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
@@ -58,47 +59,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="02-inference_files/libs/clipboard/clipboard.min.js"></script>
-<script src="02-inference_files/libs/quarto-html/tabby.min.js"></script>
-<script src="02-inference_files/libs/quarto-html/popper.min.js"></script>
-<script src="02-inference_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="02-inference_files/libs/quarto-html/anchor.min.js"></script>
-<link href="02-inference_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="02-inference_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="02-inference_files/libs/quarto-html/quarto-html-435ba6093e6f0817aa7405139811e7b1.min.css" rel="stylesheet" append-hash="true" data-mode="light">
-<link href="02-inference_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="02-inference0_files/libs/clipboard/clipboard.min.js"></script>
+<script src="02-inference0_files/libs/quarto-html/tabby.min.js"></script>
+<script src="02-inference0_files/libs/quarto-html/popper.min.js"></script>
+<script src="02-inference0_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="02-inference0_files/libs/quarto-html/anchor.min.js"></script>
+<link href="02-inference0_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="02-inference0_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="02-inference0_files/libs/quarto-html/quarto-html-435ba6093e6f0817aa7405139811e7b1.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="02-inference0_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../../assets/styles.css">
+<link rel="stylesheet" href="../../_assets/styles.css">
 </head>
 
 <body>
@@ -127,14 +99,6 @@ window.Quarto = {
   </ul>
 </nav>
 <!-- 
-File: 02-inference.qmd
-Version: 2.0 - CORRECTED
-Created: 2025-10-20
-Iterations: 2
-Model: Claude Sonnet 4.5 (2025-10-20)
-Notes: Fixed CSS path and added MathJax
--->
-<!-- 
 File: 02-terminology-inference.qmd
 Version: 1.0
 Created: 2025-10-20
@@ -149,15 +113,15 @@ Notes: Sections 10.4-10.7 from original LaTeX
 <h1 class="chapter-title" data-number="1" id="sections-10.4-10.7-terminology-inference-extensions"><span class="header-section-number">1</span> Sections 10.4-10.7: Terminology, Inference &amp; Extensions</h1>
 <hr>
 <h2 data-number="1.1" id="sec-10-4" class="anchored"><span class="header-section-number">1.1</span> 10.4 Multiple linear regression terminology</h2>
-<p>Multiple regression with two explanatory variables (<span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span>) allows for assessing the differences in expected <span class="math inline">\(y\)</span> across observations that differ in <span class="math inline">\(x_1\)</span> but are similar in terms of <span class="math inline">\(x_2\)</span>. This difference is called <strong>conditional</strong> on that other explanatory variable <span class="math inline">\(x_2\)</span>: difference in <span class="math inline">\(y\)</span> by <span class="math inline">\(x_1\)</span>, conditional on <span class="math inline">\(x_2\)</span>. It is also called the controlled difference: difference in <span class="math inline">\(y\)</span> by <span class="math inline">\(x_1\)</span>, controlling for <span class="math inline">\(x_2\)</span>. We often say that we condition on <span class="math inline">\(x_2\)</span>, or control for <span class="math inline">\(x_2\)</span>, when we include it in a multiple regression that focuses on average differences in <span class="math inline">\(y\)</span> by <span class="math inline">\(x_1\)</span>. When we focus on <span class="math inline">\(x_1\)</span> in the multiple regression, the other right-hand-side variable, <span class="math inline">\(x_2\)</span>, is called a <strong>covariate</strong>. In some cases, it is also called a <strong>confounder</strong>: if omitting <span class="math inline">\(x_2\)</span> makes the slope on <span class="math inline">\(x_1\)</span> different, it is said to confound the association of <span class="math inline">\(y\)</span> and <span class="math inline">\(x_1\)</span> (we’ll discuss confounders in Chapter 19, Section 19.3).</p>
+<p>Multiple regression with two explanatory variables (<span class="math inline"><em>x</em><sub>1</sub></span> and <span class="math inline"><em>x</em><sub>2</sub></span>) allows for assessing the differences in expected <span class="math inline"><em>y</em></span> across observations that differ in <span class="math inline"><em>x</em><sub>1</sub></span> but are similar in terms of <span class="math inline"><em>x</em><sub>2</sub></span>. This difference is called <strong>conditional</strong> on that other explanatory variable <span class="math inline"><em>x</em><sub>2</sub></span>: difference in <span class="math inline"><em>y</em></span> by <span class="math inline"><em>x</em><sub>1</sub></span>, conditional on <span class="math inline"><em>x</em><sub>2</sub></span>. It is also called the controlled difference: difference in <span class="math inline"><em>y</em></span> by <span class="math inline"><em>x</em><sub>1</sub></span>, controlling for <span class="math inline"><em>x</em><sub>2</sub></span>. We often say that we condition on <span class="math inline"><em>x</em><sub>2</sub></span>, or control for <span class="math inline"><em>x</em><sub>2</sub></span>, when we include it in a multiple regression that focuses on average differences in <span class="math inline"><em>y</em></span> by <span class="math inline"><em>x</em><sub>1</sub></span>. When we focus on <span class="math inline"><em>x</em><sub>1</sub></span> in the multiple regression, the other right-hand-side variable, <span class="math inline"><em>x</em><sub>2</sub></span>, is called a <strong>covariate</strong>. In some cases, it is also called a <strong>confounder</strong>: if omitting <span class="math inline"><em>x</em><sub>2</sub></span> makes the slope on <span class="math inline"><em>x</em><sub>1</sub></span> different, it is said to confound the association of <span class="math inline"><em>y</em></span> and <span class="math inline"><em>x</em><sub>1</sub></span> (we’ll discuss confounders in Chapter 19, Section 19.3).</p>
 <div class="review-box">
 <div class="review-box-title">
 Multiple Linear Regression Terminology
 </div>
 <ul>
-<li>In a regression <span class="math inline">\(y^E = \beta_0 + \beta_1 x_1 + \beta_2 x_2\)</span> that focuses on <span class="math inline">\(\beta_1\)</span>,</li>
-<li>If we estimate a multiple regression <span class="math inline">\(y^E = \beta_0 + \beta_1 x_1 + \beta_2 x_2\)</span>, and we are interested in <span class="math inline">\(\beta_1\)</span>, <span class="math inline">\(x_2\)</span> is a covariate, and we say that we condition on <span class="math inline">\(x_2\)</span> or control for <span class="math inline">\(x_2\)</span>.</li>
-<li>If, instead, we estimate <span class="math inline">\(y^E = \alpha + \beta x_1\)</span> we say <span class="math inline">\(x_2\)</span> is an omitted variable or a confounder.</li>
+<li>In a regression <span class="math inline"><em>y</em><sup><em>E</em></sup> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub><em>x</em><sub>1</sub> + <em>β</em><sub>2</sub><em>x</em><sub>2</sub></span> that focuses on <span class="math inline"><em>β</em><sub>1</sub></span>,</li>
+<li>If we estimate a multiple regression <span class="math inline"><em>y</em><sup><em>E</em></sup> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub><em>x</em><sub>1</sub> + <em>β</em><sub>2</sub><em>x</em><sub>2</sub></span>, and we are interested in <span class="math inline"><em>β</em><sub>1</sub></span>, <span class="math inline"><em>x</em><sub>2</sub></span> is a covariate, and we say that we condition on <span class="math inline"><em>x</em><sub>2</sub></span> or control for <span class="math inline"><em>x</em><sub>2</sub></span>.</li>
+<li>If, instead, we estimate <span class="math inline"><em>y</em><sup><em>E</em></sup> = <em>α</em> + <em>β</em><em>x</em><sub>1</sub></span> we say <span class="math inline"><em>x</em><sub>2</sub></span> is an omitted variable or a confounder.</li>
 </ul>
 </div>
 <div class="ai-task">
@@ -167,16 +131,16 @@ Multiple Linear Regression Terminology
 </div>
 <hr>
 <h2 data-number="1.2" id="sec-10-5" class="anchored"><span class="header-section-number">1.2</span> 10.5 Standard errors and confidence intervals in multiple linear regression</h2>
-<p>The concept of statistical inference and the interpretation of confidence intervals in multiple regressions is similar to that in simple regressions. For example, the 95% confidence interval of slope of <span class="math inline">\(x_1\)</span> in a multiple linear regression that conditions on another explanatory variable <span class="math inline">\(x_2\)</span> (CI of <span class="math inline">\(\beta_1\)</span> in <span class="math inline">\(y^E= \beta_0+\beta_1 x_1+\beta_2 x_2\)</span>) shows where we can expect the coefficient in the population, or general pattern, represented by the data.</p>
+<p>The concept of statistical inference and the interpretation of confidence intervals in multiple regressions is similar to that in simple regressions. For example, the 95% confidence interval of slope of <span class="math inline"><em>x</em><sub>1</sub></span> in a multiple linear regression that conditions on another explanatory variable <span class="math inline"><em>x</em><sub>2</sub></span> (CI of <span class="math inline"><em>β</em><sub>1</sub></span> in <span class="math inline"><em>y</em><sup><em>E</em></sup> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub><em>x</em><sub>1</sub> + <em>β</em><sub>2</sub><em>x</em><sub>2</sub></span>) shows where we can expect the coefficient in the population, or general pattern, represented by the data.</p>
 <p>Similarly to the coefficients in the simple regression, the 95% CI of a slope in a multiple regression is the coefficient value estimated from the data plus-or-minus two standard errors. Again similarly to the simple regression case, we can get the standard error either by bootstrap or using an appropriate formula. And, as usual, the simple SE formula is not a good approximation in general: it assumes homoskedasticity (same fit of the regression over the range of the explanatory variables). There is a robust SE formula for multiple regression, too, that works in general, both under homoskedasticity and heteroskedasticity. Thus, just as with simple regressions we advise you to make the software calculate <strong>robust SE</strong> as default.</p>
-<p>While not correct in general, the simple formula is good to examine because it shows what makes the SE larger in a simpler more intuitive way than the robust formula. The simple SE formula for the slope <span class="math inline">\(\hat{\beta}_{1}\)</span> is</p>
-<p><span class="math display">\[
+<p>While not correct in general, the simple formula is good to examine because it shows what makes the SE larger in a simpler more intuitive way than the robust formula. The simple SE formula for the slope <span class="math inline"><em>β̂</em><sub>1</sub></span> is</p>
+<p><span class="math display">$$
 SE(\hat{\beta}_{1}) = \frac{Std[e]}{\sqrt{n}Std(x_1) \sqrt{1-R_{1}^2}}
-\]</span></p>
-<p>Similarly to the simple SE formula for the simple linear regression in Chapter 9, Section 9.3, this formula has <span class="math inline">\(\sqrt{n}\)</span> in its denominator. But, similarly again to the simple linear regression, the correct number to divide with would be slightly different: the degrees of freedom instead of the number of the observations (see Chapter 9, Section 9.3.3). Here that would be <span class="math inline">\(\sqrt{n-k-1}\)</span> where <span class="math inline">\(k\)</span> is the number of right-hand-side variables in the regression. Similarly to the simple regression, this makes little practical difference in most cases. However, in contrast with the simple regression case, it may make a difference not only when we have too few observations, but also when we have many right-hand-side variables relative to the number of observations. We’ll ignore that issue for most of this textbook, but it will come back sometimes, as, for example, in Chapter 21, Section 21.3.</p>
-<p>This formula is very similar to what we have for simple regressions in other details, too, except for that new <span class="math inline">\(\sqrt{1-R_{1}^2}\)</span> term in the denominator. <span class="math inline">\(R_{1}^2\)</span> is the R-squared of the regression of <span class="math inline">\(x_1\)</span> on <span class="math inline">\(x_2\)</span>. Recall that the R-squared of a simple regression is the square of the correlation between the two variables in the regression. Thus, <span class="math inline">\(R_{1}^2\)</span> is the correlation between <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span>. The stronger this correlation, the larger <span class="math inline">\(R_{1}^2\)</span>, the smaller <span class="math inline">\(\sqrt{1-R_{1}^2}\)</span>, but then the larger <span class="math inline">\(1/\sqrt{1-R_{1}^2}\)</span> (<span class="math inline">\(\sqrt{1-R_{1}^2}\)</span> is in the denominator). So, the stronger the correlation between <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span>, the larger the SE of <span class="math inline">\(\hat{\beta}_{1}\)</span>. Note the symmetry: the same would apply to the SE of <span class="math inline">\(\hat{\beta}_{2}\)</span>. As for the familiar terms in the formula: the SE is smaller, the smaller the standard deviation of the residuals (the better the fit of the regression), the larger the sample, and the larger the standard deviation of <span class="math inline">\(x_{1}\)</span>.</p>
-<p>At the polar case of a correlation of one (or negative one) that corresponds to <span class="math inline">\(R^2_1 = 1\)</span>, the SE of the two coefficients does not exist. A correlation of one means that <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> are linear functions of each other. It is not only the SE formulae that cannot be computed in this case; the regression coefficients cannot be computed either. In this case the explanatory variables are said to be <strong>perfectly collinear</strong>.</p>
-<p>Strong but imperfect correlation between explanatory variables is called <strong>multicollinearity</strong>. It allows for calculating the slope coefficients and their standard errors, but the standard errors may be large. Intuitively, this is because we would like to compare observations that are different in one of the variables but similar in the other. But strong correlation between the two implies that there are not many observations that are the same in one variable but different in the other variable. Therefore, there are just not enough valid observations for comparing average <span class="math inline">\(y\)</span> across them. Indeed, the problem of multicollinearity is very similar to the problem of having too few observations in general. We can see it in the formula as well: the role of <span class="math inline">\((1-R^2)\)</span> and <span class="math inline">\(n\)</span> are the same.</p>
+$$</span></p>
+<p>Similarly to the simple SE formula for the simple linear regression in Chapter 9, Section 9.3, this formula has <span class="math inline">$\sqrt{n}$</span> in its denominator. But, similarly again to the simple linear regression, the correct number to divide with would be slightly different: the degrees of freedom instead of the number of the observations (see Chapter 9, Section 9.3.3). Here that would be <span class="math inline">$\sqrt{n-k-1}$</span> where <span class="math inline"><em>k</em></span> is the number of right-hand-side variables in the regression. Similarly to the simple regression, this makes little practical difference in most cases. However, in contrast with the simple regression case, it may make a difference not only when we have too few observations, but also when we have many right-hand-side variables relative to the number of observations. We’ll ignore that issue for most of this textbook, but it will come back sometimes, as, for example, in Chapter 21, Section 21.3.</p>
+<p>This formula is very similar to what we have for simple regressions in other details, too, except for that new <span class="math inline">$\sqrt{1-R_{1}^2}$</span> term in the denominator. <span class="math inline"><em>R</em><sub>1</sub><sup>2</sup></span> is the R-squared of the regression of <span class="math inline"><em>x</em><sub>1</sub></span> on <span class="math inline"><em>x</em><sub>2</sub></span>. Recall that the R-squared of a simple regression is the square of the correlation between the two variables in the regression. Thus, <span class="math inline"><em>R</em><sub>1</sub><sup>2</sup></span> is the correlation between <span class="math inline"><em>x</em><sub>1</sub></span> and <span class="math inline"><em>x</em><sub>2</sub></span>. The stronger this correlation, the larger <span class="math inline"><em>R</em><sub>1</sub><sup>2</sup></span>, the smaller <span class="math inline">$\sqrt{1-R_{1}^2}$</span>, but then the larger <span class="math inline">$1/\sqrt{1-R_{1}^2}$</span> (<span class="math inline">$\sqrt{1-R_{1}^2}$</span> is in the denominator). So, the stronger the correlation between <span class="math inline"><em>x</em><sub>1</sub></span> and <span class="math inline"><em>x</em><sub>2</sub></span>, the larger the SE of <span class="math inline"><em>β̂</em><sub>1</sub></span>. Note the symmetry: the same would apply to the SE of <span class="math inline"><em>β̂</em><sub>2</sub></span>. As for the familiar terms in the formula: the SE is smaller, the smaller the standard deviation of the residuals (the better the fit of the regression), the larger the sample, and the larger the standard deviation of <span class="math inline"><em>x</em><sub>1</sub></span>.</p>
+<p>At the polar case of a correlation of one (or negative one) that corresponds to <span class="math inline"><em>R</em><sub>1</sub><sup>2</sup> = 1</span>, the SE of the two coefficients does not exist. A correlation of one means that <span class="math inline"><em>x</em><sub>1</sub></span> and <span class="math inline"><em>x</em><sub>2</sub></span> are linear functions of each other. It is not only the SE formulae that cannot be computed in this case; the regression coefficients cannot be computed either. In this case the explanatory variables are said to be <strong>perfectly collinear</strong>.</p>
+<p>Strong but imperfect correlation between explanatory variables is called <strong>multicollinearity</strong>. It allows for calculating the slope coefficients and their standard errors, but the standard errors may be large. Intuitively, this is because we would like to compare observations that are different in one of the variables but similar in the other. But strong correlation between the two implies that there are not many observations that are the same in one variable but different in the other variable. Therefore, there are just not enough valid observations for comparing average <span class="math inline"><em>y</em></span> across them. Indeed, the problem of multicollinearity is very similar to the problem of having too few observations in general. We can see it in the formula as well: the role of <span class="math inline">(1 − <em>R</em><sup>2</sup>)</span> and <span class="math inline"><em>n</em></span> are the same.</p>
 <p>Consider our example of estimating how sales of the main product of our company tend to change when our price changes but the prices of competitors do not. In that example our own price and the competitors’ prices tended to move together. That’s multicollinearity. One consequence of this is that omitting the change in the competitors’ price would lead to omitted variable bias; thus we need to include that in our regression. But here we see that multicollinearity has another consequence. Including both price variables in the regression makes the SE of the coefficient of our own price larger, and its confidence interval wider, too. Intuitively, that’s because there are few months when our price changes but the competitors’ prices don’t change, and it is changes in sales in those months that contain the valuable information for estimating the coefficient on our own price. Months when our own and competitors’ prices change the same way don’t help. So the reason why we want competitors’ price in our regression (strong co-movement) is exactly the reason for having imprecise estimates with wide confidence intervals.</p>
 <p>That’s true in general, too. Unfortunately, there is not much we can do about multicollinearity in the data we have, just as there is not much we can do about having too few observations. More data helps both, of course, but that is not much help when we have to work with the data that’s available. Alternatively, we may decide to change the specification of the regression and drop one of the strongly correlated explanatory variables. However, that results in a different regression. Whether we want a different regression or not needs to be evaluated keeping the substantive question of the analysis in mind.</p>
 <div class="review-box">
@@ -184,31 +148,33 @@ SE(\hat{\beta}_{1}) = \frac{Std[e]}{\sqrt{n}Std(x_1) \sqrt{1-R_{1}^2}}
 Inference in Multiple Regression
 </div>
 <ul>
-<li><p>In the linear regression <span class="math inline">\(y^E = \beta_0+\beta_1 x_1+\beta_2 x_2\)</span>, the 95% Confidence Interval (CI) of <span class="math inline">\(\hat{\beta}_{1}\)</span> gives the range in which we can expect, with 95% confidence, the difference in <span class="math inline">\(y\)</span> to fall in the general pattern, or population, that our data represents, when comparing observations with the same <span class="math inline">\(x_2\)</span> but differing in <span class="math inline">\(x_1\)</span> by one unit.</p></li>
-<li><p>The simple SE formula for the slope in multiple regression with two explanatory variables: in the linear regression <span class="math inline">\(y^E = \beta_0+\beta_1 x_1+\beta_2 x_2\)</span>, the simple SE formula of <span class="math inline">\(\hat{\beta}_{1}\)</span> is</p></li>
+<li><p>In the linear regression <span class="math inline"><em>y</em><sup><em>E</em></sup> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub><em>x</em><sub>1</sub> + <em>β</em><sub>2</sub><em>x</em><sub>2</sub></span>, the 95% Confidence Interval (CI) of <span class="math inline"><em>β̂</em><sub>1</sub></span> gives the range in which we can expect, with 95% confidence, the difference in <span class="math inline"><em>y</em></span> to fall in the general pattern, or population, that our data represents, when comparing observations with the same <span class="math inline"><em>x</em><sub>2</sub></span> but differing in <span class="math inline"><em>x</em><sub>1</sub></span> by one unit.</p></li>
+<li><p>The simple SE formula for the slope in multiple regression with two explanatory variables: in the linear regression <span class="math inline"><em>y</em><sup><em>E</em></sup> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub><em>x</em><sub>1</sub> + <em>β</em><sub>2</sub><em>x</em><sub>2</sub></span>, the simple SE formula of <span class="math inline"><em>β̂</em><sub>1</sub></span> is</p></li>
 </ul>
-<p><span class="math display">\[
+<p><span class="math display">$$
 SE(\hat{\beta}_{1})=\frac{Std[e]}{\sqrt{n}Std(x_1) \sqrt{1-R_{1}^2}}
-\]</span></p>
-<p>where <span class="math inline">\(e\)</span> is the residual <span class="math inline">\(e=y - \hat{\beta}_{0}+\hat{\beta}_{1} x_1 + \hat{\beta}_{2} x_2\)</span> and <span class="math inline">\(R_{1}^2\)</span> is the R-squared in the simple linear regression of <span class="math inline">\(x_1\)</span> on <span class="math inline">\(x_2\)</span>.</p>
+$$</span></p>
+<p>where <span class="math inline"><em>e</em></span> is the residual <span class="math inline"><em>e</em> = <em>y</em> − <em>β̂</em><sub>0</sub> + <em>β̂</em><sub>1</sub><em>x</em><sub>1</sub> + <em>β̂</em><sub>2</sub><em>x</em><sub>2</sub></span> and <span class="math inline"><em>R</em><sub>1</sub><sup>2</sup></span> is the R-squared in the simple linear regression of <span class="math inline"><em>x</em><sub>1</sub></span> on <span class="math inline"><em>x</em><sub>2</sub></span>.</p>
 <ul>
 <li>This SE is smaller:
 <ul>
 <li>the smaller the standard deviation of the residual (the better the fit of the regression)</li>
 <li>the larger the sample</li>
-<li>the larger the variance of <span class="math inline">\(x_{1}\)</span></li>
-<li>the smaller the correlation between <span class="math inline">\(x_{1}\)</span> and <span class="math inline">\(x_{2}\)</span> (the smaller <span class="math inline">\(R_{1}^2\)</span>).</li>
+<li>the larger the variance of <span class="math inline"><em>x</em><sub>1</sub></span></li>
+<li>the smaller the correlation between <span class="math inline"><em>x</em><sub>1</sub></span> and <span class="math inline"><em>x</em><sub>2</sub></span> (the smaller <span class="math inline"><em>R</em><sub>1</sub><sup>2</sup></span>).</li>
 </ul></li>
 </ul>
 </div>
 <div class="ai-task">
 <p><span class="ai-task-icon">🤖 AI PRACTICE TASK #6</span></p>
 <p><strong>Prompt:</strong> “I have two potential explanatory variables that are highly correlated (r = 0.95). Should I include both in my regression? Explain the trade-off between omitted variable bias and multicollinearity.”</p>
-<p><a href="https://chatgpt.com/?q=I have two potential explanatory variables that are highly correlated (r = 0.95). Should I include both in my regression? Explain the trade-off between omitted variable bias and multicollinearity." class="ai-task-copy" target="_blank">📋 COPY &amp; OPEN IN CHATGPT</a></p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('I have two potential explanatory variables that are highly correlated (r = 0.95). Should I include both in my regression? Explain the trade-off between omitted variable bias and multicollinearity.'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
 </div>
 <hr>
 <h2 data-number="1.3" id="sec-10-6" class="anchored"><span class="header-section-number">1.3</span> 10.6 Hypothesis testing in multiple linear regression</h2>
-<p>Testing hypotheses about coefficients in a multiple regression is also very similar to that in a simple regression. The standard errors are estimated in a different way but with the appropriate SE, all works just the same. For example, testing whether <span class="math inline">\(H_0: \beta_1 = 0\)</span> against <span class="math inline">\(H_A: \beta_1 \ne 0\)</span>, we need the p-value or the t-statistic. Standard regression output produced by most statistical software shows those statistics. If our level of significance is 0.05, we reject <span class="math inline">\(H_0\)</span> if the p-value is less than 0.05, or – which is the same information in a different form – the t-statistic is less than -2 or greater than +2.</p>
+<p>Testing hypotheses about coefficients in a multiple regression is also very similar to that in a simple regression. The standard errors are estimated in a different way but with the appropriate SE, all works just the same. For example, testing whether <span class="math inline"><em>H</em><sub>0</sub> : <em>β</em><sub>1</sub> = 0</span> against <span class="math inline"><em>H</em><sub><em>A</em></sub> : <em>β</em><sub>1</sub> ≠ 0</span>, we need the p-value or the t-statistic. Standard regression output produced by most statistical software shows those statistics. If our level of significance is 0.05, we reject <span class="math inline"><em>H</em><sub>0</sub></span> if the p-value is less than 0.05, or – which is the same information in a different form – the t-statistic is less than -2 or greater than +2.</p>
 <p>Besides testing a hypothesis that involves a single coefficient, we sometimes test a hypothesis that involves more coefficients. As we explained in Chapter 9, Section 9.4, these come in two forms: a single null hypothesis about two or more coefficients (e.g., if they are equal), or a list of null hypotheses (e.g., that several slope coefficients are zero). The latter is called testing joint hypotheses.</p>
 <p>Testing joint hypotheses are based on a test statistic called the F-statistic, and the related test is called the <strong>F-test</strong>. The underlying logic of hypothesis testing is the same here: reject the null if the test statistic is larger than a critical value, which shows that the estimated coefficients are too far from what’s in the null. The technical details are different. But the meaning of the p-value is the same as always. Thus, we advise getting the p-value when testing a joint hypothesis.</p>
 <p>In fact, the test that asks whether all slope coefficients are zero in the regression has its own name: the <strong>global F-test</strong>, or simply “the” F-test. Its results are often shown by statistical software by default. More frequently, we use joint testing of joint hypotheses to decide whether a subset of the coefficients (such as all geographical variables) are all zero.</p>
@@ -216,15 +182,17 @@ SE(\hat{\beta}_{1})=\frac{Std[e]}{\sqrt{n}Std(x_1) \sqrt{1-R_{1}^2}}
 <div>
 <blockquote>
 <p><strong>Hypothesis Testing in Multiple Regression</strong></p>
-<p><strong>Single Coefficient Tests (t-tests):</strong> - Test <span class="math inline">\(H_0: \beta_j = 0\)</span> vs.&nbsp;<span class="math inline">\(H_A: \beta_j \ne 0\)</span> - Use t-statistic or p-value from regression output - Reject <span class="math inline">\(H_0\)</span> if p-value &lt; 0.05 (or if |t| &gt; 2 as rough guide)</p>
-<p><strong>Joint Hypothesis Tests (F-tests):</strong> - Test whether multiple coefficients are zero simultaneously - Example: <span class="math inline">\(H_0: \beta_1 = \beta_2 = \beta_3 = 0\)</span> - Use F-statistic and its p-value - <strong>Global F-test</strong>: Tests whether ALL slope coefficients are zero</p>
+<p><strong>Single Coefficient Tests (t-tests):</strong> - Test <span class="math inline"><em>H</em><sub>0</sub> : <em>β</em><sub><em>j</em></sub> = 0</span> vs.&nbsp;<span class="math inline"><em>H</em><sub><em>A</em></sub> : <em>β</em><sub><em>j</em></sub> ≠ 0</span> - Use t-statistic or p-value from regression output - Reject <span class="math inline"><em>H</em><sub>0</sub></span> if p-value &lt; 0.05 (or if |t| &gt; 2 as rough guide)</p>
+<p><strong>Joint Hypothesis Tests (F-tests):</strong> - Test whether multiple coefficients are zero simultaneously - Example: <span class="math inline"><em>H</em><sub>0</sub> : <em>β</em><sub>1</sub> = <em>β</em><sub>2</sub> = <em>β</em><sub>3</sub> = 0</span> - Use F-statistic and its p-value - <strong>Global F-test</strong>: Tests whether ALL slope coefficients are zero</p>
 <p><strong>Critical:</strong> Always use robust standard errors for valid inference!</p>
 </blockquote>
 </div>
 <div class="ai-task">
 <p><span class="ai-task-icon">🤖 AI PRACTICE TASK #7</span></p>
 <p><strong>Prompt:</strong> “What’s the difference between testing whether β₁ = 0 and testing whether β₁ = β₂ = β₃ = 0? Why can’t I just do three separate t-tests for the second question?”</p>
-<p><a href="https://chatgpt.com/?q=What's the difference between testing whether beta1 = 0 and testing whether beta1 = beta2 = beta3 = 0? Why can't I just do three separate t-tests for the second question?" class="ai-task-copy" target="_blank">📋 COPY &amp; OPEN IN CHATGPT</a></p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('What is the difference between testing whether β₁ = 0 and testing whether β₁ = β₂ = β₃ = 0? Why cannot I just do three separate t-tests for the second question?'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
 </div>
 <hr>
 <h2 class="case-study anchored" data-number="1.4" id="case-study-a2-understanding-the-gender-difference-in-earnings"><span class="header-section-number">1.4</span> Case Study A2: Understanding the Gender Difference in Earnings</h2>
@@ -243,49 +211,51 @@ CASE STUDY A2: STATISTICAL INFERENCE
 <div class="ai-task">
 <p><span class="ai-task-icon">🤖 AI PRACTICE TASK #8</span></p>
 <p><strong>Prompt:</strong> “If two confidence intervals overlap, does that mean the coefficients are not significantly different? Explain why overlapping CIs are related to but not the same as a formal test of coefficient equality.”</p>
-<p><a href="https://chatgpt.com/?q=If two confidence intervals overlap, does that mean the coefficients are not significantly different? Explain why overlapping CIs are related to but not the same as a formal test of coefficient equality." class="ai-task-copy" target="_blank">📋 COPY &amp; OPEN IN CHATGPT</a></p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('If two confidence intervals overlap, does that mean the coefficients are not significantly different? Explain why overlapping CIs are related to but not the same as a formal test of coefficient equality.'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
 </div>
 <hr>
 <h2 data-number="1.5" id="sec-10-7" class="anchored"><span class="header-section-number">1.5</span> 10.7 Multiple linear regression with three or more explanatory variables</h2>
 <p>We spent a lot of time on multiple regression with two right-hand-side variables. That’s because that regression shows all the important differences between simple regression and multiple regression in intuitive ways. In practice, however, we rarely estimate regressions with exactly two right-hand-side variables. The number of right-hand-side variables in a multiple regression varies from case to case, but it’s typically more than two. In this section we describe multiple regressions with three or more right-hand-side variables. Their general form is</p>
-<p><span class="math display">\[
-y^E = \beta_0+\beta_1 x_1+\beta_2 x_2 +\beta_3 x_3+...
-\]</span></p>
-<p>All of the results, language, and interpretations discussed so far carry forward to multiple linear regressions with three or more explanatory variables. Interpreting the slope of <span class="math inline">\(x_1\)</span>: on average, <span class="math inline">\(y\)</span> is <span class="math inline">\(\beta_{1}\)</span> units larger in the data for observations with one unit larger <span class="math inline">\(x_1\)</span> but with the same value for all other <span class="math inline">\(x\)</span> variables. The interpretation of the other slope coefficients is analogous. The language of multiple regression is the same, including the concepts of conditioning, controlling, omitted, or confounder variables.</p>
-<p>The standard error of coefficients may be estimated by bootstrap or a formula. As always, the appropriate formula is the robust SE formula. But the simple formula contains the things that make even the robust SE larger or smaller. For any slope coefficient <span class="math inline">\(\hat{\beta}_{k}\)</span> the simple SE formula is</p>
-<p><span class="math display">\[
+<p><span class="math display"><em>y</em><sup><em>E</em></sup> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub><em>x</em><sub>1</sub> + <em>β</em><sub>2</sub><em>x</em><sub>2</sub> + <em>β</em><sub>3</sub><em>x</em><sub>3</sub> + ...</span></p>
+<p>All of the results, language, and interpretations discussed so far carry forward to multiple linear regressions with three or more explanatory variables. Interpreting the slope of <span class="math inline"><em>x</em><sub>1</sub></span>: on average, <span class="math inline"><em>y</em></span> is <span class="math inline"><em>β</em><sub>1</sub></span> units larger in the data for observations with one unit larger <span class="math inline"><em>x</em><sub>1</sub></span> but with the same value for all other <span class="math inline"><em>x</em></span> variables. The interpretation of the other slope coefficients is analogous. The language of multiple regression is the same, including the concepts of conditioning, controlling, omitted, or confounder variables.</p>
+<p>The standard error of coefficients may be estimated by bootstrap or a formula. As always, the appropriate formula is the robust SE formula. But the simple formula contains the things that make even the robust SE larger or smaller. For any slope coefficient <span class="math inline"><em>β̂</em><sub><em>k</em></sub></span> the simple SE formula is</p>
+<p><span class="math display">$$
 SE(\hat{\beta}_{k})=\frac{Std[e]}{\sqrt{n}Std[x_k]\sqrt{1-R_{k}^2}}
-\]</span></p>
-<p>Almost all is the same as with two right-hand-side variables. In particular, The SE is smaller, the smaller the standard deviation of the residuals (the better the fit of the regression), the larger the sample, and the larger the standard deviation of <span class="math inline">\(x_k\)</span>. The new-looking thing is <span class="math inline">\(R_{k}^2\)</span>. But that’s simply the generalization of <span class="math inline">\(R_{1}^2\)</span> in the previous formula. It is the R-squared of the regression of <span class="math inline">\(x_k\)</span> on all other <span class="math inline">\(x\)</span> variables. The smaller that R-squared, the smaller the SE.</p>
+$$</span></p>
+<p>Almost all is the same as with two right-hand-side variables. In particular, The SE is smaller, the smaller the standard deviation of the residuals (the better the fit of the regression), the larger the sample, and the larger the standard deviation of <span class="math inline"><em>x</em><sub><em>k</em></sub></span>. The new-looking thing is <span class="math inline"><em>R</em><sub><em>k</em></sub><sup>2</sup></span>. But that’s simply the generalization of <span class="math inline"><em>R</em><sub>1</sub><sup>2</sup></span> in the previous formula. It is the R-squared of the regression of <span class="math inline"><em>x</em><sub><em>k</em></sub></span> on all other <span class="math inline"><em>x</em></span> variables. The smaller that R-squared, the smaller the SE.</p>
 <div class="review-box">
 <div class="review-box-title">
 Multiple Linear Regression with Three or More Variables
 </div>
-<p><strong>Equation:</strong> <span class="math inline">\(y^E = \beta_0+\beta_1 x_1+\beta_2 x_2 +\beta_3 x_3+...\)</span></p>
-<p><strong>Interpretation of <span class="math inline">\(\beta_{k}\)</span> (slope of <span class="math inline">\(x_k\)</span>):</strong> - On average, <span class="math inline">\(y\)</span> is <span class="math inline">\(\beta_{k}\)</span> units larger in the data for observations with one unit larger <span class="math inline">\(x_k\)</span> but with the same value for all other x variables.</p>
-<p><strong>Standard Error:</strong> <span class="math display">\[
+<p><strong>Equation:</strong> <span class="math inline"><em>y</em><sup><em>E</em></sup> = <em>β</em><sub>0</sub> + <em>β</em><sub>1</sub><em>x</em><sub>1</sub> + <em>β</em><sub>2</sub><em>x</em><sub>2</sub> + <em>β</em><sub>3</sub><em>x</em><sub>3</sub> + ...</span></p>
+<p><strong>Interpretation of <span class="math inline"><em>β</em><sub><em>k</em></sub></span> (slope of <span class="math inline"><em>x</em><sub><em>k</em></sub></span>):</strong> - On average, <span class="math inline"><em>y</em></span> is <span class="math inline"><em>β</em><sub><em>k</em></sub></span> units larger in the data for observations with one unit larger <span class="math inline"><em>x</em><sub><em>k</em></sub></span> but with the same value for all other x variables.</p>
+<p><strong>Standard Error:</strong> <span class="math display">$$
 SE(\hat{\beta}_{k})=\frac{Std[e]}{\sqrt{n}Std[x_k]\sqrt{1-R_{k}^2}}
-\]</span></p>
-<p>where <span class="math inline">\(e\)</span> is the regression residual and <span class="math inline">\(R_{k}^2\)</span> is the R-squared of the regression of <span class="math inline">\(x_k\)</span> on all other <span class="math inline">\(x\)</span> variables.</p>
+$$</span></p>
+<p>where <span class="math inline"><em>e</em></span> is the regression residual and <span class="math inline"><em>R</em><sub><em>k</em></sub><sup>2</sup></span> is the R-squared of the regression of <span class="math inline"><em>x</em><sub><em>k</em></sub></span> on all other <span class="math inline"><em>x</em></span> variables.</p>
 </div>
 <div class="ai-task">
 <p><span class="ai-task-icon">🤖 AI PRACTICE TASK #9</span></p>
 <p><strong>Prompt:</strong> “I want to add a 5th explanatory variable to my regression. What should I consider before doing so? Discuss degrees of freedom, multicollinearity, and interpretation.”</p>
-<p><a href="https://chatgpt.com/?q=I want to add a 5th explanatory variable to my regression. What should I consider before doing so? Discuss degrees of freedom, multicollinearity, and interpretation." class="ai-task-copy" target="_blank">📋 COPY &amp; OPEN IN CHATGPT</a></p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('I want to add a 5th explanatory variable to my regression. What should I consider before doing so? Discuss degrees of freedom, multicollinearity, and interpretation.'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
 </div>
 <hr>
 <h2 data-number="1.6" id="sec-10-8" class="anchored"><span class="header-section-number">1.6</span> 10.8 Nonlinear patterns and multiple linear regression</h2>
-<p>In Chapter 8 we introduced piecewise linear splines, quadratics, and other polynomials to approximate a nonlinear <span class="math inline">\(y^E=f(x)\)</span> regression.</p>
-<p>From a substantive point of view, piecewise linear splines and polynomials of a single explanatory variable are not multiple regressions. They do not uncover differences with respect to one right-hand-side variable conditional on one or more other right-hand-side variables. Their slope coefficients cannot be interpreted as the coefficients of multiple regressions: it does not make sense to compare observations that have the same <span class="math inline">\(x\)</span> but a different <span class="math inline">\(x^2\)</span>.</p>
+<p>In Chapter 8 we introduced piecewise linear splines, quadratics, and other polynomials to approximate a nonlinear <span class="math inline"><em>y</em><sup><em>E</em></sup> = <em>f</em>(<em>x</em>)</span> regression.</p>
+<p>From a substantive point of view, piecewise linear splines and polynomials of a single explanatory variable are not multiple regressions. They do not uncover differences with respect to one right-hand-side variable conditional on one or more other right-hand-side variables. Their slope coefficients cannot be interpreted as the coefficients of multiple regressions: it does not make sense to compare observations that have the same <span class="math inline"><em>x</em></span> but a different <span class="math inline"><em>x</em><sup>2</sup></span>.</p>
 <p>But such regressions are multiple linear regressions from a technical point of view. This means that the way their coefficients are calculated is the exact same way the coefficients of multiple linear regressions are calculated. Their standard errors are calculated the same way, too and so are their confidence intervals, test statistics, and p-values.</p>
 <p>Testing hypotheses can be especially useful here, as it can help choose the functional form. With a piecewise linear spline, we can test whether the slopes are the same in adjacent line segments. If we can’t reject the null that they are the same, we may as well join them instead of having separate line segments. Testing hypotheses helps in choosing a polynomial, too. Here an additional complication is that the coefficients don’t have an easy interpretation in themselves. However, testing if all nonlinear coefficients are zero may help decide whether to include them at all.</p>
-<p>However, testing hypotheses to decide whether to include a higher-order polynomial has its issues. Recall that a multiple linear regression requires that the right-hand-side variables are not perfectly collinear. In other words, they cannot be linear functions of each other. With a polynomial on the right-hand side, those variables are exact functions of each other: <span class="math inline">\(x^2\)</span> is the square of <span class="math inline">\(x\)</span>. But they are not a linear function of each other, so, technically, they are not perfectly collinear. That’s why we can include both <span class="math inline">\(x\)</span> and <span class="math inline">\(x^2\)</span> and, if needed, its higher order terms, in a linear regression. While they are not perfectly collinear, explanatory variables in a polynomial are often highly correlated. That multicollinearity results in high standard errors, wide confidence intervals, and high p-values. As with all kinds of multicollinearity, there isn’t anything we can do about that once we have settled on a functional form.</p>
-<p>Importantly, when thinking about functional form, we should always keep in mind the substantive focus of our analysis. As we emphasized in Chapter 8, Section 8.3, we should go back to that original focus when deciding whether we want to include a piecewise linear spline or a polynomial to approximate a nonlinear pattern. There we said that we want our regression to have a good approximation to a nonlinear pattern in <span class="math inline">\(x\)</span> if our goal is prediction or analyzing residuals. We may not want that if all we care about is the average association between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, except if that nonlinearity messes up the average association. This last point is a bit subtle, but usually means that we may want to transform variables to relative changes or take logs if the distribution of <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span> is very skewed.</p>
-<p>Here we have multiple <span class="math inline">\(x\)</span> variables. Should we care about whether each is related to average <span class="math inline">\(y\)</span> in a nonlinear fashion? The answer is the same as earlier: yes, if we want to do prediction or analyze residuals; no, if we care about average associations (except we may want to have transformed variables here, too). In addition, when we focus on a single average association (with, say, <span class="math inline">\(x_1\)</span>) and all the other variables (<span class="math inline">\(x_2\)</span>, <span class="math inline">\(x_3\)</span>, …) are covariates to condition on, the only thing that matters is the coefficient on <span class="math inline">\(x_1\)</span>. Even if nonlinearities matter for <span class="math inline">\(x_2\)</span> and <span class="math inline">\(x_3\)</span> themselves, they only matter for us if they make a difference in the estimated coefficient on <span class="math inline">\(x_1\)</span>. Sometimes they do; very often they don’t.</p>
+<p>However, testing hypotheses to decide whether to include a higher-order polynomial has its issues. Recall that a multiple linear regression requires that the right-hand-side variables are not perfectly collinear. In other words, they cannot be linear functions of each other. With a polynomial on the right-hand side, those variables are exact functions of each other: <span class="math inline"><em>x</em><sup>2</sup></span> is the square of <span class="math inline"><em>x</em></span>. But they are not a linear function of each other, so, technically, they are not perfectly collinear. That’s why we can include both <span class="math inline"><em>x</em></span> and <span class="math inline"><em>x</em><sup>2</sup></span> and, if needed, its higher order terms, in a linear regression. While they are not perfectly collinear, explanatory variables in a polynomial are often highly correlated. That multicollinearity results in high standard errors, wide confidence intervals, and high p-values. As with all kinds of multicollinearity, there isn’t anything we can do about that once we have settled on a functional form.</p>
+<p>Importantly, when thinking about functional form, we should always keep in mind the substantive focus of our analysis. As we emphasized in Chapter 8, Section 8.3, we should go back to that original focus when deciding whether we want to include a piecewise linear spline or a polynomial to approximate a nonlinear pattern. There we said that we want our regression to have a good approximation to a nonlinear pattern in <span class="math inline"><em>x</em></span> if our goal is prediction or analyzing residuals. We may not want that if all we care about is the average association between <span class="math inline"><em>x</em></span> and <span class="math inline"><em>y</em></span>, except if that nonlinearity messes up the average association. This last point is a bit subtle, but usually means that we may want to transform variables to relative changes or take logs if the distribution of <span class="math inline"><em>x</em></span> or <span class="math inline"><em>y</em></span> is very skewed.</p>
+<p>Here we have multiple <span class="math inline"><em>x</em></span> variables. Should we care about whether each is related to average <span class="math inline"><em>y</em></span> in a nonlinear fashion? The answer is the same as earlier: yes, if we want to do prediction or analyze residuals; no, if we care about average associations (except we may want to have transformed variables here, too). In addition, when we focus on a single average association (with, say, <span class="math inline"><em>x</em><sub>1</sub></span>) and all the other variables (<span class="math inline"><em>x</em><sub>2</sub></span>, <span class="math inline"><em>x</em><sub>3</sub></span>, …) are covariates to condition on, the only thing that matters is the coefficient on <span class="math inline"><em>x</em><sub>1</sub></span>. Even if nonlinearities matter for <span class="math inline"><em>x</em><sub>2</sub></span> and <span class="math inline"><em>x</em><sub>3</sub></span> themselves, they only matter for us if they make a difference in the estimated coefficient on <span class="math inline"><em>x</em><sub>1</sub></span>. Sometimes they do; very often they don’t.</p>
 <div>
 <blockquote>
 <p><strong>When to Care About Nonlinear Patterns</strong></p>
-<p><strong>Care about functional form when:</strong> - Your goal is <strong>prediction</strong> → Need accurate <span class="math inline">\(\hat{y}\)</span> - You’re analyzing <strong>residuals</strong> → Need good overall fit - The distribution of <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span> is highly skewed → Consider transformations (logs, etc.)</p>
+<p><strong>Care about functional form when:</strong> - Your goal is <strong>prediction</strong> → Need accurate <span class="math inline"><em>ŷ</em></span> - You’re analyzing <strong>residuals</strong> → Need good overall fit - The distribution of <span class="math inline"><em>x</em></span> or <span class="math inline"><em>y</em></span> is highly skewed → Consider transformations (logs, etc.)</p>
 <p><strong>Don’t worry as much when:</strong> - You care only about <strong>average associations</strong> → Linear may be “good enough” - Nonlinearities in covariates don’t affect your coefficient of interest</p>
 <p><strong>Rule of thumb:</strong> If including nonlinear terms doesn’t meaningfully change your main coefficient, the linear specification may be adequate for your purpose.</p>
 </blockquote>
@@ -445,6 +415,28 @@ CASE STUDY A3: NONLINEAR PATTERNS
 <em>Source: cps-earnings dataset. 2014, U.S.A.</em></p>
 <p>The unconditional difference is -19.5%; the conditional difference is -18% according to column (2), and the same -18% according to columns (3) and (4). The various estimates of the conditional difference are the same up to two digits of rounding, and all of them are within each others’ confidence intervals. Thus, apparently, the functional form for age does not really matter if we are interested in the average gender gap.</p>
 <p>At the same time, all coefficient estimates of the high order polynomials are statistically significant, meaning that the nonlinear pattern is very likely true in the population and not just a chance event in the particular dataset. The R-squared of the more complicated regressions are larger. These indicate that the complicated polynomial specifications are better at capturing the patterns. That would certainly matter if our goal was to predict earnings. But it does not matter for uncovering the gender difference in average earnings.</p>
+<div class="buy-book-banner">
+    <div class="buy-book-content">
+        <div class="buy-book-image">
+            <a href="https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20#overview" target="_blank">
+                <img src="../../assets/cover-full_hd.png" alt="Data Analysis textbook cover">
+            </a>
+        </div>
+        <div class="buy-book-text">
+            <h3 class="anchored">📖 Support the Textbook</h3>
+            <p>This interactive HTML edition is a free companion to the full textbook. For the complete experience, please consider purchasing the book.</p>
+            <a href="https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20#overview" class="btn-buy-book" target="_blank">
+                Buy from Cambridge University Press →
+            </a>
+            <p class="buy-book-links">
+                Also available on: 
+                <a href="https://www.amazon.com/dp/1108483018" target="_blank">Amazon US</a> · 
+                <a href="https://www.amazon.co.uk/dp/1108483018" target="_blank">Amazon UK</a> · 
+                <a href="https://www.amazon.de/dp/1108483018" target="_blank">Amazon DE</a>
+            </p>
+        </div>
+    </div>
+</div>
 <div>
 <blockquote>
 <p><strong>Key Insight: Purpose Determines Functional Form</strong></p>
@@ -456,7 +448,9 @@ CASE STUDY A3: NONLINEAR PATTERNS
 <div class="ai-task">
 <p><span class="ai-task-icon">🤖 AI PRACTICE TASK #10</span></p>
 <p><strong>Prompt:</strong> “I’m estimating the effect of education on wages, controlling for age. Should I include age as a polynomial? Walk me through how to decide, considering my research question.”</p>
-<p><a href="https://chatgpt.com/?q=I'm estimating the effect of education on wages, controlling for age. Should I include age as a polynomial? Walk me through how to decide, considering my research question." class="ai-task-copy" target="_blank">📋 COPY &amp; OPEN IN CHATGPT</a></p>
+<button class="ai-task-copy" onclick="navigator.clipboard.writeText('I am estimating the effect of education on wages, controlling for age. Should I include age as a polynomial? Walk me through how to decide, considering my research question.'); alert('Copied!')">
+📋 COPY &amp; OPEN IN CLAUDE
+</button>
 </div>
 <hr>
 <div>

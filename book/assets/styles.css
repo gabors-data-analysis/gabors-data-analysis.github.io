@@ -746,3 +746,126 @@ li {
         display: none;
     }
 }
+
+
+/* ====================================
+   BUY THE BOOK BANNER
+   ==================================== */
+
+.buy-book-banner {
+    background: linear-gradient(135deg, var(--wes-light-navy) 0%, var(--wes-light-coral) 100%);
+    border-left: 5px solid var(--wes-coral);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 3rem 0;
+    box-shadow: 0 4px 12px var(--wes-shadow);
+}
+
+.buy-book-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.buy-book-image {
+    flex: 0 0 200px;
+}
+
+.buy-book-image img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px var(--wes-shadow-strong);
+    transition: transform 0.3s ease;
+}
+
+.buy-book-image img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.buy-book-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.buy-book-text h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.8rem;
+    color: var(--wes-coral);
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.buy-book-text p {
+    font-family: 'Lora', serif;
+    color: var(--wes-navy);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.btn-buy-book {
+    display: inline-block;
+    background: var(--wes-coral);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px var(--wes-shadow);
+    text-decoration: none;
+}
+
+.btn-buy-book:hover {
+    background: var(--wes-navy);
+    color: var(--wes-yellow);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px var(--wes-shadow-strong);
+    text-decoration: none;
+}
+
+.buy-book-links {
+    font-size: 0.9rem;
+    color: var(--wes-navy);
+    margin-top: 1rem;
+}
+
+.buy-book-links a {
+    color: var(--wes-coral);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.buy-book-links a:hover {
+    color: var(--wes-navy);
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .buy-book-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .buy-book-image {
+        flex: 0 0 auto;
+    }
+    
+    .buy-book-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .btn-buy-book {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
