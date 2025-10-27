@@ -7,11 +7,11 @@
     <style>
         /* 
         meanBot - Snarky Average Calculator
-        Version: 1.1.0
+        Version: 1.2.0
         Created: 2025-10-27
         Model: Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
-        Iterations: 2
-        Description: Simplified - single list input, single average output
+        Iterations: 3
+        Description: Fixed voice input to properly separate numbers
         */
         
         body {
@@ -159,9 +159,9 @@
 
     <script>
         // meanBot JavaScript
-        // Version: 1.1.0
+        // Version: 1.2.0
         // Model: Claude Sonnet 4.5 (claude-sonnet-4-5-20250929)
-        // Iterations: 2
+        // Iterations: 3
         
         let recognition = null;
         
@@ -175,7 +175,13 @@
             
             recognition.onresult = function(event) {
                 const transcript = event.results[0][0].transcript;
-                document.getElementById('numberInput').value = transcript;
+                // Extract all numbers from the transcript and join with commas
+                const numbers = transcript.match(/-?\d+\.?\d*/g);
+                if (numbers && numbers.length > 0) {
+                    document.getElementById('numberInput').value = numbers.join(', ');
+                } else {
+                    document.getElementById('numberInput').value = transcript;
+                }
                 stopVoiceInput();
             };
             
