@@ -13,21 +13,24 @@ The Lab serves as a bridge between academia and business.
 
 Together with our partners, we aim to:
 
-* Develop joint case studies for teaching data analysis and data science.  
-* Create educational content beyond case studies—user guides, podcasts, interactive apps, and more.  
-* Produce open-source, reproducible research materials and guides for the social sciences.  
+* Develop **joint case studies** for teaching data analysis and data science.  
+* Create **educational content** beyond case studies—user guides, podcasts, interactive apps, and more.  
+* Produce open-source, reproducible **research materials** and **guides** for the social sciences.  
 * Collaborate on events (such as the CEU Data Analytics Jamboree) and on education-related projects.  
 
-### What partners gain
+### Benefits
 
-Partners will:
+Partners will collaborate with the Lab to:
 
-* Join our mission of creating innovative, open-source educational resources and supporting research in data analysis, data science, and AI for economics and social sciences.  
-* Benefit from visibility as contributors to global, open-access knowledge.  
-* Connect with a vibrant community, gain early access to emerging talent, and showcase collaboration in marketing materials.  
-* Build networks with leading academics, data professionals, and like-minded organizations.  
+* Research:  study AI adoption in analytics in their prganization or industry
+* Research:  test the role of AI in education and upskilling 
+* Education: create education materials useful for the organization in upskilling
+* PR / Social: Benefit from visibility as active in AI research space and contributors to global, open-access knowledge
 
-### In practice, partners will:
+
+### Contribution
+
+Partners are expected to contribute
 
 1. Provide data for case studies.  
 2. Support development by covering staff costs—or by offering staff time (e.g. a one-day-per-week secondment to the Lab).  
@@ -36,4 +39,4 @@ Partners will:
 5. Help cover technology and related costs.  
 
 
-For more information or to explore partnership opportunities, contact us at [gabor.bekes@ceu.edu](mailto:gabor.bekes@ceu.edu).
+For more information or to explore partnership opportunities, contact us at [via Email](mailto:gbekes@ceu.edu).
