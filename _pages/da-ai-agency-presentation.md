@@ -2,11 +2,11 @@
 layout: single
 classes: wide
 title: "Data Analysis, AI and Human Agency -- links"
-permalink: /dawai-ra/
+permalink: /da-ai-agency-presentation/
 author_profile: true
 redirect_from:
   - /md/
-  - /dawai-ra.html
+  - /da-ai-agency-presentation.html
 ---
 
 {% include base_path %}
