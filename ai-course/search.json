@@ -1067,12 +1067,7 @@
     "href": "assignments/assignment_01.html",
     "title": "Reproduce an FT graph",
     "section": "",
-    "text": "Look at this graph from Financial Times. Your task is to recreate this figure using real-world data.\n\nOption A (easy)\nUse AI as your assistant to find real-world data that matches or closely resembles the one used in the FT graph, and recreate the same chart using that data.\nwhat to submit\n\nGraph: A PDF version of your recreated graph, name it: “lastname_firstname_dawai_week01_ftfigure.pdf”\nData: A CSV file with the data used to create the graph, with the name (“lastname_firstname_dawai_week01_ftdata.pdf”)\n\n\n\nOption B (advanced)\nUse AI as your assistant to build an interactive app (dashboard) that mimics the FT graph.\n\nMinimum requirement: the you shall be able to set dates, and hover around values\nIdeal: get the app update data and graph dynamically.\ncould be upload new data\nbest: automatic via API\n\n\n\nGrading\nSuccess Criteria: - Data accuracy: Real Treasury yield and tariff announcement data - Design fidelity: Similar visual style, annotations, and layout - Code quality: Reproducible workflow with clear documentation\nWhat we’re evaluating: - Problem-solving approach with AI assistance - Quality of human oversight and iteration - Documentation of AI usage and limitations\nwhat to submit\n\nlink to app\nyou can use tools like steamlit (Python), shinyapps (R), etc",
-    "crumbs": [
-      "Home",
-      "Assignments",
-      "Assignment 1"
-    ]
+    "text": "Look at this graph from Financial Times. Your task is to recreate this figure using real-world data.\nUse AI as your assistant to find real-world data that matches or closely resembles the one used in the FT graph, and recreate the same chart using that data.\nwhat to submit\n\nGraph: A PDF version of your recreated graph, name it: “lastname_firstname_dawai_week01_ftfigure.pdf”\nData: A CSV file with the data used to create the graph, with the name (“lastname_firstname_dawai_week01_ftdata.csv”)\nOne para text on experience with AI: what model you used, was easy, where was human interaction needed. (“lastname_firstname_dawai_week01_ftdata.txt or .md”)\nCode (any language) (“lastname_firstname_dawai_week01_ftdata.py or .R”), scripts or notebooks also OK.\n\n\nGrading\nSuccess Criteria: - Data accuracy: Real Treasury yield and tariff announcement data - Design fidelity: Similar visual style, annotations, and layout - Code quality: Reproducible workflow with clear documentation\nWhat we’re evaluating: - Problem-solving approach with AI assistance - Quality of human oversight and iteration - Documentation of AI usage and limitations"
   },
   {
     "objectID": "assignments/assignment_02.html",

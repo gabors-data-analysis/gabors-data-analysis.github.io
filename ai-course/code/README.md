@@ -1,3 +1,0 @@
-## Code for various projects
-
-Sometimes only R, sometimes only Python, sometimes both R and Python...
