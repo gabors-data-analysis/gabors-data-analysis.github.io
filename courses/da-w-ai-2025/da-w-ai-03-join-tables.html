@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="da-w-ai-05-text-to-data-appendix_files/libs/clipboard/clipboard.min.js"></script>
-<script src="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/tabby.min.js"></script>
-<script src="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/popper.min.js"></script>
-<script src="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="da-w-ai-03-join-tables_files/libs/clipboard/clipboard.min.js"></script>
+<script src="da-w-ai-03-join-tables_files/libs/quarto-html/tabby.min.js"></script>
+<script src="da-w-ai-03-join-tables_files/libs/quarto-html/popper.min.js"></script>
+<script src="da-w-ai-03-join-tables_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="da-w-ai-03-join-tables_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="da-w-ai-03-join-tables_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="da-w-ai-03-join-tables_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="Gábor Békés (CEU)">
-  <meta name="dcterms.date" content="2025-03-24">
-  <title>Data Analysis with AI course</title>
+  <meta name="dcterms.date" content="2025-03-10">
+  <title>Difficulties of Joining Data Tables</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="da-w-ai-03-join-tables_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="da-w-ai-03-join-tables_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -96,12 +96,12 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
+  <link rel="stylesheet" href="da-w-ai-03-join-tables_files/libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
   <link rel="stylesheet" href="css/custom-improved3.css">
-  <link href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link href="da-w-ai-03-join-tables_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="da-w-ai-03-join-tables_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="da-w-ai-03-join-tables_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="da-w-ai-03-join-tables_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -195,8 +195,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Data Analysis with AI course</h1>
-  <p class="subtitle">05 Appendix to Using Text as Data</p>
+  <h1 class="title">Difficulties of Joining Data Tables</h1>
+  <p class="subtitle">Background: combining datasets</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -206,177 +206,319 @@ Gábor Békés (CEU)
 </div>
 </div>
 
-  <p class="date">2025-03-24</p>
+  <p class="date">2025-03-10</p>
 </section>
 <section>
-<section id="appendix" class="title-slide slide level1 center">
-<h1>Appendix</h1>
+<section id="background-to-data-analyis-with-ai-combining-datasets" class="title-slide slide level1 white center" data-background-color="#3b528b">
+<h1>Background to Data Analyis with AI: combining datasets</h1>
 
 </section>
-<section id="domain-specific-lexicons-implementation" class="slide level2 center">
-<h2>Domain-Specific Lexicons: Implementation</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="kw">def</span> sports_sentiment(text):</span>
-<span id="cb1-2"><a href=""></a>    <span class="co"># Tokenize and clean text</span></span>
-<span id="cb1-3"><a href=""></a>    words <span class="op">=</span> preprocess(text)</span>
-<span id="cb1-4"><a href=""></a>    </span>
-<span id="cb1-5"><a href=""></a>    <span class="co"># Check for negations and intensifiers</span></span>
-<span id="cb1-6"><a href=""></a>    <span class="cf">for</span> i, word <span class="kw">in</span> <span class="bu">enumerate</span>(words):</span>
-<span id="cb1-7"><a href=""></a>        <span class="co"># Context-aware scoring logic</span></span>
-<span id="cb1-8"><a href=""></a>        <span class="co"># e.g., "not disappointed" → positive</span></span>
-<span id="cb1-9"><a href=""></a>        <span class="co"># e.g., "very clinical" → strongly positive</span></span>
-<span id="cb1-10"><a href=""></a>    </span>
-<span id="cb1-11"><a href=""></a>    <span class="co"># Calculate sports-specific sentiment score</span></span>
-<span id="cb1-12"><a href=""></a>    <span class="cf">return</span> score</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="combination" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Combination</h2>
+<p>The problem * You have two datasets, and for analysis want to combine * Example: WVS and World Bank</p>
+<p>Key issues: * Identify UIDs in each datasets * How to deal with imperfect matches * Which join?</p>
+<p>Reading * BK Chapter 02</p>
 </section>
-<section id="bert-for-sentiment-analysis" class="slide level2 center">
-<h2>BERT for Sentiment Analysis</h2>
+<section id="unique-identifiers-uid" class="slide level2 center">
+<h2>Unique identifiers (UID)</h2>
 <ul>
-<li>Bidirectional Encoder Representations from Transformers</li>
-<li>Understands context and word relationships</li>
-<li>Pre-trained on massive text corpus</li>
-<li>Fine-tuned for sentiment classification</li>
+<li>Tidy data: Each observation in a dataset A has a UID
+<ul>
+<li>country code</li>
+<li>hotel ID</li>
+<li>survey respondent ID</li>
+</ul></li>
+<li>Ideally it is not a name but a code (numeric, hex, alphanumeric)
+<ul>
+<li>ensures it’s unique
+<ul>
+<li>names are not unique, may be misspelled</li>
+</ul></li>
+</ul></li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> AutoTokenizer, AutoModelForSequenceClassification</span>
-<span id="cb2-2"><a href=""></a><span class="im">import</span> torch</span>
-<span id="cb2-3"><a href=""></a></span>
-<span id="cb2-4"><a href=""></a>tokenizer <span class="op">=</span> AutoTokenizer.from_pretrained(<span class="st">"nlptown/bert-base-multilingual-uncased-sentiment"</span>)</span>
-<span id="cb2-5"><a href=""></a>model <span class="op">=</span> AutoModelForSequenceClassification.from_pretrained(<span class="st">"nlptown/bert-base-multilingual-uncased-sentiment"</span>)</span>
-<span id="cb2-6"><a href=""></a></span>
-<span id="cb2-7"><a href=""></a>inputs <span class="op">=</span> tokenizer(<span class="st">"The team showed great character today."</span>, return_tensors<span class="op">=</span><span class="st">"pt"</span>)</span>
-<span id="cb2-8"><a href=""></a>outputs <span class="op">=</span> model(<span class="op">**</span>inputs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="approach-3-machine-learning-models" class="slide level2 center">
-<h2>Approach 3: Machine Learning Models</h2>
-<p><strong>Types of ML approaches:</strong> - Traditional ML, Deep Learning (CNN) - Transformer Models: BERT, RoBERTa – in practice</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> pipeline</span>
-<span id="cb3-2"><a href=""></a></span>
-<span id="cb3-3"><a href=""></a>classifier <span class="op">=</span> pipeline(<span class="st">'sentiment-analysis'</span>)</span>
-<span id="cb3-4"><a href=""></a>classifier(<span class="st">"We were really impressive in the second half"</span>)</span>
-<span id="cb3-5"><a href=""></a><span class="co"># [{'label': 'POSITIVE', 'score': 0.9998}]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="unique-identifiers-uid-1" class="slide level2 center">
+<h2>Unique identifiers (UID)</h2>
+<ul>
+<li>Sometimes it is in the data</li>
+<li>Sometimes we have to create it
+<ul>
+<li>names – &gt; UID</li>
+<li>entity resolution (disambigouation )</li>
+</ul></li>
+<li>Tidy data: UID may be based on multiple variables
+<ul>
+<li>country*year</li>
+</ul></li>
+</ul>
 </section>
-<section id="machine-learning-models-pros-and-cons" class="slide level2 center">
-<h2>Machine Learning Models: Pros and Cons</h2>
-<p><strong>Advantages:</strong> - Capture complex patterns and relationships - Learn from data rather than rules - Better contextual understanding - Can improve with more training examples</p>
-<p><strong>Limitations:</strong> - Require labeled training data - Computationally expensive - “Black box” decision making - Domain adaptation challenges</p>
-</section>
-<section class="slide level2 center">
-
-<p><strong>Using Large Language Models (LLMs):</strong> - GPT-4, Claude, etc. for sentiment analysis - Feed individual text examples for classification - Ask for nuanced, multi-dimensional analysis</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a><span class="kw">def</span> ai_sentiment_analysis(text):</span>
-<span id="cb4-2"><a href=""></a>    prompt <span class="op">=</span> <span class="ss">f"""</span></span>
-<span id="cb4-3"><a href=""></a><span class="ss">    Rate the sentiment of this football manager interview on a </span></span>
-<span id="cb4-4"><a href=""></a><span class="ss">    scale from -2 (very negative) to +2 (very positive):</span></span>
-<span id="cb4-5"><a href=""></a><span class="ss">    </span></span>
-<span id="cb4-6"><a href=""></a><span class="ss">    "</span><span class="sc">{</span>text<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb4-7"><a href=""></a><span class="ss">    </span></span>
-<span id="cb4-8"><a href=""></a><span class="ss">    Provide only the numerical score.</span></span>
-<span id="cb4-9"><a href=""></a><span class="ss">    """</span></span>
-<span id="cb4-10"><a href=""></a>    response <span class="op">=</span> llm_api_call(prompt)</span>
-<span id="cb4-11"><a href=""></a>    <span class="cf">return</span> parse_response(response)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="comparison-of-approaches" class="slide level2 center">
-<h2>Comparison of Approaches</h2>
-<table class="caption-top">
+<section id="join-types" class="slide level2 center">
+<h2>Join types</h2>
+<table class="caption-top" style="width:100%;">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 27%">
-<col style="width: 27%">
-<col style="width: 15%">
-<col style="width: 17%">
+<col style="width: 11%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 24%">
+<col style="width: 24%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Feature</th>
-<th>Pre-built Libraries</th>
-<th>Custom Lexicons</th>
-<th>ML Models</th>
-<th>AI-Assisted</th>
+<th>Join Type</th>
+<th>SQL</th>
+<th>R (<code>dplyr</code>)</th>
+<th>Python (<code>pandas</code>)</th>
+<th>Stata (<code>merge</code>)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Setup Complexity</td>
-<td>Low</td>
-<td>Medium</td>
-<td>High</td>
-<td>Low</td>
+<td><strong>Inner Join</strong></td>
+<td><code>SELECT * FROM A INNER JOIN B ON A.ID = B.ID;</code></td>
+<td><code>inner_join(A, B, by = "ID")</code></td>
+<td><code>A.merge(B, on="ID", how="inner")</code></td>
+<td><code>merge 1:1 ID using B</code></td>
 </tr>
 <tr class="even">
-<td>Domain Specificity</td>
-<td>Low</td>
-<td>High</td>
-<td>Medium-High</td>
-<td>High</td>
+<td><strong>Left Join</strong></td>
+<td><code>SELECT * FROM A LEFT JOIN B ON A.ID = B.ID;</code></td>
+<td><code>left_join(A, B, by = "ID")</code></td>
+<td><code>A.merge(B, on="ID", how="left")</code></td>
+<td><code>merge 1:1 ID using B, keep(1 3)</code></td>
 </tr>
 <tr class="odd">
-<td>Contextual Understanding</td>
-<td>Medium</td>
-<td>Medium</td>
-<td>High</td>
-<td>Very High</td>
+<td><strong>Right Join</strong></td>
+<td><code>SELECT * FROM A RIGHT JOIN B ON A.ID = B.ID;</code></td>
+<td><code>right_join(A, B, by = "ID")</code></td>
+<td><code>A.merge(B, on="ID", how="right")</code></td>
+<td><code>merge 1:1 ID using B, keep(2 3)</code></td>
 </tr>
 <tr class="even">
-<td>Transparency</td>
-<td>High</td>
-<td>High</td>
-<td>Low</td>
-<td>Medium</td>
+<td><strong>Full Join</strong></td>
+<td><code>SELECT * FROM A FULL OUTER JOIN B ON A.ID = B.ID;</code></td>
+<td><code>full_join(A, B, by = "ID")</code></td>
+<td><code>A.merge(B, on="ID", how="outer")</code></td>
+<td><code>merge 1:1 ID using B, keep(1 2 3)</code></td>
 </tr>
 <tr class="odd">
-<td>Scalability</td>
-<td>High</td>
-<td>Medium</td>
-<td>High</td>
-<td>Low-Medium</td>
-</tr>
-<tr class="even">
-<td>Cost</td>
-<td>Free</td>
-<td>Development Time</td>
-<td>Computing Resources</td>
-<td>API Costs</td>
+<td><strong>Cross Join</strong></td>
+<td><code>SELECT * FROM A CROSS JOIN B;</code></td>
+<td><code>cross_join(A, B)</code> (needs <code>{dplyr}</code> extension)</td>
+<td><code>A.merge(B, how="cross")</code></td>
+<td>No built-in command; use <code>gen</code> to create all combinations</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="selecting-the-right-approach" class="slide level2 center">
-<h2>Selecting the Right Approach</h2>
-<p><strong>Consider:</strong></p>
-<ol type="1">
-<li><strong>Domain specificity</strong> required</li>
-<li><strong>Available resources</strong> (time, computing, budget)</li>
-<li><strong>Transparency needs</strong> for your analysis</li>
-<li><strong>Scale</strong> of text analysis required</li>
-</ol>
-<p><strong>Hybrid approaches often work best:</strong></p>
+<section id="types-of-joins-their-challenges" class="slide level2 center">
+<h2>Types of Joins &amp; Their Challenges</h2>
+<p><strong>Common Join Types </strong> - <strong><code>inner_join()</code></strong>: Only matching records - <strong><code>left_join()</code></strong>: All from left + matches from right - <strong><code>right_join()</code></strong>: All from right + matches from left - <strong><code>full_join()</code></strong>: All records from both tables - <strong><code>cross_join()</code></strong>: Every combination of both tables</p>
+<p><strong>Example:</strong> - Table A: Customers - Table B: Orders</p>
+<pre><code>Table A (Customers)
++----+--------+
+| ID | Name   |
++----+--------+
+| 1  | Alice  |
+| 2  | Bob    |
+| 3  | Charlie|
++----+--------+
+
+Table B (Orders)
++----+---------+
+| ID | Order  |
++----+---------+
+| 1  | Laptop |
+| 2  | Phone  |
+| 4  | Tablet |
++----+---------+</code></pre>
+<table class="caption-top">
+<colgroup>
+<col style="width: 60%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Join Type</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>inner_join()</code></td>
+<td>Alice - Laptop, Bob - Phone (ID 1,2)</td>
+</tr>
+<tr class="even">
+<td><code>left_join()</code></td>
+<td>Alice - Laptop, Bob - Phone, Charlie - NA (ID 3 remains)</td>
+</tr>
+<tr class="odd">
+<td><code>right_join()</code></td>
+<td>Alice - Laptop, Bob - Phone, NA - Tablet (ID 4 remains)</td>
+</tr>
+<tr class="even">
+<td><code>full_join()</code></td>
+<td>Alice - Laptop, Bob - Phone, Charlie - NA, NA - Tablet</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="key-matching-issues" class="slide level2 center">
+<h2>Key Matching Issues</h2>
+<p><strong>Common Problems:</strong> - <strong>Typos &amp; Formatting:</strong> “Alice” vs “alice” - <strong>Case Sensitivity:</strong> “New York” ≠ “NEW YORK” - <strong>Different Formats:</strong> “2024-03-05” vs “05/03/2024” - <strong>Extra Spaces:</strong> “Bob” vs “Bob”</p>
+<p><strong>Example Issue:</strong></p>
+<pre><code>Table A (Users)
++----+--------+
+| ID | Name   |
++----+--------+
+| 1  | Alice  |
+| 2  | Bob    |
+| 3  | Charlie|
++----+--------+
+
+Table B (Purchases)
++----+--------+
+| ID | Item   |
++----+--------+
+| 1  | Laptop |
+| 2  | Phone  |
+| 3  |Tablet  |  &lt;-- Extra space typo!
++----+--------+</code></pre>
+<p><strong>Solution:</strong> - Use <code>str_trim()</code>, <code>tolower()</code> for text matching. - Convert date formats before joining (<code>lubridate::ymd()</code>).</p>
+</section>
+<section id="many-to-many-and-one-to-many-issues" class="slide level2 center">
+<h2>Many-to-Many and One-to-Many Issues</h2>
+<p><strong>Example:</strong></p>
+<pre><code>Table A (Students)
++----+--------+
+| ID | Name   |
++----+--------+
+| 1  | Alice  |
+| 2  | Bob    |
++----+--------+
+
+Table B (Courses)
++----+----------+
+| ID | Course  |
++----+----------+
+| 1  | Math    |
+| 1  | Physics |
+| 2  | History |
++----+----------+</code></pre>
+<p><strong>Problem:</strong> - Joining creates <strong>duplicate rows</strong> if not handled properly.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Student</th>
+<th>Course</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Alice</td>
+<td>Math</td>
+</tr>
+<tr class="even">
+<td>Alice</td>
+<td>Physics</td>
+</tr>
+<tr class="odd">
+<td>Bob</td>
+<td>History</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fix:</strong><br>
+- Use <strong>aggregations</strong> (<code>group_by() %&gt;% summarise()</code>). - Avoid unwanted row expansion with <strong>careful join conditions</strong>.</p>
+</section>
+<section id="handling-missing-data-from-joins" class="slide level2 center">
+<h2>Handling Missing Data from Joins</h2>
+<p><strong>Example:</strong></p>
+<pre><code>Table A (Employees)
++----+--------+
+| ID | Name   |
++----+--------+
+| 1  | Alice  |
+| 2  | Bob    |
+| 3  | Charlie|
++----+--------+
+
+Table B (Salaries)
++----+------+
+| ID | Pay  |
++----+------+
+| 1  | 5000 |
+| 3  | 4500 |
++----+------+</code></pre>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Employee</th>
+<th>Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Alice</td>
+<td>5000</td>
+</tr>
+<tr class="even">
+<td>Bob</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>Charlie</td>
+<td>4500</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Issues:</strong> - <code>NA</code> appears in <strong><code>left_join()</code></strong> when there is <strong>no match</strong>. - If used in calculations (<code>sum(), mean()</code>), <strong>NA may cause issues</strong>.</p>
+<p><strong>Solution:</strong> - Use <code>replace_na(Salary, 0)</code> to handle missing values.</p>
+</section>
+<section id="performance-issues-with-large-joins" class="slide level2 center">
+<h2>Performance Issues with Large Joins</h2>
+<p><strong>Why Joins Get Slow?</strong> - <strong>Large tables</strong>: Millions of rows - <strong>Unindexed keys</strong>: Searching without an index is costly - <strong>Multiple joins</strong>: Query complexity grows</p>
+<p><strong>Example in R (<code>dplyr</code>)</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-2"><a href=""></a>orders <span class="sc">%&gt;%</span> <span class="fu">left_join</span>(customers, <span class="at">by =</span> <span class="st">"customer_id"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>Use pre-built libraries for initial analysis</li>
-<li>Enhance with domain-specific terms for key concepts</li>
-<li>Validate with ML models or AI assistance for edge cases</li>
+<li>If <code>customer_id</code> is not indexed, <strong>operation is slow</strong>.</li>
 </ul>
+<p><strong>Optimizations:</strong> - <strong>Use Indexing</strong> (<code>data.table</code> or database indexing). - <strong>Filter Early</strong>: Reduce dataset <strong>before</strong> joining. - <strong>Check Join Order</strong>: Place <strong>smaller tables first</strong> in join operations.</p>
+</section>
+<section id="summary" class="slide level2 center">
+<h2>Summary</h2>
+<ul>
+<li><strong>Key Matching Issues</strong>: Data formatting problems.</li>
+<li><strong>Many-to-Many Pitfalls</strong>: Avoid unwanted row duplication.</li>
+<li><strong>Handling Missing Data</strong>: NA can break calculations.</li>
+<li><strong>Performance Concerns</strong>: Optimize joins with indexing.</li>
+</ul>
+</section>
+<section class="slide level2 center">
+
 
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Gabors Data Analysis with AI - 2025-03-24, v0.1</p>
+<p>Data Analysis with AI - 2025</p>
 </div>
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="da-w-ai-03-join-tables_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="da-w-ai-03-join-tables_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="da-w-ai-03-join-tables_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="da-w-ai-03-join-tables_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="da-w-ai-03-join-tables_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="da-w-ai-03-join-tables_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="da-w-ai-03-join-tables_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="da-w-ai-03-join-tables_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="da-w-ai-03-join-tables_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="da-w-ai-03-join-tables_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

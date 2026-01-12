@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="da-w-ai-05-text-to-data-appendix_files/libs/clipboard/clipboard.min.js"></script>
-<script src="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/tabby.min.js"></script>
-<script src="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/popper.min.js"></script>
-<script src="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="da-w-ai-05-text-to-data-appendix_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<script src="da-w-ai-06-tools-review_files/libs/clipboard/clipboard.min.js"></script>
+<script src="da-w-ai-06-tools-review_files/libs/quarto-html/tabby.min.js"></script>
+<script src="da-w-ai-06-tools-review_files/libs/quarto-html/popper.min.js"></script>
+<script src="da-w-ai-06-tools-review_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="da-w-ai-06-tools-review_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="da-w-ai-06-tools-review_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="da-w-ai-06-tools-review_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.32">
 
   <meta name="author" content="Gábor Békés (CEU)">
-  <meta name="dcterms.date" content="2025-03-24">
-  <title>Data Analysis with AI course</title>
+  <meta name="dcterms.date" content="2026-01-13">
+  <title>Data Analysis with AI: Concepts and tools</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="da-w-ai-06-tools-review_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="da-w-ai-06-tools-review_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,79 +29,13 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
+  <link rel="stylesheet" href="da-w-ai-06-tools-review_files/libs/revealjs/dist/theme/quarto-2c1b5f745a11cfad616ebade4a4a7d24.css">
   <link rel="stylesheet" href="css/custom-improved3.css">
-  <link href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link href="da-w-ai-06-tools-review_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="da-w-ai-06-tools-review_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="da-w-ai-06-tools-review_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="da-w-ai-06-tools-review_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -189,14 +123,17 @@
       margin-right: 0; 
     }
   </style>
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js" <="" script="">
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"</script>
+  <script src="https://unpkg.com/recharts@2.1.12/umd/Recharts.min.js" <="" script="">
 </head>
-<body class="quarto-light">
+<body>
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Data Analysis with AI course</h1>
-  <p class="subtitle">05 Appendix to Using Text as Data</p>
+<section id="title-slide" class="quarto-title-block">
+  <h1 class="title">Data Analysis with AI: Concepts and tools</h1>
+  <p class="subtitle">genAI Tools</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -206,177 +143,157 @@ Gábor Békés (CEU)
 </div>
 </div>
 
-  <p class="date">2025-03-24</p>
+  <p class="date">2026-01-13</p>
 </section>
-<section>
-<section id="appendix" class="title-slide slide level1 center">
-<h1>Appendix</h1>
-
+<section id="section" class="slide level2">
+<h2><img data-src="images/gabors-data-analysis-with-ai.png" /></h2>
 </section>
-<section id="domain-specific-lexicons-implementation" class="slide level2 center">
-<h2>Domain-Specific Lexicons: Implementation</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="kw">def</span> sports_sentiment(text):</span>
-<span id="cb1-2"><a href=""></a>    <span class="co"># Tokenize and clean text</span></span>
-<span id="cb1-3"><a href=""></a>    words <span class="op">=</span> preprocess(text)</span>
-<span id="cb1-4"><a href=""></a>    </span>
-<span id="cb1-5"><a href=""></a>    <span class="co"># Check for negations and intensifiers</span></span>
-<span id="cb1-6"><a href=""></a>    <span class="cf">for</span> i, word <span class="kw">in</span> <span class="bu">enumerate</span>(words):</span>
-<span id="cb1-7"><a href=""></a>        <span class="co"># Context-aware scoring logic</span></span>
-<span id="cb1-8"><a href=""></a>        <span class="co"># e.g., "not disappointed" → positive</span></span>
-<span id="cb1-9"><a href=""></a>        <span class="co"># e.g., "very clinical" → strongly positive</span></span>
-<span id="cb1-10"><a href=""></a>    </span>
-<span id="cb1-11"><a href=""></a>    <span class="co"># Calculate sports-specific sentiment score</span></span>
-<span id="cb1-12"><a href=""></a>    <span class="cf">return</span> score</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="where-does-mcp-live-two-different-worlds" class="slide level2" data-background-color="#f8f9fa">
+<h2 data-background-color="#f8f9fa">Where Does MCP Live? Two Different Worlds</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="desktop-applications-mcp-protocol">Desktop Applications (MCP Protocol)</h3>
+<p><strong>What is it:</strong> - MCP is a technical protocol - Runs on your computer - Connects AI to local resources</p>
+<p><strong>Who uses it:</strong> - Claude Desktop - Cursor IDE - Custom developer tools</p>
+<p><strong>What it connects to:</strong> - Your local files - Local databases - GitHub repositories - Company intranets</p>
+<p><strong>Setup:</strong> - Install desktop application - Configure MCP servers - Technical setup required</p>
+</div><div class="column" style="width:50%;">
+<h3 id="online-web-interfaces-built-in-features">Online Web Interfaces (Built-in Features)</h3>
+<p><strong>What is it:</strong> - Web-based AI tools - No installation needed - Cloud-based integrations</p>
+<p><strong>Who uses it:</strong> - Most students (you!) - Quick access from browser - Works on any device</p>
+<p><strong>What it connects to:</strong> - File uploads - Google Drive (Claude) - Google Workspace (Gemini) - Web search</p>
+<p><strong>Setup:</strong> - Open browser - Sign in - Connect integrations (if needed)</p>
+</div>
+</div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class='callout-icon'></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>For this course:</strong> We focus on <strong>online tools</strong> - no desktop apps required!</p>
+</div>
+</div>
+</div>
 </section>
-<section id="bert-for-sentiment-analysis" class="slide level2 center">
-<h2>BERT for Sentiment Analysis</h2>
-<ul>
-<li>Bidirectional Encoder Representations from Transformers</li>
-<li>Understands context and word relationships</li>
-<li>Pre-trained on massive text corpus</li>
-<li>Fine-tuned for sentiment classification</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> AutoTokenizer, AutoModelForSequenceClassification</span>
-<span id="cb2-2"><a href=""></a><span class="im">import</span> torch</span>
-<span id="cb2-3"><a href=""></a></span>
-<span id="cb2-4"><a href=""></a>tokenizer <span class="op">=</span> AutoTokenizer.from_pretrained(<span class="st">"nlptown/bert-base-multilingual-uncased-sentiment"</span>)</span>
-<span id="cb2-5"><a href=""></a>model <span class="op">=</span> AutoModelForSequenceClassification.from_pretrained(<span class="st">"nlptown/bert-base-multilingual-uncased-sentiment"</span>)</span>
-<span id="cb2-6"><a href=""></a></span>
-<span id="cb2-7"><a href=""></a>inputs <span class="op">=</span> tokenizer(<span class="st">"The team showed great character today."</span>, return_tensors<span class="op">=</span><span class="st">"pt"</span>)</span>
-<span id="cb2-8"><a href=""></a>outputs <span class="op">=</span> model(<span class="op">**</span>inputs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="approach-3-machine-learning-models" class="slide level2 center">
-<h2>Approach 3: Machine Learning Models</h2>
-<p><strong>Types of ML approaches:</strong> - Traditional ML, Deep Learning (CNN) - Transformer Models: BERT, RoBERTa – in practice</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> pipeline</span>
-<span id="cb3-2"><a href=""></a></span>
-<span id="cb3-3"><a href=""></a>classifier <span class="op">=</span> pipeline(<span class="st">'sentiment-analysis'</span>)</span>
-<span id="cb3-4"><a href=""></a>classifier(<span class="st">"We were really impressive in the second half"</span>)</span>
-<span id="cb3-5"><a href=""></a><span class="co"># [{'label': 'POSITIVE', 'score': 0.9998}]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="machine-learning-models-pros-and-cons" class="slide level2 center">
-<h2>Machine Learning Models: Pros and Cons</h2>
-<p><strong>Advantages:</strong> - Capture complex patterns and relationships - Learn from data rather than rules - Better contextual understanding - Can improve with more training examples</p>
-<p><strong>Limitations:</strong> - Require labeled training data - Computationally expensive - “Black box” decision making - Domain adaptation challenges</p>
-</section>
-<section class="slide level2 center">
-
-<p><strong>Using Large Language Models (LLMs):</strong> - GPT-4, Claude, etc. for sentiment analysis - Feed individual text examples for classification - Ask for nuanced, multi-dimensional analysis</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a><span class="kw">def</span> ai_sentiment_analysis(text):</span>
-<span id="cb4-2"><a href=""></a>    prompt <span class="op">=</span> <span class="ss">f"""</span></span>
-<span id="cb4-3"><a href=""></a><span class="ss">    Rate the sentiment of this football manager interview on a </span></span>
-<span id="cb4-4"><a href=""></a><span class="ss">    scale from -2 (very negative) to +2 (very positive):</span></span>
-<span id="cb4-5"><a href=""></a><span class="ss">    </span></span>
-<span id="cb4-6"><a href=""></a><span class="ss">    "</span><span class="sc">{</span>text<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb4-7"><a href=""></a><span class="ss">    </span></span>
-<span id="cb4-8"><a href=""></a><span class="ss">    Provide only the numerical score.</span></span>
-<span id="cb4-9"><a href=""></a><span class="ss">    """</span></span>
-<span id="cb4-10"><a href=""></a>    response <span class="op">=</span> llm_api_call(prompt)</span>
-<span id="cb4-11"><a href=""></a>    <span class="cf">return</span> parse_response(response)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="comparison-of-approaches" class="slide level2 center">
-<h2>Comparison of Approaches</h2>
-<table class="caption-top">
+<section id="whats-available-online-ai-tools" class="slide level2" data-background-color="#f8f9fa">
+<h2 data-background-color="#f8f9fa">What’s Available: Online AI Tools</h2>
+<table class="caption-top" style="width:100%;">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 27%">
-<col style="width: 27%">
-<col style="width: 15%">
-<col style="width: 17%">
+<col style="width: 14%" />
+<col style="width: 23%" />
+<col style="width: 20%" />
+<col style="width: 19%" />
+<col style="width: 22%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Feature</th>
-<th>Pre-built Libraries</th>
-<th>Custom Lexicons</th>
-<th>ML Models</th>
-<th>AI-Assisted</th>
+<th><strong>Claude.ai</strong></th>
+<th><strong>ChatGPT</strong></th>
+<th><strong>Gemini</strong></th>
+<th><strong>DeepSeek</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Setup Complexity</td>
-<td>Low</td>
-<td>Medium</td>
-<td>High</td>
-<td>Low</td>
+<td><strong>File uploads</strong></td>
+<td>✅ Multiple</td>
+<td>✅ Multiple</td>
+<td>✅ Multiple</td>
+<td>✅ Multiple</td>
 </tr>
 <tr class="even">
-<td>Domain Specificity</td>
-<td>Low</td>
-<td>High</td>
-<td>Medium-High</td>
-<td>High</td>
+<td><strong>Context persistence</strong></td>
+<td>✅ Projects</td>
+<td>✅ Custom GPTs</td>
+<td>❌ Session only</td>
+<td>❌ Session only</td>
 </tr>
 <tr class="odd">
-<td>Contextual Understanding</td>
-<td>Medium</td>
-<td>Medium</td>
-<td>High</td>
-<td>Very High</td>
+<td><strong>Cloud storage</strong></td>
+<td>✅ Google Drive</td>
+<td>❌ No</td>
+<td>✅ Google Workspace</td>
+<td>❌ No</td>
 </tr>
 <tr class="even">
-<td>Transparency</td>
-<td>High</td>
-<td>High</td>
-<td>Low</td>
-<td>Medium</td>
+<td><strong>Code execution</strong></td>
+<td>✅ Analysis tool</td>
+<td>✅ Advanced Data Analysis</td>
+<td>✅ Limited</td>
+<td>❌ No</td>
 </tr>
 <tr class="odd">
-<td>Scalability</td>
-<td>High</td>
-<td>Medium</td>
-<td>High</td>
-<td>Low-Medium</td>
+<td><strong>Multi-week projects</strong></td>
+<td>✅ Yes</td>
+<td>⚠️ Sort of</td>
+<td>❌ No</td>
+<td>❌ No</td>
 </tr>
 <tr class="even">
-<td>Cost</td>
-<td>Free</td>
-<td>Development Time</td>
-<td>Computing Resources</td>
-<td>API Costs</td>
+<td><strong>Cost</strong></td>
+<td>$20/month</td>
+<td>$20/month</td>
+<td>Free + $20</td>
+<td>Free + $10</td>
 </tr>
 </tbody>
 </table>
+<h3 id="recommendation-for-this-course">Recommendation for This Course</h3>
+<p><strong>Primary:</strong> Claude.ai (Projects feature excellent for multi-week work)<br />
+<strong>Secondary:</strong> ChatGPT (good for quick tasks)<br />
+<strong>Budget:</strong> Gemini Free + DeepSeek (generous free tiers)</p>
 </section>
-<section id="selecting-the-right-approach" class="slide level2 center">
-<h2>Selecting the Right Approach</h2>
-<p><strong>Consider:</strong></p>
-<ol type="1">
-<li><strong>Domain specificity</strong> required</li>
-<li><strong>Available resources</strong> (time, computing, budget)</li>
-<li><strong>Transparency needs</strong> for your analysis</li>
-<li><strong>Scale</strong> of text analysis required</li>
-</ol>
-<p><strong>Hybrid approaches often work best:</strong></p>
-<ul>
-<li>Use pre-built libraries for initial analysis</li>
-<li>Enhance with domain-specific terms for key concepts</li>
-<li>Validate with ML models or AI assistance for edge cases</li>
-</ul>
-
-</section></section>
-    </div>
-  <div class="quarto-auto-generated-content" style="display: none;">
-<div class="footer footer-default">
-<p>Gabors Data Analysis with AI - 2025-03-24, v0.1</p>
+<section id="recommendation-for-course-work" class="slide level2" data-background-color="#f8f9fa">
+<h2 data-background-color="#f8f9fa">Recommendation for Course Work</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="for-multi-week-assignments">For Multi-Week Assignments</h3>
+<p><strong>Primary: Claude Projects</strong></p>
+<p>Create Project: <code>"CEU-Data-Analysis-2026"</code></p>
+<pre><code>Week 2: Upload WVS data
+Week 3: Continue analysis
+Week 4: Upload hotels data
+Week 5-6: Add interview texts</code></pre>
+<p><strong>Benefits:</strong> - ✅ Best context persistence - ✅ All files accessible - ✅ Seamless continuity - ✅ Clean organization</p>
+<p><strong>Cost:</strong> $20/month</p>
+</div><div class="column" style="width:50%;">
+<h3 id="for-quick-tasks">For Quick Tasks</h3>
+<p><strong>Use any tool based on need:</strong></p>
+<p><strong>ChatGPT if:</strong> - Need Python execution - Want automatic charts - Like Canvas feature</p>
+<p><strong>Gemini if:</strong> - Use Google Sheets/Docs - Need huge context (1M tokens) - Want free option</p>
+<p><strong>DeepSeek if:</strong> - Budget constrained - Code generation only</p>
+<p><strong>Mix and match</strong> different tools for different tasks!</p>
 </div>
-</div></div>
+</div>
+<p><strong>Note:</strong> We’ll practice this in Week 4 with hotels data</p>
+<div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Gabors Data Analysis with AI - 2026-Q1 v0.5.0</p>
+</div>
+</div>
+</section>
+    </div>
+  </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="da-w-ai-06-tools-review_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="da-w-ai-06-tools-review_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="da-w-ai-06-tools-review_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="da-w-ai-06-tools-review_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="da-w-ai-06-tools-review_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="da-w-ai-06-tools-review_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="da-w-ai-05-text-to-data-appendix_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="da-w-ai-06-tools-review_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="da-w-ai-06-tools-review_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="da-w-ai-06-tools-review_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="da-w-ai-06-tools-review_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -545,7 +462,7 @@ Gábor Békés (CEU)
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -619,14 +536,13 @@ Gábor Békés (CEU)
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
@@ -739,6 +655,6 @@ Gábor Békés (CEU)
         }
       });
       </script>
-    
+    </head><body class="quarto-light">
 
 </body></html>
