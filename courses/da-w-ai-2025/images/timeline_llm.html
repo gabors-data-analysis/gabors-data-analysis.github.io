@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+Timeline: LLM Applications Era (Nov 2022 - mid 2025)
+Created: 2025-01-10
+Iterations with user: 2
+Code version: v2.0
+Model: Claude Sonnet 4.5 (2025-01-10)
+Purpose: Educational visualization for economics/social science students
+Context: Second of two timelines showing LLM development - focuses on application breakthroughs
+-->
+
+<head>
+    <title>LLM Applications Timeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            width: 100%;
+            height: 450px;
+        }
+
+        .milestone {
+            fill: none;
+            stroke: #666;
+            stroke-width: 3;
+        }
+
+        .point {
+            stroke: white;
+            stroke-width: 2;
+        }
+
+        /* Viridis color scheme */
+        .point-1 {
+            fill: #440154;
+        }
+
+        .point-2 {
+            fill: #3b528b;
+        }
+
+        .point-3 {
+            fill: #21918c;
+        }
+
+        .point-4 {
+            fill: #5ec962;
+        }
+
+        .point-5 {
+            fill: #fde725;
+        }
+
+        .year {
+            font-size: 12px;
+            fill: #666;
+            text-anchor: middle;
+        }
+
+        .label {
+            font-size: 13px;
+            font-weight: bold;
+            fill: #333;
+            text-anchor: middle;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            fill: #333;
+            text-anchor: middle;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            fill: #666;
+            text-anchor: middle;
+        }
+
+        .note {
+            font-size: 13px;
+            font-style: italic;
+            fill: #666;
+            text-anchor: middle;
+        }
+
+        .axis-line {
+            stroke: #ccc;
+            stroke-width: 1;
+        }
+
+        .emerging {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <svg class="timeline" viewBox="0 0 950 450">
+            <!-- Title -->
+            <text x="475" y="30" class="title">From ChatGPT to AI-Native Development</text>
+            <text x="475" y="50" class="subtitle">The Applications Era</text>
+
+            <!-- Timeline curve -->
+            <polyline class="milestone" points="100,280 250,230 450,170 650,110 820,60" />
+
+            <!-- Nov 2022: ChatGPT Launch -->
+            <circle cx="100" cy="280" r="12" class="point point-1" />
+            <text x="100" y="255" class="label">ChatGPT</text>
+            <text x="100" y="270" class="label">Launch</text>
+            <text x="100" y="305" class="year">Nov 2022</text>
+
+            <!-- Mar 2023: GPT-4 Multimodal -->
+            <circle cx="250" cy="230" r="10" class="point point-2" />
+            <text x="250" y="208" class="label">GPT-4</text>
+            <text x="250" y="223" class="label">Multimodal</text>
+            <text x="250" y="255" class="year">Mar 2023</text>
+
+            <!-- Sept 2024: Reasoning Models o1 -->
+            <circle cx="450" cy="170" r="10" class="point point-3" />
+            <text x="450" y="148" class="label">Reasoning</text>
+            <text x="450" y="163" class="label">Models (o1)</text>
+            <text x="450" y="195" class="year">Sep 2024</text>
+
+            <!-- Jan 2025: DeepSeek R1 Open Weights -->
+            <circle cx="650" cy="110" r="10" class="point point-4" />
+            <text x="650" y="88" class="label">DeepSeek R1</text>
+            <text x="650" y="103" class="label">Open Weights</text>
+            <text x="650" y="135" class="year">Jan 2025</text>
+
+            <!-- Mid 2025: Vibe Coding / Claude Code -->
+            <circle cx="820" cy="60" r="10" class="point point-5 emerging" />
+            <text x="820" y="38" class="label emerging">Vibe Coding</text>
+            <text x="820" y="53" class="label emerging">Claude Code</text>
+            <text x="820" y="85" class="year emerging">Mid 2025</text>
+
+            <!-- X-axis -->
+            <line x1="80" y1="330" x2="850" y2="330" class="axis-line" />
+            <text x="100" y="350" class="year">Nov 2022</text>
+            <text x="250" y="350" class="year">2023</text>
+            <text x="450" y="350" class="year">2024</text>
+            <text x="650" y="350" class="year">Jan 2025</text>
+            <text x="820" y="350" class="year">Mid 2025</text>
+
+            <!-- Note -->
+            <text x="475" y="395" class="note">Rapid evolution: capability jumps, democratization, and new development paradigms</text>
+        </svg>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+/* Improved Custom CSS for Gabors Data Analysis Presentation
+ * Version: 0.3
+ * Date: 2025-11-12
+ * Iterations: 2 (with Gabor Bekes)
+ * Model: Claude Sonnet 4.5 (2025-10-22)
+ * Purpose: Enhanced presentation design with viridis color palette
+ * Changes: Added fixed title positioning, improved fragment styling
+ */
+
+/* ===== BASE TYPOGRAPHY ===== */
+.reveal {
+    font-size: 1.6em !important;
+}
+
+/* ===== FIXED SLIDE TITLES ===== */
+.reveal .slides section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+.reveal .slides section > h1:first-child,
+.reveal .slides section > h2:first-child {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+    width: 100% !important;
+    background: white !important;
+    padding: 0.5em 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Content area with scroll if needed */
+.reveal .slides section > *:not(h1):not(h2) {
+    flex-shrink: 0;
+}
+
+/* Regular paragraph line spacing */
+.reveal p {
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+/* Headings improvements */
+.reveal h1 {
+    color: var(--viridis-1);
+    margin-bottom: 0.8em;
+    font-weight: 600;
+}
+
+.reveal h2 {
+    color: var(--viridis-2);
+    margin-bottom: 0.7em;
+    border-bottom: 3px solid var(--viridis-4);
+    padding-bottom: 0.3em;
+}
+
+.reveal h3 {
+    color: var(--viridis-3);
+    margin-bottom: 0.6em;
+    margin-top: 1em;
+}
+
+/* ===== LIST STYLING ===== */
+.reveal ul, 
+.reveal ol {
+    line-height: 1.3;
+    margin-bottom: 1em;
+}
+
+.reveal li {
+    margin-bottom: 0.6em;
+}
+
+/* Nested lists spacing */
+.reveal li > ul,
+.reveal li > ol {
+    margin-top: 0.4em;
+}
+
+/* Emoji and icons in lists */
+.reveal li::marker {
+    color: var(--viridis-3);
+}
+
+/* ===== TABLE STYLING ===== */
+.reveal table {
+    font-size: 0.85em;
+    line-height: 1.2;
+    margin: 1.5em auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.reveal table td {
+    padding: 0.4em 0.6em;
+    border: 1px solid rgba(33, 145, 140, 0.2);
+}
+
+.reveal table th {
+    font-size: 1.05em;
+    padding: 0.5em 0.6em;
+    font-weight: bold;
+    background-color: var(--viridis-3);
+    color: white;
+    border: 1px solid rgba(33, 145, 140, 0.3);
+}
+
+/* Alternating row colors */
+.reveal table tbody tr:nth-child(even) {
+    background-color: rgba(33, 145, 140, 0.05);
+}
+
+/* ===== VIRIDIS COLOR PALETTE ===== */
+:root {
+  --viridis-1: #440154;  /* Dark purple */
+  --viridis-2: #3b528b;  /* Purple-blue */
+  --viridis-3: #21918c;  /* Teal */
+  --viridis-4: #5ec962;  /* Green */
+  --viridis-5: #fde725;  /* Yellow */
+  --viridis-bg-light: rgba(33, 145, 140, 0.05);
+  --viridis-border: rgba(33, 145, 140, 0.3);
+}
+
+/* ===== SLIDE BACKGROUNDS ===== */
+.title-slide {
+  background: linear-gradient(135deg, var(--viridis-1), var(--viridis-2), var(--viridis-3));
+  color: white;
+}
+
+.title-slide h1,
+.title-slide h2,
+.title-slide .author,
+.title-slide .date {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Section break slides */
+.section-break {
+  background: linear-gradient(135deg, var(--viridis-2), var(--viridis-3));
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+.section-break h1 {
+  color: white;
+  font-size: 2.5em;
+  border: none;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Thank you slide */
+.thank-you-slide {
+  background: linear-gradient(135deg, var(--viridis-3), var(--viridis-4));
+  color: white;
+  padding: 2em;
+  text-align: center;
+}
+
+.thank-you-slide h2 {
+  color: white;
+  border: none;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.thank-you-slide p,
+.thank-you-slide a {
+  color: white;
+  font-size: 1.1em;
+}
+
+/* ===== CUSTOM ELEMENTS ===== */
+
+/* Visualization frames */
+.visualization {
+  border: 3px solid var(--viridis-1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: var(--viridis-bg-light);
+  margin: 1em 0;
+}
+
+/* Highlight styling */
+.highlight {
+  color: var(--viridis-5);
+  font-weight: bold;
+  background-color: rgba(68, 1, 84, 0.1);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+/* Emphasis styling */
+.reveal strong {
+  color: var(--viridis-1);
+  font-weight: 600;
+}
+
+.reveal em {
+  color: var(--viridis-3);
+  font-style: italic;
+}
+
+/* ===== CALLOUTS ===== */
+.reveal .callout {
+  font-size: 1em;
+  background: linear-gradient(to right, 
+    rgba(33, 145, 140, 0.15), 
+    rgba(33, 145, 140, 0.05));
+  border-left: 6px solid var(--viridis-3);
+  border-radius: 0 8px 8px 0;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.reveal .callout p,
+.reveal .callout strong {
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.reveal .callout strong {
+  color: var(--viridis-1);
+}
+
+/* ===== LINKS ===== */
+.reveal a {
+  color: var(--viridis-3);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.reveal a:hover {
+  color: var(--viridis-2);
+  border-bottom: 2px solid var(--viridis-4);
+}
+
+/* ===== IMAGES ===== */
+.reveal img {
+  border: 2px solid var(--viridis-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin: 1em auto;
+}
+
+/* ===== PROGRESS BAR ===== */
+.reveal .progress {
+  background: rgba(33, 145, 140, 0.2);
+  color: var(--viridis-4);
+  height: 6px;
+}
+
+.reveal .progress span {
+  background: linear-gradient(to right, var(--viridis-3), var(--viridis-4));
+}
+
+/* ===== SLIDE NUMBERS ===== */
+.reveal .slide-number {
+  background-color: var(--viridis-3);
+  color: white;
+  font-size: 0.8em;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+}
+
+/* ===== FOOTER ===== */
+.reveal .footer {
+  font-size: 0.6em;
+  color: var(--viridis-2);
+  opacity: 0.7;
+}
+
+/* ===== CODE BLOCKS ===== */
+.reveal code {
+  background-color: var(--viridis-bg-light);
+  color: var(--viridis-1);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
+
+.reveal pre {
+  background-color: var(--viridis-bg-light);
+  border-left: 4px solid var(--viridis-3);
+  padding: 1em;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ===== ACCESSIBILITY ===== */
+.reveal :focus {
+  outline: 3px solid var(--viridis-4);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .reveal {
+    --viridis-1: #2d0051;
+    --viridis-2: #1e3557;
+    --viridis-3: #006b67;
+  }
+}
+
+/* ===== COLUMN LAYOUTS ===== */
+.reveal .columns {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+.reveal .column {
+  flex: 1;
+}
+
+/* Vertical alignment for columns */
+.reveal .columns.valign-center {
+  align-items: center;
+}
+
+.reveal .columns.valign-top {
+  align-items: flex-start;
+}
+
+/* Better spacing within columns */
+.reveal .column > *:first-child {
+  margin-top: 0;
+}
+
+.reveal .column > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Column images */
+.reveal .column img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== FRAGMENT/PAUSE STYLING ===== */
+.reveal .fragment {
+  transition: opacity 0.3s ease;
+}
+
+.reveal .fragment.visible {
+  opacity: 1;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  .reveal {
+    font-size: 1.4em !important;
+  }
+  
+  .reveal h2 {
+    font-size: 1.4em;
+  }
+  
+  .reveal .callout {
+    padding: 1rem;
+  }
+  
+  /* Stack columns on mobile */
+  .reveal .columns {
+    flex-direction: column;
+    gap: 1em;
+  }
+}

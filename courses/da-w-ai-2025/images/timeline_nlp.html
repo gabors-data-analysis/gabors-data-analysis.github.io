@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+Timeline: NLP/LLM Theoretical Foundations (2003-2022)
+Created: 2025-01-10
+Iterations with user: 2
+Code version: v2.0
+Model: Claude Sonnet 4.5 (2025-01-10)
+Purpose: Educational visualization for economics/social science students
+Context: First of two timelines showing LLM development - focuses on foundational breakthroughs
+-->
+
+<head>
+    <title>NLP Foundations Timeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            width: 100%;
+            height: 450px;
+        }
+
+        .milestone {
+            fill: none;
+            stroke: #666;
+            stroke-width: 3;
+        }
+
+        .point {
+            stroke: white;
+            stroke-width: 2;
+        }
+
+        /* Viridis color scheme */
+        .point-1 {
+            fill: #440154;
+        }
+
+        .point-2 {
+            fill: #3b528b;
+        }
+
+        .point-3 {
+            fill: #21918c;
+        }
+
+        .point-4 {
+            fill: #5ec962;
+        }
+
+        .point-5 {
+            fill: #fde725;
+        }
+
+        .point-6 {
+            fill: #440154;
+        }
+
+        .year {
+            font-size: 12px;
+            fill: #666;
+            text-anchor: middle;
+        }
+
+        .label {
+            font-size: 13px;
+            font-weight: bold;
+            fill: #333;
+            text-anchor: middle;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            fill: #333;
+            text-anchor: middle;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            fill: #666;
+            text-anchor: middle;
+        }
+
+        .note {
+            font-size: 13px;
+            font-style: italic;
+            fill: #666;
+            text-anchor: middle;
+        }
+
+        .axis-line {
+            stroke: #ccc;
+            stroke-width: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <svg class="timeline" viewBox="0 0 950 450">
+            <!-- Title -->
+            <text x="475" y="30" class="title">Theoretical Foundations of Large Language Models</text>
+            <text x="475" y="50" class="subtitle">From Neural Networks to ChatGPT</text>
+
+            <!-- Timeline curve -->
+            <polyline class="milestone" points="100,300 200,260 320,210 450,160 600,110 780,60" />
+
+            <!-- 2003: Neural Language Models -->
+            <circle cx="100" cy="300" r="10" class="point point-1" />
+            <text x="100" y="278" class="label">Neural Language</text>
+            <text x="100" y="293" class="label">Models</text>
+            <text x="100" y="325" class="year">2003</text>
+
+            <!-- 2013: Word2Vec -->
+            <circle cx="200" cy="260" r="10" class="point point-2" />
+            <text x="200" y="240" class="label">Word2Vec</text>
+            <text x="200" y="285" class="year">2013</text>
+
+            <!-- 2017: Transformer Architecture -->
+            <circle cx="320" cy="210" r="10" class="point point-3" />
+            <text x="320" y="188" class="label">Transformer</text>
+            <text x="320" y="203" class="label">Architecture</text>
+            <text x="320" y="235" class="year">2017</text>
+
+            <!-- 2018: BERT/GPT-1 Pretraining -->
+            <circle cx="450" cy="160" r="10" class="point point-4" />
+            <text x="450" y="138" class="label">BERT/GPT-1</text>
+            <text x="450" y="153" class="label">Pretraining</text>
+            <text x="450" y="185" class="year">2018</text>
+
+            <!-- 2020: GPT-3 Scaling -->
+            <circle cx="600" cy="110" r="10" class="point point-5" />
+            <text x="600" y="88" class="label">GPT-3</text>
+            <text x="600" y="103" class="label">Scaling Laws</text>
+            <text x="600" y="135" class="year">2020</text>
+
+            <!-- Nov 2022: RLHF + ChatGPT -->
+            <circle cx="780" cy="60" r="12" class="point point-6" />
+            <text x="780" y="35" class="label">RLHF +</text>
+            <text x="780" y="50" class="label">ChatGPT</text>
+            <text x="780" y="85" class="year">Nov 2022</text>
+
+            <!-- X-axis -->
+            <line x1="80" y1="350" x2="850" y2="350" class="axis-line" />
+            <text x="100" y="370" class="year">2003</text>
+            <text x="250" y="370" class="year">2010</text>
+            <text x="450" y="370" class="year">2017</text>
+            <text x="650" y="370" class="year">2020</text>
+            <text x="780" y="370" class="year">2022</text>
+
+            <!-- Note -->
+            <text x="475" y="415" class="note">20 years of cumulative theoretical innovation enabled the ChatGPT breakthrough</text>
+        </svg>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LLM Timeline Static</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .timeline {
+            width: 900px;
+            height: 400px;
+        }
+
+        .milestone {
+            fill: none;
+            stroke: #666;
+            stroke-width: 3;
+        }
+
+        .point {
+            stroke: white;
+            stroke-width: 2;
+        }
+
+        .point-1 {
+            fill: #440154;
+        }
+
+        .point-2 {
+            fill: #3b528b;
+        }
+
+        .point-3 {
+            fill: #21918c;
+        }
+
+        .point-4 {
+            fill: #5ec962;
+        }
+
+        .point-5 {
+            fill: #fde725;
+        }
+
+        .point-6 {
+            fill: #440154;
+        }
+
+        .year {
+            font-size: 12px;
+            fill: #666;
+            text-anchor: middle;
+        }
+
+        .label {
+            font-size: 14px;
+            font-weight: bold;
+            fill: #333;
+            text-anchor: middle;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            fill: #333;
+            text-anchor: middle;
+        }
+
+        .note {
+            font-size: 14px;
+            font-style: italic;
+            fill: #666;
+            text-anchor: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <svg class="timeline" viewBox="0 0 900 400">
+        <!-- Title -->
+        <text x="450" y="30" class="title">Core Theoretical Milestones in LLM Development</text>
+
+        <!-- Timeline line -->
+        <polyline class="milestone" points="100,200 250,170 450,140 600,110 750,80 850,50" />
+
+        <!-- 2003: Neural Language Models -->
+        <circle cx="100" cy="200" r="10" class="point point-1" />
+        <text x="100" y="175" class="label">Neural Language Models</text>
+        <text x="100" y="225" class="year">2003</text>
+
+        <!-- 2013: Word Embeddings -->
+        <circle cx="250" cy="170" r="10" class="point point-2" />
+        <text x="250" y="145" class="label">Word Embeddings</text>
+        <text x="250" y="195" class="year">2013</text>
+
+        <!-- 2017: Transformer Architecture -->
+        <circle cx="450" cy="140" r="10" class="point point-3" />
+        <text x="450" y="115" class="label">Transformer Architecture</text>
+        <text x="450" y="165" class="year">2017</text>
+
+        <!-- 2018: Pretraining + Fine-tuning -->
+        <circle cx="600" cy="110" r="10" class="point point-4" />
+        <text x="600" y="85" class="label">Pretraining + Fine-tuning</text>
+        <text x="600" y="135" class="year">2018</text>
+
+        <!-- 2022: ChatGPT -->
+        <circle cx="750" cy="80" r="10" class="point point-5" />
+        <text x="750" y="55" class="label">ChatGPT</text>
+        <text x="750" y="105" class="year">2022</text>
+
+        <!-- 2023: RLHF -->
+        <circle cx="850" cy="50" r="10" class="point point-6" />
+        <text x="850" y="25" class="label">RLHF</text>
+        <text x="850" y="75" class="year">2023</text>
+
+        <!-- X-axis -->
+        <line x1="50" y1="250" x2="850" y2="250" stroke="#ccc" stroke-width="1" />
+        <text x="50" y="270" class="year">2000</text>
+        <text x="250" y="270" class="year">2010</text>
+        <text x="450" y="270" class="year">2015</text>
+        <text x="650" y="270" class="year">2020</text>
+        <text x="850" y="270" class="year">2025</text>
+
+        <!-- Note -->
+        <text x="450" y="350" class="note">For economics students: Note how key theoretical innovations built upon each
+            other over 20+ years</text>
+    </svg>
+</body>
+
+</html>
