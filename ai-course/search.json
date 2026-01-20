@@ -1283,7 +1283,7 @@
     "href": "learn-more/beyond.html#basics",
     "title": "Beyond: suggested readings and resources to learn more",
     "section": "Basics",
-    "text": "Basics\n\nCore readings\n\nEthan Mollick “Co-Intelligence: Living and Working with AI” Penguin Random House 2024\nAnton Korinek “Generative AI for Economic Research: Use Cases and Implications for Economists,” Journal of Economic Literature 61(4) December 2024 Update 1–74\n\n\n\nImportant reviews\n\nReview of LLMs by Simon Willison\nMachines of Loving Grace Dario Amodei\n\n\n\nPrompting\n\nAI Frontiers in Plain English: Prompt Engineering guide from Google with LM Notebook Part 1. LLM output configurations + others\n\n\n\nUnderstanding LLMs\n\nGlossary of LLM terms Glossary of LLM Terms\nFinancial Times: How AI Large Language Models Work\nThe Economist: How Large Language Models Work\nThinking like AI\nWhat’s an LLM context window and why is it getting larger? IBM research on context window\n\n\n\nAI and business / management\n\nStrategy in business Build a winning AI strategy, HBR 2023\nInterview with Rafella Sadun on Reskilling workforce with AI from MIT Sloan Review",
+    "text": "Basics\n\nCore readings\n\nEthan Mollick “Co-Intelligence: Living and Working with AI” Penguin Random House 2024\nAnton Korinek “Generative AI for Economic Research: Use Cases and Implications for Economists,” Journal of Economic Literature 61(4) December 2024 Update 1–74\n\n\n\nImportant reviews\n\nReview of LLMs by Simon Willison\nMachines of Loving Grace Dario Amodei\n\n\n\nPrompting and context management\n\nAI Frontiers in Plain English: Prompt Engineering guide from Google with LM Notebook Part 1. LLM output configurations + others\n\n\n\nUnderstanding LLMs\n\nGlossary of LLM terms Glossary of LLM Terms\nFinancial Times: How AI Large Language Models Work\nThe Economist: How Large Language Models Work\nThinking like AI\nWhat’s an LLM context window and why is it getting larger? IBM research on context window\n\n\n\nAI and business / management\n\nStrategy in business Build a winning AI strategy, HBR 2023\nInterview with Rafella Sadun on Reskilling workforce with AI from MIT Sloan Review",
     "crumbs": [
       "Home",
       "Resources",
@@ -3436,7 +3436,7 @@
     "href": "learn-more/beyond.html#new-methods-and-tools",
     "title": "Beyond: suggested readings and resources to learn more",
     "section": "New methods and tools",
-    "text": "New methods and tools\n\nBest video series on introduction to neural networks and LLMs. [3blue1brown youtube playlist] (https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) 7 times 20-30mins videos, from zero to conversational understanding\nVery usefil video on skills and Claude’s skill creator.",
+    "text": "New methods and tools\n\nBest video series on introduction to neural networks and LLMs. [3blue1brown youtube playlist] (https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) 7 times 20-30mins videos, from zero to conversational understanding\nVery usefil video on skills and Claude’s skill creator.\nAgents – Google’s seminar on agents at work – requires registration",
     "crumbs": [
       "Home",
       "Resources",
@@ -3508,11 +3508,86 @@
     "href": "da-knowledge/documentation-readme.html",
     "title": "Documentation Fundamentals",
     "section": "",
-    "text": "title: “Documentation Fundamentals” subtitle: “Markdown, readme and more” date: “2026-01-17” —"
+    "text": "Good documentation essential for reproducible research. Without it, even you won’t understand your own work six months later. Documentation serves three audiences: your future self, your collaborators, and the broader research community."
   },
   {
     "objectID": "da-knowledge/documentation-readme.html#documentation-fundamentals",
     "href": "da-knowledge/documentation-readme.html#documentation-fundamentals",
+    "title": "Documentation Fundamentals",
+    "section": "Documentation Fundamentals",
+    "text": "Documentation Fundamentals\n\nAbout Markdown\n\nEditor in R, Python Quarto\nOnline Markdown editor\nAlso: Pandoc\n\n\n\nWhat is a good readme?\nSome examples for reproduction package\n\nBékés-Kézdi (2021) Hotels dataset – show basics\nKoren-Pető (2021) Business disruptions from social distancing as PDF\nSome ideas on readme: Makereadme, Social Science Editors\n\nKey ingredients\n\nOverview of project\nlicense\nAll datasets (data tables) separately discussed\nAll key variables described (name, content, type, coverage (% share missing)\n\nmaybe also: source, extension (csv / xlsx/ parquet)\n\nData lineage “provenance” : source → processing → final structure\n\n\n\nWhat is a variable dictionary (also called codebook)\n\nmore details of a dataset, often as xlsx\nmetric (euro, %), meaning of values if categorical\nmaybe even mean, min, max\n\nExamples\n\nBékés-Kézdi (2021) Bisnode dataset variables\nReif (2022) illinois-wellness-data\n\nOh, but there is one we created we created\n\nOn earnings data, by Claude"
+  },
+  {
+    "objectID": "da-knowledge/documentation-readme.html#why-documentation-matters",
+    "href": "da-knowledge/documentation-readme.html#why-documentation-matters",
+    "title": "Documentation Fundamentals",
+    "section": "",
+    "text": "Good documentation essential for reproducible research. Without it, even you won’t understand your own work six months later. Documentation serves three audiences: your future self, your collaborators, and the broader research community."
+  },
+  {
+    "objectID": "da-knowledge/documentation-readme.html#key-definitions",
+    "href": "da-knowledge/documentation-readme.html#key-definitions",
+    "title": "Documentation Fundamentals",
+    "section": "Key Definitions",
+    "text": "Key Definitions\nBefore diving in, let’s clarify terms that are often used interchangeably but mean different things:\n\n\n\n\n\n\n\n\nTerm\nWhat it is\nTypical format\n\n\n\n\nREADME\nProject overview and setup instructions\n.md, .txt, .pdf\n\n\nCodebook\nDetailed variable-level documentation\n.pdf, .xlsx\n\n\nData dictionary\nTechnical specification of variables (often synonymous with codebook)\n.xlsx, .csv, .txt\n\n\nData lineage\nThe path data takes from source to final form\nDiagram or narrative\n\n\nMetadata\nData about data (when collected, by whom, how)\nVarious"
+  },
+  {
+    "objectID": "da-knowledge/documentation-readme.html#about-markdown",
+    "href": "da-knowledge/documentation-readme.html#about-markdown",
+    "title": "Documentation Fundamentals",
+    "section": "About Markdown",
+    "text": "About Markdown\nMarkdown is a lightweight markup language that’s become the standard for documentation in data science. It’s readable as plain text but renders nicely in browsers and editors.\nTools for working with Markdown\n\nQuarto — the successor to R Markdown, works with R, Python, Julia\nOnline Markdown editor — for quick testing\nPandoc — converts between formats (md → docx, pdf, html)\nDillinger — another online editor with live preview\n\nQuick Markdown reference\n# Heading 1\n## Heading 2\n**bold** and *italic*\n- bullet point\n1. numbered list\n[link text](url)\n`inline code`"
+  },
+  {
+    "objectID": "da-knowledge/documentation-readme.html#what-is-a-good-readme",
+    "href": "da-knowledge/documentation-readme.html#what-is-a-good-readme",
+    "title": "Documentation Fundamentals",
+    "section": "What is a Good README?",
+    "text": "What is a Good README?\nA README is the front door to your project. Someone should be able to understand what your project does, how to use it, and where to find things—all from reading the README.\n\nKey Ingredients\nA complete README for a research project should include:\n\nOverview — What is this project? What question does it answer?\nData sources — Where does the data come from? Any access restrictions?\nFile structure — What’s in each folder? Which scripts run in what order?\nRequirements — Software, packages, and versions needed\nInstructions — How to run the analysis from start to finish\nLicense — Terms for reuse (MIT, CC-BY, etc.)\nContact — Who to ask questions\n\n\n\nData Description Checklist\nFor each dataset in your project, document:\n\nName and file format (csv, parquet, xlsx)\nNumber of observations and variables\nUnit of observation (person, firm-year, country-month)\nTime coverage and geographic scope\nKey variables with brief descriptions\nMissing data: how much and why\nData lineage: source → processing → final structure\n\n\n\nExamples of Good READMEs\nReproduction packages\n\nBékés-Kézdi (2021) Hotels dataset — clean, minimal, effective\nKoren-Pető (2021) Business disruptions from social distancing | PDF version — comprehensive research package\n\nTemplates and guides\n\nMake a README — interactive guide with examples\nSocial Science Data Editors Template — journal-standard template\nAEA Data Editor guidance — requirements for top economics journals"
+  },
+  {
+    "objectID": "da-knowledge/documentation-readme.html#what-is-a-codebook-variable-dictionary",
+    "href": "da-knowledge/documentation-readme.html#what-is-a-codebook-variable-dictionary",
+    "title": "Documentation Fundamentals",
+    "section": "What is a Codebook (Variable Dictionary)?",
+    "text": "What is a Codebook (Variable Dictionary)?\nA codebook provides detailed, variable-level documentation. While the README gives the big picture, the codebook tells you exactly what Q47_recoded means.\n\nWhat to Include for Each Variable\n\n\n\nElement\nExample\n\n\n\n\nVariable name\nincome_hh\n\n\nLabel\nHousehold monthly income\n\n\nType\nNumeric (continuous)\n\n\nUnit/metric\nEUR, monthly\n\n\nValid range\n0–999999\n\n\nCoding for categories\n1=Low, 2=Medium, 3=High\n\n\nMissing values\n-99 = refused, NA = not asked\n\n\nShare missing\n4.2%\n\n\nNotes\nTop-coded at 99th percentile\n\n\n\n\n\nExamples of Good Codebooks\n\nBékés-Kézdi (2021) Bisnode dataset variables — clean spreadsheet format\nReif (2022) Illinois Wellness codebook — plain text, version controlled\nOn earnings data – used in this course"
+  },
+  {
+    "objectID": "da-knowledge/documentation-readme.html#tips-for-ai-assisted-documentation",
+    "href": "da-knowledge/documentation-readme.html#tips-for-ai-assisted-documentation",
+    "title": "Documentation Fundamentals",
+    "section": "Tips for AI-Assisted Documentation",
+    "text": "Tips for AI-Assisted Documentation\nLLMs can significantly speed up documentation, but require careful verification.\nWhat AI does well\n\nSummarizing long codebooks\nGenerating first drafts of variable descriptions\nSuggesting what’s missing from your documentation\nConverting between formats (e.g., codebook PDF → markdown table)\n\nWhat requires human oversight\n\nVerifying variable definitions match actual data\nChecking that coded values (1, 2, 3…) match the stated meaning\nEnsuring coverage statistics are accurate\nConfirming data lineage is correct\n\nA practical workflow\n\nStart by having a first look to get a feel. Look at documensts, check the index. Open data.\nUpload your codebook/data to the LLM\nAsk for a structured summary\nVerify 3-5 variables manually against the source\nIterate: ask AI to fix errors you find\nFinal human review before publishing"
+  },
+  {
+    "objectID": "da-knowledge/documentation-readme.html#further-reading",
+    "href": "da-knowledge/documentation-readme.html#further-reading",
+    "title": "Documentation Fundamentals",
+    "section": "Further Reading",
+    "text": "Further Reading\n\nCrystal Lewis, Data Management in Large-Scale Education Research — practical guide to data structure\nTIER Protocol — comprehensive reproducibility framework"
+  },
+  {
+    "objectID": "learn-more/beyond.html#claude-code-and-clis",
+    "href": "learn-more/beyond.html#claude-code-and-clis",
+    "title": "Beyond: suggested readings and resources to learn more",
+    "section": "Claude Code and CLIs",
+    "text": "Claude Code and CLIs\n\nIntro videos and use\n\nGetting started with Claude Code 2.0 – great 30 mins intro by Anthropic’s dev\nSankalp on Claude Code – list – great collection of links and ideas",
+    "crumbs": [
+      "Home",
+      "Resources",
+      "Learn More"
+    ]
+  },
+  {
+    "objectID": "da-knowledge/documentation-readme-old.html",
+    "href": "da-knowledge/documentation-readme-old.html",
+    "title": "Documentation Fundamentals",
+    "section": "",
+    "text": "title: “Documentation Fundamentals” subtitle: “Markdown, readme and more” date: “2026-01-17” —"
+  },
+  {
+    "objectID": "da-knowledge/documentation-readme-old.html#documentation-fundamentals",
+    "href": "da-knowledge/documentation-readme-old.html#documentation-fundamentals",
     "title": "Documentation Fundamentals",
     "section": "Documentation Fundamentals",
     "text": "Documentation Fundamentals\n\nAbout Markdown\n\nEditor in R, Python Quarto\nOnline Markdown editor\nAlso: Pandoc\n\n\n\nWhat is a good readme?\nSome examples for reproduction package\n\nBékés-Kézdi (2021) Hotels dataset – show basics\nKoren-Pető (2021) Business disruptions from social distancing as PDF\nSome ideas on readme: Makereadme, Social Science Editors\n\nKey ingredients\n\nOverview of project\nlicense\nAll datasets (data tables) separately discussed\nAll key variables described (name, content, type, coverage (% share missing)\n\nmaybe also: source, extension (csv / xlsx/ parquet)\n\nData lineage “provenance” : source → processing → final structure\n\n\n\nWhat is a variable dictionary (also called codebook)\n\nmore details of a dataset, often as xlsx\nmetric (euro, %), meaning of values if categorical\nmaybe even mean, min, max\n\nExamples\n\nBékés-Kézdi (2021) Bisnode dataset variables\nReif (2022) illinois-wellness-data\n\nOh, but there is one we created we created\n\nOn earnings data, by Claude"
