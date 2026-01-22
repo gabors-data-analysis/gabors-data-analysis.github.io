@@ -29,6 +29,11 @@ The lab was founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK
 
 Our work centers on developing comprehensive educational resources tied to the Data Analysis for Business, Economics, and Policy textbook ecosystem. We create and maintain open-source code repositories, setup documentation, case studies, and practice materials, alongside instructor dashboards (dashboards.gabors-data-analysis.com) that support teaching worldwide. We launched an innovative [Data Analysis with AI](https://gabors-data-analysis.com/ai-course/) course reflecting our commitment to integrating artificial intelligence into quantitative education and research support. All our materials are free and open-source. We train the next generation of applied data analysts: our research assistants and associates launch careers as data scientists in business, pursue PhDs, or conduct policy research. 
 
+Example projects are:
+* [data analysis dashboards](https://dashboards.gabors-data-analysis.com/), 
+* [Data Analysis with AI course](https://gabors-data-analysis.com/ai-course/)
+* [introduction to data science course](https://github.com/earino/ECBS5294)
+
 For more details, see [our projetcs](/gabors-lab-projects.md)
 
 ## Where we are
@@ -36,6 +41,20 @@ For more details, see [our projetcs](/gabors-lab-projects.md)
 We work in Vienna (AT), Budapest (HU) and online. 
 
 We are at [LinkedIn](https://www.linkedin.com/company/gabors-data-lab/)
+
+## Partners
+
+### Academic
+
+* CEU Department of Economics, funding since 2013
+* CEU Teaching Development Grant, grant 2024
+* Cambridge University Press, textbook publisher
+
+### Industry
+
+* GitHub, Inc.
+* Microsoft AI for Good Lab
+* SpareCores, Inc
 
 
 ## Staff
@@ -53,7 +72,6 @@ We are at [LinkedIn](https://www.linkedin.com/company/gabors-data-lab/)
 
 * Daniel Barabás, associate
 * Márton Nagy, analyst
-* Tatyana Yakushina, analyst
 
 ## Alumni
 
@@ -67,13 +85,9 @@ We are at [LinkedIn](https://www.linkedin.com/company/gabors-data-lab/)
 * Kinga Ritter ([Data PM, Job and Talent](https://www.linkedin.com/in/eszterpazmandi/), Spain)
 * Zsuzsa Vadle ([Phd Student, CEU](https://www.linkedin.com/in/zsuzsannavadle/), Austria)
 * Ádám Víg ([Data analyst/AI, Google](https://www.linkedin.com/in/adam-vig-250729196/), Hungary)
+* Tatyana Yakushina (Phd student)
 
 
-## Partners
-
-* CEU Department of Economics, funding since 2013
-* CEU Teaching Development Grant, grant 2024
-* Cambridge University Press, textbook publisher
 
 ## Events
 
