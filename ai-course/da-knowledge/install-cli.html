@@ -569,6 +569,19 @@ sudo dnf install nodejs npm</code></pre>
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>VS Code Users
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can also open a terminal directly inside VS Code! Press <code>Ctrl+`</code> (backtick) on Windows/Linux or <code>Cmd+`</code> on Mac—or go to <strong>View → Terminal</strong>. This keeps everything in one window.</p>
+</div>
+</div>
 <p><strong>New to the terminal?</strong> Read <a href="terminal-basics.html">Terminal Basics</a> first.</p>
 <hr>
 </section>
@@ -1399,338 +1412,343 @@ opencode</code></pre>
 <span id="cb37-80"><a href="#cb37-80" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-81"><a href="#cb37-81" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb37-82"><a href="#cb37-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-83"><a href="#cb37-83" aria-hidden="true" tabindex="-1"></a>**New to the terminal?** Read <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](terminal-basics.html)</span> first.</span>
-<span id="cb37-84"><a href="#cb37-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-85"><a href="#cb37-85" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb37-86"><a href="#cb37-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-87"><a href="#cb37-87" aria-hidden="true" tabindex="-1"></a><span class="fu">## Claude Code</span></span>
-<span id="cb37-88"><a href="#cb37-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-89"><a href="#cb37-89" aria-hidden="true" tabindex="-1"></a>Anthropic's official CLI for Claude.</span>
-<span id="cb37-90"><a href="#cb37-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-91"><a href="#cb37-91" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
-<span id="cb37-92"><a href="#cb37-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-93"><a href="#cb37-93" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb37-94"><a href="#cb37-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-95"><a href="#cb37-95" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
-<span id="cb37-96"><a href="#cb37-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-97"><a href="#cb37-97" aria-hidden="true" tabindex="-1"></a>Open PowerShell or Command Prompt:</span>
-<span id="cb37-98"><a href="#cb37-98" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-99"><a href="#cb37-99" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @anthropic-ai/claude-code</span></span>
-<span id="cb37-100"><a href="#cb37-100" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-83"><a href="#cb37-83" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb37-84"><a href="#cb37-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## VS Code Users</span></span>
+<span id="cb37-85"><a href="#cb37-85" aria-hidden="true" tabindex="-1"></a>You can also open a terminal directly inside VS Code! Press `<span class="in">` Ctrl+`</span> `` (backtick) on Windows/Linux or `<span class="in">` Cmd+`</span> `` on Mac—or go to **View → Terminal**. This keeps everything in one window.</span>
+<span id="cb37-86"><a href="#cb37-86" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb37-87"><a href="#cb37-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-88"><a href="#cb37-88" aria-hidden="true" tabindex="-1"></a>**New to the terminal?** Read <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](terminal-basics.html)</span> first.</span>
+<span id="cb37-89"><a href="#cb37-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-90"><a href="#cb37-90" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb37-91"><a href="#cb37-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-92"><a href="#cb37-92" aria-hidden="true" tabindex="-1"></a><span class="fu">## Claude Code</span></span>
+<span id="cb37-93"><a href="#cb37-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-94"><a href="#cb37-94" aria-hidden="true" tabindex="-1"></a>Anthropic's official CLI for Claude.</span>
+<span id="cb37-95"><a href="#cb37-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-96"><a href="#cb37-96" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
+<span id="cb37-97"><a href="#cb37-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-98"><a href="#cb37-98" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb37-99"><a href="#cb37-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-100"><a href="#cb37-100" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
 <span id="cb37-101"><a href="#cb37-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-102"><a href="#cb37-102" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
-<span id="cb37-103"><a href="#cb37-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-104"><a href="#cb37-104" aria-hidden="true" tabindex="-1"></a>Open Terminal:</span>
+<span id="cb37-102"><a href="#cb37-102" aria-hidden="true" tabindex="-1"></a>Open PowerShell or Command Prompt:</span>
+<span id="cb37-103"><a href="#cb37-103" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-104"><a href="#cb37-104" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @anthropic-ai/claude-code</span></span>
 <span id="cb37-105"><a href="#cb37-105" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-106"><a href="#cb37-106" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @anthropic-ai/claude-code</span></span>
-<span id="cb37-107"><a href="#cb37-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-106"><a href="#cb37-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-107"><a href="#cb37-107" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
 <span id="cb37-108"><a href="#cb37-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-109"><a href="#cb37-109" aria-hidden="true" tabindex="-1"></a>If permission error:</span>
+<span id="cb37-109"><a href="#cb37-109" aria-hidden="true" tabindex="-1"></a>Open Terminal:</span>
 <span id="cb37-110"><a href="#cb37-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-111"><a href="#cb37-111" aria-hidden="true" tabindex="-1"></a><span class="in">sudo npm install -g @anthropic-ai/claude-code</span></span>
+<span id="cb37-111"><a href="#cb37-111" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @anthropic-ai/claude-code</span></span>
 <span id="cb37-112"><a href="#cb37-112" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb37-113"><a href="#cb37-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-114"><a href="#cb37-114" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
-<span id="cb37-115"><a href="#cb37-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-116"><a href="#cb37-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-117"><a href="#cb37-117" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @anthropic-ai/claude-code</span></span>
-<span id="cb37-118"><a href="#cb37-118" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-119"><a href="#cb37-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-120"><a href="#cb37-120" aria-hidden="true" tabindex="-1"></a>If permission error:</span>
+<span id="cb37-114"><a href="#cb37-114" aria-hidden="true" tabindex="-1"></a>If permission error:</span>
+<span id="cb37-115"><a href="#cb37-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-116"><a href="#cb37-116" aria-hidden="true" tabindex="-1"></a><span class="in">sudo npm install -g @anthropic-ai/claude-code</span></span>
+<span id="cb37-117"><a href="#cb37-117" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-118"><a href="#cb37-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-119"><a href="#cb37-119" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
+<span id="cb37-120"><a href="#cb37-120" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-121"><a href="#cb37-121" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-122"><a href="#cb37-122" aria-hidden="true" tabindex="-1"></a><span class="in">sudo npm install -g @anthropic-ai/claude-code</span></span>
+<span id="cb37-122"><a href="#cb37-122" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @anthropic-ai/claude-code</span></span>
 <span id="cb37-123"><a href="#cb37-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb37-124"><a href="#cb37-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-125"><a href="#cb37-125" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb37-126"><a href="#cb37-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-127"><a href="#cb37-127" aria-hidden="true" tabindex="-1"></a><span class="fu">### Authenticate</span></span>
-<span id="cb37-128"><a href="#cb37-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-129"><a href="#cb37-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-130"><a href="#cb37-130" aria-hidden="true" tabindex="-1"></a><span class="in">claude</span></span>
-<span id="cb37-131"><a href="#cb37-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-132"><a href="#cb37-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-133"><a href="#cb37-133" aria-hidden="true" tabindex="-1"></a>First run opens a browser to log in with your Anthropic account. You need:</span>
-<span id="cb37-134"><a href="#cb37-134" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Claude Pro** subscription ($20/month), OR</span>
-<span id="cb37-135"><a href="#cb37-135" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**API access** with credits</span>
-<span id="cb37-136"><a href="#cb37-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-137"><a href="#cb37-137" aria-hidden="true" tabindex="-1"></a><span class="fu">### Verify</span></span>
-<span id="cb37-138"><a href="#cb37-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-139"><a href="#cb37-139" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-140"><a href="#cb37-140" aria-hidden="true" tabindex="-1"></a><span class="in">claude --version</span></span>
-<span id="cb37-141"><a href="#cb37-141" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-142"><a href="#cb37-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-143"><a href="#cb37-143" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
-<span id="cb37-144"><a href="#cb37-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-145"><a href="#cb37-145" aria-hidden="true" tabindex="-1"></a>Navigate to your project folder and start:</span>
+<span id="cb37-125"><a href="#cb37-125" aria-hidden="true" tabindex="-1"></a>If permission error:</span>
+<span id="cb37-126"><a href="#cb37-126" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-127"><a href="#cb37-127" aria-hidden="true" tabindex="-1"></a><span class="in">sudo npm install -g @anthropic-ai/claude-code</span></span>
+<span id="cb37-128"><a href="#cb37-128" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-129"><a href="#cb37-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-130"><a href="#cb37-130" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb37-131"><a href="#cb37-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-132"><a href="#cb37-132" aria-hidden="true" tabindex="-1"></a><span class="fu">### Authenticate</span></span>
+<span id="cb37-133"><a href="#cb37-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-134"><a href="#cb37-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-135"><a href="#cb37-135" aria-hidden="true" tabindex="-1"></a><span class="in">claude</span></span>
+<span id="cb37-136"><a href="#cb37-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-137"><a href="#cb37-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-138"><a href="#cb37-138" aria-hidden="true" tabindex="-1"></a>First run opens a browser to log in with your Anthropic account. You need:</span>
+<span id="cb37-139"><a href="#cb37-139" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Claude Pro** subscription ($20/month), OR</span>
+<span id="cb37-140"><a href="#cb37-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**API access** with credits</span>
+<span id="cb37-141"><a href="#cb37-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-142"><a href="#cb37-142" aria-hidden="true" tabindex="-1"></a><span class="fu">### Verify</span></span>
+<span id="cb37-143"><a href="#cb37-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-144"><a href="#cb37-144" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-145"><a href="#cb37-145" aria-hidden="true" tabindex="-1"></a><span class="in">claude --version</span></span>
 <span id="cb37-146"><a href="#cb37-146" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-147"><a href="#cb37-147" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
-<span id="cb37-148"><a href="#cb37-148" aria-hidden="true" tabindex="-1"></a><span class="in">claude</span></span>
-<span id="cb37-149"><a href="#cb37-149" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-150"><a href="#cb37-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-151"><a href="#cb37-151" aria-hidden="true" tabindex="-1"></a>Then type your requests naturally: "What files are here?" or "Read the CSV and calculate the mean."</span>
-<span id="cb37-152"><a href="#cb37-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-153"><a href="#cb37-153" aria-hidden="true" tabindex="-1"></a>**More details:** <span class="co">[</span><span class="ot">Claude Code Documentation</span><span class="co">](https://docs.anthropic.com/en/docs/claude-code)</span></span>
-<span id="cb37-154"><a href="#cb37-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-155"><a href="#cb37-155" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb37-156"><a href="#cb37-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-157"><a href="#cb37-157" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gemini CLI</span></span>
-<span id="cb37-158"><a href="#cb37-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-159"><a href="#cb37-159" aria-hidden="true" tabindex="-1"></a>Google's CLI for Gemini models.</span>
-<span id="cb37-160"><a href="#cb37-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-161"><a href="#cb37-161" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
-<span id="cb37-162"><a href="#cb37-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-163"><a href="#cb37-163" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb37-164"><a href="#cb37-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-165"><a href="#cb37-165" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
-<span id="cb37-166"><a href="#cb37-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-167"><a href="#cb37-167" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-168"><a href="#cb37-168" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @anthropic-ai/claude-code</span></span>
-<span id="cb37-169"><a href="#cb37-169" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-170"><a href="#cb37-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-171"><a href="#cb37-171" aria-hidden="true" tabindex="-1"></a>*Note: As of 2026, check [Google's documentation](https://ai.google.dev/) for the current package name.*</span>
-<span id="cb37-172"><a href="#cb37-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-173"><a href="#cb37-173" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
-<span id="cb37-174"><a href="#cb37-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-175"><a href="#cb37-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-176"><a href="#cb37-176" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g gemini-cli</span></span>
-<span id="cb37-177"><a href="#cb37-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-178"><a href="#cb37-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-179"><a href="#cb37-179" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
-<span id="cb37-180"><a href="#cb37-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-181"><a href="#cb37-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-182"><a href="#cb37-182" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g gemini-cli</span></span>
-<span id="cb37-183"><a href="#cb37-183" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-184"><a href="#cb37-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-185"><a href="#cb37-185" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb37-186"><a href="#cb37-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-187"><a href="#cb37-187" aria-hidden="true" tabindex="-1"></a><span class="fu">### Authenticate</span></span>
-<span id="cb37-188"><a href="#cb37-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-189"><a href="#cb37-189" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-190"><a href="#cb37-190" aria-hidden="true" tabindex="-1"></a><span class="in">gemini auth login</span></span>
-<span id="cb37-191"><a href="#cb37-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-192"><a href="#cb37-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-193"><a href="#cb37-193" aria-hidden="true" tabindex="-1"></a>This opens a browser to authenticate with your Google account. Free tier available with limits.</span>
-<span id="cb37-194"><a href="#cb37-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-195"><a href="#cb37-195" aria-hidden="true" tabindex="-1"></a><span class="fu">### Verify</span></span>
-<span id="cb37-196"><a href="#cb37-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-197"><a href="#cb37-197" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-198"><a href="#cb37-198" aria-hidden="true" tabindex="-1"></a><span class="in">gemini --version</span></span>
-<span id="cb37-199"><a href="#cb37-199" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-200"><a href="#cb37-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-201"><a href="#cb37-201" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
-<span id="cb37-202"><a href="#cb37-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-203"><a href="#cb37-203" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-204"><a href="#cb37-204" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
-<span id="cb37-205"><a href="#cb37-205" aria-hidden="true" tabindex="-1"></a><span class="in">gemini</span></span>
-<span id="cb37-206"><a href="#cb37-206" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-147"><a href="#cb37-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-148"><a href="#cb37-148" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
+<span id="cb37-149"><a href="#cb37-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-150"><a href="#cb37-150" aria-hidden="true" tabindex="-1"></a>Navigate to your project folder and start:</span>
+<span id="cb37-151"><a href="#cb37-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-152"><a href="#cb37-152" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
+<span id="cb37-153"><a href="#cb37-153" aria-hidden="true" tabindex="-1"></a><span class="in">claude</span></span>
+<span id="cb37-154"><a href="#cb37-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-155"><a href="#cb37-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-156"><a href="#cb37-156" aria-hidden="true" tabindex="-1"></a>Then type your requests naturally: "What files are here?" or "Read the CSV and calculate the mean."</span>
+<span id="cb37-157"><a href="#cb37-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-158"><a href="#cb37-158" aria-hidden="true" tabindex="-1"></a>**More details:** <span class="co">[</span><span class="ot">Claude Code Documentation</span><span class="co">](https://docs.anthropic.com/en/docs/claude-code)</span></span>
+<span id="cb37-159"><a href="#cb37-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-160"><a href="#cb37-160" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb37-161"><a href="#cb37-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-162"><a href="#cb37-162" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gemini CLI</span></span>
+<span id="cb37-163"><a href="#cb37-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-164"><a href="#cb37-164" aria-hidden="true" tabindex="-1"></a>Google's CLI for Gemini models.</span>
+<span id="cb37-165"><a href="#cb37-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-166"><a href="#cb37-166" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
+<span id="cb37-167"><a href="#cb37-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-168"><a href="#cb37-168" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb37-169"><a href="#cb37-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-170"><a href="#cb37-170" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
+<span id="cb37-171"><a href="#cb37-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-172"><a href="#cb37-172" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-173"><a href="#cb37-173" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @anthropic-ai/claude-code</span></span>
+<span id="cb37-174"><a href="#cb37-174" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-175"><a href="#cb37-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-176"><a href="#cb37-176" aria-hidden="true" tabindex="-1"></a>*Note: As of 2026, check [Google's documentation](https://ai.google.dev/) for the current package name.*</span>
+<span id="cb37-177"><a href="#cb37-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-178"><a href="#cb37-178" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
+<span id="cb37-179"><a href="#cb37-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-180"><a href="#cb37-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-181"><a href="#cb37-181" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g gemini-cli</span></span>
+<span id="cb37-182"><a href="#cb37-182" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-183"><a href="#cb37-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-184"><a href="#cb37-184" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
+<span id="cb37-185"><a href="#cb37-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-186"><a href="#cb37-186" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-187"><a href="#cb37-187" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g gemini-cli</span></span>
+<span id="cb37-188"><a href="#cb37-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-189"><a href="#cb37-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-190"><a href="#cb37-190" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb37-191"><a href="#cb37-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-192"><a href="#cb37-192" aria-hidden="true" tabindex="-1"></a><span class="fu">### Authenticate</span></span>
+<span id="cb37-193"><a href="#cb37-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-194"><a href="#cb37-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-195"><a href="#cb37-195" aria-hidden="true" tabindex="-1"></a><span class="in">gemini auth login</span></span>
+<span id="cb37-196"><a href="#cb37-196" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-197"><a href="#cb37-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-198"><a href="#cb37-198" aria-hidden="true" tabindex="-1"></a>This opens a browser to authenticate with your Google account. Free tier available with limits.</span>
+<span id="cb37-199"><a href="#cb37-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-200"><a href="#cb37-200" aria-hidden="true" tabindex="-1"></a><span class="fu">### Verify</span></span>
+<span id="cb37-201"><a href="#cb37-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-202"><a href="#cb37-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-203"><a href="#cb37-203" aria-hidden="true" tabindex="-1"></a><span class="in">gemini --version</span></span>
+<span id="cb37-204"><a href="#cb37-204" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-205"><a href="#cb37-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-206"><a href="#cb37-206" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
 <span id="cb37-207"><a href="#cb37-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-208"><a href="#cb37-208" aria-hidden="true" tabindex="-1"></a>**More details:** <span class="co">[</span><span class="ot">Google AI for Developers</span><span class="co">](https://ai.google.dev/)</span></span>
-<span id="cb37-209"><a href="#cb37-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-210"><a href="#cb37-210" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb37-211"><a href="#cb37-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-212"><a href="#cb37-212" aria-hidden="true" tabindex="-1"></a><span class="fu">## Codex CLI</span></span>
-<span id="cb37-213"><a href="#cb37-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-214"><a href="#cb37-214" aria-hidden="true" tabindex="-1"></a>OpenAI's command-line tool.</span>
-<span id="cb37-215"><a href="#cb37-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-216"><a href="#cb37-216" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
-<span id="cb37-217"><a href="#cb37-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-218"><a href="#cb37-218" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb37-219"><a href="#cb37-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-220"><a href="#cb37-220" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
-<span id="cb37-221"><a href="#cb37-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-222"><a href="#cb37-222" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-223"><a href="#cb37-223" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @openai/codex</span></span>
-<span id="cb37-224"><a href="#cb37-224" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-225"><a href="#cb37-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-226"><a href="#cb37-226" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
-<span id="cb37-227"><a href="#cb37-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-228"><a href="#cb37-228" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-229"><a href="#cb37-229" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @openai/codex</span></span>
-<span id="cb37-230"><a href="#cb37-230" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-231"><a href="#cb37-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-232"><a href="#cb37-232" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
-<span id="cb37-233"><a href="#cb37-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-234"><a href="#cb37-234" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-235"><a href="#cb37-235" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @openai/codex</span></span>
-<span id="cb37-236"><a href="#cb37-236" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-237"><a href="#cb37-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-238"><a href="#cb37-238" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb37-239"><a href="#cb37-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-240"><a href="#cb37-240" aria-hidden="true" tabindex="-1"></a><span class="fu">### Authenticate</span></span>
-<span id="cb37-241"><a href="#cb37-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-242"><a href="#cb37-242" aria-hidden="true" tabindex="-1"></a>Set your API key:</span>
-<span id="cb37-243"><a href="#cb37-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-244"><a href="#cb37-244" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb37-245"><a href="#cb37-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-246"><a href="#cb37-246" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows (PowerShell)</span></span>
-<span id="cb37-247"><a href="#cb37-247" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-248"><a href="#cb37-248" aria-hidden="true" tabindex="-1"></a><span class="in">$env:OPENAI_API_KEY="your-api-key-here"</span></span>
-<span id="cb37-249"><a href="#cb37-249" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-208"><a href="#cb37-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-209"><a href="#cb37-209" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
+<span id="cb37-210"><a href="#cb37-210" aria-hidden="true" tabindex="-1"></a><span class="in">gemini</span></span>
+<span id="cb37-211"><a href="#cb37-211" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-212"><a href="#cb37-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-213"><a href="#cb37-213" aria-hidden="true" tabindex="-1"></a>**More details:** <span class="co">[</span><span class="ot">Google AI for Developers</span><span class="co">](https://ai.google.dev/)</span></span>
+<span id="cb37-214"><a href="#cb37-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-215"><a href="#cb37-215" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb37-216"><a href="#cb37-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-217"><a href="#cb37-217" aria-hidden="true" tabindex="-1"></a><span class="fu">## Codex CLI</span></span>
+<span id="cb37-218"><a href="#cb37-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-219"><a href="#cb37-219" aria-hidden="true" tabindex="-1"></a>OpenAI's command-line tool.</span>
+<span id="cb37-220"><a href="#cb37-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-221"><a href="#cb37-221" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
+<span id="cb37-222"><a href="#cb37-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-223"><a href="#cb37-223" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb37-224"><a href="#cb37-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-225"><a href="#cb37-225" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
+<span id="cb37-226"><a href="#cb37-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-227"><a href="#cb37-227" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-228"><a href="#cb37-228" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @openai/codex</span></span>
+<span id="cb37-229"><a href="#cb37-229" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-230"><a href="#cb37-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-231"><a href="#cb37-231" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
+<span id="cb37-232"><a href="#cb37-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-233"><a href="#cb37-233" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-234"><a href="#cb37-234" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @openai/codex</span></span>
+<span id="cb37-235"><a href="#cb37-235" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-236"><a href="#cb37-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-237"><a href="#cb37-237" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
+<span id="cb37-238"><a href="#cb37-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-239"><a href="#cb37-239" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-240"><a href="#cb37-240" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @openai/codex</span></span>
+<span id="cb37-241"><a href="#cb37-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-242"><a href="#cb37-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-243"><a href="#cb37-243" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb37-244"><a href="#cb37-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-245"><a href="#cb37-245" aria-hidden="true" tabindex="-1"></a><span class="fu">### Authenticate</span></span>
+<span id="cb37-246"><a href="#cb37-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-247"><a href="#cb37-247" aria-hidden="true" tabindex="-1"></a>Set your API key:</span>
+<span id="cb37-248"><a href="#cb37-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-249"><a href="#cb37-249" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
 <span id="cb37-250"><a href="#cb37-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-251"><a href="#cb37-251" aria-hidden="true" tabindex="-1"></a>To make permanent, add to your PowerShell profile or System Environment Variables.</span>
-<span id="cb37-252"><a href="#cb37-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-253"><a href="#cb37-253" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac / Linux</span></span>
+<span id="cb37-251"><a href="#cb37-251" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows (PowerShell)</span></span>
+<span id="cb37-252"><a href="#cb37-252" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-253"><a href="#cb37-253" aria-hidden="true" tabindex="-1"></a><span class="in">$env:OPENAI_API_KEY="your-api-key-here"</span></span>
 <span id="cb37-254"><a href="#cb37-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-255"><a href="#cb37-255" aria-hidden="true" tabindex="-1"></a><span class="in">export OPENAI_API_KEY="your-api-key-here"</span></span>
-<span id="cb37-256"><a href="#cb37-256" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-255"><a href="#cb37-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-256"><a href="#cb37-256" aria-hidden="true" tabindex="-1"></a>To make permanent, add to your PowerShell profile or System Environment Variables.</span>
 <span id="cb37-257"><a href="#cb37-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-258"><a href="#cb37-258" aria-hidden="true" tabindex="-1"></a>To make permanent, add to <span class="in">`~/.bashrc`</span> or <span class="in">`~/.zshrc`</span>:</span>
+<span id="cb37-258"><a href="#cb37-258" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac / Linux</span></span>
 <span id="cb37-259"><a href="#cb37-259" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-260"><a href="#cb37-260" aria-hidden="true" tabindex="-1"></a><span class="in">echo 'export OPENAI_API_KEY="your-api-key-here"' &gt;&gt; ~/.zshrc</span></span>
-<span id="cb37-261"><a href="#cb37-261" aria-hidden="true" tabindex="-1"></a><span class="in">source ~/.zshrc</span></span>
-<span id="cb37-262"><a href="#cb37-262" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-263"><a href="#cb37-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-264"><a href="#cb37-264" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb37-265"><a href="#cb37-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-266"><a href="#cb37-266" aria-hidden="true" tabindex="-1"></a>Get your API key from <span class="co">[</span><span class="ot">platform.openai.com</span><span class="co">](https://platform.openai.com/api-keys)</span></span>
-<span id="cb37-267"><a href="#cb37-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-268"><a href="#cb37-268" aria-hidden="true" tabindex="-1"></a><span class="fu">### Verify</span></span>
-<span id="cb37-269"><a href="#cb37-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-270"><a href="#cb37-270" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-271"><a href="#cb37-271" aria-hidden="true" tabindex="-1"></a><span class="in">codex --version</span></span>
-<span id="cb37-272"><a href="#cb37-272" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-273"><a href="#cb37-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-274"><a href="#cb37-274" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
-<span id="cb37-275"><a href="#cb37-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-276"><a href="#cb37-276" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-277"><a href="#cb37-277" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
-<span id="cb37-278"><a href="#cb37-278" aria-hidden="true" tabindex="-1"></a><span class="in">codex</span></span>
-<span id="cb37-279"><a href="#cb37-279" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-260"><a href="#cb37-260" aria-hidden="true" tabindex="-1"></a><span class="in">export OPENAI_API_KEY="your-api-key-here"</span></span>
+<span id="cb37-261"><a href="#cb37-261" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-262"><a href="#cb37-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-263"><a href="#cb37-263" aria-hidden="true" tabindex="-1"></a>To make permanent, add to <span class="in">`~/.bashrc`</span> or <span class="in">`~/.zshrc`</span>:</span>
+<span id="cb37-264"><a href="#cb37-264" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-265"><a href="#cb37-265" aria-hidden="true" tabindex="-1"></a><span class="in">echo 'export OPENAI_API_KEY="your-api-key-here"' &gt;&gt; ~/.zshrc</span></span>
+<span id="cb37-266"><a href="#cb37-266" aria-hidden="true" tabindex="-1"></a><span class="in">source ~/.zshrc</span></span>
+<span id="cb37-267"><a href="#cb37-267" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-268"><a href="#cb37-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-269"><a href="#cb37-269" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb37-270"><a href="#cb37-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-271"><a href="#cb37-271" aria-hidden="true" tabindex="-1"></a>Get your API key from <span class="co">[</span><span class="ot">platform.openai.com</span><span class="co">](https://platform.openai.com/api-keys)</span></span>
+<span id="cb37-272"><a href="#cb37-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-273"><a href="#cb37-273" aria-hidden="true" tabindex="-1"></a><span class="fu">### Verify</span></span>
+<span id="cb37-274"><a href="#cb37-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-275"><a href="#cb37-275" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-276"><a href="#cb37-276" aria-hidden="true" tabindex="-1"></a><span class="in">codex --version</span></span>
+<span id="cb37-277"><a href="#cb37-277" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-278"><a href="#cb37-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-279"><a href="#cb37-279" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
 <span id="cb37-280"><a href="#cb37-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-281"><a href="#cb37-281" aria-hidden="true" tabindex="-1"></a>**More details:** <span class="co">[</span><span class="ot">OpenAI Platform Documentation</span><span class="co">](https://platform.openai.com/docs)</span></span>
-<span id="cb37-282"><a href="#cb37-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-283"><a href="#cb37-283" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb37-284"><a href="#cb37-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-285"><a href="#cb37-285" aria-hidden="true" tabindex="-1"></a><span class="fu">## OpenCode</span></span>
-<span id="cb37-286"><a href="#cb37-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-287"><a href="#cb37-287" aria-hidden="true" tabindex="-1"></a>Open-source CLI that can connect to multiple AI backends.</span>
-<span id="cb37-288"><a href="#cb37-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-289"><a href="#cb37-289" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
-<span id="cb37-290"><a href="#cb37-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-291"><a href="#cb37-291" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb37-292"><a href="#cb37-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-293"><a href="#cb37-293" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
-<span id="cb37-294"><a href="#cb37-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-295"><a href="#cb37-295" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-296"><a href="#cb37-296" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g opencode-ai</span></span>
-<span id="cb37-297"><a href="#cb37-297" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-298"><a href="#cb37-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-299"><a href="#cb37-299" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
-<span id="cb37-300"><a href="#cb37-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-301"><a href="#cb37-301" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-302"><a href="#cb37-302" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g opencode-ai</span></span>
-<span id="cb37-303"><a href="#cb37-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-304"><a href="#cb37-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-305"><a href="#cb37-305" aria-hidden="true" tabindex="-1"></a>Or with Homebrew:</span>
+<span id="cb37-281"><a href="#cb37-281" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-282"><a href="#cb37-282" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
+<span id="cb37-283"><a href="#cb37-283" aria-hidden="true" tabindex="-1"></a><span class="in">codex</span></span>
+<span id="cb37-284"><a href="#cb37-284" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-285"><a href="#cb37-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-286"><a href="#cb37-286" aria-hidden="true" tabindex="-1"></a>**More details:** <span class="co">[</span><span class="ot">OpenAI Platform Documentation</span><span class="co">](https://platform.openai.com/docs)</span></span>
+<span id="cb37-287"><a href="#cb37-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-288"><a href="#cb37-288" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb37-289"><a href="#cb37-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-290"><a href="#cb37-290" aria-hidden="true" tabindex="-1"></a><span class="fu">## OpenCode</span></span>
+<span id="cb37-291"><a href="#cb37-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-292"><a href="#cb37-292" aria-hidden="true" tabindex="-1"></a>Open-source CLI that can connect to multiple AI backends.</span>
+<span id="cb37-293"><a href="#cb37-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-294"><a href="#cb37-294" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
+<span id="cb37-295"><a href="#cb37-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-296"><a href="#cb37-296" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb37-297"><a href="#cb37-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-298"><a href="#cb37-298" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
+<span id="cb37-299"><a href="#cb37-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-300"><a href="#cb37-300" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-301"><a href="#cb37-301" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g opencode-ai</span></span>
+<span id="cb37-302"><a href="#cb37-302" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-303"><a href="#cb37-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-304"><a href="#cb37-304" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
+<span id="cb37-305"><a href="#cb37-305" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-306"><a href="#cb37-306" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-307"><a href="#cb37-307" aria-hidden="true" tabindex="-1"></a><span class="in">brew install opencode</span></span>
+<span id="cb37-307"><a href="#cb37-307" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g opencode-ai</span></span>
 <span id="cb37-308"><a href="#cb37-308" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb37-309"><a href="#cb37-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-310"><a href="#cb37-310" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
-<span id="cb37-311"><a href="#cb37-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-312"><a href="#cb37-312" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-313"><a href="#cb37-313" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g opencode-ai</span></span>
-<span id="cb37-314"><a href="#cb37-314" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-315"><a href="#cb37-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-316"><a href="#cb37-316" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb37-317"><a href="#cb37-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-318"><a href="#cb37-318" aria-hidden="true" tabindex="-1"></a><span class="fu">### Configure</span></span>
-<span id="cb37-319"><a href="#cb37-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-320"><a href="#cb37-320" aria-hidden="true" tabindex="-1"></a>OpenCode supports multiple backends. Configure with:</span>
-<span id="cb37-321"><a href="#cb37-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-322"><a href="#cb37-322" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-323"><a href="#cb37-323" aria-hidden="true" tabindex="-1"></a><span class="in">opencode config</span></span>
-<span id="cb37-324"><a href="#cb37-324" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-325"><a href="#cb37-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-326"><a href="#cb37-326" aria-hidden="true" tabindex="-1"></a>You can connect to:</span>
-<span id="cb37-327"><a href="#cb37-327" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>OpenAI (requires API key)</span>
-<span id="cb37-328"><a href="#cb37-328" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Anthropic (requires API key)</span>
-<span id="cb37-329"><a href="#cb37-329" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Local models (Ollama, etc.)</span>
+<span id="cb37-310"><a href="#cb37-310" aria-hidden="true" tabindex="-1"></a>Or with Homebrew:</span>
+<span id="cb37-311"><a href="#cb37-311" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-312"><a href="#cb37-312" aria-hidden="true" tabindex="-1"></a><span class="in">brew install opencode</span></span>
+<span id="cb37-313"><a href="#cb37-313" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-314"><a href="#cb37-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-315"><a href="#cb37-315" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
+<span id="cb37-316"><a href="#cb37-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-317"><a href="#cb37-317" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-318"><a href="#cb37-318" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g opencode-ai</span></span>
+<span id="cb37-319"><a href="#cb37-319" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-320"><a href="#cb37-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-321"><a href="#cb37-321" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb37-322"><a href="#cb37-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-323"><a href="#cb37-323" aria-hidden="true" tabindex="-1"></a><span class="fu">### Configure</span></span>
+<span id="cb37-324"><a href="#cb37-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-325"><a href="#cb37-325" aria-hidden="true" tabindex="-1"></a>OpenCode supports multiple backends. Configure with:</span>
+<span id="cb37-326"><a href="#cb37-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-327"><a href="#cb37-327" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-328"><a href="#cb37-328" aria-hidden="true" tabindex="-1"></a><span class="in">opencode config</span></span>
+<span id="cb37-329"><a href="#cb37-329" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb37-330"><a href="#cb37-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-331"><a href="#cb37-331" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
-<span id="cb37-332"><a href="#cb37-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-333"><a href="#cb37-333" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-334"><a href="#cb37-334" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
-<span id="cb37-335"><a href="#cb37-335" aria-hidden="true" tabindex="-1"></a><span class="in">opencode</span></span>
-<span id="cb37-336"><a href="#cb37-336" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-331"><a href="#cb37-331" aria-hidden="true" tabindex="-1"></a>You can connect to:</span>
+<span id="cb37-332"><a href="#cb37-332" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>OpenAI (requires API key)</span>
+<span id="cb37-333"><a href="#cb37-333" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Anthropic (requires API key)</span>
+<span id="cb37-334"><a href="#cb37-334" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Local models (Ollama, etc.)</span>
+<span id="cb37-335"><a href="#cb37-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-336"><a href="#cb37-336" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
 <span id="cb37-337"><a href="#cb37-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-338"><a href="#cb37-338" aria-hidden="true" tabindex="-1"></a>**More details:** Check the project's GitHub repository for current documentation.</span>
-<span id="cb37-339"><a href="#cb37-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-340"><a href="#cb37-340" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb37-341"><a href="#cb37-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-342"><a href="#cb37-342" aria-hidden="true" tabindex="-1"></a><span class="fu">## Troubleshooting</span></span>
-<span id="cb37-343"><a href="#cb37-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-344"><a href="#cb37-344" aria-hidden="true" tabindex="-1"></a><span class="fu">### "command not found" after install</span></span>
-<span id="cb37-345"><a href="#cb37-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-346"><a href="#cb37-346" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb37-347"><a href="#cb37-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-348"><a href="#cb37-348" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
-<span id="cb37-349"><a href="#cb37-349" aria-hidden="true" tabindex="-1"></a>Close and reopen your terminal. If still not working, check that npm's global bin folder is in your PATH.</span>
+<span id="cb37-338"><a href="#cb37-338" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-339"><a href="#cb37-339" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
+<span id="cb37-340"><a href="#cb37-340" aria-hidden="true" tabindex="-1"></a><span class="in">opencode</span></span>
+<span id="cb37-341"><a href="#cb37-341" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-342"><a href="#cb37-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-343"><a href="#cb37-343" aria-hidden="true" tabindex="-1"></a>**More details:** Check the project's GitHub repository for current documentation.</span>
+<span id="cb37-344"><a href="#cb37-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-345"><a href="#cb37-345" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb37-346"><a href="#cb37-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-347"><a href="#cb37-347" aria-hidden="true" tabindex="-1"></a><span class="fu">## Troubleshooting</span></span>
+<span id="cb37-348"><a href="#cb37-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-349"><a href="#cb37-349" aria-hidden="true" tabindex="-1"></a><span class="fu">### "command not found" after install</span></span>
 <span id="cb37-350"><a href="#cb37-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-351"><a href="#cb37-351" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac / Linux</span></span>
-<span id="cb37-352"><a href="#cb37-352" aria-hidden="true" tabindex="-1"></a>Try:</span>
-<span id="cb37-353"><a href="#cb37-353" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-354"><a href="#cb37-354" aria-hidden="true" tabindex="-1"></a><span class="in">source ~/.bashrc  # or ~/.zshrc</span></span>
-<span id="cb37-355"><a href="#cb37-355" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-356"><a href="#cb37-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-357"><a href="#cb37-357" aria-hidden="true" tabindex="-1"></a>Or check npm's bin location:</span>
+<span id="cb37-351"><a href="#cb37-351" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb37-352"><a href="#cb37-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-353"><a href="#cb37-353" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
+<span id="cb37-354"><a href="#cb37-354" aria-hidden="true" tabindex="-1"></a>Close and reopen your terminal. If still not working, check that npm's global bin folder is in your PATH.</span>
+<span id="cb37-355"><a href="#cb37-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-356"><a href="#cb37-356" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac / Linux</span></span>
+<span id="cb37-357"><a href="#cb37-357" aria-hidden="true" tabindex="-1"></a>Try:</span>
 <span id="cb37-358"><a href="#cb37-358" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-359"><a href="#cb37-359" aria-hidden="true" tabindex="-1"></a><span class="in">npm bin -g</span></span>
+<span id="cb37-359"><a href="#cb37-359" aria-hidden="true" tabindex="-1"></a><span class="in">source ~/.bashrc  # or ~/.zshrc</span></span>
 <span id="cb37-360"><a href="#cb37-360" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb37-361"><a href="#cb37-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-362"><a href="#cb37-362" aria-hidden="true" tabindex="-1"></a>Make sure this path is in your PATH environment variable.</span>
-<span id="cb37-363"><a href="#cb37-363" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-364"><a href="#cb37-364" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb37-365"><a href="#cb37-365" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-366"><a href="#cb37-366" aria-hidden="true" tabindex="-1"></a><span class="fu">### "permission denied" during install</span></span>
-<span id="cb37-367"><a href="#cb37-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-368"><a href="#cb37-368" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb37-369"><a href="#cb37-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-370"><a href="#cb37-370" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
-<span id="cb37-371"><a href="#cb37-371" aria-hidden="true" tabindex="-1"></a>Run terminal as Administrator (right-click → Run as administrator)</span>
+<span id="cb37-362"><a href="#cb37-362" aria-hidden="true" tabindex="-1"></a>Or check npm's bin location:</span>
+<span id="cb37-363"><a href="#cb37-363" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-364"><a href="#cb37-364" aria-hidden="true" tabindex="-1"></a><span class="in">npm bin -g</span></span>
+<span id="cb37-365"><a href="#cb37-365" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-366"><a href="#cb37-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-367"><a href="#cb37-367" aria-hidden="true" tabindex="-1"></a>Make sure this path is in your PATH environment variable.</span>
+<span id="cb37-368"><a href="#cb37-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-369"><a href="#cb37-369" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb37-370"><a href="#cb37-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-371"><a href="#cb37-371" aria-hidden="true" tabindex="-1"></a><span class="fu">### "permission denied" during install</span></span>
 <span id="cb37-372"><a href="#cb37-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-373"><a href="#cb37-373" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac / Linux</span></span>
-<span id="cb37-374"><a href="#cb37-374" aria-hidden="true" tabindex="-1"></a>Use <span class="in">`sudo`</span>:</span>
-<span id="cb37-375"><a href="#cb37-375" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-376"><a href="#cb37-376" aria-hidden="true" tabindex="-1"></a><span class="in">sudo npm install -g [package-name]</span></span>
-<span id="cb37-377"><a href="#cb37-377" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb37-378"><a href="#cb37-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-379"><a href="#cb37-379" aria-hidden="true" tabindex="-1"></a>Or fix npm permissions: <span class="co">[</span><span class="ot">npm docs</span><span class="co">](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)</span></span>
-<span id="cb37-380"><a href="#cb37-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-381"><a href="#cb37-381" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb37-382"><a href="#cb37-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-383"><a href="#cb37-383" aria-hidden="true" tabindex="-1"></a><span class="fu">### Authentication fails</span></span>
-<span id="cb37-384"><a href="#cb37-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-385"><a href="#cb37-385" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check your internet connection</span>
-<span id="cb37-386"><a href="#cb37-386" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Make sure your subscription/API credits are active</span>
-<span id="cb37-387"><a href="#cb37-387" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Try logging out and back in</span>
-<span id="cb37-388"><a href="#cb37-388" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check the tool's status page for outages</span>
+<span id="cb37-373"><a href="#cb37-373" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb37-374"><a href="#cb37-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-375"><a href="#cb37-375" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
+<span id="cb37-376"><a href="#cb37-376" aria-hidden="true" tabindex="-1"></a>Run terminal as Administrator (right-click → Run as administrator)</span>
+<span id="cb37-377"><a href="#cb37-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-378"><a href="#cb37-378" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac / Linux</span></span>
+<span id="cb37-379"><a href="#cb37-379" aria-hidden="true" tabindex="-1"></a>Use <span class="in">`sudo`</span>:</span>
+<span id="cb37-380"><a href="#cb37-380" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-381"><a href="#cb37-381" aria-hidden="true" tabindex="-1"></a><span class="in">sudo npm install -g [package-name]</span></span>
+<span id="cb37-382"><a href="#cb37-382" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb37-383"><a href="#cb37-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-384"><a href="#cb37-384" aria-hidden="true" tabindex="-1"></a>Or fix npm permissions: <span class="co">[</span><span class="ot">npm docs</span><span class="co">](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)</span></span>
+<span id="cb37-385"><a href="#cb37-385" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-386"><a href="#cb37-386" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb37-387"><a href="#cb37-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-388"><a href="#cb37-388" aria-hidden="true" tabindex="-1"></a><span class="fu">### Authentication fails</span></span>
 <span id="cb37-389"><a href="#cb37-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-390"><a href="#cb37-390" aria-hidden="true" tabindex="-1"></a><span class="fu">### Still stuck?</span></span>
-<span id="cb37-391"><a href="#cb37-391" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-392"><a href="#cb37-392" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check the official documentation for your tool</span>
-<span id="cb37-393"><a href="#cb37-393" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Search the tool's GitHub issues</span>
-<span id="cb37-394"><a href="#cb37-394" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ask in the course forum</span>
-<span id="cb37-395"><a href="#cb37-395" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-396"><a href="#cb37-396" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb37-397"><a href="#cb37-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-398"><a href="#cb37-398" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quick Comparison</span></span>
-<span id="cb37-399"><a href="#cb37-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-400"><a href="#cb37-400" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Feature <span class="pp">|</span> Claude Code <span class="pp">|</span> Gemini CLI <span class="pp">|</span> Codex CLI <span class="pp">|</span> OpenCode <span class="pp">|</span></span>
-<span id="cb37-401"><a href="#cb37-401" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------|-------------|------------|-----------|----------|</span></span>
-<span id="cb37-402"><a href="#cb37-402" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> File access <span class="pp">|</span> Yes <span class="pp">|</span> Yes <span class="pp">|</span> Yes <span class="pp">|</span> Yes <span class="pp">|</span></span>
-<span id="cb37-403"><a href="#cb37-403" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Code execution <span class="pp">|</span> Yes <span class="pp">|</span> Yes <span class="pp">|</span> Yes <span class="pp">|</span> Yes <span class="pp">|</span></span>
-<span id="cb37-404"><a href="#cb37-404" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Free tier <span class="pp">|</span> No <span class="pp">|</span> Yes <span class="pp">|</span> No <span class="pp">|</span> Depends <span class="pp">|</span></span>
-<span id="cb37-405"><a href="#cb37-405" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Best for <span class="pp">|</span> General coding <span class="pp">|</span> Google ecosystem <span class="pp">|</span> OpenAI users <span class="pp">|</span> Flexibility <span class="pp">|</span></span>
-<span id="cb37-406"><a href="#cb37-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-407"><a href="#cb37-407" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb37-408"><a href="#cb37-408" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-409"><a href="#cb37-409" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
-<span id="cb37-410"><a href="#cb37-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-411"><a href="#cb37-411" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Install one tool** (we recommend Claude Code for this course)</span>
-<span id="cb37-412"><a href="#cb37-412" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Read** <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](terminal-basics.html)</span> if you're new to command line</span>
-<span id="cb37-413"><a href="#cb37-413" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Try it** on a simple task: navigate to a folder with some files and ask "what's here?"</span>
-<span id="cb37-414"><a href="#cb37-414" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Continue** to <span class="co">[</span><span class="ot">Week 04</span><span class="co">](../week04/)</span> to use it for data analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb37-390"><a href="#cb37-390" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check your internet connection</span>
+<span id="cb37-391"><a href="#cb37-391" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Make sure your subscription/API credits are active</span>
+<span id="cb37-392"><a href="#cb37-392" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Try logging out and back in</span>
+<span id="cb37-393"><a href="#cb37-393" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check the tool's status page for outages</span>
+<span id="cb37-394"><a href="#cb37-394" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-395"><a href="#cb37-395" aria-hidden="true" tabindex="-1"></a><span class="fu">### Still stuck?</span></span>
+<span id="cb37-396"><a href="#cb37-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-397"><a href="#cb37-397" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check the official documentation for your tool</span>
+<span id="cb37-398"><a href="#cb37-398" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Search the tool's GitHub issues</span>
+<span id="cb37-399"><a href="#cb37-399" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ask in the course forum</span>
+<span id="cb37-400"><a href="#cb37-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-401"><a href="#cb37-401" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb37-402"><a href="#cb37-402" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-403"><a href="#cb37-403" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quick Comparison</span></span>
+<span id="cb37-404"><a href="#cb37-404" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-405"><a href="#cb37-405" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Feature <span class="pp">|</span> Claude Code <span class="pp">|</span> Gemini CLI <span class="pp">|</span> Codex CLI <span class="pp">|</span> OpenCode <span class="pp">|</span></span>
+<span id="cb37-406"><a href="#cb37-406" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------|-------------|------------|-----------|----------|</span></span>
+<span id="cb37-407"><a href="#cb37-407" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> File access <span class="pp">|</span> Yes <span class="pp">|</span> Yes <span class="pp">|</span> Yes <span class="pp">|</span> Yes <span class="pp">|</span></span>
+<span id="cb37-408"><a href="#cb37-408" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Code execution <span class="pp">|</span> Yes <span class="pp">|</span> Yes <span class="pp">|</span> Yes <span class="pp">|</span> Yes <span class="pp">|</span></span>
+<span id="cb37-409"><a href="#cb37-409" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Free tier <span class="pp">|</span> No <span class="pp">|</span> Yes <span class="pp">|</span> No <span class="pp">|</span> Depends <span class="pp">|</span></span>
+<span id="cb37-410"><a href="#cb37-410" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Best for <span class="pp">|</span> General coding <span class="pp">|</span> Google ecosystem <span class="pp">|</span> OpenAI users <span class="pp">|</span> Flexibility <span class="pp">|</span></span>
+<span id="cb37-411"><a href="#cb37-411" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-412"><a href="#cb37-412" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb37-413"><a href="#cb37-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-414"><a href="#cb37-414" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
+<span id="cb37-415"><a href="#cb37-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-416"><a href="#cb37-416" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Install one tool** (we recommend Claude Code for this course)</span>
+<span id="cb37-417"><a href="#cb37-417" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Read** <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](terminal-basics.html)</span> if you're new to command line</span>
+<span id="cb37-418"><a href="#cb37-418" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Try it** on a simple task: navigate to a folder with some files and ask "what's here?"</span>
+<span id="cb37-419"><a href="#cb37-419" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Continue** to <span class="co">[</span><span class="ot">Week 04</span><span class="co">](../week04/)</span> to use it for data analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
