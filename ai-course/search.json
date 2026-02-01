@@ -1480,505 +1480,719 @@
     "text": "Assignment 8: Design an IV\nThink about an identification problem and interate to find a good IV.\nAssignment Details"
   },
   {
-    "objectID": "navbar/index.html",
-    "href": "navbar/index.html",
-    "title": "Doing Data Analysis with AI",
-    "section": "",
-    "text": "Gabor’s Data Analysis with AI"
-  },
-  {
-    "objectID": "navbar/index.html#whats-this",
-    "href": "navbar/index.html#whats-this",
-    "title": "Doing Data Analysis with AI",
-    "section": "What’s this",
-    "text": "What’s this\nThis course will equip students, who are already versed in core data analysis methods, with experience to harness AI technologies to improve productivity (yes this is classic LLM sentence). But, yeah, the idea is to help students who studied data analysis / econometrics / quant methods and want to think about how to include AI in their analytics routine, and spend time to share experiences.\nAs AI becomes more and more powerful, it is also important to provide a platform to discuss human agency in data analysis. So a key element of the course and its instructor to lead discussions on the role of AI and humans in various aspects of data analysis.\nThis is the 2026 Winter edition release\n\nFor whom?\nThis material is aimed at data science and analytics instructors who can guide their students through the material sharing the experience and domain specific examples. All of this is open source, may be modified (see rights below).\nBut, dear reader (students, practitioners, researchers, journalists and more), you can also go alone, checking ideas and practice sessions.\n\n\nAI and me\nAt the end of all classes, instructors and students should always consider these three questions.\n\nHow did AI support me do what I planned.\nHow did AI fail me: gave half-truths, buggy code, imprecise arguments\nHow did AI extend me: helped do things I could not, or gave new ideas"
-  },
-  {
-    "objectID": "navbar/index.html#course-description",
-    "href": "navbar/index.html#course-description",
-    "title": "Doing Data Analysis with AI",
-    "section": "Course description",
-    "text": "Course description\n\nContent\nThe course focuses on using large language models (LLMs) such as OpenAI’s ChatGPT, Anthropic Claude.ai, Mistral’s Le Chat, and Google’s Gemini) to carry out tasks in data analysis. It includes topics like data extraction and wrangling, data exploration and descriptive statistics, and creating reports as well as turning text to data.\nThere are three case studies that we use (1) a simulated set of data tables on hotels in Austria, (2) The World Value Survey, and (3) A series of interview textst.\nThe course material includes weekly practice assignments. It also has a learning more collection – to see what is beyond core material with blogs, papers, and video recommendations.\n\n\nBackground: data analysis / econometrics\nYou need a background in Data Analysis / Econometrics, a good introductory course is enough. I, of course, suggest Chapters 1-12 and 19 of Data Analysis for Business, Economics and Policy (Cambridge UP, 2021). Full slideshows, data and code are open source. But consider buying the book!🤝\nIn particular, the course builds on Chapters 1-6 and 7-10, and 19 of Data Analysis but other Introductory Econometrics + basics of data science knowledge is ok.\n\n\nBackground: coding\nStudents are expected to have some basic coding knowledge in Python or R (Stata also fine mostly).\n\n\nRelevance\nAI is everywhere and has become essential, most analytic work will be using it. It’s like the Internet a while back. Does not solve all problems, but almost all intellectual tasks will rely on inputs from it.\n\n\nLearning Outcomes\nKey outcomes. By the end of the course, students will be able to\n\nGain experience and confidence using genAI to carry out key tasks in data analysis.\nBuild AI in coding practice including data wrangling, description and reporting and text analysis\nHave some idea of use cases when AI assistance is OK to use as is vs needs strong human supervision\nHave an understanding of resources to follow for updates.\n\n\n\nTarget audience\nThis is a course aimed at 3rd (2nd?) year BA and MA students in any program with required background. Economics, Quantitative Social science, Political Science, Sociology, History. To be frank, all students shall learn data analysis and be comfortable using AI.\nBut, anyone can use it with adequate background.\n\n\nCourse Context & Trajectory\nWhat’s Coming Next:\n\nWeek 0: Using AI for Coding – this may not be part of the curriculum\nWeek 1: LLM Review and short task to recrate a graph\nWeek 2: Use AI to understand and document the World Values Survey dataset\nWeek 3: AI-assisted report writing with WVS data\nWeek 4: Agentic AI with Claude Code using Austrian hotel data\nWeeks 5: Text analysis 1: basics\nWeeks 6: Text analysis 2: sentiment analysis\nWeek 7: TBD\nWeek 8: SQL like natural language query in a data warehouse\nWeek 9: AI as research companion 1: Control variables\nWeek 10: AI as research companion 2: Instrumental Variables\nWeek 11: AI as research companion 3: Difference in differences\nWeek 12: TBD\n\nAI use experience\n\nChat – conversational interface\nData Analysis – direct code execution / shared canvases\nContext window management\nTools to connect to sources (Github, Google drive)\nTalk to AI via API calls\nskills and context management\n\n“my system prompt” (user specific)\nskills use and generation (gems / prompt template): gabors exploratory data analysis skill (sharable)\n\ndeep research\nGemini CLI / Claude Code\nMCP (connect to folders on your computer)\nvibe coding an app: the-human-sql-translator"
-  },
-  {
-    "objectID": "navbar/index.html#assignments",
-    "href": "navbar/index.html#assignments",
-    "title": "Doing Data Analysis with AI",
-    "section": "Assignments",
-    "text": "Assignments\nAssignments are available for all classes\nImportant to note for assignments: * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this."
-  },
-  {
-    "objectID": "navbar/index.html#content-1",
-    "href": "navbar/index.html#content-1",
-    "title": "Doing Data Analysis with AI",
-    "section": "Content",
-    "text": "Content\nWeek00: AI for coding\nUsing AI for code. May not be covered in this class, as it had often been already covered in coding classes.\nContent\nWeek01: LLM Review\nWhat are LLMs, how is the magic happening. A non-technical brief intro. How to work with LLMs? Plus ideas on applications. Includes suggested readings, podcasts, and vids to listen to.\nContent\nWhich AI?\nSee my take on current models. As of May 2025.\nWeek02: Data and code discovery and documentation with AI\nLearn how to write a clear and professional code and data documentation. LLMs are great help once you know the basics.\nCase study: World Values Survey\nContent\nWeek 03: Writing Reports\nYou have your data and task, and need to write a short report. We compare different options with LLM, from one-shot prompt to iteration.\nCase study: World Values Survey\nContent\nWeek04: Agentic AI with Claude Code\nFrom chat to terminal - introducing Claude Code for data analysis. Students learn to use agentic AI that works directly with files, generates data, and iterates on analysis.\nCase study: Austrian Hotels\nContent\nWeek05: Text as data 1 – intro lecture\nNo course of mine can escape football (soccer). Here we look at post-game interviews to learn basics of text analysis and apply LLMs in what they are best - context dependent learning. Two class series. First is more intro to natural language processing.\nCase study: Football Manager Interviews\nContent\nWeek06: Sentiment Analysis with AI\nSecond class, now we are in action. How does LLM compare to humans?\nCase study: Football Manager Interviews\nContent\nWeek07: TBA\nTBA\nWeek08: SQL like natural language query in a data warehouse\nTBA\nWeek09: AI as research companion: Control variables\nContent\nWeek10: AI as research companion: Instrumental variables\nContent\nWeek11: AI as research companion: Differences in differences\nTBA\nWeek12: Creating simulations with apps and dashboards\nContent\nTBA"
-  },
-  {
-    "objectID": "navbar/index.html#learn-more",
-    "href": "navbar/index.html#learn-more",
-    "title": "Doing Data Analysis with AI",
-    "section": "Learn more",
-    "text": "Learn more\nI’m adding material to da-knowledge folder. You can start with the beyond page."
-  },
-  {
-    "objectID": "navbar/index.html#rights-and-acknowledgement",
-    "href": "navbar/index.html#rights-and-acknowledgement",
-    "title": "Doing Data Analysis with AI",
-    "section": "Rights and acknowledgement",
-    "text": "Rights and acknowledgement"
-  },
-  {
-    "objectID": "navbar/index.html#you-can-use-it-to-teach-and-learn-freely",
-    "href": "navbar/index.html#you-can-use-it-to-teach-and-learn-freely",
-    "title": "Doing Data Analysis with AI",
-    "section": "You can use it to teach and learn freely",
-    "text": "You can use it to teach and learn freely\nAttribution: Békés, Gábor: “Doing Data Analysis with AI: a short course”, available at gabors-data-analysis.com/ai-course/, v2.0. 2026-01-20.\nYou can fork it from the Github Repo. github.com/gabors-data-analysis/da-w-ai/\nLicense: CC BY-NC-SA 4.0 – share, attribute, non-commercial (contact me for corporate gigs)\nTextbook Please check out the textbook behind all this, buy it if you can. If interested teaching contact the Cambridge UP or me."
-  },
-  {
-    "objectID": "navbar/index.html#thanks",
-    "href": "navbar/index.html#thanks",
-    "title": "Doing Data Analysis with AI",
-    "section": "Thanks",
-    "text": "Thanks\nThanks: Developed mostly by me, Gábor Békés Thanks a million to the two wonderful human RAs, Ms Zsuzsanna Vadle and Mr Kenneth Colombe, both Phd students. Thanks to Claude.ai that did a great deal of help in creating the simulated dataset. ChatGPT and Claude.ai helped create the slideshows and educated me on NLP. This is a beatiful example of collaboration with great young people while heavily benefiting from advanced AI.\nThanks for CEU’s teaching grant that allowed me pay people and AI.\nThanks for Quarto – it was all drafted and written in Quarto and Rstudio by Posit."
-  },
-  {
-    "objectID": "navbar/index.html#questions-and-suggestions",
-    "href": "navbar/index.html#questions-and-suggestions",
-    "title": "Doing Data Analysis with AI",
-    "section": "Questions and suggestions",
-    "text": "Questions and suggestions\nThis material is based my course at CEU in Vienna, Austria. Here is the Github repo\nIf you have questions or suggestions or interested to learn more, just fill in this form."
-  },
-  {
-    "objectID": "navbar/index.html#and-now-this.",
-    "href": "navbar/index.html#and-now-this.",
-    "title": "Doing Data Analysis with AI",
-    "section": "And now, this.",
-    "text": "And now, this.\nAI use is very costly in terms of energy. Yes, it is becoming cheaper. But humanity is also using much more of it."
-  },
-  {
-    "objectID": "case-studies/earnings/data/index.html",
-    "href": "case-studies/earnings/data/index.html",
-    "title": "US Earnings - Data Files",
+    "objectID": "case-studies/earnings/code/index.html",
+    "href": "case-studies/earnings/code/index.html",
+    "title": "US Earnings - Code",
     "section": "",
     "text": "← Back to Earnings Case Study"
   },
   {
-    "objectID": "case-studies/earnings/data/index.html#data-files",
-    "href": "case-studies/earnings/data/index.html#data-files",
-    "title": "US Earnings - Data Files",
-    "section": "Data Files",
-    "text": "Data Files\n\n\n\nFile\nDescription\n\n\n\n\nmorg-2014-emp-state5.csv\nCPS MORG 2014 data filtered to 5 states\n\n\ncpsx.pdf\nCodebook and variable documentation"
-  },
-  {
-    "objectID": "case-studies/earnings/data/index.html#external-source",
-    "href": "case-studies/earnings/data/index.html#external-source",
-    "title": "US Earnings - Data Files",
-    "section": "External Source",
-    "text": "External Source\nFull CPS data available at OSF - Gabors Data Analysis"
-  },
-  {
-    "objectID": "case-studies/VWS/code/index.html",
-    "href": "case-studies/VWS/code/index.html",
-    "title": "World Values Survey - Code",
-    "section": "",
-    "text": "← Back to WVS Case Study"
-  },
-  {
-    "objectID": "case-studies/VWS/code/index.html#code-files",
-    "href": "case-studies/VWS/code/index.html#code-files",
-    "title": "World Values Survey - Code",
+    "objectID": "case-studies/earnings/code/index.html#code-files",
+    "href": "case-studies/earnings/code/index.html#code-files",
+    "title": "US Earnings - Code",
     "section": "Code Files",
-    "text": "Code Files\n\n\n\nFile\nDescription\n\n\n\n\ncleaning.R\nR script that processes raw WVS data and creates cleaned datasets"
+    "text": "Code Files\n\n\n\nFile\nDescription\n\n\n\n\nearnings.R\nR script for earnings analysis"
   },
   {
-    "objectID": "case-studies/VWS/data/index.html",
-    "href": "case-studies/VWS/data/index.html",
-    "title": "World Values Survey - Data Files",
+    "objectID": "case-studies/earnings/index.html",
+    "href": "case-studies/earnings/index.html",
+    "title": "US Earnings Data (CPS MORG)",
     "section": "",
-    "text": "← Back to WVS Case Study"
+    "text": "Current Population Survey (CPS) Merged Outgoing Rotation Groups data for analyzing earnings patterns, gender gaps, and returns to education in the US labor market.\nUsed in: Week 0 (Coding with AI)\nSource: Data Analysis Textbook Case Study",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "US Earnings (CPS)"
+    ]
   },
   {
-    "objectID": "case-studies/VWS/data/index.html#data-files",
-    "href": "case-studies/VWS/data/index.html#data-files",
-    "title": "World Values Survey - Data Files",
+    "objectID": "case-studies/earnings/index.html#overview",
+    "href": "case-studies/earnings/index.html#overview",
+    "title": "US Earnings Data (CPS MORG)",
+    "section": "",
+    "text": "Current Population Survey (CPS) Merged Outgoing Rotation Groups data for analyzing earnings patterns, gender gaps, and returns to education in the US labor market.\nUsed in: Week 0 (Coding with AI)\nSource: Data Analysis Textbook Case Study",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "US Earnings (CPS)"
+    ]
+  },
+  {
+    "objectID": "case-studies/earnings/index.html#data-files",
+    "href": "case-studies/earnings/index.html#data-files",
+    "title": "US Earnings Data (CPS MORG)",
     "section": "Data Files",
-    "text": "Data Files\n\n\n\nFile\nDescription\n\n\n\n\nWVS_random_subset2000.csv\nRandom subset of 2,000 respondents stratified by country\n\n\nWVS_GDP_merged_data.csv\nCountry-level aggregated data merged with GDP indicators\n\n\nWVS_subset.csv\nSelected variables from full dataset"
+    "text": "Data Files\n\n\n\nFile\nDescription\n\n\n\n\nmorg-2014-emp-state5.csv\nCPS MORG 2014 data filtered to 5 states\n\n\ncpsx.pdf\nCodebook and variable documentation\n\n\n\nBrowse data files",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "US Earnings (CPS)"
+    ]
   },
   {
-    "objectID": "case-studies/VWS/data/index.html#documentation",
-    "href": "case-studies/VWS/data/index.html#documentation",
-    "title": "World Values Survey - Data Files",
-    "section": "Documentation",
-    "text": "Documentation\n\n\n\nFile\nDescription\n\n\n\n\ncodebook.pdf\nOfficial WVS codebook with variable definitions\n\n\nREADME_WVS.md\nData processing documentation"
+    "objectID": "case-studies/earnings/index.html#code",
+    "href": "case-studies/earnings/index.html#code",
+    "title": "US Earnings Data (CPS MORG)",
+    "section": "Code",
+    "text": "Code\n\n\n\nFile\nDescription\n\n\n\n\nearnings.R\nR script for earnings analysis\n\n\n\nBrowse code files",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "US Earnings (CPS)"
+    ]
   },
   {
-    "objectID": "case-studies/VWS/data/index.html#external-source",
-    "href": "case-studies/VWS/data/index.html#external-source",
-    "title": "World Values Survey - Data Files",
-    "section": "External Source",
-    "text": "External Source\nFull dataset available at OSF - Gabors Data Analysis / World Values Survey"
+    "objectID": "case-studies/earnings/index.html#key-variables",
+    "href": "case-studies/earnings/index.html#key-variables",
+    "title": "US Earnings Data (CPS MORG)",
+    "section": "Key Variables",
+    "text": "Key Variables\n\nearnwke - Weekly earnings\nsex - Gender\nage - Age\ngrade92 - Education level\nweight - Survey weight",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "US Earnings (CPS)"
+    ]
   },
   {
-    "objectID": "case-studies/austria-hotels/code/index.html",
-    "href": "case-studies/austria-hotels/code/index.html",
-    "title": "Austrian Hotels - Code",
+    "objectID": "case-studies/earnings/index.html#learning-objectives",
+    "href": "case-studies/earnings/index.html#learning-objectives",
+    "title": "US Earnings Data (CPS MORG)",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nWorking with survey data\nAnalyzing earnings distributions\nCreating visualizations with AI assistance\nUnderstanding gender wage gaps",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "US Earnings (CPS)"
+    ]
+  },
+  {
+    "objectID": "case-studies/earnings/index.html#sample-research-questions",
+    "href": "case-studies/earnings/index.html#sample-research-questions",
+    "title": "US Earnings Data (CPS MORG)",
+    "section": "Sample Research Questions",
+    "text": "Sample Research Questions\n\nIs there a gender gap in earnings?\nHow do earnings vary by education level?\nWhat is the age-earnings profile?",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "US Earnings (CPS)"
+    ]
+  },
+  {
+    "objectID": "case-studies/earnings/index.html#downloads",
+    "href": "case-studies/earnings/index.html#downloads",
+    "title": "US Earnings Data (CPS MORG)",
+    "section": "Downloads",
+    "text": "Downloads\n\nmorg-2014-emp-state5.csv\nCodebook (PDF)",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "US Earnings (CPS)"
+    ]
+  },
+  {
+    "objectID": "case-studies/VWS/data/README_WVS.html",
+    "href": "case-studies/VWS/data/README_WVS.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "case-studies/VWS/data/README_WVS.html#overview",
+    "href": "case-studies/VWS/data/README_WVS.html#overview",
+    "title": "",
+    "section": "Overview",
+    "text": "Overview\nThis script cleans and subsets World Values Survey (WVS) Wave 7 data, generates a random subsample, aggregates by country & year, and merges with World Bank GDP indicators."
+  },
+  {
+    "objectID": "case-studies/VWS/data/README_WVS.html#prerequisites",
+    "href": "case-studies/VWS/data/README_WVS.html#prerequisites",
+    "title": "",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nPackages:\n\nosfr (download from OSF)\n\ndplyr (data manipulation)\n\nreadr (CSV I/O)\n\nWDI (World Bank API)"
+  },
+  {
+    "objectID": "case-studies/VWS/data/README_WVS.html#directory-structure",
+    "href": "case-studies/VWS/data/README_WVS.html#directory-structure",
+    "title": "",
+    "section": "Directory Structure",
+    "text": "Directory Structure\nproject-root/\n├─ data/\n│  ├─ raw/        ← input CSVs\n│  └─ clean/      ← outputs\n└─ scripts/\n   └─ cleaning.R ← this script"
+  },
+  {
+    "objectID": "case-studies/VWS/data/README_WVS.html#input",
+    "href": "case-studies/VWS/data/README_WVS.html#input",
+    "title": "",
+    "section": "Input",
+    "text": "Input\n\ndata/raw/WVS_Cross-National_Wave_7_csv_v6_0.csv\nDownloaded automatically from OSF (ID: 36dgb)."
+  },
+  {
+    "objectID": "case-studies/VWS/data/README_WVS.html#output",
+    "href": "case-studies/VWS/data/README_WVS.html#output",
+    "title": "",
+    "section": "Output",
+    "text": "Output\n\nWVS_subset.csv\nSelected variables and respondents, wave 1–7.\nWVS_random_subset2000.csv\nRandom sample of 2 000 respondents (≈ per country).\nWVS_GDP_merged_data.csv\nAggregated (mean & mode) by country & year for wave 7, merged with GDP & population (2017–2023)."
+  },
+  {
+    "objectID": "case-studies/VWS/data/README_WVS.html#processing-steps",
+    "href": "case-studies/VWS/data/README_WVS.html#processing-steps",
+    "title": "",
+    "section": "Processing Steps",
+    "text": "Processing Steps\n\nSetup\n\nClear environment (rm(list=ls()))\n\nLoad libraries\n\nDefine data_in and data_out folders\n\nImport & Subset\n\nDownload raw CSV via OSF\n\nSelect key demographics (country codes, interview date, weights) and survey items (Q1–Q89, Q260–Q290)\n\nSave to WVS_subset.csv\nNote: This file contains answers from all respondents from the data.\n\nRandom Subsample\n\nIn this step, we create a random subsample to reduce sample size.\nSeed: 20250124\n\nSample ~2 000 respondents stratified by country\n\nCount the resulting number of respondents in each country\nSave to WVS_random_subset2000.csv\n\nAggregate & Clean\n\nIn this step, we aggregate the full data (step 2 data) to country-level, then join with GDP data.\nRecode negative codes (–1…–5) to NA\n\nCount the number of respondents in each country\nCompute country–year means for numeric items, modes for categorical\n\nDownload GDP & population (2017–2023) via WDI\n\nMerge on ISO3 country code & year\n\nSave to WVS_GDP_merged_data.csv"
+  },
+  {
+    "objectID": "case-studies/VWS/data/README_WVS.html#usage",
+    "href": "case-studies/VWS/data/README_WVS.html#usage",
+    "title": "",
+    "section": "Usage",
+    "text": "Usage\nRscript scripts/cleaning.R\nEnsure your working directory is set to project root.\nRaw data and outputs will live under data/raw and data/clean."
+  },
+  {
+    "objectID": "case-studies/VWS/data/README_WVS.html#contact",
+    "href": "case-studies/VWS/data/README_WVS.html#contact",
+    "title": "",
+    "section": "Contact",
+    "text": "Contact\ngabors-data-analysis.com | MA (BA) Data Analysis with AI course"
+  },
+  {
+    "objectID": "case-studies/VWS/index.html",
+    "href": "case-studies/VWS/index.html",
+    "title": "World Values Survey (WVS)",
+    "section": "",
+    "text": "The 7th Wave of the World Values Survey, cleaned and merged with World Bank GDP data. The WVS is a global research project exploring people’s values and beliefs across different countries and cultures.\nUsed in: Week 2 (Data Documentation), Week 3 (Report Writing)",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "World Values Survey"
+    ]
+  },
+  {
+    "objectID": "case-studies/VWS/index.html#overview",
+    "href": "case-studies/VWS/index.html#overview",
+    "title": "World Values Survey (WVS)",
+    "section": "",
+    "text": "The 7th Wave of the World Values Survey, cleaned and merged with World Bank GDP data. The WVS is a global research project exploring people’s values and beliefs across different countries and cultures.\nUsed in: Week 2 (Data Documentation), Week 3 (Report Writing)",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "World Values Survey"
+    ]
+  },
+  {
+    "objectID": "case-studies/VWS/index.html#data-files",
+    "href": "case-studies/VWS/index.html#data-files",
+    "title": "World Values Survey (WVS)",
+    "section": "Data Files",
+    "text": "Data Files\n\n\n\n\n\n\n\nFile\nDescription\n\n\n\n\nWVS_random_subset2000.csv\nRandom subset of 2,000 respondents stratified by country\n\n\nWVS_GDP_merged_data.csv\nCountry-level aggregated data merged with GDP and population indicators\n\n\nWVS_subset.csv\nSelected variables from full dataset\n\n\ncodebook.pdf\nOfficial WVS codebook with variable definitions\n\n\nREADME_WVS.md\nData processing documentation\n\n\n\nBrowse data files",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "World Values Survey"
+    ]
+  },
+  {
+    "objectID": "case-studies/VWS/index.html#code",
+    "href": "case-studies/VWS/index.html#code",
+    "title": "World Values Survey (WVS)",
+    "section": "Code",
+    "text": "Code\n\n\n\n\n\n\n\nFile\nDescription\n\n\n\n\ncleaning.R\nR script that processes raw WVS data and creates cleaned datasets\n\n\n\nBrowse code files",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "World Values Survey"
+    ]
+  },
+  {
+    "objectID": "case-studies/VWS/index.html#key-features",
+    "href": "case-studies/VWS/index.html#key-features",
+    "title": "World Values Survey (WVS)",
+    "section": "Key Features",
+    "text": "Key Features\n\nInternational survey data covering 50+ countries\nEconomic indicators merged from World Bank\nMultiple aggregation levels (individual and country-level)\nDetailed codebook documentation",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "World Values Survey"
+    ]
+  },
+  {
+    "objectID": "case-studies/VWS/index.html#sample-research-questions",
+    "href": "case-studies/VWS/index.html#sample-research-questions",
+    "title": "World Values Survey (WVS)",
+    "section": "Sample Research Questions",
+    "text": "Sample Research Questions\n\nRelationship between income level and trust/happiness\nCultural differences in gender attitudes\nEconomic development and social values",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "World Values Survey"
+    ]
+  },
+  {
+    "objectID": "case-studies/VWS/index.html#downloads",
+    "href": "case-studies/VWS/index.html#downloads",
+    "title": "World Values Survey (WVS)",
+    "section": "Downloads",
+    "text": "Downloads\n\nWVS_random_subset2000.csv\nWVS_GDP_merged_data.csv\nCodebook (PDF)",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "World Values Survey"
+    ]
+  },
+  {
+    "objectID": "case-studies/austria-hotels/data/index.html",
+    "href": "case-studies/austria-hotels/data/index.html",
+    "title": "Austrian Hotels - Data Files",
     "section": "",
     "text": "← Back to Austrian Hotels Case Study"
   },
   {
-    "objectID": "case-studies/austria-hotels/code/index.html#code-files",
-    "href": "case-studies/austria-hotels/code/index.html#code-files",
-    "title": "Austrian Hotels - Code",
-    "section": "Code Files",
-    "text": "Code Files\nCode examples to be added.\nCheck back later for R and Python examples demonstrating table joins with this dataset."
-  },
-  {
-    "objectID": "case-studies/austria-hotels/data/hotel-data-readme.html",
-    "href": "case-studies/austria-hotels/data/hotel-data-readme.html",
-    "title": "",
-    "section": "",
-    "text": "Code"
-  },
-  {
-    "objectID": "case-studies/austria-hotels/data/hotel-data-readme.html#info",
-    "href": "case-studies/austria-hotels/data/hotel-data-readme.html#info",
-    "title": "",
-    "section": "Info",
-    "text": "Info\nThis dataset contains realistic data on hotels across Austria.\n\nThis dataset was generated programmatically with the generate_austrian_hotels_data.R script to ensure realistic relationships between variables while maintaining privacy.\n\nThe scipt was writen by Claude AI, Sonnet 3.7, 2025-03-15, and reviwed and approved by Gabor 2025-03-17\n\nThe dataset consists of multiple related tables that can be combined.\nThe data patterns are based on typical hotel industry metrics but do not represent actual hotels."
-  },
-  {
-    "objectID": "case-studies/austria-hotels/data/hotel-data-readme.html#dataset-overview",
-    "href": "case-studies/austria-hotels/data/hotel-data-readme.html#dataset-overview",
-    "title": "",
-    "section": "Dataset Overview",
-    "text": "Dataset Overview\nThe dataset includes hotels across Austrian cities with data on occupancy, pricing, tourism statistics, and economic indicators.\n\nFiles\nAll files are located in the data/raw/ directory:\n\n\n\n\n\n\n\n\n\nFile\nDescription\nRows\nKey Columns\n\n\n\n\nhotels.csv\nBasic hotel information\n200\nhotel_id (PK)\n\n\ncities.csv\nCity information\n10\ncity (PK)\n\n\nmonthly_occupancy.csv\nMonthly hotel performance metrics\n~3,800\nhotel_id, month, year\n\n\ncity_tourism.csv\nMonthly tourism statistics by city\n240\ncity, month, year\n\n\neconomic_indicators.csv\nMonthly economic indicators\n24\nmonth, year\n\n\nreviews.csv\nHotel guest reviews\n~1,700\nreview_id (PK), hotel_id (FK)\n\n\namenities.csv\nList of possible hotel amenities\n10\namenity_id (PK)\n\n\nhotel_amenities.csv\nHotel-amenity relationships\n~1,000\nhotel_id, amenity_id\n\n\n\n## Schema Details\n### hotels.csv Information about individual hotels.\n\n\n\nColumn\nType\nDescription\n\n\n\n\nhotel_id\ninteger\nPrimary key\n\n\nhotel_name\ncharacter\nHotel name\n\n\ncity\ncharacter\nCity where hotel is located\n\n\nstar_rating\ninteger\nHotel quality rating (3-5 stars)\n\n\nrooms\ninteger\nNumber of rooms in the hotel\n\n\nyear_built\ninteger\nYear the hotel was built\n\n\n\n### cities.csv Information about Austrian cities.\n\n\n\nColumn\nType\nDescription\n\n\n\n\ncity\ncharacter\nCity name (primary key)\n\n\nprovince\ncharacter\nAustrian province\n\n\npopulation\ninteger\nCity population\n\n\ntourism_rank\ninteger\nTourism popularity rank (1 = highest)\n\n\n\n### monthly_occupancy.csv Monthly hotel performance metrics.\n\n\n\nColumn\nType\nDescription\n\n\n\n\nhotel_id\ninteger\nForeign key to hotels.csv\n\n\nmonth\ninteger\nMonth (1-12)\n\n\nyear\ninteger\nYear (2023-2024)\n\n\noccupancy_rate\nnumeric\nPercentage of rooms occupied (0.0-1.0)\n\n\navg_daily_rate\nnumeric\nAverage price per night in EUR\n\n\nrevenue_per_room\nnumeric\nRevenue per available room (RevPAR)\n\n\n\n### city_tourism.csv Monthly tourism statistics for each city.\n\n\n\nColumn\nType\nDescription\n\n\n\n\ncity\ncharacter\nCity name\n\n\nmonth\ninteger\nMonth (1-12)\n\n\nyear\ninteger\nYear (2023-2024)\n\n\ntourist_arrivals\ninteger\nNumber of tourists arriving\n\n\nevent_days\ninteger\nNumber of event days in the month\n\n\navg_stay_length\nnumeric\nAverage length of stay in days\n\n\n\n### economic_indicators.csv Monthly economic indicators for Austria.\n\n\n\nColumn\nType\nDescription\n\n\n\n\nmonth\ninteger\nMonth (1-12)\n\n\nyear\ninteger\nYear (2023-2024)\n\n\ninflation_rate\nnumeric\nMonthly inflation rate (decimal)\n\n\nunemployment\nnumeric\nUnemployment rate (decimal)\n\n\nconsumer_confidence\nnumeric\nConsumer confidence index\n\n\n\n### reviews.csv Hotel guest reviews.\n\n\n\nColumn\nType\nDescription\n\n\n\n\nreview_id\ninteger\nPrimary key\n\n\nhotel_id\ninteger\nForeign key to hotels.csv\n\n\nrating\nnumeric\nRating (1.0-5.0)\n\n\nreview_date\ndate\nDate of the review\n\n\n\n### amenities.csv List of possible hotel amenities.\n\n\n\nColumn\nType\nDescription\n\n\n\n\namenity_id\ninteger\nPrimary key\n\n\namenity_name\ncharacter\nName of the amenity\n\n\n\n### hotel_amenities.csv Many-to-many relationship between hotels and amenities.\n\n\n\nColumn\nType\nDescription\n\n\n\n\nhotel_id\ninteger\nForeign key to hotels.csv\n\n\namenity_id\ninteger\nForeign key to amenities.csv"
-  },
-  {
-    "objectID": "case-studies/common-support-r/code/index.html",
-    "href": "case-studies/common-support-r/code/index.html",
-    "title": "Common Support Analysis - Code",
-    "section": "",
-    "text": "← Back to Common Support Case Study"
-  },
-  {
-    "objectID": "case-studies/common-support-r/code/index.html#code-files",
-    "href": "case-studies/common-support-r/code/index.html#code-files",
-    "title": "Common Support Analysis - Code",
-    "section": "Code Files",
-    "text": "Code Files\nSequential prompts showing iterative development with Claude AI:\n\n\n\nFile\nDescription\n\n\n\n\nclaude-sonnet-v4-prompt-01.R\nInitial prompt and response\n\n\nclaude-sonnet-v4-prompt-02.R\nFirst refinement\n\n\nclaude-sonnet-v4-prompt-03.R\nAdding features\n\n\nclaude-sonnet-v4-prompt-04.R\nFurther improvements\n\n\nclaude-sonnet-v4-prompt-05.R\nExtended analysis\n\n\nclaude-sonnet-v4-prompt-06.R\nVisualization updates\n\n\nclaude-sonnet-v4-prompt-07.R\nAdditional refinements\n\n\nclaude-sonnet-v4-prompt-08.R\nNear-final version\n\n\nclaude-sonnet-v4-prompt-09.R\nFinal polished version"
-  },
-  {
-    "objectID": "case-studies/common-support-r/code/index.html#learning-points",
-    "href": "case-studies/common-support-r/code/index.html#learning-points",
-    "title": "Common Support Analysis - Code",
-    "section": "Learning Points",
-    "text": "Learning Points\nThis series demonstrates: - How to iteratively develop code with AI assistance - Prompt refinement strategies - Building complex statistical analyses step-by-step"
-  },
-  {
-    "objectID": "case-studies/common-support-r/index.html",
-    "href": "case-studies/common-support-r/index.html",
-    "title": "Common Support Analysis (R)",
-    "section": "",
-    "text": "Iterative development of R code for common support analysis using Claude AI, demonstrating the prompt-refine workflow for building statistical analysis code.\nTopic: Causal inference and common support in treatment effect estimation",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Common Support (R)"
-    ]
-  },
-  {
-    "objectID": "case-studies/common-support-r/index.html#overview",
-    "href": "case-studies/common-support-r/index.html#overview",
-    "title": "Common Support Analysis (R)",
-    "section": "",
-    "text": "Iterative development of R code for common support analysis using Claude AI, demonstrating the prompt-refine workflow for building statistical analysis code.\nTopic: Causal inference and common support in treatment effect estimation",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Common Support (R)"
-    ]
-  },
-  {
-    "objectID": "case-studies/common-support-r/index.html#code-files",
-    "href": "case-studies/common-support-r/index.html#code-files",
-    "title": "Common Support Analysis (R)",
-    "section": "Code Files",
-    "text": "Code Files\nSequential prompts showing iterative development:\n\n\n\nFile\nDescription\n\n\n\n\nclaude-sonnet-v4-prompt-01.R\nInitial prompt and response\n\n\nclaude-sonnet-v4-prompt-02.R\nFirst refinement\n\n\nclaude-sonnet-v4-prompt-03.R\nAdding features\n\n\nclaude-sonnet-v4-prompt-04.R\nFurther improvements\n\n\nclaude-sonnet-v4-prompt-05.R\nExtended analysis\n\n\nclaude-sonnet-v4-prompt-06.R\nVisualization updates\n\n\nclaude-sonnet-v4-prompt-07.R\nAdditional refinements\n\n\nclaude-sonnet-v4-prompt-08.R\nNear-final version\n\n\nclaude-sonnet-v4-prompt-09.R\nFinal polished version\n\n\n\nBrowse code files",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Common Support (R)"
-    ]
-  },
-  {
-    "objectID": "case-studies/common-support-r/index.html#data",
-    "href": "case-studies/common-support-r/index.html#data",
-    "title": "Common Support Analysis (R)",
-    "section": "Data",
-    "text": "Data\nUses simulated data generated within scripts\nBrowse data files",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Common Support (R)"
-    ]
-  },
-  {
-    "objectID": "case-studies/common-support-r/index.html#key-features",
-    "href": "case-studies/common-support-r/index.html#key-features",
-    "title": "Common Support Analysis (R)",
-    "section": "Key Features",
-    "text": "Key Features\n\nDemonstrates iterative AI-assisted coding workflow\nShows progression from basic to sophisticated analysis\nReal example of prompt engineering for statistical code\nCommon support visualization techniques",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Common Support (R)"
-    ]
-  },
-  {
-    "objectID": "case-studies/common-support-r/index.html#learning-objectives",
-    "href": "case-studies/common-support-r/index.html#learning-objectives",
-    "title": "Common Support Analysis (R)",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nHow to iteratively develop code with AI\nPrompt refinement strategies\nBuilding complex statistical analyses step-by-step",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Common Support (R)"
-    ]
-  },
-  {
-    "objectID": "case-studies/employee_commits/code/index.html",
-    "href": "case-studies/employee_commits/code/index.html",
-    "title": "Employee Commits - Code",
-    "section": "",
-    "text": "← Back to Employee Commits Case Study"
-  },
-  {
-    "objectID": "case-studies/employee_commits/code/index.html#code-files",
-    "href": "case-studies/employee_commits/code/index.html#code-files",
-    "title": "Employee Commits - Code",
-    "section": "Code Files",
-    "text": "Code Files\nCode examples to be added."
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html",
-    "title": "",
-    "section": "",
-    "text": "Code"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#whats-new-in-v3.0---key-improvements",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#whats-new-in-v3.0---key-improvements",
-    "title": "",
-    "section": "What’s New in v3.0 - KEY IMPROVEMENTS",
-    "text": "What’s New in v3.0 - KEY IMPROVEMENTS\n\n1. ✅ Rising Productivity in First 2 Years (Ramp-Up)\n\nEarly career (0-2yr): Mean = 9.7 commits/month\nProductivity increases from ~30% to 100% over first 730 days\nPattern: People are learning, ramping up skills\n\n\n\n2. ✅ Smooth Tenure Distribution (No Cliff!)\n\nExponential distribution: Most people have low tenure\nNatural decline: 148 employees &lt;1yr, 112 at 1-2yr, 167 at 2-5yr, 115 at 5+yr\nPattern: Realistic employee turnover and retention\n\n\n\n3. ✅ Marked Decline After 7-8 Years\n\nLate career (7+yr): Mean = 8.7 commits/month (lower than early career!)\nZero commits: 19.8% of employees with 7+ years (vs 5% baseline)\nPattern: Move to management, mentoring, architecture roles"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#the-x-y-relationship-now-much-clearer",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#the-x-y-relationship-now-much-clearer",
-    "title": "",
-    "section": "The X-Y Relationship: Now MUCH Clearer!",
-    "text": "The X-Y Relationship: Now MUCH Clearer!\n\nOverall Statistics (Clean Data, N=542)\nCorrelations: - Pearson (linear): r = 0.019 (still weak in linear sense) - Spearman (rank): r = 0.190 (p &lt; 0.0001, significant!)\nKey Insight: The relationship is non-linear and non-monotonic!\n\n\nThe Career Progression Curve\n\n\n\n\n\n\n\n\n\n\n\nCareer Stage\nTenure\nMean\nMedian\nN\nPattern\n\n\n\n\nEarly (Learning)\n0-1 year\n7.4\n5.5\n148\nLow (ramping up)\n\n\nGrowing (Maturing)\n1-2 years\n13.0\n10.5\n112\nRising (learning curve)\n\n\nPeak (Full productivity)\n2-5 years\n32.0\n24.0\n167\nMaximum (IC contributors)\n\n\nLate (Leadership)\n5+ years\n10.3\n7.0\n115\nDeclining (management)\n\n\n\nPeak is 4.3x higher than early career!\nLate career drops back to early levels!\n\n\nStatistical Significance\nANOVA for Seniority Effect: - F-statistic: 93.66 - p-value: &lt; 0.0001 - Result: Highly significant differences across career stages\nThe evidence is overwhelming that career stage matters!"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#visualizations-show-clear-patterns",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#visualizations-show-clear-patterns",
-    "title": "",
-    "section": "Visualizations Show Clear Patterns",
-    "text": "Visualizations Show Clear Patterns\n\nPanel 1: Tenure Distribution (Top Left)\n\nSmooth exponential decline (no cliff at 2000 days)\nMost employees concentrated in 0-2000 day range\nNatural thinning as tenure increases\n\n\n\nPanel 2: Career Progression Curve (Top Right)\nRED MEDIAN TREND LINE shows: 1. Rise from 0 to ~1000 days (0-3 years) 2. Peak around 1000-2000 days (3-5 years)\n3. Decline after 2500 days (7+ years) 4. Low plateau after 3500+ days (10+ years)\nThis is the inverted-U pattern that students should discover!\n\n\nPanel 3: Productivity by Career Stage (Bottom Left)\nBoxplots dramatically show: - Early: Median ~5, tight distribution - Peak: Median ~24, wide distribution (high variance) - Late: Median ~7, back down to early levels\n\n\nPanel 4: Zero Commits Rate (Bottom Right)\nThe “management transition” effect: - Stable ~5-15% for first 2500 days - Spike to 30-50% after 2500 days (7 years) - Shows clear transition from coding to leadership"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#why-this-is-the-best-teaching-dataset",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#why-this-is-the-best-teaching-dataset",
-    "title": "",
-    "section": "Why This is the BEST Teaching Dataset",
-    "text": "Why This is the BEST Teaching Dataset\n\n1. Realistic Career Arc\nThis pattern matches real-world phenomena: - Academic research output (inverted-U with age) - Sports performance (peak then decline) - Software engineering (senior devs code less) - Management transitions (IC → people leadership)\n\n\n2. Multiple Valid Analysis Approaches\nStudents can explore:\nLinear approaches: - Simple OLS: R² ≈ 0 (fails completely) - With group dummies: R² ≈ 0.25 (much better!)\nNon-linear approaches: - Polynomial regression (quadratic or cubic) - Splines (natural or smoothing splines) - GAM (generalized additive models) - Locally weighted regression (LOESS)\nCount data approaches: - Poisson regression - Negative binomial (handles overdispersion) - Zero-inflated models (for late-career zeros)\nGroup-based approaches: - ANOVA / linear model with tenure groups - Separate models by career stage - Mixed effects with random slopes\n\n\n3. Forces Critical Thinking\nQuestions students must grapple with: - Why does simple linear regression fail? - How do we model non-monotonic relationships? - When to use continuous vs categorical predictors? - How to interpret “no linear relationship” vs “no relationship”?\n\n\n4. Data Quality Challenges\nStill includes 58 problematic cases (8 errors + 50 extreme values): - Students must clean data first - Different cleaning decisions affect results - Teaches importance of documentation"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#key-statistics-summary",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#key-statistics-summary",
-    "title": "",
-    "section": "Key Statistics Summary",
-    "text": "Key Statistics Summary\n\nTenure Distribution (Clean Data)\n\nMean: 1,162 days (3.2 years)\nMedian: 788 days (2.2 years)\nRange: 1 to 5,475 days (0 to 15 years)\nMost employees: 0-2000 days (70%)\n\n\n\nCommits Distribution (Clean Data)\n\nMean: 16.8 commits/month\nMedian: 10.0 commits/month (right-skewed!)\nRange: 0 to 119 commits/month\nZero commits: 50 cases (9.2%)\n\n\n\nBy Department (Clean Data)\n\nIT: Mean = 18.0, Median = 12.0 (n=307)\nAnalytics: Mean = 15.1, Median = 9.0 (n=235)\nDifference: Not statistically significant (p=0.09)\n\n\n\nData Quality Issues\n\n8 errors (must fix): negative values, impossibly high/long\n50 extreme values (analyst judgment): very high commits, zeros with long tenure\n542 clean observations (90.3%)"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#files-provided-v3.0",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#files-provided-v3.0",
-    "title": "",
-    "section": "Files Provided (v3.0)",
-    "text": "Files Provided (v3.0)\n\nMain Data Files\n\nemployee_commits_claude_v3.csv (600 rows)\n\nFull dataset with metadata\nColumns: i, x, y, department, seniority, role, data_issue, issue_category\nUse for: Teaching with answer key\n\nemployee_commits_raw_v3.csv (600 rows)\n\nMinimal dataset (i, x, y, department, role only)\nUse for: Give to students first (discovery learning)\n\nemployee_commits_clean_v3.csv (542 rows)\n\nOnly clean observations\nUse for: Analysis after cleaning or skip cleaning exercise\n\ndata_quality_report_v3.csv (58 rows)\n\nList of all problematic cases\nUse for: Answer key for data cleaning\n\n\n\n\nVisualization Files\n\nemployee_commits_v3_plots.png\n\nShows DGP features: ramp-up, peak, decline, zeros\n4 panels demonstrating career progression\n\nxy_relationship_analysis_v3.png\n\nComprehensive 8-panel analysis\nShows relationship from multiple angles\nIncludes residual diagnostics\n\n\n\n\nCode Files\n\ngenerate_data_v3.py\n\nComplete data generation code\nFully commented and reproducible\nChange seed or parameters as needed\n\nanalyze_xy_relationship_v3.py\n\nRelationship analysis script\nCreates 8-panel visualization\nStatistical tests included"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#teaching-workflow-recommended",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#teaching-workflow-recommended",
-    "title": "",
-    "section": "Teaching Workflow (Recommended)",
-    "text": "Teaching Workflow (Recommended)\n\nStage 1: Discovery (Raw Data)\n\nGive students employee_commits_raw_v3.csv\nAsk: “What is the relationship between x and y?”\nLet them explore, visualize, analyze\nThey should discover the non-linear pattern!\n\n\n\nStage 2: Data Quality\n\nAsk: “Are there any data quality issues?”\nStudents identify errors and extreme values\nMake and document cleaning decisions\nCompare with data_quality_report_v3.csv\n\n\n\nStage 3: Multiple Models\n\nTry various modeling approaches\nCompare: OLS, polynomials, splines, groups, etc.\nEvaluate which model best captures the pattern\nDiscuss trade-offs (interpretability vs fit)\n\n\n\nStage 4: Interpretation\n\nWhat is the relationship between tenure and commits?\nWhy is it non-monotonic?\nWhat does this tell us about career progression?\nHow would you communicate findings to stakeholders?"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#key-teaching-points",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#key-teaching-points",
-    "title": "",
-    "section": "Key Teaching Points",
-    "text": "Key Teaching Points\n\n1. Linear Models Can Miss Important Patterns\n\nr ≈ 0 doesn’t mean “no relationship”\nIt means “no linear relationship”\nAlways visualize first!\n\n\n\n2. Non-Monotonic Relationships Are Common\n\nNot everything increases or decreases monotonically\nCareer arcs, learning curves, life cycles all have peaks\nNeed appropriate modeling approaches\n\n\n\n3. Group-Based Analysis Often Better\n\nCategorical predictors (seniority) explain more than continuous (days)\nDomain knowledge helps create meaningful groups\nSometimes simpler is better (interpretability)\n\n\n\n4. Count Data Has Special Properties\n\nDiscrete, non-negative, right-skewed\nPoisson/NB often better than OLS\nZero-inflation is a real phenomenon\n\n\n\n5. Context Matters\n\nThe inverted-U makes perfect sense for careers\nEarly: learning and ramping up\nPeak: full IC productivity\n\nLate: transitioning to leadership\nDomain knowledge guides modeling choices"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#comparison-v2.1-vs-v3.0",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#comparison-v2.1-vs-v3.0",
-    "title": "",
-    "section": "Comparison: v2.1 vs v3.0",
-    "text": "Comparison: v2.1 vs v3.0\n\n\n\n\n\n\n\n\n\nFeature\nv2.1\nv3.0\nImpact\n\n\n\n\nEarly career\nFlat/low\nRising\nMore realistic learning curve\n\n\nTenure distribution\nHard cutoffs\nSmooth exponential\nNo artificial cliff\n\n\nLate career\nModerate decline\nMarked decline + zeros\nClear management transition\n\n\nX-Y correlation\n-0.005\n0.019\nSlightly positive (better)\n\n\nSpearman correlation\n0.120\n0.190\nStronger non-linear signal\n\n\nSeniority F-stat\n35.5\n93.7\nMuch stronger group effects\n\n\nPedagogical clarity\nGood\nExcellent\nPattern unmistakable\n\n\n\nv3.0 is the recommended version for teaching!"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#extensions-and-variations",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#extensions-and-variations",
-    "title": "",
-    "section": "Extensions and Variations",
-    "text": "Extensions and Variations\n\nEasy Modifications (change in generate_data_v3.py):\n\nDifferent ramp-up speed: Change x/730 factor\nEarlier/later peak: Adjust 2500 day threshold\nSteeper decline: Increase 0.12 decline factor\nMore zeros: Increase 0.07 probability increment\nDifferent roles: Modify base_monthly_rates\nMore departments: Add to dept_split\n\n\n\nAdvanced Extensions:\n\nTime series: Multiple observations per employee\nTeam effects: Add team ID with random effects\nProject complexity: Add covariate affecting commits\nTurnover: Some employees leave (censoring)\nPromotions: Explicit seniority changes over time"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#technical-details",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#technical-details",
-    "title": "",
-    "section": "Technical Details",
-    "text": "Technical Details\n\nDGP Specifications (v3.0)\nTenure Distribution:\ndays_with_company ~ Exponential(mean=1200)\nTruncated: [1, 5475] days\nProductivity Function:\nramp_factor = {\n  0.3 + 0.7*(x/730)           if x &lt; 730\n  1.0                          if 730 ≤ x &lt; 2500\n  max(0.25, 1.0 - 0.12*years)  if x ≥ 2500\n}\n\nlambda = base_rate × seniority_mult × ramp_factor × individual_effect\ny ~ NegativeBinomial(mu=lambda, size=5)\nZero Inflation:\nP(y=0) = {\n  0.05                           if x &lt; 2500\n  min(0.35, 0.05 + 0.07*years)  if x ≥ 2500\n}\n\n\nRandom Seed\nnp.random.seed(20251112) - fully reproducible\n\n\nSoftware Requirements\n\nPython 3.x\nnumpy, pandas, matplotlib, scipy, sklearn"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#bottom-line",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#bottom-line",
-    "title": "",
-    "section": "Bottom Line",
-    "text": "Bottom Line\nv3.0 creates a realistic dataset that:\n✅ Shows clear non-monotonic career progression\n✅ Challenges students’ intuitions about linearity\n✅ Requires sophisticated thinking about modeling\n✅ Reflects real-world career dynamics\n✅ Provides rich opportunities for exploration\n✅ Has no single “right” answer (by design)\n✅ Teaches both technical skills and critical thinking\nPerfect for teaching “What is the relationship between x and y?”"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#quick-start",
-    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#quick-start",
-    "title": "",
-    "section": "Quick Start",
-    "text": "Quick Start\n\nGive students: employee_commits_raw_v3.csv\nAsk: “What is the relationship between tenure (x) and monthly commits (y)?”\nLet them explore and struggle (this is where learning happens!)\nReveal patterns using: employee_commits_v3_plots.png and xy_relationship_analysis_v3.png\nDiscuss: Why did simple approaches fail? What models work better?\n\nWelcome to the wonderful world of non-linear relationships!"
-  },
-  {
-    "objectID": "case-studies/employee_commits/index.html",
-    "href": "case-studies/employee_commits/index.html",
-    "title": "Employee Commits Dataset",
-    "section": "",
-    "text": "Simulated dataset of employee commit activity for exploring AI-generated data analysis and visualization comparisons.\nUsed in: Data analysis demonstrations",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Employee Commits"
-    ]
-  },
-  {
-    "objectID": "case-studies/employee_commits/index.html#overview",
-    "href": "case-studies/employee_commits/index.html#overview",
-    "title": "Employee Commits Dataset",
-    "section": "",
-    "text": "Simulated dataset of employee commit activity for exploring AI-generated data analysis and visualization comparisons.\nUsed in: Data analysis demonstrations",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Employee Commits"
-    ]
-  },
-  {
-    "objectID": "case-studies/employee_commits/index.html#data-files",
-    "href": "case-studies/employee_commits/index.html#data-files",
-    "title": "Employee Commits Dataset",
+    "objectID": "case-studies/austria-hotels/data/index.html#data-files",
+    "href": "case-studies/austria-hotels/data/index.html#data-files",
+    "title": "Austrian Hotels - Data Files",
     "section": "Data Files",
-    "text": "Data Files\n\n\n\nFile\nDescription\n\n\n\n\nemployee_commits_clean.csv\nCleaned commit data\n\n\nemployee_commits_raw.csv\nRaw commit data\n\n\nREADME.txt\nData description\n\n\n\n\nAI Analysis Outputs\nThe ai/ subfolder contains analysis outputs from different AI models:\n\nChatGPT analysis outputs\nClaude analysis outputs\nGemini analysis outputs\n\nBrowse data files",
+    "text": "Data Files\nDownload the complete dataset: data-modified.zip\n\nIndividual Files\n\n\n\nFile\nDescription\n\n\n\n\nhotels_modified.csv\nBasic hotel information (200 hotels)\n\n\ncities_modified.csv\nCity information (10 cities)\n\n\nmonthly_occupancy_modified.csv\nMonthly hotel performance (~3,800 rows)\n\n\ncity_tourism_modified.csv\nMonthly tourism statistics (240 rows)\n\n\neconomic_indicators.csv\nMonthly economic indicators (24 rows)\n\n\nreviews_modified.csv\nHotel guest reviews (~1,700 rows)\n\n\namenities.csv\nList of hotel amenities (10 items)\n\n\nhotel_amenities_modified.csv\nHotel-amenity relationships (~1,000 rows)"
+  },
+  {
+    "objectID": "case-studies/austria-hotels/data/index.html#documentation",
+    "href": "case-studies/austria-hotels/data/index.html#documentation",
+    "title": "Austrian Hotels - Data Files",
+    "section": "Documentation",
+    "text": "Documentation\n\nhotel-data-readme.md - Detailed schema documentation with column descriptions"
+  },
+  {
+    "objectID": "case-studies/austria-hotels/index.html",
+    "href": "case-studies/austria-hotels/index.html",
+    "title": "Austrian Hotels Dataset",
+    "section": "",
+    "text": "A realistic simulated dataset of hotels across Austria for practicing data wrangling and table joins. Contains multiple related tables with hotels, cities, occupancy, tourism, and economic data.\nUsed in: Week 4 (Joining Tables)\nGenerated by: Claude AI (Sonnet 3.7) with realistic relationships between variables",
     "crumbs": [
       "Home",
       "Case Studies",
-      "Employee Commits"
+      "Austrian Hotels"
     ]
   },
   {
-    "objectID": "case-studies/employee_commits/index.html#code",
-    "href": "case-studies/employee_commits/index.html#code",
-    "title": "Employee Commits Dataset",
+    "objectID": "case-studies/austria-hotels/index.html#overview",
+    "href": "case-studies/austria-hotels/index.html#overview",
+    "title": "Austrian Hotels Dataset",
+    "section": "",
+    "text": "A realistic simulated dataset of hotels across Austria for practicing data wrangling and table joins. Contains multiple related tables with hotels, cities, occupancy, tourism, and economic data.\nUsed in: Week 4 (Joining Tables)\nGenerated by: Claude AI (Sonnet 3.7) with realistic relationships between variables",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Austrian Hotels"
+    ]
+  },
+  {
+    "objectID": "case-studies/austria-hotels/index.html#data-files",
+    "href": "case-studies/austria-hotels/index.html#data-files",
+    "title": "Austrian Hotels Dataset",
+    "section": "Data Files",
+    "text": "Data Files\nThe dataset includes 8 related tables:\n\n\n\n\n\n\n\n\nFile\nDescription\nRows\n\n\n\n\nhotels_modified.csv\nBasic hotel information\n200\n\n\ncities_modified.csv\nCity information\n10\n\n\nmonthly_occupancy_modified.csv\nMonthly hotel performance\n~3,800\n\n\ncity_tourism_modified.csv\nMonthly tourism stats\n240\n\n\neconomic_indicators.csv\nMonthly economic indicators\n24\n\n\nreviews_modified.csv\nHotel guest reviews\n~1,700\n\n\namenities.csv\nList of hotel amenities\n10\n\n\nhotel_amenities_modified.csv\nHotel-amenity relationships\n~1,000\n\n\n\nBrowse data files",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Austrian Hotels"
+    ]
+  },
+  {
+    "objectID": "case-studies/austria-hotels/index.html#documentation",
+    "href": "case-studies/austria-hotels/index.html#documentation",
+    "title": "Austrian Hotels Dataset",
+    "section": "Documentation",
+    "text": "Documentation\n\nhotel-data-readme.md - Detailed schema documentation",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Austrian Hotels"
+    ]
+  },
+  {
+    "objectID": "case-studies/austria-hotels/index.html#code",
+    "href": "case-studies/austria-hotels/index.html#code",
+    "title": "Austrian Hotels Dataset",
     "section": "Code",
     "text": "Code\nCode examples to be added\nBrowse code files",
     "crumbs": [
       "Home",
       "Case Studies",
-      "Employee Commits"
+      "Austrian Hotels"
     ]
   },
   {
-    "objectID": "case-studies/employee_commits/index.html#key-features",
-    "href": "case-studies/employee_commits/index.html#key-features",
-    "title": "Employee Commits Dataset",
-    "section": "Key Features",
-    "text": "Key Features\n\nComparison of AI-generated analyses\nMultiple model outputs for same dataset\nVisualization comparisons",
+    "objectID": "case-studies/austria-hotels/index.html#key-relationships",
+    "href": "case-studies/austria-hotels/index.html#key-relationships",
+    "title": "Austrian Hotels Dataset",
+    "section": "Key Relationships",
+    "text": "Key Relationships\n\nOne-to-One: Hotels to Cities (through city name)\nOne-to-Many: Hotels to Monthly Occupancy, Hotels to Reviews\nMany-to-Many: Hotels to Amenities (through hotel_amenities)\nComposite Keys: Monthly data uses (hotel_id, month, year)",
     "crumbs": [
       "Home",
       "Case Studies",
-      "Employee Commits"
+      "Austrian Hotels"
     ]
   },
   {
-    "objectID": "case-studies/employee_commits/index.html#downloads",
-    "href": "case-studies/employee_commits/index.html#downloads",
-    "title": "Employee Commits Dataset",
+    "objectID": "case-studies/austria-hotels/index.html#learning-objectives",
+    "href": "case-studies/austria-hotels/index.html#learning-objectives",
+    "title": "Austrian Hotels Dataset",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nInner, left, right, and full joins\nOne-to-one and one-to-many relationships\nComposite key joins\nData aggregation after joins\nHandling missing values in joins",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Austrian Hotels"
+    ]
+  },
+  {
+    "objectID": "case-studies/austria-hotels/index.html#downloads",
+    "href": "case-studies/austria-hotels/index.html#downloads",
+    "title": "Austrian Hotels Dataset",
     "section": "Downloads",
-    "text": "Downloads\n\nemployee_commits_clean.csv\nemployee_commits_raw.csv",
+    "text": "Downloads\n\ndata-modified.zip - All data files",
     "crumbs": [
       "Home",
       "Case Studies",
-      "Employee Commits"
+      "Austrian Hotels"
     ]
   },
   {
-    "objectID": "case-studies/interviews/data/index.html",
-    "href": "case-studies/interviews/data/index.html",
-    "title": "Football Manager Interviews - Data Files",
+    "objectID": "case-studies/common-support-r/data/index.html",
+    "href": "case-studies/common-support-r/data/index.html",
+    "title": "Common Support Analysis - Data",
+    "section": "",
+    "text": "← Back to Common Support Case Study"
+  },
+  {
+    "objectID": "case-studies/common-support-r/data/index.html#data-files",
+    "href": "case-studies/common-support-r/data/index.html#data-files",
+    "title": "Common Support Analysis - Data",
+    "section": "Data Files",
+    "text": "Data Files\nThis case study uses simulated data generated within the R scripts.\nNo external data files required."
+  },
+  {
+    "objectID": "case-studies/index.html",
+    "href": "case-studies/index.html",
+    "title": "Case Studies",
+    "section": "",
+    "text": "This course uses several case studies to demonstrate data analysis with AI. Each case study includes data, code examples, and documentation."
+  },
+  {
+    "objectID": "case-studies/index.html#main-case-studies",
+    "href": "case-studies/index.html#main-case-studies",
+    "title": "Case Studies",
+    "section": "Main Case Studies",
+    "text": "Main Case Studies\n\nWorld Values Survey (WVS)\nThe 7th Wave of the World Values Survey, cleaned and merged with World Bank GDP data. Used for data documentation and report writing exercises.\nUsed in: Week 2 (Data Documentation), Week 3 (Report Writing)\n\n\n\nAustrian Hotels\nA realistic simulated dataset of hotels across Austria for practicing data wrangling and table joins. Contains 8 related tables.\nUsed in: Week 4 (Joining Tables)\n\n\n\nFootball Manager Interviews\nPost-match interview texts from football managers for sentiment analysis and NLP practice. Includes rating systems for comparison and validation.\nUsed in: Week 5 (Text as Data I), Week 6 (Text as Data II)"
+  },
+  {
+    "objectID": "case-studies/index.html#additional-case-studies",
+    "href": "case-studies/index.html#additional-case-studies",
+    "title": "Case Studies",
+    "section": "Additional Case Studies",
+    "text": "Additional Case Studies\n\nUS Earnings Data (CPS)\nCurrent Population Survey data for analyzing earnings patterns, gender gaps, and returns to education.\nUsed in: Week 0 (Coding with AI)\n\n\n\nEmployee Commits\nSimulated dataset of employee commit activity for exploring AI-generated data analysis comparisons.\n\n\n\nCommon Support Analysis (R)\nIterative development of R code for causal inference analysis using Claude AI, demonstrating prompt-refine workflow."
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html",
+    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#what-changed-in-v2.1",
+    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#what-changed-in-v2.1",
+    "title": "",
+    "section": "What Changed in v2.1",
+    "text": "What Changed in v2.1\nIncreased extreme values from 10 to 50: - 30 very high commits (range: 200-450/month) — up from 3 - 10 zero commits with long tenure — up from 3 - 5 high commits for juniors — up from 2 - 5 high commits for infrastructure — up from 2\nData errors remain at 8 (unchanged from v2.0)\nTotal problematic cases: 58 (8 errors + 50 extreme values) Clean observations: 542 Total: 600 employees"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#files-provided",
+    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#files-provided",
+    "title": "",
+    "section": "Files Provided",
+    "text": "Files Provided\n\n1. employee_commits_claude.csv\nFull dataset with all metadata (600 rows × 8 columns)\nColumns: - i - Employee ID - x - Days with company - y - Monthly commits - department - IT or Analytics - seniority - Junior, Mid, Senior - role - Specific job role - data_issue - Description of any quality issues - issue_category - Clean, Data Error, or Extreme Value\nUse this for teaching data quality and cleaning decisions.\n\n\n2. employee_commits_raw.csv\nMinimal dataset (600 rows × 5 columns)\nColumns: - i - Employee ID - x - Days with company - y - Monthly commits - department - IT or Analytics - role - Specific job role\nDropped columns: seniority, data_issue, issue_category\nUse this as the “raw data” students receive before they know about issues.\n\n\n3. employee_commits_clean.csv\nOnly clean observations (542 rows)\nAll 8 data errors and 50 extreme values removed. Use for comparison or to skip the cleaning exercise.\n\n\n4. data_quality_report.csv\nList of all 58 problematic cases\nShows each issue with employee ID, x, y, and explanation. Use as an answer key or for discussion.\n\n\n5. employee_commits_v2_plots.png\nDiagnostic visualizations\nFour panels showing data quality issues highlighted: - Full view with errors (X) and extreme values (★) - Zoomed view focusing on reasonable range - Distribution of monthly commits - Boxplots by role"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#data-quality-issues-breakdown",
+    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#data-quality-issues-breakdown",
+    "title": "",
+    "section": "Data Quality Issues Breakdown",
+    "text": "Data Quality Issues Breakdown\n\nData Errors (8 cases) - Must Fix\n\n\n\n\n\n\n\n\n\nIssue Type\nCount\nRange\nStory\n\n\n\n\nNegative commits\n2\n-15, -8\nData pipeline bug\n\n\nImpossibly high commits\n3\n6,800 - 12,000\nDecimal/aggregation error\n\n\nNegative tenure\n1\n-120 days\nDate calculation error\n\n\nImpossibly long tenure\n2\n19,500 - 22,000 days\nDate entry error (1925 vs 2025)\n\n\n\n\n\nExtreme Values (50 cases) - Require Judgment\n\n\n\n\n\n\n\n\n\n\nIssue Type\nCount\nRange\nStory\nKeep or Drop?\n\n\n\n\nVery high commits\n30\n200 - 450/month\nBot-assisted or granular style\nAnalyst choice\n\n\nZero commits, long tenure\n10\nx &gt; 2,900 days\nMoved to management\nAnalyst choice\n\n\nHigh commits for junior\n5\n154 - 248/month\nInternal transfers\nAnalyst choice\n\n\nHigh for infrastructure\n5\n75 - 108/month\nIaC enthusiasts\nAnalyst choice"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#key-statistics",
+    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#key-statistics",
+    "title": "",
+    "section": "Key Statistics",
+    "text": "Key Statistics\n\nFull Dataset (including issues)\n\nx: Mean = 1,496 days, Min = -120, Max = 22,000\ny: Mean = 87, Min = -15, Max = 12,000\n\n\n\nClean Data Only (542 obs)\n\nx: Mean = 1,434 days (3.9 years), Range = 3 to 5,446\ny: Median = 18, Mean = 42, Range = 0 to 445\n\n\n\nWith Extreme Values Removed (542 obs)\n\ny: Median = 15, Mean = 27, Range = 0 to 150 (approximately)"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#teaching-questions",
+    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#teaching-questions",
+    "title": "",
+    "section": "Teaching Questions",
+    "text": "Teaching Questions\n\nLevel 1: Data Quality\n\nIdentify which observations are clearly errors vs possibly valid\nWhat’s your decision rule for each type of extreme value?\nDocument the impact of including vs excluding extreme values\n\n\n\nLevel 2: Exploration\n\nVisualize the relationship between x and y\nHow does it differ by department? By role?\nIs the relationship linear? Log-linear? Something else?\n\n\n\nLevel 3: Modeling\n\nCompare multiple approaches:\n\nLinear regression (OLS)\nLog transformations\nPoisson regression\nNegative binomial regression\nRobust regression (M-estimators)\nQuantile regression (median)\n\nWhich model assumptions are violated and why?\nHow sensitive are results to data cleaning decisions?\n\n\n\nLevel 4: Communication\n\nWhat’s your conclusion about the x-y relationship?\nHow certain are you? What are the caveats?\nWhat additional data would help?\nHow would you report this to a non-technical stakeholder?"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#suggested-workflow-for-students",
+    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#suggested-workflow-for-students",
+    "title": "",
+    "section": "Suggested Workflow for Students",
+    "text": "Suggested Workflow for Students\nStage 1: Initial Exploration - Load employee_commits_raw.csv - Create basic visualizations - Calculate summary statistics - Notice anything unusual?\nStage 2: Data Quality Assessment - Identify outliers and unusual values - Categorize as errors vs extreme values - Make cleaning decisions with justification\nStage 3: Multiple Analyses - Try 3-4 different cleaning approaches - For each: visualize, model, interpret - Compare results across approaches\nStage 4: Synthesis - Which approach do you recommend and why? - What is the relationship between x and y? - How confident are you in this conclusion?"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#instructor-notes",
+    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#instructor-notes",
+    "title": "",
+    "section": "Instructor Notes",
+    "text": "Instructor Notes\n\nWhy This Dataset Works\n\nRealistic complexity: Not obviously clean or dirty\nAmbiguity: No single “correct” answer for extreme values\nMultiple valid approaches: Forces critical thinking\nCount data features: Overdispersion, zeros, skewness\nRich metadata: Can explore heterogeneity\n\n\n\nDiscussion Points\n\nError vs extreme: What makes something an error vs just unusual?\nDecision rules: How do you decide what to keep/drop?\nTransparency: How do you document cleaning decisions?\nSensitivity: When do conclusions change materially?\nModel choice: Why prefer one model over another for count data?\n\n\n\nExtensions\n\nAdd time dimension (multiple months per employee)\nInclude team/project identifiers for clustering\nAdd more covariates (education, experience, etc.)\nCreate a prediction task (predict commits for new employees)"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#technical-details",
+    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#technical-details",
+    "title": "",
+    "section": "Technical Details",
+    "text": "Technical Details\nSeed: 20251112\nSoftware: Python 3.x with numpy, pandas, matplotlib\nAlso available: R version (simulate_employee_commits_v2.R)\nKey assumptions: - Base monthly rates by role (7-38 commits/month) - Seniority multipliers (0.6x, 1.2x, 0.8x) - Individual heterogeneity (log-normal, σ=0.45) - Negative binomial distribution (size=5) - 5% baseline zeros (moved teams, admin roles, etc.)\n\nFor questions or modifications, see generate_data_v2.1.py"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/index.html",
+    "href": "case-studies/employee_commits/data/index.html",
+    "title": "Employee Commits - Data Files",
+    "section": "",
+    "text": "← Back to Employee Commits Case Study"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/index.html#data-files",
+    "href": "case-studies/employee_commits/data/index.html#data-files",
+    "title": "Employee Commits - Data Files",
+    "section": "Data Files",
+    "text": "Data Files\n\n\n\nFile\nDescription\n\n\n\n\nemployee_commits_clean.csv\nCleaned commit data\n\n\nemployee_commits_raw.csv\nRaw commit data\n\n\nREADME.txt\nData description"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/index.html#ai-analysis-outputs",
+    "href": "case-studies/employee_commits/data/index.html#ai-analysis-outputs",
+    "title": "Employee Commits - Data Files",
+    "section": "AI Analysis Outputs",
+    "text": "AI Analysis Outputs\nThe ai/ subfolder contains analysis outputs from different AI models for comparison:\n\nChatGPT analysis outputs\nClaude analysis outputs\nGemini analysis outputs"
+  },
+  {
+    "objectID": "case-studies/interviews/code/index.html",
+    "href": "case-studies/interviews/code/index.html",
+    "title": "Football Manager Interviews - Code",
     "section": "",
     "text": "← Back to Interviews Case Study"
   },
   {
-    "objectID": "case-studies/interviews/data/index.html#data-files",
-    "href": "case-studies/interviews/data/index.html#data-files",
-    "title": "Football Manager Interviews - Data Files",
+    "objectID": "case-studies/interviews/code/index.html#code-files",
+    "href": "case-studies/interviews/code/index.html#code-files",
+    "title": "Football Manager Interviews - Code",
+    "section": "Code Files",
+    "text": "Code Files\n\nR Scripts\n\n\n\nFile\nDescription\n\n\n\n\nsentiment-analysis.R\nComplete sentiment analysis workflow using OpenAI API\n\n\ndomain_lexicon.r\nCreates football-specific sentiment lexicon\n\n\napi-key.R\nTemplate for API key setup\n\n\n\n\n\nPython Scripts\n\n\n\nFile\nDescription\n\n\n\n\nsentiment_analysis.py\nPython sentiment analysis script"
+  },
+  {
+    "objectID": "case-studies/interviews/code/index.html#usage-notes",
+    "href": "case-studies/interviews/code/index.html#usage-notes",
+    "title": "Football Manager Interviews - Code",
+    "section": "Usage Notes",
+    "text": "Usage Notes\n\nStore API keys in environment variables, never commit to version control\nBudget ~$5 for course exercises\nSet temperature=0 for consistent results"
+  },
+  {
+    "objectID": "case-studies/interviews/index.html",
+    "href": "case-studies/interviews/index.html",
+    "title": "Football Manager Interviews",
+    "section": "",
+    "text": "Post-match interview texts from football managers for sentiment analysis and NLP practice. Includes multiple rating systems for comparison and validation.\nUsed in: Week 5 (Text as Data I), Week 6 (Text as Data II), Assignment 5",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Football Interviews"
+    ]
+  },
+  {
+    "objectID": "case-studies/interviews/index.html#overview",
+    "href": "case-studies/interviews/index.html#overview",
+    "title": "Football Manager Interviews",
+    "section": "",
+    "text": "Post-match interview texts from football managers for sentiment analysis and NLP practice. Includes multiple rating systems for comparison and validation.\nUsed in: Week 5 (Text as Data I), Week 6 (Text as Data II), Assignment 5",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Football Interviews"
+    ]
+  },
+  {
+    "objectID": "case-studies/interviews/index.html#data-files",
+    "href": "case-studies/interviews/index.html#data-files",
+    "title": "Football Manager Interviews",
     "section": "Data Files",
-    "text": "Data Files\n\nPrimary Data\n\n\n\nFile\nDescription\n\n\n\n\ninterview-texts-only.xlsx\nRaw interview texts (121 interviews)\n\n\ncombined_text_data.csv\nCombined text data with metadata\n\n\ncombined_raw_data.csv\nFull raw dataset\n\n\ngame_data.xlsx\nGame results and context\n\n\n\n\n\nSentiment Analysis\n\n\n\nFile\nDescription\n\n\n\n\ndomain_lexicon.csv\nFootball-specific sentiment terms\n\n\naggregated_ratings_by_text.csv\nAggregated sentiment ratings"
+    "text": "Data Files\n\n\n\nFile\nDescription\n\n\n\n\ninterview-texts-only.xlsx\nRaw interview texts (121 interviews)\n\n\ncombined_text_data.csv\nCombined text data with metadata\n\n\ncombined_raw_data.csv\nFull raw dataset\n\n\ndomain_lexicon.csv\nFootball-specific sentiment terms\n\n\ngame_data.xlsx\nGame results and context\n\n\naggregated_ratings_by_text.csv\nAggregated sentiment ratings\n\n\n\nBrowse data files",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Football Interviews"
+    ]
   },
   {
-    "objectID": "case-studies/interviews/creating-code-sentiment-analysis.html",
-    "href": "case-studies/interviews/creating-code-sentiment-analysis.html",
-    "title": "creating-code-sentiment-analysis",
+    "objectID": "case-studies/interviews/index.html#code",
+    "href": "case-studies/interviews/index.html#code",
+    "title": "Football Manager Interviews",
+    "section": "Code",
+    "text": "Code\n\n\n\nFile\nDescription\n\n\n\n\nsentiment-analysis.R\nR script for API-based sentiment analysis\n\n\nsentiment_analysis.py\nPython script for sentiment analysis\n\n\ndomain_lexicon.r\nR script to create football-specific lexicon\n\n\napi-key.R\nTemplate for API key setup\n\n\n\nBrowse code files",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Football Interviews"
+    ]
+  },
+  {
+    "objectID": "case-studies/interviews/index.html#key-features",
+    "href": "case-studies/interviews/index.html#key-features",
+    "title": "Football Manager Interviews",
+    "section": "Key Features",
+    "text": "Key Features\n\nReal Premier League manager interview texts\nDomain-specific sentiment lexicon\nBoth R and Python implementations\nHuman vs AI rating comparison framework\nAPI integration examples (OpenAI)",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Football Interviews"
+    ]
+  },
+  {
+    "objectID": "case-studies/interviews/index.html#learning-objectives",
+    "href": "case-studies/interviews/index.html#learning-objectives",
+    "title": "Football Manager Interviews",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nText preprocessing and cleaning\nSentiment analysis approaches\nDomain-specific lexicons\nAPI integration for NLP tasks\nComparing human and AI ratings",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Football Interviews"
+    ]
+  },
+  {
+    "objectID": "case-studies/interviews/index.html#downloads",
+    "href": "case-studies/interviews/index.html#downloads",
+    "title": "Football Manager Interviews",
+    "section": "Downloads",
+    "text": "Downloads\n\ninterview-texts-only.xlsx\ndomain_lexicon.csv",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Football Interviews"
+    ]
+  },
+  {
+    "objectID": "week05/assets/sentiment-scale.html",
+    "href": "week05/assets/sentiment-scale.html",
+    "title": "General Sentiment Rating Guidelines",
     "section": "",
-    "text": "Here are some prompts we created. Follow them. Need debugging.\nFirst download interview-texts-only.xlsx from interviews case study\n\nWrite a Python script for sentiment analysis of post-match manager quotes using OpenAI’s GPT API. Follow these detailed specifications:\n\n\nClassify each quote on a sentiment scale from -2 to 2 based on the manager’s tone, not the game result.\nThe script should process the xlsx file and produce a new CSV with sentiment scores.\n\n\n\nLoad interview-texts-only.xlsx .\nUse utf-8 encoding.\nSkip malformed lines when reading.\n\n\n\nUse OpenAI’s gpt-4.1-2025-04-14 model (or fallback-compatible GPT-4 model).\nConstruct a detailed prompt that:"
+    "text": "Please read each text carefully and rate the overall sentiment of the manager’s statement as positive or negative. Your rating should reflect the manager’s expressed tone, not your judgment of the match."
   },
   {
-    "objectID": "case-studies/interviews/creating-code-sentiment-analysis.html#writing-code-to-run-sentiment-analysis-via-apis.",
-    "href": "case-studies/interviews/creating-code-sentiment-analysis.html#writing-code-to-run-sentiment-analysis-via-apis.",
-    "title": "creating-code-sentiment-analysis",
+    "objectID": "week05/assets/sentiment-scale.html#task",
+    "href": "week05/assets/sentiment-scale.html#task",
+    "title": "General Sentiment Rating Guidelines",
     "section": "",
-    "text": "Here are some prompts we created. Follow them. Need debugging.\nFirst download interview-texts-only.xlsx from interviews case study\n\nWrite a Python script for sentiment analysis of post-match manager quotes using OpenAI’s GPT API. Follow these detailed specifications:\n\n\nClassify each quote on a sentiment scale from -2 to 2 based on the manager’s tone, not the game result.\nThe script should process the xlsx file and produce a new CSV with sentiment scores.\n\n\n\nLoad interview-texts-only.xlsx .\nUse utf-8 encoding.\nSkip malformed lines when reading.\n\n\n\nUse OpenAI’s gpt-4.1-2025-04-14 model (or fallback-compatible GPT-4 model).\nConstruct a detailed prompt that:"
+    "text": "Please read each text carefully and rate the overall sentiment of the manager’s statement as positive or negative. Your rating should reflect the manager’s expressed tone, not your judgment of the match."
   },
   {
-    "objectID": "case-studies/interviews/creating-code-sentiment-analysis.html#task",
-    "href": "case-studies/interviews/creating-code-sentiment-analysis.html#task",
-    "title": "creating-code-sentiment-analysis",
-    "section": "Task:",
-    "text": "Task:\nPlease read each text carefully and rate the overall sentiment of the manager’s statement as positive or negative. Your rating should reflect the manager’s expressed tone, not your judgment of the match."
-  },
-  {
-    "objectID": "case-studies/interviews/creating-code-sentiment-analysis.html#rating-scale",
-    "href": "case-studies/interviews/creating-code-sentiment-analysis.html#rating-scale",
-    "title": "creating-code-sentiment-analysis",
+    "objectID": "week05/assets/sentiment-scale.html#rating-scale",
+    "href": "week05/assets/sentiment-scale.html#rating-scale",
+    "title": "General Sentiment Rating Guidelines",
     "section": "Rating Scale:",
-    "text": "Rating Scale:\n\n\n\n\n\n\n\nScore\nMeaning\n\n\n\n\n2\nStrongly positive sentiment (clear optimism, satisfaction, praise).\n\n\n1\nMildly positive sentiment (generally positive, slight reservations).\n\n\n0\nNeutral or unclear sentiment.\n\n\n-1\nMildly negative sentiment (general disappointment, frustration).\n\n\n-2\nStrongly negative sentiment (clear criticism, significant disappointment).\n\n\n\n\nFinal Notes:\n\nUse 0 if unsure or if sentiment is mixed without clear dominance.\n\n\n\nRetry up to 3 times if API call fails, using exponential backoff (e.g., wait 1s, 2s, 4s).\n\nIf the response is not an integer, return None.\n\n\n🔐 API Authentication\n\n\nUse the openai Python package (v1+).\n\nLoad API key securely from .env file with key OPENAI_API_KEY.\n\nIf the key is missing, exit with an error.\n\n\n🧪 Processing & Output\n\n\nIterate through all rows using tqdm for progress.\n\nFor each row, call the GPT model and collect the result.\n\nSave results (text_id, score) to manager_sentiment_results.csv.\n\nAt end, print and log score frequency table.\n\n\n🪵 Logging\n\n\nUse Python’s logging module.\n\nConfigure it to:\n\n\nLog to both console (stdout) and to file classification.log (overwrite mode).\n\nUse format: [timestamp] [level] [message]\n\nSet level to INFO.\n\n\n\nLog key events:\n\n\nStart of API call\n\nAPI responses\n\nNumber of rows processed\n\nMissing columns\n\nFinal distribution of scores\n\n\n\n\n📦 Dependencies\n\n\npandas\n\ntqdm\n\nopenai\n\ndotenv\n\n\n🔁 Extras\n\n\nUse functions for:\n\n\nLoading CSV,\n\nClassifying text,\n\nError handling.\n\n\n\nEnsure script can be run directly with #!/usr/bin/env python3 at the top.\n\n\n\nLet me know if you want me to generate the exact prompt message string or turn this into a README section."
+    "text": "Rating Scale:\n\n\n\n\n\n\n\nScore\nMeaning\n\n\n\n\n2\nStrongly positive sentiment (clear optimism, satisfaction, praise).\n\n\n1\nMildly positive sentiment (generally positive, slight reservations).\n\n\n0\nNeutral or unclear sentiment.\n\n\n-1\nMildly negative sentiment (general disappointment, frustration).\n\n\n-2\nStrongly negative sentiment (clear criticism, significant disappointment)."
   },
   {
-    "objectID": "week05/assets/sentiment-guidelines.html",
-    "href": "week05/assets/sentiment-guidelines.html",
-    "title": "Guidelines for Rating:",
+    "objectID": "week05/index.html",
+    "href": "week05/index.html",
+    "title": "Week 05: using text as data",
     "section": "",
-    "text": "Positive mentions include praise, satisfaction with performance, optimistic outlook, and appreciation.\nNegative mentions include frustration, disappointment, criticism of performance, or external conditions.\nNeutral statements are neither positive nor negative.\n\n\nExamples:\n\n“I’m extremely proud of how the team played today. Fantastic performance by everyone.” → +2\n“We played well, but there are still areas to improve.” → +1\n“It was a tough match, evenly balanced, nothing much to say.” → 0\n“We weren’t at our best; it was a frustrating game.” → -1\n“I’m very disappointed. Our performance was unacceptable.” → -2\n\n\n\nFinal Notes:\n\nUse 0 if unsure or if sentiment is mixed without clear dominance."
+    "text": "Week 05: using text as data\n\n\nTurning a series of short texts into tabular data: humans vs AI",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Using Text as Data"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#overview",
+    "href": "week05/index.html#overview",
+    "title": "Week 05: using text as data",
+    "section": "Overview",
+    "text": "Overview\nIn this lesson, students will be introduced to sentiment analysis, specifically applied to evaluating general positivity or negativity in football managers’ statements about match outcomes.\n\nLearning Outcomes\nBy the end of the session, students will:\n\nUnderstand core NLP concepts: tokenization, preprocessing, bag-of-words, and feature extraction in practical context.\nGain hands-on experience with sentiment analysis.\nUnderstand the complexities and limitations of sentiment analysis.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Using Text as Data"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#preparation-before-class",
+    "href": "week05/index.html#preparation-before-class",
+    "title": "Week 05: using text as data",
+    "section": "Preparation / Before Class",
+    "text": "Preparation / Before Class\n\n\n📚 Background Reading\n\n\nNo specific readings required - we’ll learn by doing\n\nNo need for natural language processing background.\nThinking ahead: How would you manually determine if someone sounds “positive” or “negative” about something?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Using Text as Data"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#review",
+    "href": "week05/index.html#review",
+    "title": "Week 05: using text as data",
+    "section": "Review",
+    "text": "Review\n\n\n📈 Assignment Review (15 min)\n\n\nKey Learning Points:\n\nFancy graphs != good graphs (good graph ← careful design)\nPrecise interpretation &gt;&gt; BS\nLess is more\nShow only what you understand deeply\n\nLess is More Principle: Simplicity often reveals insights better than complexity",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Using Text as Data"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#class-material",
+    "href": "week05/index.html#class-material",
+    "title": "Week 05: using text as data",
+    "section": "Class Material",
+    "text": "Class Material\n\n\n📊 Materials Setup\n\n\nData Context:\n\nThese are real post-match interviews from Premier League managers discussing game results.\nEach text represents one manager’s full response to journalists after a match.\nPreprocessing: Replaced player and team names with “PLAYER” and “TEAM” - removes potential bias\n\nPractice Dataset: Contains 5 post-match interviews from football managers\n\nStudent test file (CSV)\nStudent test file (Excel)\n\nReference Materials:\n\nGeneral sentiment rating scale - our classification framework\nDomain-specific lexicon - football-specific sentiment terms\n\n\n\n\n\n📖 NLP Fundamentals Lecture (25 min)\n\n\nSlideshow: Text to Data\nKey Concepts Covered:\n\nTokenization: Breaking text into meaningful units\nPreprocessing: Stemming, lemmatization, stop word removal\n\nBag of Words: Converting text to numerical features\nDomain knowledge: Why football-specific terms matter\nSentiment Analysis: Methods from simple dictionaries to AI models\n\nPractical Focus: How these concepts apply to manager interviews\n\n\n\n\n⚽ Manual vs. AI Sentiment Workshop (40 min)\n\n\nPhase 1: Human Rating (15 min)\n\nIndividual work: Rate the 5 provided manager statements using the sentiment scale\n5-unit scale: -2 (very negative) to +2 (very positive)\n\nPhase 2: AI Rating (15 min)\n\nUse your preferred AI to rate the same 5 statements\nTry different prompting approaches: simple vs. detailed instructions\nCompare AI’s reasoning with your own thought process\n\nPhase 3: Domain Lexicon Exploration (10 min)\n\nExamine the football-specific lexicon\nDiscuss how domain knowledge affects interpretation\n\nDiscussion: Validation and Sentiment Analysis\n\nObjective: Discuss validation techniques used in sentiment analysis.\nTopics for discussion:\n\nDifferences between manual and AI ratings\nGround Truth\nIntroduction to validation methods:\nIf ground truth – can do confusion maztric, calculate accuracy\nIf no ground truth – measure agreement between humans and AI. test difference.\n\nAI is average, but…\nAI with persona?\nAI biased ?\n\n\n\nExtra: Prediction of score\nIf time permits: look at predicting score\n\nModeling choices of results\nThink about how you would do it first\nCheck how AI thinks about, rate the examples and look at explanations\ntake the 5 examples, and compare your predictions vs the AI predictions",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Using Text as Data"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#end-of-week-discussion-points",
+    "href": "week05/index.html#end-of-week-discussion-points",
+    "title": "Week 05: using text as data",
+    "section": "End of Week Discussion points",
+    "text": "End of Week Discussion points\n\nHow precise is AI in sentiment analysis?\nHow did you compare to AI in terms of scores? How did any difference make you feel?\nCan you think of a past project where AI could have helped you upgrade it?\nDid AI provide consistent explanations for its ratings? When did its reasoning seem flawed? Did you feel it was mostly OK / half-truths?",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Using Text as Data"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#assignment",
+    "href": "week05/index.html#assignment",
+    "title": "Week 05: using text as data",
+    "section": "Assignment",
+    "text": "Assignment\n\n\n\n\n\n\nNoteAssignment 5: Student-Specific Sentiment Analysis\n\n\n\nDue: Before Week 6\nCompare manual ratings with AI-generated ratings on your own random sample of 25 interview texts.\nFull Assignment Details",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Using Text as Data"
+    ]
+  },
+  {
+    "objectID": "week05/index.html#some-personal-comments-on-ai-and-this-class",
+    "href": "week05/index.html#some-personal-comments-on-ai-and-this-class",
+    "title": "Week 05: using text as data",
+    "section": "Some personal comments on AI and this class",
+    "text": "Some personal comments on AI and this class\n\nIt’s worth noting that my knowledge on NLP was bag of words, bigrams and TF-IDF. AI really helped making the jump.",
+    "crumbs": [
+      "Home",
+      "Course Weeks",
+      "Week 5: Using Text as Data"
+    ]
   },
   {
     "objectID": "week02/assets/claude-research-football-interviews-result.html",
@@ -2328,719 +2542,505 @@
     "text": "Contact\nFor questions or collaboration, contact: [Your Name] at [Your Email]."
   },
   {
-    "objectID": "week05/index.html",
-    "href": "week05/index.html",
-    "title": "Week 05: using text as data",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Doing Data Analysis with AI",
     "section": "",
-    "text": "Week 05: using text as data\n\n\nTurning a series of short texts into tabular data: humans vs AI",
-    "crumbs": [
-      "Home",
-      "Course Weeks",
-      "Week 5: Using Text as Data"
-    ]
+    "text": "Gabor’s Data Analysis with AI"
   },
   {
-    "objectID": "week05/index.html#overview",
-    "href": "week05/index.html#overview",
-    "title": "Week 05: using text as data",
-    "section": "Overview",
-    "text": "Overview\nIn this lesson, students will be introduced to sentiment analysis, specifically applied to evaluating general positivity or negativity in football managers’ statements about match outcomes.\n\nLearning Outcomes\nBy the end of the session, students will:\n\nUnderstand core NLP concepts: tokenization, preprocessing, bag-of-words, and feature extraction in practical context.\nGain hands-on experience with sentiment analysis.\nUnderstand the complexities and limitations of sentiment analysis.",
-    "crumbs": [
-      "Home",
-      "Course Weeks",
-      "Week 5: Using Text as Data"
-    ]
+    "objectID": "index.html#whats-this",
+    "href": "index.html#whats-this",
+    "title": "Doing Data Analysis with AI",
+    "section": "What’s this",
+    "text": "What’s this\nThis course will equip students, who are already versed in core data analysis methods, with experience to harness AI technologies to improve productivity (yes this is classic LLM sentence). But, yeah, the idea is to help students who studied data analysis / econometrics / quant methods and want to think about how to include AI in their analytics routine, and spend time to share experiences.\nAs AI becomes more and more powerful, it is also important to provide a platform to discuss human agency in data analysis. So a key element of the course and its instructor to lead discussions on the role of AI and humans in various aspects of data analysis.\nThis is the 2026 Winter edition release\n\nFor whom?\nThis material is aimed at data science and analytics instructors who can guide their students through the material sharing the experience and domain specific examples. All of this is open source, may be modified (see rights below).\nBut, dear reader (students, practitioners, researchers, journalists and more), you can also go alone, checking ideas and practice sessions.\n\n\nAI and me\nAt the end of all classes, instructors and students should always consider these three questions.\n\nHow did AI support me do what I planned.\nHow did AI fail me: gave half-truths, buggy code, imprecise arguments\nHow did AI extend me: helped do things I could not, or gave new ideas"
   },
   {
-    "objectID": "week05/index.html#preparation-before-class",
-    "href": "week05/index.html#preparation-before-class",
-    "title": "Week 05: using text as data",
-    "section": "Preparation / Before Class",
-    "text": "Preparation / Before Class\n\n\n📚 Background Reading\n\n\nNo specific readings required - we’ll learn by doing\n\nNo need for natural language processing background.\nThinking ahead: How would you manually determine if someone sounds “positive” or “negative” about something?",
-    "crumbs": [
-      "Home",
-      "Course Weeks",
-      "Week 5: Using Text as Data"
-    ]
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "Doing Data Analysis with AI",
+    "section": "Course description",
+    "text": "Course description\n\nContent\nThe course focuses on using large language models (LLMs) such as OpenAI’s ChatGPT, Anthropic Claude.ai, Mistral’s Le Chat, and Google’s Gemini) to carry out tasks in data analysis. It includes topics like data extraction and wrangling, data exploration and descriptive statistics, and creating reports as well as turning text to data.\nThere are three case studies that we use (1) a simulated set of data tables on hotels in Austria, (2) The World Value Survey, and (3) A series of interview textst.\nThe course material includes weekly practice assignments. It also has a learning more collection – to see what is beyond core material with blogs, papers, and video recommendations.\n\n\nBackground: data analysis / econometrics\nYou need a background in Data Analysis / Econometrics, a good introductory course is enough. I, of course, suggest Chapters 1-12 and 19 of Data Analysis for Business, Economics and Policy (Cambridge UP, 2021). Full slideshows, data and code are open source. But consider buying the book!🤝\nIn particular, the course builds on Chapters 1-6 and 7-10, and 19 of Data Analysis but other Introductory Econometrics + basics of data science knowledge is ok.\n\n\nBackground: coding\nStudents are expected to have some basic coding knowledge in Python or R (Stata also fine mostly).\n\n\nRelevance\nAI is everywhere and has become essential, most analytic work will be using it. It’s like the Internet a while back. Does not solve all problems, but almost all intellectual tasks will rely on inputs from it.\n\n\nLearning Outcomes\nKey outcomes. By the end of the course, students will be able to\n\nGain experience and confidence using genAI to carry out key tasks in data analysis.\nBuild AI in coding practice including data wrangling, description and reporting and text analysis\nHave some idea of use cases when AI assistance is OK to use as is vs needs strong human supervision\nHave an understanding of resources to follow for updates.\n\n\n\nTarget audience\nThis is a course aimed at 3rd (2nd?) year BA and MA students in any program with required background. Economics, Quantitative Social science, Political Science, Sociology, History. To be frank, all students shall learn data analysis and be comfortable using AI.\nBut, anyone can use it with adequate background.\n\n\nCourse Context & Trajectory\nWhat’s Coming Next:\n\nWeek 0: Using AI for Coding – this may not be part of the curriculum\nWeek 1: LLM Review and short task to recrate a graph\nWeek 2: Use AI to understand and document the World Values Survey dataset\nWeek 3: AI-assisted report writing with WVS data\nWeek 4: Agentic AI with Claude Code using Austrian hotel data\nWeeks 5: Text analysis 1: basics\nWeeks 6: Text analysis 2: sentiment analysis\nWeek 7: TBD\nWeek 8: SQL like natural language query in a data warehouse\nWeek 9: AI as research companion 1: Control variables\nWeek 10: AI as research companion 2: Instrumental Variables\nWeek 11: AI as research companion 3: Difference in differences\nWeek 12: TBD\n\nAI use experience\n\nChat – conversational interface\nData Analysis – direct code execution / shared canvases\nContext window management\nTools to connect to sources (Github, Google drive)\nTalk to AI via API calls\nskills and context management\n\n“my system prompt” (user specific)\nskills use and generation (gems / prompt template): gabors exploratory data analysis skill (sharable)\n\ndeep research\nGemini CLI / Claude Code\nMCP (connect to folders on your computer)\nvibe coding an app: the-human-sql-translator"
   },
   {
-    "objectID": "week05/index.html#review",
-    "href": "week05/index.html#review",
-    "title": "Week 05: using text as data",
-    "section": "Review",
-    "text": "Review\n\n\n📈 Assignment Review (15 min)\n\n\nKey Learning Points:\n\nFancy graphs != good graphs (good graph ← careful design)\nPrecise interpretation &gt;&gt; BS\nLess is more\nShow only what you understand deeply\n\nLess is More Principle: Simplicity often reveals insights better than complexity",
-    "crumbs": [
-      "Home",
-      "Course Weeks",
-      "Week 5: Using Text as Data"
-    ]
+    "objectID": "index.html#assignments",
+    "href": "index.html#assignments",
+    "title": "Doing Data Analysis with AI",
+    "section": "Assignments",
+    "text": "Assignments\nAssignments are available for all classes\nImportant to note for assignments: * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this."
   },
   {
-    "objectID": "week05/index.html#class-material",
-    "href": "week05/index.html#class-material",
-    "title": "Week 05: using text as data",
-    "section": "Class Material",
-    "text": "Class Material\n\n\n📊 Materials Setup\n\n\nData Context:\n\nThese are real post-match interviews from Premier League managers discussing game results.\nEach text represents one manager’s full response to journalists after a match.\nPreprocessing: Replaced player and team names with “PLAYER” and “TEAM” - removes potential bias\n\nPractice Dataset: Contains 5 post-match interviews from football managers\n\nStudent test file (CSV)\nStudent test file (Excel)\n\nReference Materials:\n\nGeneral sentiment rating scale - our classification framework\nDomain-specific lexicon - football-specific sentiment terms\n\n\n\n\n\n📖 NLP Fundamentals Lecture (25 min)\n\n\nSlideshow: Text to Data\nKey Concepts Covered:\n\nTokenization: Breaking text into meaningful units\nPreprocessing: Stemming, lemmatization, stop word removal\n\nBag of Words: Converting text to numerical features\nDomain knowledge: Why football-specific terms matter\nSentiment Analysis: Methods from simple dictionaries to AI models\n\nPractical Focus: How these concepts apply to manager interviews\n\n\n\n\n⚽ Manual vs. AI Sentiment Workshop (40 min)\n\n\nPhase 1: Human Rating (15 min)\n\nIndividual work: Rate the 5 provided manager statements using the sentiment scale\n5-unit scale: -2 (very negative) to +2 (very positive)\n\nPhase 2: AI Rating (15 min)\n\nUse your preferred AI to rate the same 5 statements\nTry different prompting approaches: simple vs. detailed instructions\nCompare AI’s reasoning with your own thought process\n\nPhase 3: Domain Lexicon Exploration (10 min)\n\nExamine the football-specific lexicon\nDiscuss how domain knowledge affects interpretation\n\nDiscussion: Validation and Sentiment Analysis\n\nObjective: Discuss validation techniques used in sentiment analysis.\nTopics for discussion:\n\nDifferences between manual and AI ratings\nGround Truth\nIntroduction to validation methods:\nIf ground truth – can do confusion maztric, calculate accuracy\nIf no ground truth – measure agreement between humans and AI. test difference.\n\nAI is average, but…\nAI with persona?\nAI biased ?\n\n\n\nExtra: Prediction of score\nIf time permits: look at predicting score\n\nModeling choices of results\nThink about how you would do it first\nCheck how AI thinks about, rate the examples and look at explanations\ntake the 5 examples, and compare your predictions vs the AI predictions",
-    "crumbs": [
-      "Home",
-      "Course Weeks",
-      "Week 5: Using Text as Data"
-    ]
+    "objectID": "index.html#content-1",
+    "href": "index.html#content-1",
+    "title": "Doing Data Analysis with AI",
+    "section": "Content",
+    "text": "Content\nWeek00: AI for coding\nUsing AI for code. May not be covered in this class, as it had often been already covered in coding classes.\nContent\nWeek01: LLM Review\nWhat are LLMs, how is the magic happening. A non-technical brief intro. How to work with LLMs? Plus ideas on applications. Includes suggested readings, podcasts, and vids to listen to.\nContent\nWhich AI?\nSee my take on current models. As of May 2025.\nWeek02: Data and code discovery and documentation with AI\nLearn how to write a clear and professional code and data documentation. LLMs are great help once you know the basics.\nCase study: World Values Survey\nContent\nWeek 03: Writing Reports\nYou have your data and task, and need to write a short report. We compare different options with LLM, from one-shot prompt to iteration.\nCase study: World Values Survey\nContent\nWeek04: Agentic AI with Claude Code\nFrom chat to terminal - introducing Claude Code for data analysis. Students learn to use agentic AI that works directly with files, generates data, and iterates on analysis.\nCase study: Austrian Hotels\nContent\nWeek05: Text as data 1 – intro lecture\nNo course of mine can escape football (soccer). Here we look at post-game interviews to learn basics of text analysis and apply LLMs in what they are best - context dependent learning. Two class series. First is more intro to natural language processing.\nCase study: Football Manager Interviews\nContent\nWeek06: Sentiment Analysis with AI\nSecond class, now we are in action. How does LLM compare to humans?\nCase study: Football Manager Interviews\nContent\nWeek07: TBA\nTBA\nWeek08: SQL like natural language query in a data warehouse\nTBA\nWeek09: AI as research companion: Control variables\nContent\nWeek10: AI as research companion: Instrumental variables\nContent\nWeek11: AI as research companion: Differences in differences\nTBA\nWeek12: Creating simulations with apps and dashboards\nContent\nTBA"
   },
   {
-    "objectID": "week05/index.html#end-of-week-discussion-points",
-    "href": "week05/index.html#end-of-week-discussion-points",
-    "title": "Week 05: using text as data",
-    "section": "End of Week Discussion points",
-    "text": "End of Week Discussion points\n\nHow precise is AI in sentiment analysis?\nHow did you compare to AI in terms of scores? How did any difference make you feel?\nCan you think of a past project where AI could have helped you upgrade it?\nDid AI provide consistent explanations for its ratings? When did its reasoning seem flawed? Did you feel it was mostly OK / half-truths?",
-    "crumbs": [
-      "Home",
-      "Course Weeks",
-      "Week 5: Using Text as Data"
-    ]
+    "objectID": "index.html#learn-more",
+    "href": "index.html#learn-more",
+    "title": "Doing Data Analysis with AI",
+    "section": "Learn more",
+    "text": "Learn more\nI’m adding material to da-knowledge folder. You can start with the beyond page."
   },
   {
-    "objectID": "week05/index.html#assignment",
-    "href": "week05/index.html#assignment",
-    "title": "Week 05: using text as data",
-    "section": "Assignment",
-    "text": "Assignment\n\n\n\n\n\n\nNoteAssignment 5: Student-Specific Sentiment Analysis\n\n\n\nDue: Before Week 6\nCompare manual ratings with AI-generated ratings on your own random sample of 25 interview texts.\nFull Assignment Details",
-    "crumbs": [
-      "Home",
-      "Course Weeks",
-      "Week 5: Using Text as Data"
-    ]
+    "objectID": "index.html#rights-and-acknowledgement",
+    "href": "index.html#rights-and-acknowledgement",
+    "title": "Doing Data Analysis with AI",
+    "section": "Rights and acknowledgement",
+    "text": "Rights and acknowledgement"
   },
   {
-    "objectID": "week05/index.html#some-personal-comments-on-ai-and-this-class",
-    "href": "week05/index.html#some-personal-comments-on-ai-and-this-class",
-    "title": "Week 05: using text as data",
-    "section": "Some personal comments on AI and this class",
-    "text": "Some personal comments on AI and this class\n\nIt’s worth noting that my knowledge on NLP was bag of words, bigrams and TF-IDF. AI really helped making the jump.",
-    "crumbs": [
-      "Home",
-      "Course Weeks",
-      "Week 5: Using Text as Data"
-    ]
+    "objectID": "index.html#you-can-use-it-to-teach-and-learn-freely",
+    "href": "index.html#you-can-use-it-to-teach-and-learn-freely",
+    "title": "Doing Data Analysis with AI",
+    "section": "You can use it to teach and learn freely",
+    "text": "You can use it to teach and learn freely\nAttribution: Békés, Gábor: “Doing Data Analysis with AI: a short course”, available at gabors-data-analysis.com/ai-course/, v2.0. 2026-01-20.\nYou can fork it from the Github Repo. github.com/gabors-data-analysis/da-w-ai/\nLicense: CC BY-NC-SA 4.0 – share, attribute, non-commercial (contact me for corporate gigs)\nTextbook Please check out the textbook behind all this, buy it if you can. If interested teaching contact the Cambridge UP or me."
   },
   {
-    "objectID": "week05/assets/sentiment-scale.html",
-    "href": "week05/assets/sentiment-scale.html",
-    "title": "General Sentiment Rating Guidelines",
+    "objectID": "index.html#thanks",
+    "href": "index.html#thanks",
+    "title": "Doing Data Analysis with AI",
+    "section": "Thanks",
+    "text": "Thanks\nThanks: Developed mostly by me, Gábor Békés Thanks a million to the two wonderful human RAs, Ms Zsuzsanna Vadle and Mr Kenneth Colombe, both Phd students. Thanks to Claude.ai that did a great deal of help in creating the simulated dataset. ChatGPT and Claude.ai helped create the slideshows and educated me on NLP. This is a beatiful example of collaboration with great young people while heavily benefiting from advanced AI.\nThanks for CEU’s teaching grant that allowed me pay people and AI.\nThanks for Quarto – it was all drafted and written in Quarto and Rstudio by Posit."
+  },
+  {
+    "objectID": "index.html#questions-and-suggestions",
+    "href": "index.html#questions-and-suggestions",
+    "title": "Doing Data Analysis with AI",
+    "section": "Questions and suggestions",
+    "text": "Questions and suggestions\nThis material is based my course at CEU in Vienna, Austria. Here is the Github repo\nIf you have questions or suggestions or interested to learn more, just fill in this form."
+  },
+  {
+    "objectID": "index.html#and-now-this.",
+    "href": "index.html#and-now-this.",
+    "title": "Doing Data Analysis with AI",
+    "section": "And now, this.",
+    "text": "And now, this.\nAI use is very costly in terms of energy. Yes, it is becoming cheaper. But humanity is also using much more of it."
+  },
+  {
+    "objectID": "week05/assets/sentiment-guidelines.html",
+    "href": "week05/assets/sentiment-guidelines.html",
+    "title": "Guidelines for Rating:",
     "section": "",
-    "text": "Please read each text carefully and rate the overall sentiment of the manager’s statement as positive or negative. Your rating should reflect the manager’s expressed tone, not your judgment of the match."
+    "text": "Positive mentions include praise, satisfaction with performance, optimistic outlook, and appreciation.\nNegative mentions include frustration, disappointment, criticism of performance, or external conditions.\nNeutral statements are neither positive nor negative.\n\n\nExamples:\n\n“I’m extremely proud of how the team played today. Fantastic performance by everyone.” → +2\n“We played well, but there are still areas to improve.” → +1\n“It was a tough match, evenly balanced, nothing much to say.” → 0\n“We weren’t at our best; it was a frustrating game.” → -1\n“I’m very disappointed. Our performance was unacceptable.” → -2\n\n\n\nFinal Notes:\n\nUse 0 if unsure or if sentiment is mixed without clear dominance."
   },
   {
-    "objectID": "week05/assets/sentiment-scale.html#task",
-    "href": "week05/assets/sentiment-scale.html#task",
-    "title": "General Sentiment Rating Guidelines",
+    "objectID": "case-studies/interviews/creating-code-sentiment-analysis.html",
+    "href": "case-studies/interviews/creating-code-sentiment-analysis.html",
+    "title": "creating-code-sentiment-analysis",
     "section": "",
-    "text": "Please read each text carefully and rate the overall sentiment of the manager’s statement as positive or negative. Your rating should reflect the manager’s expressed tone, not your judgment of the match."
+    "text": "Here are some prompts we created. Follow them. Need debugging.\nFirst download interview-texts-only.xlsx from interviews case study\n\nWrite a Python script for sentiment analysis of post-match manager quotes using OpenAI’s GPT API. Follow these detailed specifications:\n\n\nClassify each quote on a sentiment scale from -2 to 2 based on the manager’s tone, not the game result.\nThe script should process the xlsx file and produce a new CSV with sentiment scores.\n\n\n\nLoad interview-texts-only.xlsx .\nUse utf-8 encoding.\nSkip malformed lines when reading.\n\n\n\nUse OpenAI’s gpt-4.1-2025-04-14 model (or fallback-compatible GPT-4 model).\nConstruct a detailed prompt that:"
   },
   {
-    "objectID": "week05/assets/sentiment-scale.html#rating-scale",
-    "href": "week05/assets/sentiment-scale.html#rating-scale",
-    "title": "General Sentiment Rating Guidelines",
+    "objectID": "case-studies/interviews/creating-code-sentiment-analysis.html#writing-code-to-run-sentiment-analysis-via-apis.",
+    "href": "case-studies/interviews/creating-code-sentiment-analysis.html#writing-code-to-run-sentiment-analysis-via-apis.",
+    "title": "creating-code-sentiment-analysis",
+    "section": "",
+    "text": "Here are some prompts we created. Follow them. Need debugging.\nFirst download interview-texts-only.xlsx from interviews case study\n\nWrite a Python script for sentiment analysis of post-match manager quotes using OpenAI’s GPT API. Follow these detailed specifications:\n\n\nClassify each quote on a sentiment scale from -2 to 2 based on the manager’s tone, not the game result.\nThe script should process the xlsx file and produce a new CSV with sentiment scores.\n\n\n\nLoad interview-texts-only.xlsx .\nUse utf-8 encoding.\nSkip malformed lines when reading.\n\n\n\nUse OpenAI’s gpt-4.1-2025-04-14 model (or fallback-compatible GPT-4 model).\nConstruct a detailed prompt that:"
+  },
+  {
+    "objectID": "case-studies/interviews/creating-code-sentiment-analysis.html#task",
+    "href": "case-studies/interviews/creating-code-sentiment-analysis.html#task",
+    "title": "creating-code-sentiment-analysis",
+    "section": "Task:",
+    "text": "Task:\nPlease read each text carefully and rate the overall sentiment of the manager’s statement as positive or negative. Your rating should reflect the manager’s expressed tone, not your judgment of the match."
+  },
+  {
+    "objectID": "case-studies/interviews/creating-code-sentiment-analysis.html#rating-scale",
+    "href": "case-studies/interviews/creating-code-sentiment-analysis.html#rating-scale",
+    "title": "creating-code-sentiment-analysis",
     "section": "Rating Scale:",
-    "text": "Rating Scale:\n\n\n\n\n\n\n\nScore\nMeaning\n\n\n\n\n2\nStrongly positive sentiment (clear optimism, satisfaction, praise).\n\n\n1\nMildly positive sentiment (generally positive, slight reservations).\n\n\n0\nNeutral or unclear sentiment.\n\n\n-1\nMildly negative sentiment (general disappointment, frustration).\n\n\n-2\nStrongly negative sentiment (clear criticism, significant disappointment)."
+    "text": "Rating Scale:\n\n\n\n\n\n\n\nScore\nMeaning\n\n\n\n\n2\nStrongly positive sentiment (clear optimism, satisfaction, praise).\n\n\n1\nMildly positive sentiment (generally positive, slight reservations).\n\n\n0\nNeutral or unclear sentiment.\n\n\n-1\nMildly negative sentiment (general disappointment, frustration).\n\n\n-2\nStrongly negative sentiment (clear criticism, significant disappointment).\n\n\n\n\nFinal Notes:\n\nUse 0 if unsure or if sentiment is mixed without clear dominance.\n\n\n\nRetry up to 3 times if API call fails, using exponential backoff (e.g., wait 1s, 2s, 4s).\n\nIf the response is not an integer, return None.\n\n\n🔐 API Authentication\n\n\nUse the openai Python package (v1+).\n\nLoad API key securely from .env file with key OPENAI_API_KEY.\n\nIf the key is missing, exit with an error.\n\n\n🧪 Processing & Output\n\n\nIterate through all rows using tqdm for progress.\n\nFor each row, call the GPT model and collect the result.\n\nSave results (text_id, score) to manager_sentiment_results.csv.\n\nAt end, print and log score frequency table.\n\n\n🪵 Logging\n\n\nUse Python’s logging module.\n\nConfigure it to:\n\n\nLog to both console (stdout) and to file classification.log (overwrite mode).\n\nUse format: [timestamp] [level] [message]\n\nSet level to INFO.\n\n\n\nLog key events:\n\n\nStart of API call\n\nAPI responses\n\nNumber of rows processed\n\nMissing columns\n\nFinal distribution of scores\n\n\n\n\n📦 Dependencies\n\n\npandas\n\ntqdm\n\nopenai\n\ndotenv\n\n\n🔁 Extras\n\n\nUse functions for:\n\n\nLoading CSV,\n\nClassifying text,\n\nError handling.\n\n\n\nEnsure script can be run directly with #!/usr/bin/env python3 at the top.\n\n\n\nLet me know if you want me to generate the exact prompt message string or turn this into a README section."
   },
   {
-    "objectID": "case-studies/interviews/index.html",
-    "href": "case-studies/interviews/index.html",
-    "title": "Football Manager Interviews",
-    "section": "",
-    "text": "Post-match interview texts from football managers for sentiment analysis and NLP practice. Includes multiple rating systems for comparison and validation.\nUsed in: Week 5 (Text as Data I), Week 6 (Text as Data II), Assignment 5",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Football Interviews"
-    ]
-  },
-  {
-    "objectID": "case-studies/interviews/index.html#overview",
-    "href": "case-studies/interviews/index.html#overview",
-    "title": "Football Manager Interviews",
-    "section": "",
-    "text": "Post-match interview texts from football managers for sentiment analysis and NLP practice. Includes multiple rating systems for comparison and validation.\nUsed in: Week 5 (Text as Data I), Week 6 (Text as Data II), Assignment 5",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Football Interviews"
-    ]
-  },
-  {
-    "objectID": "case-studies/interviews/index.html#data-files",
-    "href": "case-studies/interviews/index.html#data-files",
-    "title": "Football Manager Interviews",
-    "section": "Data Files",
-    "text": "Data Files\n\n\n\nFile\nDescription\n\n\n\n\ninterview-texts-only.xlsx\nRaw interview texts (121 interviews)\n\n\ncombined_text_data.csv\nCombined text data with metadata\n\n\ncombined_raw_data.csv\nFull raw dataset\n\n\ndomain_lexicon.csv\nFootball-specific sentiment terms\n\n\ngame_data.xlsx\nGame results and context\n\n\naggregated_ratings_by_text.csv\nAggregated sentiment ratings\n\n\n\nBrowse data files",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Football Interviews"
-    ]
-  },
-  {
-    "objectID": "case-studies/interviews/index.html#code",
-    "href": "case-studies/interviews/index.html#code",
-    "title": "Football Manager Interviews",
-    "section": "Code",
-    "text": "Code\n\n\n\nFile\nDescription\n\n\n\n\nsentiment-analysis.R\nR script for API-based sentiment analysis\n\n\nsentiment_analysis.py\nPython script for sentiment analysis\n\n\ndomain_lexicon.r\nR script to create football-specific lexicon\n\n\napi-key.R\nTemplate for API key setup\n\n\n\nBrowse code files",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Football Interviews"
-    ]
-  },
-  {
-    "objectID": "case-studies/interviews/index.html#key-features",
-    "href": "case-studies/interviews/index.html#key-features",
-    "title": "Football Manager Interviews",
-    "section": "Key Features",
-    "text": "Key Features\n\nReal Premier League manager interview texts\nDomain-specific sentiment lexicon\nBoth R and Python implementations\nHuman vs AI rating comparison framework\nAPI integration examples (OpenAI)",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Football Interviews"
-    ]
-  },
-  {
-    "objectID": "case-studies/interviews/index.html#learning-objectives",
-    "href": "case-studies/interviews/index.html#learning-objectives",
-    "title": "Football Manager Interviews",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nText preprocessing and cleaning\nSentiment analysis approaches\nDomain-specific lexicons\nAPI integration for NLP tasks\nComparing human and AI ratings",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Football Interviews"
-    ]
-  },
-  {
-    "objectID": "case-studies/interviews/index.html#downloads",
-    "href": "case-studies/interviews/index.html#downloads",
-    "title": "Football Manager Interviews",
-    "section": "Downloads",
-    "text": "Downloads\n\ninterview-texts-only.xlsx\ndomain_lexicon.csv",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Football Interviews"
-    ]
-  },
-  {
-    "objectID": "case-studies/interviews/code/index.html",
-    "href": "case-studies/interviews/code/index.html",
-    "title": "Football Manager Interviews - Code",
+    "objectID": "case-studies/interviews/data/index.html",
+    "href": "case-studies/interviews/data/index.html",
+    "title": "Football Manager Interviews - Data Files",
     "section": "",
     "text": "← Back to Interviews Case Study"
   },
   {
-    "objectID": "case-studies/interviews/code/index.html#code-files",
-    "href": "case-studies/interviews/code/index.html#code-files",
-    "title": "Football Manager Interviews - Code",
-    "section": "Code Files",
-    "text": "Code Files\n\nR Scripts\n\n\n\nFile\nDescription\n\n\n\n\nsentiment-analysis.R\nComplete sentiment analysis workflow using OpenAI API\n\n\ndomain_lexicon.r\nCreates football-specific sentiment lexicon\n\n\napi-key.R\nTemplate for API key setup\n\n\n\n\n\nPython Scripts\n\n\n\nFile\nDescription\n\n\n\n\nsentiment_analysis.py\nPython sentiment analysis script"
-  },
-  {
-    "objectID": "case-studies/interviews/code/index.html#usage-notes",
-    "href": "case-studies/interviews/code/index.html#usage-notes",
-    "title": "Football Manager Interviews - Code",
-    "section": "Usage Notes",
-    "text": "Usage Notes\n\nStore API keys in environment variables, never commit to version control\nBudget ~$5 for course exercises\nSet temperature=0 for consistent results"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/index.html",
-    "href": "case-studies/employee_commits/data/index.html",
-    "title": "Employee Commits - Data Files",
-    "section": "",
-    "text": "← Back to Employee Commits Case Study"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/index.html#data-files",
-    "href": "case-studies/employee_commits/data/index.html#data-files",
-    "title": "Employee Commits - Data Files",
+    "objectID": "case-studies/interviews/data/index.html#data-files",
+    "href": "case-studies/interviews/data/index.html#data-files",
+    "title": "Football Manager Interviews - Data Files",
     "section": "Data Files",
-    "text": "Data Files\n\n\n\nFile\nDescription\n\n\n\n\nemployee_commits_clean.csv\nCleaned commit data\n\n\nemployee_commits_raw.csv\nRaw commit data\n\n\nREADME.txt\nData description"
+    "text": "Data Files\n\nPrimary Data\n\n\n\nFile\nDescription\n\n\n\n\ninterview-texts-only.xlsx\nRaw interview texts (121 interviews)\n\n\ncombined_text_data.csv\nCombined text data with metadata\n\n\ncombined_raw_data.csv\nFull raw dataset\n\n\ngame_data.xlsx\nGame results and context\n\n\n\n\n\nSentiment Analysis\n\n\n\nFile\nDescription\n\n\n\n\ndomain_lexicon.csv\nFootball-specific sentiment terms\n\n\naggregated_ratings_by_text.csv\nAggregated sentiment ratings"
   },
   {
-    "objectID": "case-studies/employee_commits/data/index.html#ai-analysis-outputs",
-    "href": "case-studies/employee_commits/data/index.html#ai-analysis-outputs",
-    "title": "Employee Commits - Data Files",
-    "section": "AI Analysis Outputs",
-    "text": "AI Analysis Outputs\nThe ai/ subfolder contains analysis outputs from different AI models for comparison:\n\nChatGPT analysis outputs\nClaude analysis outputs\nGemini analysis outputs"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html",
-    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html",
-    "title": "",
+    "objectID": "case-studies/employee_commits/index.html",
+    "href": "case-studies/employee_commits/index.html",
+    "title": "Employee Commits Dataset",
     "section": "",
-    "text": "Code"
+    "text": "Simulated dataset of employee commit activity for exploring AI-generated data analysis and visualization comparisons.\nUsed in: Data analysis demonstrations",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Employee Commits"
+    ]
   },
   {
-    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#what-changed-in-v2.1",
-    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#what-changed-in-v2.1",
-    "title": "",
-    "section": "What Changed in v2.1",
-    "text": "What Changed in v2.1\nIncreased extreme values from 10 to 50: - 30 very high commits (range: 200-450/month) — up from 3 - 10 zero commits with long tenure — up from 3 - 5 high commits for juniors — up from 2 - 5 high commits for infrastructure — up from 2\nData errors remain at 8 (unchanged from v2.0)\nTotal problematic cases: 58 (8 errors + 50 extreme values) Clean observations: 542 Total: 600 employees"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#files-provided",
-    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#files-provided",
-    "title": "",
-    "section": "Files Provided",
-    "text": "Files Provided\n\n1. employee_commits_claude.csv\nFull dataset with all metadata (600 rows × 8 columns)\nColumns: - i - Employee ID - x - Days with company - y - Monthly commits - department - IT or Analytics - seniority - Junior, Mid, Senior - role - Specific job role - data_issue - Description of any quality issues - issue_category - Clean, Data Error, or Extreme Value\nUse this for teaching data quality and cleaning decisions.\n\n\n2. employee_commits_raw.csv\nMinimal dataset (600 rows × 5 columns)\nColumns: - i - Employee ID - x - Days with company - y - Monthly commits - department - IT or Analytics - role - Specific job role\nDropped columns: seniority, data_issue, issue_category\nUse this as the “raw data” students receive before they know about issues.\n\n\n3. employee_commits_clean.csv\nOnly clean observations (542 rows)\nAll 8 data errors and 50 extreme values removed. Use for comparison or to skip the cleaning exercise.\n\n\n4. data_quality_report.csv\nList of all 58 problematic cases\nShows each issue with employee ID, x, y, and explanation. Use as an answer key or for discussion.\n\n\n5. employee_commits_v2_plots.png\nDiagnostic visualizations\nFour panels showing data quality issues highlighted: - Full view with errors (X) and extreme values (★) - Zoomed view focusing on reasonable range - Distribution of monthly commits - Boxplots by role"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#data-quality-issues-breakdown",
-    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#data-quality-issues-breakdown",
-    "title": "",
-    "section": "Data Quality Issues Breakdown",
-    "text": "Data Quality Issues Breakdown\n\nData Errors (8 cases) - Must Fix\n\n\n\n\n\n\n\n\n\nIssue Type\nCount\nRange\nStory\n\n\n\n\nNegative commits\n2\n-15, -8\nData pipeline bug\n\n\nImpossibly high commits\n3\n6,800 - 12,000\nDecimal/aggregation error\n\n\nNegative tenure\n1\n-120 days\nDate calculation error\n\n\nImpossibly long tenure\n2\n19,500 - 22,000 days\nDate entry error (1925 vs 2025)\n\n\n\n\n\nExtreme Values (50 cases) - Require Judgment\n\n\n\n\n\n\n\n\n\n\nIssue Type\nCount\nRange\nStory\nKeep or Drop?\n\n\n\n\nVery high commits\n30\n200 - 450/month\nBot-assisted or granular style\nAnalyst choice\n\n\nZero commits, long tenure\n10\nx &gt; 2,900 days\nMoved to management\nAnalyst choice\n\n\nHigh commits for junior\n5\n154 - 248/month\nInternal transfers\nAnalyst choice\n\n\nHigh for infrastructure\n5\n75 - 108/month\nIaC enthusiasts\nAnalyst choice"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#key-statistics",
-    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#key-statistics",
-    "title": "",
-    "section": "Key Statistics",
-    "text": "Key Statistics\n\nFull Dataset (including issues)\n\nx: Mean = 1,496 days, Min = -120, Max = 22,000\ny: Mean = 87, Min = -15, Max = 12,000\n\n\n\nClean Data Only (542 obs)\n\nx: Mean = 1,434 days (3.9 years), Range = 3 to 5,446\ny: Median = 18, Mean = 42, Range = 0 to 445\n\n\n\nWith Extreme Values Removed (542 obs)\n\ny: Median = 15, Mean = 27, Range = 0 to 150 (approximately)"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#teaching-questions",
-    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#teaching-questions",
-    "title": "",
-    "section": "Teaching Questions",
-    "text": "Teaching Questions\n\nLevel 1: Data Quality\n\nIdentify which observations are clearly errors vs possibly valid\nWhat’s your decision rule for each type of extreme value?\nDocument the impact of including vs excluding extreme values\n\n\n\nLevel 2: Exploration\n\nVisualize the relationship between x and y\nHow does it differ by department? By role?\nIs the relationship linear? Log-linear? Something else?\n\n\n\nLevel 3: Modeling\n\nCompare multiple approaches:\n\nLinear regression (OLS)\nLog transformations\nPoisson regression\nNegative binomial regression\nRobust regression (M-estimators)\nQuantile regression (median)\n\nWhich model assumptions are violated and why?\nHow sensitive are results to data cleaning decisions?\n\n\n\nLevel 4: Communication\n\nWhat’s your conclusion about the x-y relationship?\nHow certain are you? What are the caveats?\nWhat additional data would help?\nHow would you report this to a non-technical stakeholder?"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#suggested-workflow-for-students",
-    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#suggested-workflow-for-students",
-    "title": "",
-    "section": "Suggested Workflow for Students",
-    "text": "Suggested Workflow for Students\nStage 1: Initial Exploration - Load employee_commits_raw.csv - Create basic visualizations - Calculate summary statistics - Notice anything unusual?\nStage 2: Data Quality Assessment - Identify outliers and unusual values - Categorize as errors vs extreme values - Make cleaning decisions with justification\nStage 3: Multiple Analyses - Try 3-4 different cleaning approaches - For each: visualize, model, interpret - Compare results across approaches\nStage 4: Synthesis - Which approach do you recommend and why? - What is the relationship between x and y? - How confident are you in this conclusion?"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#instructor-notes",
-    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#instructor-notes",
-    "title": "",
-    "section": "Instructor Notes",
-    "text": "Instructor Notes\n\nWhy This Dataset Works\n\nRealistic complexity: Not obviously clean or dirty\nAmbiguity: No single “correct” answer for extreme values\nMultiple valid approaches: Forces critical thinking\nCount data features: Overdispersion, zeros, skewness\nRich metadata: Can explore heterogeneity\n\n\n\nDiscussion Points\n\nError vs extreme: What makes something an error vs just unusual?\nDecision rules: How do you decide what to keep/drop?\nTransparency: How do you document cleaning decisions?\nSensitivity: When do conclusions change materially?\nModel choice: Why prefer one model over another for count data?\n\n\n\nExtensions\n\nAdd time dimension (multiple months per employee)\nInclude team/project identifiers for clustering\nAdd more covariates (education, experience, etc.)\nCreate a prediction task (predict commits for new employees)"
-  },
-  {
-    "objectID": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#technical-details",
-    "href": "case-studies/employee_commits/data/background/SUMMARY_v2.1.html#technical-details",
-    "title": "",
-    "section": "Technical Details",
-    "text": "Technical Details\nSeed: 20251112\nSoftware: Python 3.x with numpy, pandas, matplotlib\nAlso available: R version (simulate_employee_commits_v2.R)\nKey assumptions: - Base monthly rates by role (7-38 commits/month) - Seniority multipliers (0.6x, 1.2x, 0.8x) - Individual heterogeneity (log-normal, σ=0.45) - Negative binomial distribution (size=5) - 5% baseline zeros (moved teams, admin roles, etc.)\n\nFor questions or modifications, see generate_data_v2.1.py"
-  },
-  {
-    "objectID": "case-studies/index.html",
-    "href": "case-studies/index.html",
-    "title": "Case Studies",
+    "objectID": "case-studies/employee_commits/index.html#overview",
+    "href": "case-studies/employee_commits/index.html#overview",
+    "title": "Employee Commits Dataset",
     "section": "",
-    "text": "This course uses several case studies to demonstrate data analysis with AI. Each case study includes data, code examples, and documentation."
+    "text": "Simulated dataset of employee commit activity for exploring AI-generated data analysis and visualization comparisons.\nUsed in: Data analysis demonstrations",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Employee Commits"
+    ]
   },
   {
-    "objectID": "case-studies/index.html#main-case-studies",
-    "href": "case-studies/index.html#main-case-studies",
-    "title": "Case Studies",
-    "section": "Main Case Studies",
-    "text": "Main Case Studies\n\nWorld Values Survey (WVS)\nThe 7th Wave of the World Values Survey, cleaned and merged with World Bank GDP data. Used for data documentation and report writing exercises.\nUsed in: Week 2 (Data Documentation), Week 3 (Report Writing)\n\n\n\nAustrian Hotels\nA realistic simulated dataset of hotels across Austria for practicing data wrangling and table joins. Contains 8 related tables.\nUsed in: Week 4 (Joining Tables)\n\n\n\nFootball Manager Interviews\nPost-match interview texts from football managers for sentiment analysis and NLP practice. Includes rating systems for comparison and validation.\nUsed in: Week 5 (Text as Data I), Week 6 (Text as Data II)"
-  },
-  {
-    "objectID": "case-studies/index.html#additional-case-studies",
-    "href": "case-studies/index.html#additional-case-studies",
-    "title": "Case Studies",
-    "section": "Additional Case Studies",
-    "text": "Additional Case Studies\n\nUS Earnings Data (CPS)\nCurrent Population Survey data for analyzing earnings patterns, gender gaps, and returns to education.\nUsed in: Week 0 (Coding with AI)\n\n\n\nEmployee Commits\nSimulated dataset of employee commit activity for exploring AI-generated data analysis comparisons.\n\n\n\nCommon Support Analysis (R)\nIterative development of R code for causal inference analysis using Claude AI, demonstrating prompt-refine workflow."
-  },
-  {
-    "objectID": "case-studies/common-support-r/data/index.html",
-    "href": "case-studies/common-support-r/data/index.html",
-    "title": "Common Support Analysis - Data",
-    "section": "",
-    "text": "← Back to Common Support Case Study"
-  },
-  {
-    "objectID": "case-studies/common-support-r/data/index.html#data-files",
-    "href": "case-studies/common-support-r/data/index.html#data-files",
-    "title": "Common Support Analysis - Data",
+    "objectID": "case-studies/employee_commits/index.html#data-files",
+    "href": "case-studies/employee_commits/index.html#data-files",
+    "title": "Employee Commits Dataset",
     "section": "Data Files",
-    "text": "Data Files\nThis case study uses simulated data generated within the R scripts.\nNo external data files required."
-  },
-  {
-    "objectID": "case-studies/austria-hotels/index.html",
-    "href": "case-studies/austria-hotels/index.html",
-    "title": "Austrian Hotels Dataset",
-    "section": "",
-    "text": "A realistic simulated dataset of hotels across Austria for practicing data wrangling and table joins. Contains multiple related tables with hotels, cities, occupancy, tourism, and economic data.\nUsed in: Week 4 (Joining Tables)\nGenerated by: Claude AI (Sonnet 3.7) with realistic relationships between variables",
+    "text": "Data Files\n\n\n\nFile\nDescription\n\n\n\n\nemployee_commits_clean.csv\nCleaned commit data\n\n\nemployee_commits_raw.csv\nRaw commit data\n\n\nREADME.txt\nData description\n\n\n\n\nAI Analysis Outputs\nThe ai/ subfolder contains analysis outputs from different AI models:\n\nChatGPT analysis outputs\nClaude analysis outputs\nGemini analysis outputs\n\nBrowse data files",
     "crumbs": [
       "Home",
       "Case Studies",
-      "Austrian Hotels"
+      "Employee Commits"
     ]
   },
   {
-    "objectID": "case-studies/austria-hotels/index.html#overview",
-    "href": "case-studies/austria-hotels/index.html#overview",
-    "title": "Austrian Hotels Dataset",
-    "section": "",
-    "text": "A realistic simulated dataset of hotels across Austria for practicing data wrangling and table joins. Contains multiple related tables with hotels, cities, occupancy, tourism, and economic data.\nUsed in: Week 4 (Joining Tables)\nGenerated by: Claude AI (Sonnet 3.7) with realistic relationships between variables",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Austrian Hotels"
-    ]
-  },
-  {
-    "objectID": "case-studies/austria-hotels/index.html#data-files",
-    "href": "case-studies/austria-hotels/index.html#data-files",
-    "title": "Austrian Hotels Dataset",
-    "section": "Data Files",
-    "text": "Data Files\nThe dataset includes 8 related tables:\n\n\n\n\n\n\n\n\nFile\nDescription\nRows\n\n\n\n\nhotels_modified.csv\nBasic hotel information\n200\n\n\ncities_modified.csv\nCity information\n10\n\n\nmonthly_occupancy_modified.csv\nMonthly hotel performance\n~3,800\n\n\ncity_tourism_modified.csv\nMonthly tourism stats\n240\n\n\neconomic_indicators.csv\nMonthly economic indicators\n24\n\n\nreviews_modified.csv\nHotel guest reviews\n~1,700\n\n\namenities.csv\nList of hotel amenities\n10\n\n\nhotel_amenities_modified.csv\nHotel-amenity relationships\n~1,000\n\n\n\nBrowse data files",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Austrian Hotels"
-    ]
-  },
-  {
-    "objectID": "case-studies/austria-hotels/index.html#documentation",
-    "href": "case-studies/austria-hotels/index.html#documentation",
-    "title": "Austrian Hotels Dataset",
-    "section": "Documentation",
-    "text": "Documentation\n\nhotel-data-readme.md - Detailed schema documentation",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Austrian Hotels"
-    ]
-  },
-  {
-    "objectID": "case-studies/austria-hotels/index.html#code",
-    "href": "case-studies/austria-hotels/index.html#code",
-    "title": "Austrian Hotels Dataset",
+    "objectID": "case-studies/employee_commits/index.html#code",
+    "href": "case-studies/employee_commits/index.html#code",
+    "title": "Employee Commits Dataset",
     "section": "Code",
     "text": "Code\nCode examples to be added\nBrowse code files",
     "crumbs": [
       "Home",
       "Case Studies",
-      "Austrian Hotels"
+      "Employee Commits"
     ]
   },
   {
-    "objectID": "case-studies/austria-hotels/index.html#key-relationships",
-    "href": "case-studies/austria-hotels/index.html#key-relationships",
-    "title": "Austrian Hotels Dataset",
-    "section": "Key Relationships",
-    "text": "Key Relationships\n\nOne-to-One: Hotels to Cities (through city name)\nOne-to-Many: Hotels to Monthly Occupancy, Hotels to Reviews\nMany-to-Many: Hotels to Amenities (through hotel_amenities)\nComposite Keys: Monthly data uses (hotel_id, month, year)",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Austrian Hotels"
-    ]
-  },
-  {
-    "objectID": "case-studies/austria-hotels/index.html#learning-objectives",
-    "href": "case-studies/austria-hotels/index.html#learning-objectives",
-    "title": "Austrian Hotels Dataset",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nInner, left, right, and full joins\nOne-to-one and one-to-many relationships\nComposite key joins\nData aggregation after joins\nHandling missing values in joins",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Austrian Hotels"
-    ]
-  },
-  {
-    "objectID": "case-studies/austria-hotels/index.html#downloads",
-    "href": "case-studies/austria-hotels/index.html#downloads",
-    "title": "Austrian Hotels Dataset",
-    "section": "Downloads",
-    "text": "Downloads\n\ndata-modified.zip - All data files",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "Austrian Hotels"
-    ]
-  },
-  {
-    "objectID": "case-studies/austria-hotels/data/index.html",
-    "href": "case-studies/austria-hotels/data/index.html",
-    "title": "Austrian Hotels - Data Files",
-    "section": "",
-    "text": "← Back to Austrian Hotels Case Study"
-  },
-  {
-    "objectID": "case-studies/austria-hotels/data/index.html#data-files",
-    "href": "case-studies/austria-hotels/data/index.html#data-files",
-    "title": "Austrian Hotels - Data Files",
-    "section": "Data Files",
-    "text": "Data Files\nDownload the complete dataset: data-modified.zip\n\nIndividual Files\n\n\n\nFile\nDescription\n\n\n\n\nhotels_modified.csv\nBasic hotel information (200 hotels)\n\n\ncities_modified.csv\nCity information (10 cities)\n\n\nmonthly_occupancy_modified.csv\nMonthly hotel performance (~3,800 rows)\n\n\ncity_tourism_modified.csv\nMonthly tourism statistics (240 rows)\n\n\neconomic_indicators.csv\nMonthly economic indicators (24 rows)\n\n\nreviews_modified.csv\nHotel guest reviews (~1,700 rows)\n\n\namenities.csv\nList of hotel amenities (10 items)\n\n\nhotel_amenities_modified.csv\nHotel-amenity relationships (~1,000 rows)"
-  },
-  {
-    "objectID": "case-studies/austria-hotels/data/index.html#documentation",
-    "href": "case-studies/austria-hotels/data/index.html#documentation",
-    "title": "Austrian Hotels - Data Files",
-    "section": "Documentation",
-    "text": "Documentation\n\nhotel-data-readme.md - Detailed schema documentation with column descriptions"
-  },
-  {
-    "objectID": "case-studies/VWS/index.html",
-    "href": "case-studies/VWS/index.html",
-    "title": "World Values Survey (WVS)",
-    "section": "",
-    "text": "The 7th Wave of the World Values Survey, cleaned and merged with World Bank GDP data. The WVS is a global research project exploring people’s values and beliefs across different countries and cultures.\nUsed in: Week 2 (Data Documentation), Week 3 (Report Writing)",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "World Values Survey"
-    ]
-  },
-  {
-    "objectID": "case-studies/VWS/index.html#overview",
-    "href": "case-studies/VWS/index.html#overview",
-    "title": "World Values Survey (WVS)",
-    "section": "",
-    "text": "The 7th Wave of the World Values Survey, cleaned and merged with World Bank GDP data. The WVS is a global research project exploring people’s values and beliefs across different countries and cultures.\nUsed in: Week 2 (Data Documentation), Week 3 (Report Writing)",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "World Values Survey"
-    ]
-  },
-  {
-    "objectID": "case-studies/VWS/index.html#data-files",
-    "href": "case-studies/VWS/index.html#data-files",
-    "title": "World Values Survey (WVS)",
-    "section": "Data Files",
-    "text": "Data Files\n\n\n\n\n\n\n\nFile\nDescription\n\n\n\n\nWVS_random_subset2000.csv\nRandom subset of 2,000 respondents stratified by country\n\n\nWVS_GDP_merged_data.csv\nCountry-level aggregated data merged with GDP and population indicators\n\n\nWVS_subset.csv\nSelected variables from full dataset\n\n\ncodebook.pdf\nOfficial WVS codebook with variable definitions\n\n\nREADME_WVS.md\nData processing documentation\n\n\n\nBrowse data files",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "World Values Survey"
-    ]
-  },
-  {
-    "objectID": "case-studies/VWS/index.html#code",
-    "href": "case-studies/VWS/index.html#code",
-    "title": "World Values Survey (WVS)",
-    "section": "Code",
-    "text": "Code\n\n\n\n\n\n\n\nFile\nDescription\n\n\n\n\ncleaning.R\nR script that processes raw WVS data and creates cleaned datasets\n\n\n\nBrowse code files",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "World Values Survey"
-    ]
-  },
-  {
-    "objectID": "case-studies/VWS/index.html#key-features",
-    "href": "case-studies/VWS/index.html#key-features",
-    "title": "World Values Survey (WVS)",
+    "objectID": "case-studies/employee_commits/index.html#key-features",
+    "href": "case-studies/employee_commits/index.html#key-features",
+    "title": "Employee Commits Dataset",
     "section": "Key Features",
-    "text": "Key Features\n\nInternational survey data covering 50+ countries\nEconomic indicators merged from World Bank\nMultiple aggregation levels (individual and country-level)\nDetailed codebook documentation",
+    "text": "Key Features\n\nComparison of AI-generated analyses\nMultiple model outputs for same dataset\nVisualization comparisons",
     "crumbs": [
       "Home",
       "Case Studies",
-      "World Values Survey"
+      "Employee Commits"
     ]
   },
   {
-    "objectID": "case-studies/VWS/index.html#sample-research-questions",
-    "href": "case-studies/VWS/index.html#sample-research-questions",
-    "title": "World Values Survey (WVS)",
-    "section": "Sample Research Questions",
-    "text": "Sample Research Questions\n\nRelationship between income level and trust/happiness\nCultural differences in gender attitudes\nEconomic development and social values",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "World Values Survey"
-    ]
-  },
-  {
-    "objectID": "case-studies/VWS/index.html#downloads",
-    "href": "case-studies/VWS/index.html#downloads",
-    "title": "World Values Survey (WVS)",
+    "objectID": "case-studies/employee_commits/index.html#downloads",
+    "href": "case-studies/employee_commits/index.html#downloads",
+    "title": "Employee Commits Dataset",
     "section": "Downloads",
-    "text": "Downloads\n\nWVS_random_subset2000.csv\nWVS_GDP_merged_data.csv\nCodebook (PDF)",
+    "text": "Downloads\n\nemployee_commits_clean.csv\nemployee_commits_raw.csv",
     "crumbs": [
       "Home",
       "Case Studies",
-      "World Values Survey"
+      "Employee Commits"
     ]
   },
   {
-    "objectID": "case-studies/VWS/data/README_WVS.html",
-    "href": "case-studies/VWS/data/README_WVS.html",
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html",
     "title": "",
     "section": "",
     "text": "Code"
   },
   {
-    "objectID": "case-studies/VWS/data/README_WVS.html#overview",
-    "href": "case-studies/VWS/data/README_WVS.html#overview",
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#whats-new-in-v3.0---key-improvements",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#whats-new-in-v3.0---key-improvements",
     "title": "",
-    "section": "Overview",
-    "text": "Overview\nThis script cleans and subsets World Values Survey (WVS) Wave 7 data, generates a random subsample, aggregates by country & year, and merges with World Bank GDP indicators."
+    "section": "What’s New in v3.0 - KEY IMPROVEMENTS",
+    "text": "What’s New in v3.0 - KEY IMPROVEMENTS\n\n1. ✅ Rising Productivity in First 2 Years (Ramp-Up)\n\nEarly career (0-2yr): Mean = 9.7 commits/month\nProductivity increases from ~30% to 100% over first 730 days\nPattern: People are learning, ramping up skills\n\n\n\n2. ✅ Smooth Tenure Distribution (No Cliff!)\n\nExponential distribution: Most people have low tenure\nNatural decline: 148 employees &lt;1yr, 112 at 1-2yr, 167 at 2-5yr, 115 at 5+yr\nPattern: Realistic employee turnover and retention\n\n\n\n3. ✅ Marked Decline After 7-8 Years\n\nLate career (7+yr): Mean = 8.7 commits/month (lower than early career!)\nZero commits: 19.8% of employees with 7+ years (vs 5% baseline)\nPattern: Move to management, mentoring, architecture roles"
   },
   {
-    "objectID": "case-studies/VWS/data/README_WVS.html#prerequisites",
-    "href": "case-studies/VWS/data/README_WVS.html#prerequisites",
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#the-x-y-relationship-now-much-clearer",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#the-x-y-relationship-now-much-clearer",
     "title": "",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nPackages:\n\nosfr (download from OSF)\n\ndplyr (data manipulation)\n\nreadr (CSV I/O)\n\nWDI (World Bank API)"
+    "section": "The X-Y Relationship: Now MUCH Clearer!",
+    "text": "The X-Y Relationship: Now MUCH Clearer!\n\nOverall Statistics (Clean Data, N=542)\nCorrelations: - Pearson (linear): r = 0.019 (still weak in linear sense) - Spearman (rank): r = 0.190 (p &lt; 0.0001, significant!)\nKey Insight: The relationship is non-linear and non-monotonic!\n\n\nThe Career Progression Curve\n\n\n\n\n\n\n\n\n\n\n\nCareer Stage\nTenure\nMean\nMedian\nN\nPattern\n\n\n\n\nEarly (Learning)\n0-1 year\n7.4\n5.5\n148\nLow (ramping up)\n\n\nGrowing (Maturing)\n1-2 years\n13.0\n10.5\n112\nRising (learning curve)\n\n\nPeak (Full productivity)\n2-5 years\n32.0\n24.0\n167\nMaximum (IC contributors)\n\n\nLate (Leadership)\n5+ years\n10.3\n7.0\n115\nDeclining (management)\n\n\n\nPeak is 4.3x higher than early career!\nLate career drops back to early levels!\n\n\nStatistical Significance\nANOVA for Seniority Effect: - F-statistic: 93.66 - p-value: &lt; 0.0001 - Result: Highly significant differences across career stages\nThe evidence is overwhelming that career stage matters!"
   },
   {
-    "objectID": "case-studies/VWS/data/README_WVS.html#directory-structure",
-    "href": "case-studies/VWS/data/README_WVS.html#directory-structure",
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#visualizations-show-clear-patterns",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#visualizations-show-clear-patterns",
     "title": "",
-    "section": "Directory Structure",
-    "text": "Directory Structure\nproject-root/\n├─ data/\n│  ├─ raw/        ← input CSVs\n│  └─ clean/      ← outputs\n└─ scripts/\n   └─ cleaning.R ← this script"
+    "section": "Visualizations Show Clear Patterns",
+    "text": "Visualizations Show Clear Patterns\n\nPanel 1: Tenure Distribution (Top Left)\n\nSmooth exponential decline (no cliff at 2000 days)\nMost employees concentrated in 0-2000 day range\nNatural thinning as tenure increases\n\n\n\nPanel 2: Career Progression Curve (Top Right)\nRED MEDIAN TREND LINE shows: 1. Rise from 0 to ~1000 days (0-3 years) 2. Peak around 1000-2000 days (3-5 years)\n3. Decline after 2500 days (7+ years) 4. Low plateau after 3500+ days (10+ years)\nThis is the inverted-U pattern that students should discover!\n\n\nPanel 3: Productivity by Career Stage (Bottom Left)\nBoxplots dramatically show: - Early: Median ~5, tight distribution - Peak: Median ~24, wide distribution (high variance) - Late: Median ~7, back down to early levels\n\n\nPanel 4: Zero Commits Rate (Bottom Right)\nThe “management transition” effect: - Stable ~5-15% for first 2500 days - Spike to 30-50% after 2500 days (7 years) - Shows clear transition from coding to leadership"
   },
   {
-    "objectID": "case-studies/VWS/data/README_WVS.html#input",
-    "href": "case-studies/VWS/data/README_WVS.html#input",
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#why-this-is-the-best-teaching-dataset",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#why-this-is-the-best-teaching-dataset",
     "title": "",
-    "section": "Input",
-    "text": "Input\n\ndata/raw/WVS_Cross-National_Wave_7_csv_v6_0.csv\nDownloaded automatically from OSF (ID: 36dgb)."
+    "section": "Why This is the BEST Teaching Dataset",
+    "text": "Why This is the BEST Teaching Dataset\n\n1. Realistic Career Arc\nThis pattern matches real-world phenomena: - Academic research output (inverted-U with age) - Sports performance (peak then decline) - Software engineering (senior devs code less) - Management transitions (IC → people leadership)\n\n\n2. Multiple Valid Analysis Approaches\nStudents can explore:\nLinear approaches: - Simple OLS: R² ≈ 0 (fails completely) - With group dummies: R² ≈ 0.25 (much better!)\nNon-linear approaches: - Polynomial regression (quadratic or cubic) - Splines (natural or smoothing splines) - GAM (generalized additive models) - Locally weighted regression (LOESS)\nCount data approaches: - Poisson regression - Negative binomial (handles overdispersion) - Zero-inflated models (for late-career zeros)\nGroup-based approaches: - ANOVA / linear model with tenure groups - Separate models by career stage - Mixed effects with random slopes\n\n\n3. Forces Critical Thinking\nQuestions students must grapple with: - Why does simple linear regression fail? - How do we model non-monotonic relationships? - When to use continuous vs categorical predictors? - How to interpret “no linear relationship” vs “no relationship”?\n\n\n4. Data Quality Challenges\nStill includes 58 problematic cases (8 errors + 50 extreme values): - Students must clean data first - Different cleaning decisions affect results - Teaches importance of documentation"
   },
   {
-    "objectID": "case-studies/VWS/data/README_WVS.html#output",
-    "href": "case-studies/VWS/data/README_WVS.html#output",
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#key-statistics-summary",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#key-statistics-summary",
     "title": "",
-    "section": "Output",
-    "text": "Output\n\nWVS_subset.csv\nSelected variables and respondents, wave 1–7.\nWVS_random_subset2000.csv\nRandom sample of 2 000 respondents (≈ per country).\nWVS_GDP_merged_data.csv\nAggregated (mean & mode) by country & year for wave 7, merged with GDP & population (2017–2023)."
+    "section": "Key Statistics Summary",
+    "text": "Key Statistics Summary\n\nTenure Distribution (Clean Data)\n\nMean: 1,162 days (3.2 years)\nMedian: 788 days (2.2 years)\nRange: 1 to 5,475 days (0 to 15 years)\nMost employees: 0-2000 days (70%)\n\n\n\nCommits Distribution (Clean Data)\n\nMean: 16.8 commits/month\nMedian: 10.0 commits/month (right-skewed!)\nRange: 0 to 119 commits/month\nZero commits: 50 cases (9.2%)\n\n\n\nBy Department (Clean Data)\n\nIT: Mean = 18.0, Median = 12.0 (n=307)\nAnalytics: Mean = 15.1, Median = 9.0 (n=235)\nDifference: Not statistically significant (p=0.09)\n\n\n\nData Quality Issues\n\n8 errors (must fix): negative values, impossibly high/long\n50 extreme values (analyst judgment): very high commits, zeros with long tenure\n542 clean observations (90.3%)"
   },
   {
-    "objectID": "case-studies/VWS/data/README_WVS.html#processing-steps",
-    "href": "case-studies/VWS/data/README_WVS.html#processing-steps",
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#files-provided-v3.0",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#files-provided-v3.0",
     "title": "",
-    "section": "Processing Steps",
-    "text": "Processing Steps\n\nSetup\n\nClear environment (rm(list=ls()))\n\nLoad libraries\n\nDefine data_in and data_out folders\n\nImport & Subset\n\nDownload raw CSV via OSF\n\nSelect key demographics (country codes, interview date, weights) and survey items (Q1–Q89, Q260–Q290)\n\nSave to WVS_subset.csv\nNote: This file contains answers from all respondents from the data.\n\nRandom Subsample\n\nIn this step, we create a random subsample to reduce sample size.\nSeed: 20250124\n\nSample ~2 000 respondents stratified by country\n\nCount the resulting number of respondents in each country\nSave to WVS_random_subset2000.csv\n\nAggregate & Clean\n\nIn this step, we aggregate the full data (step 2 data) to country-level, then join with GDP data.\nRecode negative codes (–1…–5) to NA\n\nCount the number of respondents in each country\nCompute country–year means for numeric items, modes for categorical\n\nDownload GDP & population (2017–2023) via WDI\n\nMerge on ISO3 country code & year\n\nSave to WVS_GDP_merged_data.csv"
+    "section": "Files Provided (v3.0)",
+    "text": "Files Provided (v3.0)\n\nMain Data Files\n\nemployee_commits_claude_v3.csv (600 rows)\n\nFull dataset with metadata\nColumns: i, x, y, department, seniority, role, data_issue, issue_category\nUse for: Teaching with answer key\n\nemployee_commits_raw_v3.csv (600 rows)\n\nMinimal dataset (i, x, y, department, role only)\nUse for: Give to students first (discovery learning)\n\nemployee_commits_clean_v3.csv (542 rows)\n\nOnly clean observations\nUse for: Analysis after cleaning or skip cleaning exercise\n\ndata_quality_report_v3.csv (58 rows)\n\nList of all problematic cases\nUse for: Answer key for data cleaning\n\n\n\n\nVisualization Files\n\nemployee_commits_v3_plots.png\n\nShows DGP features: ramp-up, peak, decline, zeros\n4 panels demonstrating career progression\n\nxy_relationship_analysis_v3.png\n\nComprehensive 8-panel analysis\nShows relationship from multiple angles\nIncludes residual diagnostics\n\n\n\n\nCode Files\n\ngenerate_data_v3.py\n\nComplete data generation code\nFully commented and reproducible\nChange seed or parameters as needed\n\nanalyze_xy_relationship_v3.py\n\nRelationship analysis script\nCreates 8-panel visualization\nStatistical tests included"
   },
   {
-    "objectID": "case-studies/VWS/data/README_WVS.html#usage",
-    "href": "case-studies/VWS/data/README_WVS.html#usage",
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#teaching-workflow-recommended",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#teaching-workflow-recommended",
     "title": "",
-    "section": "Usage",
-    "text": "Usage\nRscript scripts/cleaning.R\nEnsure your working directory is set to project root.\nRaw data and outputs will live under data/raw and data/clean."
+    "section": "Teaching Workflow (Recommended)",
+    "text": "Teaching Workflow (Recommended)\n\nStage 1: Discovery (Raw Data)\n\nGive students employee_commits_raw_v3.csv\nAsk: “What is the relationship between x and y?”\nLet them explore, visualize, analyze\nThey should discover the non-linear pattern!\n\n\n\nStage 2: Data Quality\n\nAsk: “Are there any data quality issues?”\nStudents identify errors and extreme values\nMake and document cleaning decisions\nCompare with data_quality_report_v3.csv\n\n\n\nStage 3: Multiple Models\n\nTry various modeling approaches\nCompare: OLS, polynomials, splines, groups, etc.\nEvaluate which model best captures the pattern\nDiscuss trade-offs (interpretability vs fit)\n\n\n\nStage 4: Interpretation\n\nWhat is the relationship between tenure and commits?\nWhy is it non-monotonic?\nWhat does this tell us about career progression?\nHow would you communicate findings to stakeholders?"
   },
   {
-    "objectID": "case-studies/VWS/data/README_WVS.html#contact",
-    "href": "case-studies/VWS/data/README_WVS.html#contact",
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#key-teaching-points",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#key-teaching-points",
     "title": "",
-    "section": "Contact",
-    "text": "Contact\ngabors-data-analysis.com | MA (BA) Data Analysis with AI course"
+    "section": "Key Teaching Points",
+    "text": "Key Teaching Points\n\n1. Linear Models Can Miss Important Patterns\n\nr ≈ 0 doesn’t mean “no relationship”\nIt means “no linear relationship”\nAlways visualize first!\n\n\n\n2. Non-Monotonic Relationships Are Common\n\nNot everything increases or decreases monotonically\nCareer arcs, learning curves, life cycles all have peaks\nNeed appropriate modeling approaches\n\n\n\n3. Group-Based Analysis Often Better\n\nCategorical predictors (seniority) explain more than continuous (days)\nDomain knowledge helps create meaningful groups\nSometimes simpler is better (interpretability)\n\n\n\n4. Count Data Has Special Properties\n\nDiscrete, non-negative, right-skewed\nPoisson/NB often better than OLS\nZero-inflation is a real phenomenon\n\n\n\n5. Context Matters\n\nThe inverted-U makes perfect sense for careers\nEarly: learning and ramping up\nPeak: full IC productivity\n\nLate: transitioning to leadership\nDomain knowledge guides modeling choices"
   },
   {
-    "objectID": "case-studies/earnings/index.html",
-    "href": "case-studies/earnings/index.html",
-    "title": "US Earnings Data (CPS MORG)",
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#comparison-v2.1-vs-v3.0",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#comparison-v2.1-vs-v3.0",
+    "title": "",
+    "section": "Comparison: v2.1 vs v3.0",
+    "text": "Comparison: v2.1 vs v3.0\n\n\n\n\n\n\n\n\n\nFeature\nv2.1\nv3.0\nImpact\n\n\n\n\nEarly career\nFlat/low\nRising\nMore realistic learning curve\n\n\nTenure distribution\nHard cutoffs\nSmooth exponential\nNo artificial cliff\n\n\nLate career\nModerate decline\nMarked decline + zeros\nClear management transition\n\n\nX-Y correlation\n-0.005\n0.019\nSlightly positive (better)\n\n\nSpearman correlation\n0.120\n0.190\nStronger non-linear signal\n\n\nSeniority F-stat\n35.5\n93.7\nMuch stronger group effects\n\n\nPedagogical clarity\nGood\nExcellent\nPattern unmistakable\n\n\n\nv3.0 is the recommended version for teaching!"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#extensions-and-variations",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#extensions-and-variations",
+    "title": "",
+    "section": "Extensions and Variations",
+    "text": "Extensions and Variations\n\nEasy Modifications (change in generate_data_v3.py):\n\nDifferent ramp-up speed: Change x/730 factor\nEarlier/later peak: Adjust 2500 day threshold\nSteeper decline: Increase 0.12 decline factor\nMore zeros: Increase 0.07 probability increment\nDifferent roles: Modify base_monthly_rates\nMore departments: Add to dept_split\n\n\n\nAdvanced Extensions:\n\nTime series: Multiple observations per employee\nTeam effects: Add team ID with random effects\nProject complexity: Add covariate affecting commits\nTurnover: Some employees leave (censoring)\nPromotions: Explicit seniority changes over time"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#technical-details",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#technical-details",
+    "title": "",
+    "section": "Technical Details",
+    "text": "Technical Details\n\nDGP Specifications (v3.0)\nTenure Distribution:\ndays_with_company ~ Exponential(mean=1200)\nTruncated: [1, 5475] days\nProductivity Function:\nramp_factor = {\n  0.3 + 0.7*(x/730)           if x &lt; 730\n  1.0                          if 730 ≤ x &lt; 2500\n  max(0.25, 1.0 - 0.12*years)  if x ≥ 2500\n}\n\nlambda = base_rate × seniority_mult × ramp_factor × individual_effect\ny ~ NegativeBinomial(mu=lambda, size=5)\nZero Inflation:\nP(y=0) = {\n  0.05                           if x &lt; 2500\n  min(0.35, 0.05 + 0.07*years)  if x ≥ 2500\n}\n\n\nRandom Seed\nnp.random.seed(20251112) - fully reproducible\n\n\nSoftware Requirements\n\nPython 3.x\nnumpy, pandas, matplotlib, scipy, sklearn"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#bottom-line",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#bottom-line",
+    "title": "",
+    "section": "Bottom Line",
+    "text": "Bottom Line\nv3.0 creates a realistic dataset that:\n✅ Shows clear non-monotonic career progression\n✅ Challenges students’ intuitions about linearity\n✅ Requires sophisticated thinking about modeling\n✅ Reflects real-world career dynamics\n✅ Provides rich opportunities for exploration\n✅ Has no single “right” answer (by design)\n✅ Teaches both technical skills and critical thinking\nPerfect for teaching “What is the relationship between x and y?”"
+  },
+  {
+    "objectID": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#quick-start",
+    "href": "case-studies/employee_commits/data/background-v3/COMPLETE_SUMMARY_v3.html#quick-start",
+    "title": "",
+    "section": "Quick Start",
+    "text": "Quick Start\n\nGive students: employee_commits_raw_v3.csv\nAsk: “What is the relationship between tenure (x) and monthly commits (y)?”\nLet them explore and struggle (this is where learning happens!)\nReveal patterns using: employee_commits_v3_plots.png and xy_relationship_analysis_v3.png\nDiscuss: Why did simple approaches fail? What models work better?\n\nWelcome to the wonderful world of non-linear relationships!"
+  },
+  {
+    "objectID": "case-studies/employee_commits/code/index.html",
+    "href": "case-studies/employee_commits/code/index.html",
+    "title": "Employee Commits - Code",
     "section": "",
-    "text": "Current Population Survey (CPS) Merged Outgoing Rotation Groups data for analyzing earnings patterns, gender gaps, and returns to education in the US labor market.\nUsed in: Week 0 (Coding with AI)\nSource: Data Analysis Textbook Case Study",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "US Earnings (CPS)"
-    ]
+    "text": "← Back to Employee Commits Case Study"
   },
   {
-    "objectID": "case-studies/earnings/index.html#overview",
-    "href": "case-studies/earnings/index.html#overview",
-    "title": "US Earnings Data (CPS MORG)",
+    "objectID": "case-studies/employee_commits/code/index.html#code-files",
+    "href": "case-studies/employee_commits/code/index.html#code-files",
+    "title": "Employee Commits - Code",
+    "section": "Code Files",
+    "text": "Code Files\nCode examples to be added."
+  },
+  {
+    "objectID": "case-studies/common-support-r/index.html",
+    "href": "case-studies/common-support-r/index.html",
+    "title": "Common Support Analysis (R)",
     "section": "",
-    "text": "Current Population Survey (CPS) Merged Outgoing Rotation Groups data for analyzing earnings patterns, gender gaps, and returns to education in the US labor market.\nUsed in: Week 0 (Coding with AI)\nSource: Data Analysis Textbook Case Study",
+    "text": "Iterative development of R code for common support analysis using Claude AI, demonstrating the prompt-refine workflow for building statistical analysis code.\nTopic: Causal inference and common support in treatment effect estimation",
     "crumbs": [
       "Home",
       "Case Studies",
-      "US Earnings (CPS)"
+      "Common Support (R)"
     ]
   },
   {
-    "objectID": "case-studies/earnings/index.html#data-files",
-    "href": "case-studies/earnings/index.html#data-files",
-    "title": "US Earnings Data (CPS MORG)",
-    "section": "Data Files",
-    "text": "Data Files\n\n\n\nFile\nDescription\n\n\n\n\nmorg-2014-emp-state5.csv\nCPS MORG 2014 data filtered to 5 states\n\n\ncpsx.pdf\nCodebook and variable documentation\n\n\n\nBrowse data files",
+    "objectID": "case-studies/common-support-r/index.html#overview",
+    "href": "case-studies/common-support-r/index.html#overview",
+    "title": "Common Support Analysis (R)",
+    "section": "",
+    "text": "Iterative development of R code for common support analysis using Claude AI, demonstrating the prompt-refine workflow for building statistical analysis code.\nTopic: Causal inference and common support in treatment effect estimation",
     "crumbs": [
       "Home",
       "Case Studies",
-      "US Earnings (CPS)"
+      "Common Support (R)"
     ]
   },
   {
-    "objectID": "case-studies/earnings/index.html#code",
-    "href": "case-studies/earnings/index.html#code",
-    "title": "US Earnings Data (CPS MORG)",
-    "section": "Code",
-    "text": "Code\n\n\n\nFile\nDescription\n\n\n\n\nearnings.R\nR script for earnings analysis\n\n\n\nBrowse code files",
+    "objectID": "case-studies/common-support-r/index.html#code-files",
+    "href": "case-studies/common-support-r/index.html#code-files",
+    "title": "Common Support Analysis (R)",
+    "section": "Code Files",
+    "text": "Code Files\nSequential prompts showing iterative development:\n\n\n\nFile\nDescription\n\n\n\n\nclaude-sonnet-v4-prompt-01.R\nInitial prompt and response\n\n\nclaude-sonnet-v4-prompt-02.R\nFirst refinement\n\n\nclaude-sonnet-v4-prompt-03.R\nAdding features\n\n\nclaude-sonnet-v4-prompt-04.R\nFurther improvements\n\n\nclaude-sonnet-v4-prompt-05.R\nExtended analysis\n\n\nclaude-sonnet-v4-prompt-06.R\nVisualization updates\n\n\nclaude-sonnet-v4-prompt-07.R\nAdditional refinements\n\n\nclaude-sonnet-v4-prompt-08.R\nNear-final version\n\n\nclaude-sonnet-v4-prompt-09.R\nFinal polished version\n\n\n\nBrowse code files",
     "crumbs": [
       "Home",
       "Case Studies",
-      "US Earnings (CPS)"
+      "Common Support (R)"
     ]
   },
   {
-    "objectID": "case-studies/earnings/index.html#key-variables",
-    "href": "case-studies/earnings/index.html#key-variables",
-    "title": "US Earnings Data (CPS MORG)",
-    "section": "Key Variables",
-    "text": "Key Variables\n\nearnwke - Weekly earnings\nsex - Gender\nage - Age\ngrade92 - Education level\nweight - Survey weight",
+    "objectID": "case-studies/common-support-r/index.html#data",
+    "href": "case-studies/common-support-r/index.html#data",
+    "title": "Common Support Analysis (R)",
+    "section": "Data",
+    "text": "Data\nUses simulated data generated within scripts\nBrowse data files",
     "crumbs": [
       "Home",
       "Case Studies",
-      "US Earnings (CPS)"
+      "Common Support (R)"
     ]
   },
   {
-    "objectID": "case-studies/earnings/index.html#learning-objectives",
-    "href": "case-studies/earnings/index.html#learning-objectives",
-    "title": "US Earnings Data (CPS MORG)",
+    "objectID": "case-studies/common-support-r/index.html#key-features",
+    "href": "case-studies/common-support-r/index.html#key-features",
+    "title": "Common Support Analysis (R)",
+    "section": "Key Features",
+    "text": "Key Features\n\nDemonstrates iterative AI-assisted coding workflow\nShows progression from basic to sophisticated analysis\nReal example of prompt engineering for statistical code\nCommon support visualization techniques",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Common Support (R)"
+    ]
+  },
+  {
+    "objectID": "case-studies/common-support-r/index.html#learning-objectives",
+    "href": "case-studies/common-support-r/index.html#learning-objectives",
+    "title": "Common Support Analysis (R)",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nWorking with survey data\nAnalyzing earnings distributions\nCreating visualizations with AI assistance\nUnderstanding gender wage gaps",
+    "text": "Learning Objectives\n\nHow to iteratively develop code with AI\nPrompt refinement strategies\nBuilding complex statistical analyses step-by-step",
     "crumbs": [
       "Home",
       "Case Studies",
-      "US Earnings (CPS)"
+      "Common Support (R)"
     ]
   },
   {
-    "objectID": "case-studies/earnings/index.html#sample-research-questions",
-    "href": "case-studies/earnings/index.html#sample-research-questions",
-    "title": "US Earnings Data (CPS MORG)",
-    "section": "Sample Research Questions",
-    "text": "Sample Research Questions\n\nIs there a gender gap in earnings?\nHow do earnings vary by education level?\nWhat is the age-earnings profile?",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "US Earnings (CPS)"
-    ]
+    "objectID": "case-studies/common-support-r/code/index.html",
+    "href": "case-studies/common-support-r/code/index.html",
+    "title": "Common Support Analysis - Code",
+    "section": "",
+    "text": "← Back to Common Support Case Study"
   },
   {
-    "objectID": "case-studies/earnings/index.html#downloads",
-    "href": "case-studies/earnings/index.html#downloads",
-    "title": "US Earnings Data (CPS MORG)",
-    "section": "Downloads",
-    "text": "Downloads\n\nmorg-2014-emp-state5.csv\nCodebook (PDF)",
-    "crumbs": [
-      "Home",
-      "Case Studies",
-      "US Earnings (CPS)"
-    ]
+    "objectID": "case-studies/common-support-r/code/index.html#code-files",
+    "href": "case-studies/common-support-r/code/index.html#code-files",
+    "title": "Common Support Analysis - Code",
+    "section": "Code Files",
+    "text": "Code Files\nSequential prompts showing iterative development with Claude AI:\n\n\n\nFile\nDescription\n\n\n\n\nclaude-sonnet-v4-prompt-01.R\nInitial prompt and response\n\n\nclaude-sonnet-v4-prompt-02.R\nFirst refinement\n\n\nclaude-sonnet-v4-prompt-03.R\nAdding features\n\n\nclaude-sonnet-v4-prompt-04.R\nFurther improvements\n\n\nclaude-sonnet-v4-prompt-05.R\nExtended analysis\n\n\nclaude-sonnet-v4-prompt-06.R\nVisualization updates\n\n\nclaude-sonnet-v4-prompt-07.R\nAdditional refinements\n\n\nclaude-sonnet-v4-prompt-08.R\nNear-final version\n\n\nclaude-sonnet-v4-prompt-09.R\nFinal polished version"
   },
   {
-    "objectID": "case-studies/earnings/code/index.html",
-    "href": "case-studies/earnings/code/index.html",
-    "title": "US Earnings - Code",
+    "objectID": "case-studies/common-support-r/code/index.html#learning-points",
+    "href": "case-studies/common-support-r/code/index.html#learning-points",
+    "title": "Common Support Analysis - Code",
+    "section": "Learning Points",
+    "text": "Learning Points\nThis series demonstrates: - How to iteratively develop code with AI assistance - Prompt refinement strategies - Building complex statistical analyses step-by-step"
+  },
+  {
+    "objectID": "case-studies/austria-hotels/data/hotel-data-readme.html",
+    "href": "case-studies/austria-hotels/data/hotel-data-readme.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "case-studies/austria-hotels/data/hotel-data-readme.html#info",
+    "href": "case-studies/austria-hotels/data/hotel-data-readme.html#info",
+    "title": "",
+    "section": "Info",
+    "text": "Info\nThis dataset contains realistic data on hotels across Austria.\n\nThis dataset was generated programmatically with the generate_austrian_hotels_data.R script to ensure realistic relationships between variables while maintaining privacy.\n\nThe scipt was writen by Claude AI, Sonnet 3.7, 2025-03-15, and reviwed and approved by Gabor 2025-03-17\n\nThe dataset consists of multiple related tables that can be combined.\nThe data patterns are based on typical hotel industry metrics but do not represent actual hotels."
+  },
+  {
+    "objectID": "case-studies/austria-hotels/data/hotel-data-readme.html#dataset-overview",
+    "href": "case-studies/austria-hotels/data/hotel-data-readme.html#dataset-overview",
+    "title": "",
+    "section": "Dataset Overview",
+    "text": "Dataset Overview\nThe dataset includes hotels across Austrian cities with data on occupancy, pricing, tourism statistics, and economic indicators.\n\nFiles\nAll files are located in the data/raw/ directory:\n\n\n\n\n\n\n\n\n\nFile\nDescription\nRows\nKey Columns\n\n\n\n\nhotels.csv\nBasic hotel information\n200\nhotel_id (PK)\n\n\ncities.csv\nCity information\n10\ncity (PK)\n\n\nmonthly_occupancy.csv\nMonthly hotel performance metrics\n~3,800\nhotel_id, month, year\n\n\ncity_tourism.csv\nMonthly tourism statistics by city\n240\ncity, month, year\n\n\neconomic_indicators.csv\nMonthly economic indicators\n24\nmonth, year\n\n\nreviews.csv\nHotel guest reviews\n~1,700\nreview_id (PK), hotel_id (FK)\n\n\namenities.csv\nList of possible hotel amenities\n10\namenity_id (PK)\n\n\nhotel_amenities.csv\nHotel-amenity relationships\n~1,000\nhotel_id, amenity_id\n\n\n\n## Schema Details\n### hotels.csv Information about individual hotels.\n\n\n\nColumn\nType\nDescription\n\n\n\n\nhotel_id\ninteger\nPrimary key\n\n\nhotel_name\ncharacter\nHotel name\n\n\ncity\ncharacter\nCity where hotel is located\n\n\nstar_rating\ninteger\nHotel quality rating (3-5 stars)\n\n\nrooms\ninteger\nNumber of rooms in the hotel\n\n\nyear_built\ninteger\nYear the hotel was built\n\n\n\n### cities.csv Information about Austrian cities.\n\n\n\nColumn\nType\nDescription\n\n\n\n\ncity\ncharacter\nCity name (primary key)\n\n\nprovince\ncharacter\nAustrian province\n\n\npopulation\ninteger\nCity population\n\n\ntourism_rank\ninteger\nTourism popularity rank (1 = highest)\n\n\n\n### monthly_occupancy.csv Monthly hotel performance metrics.\n\n\n\nColumn\nType\nDescription\n\n\n\n\nhotel_id\ninteger\nForeign key to hotels.csv\n\n\nmonth\ninteger\nMonth (1-12)\n\n\nyear\ninteger\nYear (2023-2024)\n\n\noccupancy_rate\nnumeric\nPercentage of rooms occupied (0.0-1.0)\n\n\navg_daily_rate\nnumeric\nAverage price per night in EUR\n\n\nrevenue_per_room\nnumeric\nRevenue per available room (RevPAR)\n\n\n\n### city_tourism.csv Monthly tourism statistics for each city.\n\n\n\nColumn\nType\nDescription\n\n\n\n\ncity\ncharacter\nCity name\n\n\nmonth\ninteger\nMonth (1-12)\n\n\nyear\ninteger\nYear (2023-2024)\n\n\ntourist_arrivals\ninteger\nNumber of tourists arriving\n\n\nevent_days\ninteger\nNumber of event days in the month\n\n\navg_stay_length\nnumeric\nAverage length of stay in days\n\n\n\n### economic_indicators.csv Monthly economic indicators for Austria.\n\n\n\nColumn\nType\nDescription\n\n\n\n\nmonth\ninteger\nMonth (1-12)\n\n\nyear\ninteger\nYear (2023-2024)\n\n\ninflation_rate\nnumeric\nMonthly inflation rate (decimal)\n\n\nunemployment\nnumeric\nUnemployment rate (decimal)\n\n\nconsumer_confidence\nnumeric\nConsumer confidence index\n\n\n\n### reviews.csv Hotel guest reviews.\n\n\n\nColumn\nType\nDescription\n\n\n\n\nreview_id\ninteger\nPrimary key\n\n\nhotel_id\ninteger\nForeign key to hotels.csv\n\n\nrating\nnumeric\nRating (1.0-5.0)\n\n\nreview_date\ndate\nDate of the review\n\n\n\n### amenities.csv List of possible hotel amenities.\n\n\n\nColumn\nType\nDescription\n\n\n\n\namenity_id\ninteger\nPrimary key\n\n\namenity_name\ncharacter\nName of the amenity\n\n\n\n### hotel_amenities.csv Many-to-many relationship between hotels and amenities.\n\n\n\nColumn\nType\nDescription\n\n\n\n\nhotel_id\ninteger\nForeign key to hotels.csv\n\n\namenity_id\ninteger\nForeign key to amenities.csv"
+  },
+  {
+    "objectID": "case-studies/austria-hotels/code/index.html",
+    "href": "case-studies/austria-hotels/code/index.html",
+    "title": "Austrian Hotels - Code",
+    "section": "",
+    "text": "← Back to Austrian Hotels Case Study"
+  },
+  {
+    "objectID": "case-studies/austria-hotels/code/index.html#code-files",
+    "href": "case-studies/austria-hotels/code/index.html#code-files",
+    "title": "Austrian Hotels - Code",
+    "section": "Code Files",
+    "text": "Code Files\nCode examples to be added.\nCheck back later for R and Python examples demonstrating table joins with this dataset."
+  },
+  {
+    "objectID": "case-studies/VWS/data/index.html",
+    "href": "case-studies/VWS/data/index.html",
+    "title": "World Values Survey - Data Files",
+    "section": "",
+    "text": "← Back to WVS Case Study"
+  },
+  {
+    "objectID": "case-studies/VWS/data/index.html#data-files",
+    "href": "case-studies/VWS/data/index.html#data-files",
+    "title": "World Values Survey - Data Files",
+    "section": "Data Files",
+    "text": "Data Files\n\n\n\nFile\nDescription\n\n\n\n\nWVS_random_subset2000.csv\nRandom subset of 2,000 respondents stratified by country\n\n\nWVS_GDP_merged_data.csv\nCountry-level aggregated data merged with GDP indicators\n\n\nWVS_subset.csv\nSelected variables from full dataset"
+  },
+  {
+    "objectID": "case-studies/VWS/data/index.html#documentation",
+    "href": "case-studies/VWS/data/index.html#documentation",
+    "title": "World Values Survey - Data Files",
+    "section": "Documentation",
+    "text": "Documentation\n\n\n\nFile\nDescription\n\n\n\n\ncodebook.pdf\nOfficial WVS codebook with variable definitions\n\n\nREADME_WVS.md\nData processing documentation"
+  },
+  {
+    "objectID": "case-studies/VWS/data/index.html#external-source",
+    "href": "case-studies/VWS/data/index.html#external-source",
+    "title": "World Values Survey - Data Files",
+    "section": "External Source",
+    "text": "External Source\nFull dataset available at OSF - Gabors Data Analysis / World Values Survey"
+  },
+  {
+    "objectID": "case-studies/VWS/code/index.html",
+    "href": "case-studies/VWS/code/index.html",
+    "title": "World Values Survey - Code",
+    "section": "",
+    "text": "← Back to WVS Case Study"
+  },
+  {
+    "objectID": "case-studies/VWS/code/index.html#code-files",
+    "href": "case-studies/VWS/code/index.html#code-files",
+    "title": "World Values Survey - Code",
+    "section": "Code Files",
+    "text": "Code Files\n\n\n\nFile\nDescription\n\n\n\n\ncleaning.R\nR script that processes raw WVS data and creates cleaned datasets"
+  },
+  {
+    "objectID": "case-studies/earnings/data/index.html",
+    "href": "case-studies/earnings/data/index.html",
+    "title": "US Earnings - Data Files",
     "section": "",
     "text": "← Back to Earnings Case Study"
   },
   {
-    "objectID": "case-studies/earnings/code/index.html#code-files",
-    "href": "case-studies/earnings/code/index.html#code-files",
-    "title": "US Earnings - Code",
-    "section": "Code Files",
-    "text": "Code Files\n\n\n\nFile\nDescription\n\n\n\n\nearnings.R\nR script for earnings analysis"
+    "objectID": "case-studies/earnings/data/index.html#data-files",
+    "href": "case-studies/earnings/data/index.html#data-files",
+    "title": "US Earnings - Data Files",
+    "section": "Data Files",
+    "text": "Data Files\n\n\n\nFile\nDescription\n\n\n\n\nmorg-2014-emp-state5.csv\nCPS MORG 2014 data filtered to 5 states\n\n\ncpsx.pdf\nCodebook and variable documentation"
+  },
+  {
+    "objectID": "case-studies/earnings/data/index.html#external-source",
+    "href": "case-studies/earnings/data/index.html#external-source",
+    "title": "US Earnings - Data Files",
+    "section": "External Source",
+    "text": "External Source\nFull CPS data available at OSF - Gabors Data Analysis"
   },
   {
     "objectID": "navbar/weeks.html",
