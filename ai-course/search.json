@@ -439,7 +439,7 @@
     "href": "da-knowledge/install-cli.html",
     "title": "Installing AI CLI Tools",
     "section": "",
-    "text": "All these CLI tools let you work with AI directly in your terminal. Pick one to start - they all work similarly.\n\n\n\n\n\n\nTipRecommendation\n\n\n\nClaude Code is what we use in this course. But the skills transfer to any of these tools.\n\n\n\n\n\nTool\nProvider\nModel\nPricing\n\n\n\n\nClaude Code\nAnthropic\nClaude\nClaude Pro ($20/mo) or API\n\n\nGemini CLI\nGoogle\nGemini\nFree tier available\n\n\nCodex CLI\nOpenAI\nGPT-4\nAPI credits required\n\n\nOpenCode\nOpen source\nMultiple\nDepends on backend",
+    "text": "All these CLI tools let you work with AI directly in your terminal. Pick one to start - they all work similarly.\n\n\n\n\n\n\nTipRecommendation\n\n\n\nClaude Code is what we use in this course. But the skills transfer to any of these tools.\n\n\n\n\n\n\n\n\n\n\n\nTool\nProvider\nModel\nPricing\n\n\n\n\nClaude Code\nAnthropic\nClaude\nClaude Pro/Max ($20+/mo) or Console\n\n\nGemini CLI\nGoogle\nGemini\nFree tier + paid plans\n\n\nCodex CLI\nOpenAI\nGPT-4o\nChatGPT Plus/Pro ($20+/mo)",
     "crumbs": [
       "Home",
       "Resources",
@@ -451,7 +451,7 @@
     "href": "da-knowledge/install-cli.html#choose-your-tool",
     "title": "Installing AI CLI Tools",
     "section": "",
-    "text": "All these CLI tools let you work with AI directly in your terminal. Pick one to start - they all work similarly.\n\n\n\n\n\n\nTipRecommendation\n\n\n\nClaude Code is what we use in this course. But the skills transfer to any of these tools.\n\n\n\n\n\nTool\nProvider\nModel\nPricing\n\n\n\n\nClaude Code\nAnthropic\nClaude\nClaude Pro ($20/mo) or API\n\n\nGemini CLI\nGoogle\nGemini\nFree tier available\n\n\nCodex CLI\nOpenAI\nGPT-4\nAPI credits required\n\n\nOpenCode\nOpen source\nMultiple\nDepends on backend",
+    "text": "All these CLI tools let you work with AI directly in your terminal. Pick one to start - they all work similarly.\n\n\n\n\n\n\nTipRecommendation\n\n\n\nClaude Code is what we use in this course. But the skills transfer to any of these tools.\n\n\n\n\n\n\n\n\n\n\n\nTool\nProvider\nModel\nPricing\n\n\n\n\nClaude Code\nAnthropic\nClaude\nClaude Pro/Max ($20+/mo) or Console\n\n\nGemini CLI\nGoogle\nGemini\nFree tier + paid plans\n\n\nCodex CLI\nOpenAI\nGPT-4o\nChatGPT Plus/Pro ($20+/mo)",
     "crumbs": [
       "Home",
       "Resources",
@@ -475,7 +475,7 @@
     "href": "da-knowledge/install-cli.html#claude-code",
     "title": "Installing AI CLI Tools",
     "section": "Claude Code",
-    "text": "Claude Code\nAnthropic’s official CLI for Claude.\n\nInstall\n\nWindowsMacLinux\n\n\nOpen PowerShell or Command Prompt:\nnpm install -g @anthropic-ai/claude-code\n\n\nOpen Terminal:\nnpm install -g @anthropic-ai/claude-code\nIf permission error:\nsudo npm install -g @anthropic-ai/claude-code\n\n\nnpm install -g @anthropic-ai/claude-code\nIf permission error:\nsudo npm install -g @anthropic-ai/claude-code\n\n\n\n\n\nAuthenticate\nclaude\nFirst run opens a browser to log in with your Anthropic account. You need: - Claude Pro subscription ($20/month), OR - API access with credits\n\n\nVerify\nclaude --version\n\n\nUse\nNavigate to your project folder and start:\ncd /path/to/your/project\nclaude\nThen type your requests naturally: “What files are here?” or “Read the CSV and calculate the mean.”\nMore details: Claude Code Documentation",
+    "text": "Claude Code\nAnthropic’s official CLI for Claude.\n\nInstall\n\nWindowsMacLinux\n\n\nPowerShell:\nirm https://claude.ai/install.ps1 | iex\nCommand Prompt:\ncurl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd\n\n\ncurl -fsSL https://claude.ai/install.sh | bash\nOr with Homebrew:\nbrew install claude\n\n\ncurl -fsSL https://claude.ai/install.sh | bash\n\n\n\n\n\nUse\nNavigate to your project folder and start:\ncd /path/to/your/project\nclaude\nFirst time: You’ll be prompted to log in via browser. You need one of: - Claude Pro, Max, Teams, or Enterprise subscription (recommended) - Claude Console account (API access with pre-paid credits)\nAfter login: Type your requests naturally like “what does this project do?” or “add a hello world function to the main file.”\nMore details: Claude Code Documentation",
     "crumbs": [
       "Home",
       "Resources",
@@ -487,7 +487,7 @@
     "href": "da-knowledge/install-cli.html#gemini-cli",
     "title": "Installing AI CLI Tools",
     "section": "Gemini CLI",
-    "text": "Gemini CLI\nGoogle’s CLI for Gemini models.\n\nInstall\n\nWindowsMacLinux\n\n\nnpm install -g @anthropic-ai/claude-code\nNote: As of 2026, check Google’s documentation for the current package name.\n\n\nnpm install -g gemini-cli\n\n\nnpm install -g gemini-cli\n\n\n\n\n\nAuthenticate\ngemini auth login\nThis opens a browser to authenticate with your Google account. Free tier available with limits.\n\n\nVerify\ngemini --version\n\n\nUse\ncd /path/to/your/project\ngemini\nMore details: Google AI for Developers",
+    "text": "Gemini CLI\nGoogle’s CLI for Gemini models.\n\nInstall\n\nWindowsMacLinux\n\n\nnpm install -g @google/gemini-cli\n\n\nnpm install -g @google/gemini-cli\n\n\nnpm install -g @google/gemini-cli\n\n\n\n\n\nUse\nNavigate to your project folder and start:\ncd /path/to/your/project\ngemini\nFirst time: You’ll be prompted to select Login with Google and authenticate via browser with your Google account.\nAccount options:\n\nIndividual Google accounts (free tier + paid Google AI Pro/Ultra)\nOrganization accounts (company, school, or Google Workspace)\n\nMore details: Gemini CLI Documentation",
     "crumbs": [
       "Home",
       "Resources",
@@ -499,43 +499,7 @@
     "href": "da-knowledge/install-cli.html#codex-cli",
     "title": "Installing AI CLI Tools",
     "section": "Codex CLI",
-    "text": "Codex CLI\nOpenAI’s command-line tool.\n\nInstall\n\nWindowsMacLinux\n\n\nnpm install -g @openai/codex\n\n\nnpm install -g @openai/codex\n\n\nnpm install -g @openai/codex\n\n\n\n\n\nAuthenticate\nSet your API key:\n\nWindows (PowerShell)Mac / Linux\n\n\n$env:OPENAI_API_KEY=\"your-api-key-here\"\nTo make permanent, add to your PowerShell profile or System Environment Variables.\n\n\nexport OPENAI_API_KEY=\"your-api-key-here\"\nTo make permanent, add to ~/.bashrc or ~/.zshrc:\necho 'export OPENAI_API_KEY=\"your-api-key-here\"' &gt;&gt; ~/.zshrc\nsource ~/.zshrc\n\n\n\nGet your API key from platform.openai.com\n\n\nVerify\ncodex --version\n\n\nUse\ncd /path/to/your/project\ncodex\nMore details: OpenAI Platform Documentation",
-    "crumbs": [
-      "Home",
-      "Resources",
-      "Installing AI CLI Tools"
-    ]
-  },
-  {
-    "objectID": "da-knowledge/install-cli.html#opencode",
-    "href": "da-knowledge/install-cli.html#opencode",
-    "title": "Installing AI CLI Tools",
-    "section": "OpenCode",
-    "text": "OpenCode\nOpen-source CLI that can connect to multiple AI backends.\n\nInstall\n\nWindowsMacLinux\n\n\nnpm install -g opencode-ai\n\n\nnpm install -g opencode-ai\nOr with Homebrew:\nbrew install opencode\n\n\nnpm install -g opencode-ai\n\n\n\n\n\nConfigure\nOpenCode supports multiple backends. Configure with:\nopencode config\nYou can connect to: - OpenAI (requires API key) - Anthropic (requires API key) - Local models (Ollama, etc.)\n\n\nUse\ncd /path/to/your/project\nopencode\nMore details: Check the project’s GitHub repository for current documentation.",
-    "crumbs": [
-      "Home",
-      "Resources",
-      "Installing AI CLI Tools"
-    ]
-  },
-  {
-    "objectID": "da-knowledge/install-cli.html#troubleshooting",
-    "href": "da-knowledge/install-cli.html#troubleshooting",
-    "title": "Installing AI CLI Tools",
-    "section": "Troubleshooting",
-    "text": "Troubleshooting\n\n“command not found” after install\n\nWindowsMac / Linux\n\n\nClose and reopen your terminal. If still not working, check that npm’s global bin folder is in your PATH.\n\n\nTry:\nsource ~/.bashrc  # or ~/.zshrc\nOr check npm’s bin location:\nnpm bin -g\nMake sure this path is in your PATH environment variable.\n\n\n\n\n\n“permission denied” during install\n\nWindowsMac / Linux\n\n\nRun terminal as Administrator (right-click → Run as administrator)\n\n\nUse sudo:\nsudo npm install -g [package-name]\nOr fix npm permissions: npm docs\n\n\n\n\n\nAuthentication fails\n\nCheck your internet connection\nMake sure your subscription/API credits are active\nTry logging out and back in\nCheck the tool’s status page for outages\n\n\n\nStill stuck?\n\nCheck the official documentation for your tool\nSearch the tool’s GitHub issues\nAsk in the course forum",
-    "crumbs": [
-      "Home",
-      "Resources",
-      "Installing AI CLI Tools"
-    ]
-  },
-  {
-    "objectID": "da-knowledge/install-cli.html#quick-comparison",
-    "href": "da-knowledge/install-cli.html#quick-comparison",
-    "title": "Installing AI CLI Tools",
-    "section": "Quick Comparison",
-    "text": "Quick Comparison\n\n\n\n\n\n\n\n\n\n\nFeature\nClaude Code\nGemini CLI\nCodex CLI\nOpenCode\n\n\n\n\nFile access\nYes\nYes\nYes\nYes\n\n\nCode execution\nYes\nYes\nYes\nYes\n\n\nFree tier\nNo\nYes\nNo\nDepends\n\n\nBest for\nGeneral coding\nGoogle ecosystem\nOpenAI users\nFlexibility",
+    "text": "Codex CLI\nOpenAI’s command-line coding tool.\n\nInstall\n\nWindowsMacLinux\n\n\nnpm install -g @openai/codex\n\n\nnpm install -g @openai/codex\nOr with Homebrew:\nbrew install openai/tap/codex\n\n\nnpm install -g @openai/codex\n\n\n\n\n\nUse\nNavigate to your project folder and start:\ncd /path/to/your/project\ncodex\nFirst time: You’ll be prompted to sign in via browser. You can authenticate with:\n\nChatGPT account (Plus, Pro, Business, Edu, or Enterprise) - recommended\nOpenAI API key (alternative option)\n\nMore details: Codex CLI Documentation",
     "crumbs": [
       "Home",
       "Resources",
