@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-01-30">
+<meta name="dcterms.date" content="2026-02-05">
 
 <title>Week 04: Agentic AI with CLIs like Claude Code – Doing Data Analysis with AI</title>
 <style>
@@ -393,6 +393,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#before-class" id="toc-before-class" class="nav-link" data-scroll-target="#before-class">Before class</a></li>
   </ul></li>
   <li><a href="#class-plan" id="toc-class-plan" class="nav-link" data-scroll-target="#class-plan">Class Plan</a></li>
+  <li><a href="#operation-tips" id="toc-operation-tips" class="nav-link" data-scroll-target="#operation-tips">Operation tips</a></li>
   <li><a href="#bottom-line-for-data-analysis" id="toc-bottom-line-for-data-analysis" class="nav-link" data-scroll-target="#bottom-line-for-data-analysis">Bottom Line for Data Analysis</a></li>
   <li><a href="#discussion-questions" id="toc-discussion-questions" class="nav-link" data-scroll-target="#discussion-questions">Discussion Questions</a></li>
   <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">Assignment</a></li>
@@ -418,7 +419,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 30, 2026</p>
+      <p class="date">February 5, 2026</p>
     </div>
   </div>
   
@@ -631,7 +632,7 @@ Key point: Every step requires manual copy-paste. Context gets lost easily.
 </div>
 <div class="week-card card">
 <div class="card-header">
-<p><strong>Part 2: Demo - Setup (25 min)</strong></p>
+<p><strong>Part 2: Hands-on - First steps (25 min)</strong></p>
 </div>
 <div class="card-body">
 <section id="setting-up-claude-code" class="level3">
@@ -645,17 +646,40 @@ Key point: Every step requires manual copy-paste. Context gets lost easily.
 <pre><code>cd path/to/austrian-hotels-data
 claude</code></pre>
 </section>
-<section id="demo-1" class="level3">
-<h3 class="anchored" data-anchor-id="demo-1">Demo 1:</h3>
-<p>Ask claude code to set up a data analysis project folder with data already there.</p>
+<section id="task-1-setup" class="level3">
+<h3 class="anchored" data-anchor-id="task-1-setup">Task 1: setup</h3>
+<ul>
+<li><p>Ask to set up a data analysis project folder with data already there.</p></li>
+<li><p>Have a look, ask changes if you’d like</p></li>
+</ul>
 </section>
-<section id="demo-2" class="level3">
-<h3 class="anchored" data-anchor-id="demo-2">Demo 2:</h3>
-<p>Now watch what happens with Claude Code:</p>
-<pre><code>cd /path/to/austrian-hotels
-claude
-&gt; Look at the CSV files here and calculate average occupancy by city</code></pre>
-<p>Claude Code reads the files, writes the code, runs it, sees any errors, fixes them, and shows results. One prompt, no copy-paste.</p>
+<section id="task-2-data" class="level3">
+<h3 class="anchored" data-anchor-id="task-2-data">Task 2: data</h3>
+<ul>
+<li><p>Get all csv files in the /data folder</p></li>
+<li><p>Ask for a summary of data tables</p></li>
+<li><p>Interact to learn more about the data</p>
+<ul>
+<li>What files are in this folder? Give me a quick overview.</li>
+<li>Show me 5 sample rows from each CSV file.</li>
+</ul></li>
+</ul>
+</section>
+<section id="task-3-relations" class="level3">
+<h3 class="anchored" data-anchor-id="task-3-relations">Task 3: relations</h3>
+<ul>
+<li>ask to look at data as linked tables, and tell you keys to join them
+<ul>
+<li>Read the hotels and cities files. How are they related? What’s the join key?</li>
+</ul></li>
+</ul>
+</section>
+<section id="task-4-simple-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="task-4-simple-analysis">Task 4: simple analysis</h3>
+<ul>
+<li>Look at the CSV files here and calculate average occupancy by city</li>
+<li>write python code, run it, and show results</li>
+</ul>
 <!-- Instructor: Expected output from demo
 
 Average Occupancy Rate by City:
@@ -673,26 +697,12 @@ Note: Vienna at 98% is suspiciously high - can mention this as
 a data quality point. Only 9 cities appear (should be 10).
 -->
 </section>
-</div>
-</div>
-<div class="week-card card">
-<div class="card-header">
-<p><strong>Part 3: Hands-on - Explore the Dataset (25 min)</strong></p>
-</div>
-<div class="card-body">
-<section id="getting-started" class="level3">
-<h3 class="anchored" data-anchor-id="getting-started">Getting Started</h3>
-<p>Open your terminal, navigate to your data folder:</p>
-<pre><code>cd path/to/austrian-hotels-data
-claude</code></pre>
-</section>
-<section id="exercise-1-understand-the-data-individual-20-min" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1-understand-the-data-individual-20-min">Exercise 1: Understand the Data (Individual, 20 min)</h3>
-<p>Try these prompts:</p>
-<pre><code>What files are in this folder? Give me a quick overview.</code></pre>
-<pre><code>Read the hotels and cities files. How are they related? What's the join key?</code></pre>
-<pre><code>Show me 5 sample rows from each CSV file.</code></pre>
-<p><strong>Discuss:</strong> How does this compare to opening each file manually or describing it to ChatGPT?</p>
+<section id="task-5-discussions" class="level3">
+<h3 class="anchored" data-anchor-id="task-5-discussions">Task 5 Discussions</h3>
+<ul>
+<li>How does this compare to using ChatGPT?</li>
+<li>Where do you see the biggets advantages? Any downsides or risks?</li>
+</ul>
 <!-- Instructor: Exercise 1 expected findings
 
 Files in folder:
@@ -707,9 +717,6 @@ Students should notice:
 - hotels has city names, cities has city details (province, population)
 - monthly_occupancy has hotel_id, month, year, occupancy_rate, avg_daily_rate
 -->
-</section>
-<section id="exercise-2-what-is-possible-class-discussion-10-min" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2-what-is-possible-class-discussion-10-min">Exercise 2: What is possible Class discussion, 10 min)</h3>
 <ul>
 <li>What analysis questions could you ask with this data?</li>
 </ul>
@@ -718,20 +725,39 @@ Students should notice:
 </div>
 <div class="week-card card">
 <div class="card-header">
-<p><strong>Part 4: Hands-on - Explore the Dataset (25 min)</strong></p>
+<p><strong>Part 3: Hands-on - Cleaning </strong></p>
 </div>
 <div class="card-body">
-<section id="getting-started-1" class="level3">
-<h3 class="anchored" data-anchor-id="getting-started-1">Getting Started</h3>
-</section>
-<section id="exercise-2-basic-analysis-individual-15-min" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2-basic-analysis-individual-15-min">Exercise 2: Basic Analysis (Individual, 15 min)</h3>
-<p>Ask Claude Code to:</p>
-<ol type="1">
-<li><p><strong>Join hotels and cities</strong> - “Join the hotels and cities data. How many hotels are in each province?”</p>
+<section id="task-1-class-discussion-on-potential-problems" class="level3">
+<h3 class="anchored" data-anchor-id="task-1-class-discussion-on-potential-problems">Task 1: Class discussion on potential problems</h3>
 <ul>
-<li><em>New to joins? See <a href="../da-knowledge/joining-tables.html">Joining Tables Guide</a></em></li>
-</ul></li>
+<li>what are the crucial steps when cleaning tabular data</li>
+</ul>
+</section>
+<section id="task-2-cleaning-with-claude-code" class="level3">
+<h3 class="anchored" data-anchor-id="task-2-cleaning-with-claude-code">Task 2: Cleaning with Claude Code</h3>
+<ul>
+<li>Use claude code to find problems.</li>
+<li>create clean versions of data tables in a new folder <code>/data_cleaned</code></li>
+</ul>
+</section>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Part 4: Hands-on - Joining tables</strong></p>
+</div>
+<div class="card-body">
+<section id="task-1-quick-review-on-joins" class="level3">
+<h3 class="anchored" data-anchor-id="task-1-quick-review-on-joins">Task 1: quick review on joins</h3>
+<ul>
+<li>Review of key concepts <a href="../da-knowledge/joining-tables.html">Joining Tables Guide</a></li>
+</ul>
+</section>
+<section id="task-2-joining-tables" class="level3">
+<h3 class="anchored" data-anchor-id="task-2-joining-tables">Task 2 joining tables</h3>
+<ol type="1">
+<li><p><strong>Join hotels and cities</strong> - “Join the hotels and cities data. How many hotels are in each province?”</p></li>
 <li><p><strong>Aggregate occupancy</strong> - “What’s the average occupancy rate by city? Show me a table sorted highest to lowest.”</p></li>
 <li><p><strong>Find patterns</strong> - “Which 5-star hotels have the lowest average daily rate? Something seems off - investigate.”</p></li>
 </ol>
@@ -740,6 +766,13 @@ Students should notice:
 <li>If something looks wrong, ask “Why did that happen?” or “Check the row counts”</li>
 <li>Ask Claude Code to show intermediate steps: “Show me the data after the join, before aggregating”</li>
 <li>If you get an error, just wait - Claude Code will often fix it automatically</li>
+</ul>
+</section>
+<section id="task-3-manual-check" class="level3">
+<h3 class="anchored" data-anchor-id="task-3-manual-check">Task 3, manual check</h3>
+<ul>
+<li>open a created data table and look into it.</li>
+<li>how would you test and debug?</li>
 </ul>
 <!-- Instructor: Exercise 2 expected outputs
 
@@ -759,38 +792,29 @@ Students should notice:
    Seasonal patterns? This teaches the "trust but verify" habit.
 -->
 </section>
-<section id="review-joins" class="level3">
-<h3 class="anchored" data-anchor-id="review-joins">Review joins</h3>
-</section>
-<section id="more-tasks" class="level3">
-<h3 class="anchored" data-anchor-id="more-tasks">More tasks</h3>
-</section>
 </div>
 </div>
-<!-- Instructor: Exercise 2 expected outputs
-
-::: {.week-card .card}
-::: {.card-header}
-**Part 5: Generate New Data (30 min)**
-:::
-::: {.card-body}
-
-### The Power Move: AI Creates Data
-
-One of the most useful capabilities of Claude Code is generating realistic simulated data. This is exactly how the Austrian Hotels dataset was created - by an earlier version of Claude!
-
-### Demo: Creating Booking Channel Data
-
-* Let us create a new data table: 
-
-```
-I want to create a new CSV file called hotel_bookings.csv that shows
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Part 5: Hands-on Generate New Data</strong></p>
+</div>
+<div class="card-body">
+<section id="the-power-move-ai-creates-data" class="level3">
+<h3 class="anchored" data-anchor-id="the-power-move-ai-creates-data">The Power Move: AI Creates Data</h3>
+<p>One of the most useful capabilities of Claude Code is generating realistic simulated data. This is exactly how the Austrian Hotels dataset was created - by an earlier version of Claude!</p>
+</section>
+<section id="task-1-creating-booking-channel-data" class="level3">
+<h3 class="anchored" data-anchor-id="task-1-creating-booking-channel-data">Task 1: Creating Booking Channel Data</h3>
+<ul>
+<li>Let us create a new data table:</li>
+</ul>
+<pre><code>I want to create a new CSV file called hotel_bookings.csv that shows
 what percentage of each hotel's bookings come from different channels
-Write Python code to generate this, using the hotels_modified.csv as input.
-```
-
-* How could you be more specific to get realistic patterns?
-
+Write Python code to generate this, using the hotels_modified.csv as input.</code></pre>
+<ul>
+<li>How could you be more specific to get realistic patterns?</li>
+<li>How would you check?</li>
+</ul>
 <!-- Instructor: Exercise 2 expected outputs
 
 ```
@@ -817,7 +841,6 @@ Claude Code will:
 
 
 
-### Exercise 3: Create Your Own Data Table (Groups of 2-3, 20 min)
 
 Your turn! Brainstorm a new data table that could join to the hotels data. Ideas:
 
@@ -855,11 +878,13 @@ Common issues:
 
 Encourage groups to share their tables and analyses at the end.
 -->
-<p>::: :::</p>
+</section>
+</div>
+</div>
 <p>–&gt;</p>
 <div class="week-card card">
 <div class="card-header">
-<p><strong>Part 4: Debugging and Iteration (10 min)</strong></p>
+<p><strong>Part 6: Debugging and Iteration</strong></p>
 </div>
 <div class="card-body">
 <section id="when-things-go-wrong" class="level3">
@@ -899,6 +924,28 @@ Good teachable moments:
 </section>
 </div>
 </div>
+</section>
+<section id="operation-tips" class="level2">
+<h2 class="anchored" data-anchor-id="operation-tips">Operation tips</h2>
+<ul>
+<li>use git projects
+<ul>
+<li>as CLI tools are file-based, it’s easier to manage with git</li>
+<li>also gives you version control and backup (if something goes wrong you can pull back to a working state)</li>
+</ul></li>
+<li>start with
+<ul>
+<li>higher level review: what do I have in the folder?</li>
+<li>thinking and plan first</li>
+<li>execute</li>
+</ul></li>
+</ul>
+<p><strong>resources</strong></p>
+<ul>
+<li><a href="https://code.claude.com/docs/en/common-workflows">Claude Code common workflows</a></li>
+<li><a href="https://code.claude.com/docs/en/features-overview">Clude Code skills</a></li>
+<li><a href="https://gemini.google/overview/gems/">Gemini Gems</a></li>
+</ul>
 </section>
 <section id="bottom-line-for-data-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="bottom-line-for-data-analysis">Bottom Line for Data Analysis</h2>
@@ -973,6 +1020,10 @@ Good teachable moments:
 <li><a href="../da-knowledge/terminal-basics.html">Terminal Basics</a> - Essential commands</li>
 <li><a href="../da-knowledge/install-cli.html#claude-code">Install Claude Code</a> - Installation guide</li>
 <li><a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code Documentation</a> - Official docs</li>
+</ul>
+<p><strong>Additional references</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=hiISl558JGE">Short showcase of what is possible now (2026 Jan) )</a> – must watch 15 mins</li>
 </ul>
 <p><strong>Course Reference:</strong></p>
 <ul>
@@ -1456,632 +1507,658 @@ Good teachable moments:
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 04: Agentic AI with CLIs like Claude Code"</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "From chat to terminal - AI that works directly with your files"</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-01-30"</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>::: {.hero-section}</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>::: {.container}</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>::: {.hero-title}</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>Week 04: Agentic AI with Claude Code</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>From chat to terminal - AI that works directly with your files</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/week4_pic.png)</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## About the class</span></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>So far we've used AI through chat interfaces - copying code back and forth, describing our data, pasting error messages. This week we introduce **[agentic AI](../da-knowledge/technical-terms-page.html)**: AI that can see your files, run your code, and iterate on results directly. It is a command-line interface (CLI) -- it runs in your terminal. You type commands, the AI responds with code, runs it, and shows results - all in one place. It can assemble knowledge with great deal of automation.  </span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>Instead of describing your data to an AI, you can say "look at these CSV files and tell me what's here." Instead of copying error messages, Claude Code sees them and fixes the code itself.</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tool Options</span></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>We use **Claude Code** in this class, but the concepts apply to similar tools:</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Tool <span class="pp">|</span> Provider <span class="pp">|</span> Notes <span class="pp">|</span></span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|----------|-------|</span></span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Claude Code](https://claude.com/product/claude-code)** <span class="pp">|</span> Anthropic <span class="pp">|</span> What we use. Requires Claude Pro or API. <span class="pp">|</span></span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Gemini CLI](https://geminicli.com/)** <span class="pp">|</span> Google <span class="pp">|</span> Similar workflow, uses Gemini models. <span class="pp">|</span></span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Codex CLI](https://developers.openai.com/codex/cli/)** <span class="pp">|</span> OpenAI <span class="pp">|</span> OpenAI's command-line tool. <span class="pp">|</span></span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Copilot in VS Code](https://github.com/features/copilot)** <span class="pp">|</span> GitHub/OpenAI <span class="pp">|</span> AI-powered code completion in VS Code. <span class="pp">|</span></span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Cursor](https://cursor.com/) / [Windsurf](https://windsurf.com/)** <span class="pp">|</span> Third-party <span class="pp">|</span> IDE-based, similar agentic features. <span class="pp">|</span></span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Antigravity](https://antigravity.google/)** <span class="pp">|</span> Google <span class="pp">|</span> IDE with AI coding assistance. <span class="pp">|</span></span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>There are differences in capabilities and focus, but the core concepts are the same.</span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>Everything you learn today transfers to these alternatives. The prompts, the workflow, the verification habits - all the same. So, we'll use Claude Code as we go but just replace it with other tools. Also, tools are keep evolving, so focus on process more than specifics of a tool. </span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a><span class="fu">### Learning Objectives</span></span>
-<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>By the end of this session, students will:</span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Understand the difference between chat-based AI and agentic AI tools</span>
-<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Install and configure Claude Code on their machine</span>
-<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Use Claude Code to explore, understand, and analyze a multi-file dataset</span>
-<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Experience the workflow difference: iteration speed, context awareness, debugging</span>
-<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a><span class="fu">### Before class</span></span>
-<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
-<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
-<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>**Setup Required - Do This Before Class**</span>
-<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
-<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>**1. Installation and setup**</span>
-<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>Follow the installation guide: **[Installing AI CLI Tools](../da-knowledge/install-cli.html)**</span>
-<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>We use Claude Code, but Gemini CLI or Codex CLI also work. The guide covers all options for Windows, Mac, and Linux. </span>
-<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>Claude Code lives in the Terminal. *New to the terminal?* Start with <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](../da-knowledge/terminal-basics.html)</span></span>
-<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>**2. Ensure python**</span>
-<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>Claude Code can run Python code, so Python must be installed:</span>
-<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Download from <span class="co">[</span><span class="ot">python.org/downloads</span><span class="co">](https://www.python.org/downloads/)</span></span>
-<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Check "Add Python to PATH"** during installation</span>
-<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Install packages: <span class="in">`python -m pip install pandas numpy matplotlib`</span></span>
-<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>**3. Ensure you have a GitHub account**</span>
-<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>and know how basics of working with git</span>
-<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## Class Plan</span></span>
-<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
-<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
-<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a>🤝 **Review on readme docs (20 min)**</span>
-<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
-<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a><span class="fu">### Review Readme assignment</span></span>
-<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>broad discussion of experience</span>
-<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a><span class="fu">### What worked, what was different? </span></span>
-<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>First run</span>
-<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Extended context window run 1 (create a system prompt)</span>
-<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Extended context window run 2 (with slideshows)</span>
-<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a><span class="fu">### Problems with AI generated reports.</span></span>
-<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>Read each other document.</span>
-<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>control?</span>
-<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>style?</span>
-<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
-<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
-<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a>**Part 1: Why CLI with Agentic AI? (30 min)**</span>
-<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
-<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a><span class="fu">### Why CLI Tools? The Core Benefits</span></span>
-<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a>Think about the friction in using chat-based AI for data analysis:</span>
-<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Copy CSV/code → Paste to ChatGPT</span>
-<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Upload files directly - expensive for free plans</span>
-<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>See error → Copy error → Paste back to ChatGPT</span>
-<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Repeat...</span>
-<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a>**CLI tools eliminate this friction:**</span>
-<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a>**Files are already there**</span>
-<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Claude Code sees your CSV files, R scripts, and outputs directly</span>
-<span id="cb8-142"><a href="#cb8-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No uploading, no copy-paste, no describing your data structure</span>
-<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Just: "Look at these files and calculate average occupancy by city"</span>
-<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a>**Code runs immediately**</span>
-<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI writes code and executes it in one step</span>
-<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sees errors and fixes them automatically</span>
-<span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You get results, not just code snippets</span>
-<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a>**Context stays intact**</span>
-<span id="cb8-151"><a href="#cb8-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Remembers your entire project structure</span>
-<span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understands how files relate to each other (<span class="in">`hotels.csv`</span> joins with <span class="in">`cities.csv`</span>)</span>
-<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Keeps track of what you've done across multiple steps</span>
-<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a>**Iteration is fast**</span>
-<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Something looks wrong" → AI investigates without you copying data</span>
-<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Try it a different way" → Runs new approach immediately</span>
-<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No manual round-trips for every change</span>
-<span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb8-161"><a href="#cb8-161" aria-hidden="true" tabindex="-1"></a><span class="fu">## Want More Power Features?</span></span>
-<span id="cb8-162"><a href="#cb8-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a>This covers the basics to get started. For advanced workflows (custom commands, git integration, large-scale data handling), see <span class="co">[</span><span class="ot">Advanced CLI Workflows</span><span class="co">](../da-knowledge/cli-advanced-workflows.html)</span>.</span>
-<span id="cb8-164"><a href="#cb8-164" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-165"><a href="#cb8-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-166"><a href="#cb8-166" aria-hidden="true" tabindex="-1"></a><span class="fu">### What Stays the Same</span></span>
-<span id="cb8-167"><a href="#cb8-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-168"><a href="#cb8-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Underlying intelligence**: Both use state-of-the-art models (Claude Sonnet/Opus 4.5 vs. Gemini 3.0 Pro/Flash) with comparable reasoning for statistical analysis and code generation</span>
-<span id="cb8-169"><a href="#cb8-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-170"><a href="#cb8-170" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Natural language interface**: Describe tasks in plain language: "Clean this dataset and create a summary statistics table" or "Debug why my regression results look wrong"</span>
-<span id="cb8-171"><a href="#cb8-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-172"><a href="#cb8-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Iterative refinement**: Both support conversational debugging—ask the CLI to fix errors, try different estimation methods, or refine exhibit formatting through multiple rounds</span>
-<span id="cb8-173"><a href="#cb8-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-174"><a href="#cb8-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Your preferences respected**: Both learn and apply your coding standards (tidyverse, viridis, clean functions) once configured through their respective <span class="in">`.md`</span> instruction files</span>
-<span id="cb8-175"><a href="#cb8-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-176"><a href="#cb8-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Multimodal input for data work**:  Both handle various data formats: CSV, Excel, PDFs, images of tables/charts. Useful for extracting data from PDFs, reproducing charts from papers, or generating code from hand-drawn sketches</span>
-<span id="cb8-177"><a href="#cb8-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-178"><a href="#cb8-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-179"><a href="#cb8-179" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb8-180"><a href="#cb8-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-181"><a href="#cb8-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-182"><a href="#cb8-182" aria-hidden="true" tabindex="-1"></a><span class="fu">### Discussion: How Would You Do This?</span></span>
-<span id="cb8-183"><a href="#cb8-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-184"><a href="#cb8-184" aria-hidden="true" tabindex="-1"></a>**Task:** "What's the average hotel occupancy by city in this dataset?"</span>
-<span id="cb8-185"><a href="#cb8-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-186"><a href="#cb8-186" aria-hidden="true" tabindex="-1"></a>You have a folder with several CSV files. You want to answer this question using AI assistance.</span>
-<span id="cb8-187"><a href="#cb8-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-188"><a href="#cb8-188" aria-hidden="true" tabindex="-1"></a>**Think-pair-share (10 min):**</span>
-<span id="cb8-189"><a href="#cb8-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-190"><a href="#cb8-190" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>What steps would you take using ChatGPT or Claude.ai (chat interface)?</span>
-<span id="cb8-191"><a href="#cb8-191" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>What information would you need to give the AI?</span>
-<span id="cb8-192"><a href="#cb8-192" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>What could go wrong? How would you handle errors?</span>
-<span id="cb8-193"><a href="#cb8-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-194"><a href="#cb8-194" aria-hidden="true" tabindex="-1"></a>*Discuss with a neighbor, then share with the class.*</span>
-<span id="cb8-195"><a href="#cb8-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-196"><a href="#cb8-196" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Common answers to elicit from students</span></span>
-<span id="cb8-197"><a href="#cb8-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-198"><a href="#cb8-198" aria-hidden="true" tabindex="-1"></a><span class="co">- Open files, copy some rows to show the AI</span></span>
-<span id="cb8-199"><a href="#cb8-199" aria-hidden="true" tabindex="-1"></a><span class="co">- Describe the data structure ("I have a CSV with columns...")</span></span>
-<span id="cb8-200"><a href="#cb8-200" aria-hidden="true" tabindex="-1"></a><span class="co">- Ask for code, copy it to Python/R</span></span>
-<span id="cb8-201"><a href="#cb8-201" aria-hidden="true" tabindex="-1"></a><span class="co">- If error, copy error message back</span></span>
-<span id="cb8-202"><a href="#cb8-202" aria-hidden="true" tabindex="-1"></a><span class="co">- Iterate until it works...</span></span>
-<span id="cb8-203"><a href="#cb8-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-204"><a href="#cb8-204" aria-hidden="true" tabindex="-1"></a><span class="co">Key point: Every step requires manual copy-paste. Context gets lost easily.</span></span>
-<span id="cb8-205"><a href="#cb8-205" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb8-206"><a href="#cb8-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-207"><a href="#cb8-207" aria-hidden="true" tabindex="-1"></a>**The friction:** Every step requires manual copy-paste. Context gets lost. Errors require round-trips.</span>
-<span id="cb8-208"><a href="#cb8-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-209"><a href="#cb8-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-210"><a href="#cb8-210" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-211"><a href="#cb8-211" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-212"><a href="#cb8-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-213"><a href="#cb8-213" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
-<span id="cb8-214"><a href="#cb8-214" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
-<span id="cb8-215"><a href="#cb8-215" aria-hidden="true" tabindex="-1"></a>**Part 2: Demo - Setup (25 min)**</span>
-<span id="cb8-216"><a href="#cb8-216" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-217"><a href="#cb8-217" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
-<span id="cb8-218"><a href="#cb8-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-219"><a href="#cb8-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-220"><a href="#cb8-220" aria-hidden="true" tabindex="-1"></a><span class="fu">### Setting Up Claude Code</span></span>
-<span id="cb8-221"><a href="#cb8-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-222"><a href="#cb8-222" aria-hidden="true" tabindex="-1"></a>***set up folder***</span>
-<span id="cb8-223"><a href="#cb8-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-224"><a href="#cb8-224" aria-hidden="true" tabindex="-1"></a>Create a git project folder for the Austrian Hotels data <span class="in">`austrian-hotels-data`</span></span>
-<span id="cb8-225"><a href="#cb8-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-226"><a href="#cb8-226" aria-hidden="true" tabindex="-1"></a>***get the data***</span>
-<span id="cb8-227"><a href="#cb8-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-228"><a href="#cb8-228" aria-hidden="true" tabindex="-1"></a>Download the Austrian Hotels dataset from <span class="co">[</span><span class="ot">here</span><span class="co">](../case-studies/austria-hotels/data/data-modified.zip)</span>.</span>
-<span id="cb8-229"><a href="#cb8-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-230"><a href="#cb8-230" aria-hidden="true" tabindex="-1"></a>***launch Claude Code***</span>
-<span id="cb8-231"><a href="#cb8-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-232"><a href="#cb8-232" aria-hidden="true" tabindex="-1"></a>Open your terminal, navigate to your data folder:</span>
-<span id="cb8-233"><a href="#cb8-233" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-234"><a href="#cb8-234" aria-hidden="true" tabindex="-1"></a><span class="in">cd path/to/austrian-hotels-data</span></span>
-<span id="cb8-235"><a href="#cb8-235" aria-hidden="true" tabindex="-1"></a><span class="in">claude</span></span>
-<span id="cb8-236"><a href="#cb8-236" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-237"><a href="#cb8-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-238"><a href="#cb8-238" aria-hidden="true" tabindex="-1"></a><span class="fu">### Demo 1:</span></span>
-<span id="cb8-239"><a href="#cb8-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-240"><a href="#cb8-240" aria-hidden="true" tabindex="-1"></a>Ask claude code to set up a data analysis project folder with data already there.</span>
-<span id="cb8-241"><a href="#cb8-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-242"><a href="#cb8-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-243"><a href="#cb8-243" aria-hidden="true" tabindex="-1"></a><span class="fu">### Demo 2: </span></span>
-<span id="cb8-244"><a href="#cb8-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-245"><a href="#cb8-245" aria-hidden="true" tabindex="-1"></a>Now watch what happens with Claude Code:</span>
-<span id="cb8-246"><a href="#cb8-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-247"><a href="#cb8-247" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-248"><a href="#cb8-248" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/austrian-hotels</span></span>
-<span id="cb8-249"><a href="#cb8-249" aria-hidden="true" tabindex="-1"></a><span class="in">claude</span></span>
-<span id="cb8-250"><a href="#cb8-250" aria-hidden="true" tabindex="-1"></a><span class="in">&gt; Look at the CSV files here and calculate average occupancy by city</span></span>
-<span id="cb8-251"><a href="#cb8-251" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-252"><a href="#cb8-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-253"><a href="#cb8-253" aria-hidden="true" tabindex="-1"></a>Claude Code reads the files, writes the code, runs it, sees any errors, fixes them, and shows results. One prompt, no copy-paste.</span>
-<span id="cb8-254"><a href="#cb8-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-255"><a href="#cb8-255" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Expected output from demo</span></span>
-<span id="cb8-256"><a href="#cb8-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-257"><a href="#cb8-257" aria-hidden="true" tabindex="-1"></a><span class="co">Average Occupancy Rate by City:</span></span>
-<span id="cb8-258"><a href="#cb8-258" aria-hidden="true" tabindex="-1"></a><span class="co">Vienna           98.0%</span></span>
-<span id="cb8-259"><a href="#cb8-259" aria-hidden="true" tabindex="-1"></a><span class="co">Graz             82.8%</span></span>
-<span id="cb8-260"><a href="#cb8-260" aria-hidden="true" tabindex="-1"></a><span class="co">Innsbruck        79.9%</span></span>
-<span id="cb8-261"><a href="#cb8-261" aria-hidden="true" tabindex="-1"></a><span class="co">Linz             79.3%</span></span>
-<span id="cb8-262"><a href="#cb8-262" aria-hidden="true" tabindex="-1"></a><span class="co">Hallstatt        75.4%</span></span>
-<span id="cb8-263"><a href="#cb8-263" aria-hidden="true" tabindex="-1"></a><span class="co">Bad Gastein      75.0%</span></span>
-<span id="cb8-264"><a href="#cb8-264" aria-hidden="true" tabindex="-1"></a><span class="co">St. Anton        74.1%</span></span>
-<span id="cb8-265"><a href="#cb8-265" aria-hidden="true" tabindex="-1"></a><span class="co">Zell am See      74.0%</span></span>
-<span id="cb8-266"><a href="#cb8-266" aria-hidden="true" tabindex="-1"></a><span class="co">Kitzbühel        73.1%</span></span>
-<span id="cb8-267"><a href="#cb8-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-268"><a href="#cb8-268" aria-hidden="true" tabindex="-1"></a><span class="co">Note: Vienna at 98% is suspiciously high - can mention this as</span></span>
-<span id="cb8-269"><a href="#cb8-269" aria-hidden="true" tabindex="-1"></a><span class="co">a data quality point. Only 9 cities appear (should be 10).</span></span>
-<span id="cb8-270"><a href="#cb8-270" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb8-271"><a href="#cb8-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-272"><a href="#cb8-272" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-273"><a href="#cb8-273" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-274"><a href="#cb8-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-275"><a href="#cb8-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-276"><a href="#cb8-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-277"><a href="#cb8-277" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
-<span id="cb8-278"><a href="#cb8-278" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
-<span id="cb8-279"><a href="#cb8-279" aria-hidden="true" tabindex="-1"></a>**Part 3: Hands-on - Explore the Dataset (25 min)**</span>
-<span id="cb8-280"><a href="#cb8-280" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-281"><a href="#cb8-281" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
-<span id="cb8-282"><a href="#cb8-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-283"><a href="#cb8-283" aria-hidden="true" tabindex="-1"></a><span class="fu">### Getting Started</span></span>
-<span id="cb8-284"><a href="#cb8-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-285"><a href="#cb8-285" aria-hidden="true" tabindex="-1"></a>Open your terminal, navigate to your data folder:</span>
-<span id="cb8-286"><a href="#cb8-286" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-287"><a href="#cb8-287" aria-hidden="true" tabindex="-1"></a><span class="in">cd path/to/austrian-hotels-data</span></span>
-<span id="cb8-288"><a href="#cb8-288" aria-hidden="true" tabindex="-1"></a><span class="in">claude</span></span>
-<span id="cb8-289"><a href="#cb8-289" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-290"><a href="#cb8-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-291"><a href="#cb8-291" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 1: Understand the Data (Individual, 20 min)</span></span>
-<span id="cb8-292"><a href="#cb8-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-293"><a href="#cb8-293" aria-hidden="true" tabindex="-1"></a>Try these prompts:</span>
-<span id="cb8-294"><a href="#cb8-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-295"><a href="#cb8-295" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-296"><a href="#cb8-296" aria-hidden="true" tabindex="-1"></a><span class="in">What files are in this folder? Give me a quick overview.</span></span>
-<span id="cb8-297"><a href="#cb8-297" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-298"><a href="#cb8-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-299"><a href="#cb8-299" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-300"><a href="#cb8-300" aria-hidden="true" tabindex="-1"></a><span class="in">Read the hotels and cities files. How are they related? What's the join key?</span></span>
-<span id="cb8-301"><a href="#cb8-301" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-302"><a href="#cb8-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-303"><a href="#cb8-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-304"><a href="#cb8-304" aria-hidden="true" tabindex="-1"></a><span class="in">Show me 5 sample rows from each CSV file.</span></span>
-<span id="cb8-305"><a href="#cb8-305" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-306"><a href="#cb8-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-307"><a href="#cb8-307" aria-hidden="true" tabindex="-1"></a>**Discuss:** How does this compare to opening each file manually or describing it to ChatGPT?</span>
-<span id="cb8-308"><a href="#cb8-308" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-309"><a href="#cb8-309" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Exercise 1 expected findings</span></span>
-<span id="cb8-310"><a href="#cb8-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-311"><a href="#cb8-311" aria-hidden="true" tabindex="-1"></a><span class="co">Files in folder:</span></span>
-<span id="cb8-312"><a href="#cb8-312" aria-hidden="true" tabindex="-1"></a><span class="co">- hotels_modified.csv (87 hotels)</span></span>
-<span id="cb8-313"><a href="#cb8-313" aria-hidden="true" tabindex="-1"></a><span class="co">- cities_modified.csv (10 cities)</span></span>
-<span id="cb8-314"><a href="#cb8-314" aria-hidden="true" tabindex="-1"></a><span class="co">- monthly_occupancy_modified.csv (2,088 rows - 87 hotels × 24 months)</span></span>
-<span id="cb8-315"><a href="#cb8-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-316"><a href="#cb8-316" aria-hidden="true" tabindex="-1"></a><span class="co">Join key: city (text) connects hotels to cities</span></span>
-<span id="cb8-317"><a href="#cb8-317" aria-hidden="true" tabindex="-1"></a><span class="co">Also: hotel_id connects hotels to monthly_occupancy</span></span>
-<span id="cb8-318"><a href="#cb8-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-319"><a href="#cb8-319" aria-hidden="true" tabindex="-1"></a><span class="co">Students should notice:</span></span>
-<span id="cb8-320"><a href="#cb8-320" aria-hidden="true" tabindex="-1"></a><span class="co">- hotels has city names, cities has city details (province, population)</span></span>
-<span id="cb8-321"><a href="#cb8-321" aria-hidden="true" tabindex="-1"></a><span class="co">- monthly_occupancy has hotel_id, month, year, occupancy_rate, avg_daily_rate</span></span>
-<span id="cb8-322"><a href="#cb8-322" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb8-323"><a href="#cb8-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-324"><a href="#cb8-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-325"><a href="#cb8-325" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 2: What is possible Class discussion, 10 min)</span></span>
-<span id="cb8-326"><a href="#cb8-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-327"><a href="#cb8-327" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What analysis questions could you ask with this data?</span>
-<span id="cb8-328"><a href="#cb8-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-329"><a href="#cb8-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-330"><a href="#cb8-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-331"><a href="#cb8-331" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-332"><a href="#cb8-332" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-333"><a href="#cb8-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-334"><a href="#cb8-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-335"><a href="#cb8-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-336"><a href="#cb8-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-337"><a href="#cb8-337" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
-<span id="cb8-338"><a href="#cb8-338" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
-<span id="cb8-339"><a href="#cb8-339" aria-hidden="true" tabindex="-1"></a>**Part 4: Hands-on - Explore the Dataset (25 min)**</span>
-<span id="cb8-340"><a href="#cb8-340" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-341"><a href="#cb8-341" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
-<span id="cb8-342"><a href="#cb8-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-343"><a href="#cb8-343" aria-hidden="true" tabindex="-1"></a><span class="fu">### Getting Started</span></span>
-<span id="cb8-344"><a href="#cb8-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-345"><a href="#cb8-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-346"><a href="#cb8-346" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 2: Basic Analysis (Individual, 15 min)</span></span>
-<span id="cb8-347"><a href="#cb8-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-348"><a href="#cb8-348" aria-hidden="true" tabindex="-1"></a>Ask Claude Code to:</span>
-<span id="cb8-349"><a href="#cb8-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-350"><a href="#cb8-350" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Join hotels and cities** - "Join the hotels and cities data. How many hotels are in each province?"</span>
-<span id="cb8-351"><a href="#cb8-351" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>*New to joins? See [Joining Tables Guide](../da-knowledge/joining-tables.html)*</span>
-<span id="cb8-352"><a href="#cb8-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-353"><a href="#cb8-353" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Aggregate occupancy** - "What's the average occupancy rate by city? Show me a table sorted highest to lowest."</span>
-<span id="cb8-354"><a href="#cb8-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-355"><a href="#cb8-355" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Find patterns** - "Which 5-star hotels have the lowest average daily rate? Something seems off - investigate."</span>
-<span id="cb8-356"><a href="#cb8-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-357"><a href="#cb8-357" aria-hidden="true" tabindex="-1"></a>**Tips:**</span>
-<span id="cb8-358"><a href="#cb8-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-359"><a href="#cb8-359" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If something looks wrong, ask "Why did that happen?" or "Check the row counts"</span>
-<span id="cb8-360"><a href="#cb8-360" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ask Claude Code to show intermediate steps: "Show me the data after the join, before aggregating"</span>
-<span id="cb8-361"><a href="#cb8-361" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you get an error, just wait - Claude Code will often fix it automatically</span>
-<span id="cb8-362"><a href="#cb8-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-363"><a href="#cb8-363" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Exercise 2 expected outputs</span></span>
-<span id="cb8-364"><a href="#cb8-364" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-365"><a href="#cb8-365" aria-hidden="true" tabindex="-1"></a><span class="co">1. Hotels by province:</span></span>
-<span id="cb8-366"><a href="#cb8-366" aria-hidden="true" tabindex="-1"></a><span class="co">   Salzburg         25 hotels</span></span>
-<span id="cb8-367"><a href="#cb8-367" aria-hidden="true" tabindex="-1"></a><span class="co">   Tyrol            22 hotels</span></span>
-<span id="cb8-368"><a href="#cb8-368" aria-hidden="true" tabindex="-1"></a><span class="co">   Vienna           15 hotels</span></span>
-<span id="cb8-369"><a href="#cb8-369" aria-hidden="true" tabindex="-1"></a><span class="co">   Carinthia        10 hotels</span></span>
-<span id="cb8-370"><a href="#cb8-370" aria-hidden="true" tabindex="-1"></a><span class="co">   Styria            8 hotels</span></span>
-<span id="cb8-371"><a href="#cb8-371" aria-hidden="true" tabindex="-1"></a><span class="co">   Upper Austria     7 hotels</span></span>
-<span id="cb8-372"><a href="#cb8-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-373"><a href="#cb8-373" aria-hidden="true" tabindex="-1"></a><span class="co">2. Occupancy by city (same as demo - good chance to verify)</span></span>
-<span id="cb8-374"><a href="#cb8-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-375"><a href="#cb8-375" aria-hidden="true" tabindex="-1"></a><span class="co">3. 5-star hotels with low ADR - this is a data quality exercise:</span></span>
-<span id="cb8-376"><a href="#cb8-376" aria-hidden="true" tabindex="-1"></a><span class="co">   Students should find some 5-star hotels with surprisingly low</span></span>
-<span id="cb8-377"><a href="#cb8-377" aria-hidden="true" tabindex="-1"></a><span class="co">   rates. Prompt them to investigate: are these real? Missing data?</span></span>
-<span id="cb8-378"><a href="#cb8-378" aria-hidden="true" tabindex="-1"></a><span class="co">   Seasonal patterns? This teaches the "trust but verify" habit.</span></span>
-<span id="cb8-379"><a href="#cb8-379" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb8-380"><a href="#cb8-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-381"><a href="#cb8-381" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-382"><a href="#cb8-382" aria-hidden="true" tabindex="-1"></a><span class="fu">### Review joins</span></span>
-<span id="cb8-383"><a href="#cb8-383" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-384"><a href="#cb8-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-385"><a href="#cb8-385" aria-hidden="true" tabindex="-1"></a><span class="fu">### More tasks</span></span>
-<span id="cb8-386"><a href="#cb8-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-387"><a href="#cb8-387" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-388"><a href="#cb8-388" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-389"><a href="#cb8-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-390"><a href="#cb8-390" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Exercise 2 expected outputs</span></span>
-<span id="cb8-391"><a href="#cb8-391" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-392"><a href="#cb8-392" aria-hidden="true" tabindex="-1"></a><span class="co">::: {.week-card .card}</span></span>
-<span id="cb8-393"><a href="#cb8-393" aria-hidden="true" tabindex="-1"></a><span class="co">::: {.card-header}</span></span>
-<span id="cb8-394"><a href="#cb8-394" aria-hidden="true" tabindex="-1"></a><span class="co">**Part 5: Generate New Data (30 min)**</span></span>
-<span id="cb8-395"><a href="#cb8-395" aria-hidden="true" tabindex="-1"></a><span class="co">:::</span></span>
-<span id="cb8-396"><a href="#cb8-396" aria-hidden="true" tabindex="-1"></a><span class="co">::: {.card-body}</span></span>
-<span id="cb8-397"><a href="#cb8-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-398"><a href="#cb8-398" aria-hidden="true" tabindex="-1"></a><span class="al">###</span><span class="co"> The Power Move: AI Creates Data</span></span>
-<span id="cb8-399"><a href="#cb8-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-400"><a href="#cb8-400" aria-hidden="true" tabindex="-1"></a><span class="co">One of the most useful capabilities of Claude Code is generating realistic simulated data. This is exactly how the Austrian Hotels dataset was created - by an earlier version of Claude!</span></span>
-<span id="cb8-401"><a href="#cb8-401" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-402"><a href="#cb8-402" aria-hidden="true" tabindex="-1"></a><span class="al">###</span><span class="co"> Demo: Creating Booking Channel Data</span></span>
-<span id="cb8-403"><a href="#cb8-403" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-404"><a href="#cb8-404" aria-hidden="true" tabindex="-1"></a><span class="co">* Let us create a new data table: </span></span>
-<span id="cb8-405"><a href="#cb8-405" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-406"><a href="#cb8-406" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
-<span id="cb8-407"><a href="#cb8-407" aria-hidden="true" tabindex="-1"></a><span class="co">I want to create a new CSV file called hotel_bookings.csv that shows</span></span>
-<span id="cb8-408"><a href="#cb8-408" aria-hidden="true" tabindex="-1"></a><span class="co">what percentage of each hotel's bookings come from different channels</span></span>
-<span id="cb8-409"><a href="#cb8-409" aria-hidden="true" tabindex="-1"></a><span class="co">Write Python code to generate this, using the hotels_modified.csv as input.</span></span>
-<span id="cb8-410"><a href="#cb8-410" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
-<span id="cb8-411"><a href="#cb8-411" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-412"><a href="#cb8-412" aria-hidden="true" tabindex="-1"></a><span class="co">* How could you be more specific to get realistic patterns?</span></span>
-<span id="cb8-413"><a href="#cb8-413" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-414"><a href="#cb8-414" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Exercise 2 expected outputs</span></span>
-<span id="cb8-415"><a href="#cb8-415" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-416"><a href="#cb8-416" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
-<span id="cb8-417"><a href="#cb8-417" aria-hidden="true" tabindex="-1"></a><span class="co">I want to create a new CSV file called hotel_bookings.csv that shows</span></span>
-<span id="cb8-418"><a href="#cb8-418" aria-hidden="true" tabindex="-1"></a><span class="co">what percentage of each hotel's bookings come from different channels</span></span>
-<span id="cb8-419"><a href="#cb8-419" aria-hidden="true" tabindex="-1"></a><span class="co">(Direct, Booking.com, Expedia, HRS, Travel Agent).</span></span>
-<span id="cb8-420"><a href="#cb8-420" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-421"><a href="#cb8-421" aria-hidden="true" tabindex="-1"></a><span class="co">Requirements:</span></span>
-<span id="cb8-422"><a href="#cb8-422" aria-hidden="true" tabindex="-1"></a><span class="co">- Each hotel should have rows for each channel</span></span>
-<span id="cb8-423"><a href="#cb8-423" aria-hidden="true" tabindex="-1"></a><span class="co">- Percentages should sum to 100% for each hotel</span></span>
-<span id="cb8-424"><a href="#cb8-424" aria-hidden="true" tabindex="-1"></a><span class="co">- 5-star hotels should have more direct bookings (35-45%)</span></span>
-<span id="cb8-425"><a href="#cb8-425" aria-hidden="true" tabindex="-1"></a><span class="co">- 3-star hotels should rely more on OTAs (Booking.com 40%+)</span></span>
-<span id="cb8-426"><a href="#cb8-426" aria-hidden="true" tabindex="-1"></a><span class="co">- Include a commission rate column (Direct=0%, OTAs=10-18%)</span></span>
-<span id="cb8-427"><a href="#cb8-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-428"><a href="#cb8-428" aria-hidden="true" tabindex="-1"></a><span class="co">Write Python code to generate this, using the hotels_modified.csv as input.</span></span>
-<span id="cb8-429"><a href="#cb8-429" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
-<span id="cb8-430"><a href="#cb8-430" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-431"><a href="#cb8-431" aria-hidden="true" tabindex="-1"></a><span class="co">Claude Code will:</span></span>
-<span id="cb8-432"><a href="#cb8-432" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-433"><a href="#cb8-433" aria-hidden="true" tabindex="-1"></a><span class="co">1. Read the existing hotels data</span></span>
-<span id="cb8-434"><a href="#cb8-434" aria-hidden="true" tabindex="-1"></a><span class="co">2. Write a Python script with realistic logic</span></span>
-<span id="cb8-435"><a href="#cb8-435" aria-hidden="true" tabindex="-1"></a><span class="co">3. Run it and generate the CSV</span></span>
-<span id="cb8-436"><a href="#cb8-436" aria-hidden="true" tabindex="-1"></a><span class="co">4. Show you a summary</span></span>
-<span id="cb8-437"><a href="#cb8-437" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-438"><a href="#cb8-438" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-439"><a href="#cb8-439" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-440"><a href="#cb8-440" aria-hidden="true" tabindex="-1"></a><span class="al">###</span><span class="co"> Exercise 3: Create Your Own Data Table (Groups of 2-3, 20 min)</span></span>
-<span id="cb8-441"><a href="#cb8-441" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-442"><a href="#cb8-442" aria-hidden="true" tabindex="-1"></a><span class="co">Your turn! Brainstorm a new data table that could join to the hotels data. Ideas:</span></span>
-<span id="cb8-443"><a href="#cb8-443" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-444"><a href="#cb8-444" aria-hidden="true" tabindex="-1"></a><span class="co">| Table Idea | Join Key | Interesting Analysis |</span></span>
-<span id="cb8-445"><a href="#cb8-445" aria-hidden="true" tabindex="-1"></a><span class="co">|------------|----------|---------------------|</span></span>
-<span id="cb8-446"><a href="#cb8-446" aria-hidden="true" tabindex="-1"></a><span class="co">| **Weather by city/month** | city + month + year | Does weather affect occupancy? |</span></span>
-<span id="cb8-447"><a href="#cb8-447" aria-hidden="true" tabindex="-1"></a><span class="co">| **Staff data** | hotel_id | Do more staff = better reviews? |</span></span>
-<span id="cb8-448"><a href="#cb8-448" aria-hidden="true" tabindex="-1"></a><span class="co">| **Nearby attractions** | city | Which attractions drive tourism? |</span></span>
-<span id="cb8-449"><a href="#cb8-449" aria-hidden="true" tabindex="-1"></a><span class="co">| **Renovation history** | hotel_id | Did renovations boost ratings? |</span></span>
-<span id="cb8-450"><a href="#cb8-450" aria-hidden="true" tabindex="-1"></a><span class="co">| **Competitor Airbnb prices** | city + month | How do hotel prices compare? |</span></span>
-<span id="cb8-451"><a href="#cb8-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-452"><a href="#cb8-452" aria-hidden="true" tabindex="-1"></a><span class="co">**Steps:**</span></span>
-<span id="cb8-453"><a href="#cb8-453" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-454"><a href="#cb8-454" aria-hidden="true" tabindex="-1"></a><span class="co">1. Pick a table idea with your group</span></span>
-<span id="cb8-455"><a href="#cb8-455" aria-hidden="true" tabindex="-1"></a><span class="co">2. Write a detailed prompt describing what you want (columns, realistic patterns, join keys)</span></span>
-<span id="cb8-456"><a href="#cb8-456" aria-hidden="true" tabindex="-1"></a><span class="co">3. Ask Claude Code to generate it</span></span>
-<span id="cb8-457"><a href="#cb8-457" aria-hidden="true" tabindex="-1"></a><span class="co">4. Verify: Does it look realistic? Can you join it to hotels?</span></span>
-<span id="cb8-458"><a href="#cb8-458" aria-hidden="true" tabindex="-1"></a><span class="co">5. Do one simple analysis with the joined data</span></span>
-<span id="cb8-459"><a href="#cb8-459" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-460"><a href="#cb8-460" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Exercise 3 facilitation notes</span></span>
-<span id="cb8-461"><a href="#cb8-461" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-462"><a href="#cb8-462" aria-hidden="true" tabindex="-1"></a><span class="co">Most popular choices tend to be:</span></span>
-<span id="cb8-463"><a href="#cb8-463" aria-hidden="true" tabindex="-1"></a><span class="co">- Weather data (easy to generate, clear patterns)</span></span>
-<span id="cb8-464"><a href="#cb8-464" aria-hidden="true" tabindex="-1"></a><span class="co">- Staff data (simple 1:1 join)</span></span>
-<span id="cb8-465"><a href="#cb8-465" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-466"><a href="#cb8-466" aria-hidden="true" tabindex="-1"></a><span class="co">Help groups who are stuck with prompt structure:</span></span>
-<span id="cb8-467"><a href="#cb8-467" aria-hidden="true" tabindex="-1"></a><span class="co">"I want to create [filename] with columns [list columns].</span></span>
-<span id="cb8-468"><a href="#cb8-468" aria-hidden="true" tabindex="-1"></a><span class="co">The data should [describe realistic patterns].</span></span>
-<span id="cb8-469"><a href="#cb8-469" aria-hidden="true" tabindex="-1"></a><span class="co">It should join to hotels on [join key]."</span></span>
-<span id="cb8-470"><a href="#cb8-470" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-471"><a href="#cb8-471" aria-hidden="true" tabindex="-1"></a><span class="co">Common issues:</span></span>
-<span id="cb8-472"><a href="#cb8-472" aria-hidden="true" tabindex="-1"></a><span class="co">- Percentages that don't sum to 100</span></span>
-<span id="cb8-473"><a href="#cb8-473" aria-hidden="true" tabindex="-1"></a><span class="co">- Join keys that don't match (typos, case sensitivity)</span></span>
-<span id="cb8-474"><a href="#cb8-474" aria-hidden="true" tabindex="-1"></a><span class="co">- Unrealistic value ranges</span></span>
-<span id="cb8-475"><a href="#cb8-475" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-476"><a href="#cb8-476" aria-hidden="true" tabindex="-1"></a><span class="co">Encourage groups to share their tables and analyses at the end.</span></span>
-<span id="cb8-477"><a href="#cb8-477" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb8-478"><a href="#cb8-478" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-479"><a href="#cb8-479" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-480"><a href="#cb8-480" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-481"><a href="#cb8-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-482"><a href="#cb8-482" aria-hidden="true" tabindex="-1"></a>--&gt;</span>
-<span id="cb8-483"><a href="#cb8-483" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-484"><a href="#cb8-484" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
-<span id="cb8-485"><a href="#cb8-485" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
-<span id="cb8-486"><a href="#cb8-486" aria-hidden="true" tabindex="-1"></a>**Part 4: Debugging and Iteration (10 min)**</span>
-<span id="cb8-487"><a href="#cb8-487" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-488"><a href="#cb8-488" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
-<span id="cb8-489"><a href="#cb8-489" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-490"><a href="#cb8-490" aria-hidden="true" tabindex="-1"></a><span class="fu">### When Things Go Wrong</span></span>
-<span id="cb8-491"><a href="#cb8-491" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-492"><a href="#cb8-492" aria-hidden="true" tabindex="-1"></a>Claude Code isn't perfect. Common issues:</span>
-<span id="cb8-493"><a href="#cb8-493" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-494"><a href="#cb8-494" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Wrong join type** - Ask: "How many rows before and after the join? Did we lose data?"</span>
-<span id="cb8-495"><a href="#cb8-495" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Missing values** - Ask: "Are there NaN values? Where did they come from?"</span>
-<span id="cb8-496"><a href="#cb8-496" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Unexpected results** - Ask: "Walk me through the calculation step by step"</span>
-<span id="cb8-497"><a href="#cb8-497" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Code errors** - Often Claude Code fixes these automatically. If not, just describe what went wrong.</span>
-<span id="cb8-498"><a href="#cb8-498" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**[Hallucinations](../da-knowledge/technical-terms-page.html#hallucination)** - AI may generate plausible but incorrect code or stats. Always verify.</span>
-<span id="cb8-499"><a href="#cb8-499" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-500"><a href="#cb8-500" aria-hidden="true" tabindex="-1"></a><span class="fu">### Trust but Verify</span></span>
-<span id="cb8-501"><a href="#cb8-501" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-502"><a href="#cb8-502" aria-hidden="true" tabindex="-1"></a>**Always check:**</span>
-<span id="cb8-503"><a href="#cb8-503" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-504"><a href="#cb8-504" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Row counts after joins</span>
-<span id="cb8-505"><a href="#cb8-505" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Summary statistics (do means make sense?)</span>
-<span id="cb8-506"><a href="#cb8-506" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A few random rows (do values look realistic?)</span>
-<span id="cb8-507"><a href="#cb8-507" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-508"><a href="#cb8-508" aria-hidden="true" tabindex="-1"></a>**Good habit:** Ask Claude Code to explain what it did:</span>
-<span id="cb8-509"><a href="#cb8-509" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-510"><a href="#cb8-510" aria-hidden="true" tabindex="-1"></a><span class="in">Explain the code you just wrote. What assumptions did you make?</span></span>
-<span id="cb8-511"><a href="#cb8-511" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-512"><a href="#cb8-512" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-513"><a href="#cb8-513" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Part 4 common student issues</span></span>
-<span id="cb8-514"><a href="#cb8-514" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-515"><a href="#cb8-515" aria-hidden="true" tabindex="-1"></a><span class="co">During exercises, watch for:</span></span>
-<span id="cb8-516"><a href="#cb8-516" aria-hidden="true" tabindex="-1"></a><span class="co">- Students who accept wrong results without checking</span></span>
-<span id="cb8-517"><a href="#cb8-517" aria-hidden="true" tabindex="-1"></a><span class="co">- Joins that lose rows (inner join when left was needed)</span></span>
-<span id="cb8-518"><a href="#cb8-518" aria-hidden="true" tabindex="-1"></a><span class="co">- Column name mismatches (city vs City)</span></span>
-<span id="cb8-519"><a href="#cb8-519" aria-hidden="true" tabindex="-1"></a><span class="co">- Students who don't read error messages before re-prompting</span></span>
-<span id="cb8-520"><a href="#cb8-520" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-521"><a href="#cb8-521" aria-hidden="true" tabindex="-1"></a><span class="co">Good teachable moments:</span></span>
-<span id="cb8-522"><a href="#cb8-522" aria-hidden="true" tabindex="-1"></a><span class="co">- When Claude Code makes a mistake and fixes it automatically</span></span>
-<span id="cb8-523"><a href="#cb8-523" aria-hidden="true" tabindex="-1"></a><span class="co">- When a result looks plausible but is wrong</span></span>
-<span id="cb8-524"><a href="#cb8-524" aria-hidden="true" tabindex="-1"></a><span class="co">- When asking "explain this" reveals a faulty assumption</span></span>
-<span id="cb8-525"><a href="#cb8-525" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb8-526"><a href="#cb8-526" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-527"><a href="#cb8-527" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-528"><a href="#cb8-528" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-529"><a href="#cb8-529" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-530"><a href="#cb8-530" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-531"><a href="#cb8-531" aria-hidden="true" tabindex="-1"></a><span class="fu">## Bottom Line for Data Analysis</span></span>
-<span id="cb8-532"><a href="#cb8-532" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-533"><a href="#cb8-533" aria-hidden="true" tabindex="-1"></a>CLI tools shine when you have:</span>
-<span id="cb8-534"><a href="#cb8-534" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-535"><a href="#cb8-535" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Complex multi-file projects with data pipelines (<span class="in">`raw → clean → analysis → exhibits`</span>)</span>
-<span id="cb8-536"><a href="#cb8-536" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Need for reproducible workflows that others can run</span>
-<span id="cb8-537"><a href="#cb8-537" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Large datasets or documents requiring substantial context</span>
-<span id="cb8-538"><a href="#cb8-538" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Iterative analysis where the AI should test and debug autonomously</span>
-<span id="cb8-539"><a href="#cb8-539" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-540"><a href="#cb8-540" aria-hidden="true" tabindex="-1"></a>The chatbox remains better for:</span>
-<span id="cb8-541"><a href="#cb8-541" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-542"><a href="#cb8-542" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quick one-off questions or code snippets</span>
-<span id="cb8-543"><a href="#cb8-543" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Exploratory conversations about methodology</span>
-<span id="cb8-544"><a href="#cb8-544" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Situations where you want tight control over each step</span>
-<span id="cb8-545"><a href="#cb8-545" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-546"><a href="#cb8-546" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-547"><a href="#cb8-547" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion Questions</span></span>
-<span id="cb8-548"><a href="#cb8-548" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-549"><a href="#cb8-549" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-550"><a href="#cb8-550" aria-hidden="true" tabindex="-1"></a>**End of Class Reflection:**</span>
-<span id="cb8-551"><a href="#cb8-551" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-552"><a href="#cb8-552" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Workflow change:** How did using Claude Code feel different from chat-based AI? What was faster? What was harder?</span>
-<span id="cb8-553"><a href="#cb8-553" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-554"><a href="#cb8-554" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Trust calibration:** When did you trust Claude Code's output? When did you double-check? How do you decide?</span>
-<span id="cb8-555"><a href="#cb8-555" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-556"><a href="#cb8-556" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Use cases:** For what tasks would you now prefer Claude Code over ChatGPT/Claude.ai? When would you still use chat?</span>
-<span id="cb8-557"><a href="#cb8-557" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-558"><a href="#cb8-558" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Data generation:** What did you learn from creating synthetic data? How could this help in your own projects?</span>
-<span id="cb8-559"><a href="#cb8-559" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-560"><a href="#cb8-560" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Discussion question expected themes</span></span>
-<span id="cb8-561"><a href="#cb8-561" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-562"><a href="#cb8-562" aria-hidden="true" tabindex="-1"></a><span class="co">1. Workflow change:</span></span>
-<span id="cb8-563"><a href="#cb8-563" aria-hidden="true" tabindex="-1"></a><span class="co">   - Faster: no copy-paste, sees errors immediately, keeps context</span></span>
-<span id="cb8-564"><a href="#cb8-564" aria-hidden="true" tabindex="-1"></a><span class="co">   - Harder: less control, can't easily undo, terminal unfamiliar</span></span>
-<span id="cb8-565"><a href="#cb8-565" aria-hidden="true" tabindex="-1"></a><span class="co">   - Some students prefer chat for "thinking out loud"</span></span>
-<span id="cb8-566"><a href="#cb8-566" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-567"><a href="#cb8-567" aria-hidden="true" tabindex="-1"></a><span class="co">2. Trust calibration:</span></span>
-<span id="cb8-568"><a href="#cb8-568" aria-hidden="true" tabindex="-1"></a><span class="co">   - Trusted: file listings, basic calculations, code that runs</span></span>
-<span id="cb8-569"><a href="#cb8-569" aria-hidden="true" tabindex="-1"></a><span class="co">   - Verified: join results (row counts!), summary statistics, edge cases</span></span>
-<span id="cb8-570"><a href="#cb8-570" aria-hidden="true" tabindex="-1"></a><span class="co">   - Key insight: output that "looks right" isn't always right</span></span>
-<span id="cb8-571"><a href="#cb8-571" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-572"><a href="#cb8-572" aria-hidden="true" tabindex="-1"></a><span class="co">3. Use cases:</span></span>
-<span id="cb8-573"><a href="#cb8-573" aria-hidden="true" tabindex="-1"></a><span class="co">   - Claude Code: multi-file projects, iteration, debugging</span></span>
-<span id="cb8-574"><a href="#cb8-574" aria-hidden="true" tabindex="-1"></a><span class="co">   - Chat: learning concepts, one-off questions, no setup needed</span></span>
-<span id="cb8-575"><a href="#cb8-575" aria-hidden="true" tabindex="-1"></a><span class="co">   - Both have their place!</span></span>
-<span id="cb8-576"><a href="#cb8-576" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-577"><a href="#cb8-577" aria-hidden="true" tabindex="-1"></a><span class="co">4. Data generation:</span></span>
-<span id="cb8-578"><a href="#cb8-578" aria-hidden="true" tabindex="-1"></a><span class="co">   - Surprising how realistic AI-generated data can be</span></span>
-<span id="cb8-579"><a href="#cb8-579" aria-hidden="true" tabindex="-1"></a><span class="co">   - Need clear specs or you get generic results</span></span>
-<span id="cb8-580"><a href="#cb8-580" aria-hidden="true" tabindex="-1"></a><span class="co">   - Useful for testing, teaching, prototyping</span></span>
-<span id="cb8-581"><a href="#cb8-581" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
-<span id="cb8-582"><a href="#cb8-582" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-583"><a href="#cb8-583" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-584"><a href="#cb8-584" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assignment</span></span>
-<span id="cb8-585"><a href="#cb8-585" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-586"><a href="#cb8-586" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon="assignment"}</span>
-<span id="cb8-587"><a href="#cb8-587" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assignment 4: Extend the Austrian Hotels Dataset</span></span>
-<span id="cb8-588"><a href="#cb8-588" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-589"><a href="#cb8-589" aria-hidden="true" tabindex="-1"></a>**Due:** Sunday 23:55 before Week 5</span>
-<span id="cb8-590"><a href="#cb8-590" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-591"><a href="#cb8-591" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Full Assignment Details</span><span class="co">](../assignments/assignment_04.html)</span>{.assignment-badge}</span>
-<span id="cb8-592"><a href="#cb8-592" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-593"><a href="#cb8-593" aria-hidden="true" tabindex="-1"></a>**Summary:** Using Claude Code, create a new data table that joins to the Austrian Hotels dataset, then perform an analysis that answers an interesting question.</span>
-<span id="cb8-594"><a href="#cb8-594" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-595"><a href="#cb8-595" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-596"><a href="#cb8-596" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-597"><a href="#cb8-597" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
-<span id="cb8-598"><a href="#cb8-598" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-599"><a href="#cb8-599" aria-hidden="true" tabindex="-1"></a>**Claude Code &amp; Terminal:**</span>
-<span id="cb8-600"><a href="#cb8-600" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-601"><a href="#cb8-601" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](../da-knowledge/terminal-basics.html)</span> - Essential commands</span>
-<span id="cb8-602"><a href="#cb8-602" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Install Claude Code</span><span class="co">](../da-knowledge/install-cli.html#claude-code)</span> - Installation guide</span>
-<span id="cb8-603"><a href="#cb8-603" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Claude Code Documentation</span><span class="co">](https://docs.anthropic.com/en/docs/claude-code)</span> - Official docs</span>
-<span id="cb8-604"><a href="#cb8-604" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-605"><a href="#cb8-605" aria-hidden="true" tabindex="-1"></a>**Course Reference:**</span>
-<span id="cb8-606"><a href="#cb8-606" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-607"><a href="#cb8-607" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Technical Terms Glossary</span><span class="co">](../da-knowledge/technical-terms-page.html)</span> - Key AI/data concepts</span>
-<span id="cb8-608"><a href="#cb8-608" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Joining Tables Guide</span><span class="co">](../da-knowledge/joining-tables.html)</span> - Join types explained</span>
-<span id="cb8-609"><a href="#cb8-609" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Advanced CLI Workflows</span><span class="co">](../da-knowledge/cli-advanced-workflows.html)</span> - Power features for experienced users</span>
-<span id="cb8-610"><a href="#cb8-610" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-611"><a href="#cb8-611" aria-hidden="true" tabindex="-1"></a>**Austrian Hotels Dataset:**</span>
-<span id="cb8-612"><a href="#cb8-612" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-613"><a href="#cb8-613" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Dataset Overview</span><span class="co">](../case-studies/austria-hotels/)</span> - All files and documentation</span>
-<span id="cb8-614"><a href="#cb8-614" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Data Schema</span><span class="co">](../case-studies/austria-hotels/data/hotel-data-readme.md)</span> - Table descriptions and relationships</span>
-<span id="cb8-615"><a href="#cb8-615" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-616"><a href="#cb8-616" aria-hidden="true" tabindex="-1"></a>**Python Basics (if needed):**</span>
-<span id="cb8-617"><a href="#cb8-617" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-618"><a href="#cb8-618" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Python for Data Analysis</span><span class="co">](https://wesmckinney.com/book/)</span> - Free online book</span>
-<span id="cb8-619"><a href="#cb8-619" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>pandas documentation: <span class="co">[</span><span class="ot">pandas.pydata.org</span><span class="co">](https://pandas.pydata.org/)</span></span>
-<span id="cb8-620"><a href="#cb8-620" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-621"><a href="#cb8-621" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-622"><a href="#cb8-622" aria-hidden="true" tabindex="-1"></a><span class="fu">## Some personal comments</span></span>
-<span id="cb8-623"><a href="#cb8-623" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-624"><a href="#cb8-624" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>This is where AI gets genuinely useful for data work. Chat interfaces are great for learning and quick questions, but agentic AI changes how you actually *do* the work.</span>
-<span id="cb8-625"><a href="#cb8-625" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The booking channel data we use in class? It was generated by Claude Code while preparing this course. Meta, isn't it?</span>
-<span id="cb8-626"><a href="#cb8-626" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Don't worry if setup takes time. Getting your environment right is a one-time cost that pays off quickly.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 04: Agentic AI with CLIs like Claude Code"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "From chat to terminal - AI that works directly with your files"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-02-05"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>::: {.hero-section}</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>::: {.container}</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>::: {.hero-title}</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>Week 04: Agentic AI with Claude Code</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>From chat to terminal - AI that works directly with your files</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/week4_pic.png)</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## About the class</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>So far we've used AI through chat interfaces - copying code back and forth, describing our data, pasting error messages. This week we introduce **[agentic AI](../da-knowledge/technical-terms-page.html)**: AI that can see your files, run your code, and iterate on results directly. It is a command-line interface (CLI) -- it runs in your terminal. You type commands, the AI responds with code, runs it, and shows results - all in one place. It can assemble knowledge with great deal of automation.  </span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>Instead of describing your data to an AI, you can say "look at these CSV files and tell me what's here." Instead of copying error messages, Claude Code sees them and fixes the code itself.</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tool Options</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>We use **Claude Code** in this class, but the concepts apply to similar tools:</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Tool <span class="pp">|</span> Provider <span class="pp">|</span> Notes <span class="pp">|</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|----------|-------|</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Claude Code](https://claude.com/product/claude-code)** <span class="pp">|</span> Anthropic <span class="pp">|</span> What we use. Requires Claude Pro or API. <span class="pp">|</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Gemini CLI](https://geminicli.com/)** <span class="pp">|</span> Google <span class="pp">|</span> Similar workflow, uses Gemini models. <span class="pp">|</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Codex CLI](https://developers.openai.com/codex/cli/)** <span class="pp">|</span> OpenAI <span class="pp">|</span> OpenAI's command-line tool. <span class="pp">|</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Copilot in VS Code](https://github.com/features/copilot)** <span class="pp">|</span> GitHub/OpenAI <span class="pp">|</span> AI-powered code completion in VS Code. <span class="pp">|</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Cursor](https://cursor.com/) / [Windsurf](https://windsurf.com/)** <span class="pp">|</span> Third-party <span class="pp">|</span> IDE-based, similar agentic features. <span class="pp">|</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Antigravity](https://antigravity.google/)** <span class="pp">|</span> Google <span class="pp">|</span> IDE with AI coding assistance. <span class="pp">|</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>There are differences in capabilities and focus, but the core concepts are the same.</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>Everything you learn today transfers to these alternatives. The prompts, the workflow, the verification habits - all the same. So, we'll use Claude Code as we go but just replace it with other tools. Also, tools are keep evolving, so focus on process more than specifics of a tool. </span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="fu">### Learning Objectives</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>By the end of this session, students will:</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Understand the difference between chat-based AI and agentic AI tools</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Install and configure Claude Code on their machine</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Use Claude Code to explore, understand, and analyze a multi-file dataset</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Experience the workflow difference: iteration speed, context awareness, debugging</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a><span class="fu">### Before class</span></span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>**Setup Required - Do This Before Class**</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>**1. Installation and setup**</span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>Follow the installation guide: **[Installing AI CLI Tools](../da-knowledge/install-cli.html)**</span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>We use Claude Code, but Gemini CLI or Codex CLI also work. The guide covers all options for Windows, Mac, and Linux. </span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>Claude Code lives in the Terminal. *New to the terminal?* Start with <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](../da-knowledge/terminal-basics.html)</span></span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>**2. Ensure python**</span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>Claude Code can run Python code, so Python must be installed:</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Download from <span class="co">[</span><span class="ot">python.org/downloads</span><span class="co">](https://www.python.org/downloads/)</span></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Check "Add Python to PATH"** during installation</span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Install packages: <span class="in">`python -m pip install pandas numpy matplotlib`</span></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>**3. Ensure you have a GitHub account**</span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>and know how basics of working with git</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## Class Plan</span></span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>🤝 **Review on readme docs (20 min)**</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a><span class="fu">### Review Readme assignment</span></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>broad discussion of experience</span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a><span class="fu">### What worked, what was different? </span></span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>First run</span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Extended context window run 1 (create a system prompt)</span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Extended context window run 2 (with slideshows)</span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a><span class="fu">### Problems with AI generated reports.</span></span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>Read each other document.</span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>control?</span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>style?</span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a>**Part 1: Why CLI with Agentic AI? (30 min)**</span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a><span class="fu">### Why CLI Tools? The Core Benefits</span></span>
+<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a>Think about the friction in using chat-based AI for data analysis:</span>
+<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Copy CSV/code → Paste to ChatGPT</span>
+<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Upload files directly - expensive for free plans</span>
+<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>See error → Copy error → Paste back to ChatGPT</span>
+<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Repeat...</span>
+<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-138"><a href="#cb4-138" aria-hidden="true" tabindex="-1"></a>**CLI tools eliminate this friction:**</span>
+<span id="cb4-139"><a href="#cb4-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a>**Files are already there**</span>
+<span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Claude Code sees your CSV files, R scripts, and outputs directly</span>
+<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No uploading, no copy-paste, no describing your data structure</span>
+<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Just: "Look at these files and calculate average occupancy by city"</span>
+<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a>**Code runs immediately**</span>
+<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI writes code and executes it in one step</span>
+<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sees errors and fixes them automatically</span>
+<span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You get results, not just code snippets</span>
+<span id="cb4-149"><a href="#cb4-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-150"><a href="#cb4-150" aria-hidden="true" tabindex="-1"></a>**Context stays intact**</span>
+<span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Remembers your entire project structure</span>
+<span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understands how files relate to each other (<span class="in">`hotels.csv`</span> joins with <span class="in">`cities.csv`</span>)</span>
+<span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Keeps track of what you've done across multiple steps</span>
+<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>**Iteration is fast**</span>
+<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Something looks wrong" → AI investigates without you copying data</span>
+<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Try it a different way" → Runs new approach immediately</span>
+<span id="cb4-158"><a href="#cb4-158" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No manual round-trips for every change</span>
+<span id="cb4-159"><a href="#cb4-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-160"><a href="#cb4-160" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb4-161"><a href="#cb4-161" aria-hidden="true" tabindex="-1"></a><span class="fu">## Want More Power Features?</span></span>
+<span id="cb4-162"><a href="#cb4-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-163"><a href="#cb4-163" aria-hidden="true" tabindex="-1"></a>This covers the basics to get started. For advanced workflows (custom commands, git integration, large-scale data handling), see <span class="co">[</span><span class="ot">Advanced CLI Workflows</span><span class="co">](../da-knowledge/cli-advanced-workflows.html)</span>.</span>
+<span id="cb4-164"><a href="#cb4-164" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a><span class="fu">### What Stays the Same</span></span>
+<span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Underlying intelligence**: Both use state-of-the-art models (Claude Sonnet/Opus 4.5 vs. Gemini 3.0 Pro/Flash) with comparable reasoning for statistical analysis and code generation</span>
+<span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Natural language interface**: Describe tasks in plain language: "Clean this dataset and create a summary statistics table" or "Debug why my regression results look wrong"</span>
+<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Iterative refinement**: Both support conversational debugging—ask the CLI to fix errors, try different estimation methods, or refine exhibit formatting through multiple rounds</span>
+<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Your preferences respected**: Both learn and apply your coding standards (tidyverse, viridis, clean functions) once configured through their respective <span class="in">`.md`</span> instruction files</span>
+<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Multimodal input for data work**:  Both handle various data formats: CSV, Excel, PDFs, images of tables/charts. Useful for extracting data from PDFs, reproducing charts from papers, or generating code from hand-drawn sketches</span>
+<span id="cb4-177"><a href="#cb4-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a><span class="fu">### Discussion: How Would You Do This?</span></span>
+<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a>**Task:** "What's the average hotel occupancy by city in this dataset?"</span>
+<span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a>You have a folder with several CSV files. You want to answer this question using AI assistance.</span>
+<span id="cb4-187"><a href="#cb4-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-188"><a href="#cb4-188" aria-hidden="true" tabindex="-1"></a>**Think-pair-share (10 min):**</span>
+<span id="cb4-189"><a href="#cb4-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-190"><a href="#cb4-190" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>What steps would you take using ChatGPT or Claude.ai (chat interface)?</span>
+<span id="cb4-191"><a href="#cb4-191" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>What information would you need to give the AI?</span>
+<span id="cb4-192"><a href="#cb4-192" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>What could go wrong? How would you handle errors?</span>
+<span id="cb4-193"><a href="#cb4-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-194"><a href="#cb4-194" aria-hidden="true" tabindex="-1"></a>*Discuss with a neighbor, then share with the class.*</span>
+<span id="cb4-195"><a href="#cb4-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-196"><a href="#cb4-196" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Common answers to elicit from students</span></span>
+<span id="cb4-197"><a href="#cb4-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a><span class="co">- Open files, copy some rows to show the AI</span></span>
+<span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a><span class="co">- Describe the data structure ("I have a CSV with columns...")</span></span>
+<span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a><span class="co">- Ask for code, copy it to Python/R</span></span>
+<span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a><span class="co">- If error, copy error message back</span></span>
+<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a><span class="co">- Iterate until it works...</span></span>
+<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a><span class="co">Key point: Every step requires manual copy-paste. Context gets lost easily.</span></span>
+<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a>**The friction:** Every step requires manual copy-paste. Context gets lost. Errors require round-trips.</span>
+<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a>**Part 2: Hands-on - First steps (25 min)**</span>
+<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a><span class="fu">### Setting Up Claude Code</span></span>
+<span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a>***set up folder***</span>
+<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a>Create a git project folder for the Austrian Hotels data <span class="in">`austrian-hotels-data`</span></span>
+<span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-228"><a href="#cb4-228" aria-hidden="true" tabindex="-1"></a>***get the data***</span>
+<span id="cb4-229"><a href="#cb4-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-230"><a href="#cb4-230" aria-hidden="true" tabindex="-1"></a>Download the Austrian Hotels dataset from <span class="co">[</span><span class="ot">here</span><span class="co">](../case-studies/austria-hotels/data/data-modified.zip)</span>.</span>
+<span id="cb4-231"><a href="#cb4-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-232"><a href="#cb4-232" aria-hidden="true" tabindex="-1"></a>***launch Claude Code***</span>
+<span id="cb4-233"><a href="#cb4-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-234"><a href="#cb4-234" aria-hidden="true" tabindex="-1"></a>Open your terminal, navigate to your data folder:</span>
+<span id="cb4-235"><a href="#cb4-235" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-236"><a href="#cb4-236" aria-hidden="true" tabindex="-1"></a><span class="in">cd path/to/austrian-hotels-data</span></span>
+<span id="cb4-237"><a href="#cb4-237" aria-hidden="true" tabindex="-1"></a><span class="in">claude</span></span>
+<span id="cb4-238"><a href="#cb4-238" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-239"><a href="#cb4-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-240"><a href="#cb4-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-241"><a href="#cb4-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-242"><a href="#cb4-242" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task 1: setup</span></span>
+<span id="cb4-243"><a href="#cb4-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-244"><a href="#cb4-244" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Ask to set up a data analysis project folder with data already there.</span>
+<span id="cb4-245"><a href="#cb4-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-246"><a href="#cb4-246" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Have a look, ask changes if you'd like</span>
+<span id="cb4-247"><a href="#cb4-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-248"><a href="#cb4-248" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task 2: data</span></span>
+<span id="cb4-249"><a href="#cb4-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-250"><a href="#cb4-250" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Get all csv files in the /data folder</span>
+<span id="cb4-251"><a href="#cb4-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-252"><a href="#cb4-252" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Ask for a summary of data tables</span>
+<span id="cb4-253"><a href="#cb4-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-254"><a href="#cb4-254" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Interact to learn more about the data</span>
+<span id="cb4-255"><a href="#cb4-255" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>What files are in this folder? Give me a quick overview.</span>
+<span id="cb4-256"><a href="#cb4-256" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>Show me 5 sample rows from each CSV file.</span>
+<span id="cb4-257"><a href="#cb4-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-258"><a href="#cb4-258" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task 3: relations</span></span>
+<span id="cb4-259"><a href="#cb4-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-260"><a href="#cb4-260" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>ask to look at data as linked tables, and tell you keys to join them</span>
+<span id="cb4-261"><a href="#cb4-261" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>Read the hotels and cities files. How are they related? What's the join key?</span>
+<span id="cb4-262"><a href="#cb4-262" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-263"><a href="#cb4-263" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task 4: simple analysis</span></span>
+<span id="cb4-264"><a href="#cb4-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-265"><a href="#cb4-265" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Look at the CSV files here and calculate average occupancy by city</span>
+<span id="cb4-266"><a href="#cb4-266" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>write python code, run it, and show results</span>
+<span id="cb4-267"><a href="#cb4-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-268"><a href="#cb4-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-269"><a href="#cb4-269" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Expected output from demo</span></span>
+<span id="cb4-270"><a href="#cb4-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-271"><a href="#cb4-271" aria-hidden="true" tabindex="-1"></a><span class="co">Average Occupancy Rate by City:</span></span>
+<span id="cb4-272"><a href="#cb4-272" aria-hidden="true" tabindex="-1"></a><span class="co">Vienna           98.0%</span></span>
+<span id="cb4-273"><a href="#cb4-273" aria-hidden="true" tabindex="-1"></a><span class="co">Graz             82.8%</span></span>
+<span id="cb4-274"><a href="#cb4-274" aria-hidden="true" tabindex="-1"></a><span class="co">Innsbruck        79.9%</span></span>
+<span id="cb4-275"><a href="#cb4-275" aria-hidden="true" tabindex="-1"></a><span class="co">Linz             79.3%</span></span>
+<span id="cb4-276"><a href="#cb4-276" aria-hidden="true" tabindex="-1"></a><span class="co">Hallstatt        75.4%</span></span>
+<span id="cb4-277"><a href="#cb4-277" aria-hidden="true" tabindex="-1"></a><span class="co">Bad Gastein      75.0%</span></span>
+<span id="cb4-278"><a href="#cb4-278" aria-hidden="true" tabindex="-1"></a><span class="co">St. Anton        74.1%</span></span>
+<span id="cb4-279"><a href="#cb4-279" aria-hidden="true" tabindex="-1"></a><span class="co">Zell am See      74.0%</span></span>
+<span id="cb4-280"><a href="#cb4-280" aria-hidden="true" tabindex="-1"></a><span class="co">Kitzbühel        73.1%</span></span>
+<span id="cb4-281"><a href="#cb4-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-282"><a href="#cb4-282" aria-hidden="true" tabindex="-1"></a><span class="co">Note: Vienna at 98% is suspiciously high - can mention this as</span></span>
+<span id="cb4-283"><a href="#cb4-283" aria-hidden="true" tabindex="-1"></a><span class="co">a data quality point. Only 9 cities appear (should be 10).</span></span>
+<span id="cb4-284"><a href="#cb4-284" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb4-285"><a href="#cb4-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-286"><a href="#cb4-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-287"><a href="#cb4-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-288"><a href="#cb4-288" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task 5 Discussions</span></span>
+<span id="cb4-289"><a href="#cb4-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-290"><a href="#cb4-290" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>How does this compare to using ChatGPT?</span>
+<span id="cb4-291"><a href="#cb4-291" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Where do you see the biggets advantages? Any downsides or risks?</span>
+<span id="cb4-292"><a href="#cb4-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-293"><a href="#cb4-293" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Exercise 1 expected findings</span></span>
+<span id="cb4-294"><a href="#cb4-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-295"><a href="#cb4-295" aria-hidden="true" tabindex="-1"></a><span class="co">Files in folder:</span></span>
+<span id="cb4-296"><a href="#cb4-296" aria-hidden="true" tabindex="-1"></a><span class="co">- hotels_modified.csv (87 hotels)</span></span>
+<span id="cb4-297"><a href="#cb4-297" aria-hidden="true" tabindex="-1"></a><span class="co">- cities_modified.csv (10 cities)</span></span>
+<span id="cb4-298"><a href="#cb4-298" aria-hidden="true" tabindex="-1"></a><span class="co">- monthly_occupancy_modified.csv (2,088 rows - 87 hotels × 24 months)</span></span>
+<span id="cb4-299"><a href="#cb4-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-300"><a href="#cb4-300" aria-hidden="true" tabindex="-1"></a><span class="co">Join key: city (text) connects hotels to cities</span></span>
+<span id="cb4-301"><a href="#cb4-301" aria-hidden="true" tabindex="-1"></a><span class="co">Also: hotel_id connects hotels to monthly_occupancy</span></span>
+<span id="cb4-302"><a href="#cb4-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-303"><a href="#cb4-303" aria-hidden="true" tabindex="-1"></a><span class="co">Students should notice:</span></span>
+<span id="cb4-304"><a href="#cb4-304" aria-hidden="true" tabindex="-1"></a><span class="co">- hotels has city names, cities has city details (province, population)</span></span>
+<span id="cb4-305"><a href="#cb4-305" aria-hidden="true" tabindex="-1"></a><span class="co">- monthly_occupancy has hotel_id, month, year, occupancy_rate, avg_daily_rate</span></span>
+<span id="cb4-306"><a href="#cb4-306" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb4-307"><a href="#cb4-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-308"><a href="#cb4-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-309"><a href="#cb4-309" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What analysis questions could you ask with this data?</span>
+<span id="cb4-310"><a href="#cb4-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-311"><a href="#cb4-311" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-312"><a href="#cb4-312" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-313"><a href="#cb4-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-314"><a href="#cb4-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-315"><a href="#cb4-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-316"><a href="#cb4-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-317"><a href="#cb4-317" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb4-318"><a href="#cb4-318" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb4-319"><a href="#cb4-319" aria-hidden="true" tabindex="-1"></a>**Part 3: Hands-on - Cleaning **</span>
+<span id="cb4-320"><a href="#cb4-320" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-321"><a href="#cb4-321" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb4-322"><a href="#cb4-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-323"><a href="#cb4-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-324"><a href="#cb4-324" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task 1: Class discussion on potential problems</span></span>
+<span id="cb4-325"><a href="#cb4-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-326"><a href="#cb4-326" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>what are the crucial steps when cleaning tabular data</span>
+<span id="cb4-327"><a href="#cb4-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-328"><a href="#cb4-328" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task 2: Cleaning with Claude Code</span></span>
+<span id="cb4-329"><a href="#cb4-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-330"><a href="#cb4-330" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Use claude code to find problems. </span>
+<span id="cb4-331"><a href="#cb4-331" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>create clean versions of data tables in a new folder <span class="in">`/data_cleaned`</span></span>
+<span id="cb4-332"><a href="#cb4-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-333"><a href="#cb4-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-334"><a href="#cb4-334" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-335"><a href="#cb4-335" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-336"><a href="#cb4-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-337"><a href="#cb4-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-338"><a href="#cb4-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-339"><a href="#cb4-339" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb4-340"><a href="#cb4-340" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb4-341"><a href="#cb4-341" aria-hidden="true" tabindex="-1"></a>**Part 4: Hands-on - Joining tables**</span>
+<span id="cb4-342"><a href="#cb4-342" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-343"><a href="#cb4-343" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb4-344"><a href="#cb4-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-345"><a href="#cb4-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-346"><a href="#cb4-346" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task 1: quick review on joins</span></span>
+<span id="cb4-347"><a href="#cb4-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-348"><a href="#cb4-348" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Review of key concepts <span class="co">[</span><span class="ot">Joining Tables Guide</span><span class="co">](../da-knowledge/joining-tables.html)</span></span>
+<span id="cb4-349"><a href="#cb4-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-350"><a href="#cb4-350" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task 2 joining tables</span></span>
+<span id="cb4-351"><a href="#cb4-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-352"><a href="#cb4-352" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Join hotels and cities** - "Join the hotels and cities data. How many hotels are in each province?"</span>
+<span id="cb4-353"><a href="#cb4-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-354"><a href="#cb4-354" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Aggregate occupancy** - "What's the average occupancy rate by city? Show me a table sorted highest to lowest."</span>
+<span id="cb4-355"><a href="#cb4-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-356"><a href="#cb4-356" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Find patterns** - "Which 5-star hotels have the lowest average daily rate? Something seems off - investigate."</span>
+<span id="cb4-357"><a href="#cb4-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-358"><a href="#cb4-358" aria-hidden="true" tabindex="-1"></a>**Tips:**</span>
+<span id="cb4-359"><a href="#cb4-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-360"><a href="#cb4-360" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If something looks wrong, ask "Why did that happen?" or "Check the row counts"</span>
+<span id="cb4-361"><a href="#cb4-361" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ask Claude Code to show intermediate steps: "Show me the data after the join, before aggregating"</span>
+<span id="cb4-362"><a href="#cb4-362" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you get an error, just wait - Claude Code will often fix it automatically</span>
+<span id="cb4-363"><a href="#cb4-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-364"><a href="#cb4-364" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task 3, manual check</span></span>
+<span id="cb4-365"><a href="#cb4-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-366"><a href="#cb4-366" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>open a created data table and look into it. </span>
+<span id="cb4-367"><a href="#cb4-367" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>how would you test and debug?</span>
+<span id="cb4-368"><a href="#cb4-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-369"><a href="#cb4-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-370"><a href="#cb4-370" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Exercise 2 expected outputs</span></span>
+<span id="cb4-371"><a href="#cb4-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-372"><a href="#cb4-372" aria-hidden="true" tabindex="-1"></a><span class="co">1. Hotels by province:</span></span>
+<span id="cb4-373"><a href="#cb4-373" aria-hidden="true" tabindex="-1"></a><span class="co">   Salzburg         25 hotels</span></span>
+<span id="cb4-374"><a href="#cb4-374" aria-hidden="true" tabindex="-1"></a><span class="co">   Tyrol            22 hotels</span></span>
+<span id="cb4-375"><a href="#cb4-375" aria-hidden="true" tabindex="-1"></a><span class="co">   Vienna           15 hotels</span></span>
+<span id="cb4-376"><a href="#cb4-376" aria-hidden="true" tabindex="-1"></a><span class="co">   Carinthia        10 hotels</span></span>
+<span id="cb4-377"><a href="#cb4-377" aria-hidden="true" tabindex="-1"></a><span class="co">   Styria            8 hotels</span></span>
+<span id="cb4-378"><a href="#cb4-378" aria-hidden="true" tabindex="-1"></a><span class="co">   Upper Austria     7 hotels</span></span>
+<span id="cb4-379"><a href="#cb4-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-380"><a href="#cb4-380" aria-hidden="true" tabindex="-1"></a><span class="co">2. Occupancy by city (same as demo - good chance to verify)</span></span>
+<span id="cb4-381"><a href="#cb4-381" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-382"><a href="#cb4-382" aria-hidden="true" tabindex="-1"></a><span class="co">3. 5-star hotels with low ADR - this is a data quality exercise:</span></span>
+<span id="cb4-383"><a href="#cb4-383" aria-hidden="true" tabindex="-1"></a><span class="co">   Students should find some 5-star hotels with surprisingly low</span></span>
+<span id="cb4-384"><a href="#cb4-384" aria-hidden="true" tabindex="-1"></a><span class="co">   rates. Prompt them to investigate: are these real? Missing data?</span></span>
+<span id="cb4-385"><a href="#cb4-385" aria-hidden="true" tabindex="-1"></a><span class="co">   Seasonal patterns? This teaches the "trust but verify" habit.</span></span>
+<span id="cb4-386"><a href="#cb4-386" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb4-387"><a href="#cb4-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-388"><a href="#cb4-388" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-389"><a href="#cb4-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-390"><a href="#cb4-390" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-391"><a href="#cb4-391" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-392"><a href="#cb4-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-393"><a href="#cb4-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-394"><a href="#cb4-394" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb4-395"><a href="#cb4-395" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb4-396"><a href="#cb4-396" aria-hidden="true" tabindex="-1"></a>**Part 5: Hands-on Generate New Data**</span>
+<span id="cb4-397"><a href="#cb4-397" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-398"><a href="#cb4-398" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb4-399"><a href="#cb4-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-400"><a href="#cb4-400" aria-hidden="true" tabindex="-1"></a><span class="fu">### The Power Move: AI Creates Data</span></span>
+<span id="cb4-401"><a href="#cb4-401" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-402"><a href="#cb4-402" aria-hidden="true" tabindex="-1"></a>One of the most useful capabilities of Claude Code is generating realistic simulated data. This is exactly how the Austrian Hotels dataset was created - by an earlier version of Claude!</span>
+<span id="cb4-403"><a href="#cb4-403" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-404"><a href="#cb4-404" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task 1: Creating Booking Channel Data</span></span>
+<span id="cb4-405"><a href="#cb4-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-406"><a href="#cb4-406" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Let us create a new data table: </span>
+<span id="cb4-407"><a href="#cb4-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-408"><a href="#cb4-408" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-409"><a href="#cb4-409" aria-hidden="true" tabindex="-1"></a><span class="in">I want to create a new CSV file called hotel_bookings.csv that shows</span></span>
+<span id="cb4-410"><a href="#cb4-410" aria-hidden="true" tabindex="-1"></a><span class="in">what percentage of each hotel's bookings come from different channels</span></span>
+<span id="cb4-411"><a href="#cb4-411" aria-hidden="true" tabindex="-1"></a><span class="in">Write Python code to generate this, using the hotels_modified.csv as input.</span></span>
+<span id="cb4-412"><a href="#cb4-412" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-413"><a href="#cb4-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-414"><a href="#cb4-414" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>How could you be more specific to get realistic patterns?</span>
+<span id="cb4-415"><a href="#cb4-415" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>How would you check?</span>
+<span id="cb4-416"><a href="#cb4-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-417"><a href="#cb4-417" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Exercise 2 expected outputs</span></span>
+<span id="cb4-418"><a href="#cb4-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-419"><a href="#cb4-419" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb4-420"><a href="#cb4-420" aria-hidden="true" tabindex="-1"></a><span class="co">I want to create a new CSV file called hotel_bookings.csv that shows</span></span>
+<span id="cb4-421"><a href="#cb4-421" aria-hidden="true" tabindex="-1"></a><span class="co">what percentage of each hotel's bookings come from different channels</span></span>
+<span id="cb4-422"><a href="#cb4-422" aria-hidden="true" tabindex="-1"></a><span class="co">(Direct, Booking.com, Expedia, HRS, Travel Agent).</span></span>
+<span id="cb4-423"><a href="#cb4-423" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-424"><a href="#cb4-424" aria-hidden="true" tabindex="-1"></a><span class="co">Requirements:</span></span>
+<span id="cb4-425"><a href="#cb4-425" aria-hidden="true" tabindex="-1"></a><span class="co">- Each hotel should have rows for each channel</span></span>
+<span id="cb4-426"><a href="#cb4-426" aria-hidden="true" tabindex="-1"></a><span class="co">- Percentages should sum to 100% for each hotel</span></span>
+<span id="cb4-427"><a href="#cb4-427" aria-hidden="true" tabindex="-1"></a><span class="co">- 5-star hotels should have more direct bookings (35-45%)</span></span>
+<span id="cb4-428"><a href="#cb4-428" aria-hidden="true" tabindex="-1"></a><span class="co">- 3-star hotels should rely more on OTAs (Booking.com 40%+)</span></span>
+<span id="cb4-429"><a href="#cb4-429" aria-hidden="true" tabindex="-1"></a><span class="co">- Include a commission rate column (Direct=0%, OTAs=10-18%)</span></span>
+<span id="cb4-430"><a href="#cb4-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-431"><a href="#cb4-431" aria-hidden="true" tabindex="-1"></a><span class="co">Write Python code to generate this, using the hotels_modified.csv as input.</span></span>
+<span id="cb4-432"><a href="#cb4-432" aria-hidden="true" tabindex="-1"></a><span class="co">```</span></span>
+<span id="cb4-433"><a href="#cb4-433" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-434"><a href="#cb4-434" aria-hidden="true" tabindex="-1"></a><span class="co">Claude Code will:</span></span>
+<span id="cb4-435"><a href="#cb4-435" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-436"><a href="#cb4-436" aria-hidden="true" tabindex="-1"></a><span class="co">1. Read the existing hotels data</span></span>
+<span id="cb4-437"><a href="#cb4-437" aria-hidden="true" tabindex="-1"></a><span class="co">2. Write a Python script with realistic logic</span></span>
+<span id="cb4-438"><a href="#cb4-438" aria-hidden="true" tabindex="-1"></a><span class="co">3. Run it and generate the CSV</span></span>
+<span id="cb4-439"><a href="#cb4-439" aria-hidden="true" tabindex="-1"></a><span class="co">4. Show you a summary</span></span>
+<span id="cb4-440"><a href="#cb4-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-441"><a href="#cb4-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-442"><a href="#cb4-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-443"><a href="#cb4-443" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-444"><a href="#cb4-444" aria-hidden="true" tabindex="-1"></a><span class="co">Your turn! Brainstorm a new data table that could join to the hotels data. Ideas:</span></span>
+<span id="cb4-445"><a href="#cb4-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-446"><a href="#cb4-446" aria-hidden="true" tabindex="-1"></a><span class="co">| Table Idea | Join Key | Interesting Analysis |</span></span>
+<span id="cb4-447"><a href="#cb4-447" aria-hidden="true" tabindex="-1"></a><span class="co">|------------|----------|---------------------|</span></span>
+<span id="cb4-448"><a href="#cb4-448" aria-hidden="true" tabindex="-1"></a><span class="co">| **Weather by city/month** | city + month + year | Does weather affect occupancy? |</span></span>
+<span id="cb4-449"><a href="#cb4-449" aria-hidden="true" tabindex="-1"></a><span class="co">| **Staff data** | hotel_id | Do more staff = better reviews? |</span></span>
+<span id="cb4-450"><a href="#cb4-450" aria-hidden="true" tabindex="-1"></a><span class="co">| **Nearby attractions** | city | Which attractions drive tourism? |</span></span>
+<span id="cb4-451"><a href="#cb4-451" aria-hidden="true" tabindex="-1"></a><span class="co">| **Renovation history** | hotel_id | Did renovations boost ratings? |</span></span>
+<span id="cb4-452"><a href="#cb4-452" aria-hidden="true" tabindex="-1"></a><span class="co">| **Competitor Airbnb prices** | city + month | How do hotel prices compare? |</span></span>
+<span id="cb4-453"><a href="#cb4-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-454"><a href="#cb4-454" aria-hidden="true" tabindex="-1"></a><span class="co">**Steps:**</span></span>
+<span id="cb4-455"><a href="#cb4-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-456"><a href="#cb4-456" aria-hidden="true" tabindex="-1"></a><span class="co">1. Pick a table idea with your group</span></span>
+<span id="cb4-457"><a href="#cb4-457" aria-hidden="true" tabindex="-1"></a><span class="co">2. Write a detailed prompt describing what you want (columns, realistic patterns, join keys)</span></span>
+<span id="cb4-458"><a href="#cb4-458" aria-hidden="true" tabindex="-1"></a><span class="co">3. Ask Claude Code to generate it</span></span>
+<span id="cb4-459"><a href="#cb4-459" aria-hidden="true" tabindex="-1"></a><span class="co">4. Verify: Does it look realistic? Can you join it to hotels?</span></span>
+<span id="cb4-460"><a href="#cb4-460" aria-hidden="true" tabindex="-1"></a><span class="co">5. Do one simple analysis with the joined data</span></span>
+<span id="cb4-461"><a href="#cb4-461" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-462"><a href="#cb4-462" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Exercise 3 facilitation notes</span></span>
+<span id="cb4-463"><a href="#cb4-463" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-464"><a href="#cb4-464" aria-hidden="true" tabindex="-1"></a><span class="co">Most popular choices tend to be:</span></span>
+<span id="cb4-465"><a href="#cb4-465" aria-hidden="true" tabindex="-1"></a><span class="co">- Weather data (easy to generate, clear patterns)</span></span>
+<span id="cb4-466"><a href="#cb4-466" aria-hidden="true" tabindex="-1"></a><span class="co">- Staff data (simple 1:1 join)</span></span>
+<span id="cb4-467"><a href="#cb4-467" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-468"><a href="#cb4-468" aria-hidden="true" tabindex="-1"></a><span class="co">Help groups who are stuck with prompt structure:</span></span>
+<span id="cb4-469"><a href="#cb4-469" aria-hidden="true" tabindex="-1"></a><span class="co">"I want to create [filename] with columns [list columns].</span></span>
+<span id="cb4-470"><a href="#cb4-470" aria-hidden="true" tabindex="-1"></a><span class="co">The data should [describe realistic patterns].</span></span>
+<span id="cb4-471"><a href="#cb4-471" aria-hidden="true" tabindex="-1"></a><span class="co">It should join to hotels on [join key]."</span></span>
+<span id="cb4-472"><a href="#cb4-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-473"><a href="#cb4-473" aria-hidden="true" tabindex="-1"></a><span class="co">Common issues:</span></span>
+<span id="cb4-474"><a href="#cb4-474" aria-hidden="true" tabindex="-1"></a><span class="co">- Percentages that don't sum to 100</span></span>
+<span id="cb4-475"><a href="#cb4-475" aria-hidden="true" tabindex="-1"></a><span class="co">- Join keys that don't match (typos, case sensitivity)</span></span>
+<span id="cb4-476"><a href="#cb4-476" aria-hidden="true" tabindex="-1"></a><span class="co">- Unrealistic value ranges</span></span>
+<span id="cb4-477"><a href="#cb4-477" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-478"><a href="#cb4-478" aria-hidden="true" tabindex="-1"></a><span class="co">Encourage groups to share their tables and analyses at the end.</span></span>
+<span id="cb4-479"><a href="#cb4-479" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb4-480"><a href="#cb4-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-481"><a href="#cb4-481" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-482"><a href="#cb4-482" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-483"><a href="#cb4-483" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-484"><a href="#cb4-484" aria-hidden="true" tabindex="-1"></a>--&gt;</span>
+<span id="cb4-485"><a href="#cb4-485" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-486"><a href="#cb4-486" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb4-487"><a href="#cb4-487" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb4-488"><a href="#cb4-488" aria-hidden="true" tabindex="-1"></a>**Part 6: Debugging and Iteration**</span>
+<span id="cb4-489"><a href="#cb4-489" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-490"><a href="#cb4-490" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb4-491"><a href="#cb4-491" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-492"><a href="#cb4-492" aria-hidden="true" tabindex="-1"></a><span class="fu">### When Things Go Wrong</span></span>
+<span id="cb4-493"><a href="#cb4-493" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-494"><a href="#cb4-494" aria-hidden="true" tabindex="-1"></a>Claude Code isn't perfect. Common issues:</span>
+<span id="cb4-495"><a href="#cb4-495" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-496"><a href="#cb4-496" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Wrong join type** - Ask: "How many rows before and after the join? Did we lose data?"</span>
+<span id="cb4-497"><a href="#cb4-497" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Missing values** - Ask: "Are there NaN values? Where did they come from?"</span>
+<span id="cb4-498"><a href="#cb4-498" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Unexpected results** - Ask: "Walk me through the calculation step by step"</span>
+<span id="cb4-499"><a href="#cb4-499" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Code errors** - Often Claude Code fixes these automatically. If not, just describe what went wrong.</span>
+<span id="cb4-500"><a href="#cb4-500" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**[Hallucinations](../da-knowledge/technical-terms-page.html#hallucination)** - AI may generate plausible but incorrect code or stats. Always verify.</span>
+<span id="cb4-501"><a href="#cb4-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-502"><a href="#cb4-502" aria-hidden="true" tabindex="-1"></a><span class="fu">### Trust but Verify</span></span>
+<span id="cb4-503"><a href="#cb4-503" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-504"><a href="#cb4-504" aria-hidden="true" tabindex="-1"></a>**Always check:**</span>
+<span id="cb4-505"><a href="#cb4-505" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-506"><a href="#cb4-506" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Row counts after joins</span>
+<span id="cb4-507"><a href="#cb4-507" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Summary statistics (do means make sense?)</span>
+<span id="cb4-508"><a href="#cb4-508" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A few random rows (do values look realistic?)</span>
+<span id="cb4-509"><a href="#cb4-509" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-510"><a href="#cb4-510" aria-hidden="true" tabindex="-1"></a>**Good habit:** Ask Claude Code to explain what it did:</span>
+<span id="cb4-511"><a href="#cb4-511" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-512"><a href="#cb4-512" aria-hidden="true" tabindex="-1"></a><span class="in">Explain the code you just wrote. What assumptions did you make?</span></span>
+<span id="cb4-513"><a href="#cb4-513" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-514"><a href="#cb4-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-515"><a href="#cb4-515" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Part 4 common student issues</span></span>
+<span id="cb4-516"><a href="#cb4-516" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-517"><a href="#cb4-517" aria-hidden="true" tabindex="-1"></a><span class="co">During exercises, watch for:</span></span>
+<span id="cb4-518"><a href="#cb4-518" aria-hidden="true" tabindex="-1"></a><span class="co">- Students who accept wrong results without checking</span></span>
+<span id="cb4-519"><a href="#cb4-519" aria-hidden="true" tabindex="-1"></a><span class="co">- Joins that lose rows (inner join when left was needed)</span></span>
+<span id="cb4-520"><a href="#cb4-520" aria-hidden="true" tabindex="-1"></a><span class="co">- Column name mismatches (city vs City)</span></span>
+<span id="cb4-521"><a href="#cb4-521" aria-hidden="true" tabindex="-1"></a><span class="co">- Students who don't read error messages before re-prompting</span></span>
+<span id="cb4-522"><a href="#cb4-522" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-523"><a href="#cb4-523" aria-hidden="true" tabindex="-1"></a><span class="co">Good teachable moments:</span></span>
+<span id="cb4-524"><a href="#cb4-524" aria-hidden="true" tabindex="-1"></a><span class="co">- When Claude Code makes a mistake and fixes it automatically</span></span>
+<span id="cb4-525"><a href="#cb4-525" aria-hidden="true" tabindex="-1"></a><span class="co">- When a result looks plausible but is wrong</span></span>
+<span id="cb4-526"><a href="#cb4-526" aria-hidden="true" tabindex="-1"></a><span class="co">- When asking "explain this" reveals a faulty assumption</span></span>
+<span id="cb4-527"><a href="#cb4-527" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb4-528"><a href="#cb4-528" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-529"><a href="#cb4-529" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-530"><a href="#cb4-530" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-531"><a href="#cb4-531" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-532"><a href="#cb4-532" aria-hidden="true" tabindex="-1"></a><span class="fu">## Operation tips</span></span>
+<span id="cb4-533"><a href="#cb4-533" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-534"><a href="#cb4-534" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>use git projects</span>
+<span id="cb4-535"><a href="#cb4-535" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>as CLI tools are file-based, it's easier to manage with git</span>
+<span id="cb4-536"><a href="#cb4-536" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>also gives you version control and backup (if something goes wrong you can pull back to a working state)</span>
+<span id="cb4-537"><a href="#cb4-537" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-538"><a href="#cb4-538" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-539"><a href="#cb4-539" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>start with</span>
+<span id="cb4-540"><a href="#cb4-540" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>higher level review: what do I have in the folder?</span>
+<span id="cb4-541"><a href="#cb4-541" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>thinking and plan first</span>
+<span id="cb4-542"><a href="#cb4-542" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>execute</span>
+<span id="cb4-543"><a href="#cb4-543" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-544"><a href="#cb4-544" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-545"><a href="#cb4-545" aria-hidden="true" tabindex="-1"></a>**resources**</span>
+<span id="cb4-546"><a href="#cb4-546" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-547"><a href="#cb4-547" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Claude Code common workflows</span><span class="co">](https://code.claude.com/docs/en/common-workflows)</span></span>
+<span id="cb4-548"><a href="#cb4-548" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Clude Code skills</span><span class="co">](https://code.claude.com/docs/en/features-overview)</span></span>
+<span id="cb4-549"><a href="#cb4-549" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Gemini Gems</span><span class="co">](https://gemini.google/overview/gems/)</span></span>
+<span id="cb4-550"><a href="#cb4-550" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-551"><a href="#cb4-551" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-552"><a href="#cb4-552" aria-hidden="true" tabindex="-1"></a><span class="fu">## Bottom Line for Data Analysis</span></span>
+<span id="cb4-553"><a href="#cb4-553" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-554"><a href="#cb4-554" aria-hidden="true" tabindex="-1"></a>CLI tools shine when you have:</span>
+<span id="cb4-555"><a href="#cb4-555" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-556"><a href="#cb4-556" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Complex multi-file projects with data pipelines (<span class="in">`raw → clean → analysis → exhibits`</span>)</span>
+<span id="cb4-557"><a href="#cb4-557" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Need for reproducible workflows that others can run</span>
+<span id="cb4-558"><a href="#cb4-558" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Large datasets or documents requiring substantial context</span>
+<span id="cb4-559"><a href="#cb4-559" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Iterative analysis where the AI should test and debug autonomously</span>
+<span id="cb4-560"><a href="#cb4-560" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-561"><a href="#cb4-561" aria-hidden="true" tabindex="-1"></a>The chatbox remains better for:</span>
+<span id="cb4-562"><a href="#cb4-562" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-563"><a href="#cb4-563" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Quick one-off questions or code snippets</span>
+<span id="cb4-564"><a href="#cb4-564" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Exploratory conversations about methodology</span>
+<span id="cb4-565"><a href="#cb4-565" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Situations where you want tight control over each step</span>
+<span id="cb4-566"><a href="#cb4-566" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-567"><a href="#cb4-567" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-568"><a href="#cb4-568" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion Questions</span></span>
+<span id="cb4-569"><a href="#cb4-569" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-570"><a href="#cb4-570" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-571"><a href="#cb4-571" aria-hidden="true" tabindex="-1"></a>**End of Class Reflection:**</span>
+<span id="cb4-572"><a href="#cb4-572" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-573"><a href="#cb4-573" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Workflow change:** How did using Claude Code feel different from chat-based AI? What was faster? What was harder?</span>
+<span id="cb4-574"><a href="#cb4-574" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-575"><a href="#cb4-575" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Trust calibration:** When did you trust Claude Code's output? When did you double-check? How do you decide?</span>
+<span id="cb4-576"><a href="#cb4-576" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-577"><a href="#cb4-577" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Use cases:** For what tasks would you now prefer Claude Code over ChatGPT/Claude.ai? When would you still use chat?</span>
+<span id="cb4-578"><a href="#cb4-578" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-579"><a href="#cb4-579" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Data generation:** What did you learn from creating synthetic data? How could this help in your own projects?</span>
+<span id="cb4-580"><a href="#cb4-580" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-581"><a href="#cb4-581" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Instructor: Discussion question expected themes</span></span>
+<span id="cb4-582"><a href="#cb4-582" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-583"><a href="#cb4-583" aria-hidden="true" tabindex="-1"></a><span class="co">1. Workflow change:</span></span>
+<span id="cb4-584"><a href="#cb4-584" aria-hidden="true" tabindex="-1"></a><span class="co">   - Faster: no copy-paste, sees errors immediately, keeps context</span></span>
+<span id="cb4-585"><a href="#cb4-585" aria-hidden="true" tabindex="-1"></a><span class="co">   - Harder: less control, can't easily undo, terminal unfamiliar</span></span>
+<span id="cb4-586"><a href="#cb4-586" aria-hidden="true" tabindex="-1"></a><span class="co">   - Some students prefer chat for "thinking out loud"</span></span>
+<span id="cb4-587"><a href="#cb4-587" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-588"><a href="#cb4-588" aria-hidden="true" tabindex="-1"></a><span class="co">2. Trust calibration:</span></span>
+<span id="cb4-589"><a href="#cb4-589" aria-hidden="true" tabindex="-1"></a><span class="co">   - Trusted: file listings, basic calculations, code that runs</span></span>
+<span id="cb4-590"><a href="#cb4-590" aria-hidden="true" tabindex="-1"></a><span class="co">   - Verified: join results (row counts!), summary statistics, edge cases</span></span>
+<span id="cb4-591"><a href="#cb4-591" aria-hidden="true" tabindex="-1"></a><span class="co">   - Key insight: output that "looks right" isn't always right</span></span>
+<span id="cb4-592"><a href="#cb4-592" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-593"><a href="#cb4-593" aria-hidden="true" tabindex="-1"></a><span class="co">3. Use cases:</span></span>
+<span id="cb4-594"><a href="#cb4-594" aria-hidden="true" tabindex="-1"></a><span class="co">   - Claude Code: multi-file projects, iteration, debugging</span></span>
+<span id="cb4-595"><a href="#cb4-595" aria-hidden="true" tabindex="-1"></a><span class="co">   - Chat: learning concepts, one-off questions, no setup needed</span></span>
+<span id="cb4-596"><a href="#cb4-596" aria-hidden="true" tabindex="-1"></a><span class="co">   - Both have their place!</span></span>
+<span id="cb4-597"><a href="#cb4-597" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-598"><a href="#cb4-598" aria-hidden="true" tabindex="-1"></a><span class="co">4. Data generation:</span></span>
+<span id="cb4-599"><a href="#cb4-599" aria-hidden="true" tabindex="-1"></a><span class="co">   - Surprising how realistic AI-generated data can be</span></span>
+<span id="cb4-600"><a href="#cb4-600" aria-hidden="true" tabindex="-1"></a><span class="co">   - Need clear specs or you get generic results</span></span>
+<span id="cb4-601"><a href="#cb4-601" aria-hidden="true" tabindex="-1"></a><span class="co">   - Useful for testing, teaching, prototyping</span></span>
+<span id="cb4-602"><a href="#cb4-602" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb4-603"><a href="#cb4-603" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-604"><a href="#cb4-604" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-605"><a href="#cb4-605" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assignment</span></span>
+<span id="cb4-606"><a href="#cb4-606" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-607"><a href="#cb4-607" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon="assignment"}</span>
+<span id="cb4-608"><a href="#cb4-608" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assignment 4: Extend the Austrian Hotels Dataset</span></span>
+<span id="cb4-609"><a href="#cb4-609" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-610"><a href="#cb4-610" aria-hidden="true" tabindex="-1"></a>**Due:** Sunday 23:55 before Week 5</span>
+<span id="cb4-611"><a href="#cb4-611" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-612"><a href="#cb4-612" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Full Assignment Details</span><span class="co">](../assignments/assignment_04.html)</span>{.assignment-badge}</span>
+<span id="cb4-613"><a href="#cb4-613" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-614"><a href="#cb4-614" aria-hidden="true" tabindex="-1"></a>**Summary:** Using Claude Code, create a new data table that joins to the Austrian Hotels dataset, then perform an analysis that answers an interesting question.</span>
+<span id="cb4-615"><a href="#cb4-615" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-616"><a href="#cb4-616" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-617"><a href="#cb4-617" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-618"><a href="#cb4-618" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
+<span id="cb4-619"><a href="#cb4-619" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-620"><a href="#cb4-620" aria-hidden="true" tabindex="-1"></a>**Claude Code &amp; Terminal:**</span>
+<span id="cb4-621"><a href="#cb4-621" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-622"><a href="#cb4-622" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](../da-knowledge/terminal-basics.html)</span> - Essential commands</span>
+<span id="cb4-623"><a href="#cb4-623" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Install Claude Code</span><span class="co">](../da-knowledge/install-cli.html#claude-code)</span> - Installation guide</span>
+<span id="cb4-624"><a href="#cb4-624" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Claude Code Documentation</span><span class="co">](https://docs.anthropic.com/en/docs/claude-code)</span> - Official docs</span>
+<span id="cb4-625"><a href="#cb4-625" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-626"><a href="#cb4-626" aria-hidden="true" tabindex="-1"></a>**Additional references**</span>
+<span id="cb4-627"><a href="#cb4-627" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-628"><a href="#cb4-628" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Short showcase of what is possible now (2026 Jan) )</span><span class="co">](https://www.youtube.com/watch?v=hiISl558JGE)</span> -- must watch 15 mins</span>
+<span id="cb4-629"><a href="#cb4-629" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-630"><a href="#cb4-630" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-631"><a href="#cb4-631" aria-hidden="true" tabindex="-1"></a>**Course Reference:**</span>
+<span id="cb4-632"><a href="#cb4-632" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-633"><a href="#cb4-633" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Technical Terms Glossary</span><span class="co">](../da-knowledge/technical-terms-page.html)</span> - Key AI/data concepts</span>
+<span id="cb4-634"><a href="#cb4-634" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Joining Tables Guide</span><span class="co">](../da-knowledge/joining-tables.html)</span> - Join types explained</span>
+<span id="cb4-635"><a href="#cb4-635" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Advanced CLI Workflows</span><span class="co">](../da-knowledge/cli-advanced-workflows.html)</span> - Power features for experienced users</span>
+<span id="cb4-636"><a href="#cb4-636" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-637"><a href="#cb4-637" aria-hidden="true" tabindex="-1"></a>**Austrian Hotels Dataset:**</span>
+<span id="cb4-638"><a href="#cb4-638" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-639"><a href="#cb4-639" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Dataset Overview</span><span class="co">](../case-studies/austria-hotels/)</span> - All files and documentation</span>
+<span id="cb4-640"><a href="#cb4-640" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Data Schema</span><span class="co">](../case-studies/austria-hotels/data/hotel-data-readme.md)</span> - Table descriptions and relationships</span>
+<span id="cb4-641"><a href="#cb4-641" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-642"><a href="#cb4-642" aria-hidden="true" tabindex="-1"></a>**Python Basics (if needed):**</span>
+<span id="cb4-643"><a href="#cb4-643" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-644"><a href="#cb4-644" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Python for Data Analysis</span><span class="co">](https://wesmckinney.com/book/)</span> - Free online book</span>
+<span id="cb4-645"><a href="#cb4-645" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>pandas documentation: <span class="co">[</span><span class="ot">pandas.pydata.org</span><span class="co">](https://pandas.pydata.org/)</span></span>
+<span id="cb4-646"><a href="#cb4-646" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-647"><a href="#cb4-647" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-648"><a href="#cb4-648" aria-hidden="true" tabindex="-1"></a><span class="fu">## Some personal comments</span></span>
+<span id="cb4-649"><a href="#cb4-649" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-650"><a href="#cb4-650" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>This is where AI gets genuinely useful for data work. Chat interfaces are great for learning and quick questions, but agentic AI changes how you actually *do* the work.</span>
+<span id="cb4-651"><a href="#cb4-651" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The booking channel data we use in class? It was generated by Claude Code while preparing this course. Meta, isn't it?</span>
+<span id="cb4-652"><a href="#cb4-652" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Don't worry if setup takes time. Getting your environment right is a one-time cost that pays off quickly.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
