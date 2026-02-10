@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>World Values Survey Data Analysis – Doing Data Analysis with AI</title>
+<title>Walkthrough: Using soccerdata to Fetch Arsenal’s 2023–24 Match Stats – Doing Data Analysis with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -151,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">World Values Survey Data Analysis</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Walkthrough: Using <code>soccerdata</code> to Fetch Arsenal’s 2023–24 Match Stats</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -385,12 +385,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#repository-structure" id="toc-repository-structure" class="nav-link" data-scroll-target="#repository-structure">Repository Structure</a></li>
-  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description">Data Description</a></li>
-  <li><a href="#code-and-reproducibility" id="toc-code-and-reproducibility" class="nav-link" data-scroll-target="#code-and-reproducibility">Code and Reproducibility</a></li>
-  <li><a href="#license-and-citation" id="toc-license-and-citation" class="nav-link" data-scroll-target="#license-and-citation">License and Citation</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  <li><a href="#what-just-happened" id="toc-what-just-happened" class="nav-link active" data-scroll-target="#what-just-happened">What just happened?</a></li>
+  <li><a href="#r-equivalent" id="toc-r-equivalent" class="nav-link" data-scroll-target="#r-equivalent">R equivalent</a></li>
   </ul>
 </nav>
     </div>
@@ -399,7 +395,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">World Values Survey Data Analysis</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Walkthrough: Using <code>soccerdata</code> to Fetch Arsenal’s 2023–24 Match Stats</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -416,67 +412,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This repository contains data and code for analyzing the World Values Survey (WVS) dataset. The project involves data cleaning, processing, and merging GDP data with survey responses.</p>
-</section>
-<section id="repository-structure" class="level2">
-<h2 class="anchored" data-anchor-id="repository-structure">Repository Structure</h2>
-<pre><code>📂 osf-vwvs/                   # Root directory
- ├── 📂 clean/                 # Processed datasets  
- │    ├── WVS_GDP_merged_data.csv    # Merged WVS data with GDP  
- │    ├── WVS_random_subset.csv      # Random subset of WVS data  
- │    ├── WVS_subset.csv             # Subset of WVS data  
- │  
- ├── 📂 documentation/          # Documentation and metadata  
- │    ├── codebook.pdf          # Variable definitions and coding instructions  
- │  
- ├── 📂 raw/                    # Raw data files  
- │    ├── WVS_Cross-National_Wave_7_csv_v6_0.csv  # Original WVS dataset  
- │  
- ├── 📂 code/                   # Scripts for data processing  
- │    ├── cleaning.R            # Script to clean and process WVS data  
- │  
- ├── README.md                  # Project description and instructions  </code></pre>
-</section>
-<section id="data-description" class="level2">
-<h2 class="anchored" data-anchor-id="data-description">Data Description</h2>
+<p>Below is a simple, step-by-step recipe for pulling Arsenal’s match-by-match team statistics for the 2023–24 Premier League season from FBref, using the <code>soccerdata</code> Python client library. You never write raw HTTP requests—<code>soccerdata</code> handles those for you.</p>
+<pre><code># 1. Install and import the library
+#    Wraps FBref's REST API in Python methods.
+#    pip install soccerdata
+import soccerdata as sd
+
+# 2. Initialize the FBref data source
+#    Specify the league and season you want.
+fbref = sd.FBref(leagues="ENG-Premier League", seasons="2023-24")
+
+# 3. Retrieve Arsenal's match stats
+#    Returns a pandas DataFrame of every fixture.
+arsenal_stats = fbref.read_team_match_stats(team="Arsenal")
+
+# 4. Inspect the resulting DataFrame
+print(arsenal_stats.head())</code></pre>
+<section id="what-just-happened" class="level3">
+<h3 class="anchored" data-anchor-id="what-just-happened">What just happened?</h3>
 <ul>
-<li><strong>Source</strong>: The WVS dataset is publicly available at <a href="https://www.worldvaluessurvey.org/">World Values Survey</a>.<br>
-</li>
-<li><strong>Processed Data</strong>: The <code>clean/</code> folder contains merged and subsetted datasets used for analysis.<br>
-</li>
-<li><strong>Raw Data</strong>: The <code>raw/</code> folder holds the original dataset in <code>.csv</code> format.<br>
-</li>
-<li><strong>Documentation</strong>: The <code>codebook.pdf</code> explains variable definitions and survey methodology.</li>
+<li><p><strong>Abstraction over HTTP</strong><br>
+The <code>FBref</code> class builds the correct URLs, attaches any required headers or API keys, sends HTTP GET requests to FBref’s endpoints, and handles pagination and retries automatically.</p></li>
+<li><p><strong>Automatic data parsing</strong><br>
+JSON responses from FBref are converted into a pandas DataFrame for you—no manual <code>json.loads()</code> or DataFrame construction needed.</p></li>
+<li><p><strong>Error handling &amp; reliability</strong><br>
+Common HTTP errors (e.g., timeouts, 404 Not Found) are wrapped in clear exceptions. Transient failures can trigger automatic retries, so your analysis code stays focused on insights, not networking glitches.</p></li>
+<li><p><strong>Idiomatic, Pythonic interface</strong><br>
+The library returns native Python objects (DataFrames, lists, dictionaries) and uses familiar method names, making the API feel intuitive and concise rather than a tangle of raw HTTP mechanics.</p></li>
 </ul>
-</section>
-<section id="code-and-reproducibility" class="level2">
-<h2 class="anchored" data-anchor-id="code-and-reproducibility">Code and Reproducibility</h2>
-<ul>
-<li><strong>Main script</strong>: <code>code/cleaning.R</code> cleans and processes the raw WVS data.</li>
-<li><strong>Requirements</strong>:
-<ul>
-<li>R (version X.X.X)</li>
-<li>Required packages: <code>tidyverse</code>, <code>haven</code></li>
-</ul></li>
-<li><strong>Running the code</strong>:
+<p>Under the hood, <code>soccerdata</code> still uses an HTTP client (like <code>requests</code>) to interact with the REST API. But by encapsulating all networking, authentication, and JSON-handling logic in a single <code>read_team_match_stats()</code> call, it lets you:</p>
 <ol type="1">
-<li>Place the raw data in the <code>raw/</code> folder.</li>
-<li>Run <code>cleaning.R</code> to generate the processed datasets.</li>
-</ol></li>
-</ul>
+<li><strong>Write clean, declarative code</strong><br>
+</li>
+<li><strong>Develop faster with fewer bugs</strong><br>
+</li>
+<li><strong>Focus on analysis and insights instead of HTTP details</strong></li>
+</ol>
+<p>This pattern—installing a client library, instantiating a connector object, invoking a single method, and working with a DataFrame—is common across many Python APIs, from OpenAI to Google Cloud to GitHub. Once you understand it, you can apply it to virtually any web service.</p>
 </section>
-<section id="license-and-citation" class="level2">
-<h2 class="anchored" data-anchor-id="license-and-citation">License and Citation</h2>
-<ul>
-<li>This project follows the <strong>MIT License</strong>.</li>
-<li>If using this data or code, please cite the original WVS dataset.</li>
-</ul>
-</section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p>For questions or collaboration, contact: <strong>[Your Name]</strong> at <strong>[Your Email]</strong>.</p>
+<section id="r-equivalent" class="level2">
+<h2 class="anchored" data-anchor-id="r-equivalent">R equivalent</h2>
+<pre><code># 1. Install and load the package
+install.packages("worldfootballR")  # different package, same idea
+library(worldfootballR)
+
+# 2. Get Arsenal match results from the Premier League 2023/24
+arsenal_matches &lt;- fb_team_match_results(
+  team_url = "https://fbref.com/en/squads/18bb7c10/Arsenal-Stats")
+
+# 3. Inspect the data
+head(arsenal_matches)
+</code></pre>
 
 
 <!-- -->
@@ -935,59 +921,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "World Values Survey Data Analysis"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>This repository contains data and code for analyzing the World Values Survey (WVS) dataset. The project involves data cleaning, processing, and merging GDP data with survey responses.</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Repository Structure</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">📂 osf-vwvs/                   # Root directory</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 clean/                 # Processed datasets  </span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_GDP_merged_data.csv    # Merged WVS data with GDP  </span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_random_subset.csv      # Random subset of WVS data  </span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_subset.csv             # Subset of WVS data  </span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 documentation/          # Documentation and metadata  </span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── codebook.pdf          # Variable definitions and coding instructions  </span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 raw/                    # Raw data files  </span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_Cross-National_Wave_7_csv_v6_0.csv  # Original WVS dataset  </span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 code/                   # Scripts for data processing  </span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── cleaning.R            # Script to clean and process WVS data  </span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── README.md                  # Project description and instructions  </span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Description</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Source**: The WVS dataset is publicly available at <span class="co">[</span><span class="ot">World Values Survey</span><span class="co">](https://www.worldvaluessurvey.org/)</span>.  </span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Processed Data**: The <span class="in">`clean/`</span> folder contains merged and subsetted datasets used for analysis.  </span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Raw Data**: The <span class="in">`raw/`</span> folder holds the original dataset in <span class="in">`.csv`</span> format.  </span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Documentation**: The <span class="in">`codebook.pdf`</span> explains variable definitions and survey methodology.</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Code and Reproducibility</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Main script**: <span class="in">`code/cleaning.R`</span> cleans and processes the raw WVS data.</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Requirements**:</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R (version X.X.X)</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Required packages: <span class="in">`tidyverse`</span>, <span class="in">`haven`</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Running the code**:</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>Place the raw data in the <span class="in">`raw/`</span> folder.</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>Run <span class="in">`cleaning.R`</span> to generate the processed datasets.</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## License and Citation</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>This project follows the **MIT License**.</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If using this data or code, please cite the original WVS dataset.</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contact</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>For questions or collaboration, contact: **[Your Name]** at **[Your Email]**.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Walkthrough: Using `soccerdata` to Fetch Arsenal's 2023–24 Match Stats"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Below is a simple, step-by-step recipe for pulling Arsenal's match-by-match team statistics for the 2023–24 Premier League season from FBref, using the <span class="in">`soccerdata`</span> Python client library. You never write raw HTTP requests—<span class="in">`soccerdata`</span> handles those for you.</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="in"># 1. Install and import the library</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in">#    Wraps FBref's REST API in Python methods.</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="in">#    pip install soccerdata</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="in">import soccerdata as sd</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="in"># 2. Initialize the FBref data source</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="in">#    Specify the league and season you want.</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="in">fbref = sd.FBref(leagues="ENG-Premier League", seasons="2023-24")</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="in"># 3. Retrieve Arsenal's match stats</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="in">#    Returns a pandas DataFrame of every fixture.</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="in">arsenal_stats = fbref.read_team_match_stats(team="Arsenal")</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="in"># 4. Inspect the resulting DataFrame</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="in">print(arsenal_stats.head())</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="fu">### What just happened?</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Abstraction over HTTP**  </span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  The <span class="in">`FBref`</span> class builds the correct URLs, attaches any required headers or API keys, sends HTTP GET requests to FBref's endpoints, and handles pagination and retries automatically.</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Automatic data parsing**  </span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  JSON responses from FBref are converted into a pandas DataFrame for you—no manual <span class="in">`json.loads()`</span> or DataFrame construction needed.</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Error handling &amp; reliability**  </span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  Common HTTP errors (e.g., timeouts, 404 Not Found) are wrapped in clear exceptions. Transient failures can trigger automatic retries, so your analysis code stays focused on insights, not networking glitches.</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Idiomatic, Pythonic interface**  </span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  The library returns native Python objects (DataFrames, lists, dictionaries) and uses familiar method names, making the API feel intuitive and concise rather than a tangle of raw HTTP mechanics.</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>Under the hood, <span class="in">`soccerdata`</span> still uses an HTTP client (like <span class="in">`requests`</span>) to interact with the REST API. But by encapsulating all networking, authentication, and JSON-handling logic in a single <span class="in">`read_team_match_stats()`</span> call, it lets you:</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Write clean, declarative code**  </span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Develop faster with fewer bugs**  </span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Focus on analysis and insights instead of HTTP details**</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>This pattern—installing a client library, instantiating a connector object, invoking a single method, and working with a DataFrame—is common across many Python APIs, from OpenAI to Google Cloud to GitHub. Once you understand it, you can apply it to virtually any web service.</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## R equivalent</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="in"># 1. Install and load the package</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="in">install.packages("worldfootballR")  # different package, same idea</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="in">library(worldfootballR)</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="in"># 2. Get Arsenal match results from the Premier League 2023/24</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="in">arsenal_matches &lt;- fb_team_match_results(</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="in">  team_url = "https://fbref.com/en/squads/18bb7c10/Arsenal-Stats")</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="in"># 3. Inspect the data</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="in">head(arsenal_matches)</span></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>World Values Survey Data Analysis – Doing Data Analysis with AI</title>
+<title>Introduction to APIs: Why and when use them, and how to get started – Doing Data Analysis with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -151,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">World Values Survey Data Analysis</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Introduction to APIs: Why and when use them, and how to get started</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -385,12 +385,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#repository-structure" id="toc-repository-structure" class="nav-link" data-scroll-target="#repository-structure">Repository Structure</a></li>
-  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description">Data Description</a></li>
-  <li><a href="#code-and-reproducibility" id="toc-code-and-reproducibility" class="nav-link" data-scroll-target="#code-and-reproducibility">Code and Reproducibility</a></li>
-  <li><a href="#license-and-citation" id="toc-license-and-citation" class="nav-link" data-scroll-target="#license-and-citation">License and Citation</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  <li><a href="#why-apis" id="toc-why-apis" class="nav-link active" data-scroll-target="#why-apis">Why APIs?</a></li>
+  <li><a href="#what-is-an-api" id="toc-what-is-an-api" class="nav-link" data-scroll-target="#what-is-an-api">What is an API?</a></li>
+  <li><a href="#benefits-of-using-apis-in-data-analysis" id="toc-benefits-of-using-apis-in-data-analysis" class="nav-link" data-scroll-target="#benefits-of-using-apis-in-data-analysis">Benefits of Using APIs in Data Analysis</a></li>
+  <li><a href="#api-keys-and-authentication" id="toc-api-keys-and-authentication" class="nav-link" data-scroll-target="#api-keys-and-authentication">API Keys and Authentication</a></li>
+  <li><a href="#get-an-api" id="toc-get-an-api" class="nav-link" data-scroll-target="#get-an-api">Get an API</a></li>
+  <li><a href="#walkthrough-examples" id="toc-walkthrough-examples" class="nav-link" data-scroll-target="#walkthrough-examples">Walkthrough examples</a></li>
+  <li><a href="#whats-different-in-r" id="toc-whats-different-in-r" class="nav-link" data-scroll-target="#whats-different-in-r">What’s different in R</a></li>
+  <li><a href="#scaling-up-with-apis-from-20-to-10000-and-beyond" id="toc-scaling-up-with-apis-from-20-to-10000-and-beyond" class="nav-link" data-scroll-target="#scaling-up-with-apis-from-20-to-10000-and-beyond">Scaling Up with APIs: From 20 to 10,000 and Beyond</a></li>
   </ul>
 </nav>
     </div>
@@ -399,7 +401,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">World Values Survey Data Analysis</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Introduction to APIs: Why and when use them, and how to get started</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -416,67 +418,73 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This repository contains data and code for analyzing the World Values Survey (WVS) dataset. The project involves data cleaning, processing, and merging GDP data with survey responses.</p>
+<section id="why-apis" class="level2">
+<h2 class="anchored" data-anchor-id="why-apis">Why APIs?</h2>
+<p>Previously, we manually examined a sample of just 20 texts and tried using an LLM for sentiment analysis. How long did this take you? Would it still be doable if there were 75 texts? Likely, yes. However, imagine you have <strong>10,000</strong> texts to analyze for sentiment. Analyzing 10,000 texts one by one (or copying them into a tool manually) would be nearly impossible – it would take endless hours and be prone to error. We need a way to <strong>automate and scale</strong> the process. This is where <strong>APIs</strong> come in. By leveraging an API, we can send those thousands of texts to a powerful external service that analyzes sentiment and returns results in seconds. A nice recent example of this in economics research is <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5103580">a recent working paper</a> that used as data over 1,400 American life narratives from the 1930s to uncover common themes about what it means to live a meaningful life.</p>
+<p>Our baseline approach is for Python, but R is pretty similar (see below)</p>
 </section>
-<section id="repository-structure" class="level2">
-<h2 class="anchored" data-anchor-id="repository-structure">Repository Structure</h2>
-<pre><code>📂 osf-vwvs/                   # Root directory
- ├── 📂 clean/                 # Processed datasets  
- │    ├── WVS_GDP_merged_data.csv    # Merged WVS data with GDP  
- │    ├── WVS_random_subset.csv      # Random subset of WVS data  
- │    ├── WVS_subset.csv             # Subset of WVS data  
- │  
- ├── 📂 documentation/          # Documentation and metadata  
- │    ├── codebook.pdf          # Variable definitions and coding instructions  
- │  
- ├── 📂 raw/                    # Raw data files  
- │    ├── WVS_Cross-National_Wave_7_csv_v6_0.csv  # Original WVS dataset  
- │  
- ├── 📂 code/                   # Scripts for data processing  
- │    ├── cleaning.R            # Script to clean and process WVS data  
- │  
- ├── README.md                  # Project description and instructions  </code></pre>
-</section>
-<section id="data-description" class="level2">
-<h2 class="anchored" data-anchor-id="data-description">Data Description</h2>
+<section id="what-is-an-api" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-an-api">What is an API?</h2>
+<p>An <strong>API (Application Programming Interface)</strong> is like a <strong>messenger</strong> or <strong>middleman</strong> that lets two different programs talk to each other and exchange information. Instead of a person directly doing a task, you have one software program asking another program to do something on its behalf. A popular analogy is that an API is similar to a <a href="https://www.youtube.com/watch?v=OVvTv9Hy91Q"><strong>restaurant waiter</strong></a>:</p>
 <ul>
-<li><strong>Source</strong>: The WVS dataset is publicly available at <a href="https://www.worldvaluessurvey.org/">World Values Survey</a>.<br>
-</li>
-<li><strong>Processed Data</strong>: The <code>clean/</code> folder contains merged and subsetted datasets used for analysis.<br>
-</li>
-<li><strong>Raw Data</strong>: The <code>raw/</code> folder holds the original dataset in <code>.csv</code> format.<br>
-</li>
-<li><strong>Documentation</strong>: The <code>codebook.pdf</code> explains variable definitions and survey methodology.</li>
+<li><strong>You (the client)</strong> are sitting at a table, ready to order a meal (you have a request for information or a service).</li>
+<li><strong>The waiter (the API)</strong> takes your order and relays it to the kitchen. You don’t go into the kitchen yourself – the waiter is the go-between.</li>
+<li><strong>The kitchen (the server)</strong> is where the work happens. The chef prepares the meal (the data or service you requested).</li>
+<li><strong>The waiter (API) returns with your meal</strong> and serves it to you. You get exactly what you ordered, without having to know how the kitchen prepared it.</li>
+</ul>
+<p>In this analogy, the restaurant’s <strong>menu</strong> is like the <strong>API documentation</strong> – it lists what you can ask for and how to ask for it. If you request something not on the menu, the waiter (API) will tell you it’s not available (an error). Similarly, an API provides a set of <strong>rules and endpoints</strong> that define what requests can be made and what responses you can expect.</p>
+<p>This means you don’t need to know the complex inner workings of the server or service. You just need to know <em>what</em> to ask for and <em>how</em> to ask for it through the API. The API handles the communication, just as the waiter handles communication between you and the kitchen.</p>
+</section>
+<section id="benefits-of-using-apis-in-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="benefits-of-using-apis-in-data-analysis">Benefits of Using APIs in Data Analysis</h2>
+<p>Why use APIs as a data analyst? Here are some key benefits:</p>
+<ul>
+<li><strong>Scalability:</strong> APIs let you process <em>large volumes</em> of data quickly. You can automate requests in code, so analyzing 10,000 texts or more becomes feasible. Instead of manually working with each piece of data, you let a server handle the heavy lifting.</li>
+<li><strong>Access to Powerful Tools:</strong> Many companies provide APIs for advanced services like sentiment analysis, language translation, image recognition, or data storage. As a data analyst, you can tap into these <strong>pre-built models and services</strong> without having to develop them from scratch.</li>
+<li><strong>Time and Effort Savings:</strong> Using an API, you can perform complex tasks with just a simple request. This saves you the time of writing extensive code or doing repetitive work. For example, rather than writing your own sentiment analysis algorithm, you can send text to an API and get sentiment results immediately.</li>
+<li><strong>Integration of Data Sources:</strong> APIs allow different software and datasets to integrate. You can pull data from different sources (e.g.&nbsp;Twitter’s API for tweets, a weather API for climate data) directly into your analysis pipeline. This <strong>marries data from multiple sources</strong> seamlessly.</li>
+<li><strong>Consistency and Reliability:</strong> When you use a well-established API, you benefit from a service that’s been tested and optimized. The API will handle errors, edge cases, and updates, so you get consistent results. It’s like outsourcing a task to an expert – you trust the API to do its job correctly.</li>
 </ul>
 </section>
-<section id="code-and-reproducibility" class="level2">
-<h2 class="anchored" data-anchor-id="code-and-reproducibility">Code and Reproducibility</h2>
+<section id="api-keys-and-authentication" class="level2">
+<h2 class="anchored" data-anchor-id="api-keys-and-authentication">API Keys and Authentication</h2>
+<p>Most APIs require some form of <strong>authentication</strong> to ensure that only authorized users or applications can use them. The simplest form is an <strong>API key</strong>. An API key is like a <strong>secret password or ID</strong> that you include with your API calls:</p>
 <ul>
-<li><strong>Main script</strong>: <code>code/cleaning.R</code> cleans and processes the raw WVS data.</li>
-<li><strong>Requirements</strong>:
-<ul>
-<li>R (version X.X.X)</li>
-<li>Required packages: <code>tidyverse</code>, <code>haven</code></li>
-</ul></li>
-<li><strong>Running the code</strong>:
+<li>You typically get an API key by creating an account or registering an application with the API provider. For example, to use the Twitter API or OpenAI API, you’d sign up and receive a key (or token).</li>
+<li>The key itself is usually a long string of characters (letters, numbers, and symbols). It’s unique to you or your application.</li>
+<li>You include this key with every request. Often it goes in a request header (for instance, you might set a header <code>Authorization: Bearer YOUR_API_KEY</code>), or sometimes as a URL parameter (e.g., <code>?api_key=YOUR_API_KEY</code> in the query string). The API documentation will tell you exactly how to include the key.</li>
+<li>The server checks the key. If the key is missing or wrong, the API will usually respond with an authentication error (like a 401 Unauthorized status). If the key is valid, the server will proceed to handle your request.</li>
+<li><strong>Security tip:</strong> Never share your API keys publicly or commit them to public repositories. They are meant to be kept secret. If someone obtains your key, they could use the API pretending to be you, which might violate usage limits or incur costs on your account.</li>
+</ul>
+<p>Some services use more complex authentication (like OAuth tokens which have limited scope or expiration), but an API key is the fundamental concept to understand first. It’s your <strong>access credential</strong> for using the API.</p>
+</section>
+<section id="get-an-api" class="level2">
+<h2 class="anchored" data-anchor-id="get-an-api">Get an API</h2>
+<p>Next, you can go and get an API key for an AI service. As a start a few dollars will be enough. Follow <a href="get-ai-api-key.html">instructions</a></p>
+</section>
+<section id="walkthrough-examples" class="level2">
+<h2 class="anchored" data-anchor-id="walkthrough-examples">Walkthrough examples</h2>
 <ol type="1">
-<li>Place the raw data in the <code>raw/</code> folder.</li>
-<li>Run <code>cleaning.R</code> to generate the processed datasets.</li>
-</ol></li>
-</ul>
+<li>Getting <a href="walkthrough-wb-fred.html">GDP data</a> from World Bank and FRED</li>
+<li>More advanced <a href="walkthrough-fbref.html">Football data</a> (python, R)</li>
+</ol>
 </section>
-<section id="license-and-citation" class="level2">
-<h2 class="anchored" data-anchor-id="license-and-citation">License and Citation</h2>
+<section id="whats-different-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="whats-different-in-r">What’s different in R</h2>
+<p><strong>Client libraries in other languages:</strong> While our focus is on Python, other programming languages provide similar conveniences.</p>
+<p>In R, packages like <strong><code>httr</code></strong> (for making HTTP requests) and <strong><code>jsonlite</code></strong> (for parsing JSON) are commonly used to work with web APIs. Many APIs also have R packages or wrappers that function like client libraries, letting you call the API in one or two lines of R code.</p>
+<p>The core idea is the same: a client library abstracts the RESTful requests into native language functions. Regardless of language, using a client library means you can integrate an API into your data analysis or application with less hassle, letting you focus on interpreting results rather than the mechanics of HTTP.</p>
+</section>
+<section id="scaling-up-with-apis-from-20-to-10000-and-beyond" class="level2">
+<h2 class="anchored" data-anchor-id="scaling-up-with-apis-from-20-to-10000-and-beyond">Scaling Up with APIs: From 20 to 10,000 and Beyond</h2>
+<p>The introduction of APIs into your workflow transforms what you can accomplish:</p>
 <ul>
-<li>This project follows the <strong>MIT License</strong>.</li>
-<li>If using this data or code, please cite the original WVS dataset.</li>
+<li>Tasks that were <strong>infeasible by hand</strong> become trivial to automate. You could get results in minutes or hours rather than weeks.</li>
+<li>You can harness <strong>powerful algorithms</strong> provided by industry leaders. For example, instead of developing your machine learning model, you can use Google’s vision API to tag images or OpenAI’s language API to summarize text. This means you can tackle complex problems without needing to be an expert in those specific subfields.</li>
+<li>You can work with <strong>real-time</strong> and <strong>large-scale data</strong>. Want to analyze football statistics or financial market data? There are APIs to fetch those streams of information. With APIs, you are not limited to data you can collect manually; you can pull in data from all over the world programmatically.</li>
 </ul>
-</section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p>For questions or collaboration, contact: <strong>[Your Name]</strong> at <strong>[Your Email]</strong>.</p>
+<p>APIs are a bridge to practically unlimited data and capabilities. They let your programs communicate with other services to get things done efficiently. As we continue this course, you’ll get hands-on experience using APIs – turning the concepts you learned here into actual data analysis tasks. Embrace this new tool in your skillset. <strong>Whenever you find yourself needing to scale up or access a specialized service, think: <em>Is there an API for that?</em></strong> Chances are, the answer will be yes, and now you’ll know how to use it!</p>
+<p><a href="api-advanced.html">More advanced and supplementary information.</a></p>
 
 
 <!-- -->
@@ -935,59 +943,80 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "World Values Survey Data Analysis"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>This repository contains data and code for analyzing the World Values Survey (WVS) dataset. The project involves data cleaning, processing, and merging GDP data with survey responses.</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Repository Structure</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">📂 osf-vwvs/                   # Root directory</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 clean/                 # Processed datasets  </span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_GDP_merged_data.csv    # Merged WVS data with GDP  </span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_random_subset.csv      # Random subset of WVS data  </span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_subset.csv             # Subset of WVS data  </span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 documentation/          # Documentation and metadata  </span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── codebook.pdf          # Variable definitions and coding instructions  </span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 raw/                    # Raw data files  </span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_Cross-National_Wave_7_csv_v6_0.csv  # Original WVS dataset  </span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 code/                   # Scripts for data processing  </span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── cleaning.R            # Script to clean and process WVS data  </span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── README.md                  # Project description and instructions  </span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Description</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Source**: The WVS dataset is publicly available at <span class="co">[</span><span class="ot">World Values Survey</span><span class="co">](https://www.worldvaluessurvey.org/)</span>.  </span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Processed Data**: The <span class="in">`clean/`</span> folder contains merged and subsetted datasets used for analysis.  </span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Raw Data**: The <span class="in">`raw/`</span> folder holds the original dataset in <span class="in">`.csv`</span> format.  </span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Documentation**: The <span class="in">`codebook.pdf`</span> explains variable definitions and survey methodology.</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Code and Reproducibility</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Main script**: <span class="in">`code/cleaning.R`</span> cleans and processes the raw WVS data.</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Requirements**:</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R (version X.X.X)</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Required packages: <span class="in">`tidyverse`</span>, <span class="in">`haven`</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Running the code**:</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>Place the raw data in the <span class="in">`raw/`</span> folder.</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>Run <span class="in">`cleaning.R`</span> to generate the processed datasets.</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## License and Citation</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>This project follows the **MIT License**.</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If using this data or code, please cite the original WVS dataset.</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contact</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>For questions or collaboration, contact: **[Your Name]** at **[Your Email]**.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Introduction to APIs: Why and when use them, and how to get started"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why APIs?</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Previously, we manually examined a sample of just 20 texts and tried using an LLM for sentiment analysis. How long did this take you? Would it still be doable if there were 75 texts? Likely, yes. However, imagine you have **10,000** texts to analyze for sentiment. Analyzing 10,000 texts one by one (or copying them into a tool manually) would be nearly impossible – it would take endless hours and be prone to error. We need a way to **automate and scale** the process. This is where **APIs** come in. By leveraging an API, we can send those thousands of texts to a powerful external service that analyzes sentiment and returns results in seconds. A nice recent example of this in economics research is <span class="co">[</span><span class="ot">a recent working paper</span><span class="co">](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5103580)</span> that used as data over 1,400 American life narratives from the 1930s to uncover common themes about what it means to live a meaningful life.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Our baseline approach is for Python, but R is pretty similar (see below)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is an API?</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>An **API (Application Programming Interface)** is like a **messenger** or **middleman** that lets two different programs talk to each other and exchange information. Instead of a person directly doing a task, you have one software program asking another program to do something on its behalf. A popular analogy is that an API is similar to a [**restaurant waiter**](https://www.youtube.com/watch?v=OVvTv9Hy91Q):</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**You (the client)** are sitting at a table, ready to order a meal (you have a request for information or a service).</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**The waiter (the API)** takes your order and relays it to the kitchen. You don’t go into the kitchen yourself – the waiter is the go-between.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**The kitchen (the server)** is where the work happens. The chef prepares the meal (the data or service you requested).</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**The waiter (API) returns with your meal** and serves it to you. You get exactly what you ordered, without having to know how the kitchen prepared it.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>In this analogy, the restaurant’s **menu** is like the **API documentation** – it lists what you can ask for and how to ask for it. If you request something not on the menu, the waiter (API) will tell you it’s not available (an error). Similarly, an API provides a set of **rules and endpoints** that define what requests can be made and what responses you can expect.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>This means you don’t need to know the complex inner workings of the server or service. You just need to know *what* to ask for and *how* to ask for it through the API. The API handles the communication, just as the waiter handles communication between you and the kitchen.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Benefits of Using APIs in Data Analysis</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>Why use APIs as a data analyst? Here are some key benefits:</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Scalability:** APIs let you process *large volumes* of data quickly. You can automate requests in code, so analyzing 10,000 texts or more becomes feasible. Instead of manually working with each piece of data, you let a server handle the heavy lifting.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Access to Powerful Tools:** Many companies provide APIs for advanced services like sentiment analysis, language translation, image recognition, or data storage. As a data analyst, you can tap into these **pre-built models and services** without having to develop them from scratch.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Time and Effort Savings:** Using an API, you can perform complex tasks with just a simple request. This saves you the time of writing extensive code or doing repetitive work. For example, rather than writing your own sentiment analysis algorithm, you can send text to an API and get sentiment results immediately.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Integration of Data Sources:** APIs allow different software and datasets to integrate. You can pull data from different sources (e.g. Twitter’s API for tweets, a weather API for climate data) directly into your analysis pipeline. This **marries data from multiple sources** seamlessly.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Consistency and Reliability:** When you use a well-established API, you benefit from a service that’s been tested and optimized. The API will handle errors, edge cases, and updates, so you get consistent results. It’s like outsourcing a task to an expert – you trust the API to do its job correctly.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## API Keys and Authentication</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>Most APIs require some form of **authentication** to ensure that only authorized users or applications can use them. The simplest form is an **API key**. An API key is like a **secret password or ID** that you include with your API calls:</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>You typically get an API key by creating an account or registering an application with the API provider. For example, to use the Twitter API or OpenAI API, you’d sign up and receive a key (or token).</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The key itself is usually a long string of characters (letters, numbers, and symbols). It’s unique to you or your application.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>You include this key with every request. Often it goes in a request header (for instance, you might set a header <span class="in">`Authorization: Bearer YOUR_API_KEY`</span>), or sometimes as a URL parameter (e.g., <span class="in">`?api_key=YOUR_API_KEY`</span> in the query string). The API documentation will tell you exactly how to include the key.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The server checks the key. If the key is missing or wrong, the API will usually respond with an authentication error (like a 401 Unauthorized status). If the key is valid, the server will proceed to handle your request.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Security tip:** Never share your API keys publicly or commit them to public repositories. They are meant to be kept secret. If someone obtains your key, they could use the API pretending to be you, which might violate usage limits or incur costs on your account.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>Some services use more complex authentication (like OAuth tokens which have limited scope or expiration), but an API key is the fundamental concept to understand first. It’s your **access credential** for using the API.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## Get an API</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>Next, you can go and get an API key for an AI service. As a start a few dollars will be enough. Follow <span class="co">[</span><span class="ot">instructions</span><span class="co">](get-ai-api-key.html)</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Walkthrough examples</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Getting <span class="co">[</span><span class="ot">GDP data</span><span class="co">](walkthrough-wb-fred.html)</span> from World Bank and FRED</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>More advanced <span class="co">[</span><span class="ot">Football data</span><span class="co">](walkthrough-fbref.html)</span> (python, R)</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">## What's different in R</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>**Client libraries in other languages:** While our focus is on Python, other programming languages provide similar conveniences. </span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>In R, packages like **`httr`** (for making HTTP requests) and **`jsonlite`** (for parsing JSON) are commonly used to work with web APIs. Many APIs also have R packages or wrappers that function like client libraries, letting you call the API in one or two lines of R code. </span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>The core idea is the same: a client library abstracts the RESTful requests into native language functions. Regardless of language, using a client library means you can integrate an API into your data analysis or application with less hassle, letting you focus on interpreting results rather than the mechanics of HTTP.</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scaling Up with APIs: From 20 to 10,000 and Beyond</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>The introduction of APIs into your workflow transforms what you can accomplish:</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Tasks that were **infeasible by hand** become trivial to automate. You could get results in minutes or hours rather than weeks.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>You can harness **powerful algorithms** provided by industry leaders. For example, instead of developing your machine learning model, you can use Google’s vision API to tag images or OpenAI’s language API to summarize text. This means you can tackle complex problems without needing to be an expert in those specific subfields.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>You can work with **real-time** and **large-scale data**. Want to analyze football statistics or financial market data? There are APIs to fetch those streams of information. With APIs, you are not limited to data you can collect manually; you can pull in data from all over the world programmatically.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>APIs are a bridge to practically unlimited data and capabilities. They let your programs communicate with other services to get things done efficiently. As we continue this course, you’ll get hands-on experience using APIs – turning the concepts you learned here into actual data analysis tasks. Embrace this new tool in your skillset. **Whenever you find yourself needing to scale up or access a specialized service, think: *Is there an API for that?*** Chances are, the answer will be yes, and now you’ll know how to use it!</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">More advanced and supplementary information.</span><span class="co">](api-advanced.html)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

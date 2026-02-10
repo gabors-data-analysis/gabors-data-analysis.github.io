@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>World Values Survey Data Analysis – Doing Data Analysis with AI</title>
+<title>Design an IV – Doing Data Analysis with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,24 +58,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2b0bee58651e028d5f66fe28de695c9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-2b0bee58651e028d5f66fe28de695c9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">DA with AI</span>
     </a>
   </div>
@@ -125,19 +125,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../navbar/weeks.html"> 
+    <a class="nav-link" href="../navbar/weeks.html"> 
 <span class="menu-text">Weekly Content</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../navbar/assignments.html"> 
+    <a class="nav-link" href="../navbar/assignments.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../navbar/resources.html"> 
+    <a class="nav-link" href="../navbar/resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
 </ul>
@@ -151,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">World Values Survey Data Analysis</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Design an IV</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -174,79 +174,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week00/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week00/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 0: AI Coding Prep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week01/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week01/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1: LLM Review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week02/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week02/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2: Documentation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week03/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week03/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3: Reporting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week04/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week04/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4: Agentic AI with CLIs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week05/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week05/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5: Advanced CLI Workflows</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week06/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week06/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 6: Creating Reports</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week07/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week07/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 7: Text as Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week08/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week08/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 8: Sentiment Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week09/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week09/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 9: AI Research: Controls</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week10/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week10/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 10: AI Research: IV</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week11/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week11/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 11: AI Research: DiD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../week12/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../week12/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 12: Dashboards and Apps</span></a>
   </div>
 </li>
@@ -263,37 +263,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../case-studies/VWS/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../case-studies/VWS/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">World Values Survey</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../case-studies/austria-hotels/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../case-studies/austria-hotels/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Austrian Hotels</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../case-studies/interviews/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../case-studies/interviews/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Football Interviews</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../case-studies/earnings/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../case-studies/earnings/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">US Earnings (CPS)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../case-studies/employee_commits/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../case-studies/employee_commits/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Employee Commits</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../case-studies/common-support-r/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../case-studies/common-support-r/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Common Support (R)</span></a>
   </div>
 </li>
@@ -310,43 +310,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../da-knowledge/technical-terms-page.html" class="sidebar-item-text sidebar-link">
+  <a href="../da-knowledge/technical-terms-page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Glossary of LLM terms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../da-knowledge/which-ai.html" class="sidebar-item-text sidebar-link">
+  <a href="../da-knowledge/which-ai.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Which AI model</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../da-knowledge/beyond.html" class="sidebar-item-text sidebar-link">
+  <a href="../da-knowledge/beyond.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Learn More</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../da-knowledge/documentation-readme.html" class="sidebar-item-text sidebar-link">
+  <a href="../da-knowledge/documentation-readme.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Documentation Fundamentals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Joining Data Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../da-knowledge/terminal-basics.html" class="sidebar-item-text sidebar-link">
+  <a href="../da-knowledge/terminal-basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Terminal Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../da-knowledge/install-cli.html" class="sidebar-item-text sidebar-link">
+  <a href="../da-knowledge/install-cli.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Installing AI CLI Tools</span></a>
   </div>
 </li>
@@ -385,12 +385,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#repository-structure" id="toc-repository-structure" class="nav-link" data-scroll-target="#repository-structure">Repository Structure</a></li>
-  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description">Data Description</a></li>
-  <li><a href="#code-and-reproducibility" id="toc-code-and-reproducibility" class="nav-link" data-scroll-target="#code-and-reproducibility">Code and Reproducibility</a></li>
-  <li><a href="#license-and-citation" id="toc-license-and-citation" class="nav-link" data-scroll-target="#license-and-citation">License and Citation</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  <li><a href="#task-design-an-iv" id="toc-task-design-an-iv" class="nav-link active" data-scroll-target="#task-design-an-iv">Task: Design an IV</a></li>
   </ul>
 </nav>
     </div>
@@ -399,7 +394,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">World Values Survey Data Analysis</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Design an IV</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -416,67 +411,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This repository contains data and code for analyzing the World Values Survey (WVS) dataset. The project involves data cleaning, processing, and merging GDP data with survey responses.</p>
-</section>
-<section id="repository-structure" class="level2">
-<h2 class="anchored" data-anchor-id="repository-structure">Repository Structure</h2>
-<pre><code>📂 osf-vwvs/                   # Root directory
- ├── 📂 clean/                 # Processed datasets  
- │    ├── WVS_GDP_merged_data.csv    # Merged WVS data with GDP  
- │    ├── WVS_random_subset.csv      # Random subset of WVS data  
- │    ├── WVS_subset.csv             # Subset of WVS data  
- │  
- ├── 📂 documentation/          # Documentation and metadata  
- │    ├── codebook.pdf          # Variable definitions and coding instructions  
- │  
- ├── 📂 raw/                    # Raw data files  
- │    ├── WVS_Cross-National_Wave_7_csv_v6_0.csv  # Original WVS dataset  
- │  
- ├── 📂 code/                   # Scripts for data processing  
- │    ├── cleaning.R            # Script to clean and process WVS data  
- │  
- ├── README.md                  # Project description and instructions  </code></pre>
-</section>
-<section id="data-description" class="level2">
-<h2 class="anchored" data-anchor-id="data-description">Data Description</h2>
-<ul>
-<li><strong>Source</strong>: The WVS dataset is publicly available at <a href="https://www.worldvaluessurvey.org/">World Values Survey</a>.<br>
-</li>
-<li><strong>Processed Data</strong>: The <code>clean/</code> folder contains merged and subsetted datasets used for analysis.<br>
-</li>
-<li><strong>Raw Data</strong>: The <code>raw/</code> folder holds the original dataset in <code>.csv</code> format.<br>
-</li>
-<li><strong>Documentation</strong>: The <code>codebook.pdf</code> explains variable definitions and survey methodology.</li>
-</ul>
-</section>
-<section id="code-and-reproducibility" class="level2">
-<h2 class="anchored" data-anchor-id="code-and-reproducibility">Code and Reproducibility</h2>
-<ul>
-<li><strong>Main script</strong>: <code>code/cleaning.R</code> cleans and processes the raw WVS data.</li>
-<li><strong>Requirements</strong>:
-<ul>
-<li>R (version X.X.X)</li>
-<li>Required packages: <code>tidyverse</code>, <code>haven</code></li>
-</ul></li>
-<li><strong>Running the code</strong>:
-<ol type="1">
-<li>Place the raw data in the <code>raw/</code> folder.</li>
-<li>Run <code>cleaning.R</code> to generate the processed datasets.</li>
-</ol></li>
-</ul>
-</section>
-<section id="license-and-citation" class="level2">
-<h2 class="anchored" data-anchor-id="license-and-citation">License and Citation</h2>
-<ul>
-<li>This project follows the <strong>MIT License</strong>.</li>
-<li>If using this data or code, please cite the original WVS dataset.</li>
-</ul>
-</section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p>For questions or collaboration, contact: <strong>[Your Name]</strong> at <strong>[Your Email]</strong>.</p>
+<section id="task-design-an-iv" class="level3">
+<h3 class="anchored" data-anchor-id="task-design-an-iv">Task: Design an IV</h3>
+<p>Think about an identification problem and interate to find a good IV. Explain why it may work and why could it fail.</p>
+<p>Discuss what data would be needed and where it would come.</p>
 
 
 <!-- -->
@@ -935,59 +873,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "World Values Survey Data Analysis"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>This repository contains data and code for analyzing the World Values Survey (WVS) dataset. The project involves data cleaning, processing, and merging GDP data with survey responses.</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Repository Structure</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">📂 osf-vwvs/                   # Root directory</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 clean/                 # Processed datasets  </span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_GDP_merged_data.csv    # Merged WVS data with GDP  </span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_random_subset.csv      # Random subset of WVS data  </span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_subset.csv             # Subset of WVS data  </span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 documentation/          # Documentation and metadata  </span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── codebook.pdf          # Variable definitions and coding instructions  </span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 raw/                    # Raw data files  </span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_Cross-National_Wave_7_csv_v6_0.csv  # Original WVS dataset  </span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 code/                   # Scripts for data processing  </span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── cleaning.R            # Script to clean and process WVS data  </span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── README.md                  # Project description and instructions  </span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Description</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Source**: The WVS dataset is publicly available at <span class="co">[</span><span class="ot">World Values Survey</span><span class="co">](https://www.worldvaluessurvey.org/)</span>.  </span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Processed Data**: The <span class="in">`clean/`</span> folder contains merged and subsetted datasets used for analysis.  </span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Raw Data**: The <span class="in">`raw/`</span> folder holds the original dataset in <span class="in">`.csv`</span> format.  </span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Documentation**: The <span class="in">`codebook.pdf`</span> explains variable definitions and survey methodology.</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Code and Reproducibility</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Main script**: <span class="in">`code/cleaning.R`</span> cleans and processes the raw WVS data.</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Requirements**:</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R (version X.X.X)</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Required packages: <span class="in">`tidyverse`</span>, <span class="in">`haven`</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Running the code**:</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>Place the raw data in the <span class="in">`raw/`</span> folder.</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>Run <span class="in">`cleaning.R`</span> to generate the processed datasets.</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## License and Citation</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>This project follows the **MIT License**.</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If using this data or code, please cite the original WVS dataset.</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contact</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>For questions or collaboration, contact: **[Your Name]** at **[Your Email]**.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Design an IV"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task: Design an IV</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Think about an identification problem and interate to find a good IV. Explain why it may work and why could it fail. </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Discuss what data would be needed and where it would come. </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

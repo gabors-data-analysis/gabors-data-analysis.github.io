@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>World Values Survey Data Analysis – Doing Data Analysis with AI</title>
+<title>How to get an API key: OpenAI ChatGPT and Anthropic Claude – Doing Data Analysis with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -151,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">World Values Survey Data Analysis</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">How to get an API key: OpenAI ChatGPT and Anthropic Claude</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -385,12 +385,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#repository-structure" id="toc-repository-structure" class="nav-link" data-scroll-target="#repository-structure">Repository Structure</a></li>
-  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description">Data Description</a></li>
-  <li><a href="#code-and-reproducibility" id="toc-code-and-reproducibility" class="nav-link" data-scroll-target="#code-and-reproducibility">Code and Reproducibility</a></li>
-  <li><a href="#license-and-citation" id="toc-license-and-citation" class="nav-link" data-scroll-target="#license-and-citation">License and Citation</a></li>
-  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact">Contact</a></li>
+  <li><a href="#how-to-get-an-api-key-openai-chatgpt" id="toc-how-to-get-an-api-key-openai-chatgpt" class="nav-link active" data-scroll-target="#how-to-get-an-api-key-openai-chatgpt">How to get an API key: OpenAI ChatGPT</a>
+  <ul class="collapse">
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
+  </ul></li>
+  <li><a href="#how-to-get-an-api-key-anthropic-claude" id="toc-how-to-get-an-api-key-anthropic-claude" class="nav-link" data-scroll-target="#how-to-get-an-api-key-anthropic-claude">How to get an API key: Anthropic Claude</a>
+  <ul class="collapse">
+  <li><a href="#best-practices-1" id="toc-best-practices-1" class="nav-link" data-scroll-target="#best-practices-1">Best Practices</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -399,7 +401,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">World Values Survey Data Analysis</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">How to get an API key: OpenAI ChatGPT and Anthropic Claude</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -416,71 +418,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This repository contains data and code for analyzing the World Values Survey (WVS) dataset. The project involves data cleaning, processing, and merging GDP data with survey responses.</p>
-</section>
-<section id="repository-structure" class="level2">
-<h2 class="anchored" data-anchor-id="repository-structure">Repository Structure</h2>
-<pre><code>📂 osf-vwvs/                   # Root directory
- ├── 📂 clean/                 # Processed datasets  
- │    ├── WVS_GDP_merged_data.csv    # Merged WVS data with GDP  
- │    ├── WVS_random_subset.csv      # Random subset of WVS data  
- │    ├── WVS_subset.csv             # Subset of WVS data  
- │  
- ├── 📂 documentation/          # Documentation and metadata  
- │    ├── codebook.pdf          # Variable definitions and coding instructions  
- │  
- ├── 📂 raw/                    # Raw data files  
- │    ├── WVS_Cross-National_Wave_7_csv_v6_0.csv  # Original WVS dataset  
- │  
- ├── 📂 code/                   # Scripts for data processing  
- │    ├── cleaning.R            # Script to clean and process WVS data  
- │  
- ├── README.md                  # Project description and instructions  </code></pre>
-</section>
-<section id="data-description" class="level2">
-<h2 class="anchored" data-anchor-id="data-description">Data Description</h2>
-<ul>
-<li><strong>Source</strong>: The WVS dataset is publicly available at <a href="https://www.worldvaluessurvey.org/">World Values Survey</a>.<br>
-</li>
-<li><strong>Processed Data</strong>: The <code>clean/</code> folder contains merged and subsetted datasets used for analysis.<br>
-</li>
-<li><strong>Raw Data</strong>: The <code>raw/</code> folder holds the original dataset in <code>.csv</code> format.<br>
-</li>
-<li><strong>Documentation</strong>: The <code>codebook.pdf</code> explains variable definitions and survey methodology.</li>
-</ul>
-</section>
-<section id="code-and-reproducibility" class="level2">
-<h2 class="anchored" data-anchor-id="code-and-reproducibility">Code and Reproducibility</h2>
-<ul>
-<li><strong>Main script</strong>: <code>code/cleaning.R</code> cleans and processes the raw WVS data.</li>
-<li><strong>Requirements</strong>:
-<ul>
-<li>R (version X.X.X)</li>
-<li>Required packages: <code>tidyverse</code>, <code>haven</code></li>
-</ul></li>
-<li><strong>Running the code</strong>:
+<p>Below is a comprehensive, <strong>step-by-step guide for you to obtain and securely store API keys</strong> for both OpenAI <strong>ChatGPT</strong> and Anthropic <strong>Claude</strong>. It assumes you already have active accounts but need to know exactly where to navigate in each console to generate keys, fund your projects, and follow best practices for management.</p>
+<p>You’ll need to spulrge a minimum of <strong>$5</strong> to get started. That’s enough for the purpose of this course.</p>
+<section id="how-to-get-an-api-key-openai-chatgpt" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-get-an-api-key-openai-chatgpt">How to get an API key: OpenAI ChatGPT</h2>
 <ol type="1">
-<li>Place the raw data in the <code>raw/</code> folder.</li>
-<li>Run <code>cleaning.R</code> to generate the processed datasets.</li>
-</ol></li>
-</ul>
-</section>
-<section id="license-and-citation" class="level2">
-<h2 class="anchored" data-anchor-id="license-and-citation">License and Citation</h2>
+<li><p><strong>Log in to the OpenAI Platform</strong> Go to <a href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a> and sign in with your ChatGPT credentials if prompted.</p></li>
+<li><p><strong>Create a Project</strong> Navigate to <a href="https://platform.openai.com/settings/organization/projects">https://platform.openai.com/settings/organization/projects</a> and click <strong>+ Create</strong>, enter a project name (e.g., “DA w AI Course”), then click <strong>Create</strong>.</p></li>
+<li><p><strong>Set up Billing (Add Prepaid Credits)</strong> In the left-hand menu under <strong>Billing</strong>, click <strong>Add payment method</strong>, enter your credit card details, then purchase the minimum $5 to fund your project.</p></li>
+<li><p><strong>Generate Your API Key</strong> Within your project, go to the <strong>API Keys</strong> tab, click <strong>+ Create new secret key</strong>, give it a descriptive name (e.g., “Course Project Key”), and click <strong>Create</strong>.</p></li>
+<li><p><strong>Copy and Secure Your Key</strong> The full secret key string will be displayed <strong>only once</strong>—<strong>copy</strong> it immediately and store it in a password manager or secure vault. You will not be able to view it again.</p></li>
+</ol>
+<section id="best-practices" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices">Best Practices</h3>
 <ul>
-<li>This project follows the <strong>MIT License</strong>.</li>
-<li>If using this data or code, please cite the original WVS dataset.</li>
+<li>Rotate keys every 90 days and revoke any that are no longer in use to limit exposure if compromised.</li>
+<li>Monitor your usage via the <strong>Usage</strong> dashboard at <a href="https://platform.openai.com/account/usage">https://platform.openai.com/account/usage</a> or the <strong>Usage</strong> tab under Settings.</li>
+<li>Never commit API keys to version control—add them to <code>.gitignore</code> or use secret-management tools</li>
 </ul>
+<hr>
 </section>
-<section id="contact" class="level2">
-<h2 class="anchored" data-anchor-id="contact">Contact</h2>
-<p>For questions or collaboration, contact: <strong>[Your Name]</strong> at <strong>[Your Email]</strong>.</p>
+</section>
+<section id="how-to-get-an-api-key-anthropic-claude" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-get-an-api-key-anthropic-claude">How to get an API key: Anthropic Claude</h2>
+<ol type="1">
+<li><p><strong>Log in to the Anthropic Console</strong> Navigate to <a href="https://console.anthropic.com">https://console.anthropic.com</a> and sign in with your Claude account credentials.</p></li>
+<li><p><strong>Access the API Keys Section</strong> Click <strong>the key icon</strong> in the left-hand navigation.</p></li>
+<li><p><strong>Generate a New API Key</strong> On the <strong>API Keys</strong> page, click <strong>+ Create Key</strong>, enter a descriptive name (e.g., “Course Key”), and click <strong>Add</strong>.</p></li>
+<li><p><strong>Copy and Secure Your Key</strong> The full API key string is shown <strong>only once</strong>—<strong>copy</strong> it immediately and store it in a secure vault. You will not be able to view it again.</p></li>
+<li><p><strong>Set Up Billing or Claim Free Credits</strong> In the left navigation, select <strong>Billing</strong>. If you have trial credits, you may need to verify your phone number to claim them; otherwise, under <strong>Buy credits</strong> purchase the minimum $5 to fund your usage.</p></li>
+</ol>
+<section id="best-practices-1" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices-1">Best Practices</h3>
+<ul>
+<li>Rotate keys periodically and delete any unused or compromised keys to maintain security.</li>
+<li>Never expose keys in public repositories—use environment variables or secret managers and add any config files with keys to <code>.gitignore</code>.</li>
+<li>Monitor your credit balance and API usage in <strong>Billing</strong> to avoid unexpected costs.</li>
+</ul>
 
 
 <!-- -->
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -935,59 +914,61 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "World Values Survey Data Analysis"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>This repository contains data and code for analyzing the World Values Survey (WVS) dataset. The project involves data cleaning, processing, and merging GDP data with survey responses.</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Repository Structure</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">📂 osf-vwvs/                   # Root directory</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 clean/                 # Processed datasets  </span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_GDP_merged_data.csv    # Merged WVS data with GDP  </span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_random_subset.csv      # Random subset of WVS data  </span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_subset.csv             # Subset of WVS data  </span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 documentation/          # Documentation and metadata  </span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── codebook.pdf          # Variable definitions and coding instructions  </span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 raw/                    # Raw data files  </span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── WVS_Cross-National_Wave_7_csv_v6_0.csv  # Original WVS dataset  </span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── 📂 code/                   # Scripts for data processing  </span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in"> │    ├── cleaning.R            # Script to clean and process WVS data  </span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="in"> │  </span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="in"> ├── README.md                  # Project description and instructions  </span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Description</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Source**: The WVS dataset is publicly available at <span class="co">[</span><span class="ot">World Values Survey</span><span class="co">](https://www.worldvaluessurvey.org/)</span>.  </span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Processed Data**: The <span class="in">`clean/`</span> folder contains merged and subsetted datasets used for analysis.  </span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Raw Data**: The <span class="in">`raw/`</span> folder holds the original dataset in <span class="in">`.csv`</span> format.  </span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Documentation**: The <span class="in">`codebook.pdf`</span> explains variable definitions and survey methodology.</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Code and Reproducibility</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Main script**: <span class="in">`code/cleaning.R`</span> cleans and processes the raw WVS data.</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Requirements**:</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>R (version X.X.X)</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Required packages: <span class="in">`tidyverse`</span>, <span class="in">`haven`</span></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Running the code**:</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">  1. </span>Place the raw data in the <span class="in">`raw/`</span> folder.</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="ss">  2. </span>Run <span class="in">`cleaning.R`</span> to generate the processed datasets.</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## License and Citation</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>This project follows the **MIT License**.</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If using this data or code, please cite the original WVS dataset.</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contact</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>For questions or collaboration, contact: **[Your Name]** at **[Your Email]**.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "How to get an API key: OpenAI ChatGPT and Anthropic Claude"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Below is a comprehensive, **step-by-step guide for you to obtain and securely store API keys** for both OpenAI **ChatGPT** and Anthropic **Claude**. It assumes you already have active accounts but need to know exactly where to navigate in each console to generate keys, fund your projects, and follow best practices for management. </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>You'll need to spulrge a minimum of **$5** to get started. That's enough for the purpose of this course. </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## How to get an API key: OpenAI ChatGPT</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Log in to the OpenAI Platform**</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>   Go to <span class="co">[</span><span class="ot">https://platform.openai.com/account/api-keys</span><span class="co">](https://platform.openai.com/account/api-keys)</span> and sign in with your ChatGPT credentials if prompted.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Create a Project**</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>   Navigate to <span class="co">[</span><span class="ot">https://platform.openai.com/settings/organization/projects</span><span class="co">](https://platform.openai.com/settings/organization/projects)</span> and click **+ Create**, enter a project name (e.g., "DA w AI Course"), then click **Create**.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Set up Billing (Add Prepaid Credits)**</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>   In the left-hand menu under **Billing**, click **Add payment method**, enter your credit card details, then purchase the minimum \$5 to fund your project.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Generate Your API Key**</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>   Within your project, go to the **API Keys** tab, click **+ Create new secret key**, give it a descriptive name (e.g., "Course Project Key"), and click **Create**. </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Copy and Secure Your Key**</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>   The full secret key string will be displayed **only once**—**copy** it immediately and store it in a password manager or secure vault. You will not be able to view it again. </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">### Best Practices</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Rotate keys every 90 days and revoke any that are no longer in use to limit exposure if compromised.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Monitor your usage via the **Usage** dashboard at [https://platform.openai.com/account/usage](https://platform.openai.com/account/usage) or the **Usage** tab under Settings. </span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Never commit API keys to version control—add them to <span class="in">`.gitignore`</span> or use secret-management tools</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## How to get an API key: Anthropic Claude</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Log in to the Anthropic Console**</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>   Navigate to <span class="co">[</span><span class="ot">https://console.anthropic.com</span><span class="co">](https://console.anthropic.com)</span> and sign in with your Claude account credentials.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Access the API Keys Section**</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>   Click **the key icon** in the left-hand navigation. </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Generate a New API Key**</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>   On the **API Keys** page, click **+ Create Key**, enter a descriptive name (e.g., "Course Key"), and click **Add**. </span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Copy and Secure Your Key**</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>   The full API key string is shown **only once**—**copy** it immediately and store it in a secure vault. You will not be able to view it again.</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Set Up Billing or Claim Free Credits**</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>   In the left navigation, select **Billing**. If you have trial credits, you may need to verify your phone number to claim them; otherwise, under **Buy credits** purchase the minimum \$5 to fund your usage. </span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">### Best Practices</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Rotate keys periodically and delete any unused or compromised keys to maintain security. </span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Never expose keys in public repositories—use environment variables or secret managers and add any config files with keys to <span class="in">`.gitignore`</span>. </span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Monitor your credit balance and API usage in **Billing** to avoid unexpected costs.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
