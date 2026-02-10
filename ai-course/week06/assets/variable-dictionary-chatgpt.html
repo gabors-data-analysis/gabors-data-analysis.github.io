@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="ChatGPT 4o">
+<meta name="dcterms.date" content="2025-06-06">
 
-<title>Assignment 7: Student-Specific Sentiment Analysis – Doing Data Analysis with AI</title>
+<title>CPS MORG 2014 Variable Dictionary by ChatGPT 4o – Doing Data Analysis with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,24 +60,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2b0bee58651e028d5f66fe28de695c9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2b0bee58651e028d5f66fe28de695c9d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">DA with AI</span>
     </a>
   </div>
@@ -125,19 +127,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../navbar/weeks.html"> 
+    <a class="nav-link" href="../../navbar/weeks.html"> 
 <span class="menu-text">Weekly Content</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../navbar/assignments.html"> 
+    <a class="nav-link" href="../../navbar/assignments.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../navbar/resources.html"> 
+    <a class="nav-link" href="../../navbar/resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
 </ul>
@@ -151,7 +153,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Assignment 7: Student-Specific Sentiment Analysis</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">CPS MORG 2014 Variable Dictionary by ChatGPT 4o</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -174,79 +176,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week00/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week00/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 0: AI Coding Prep</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week01/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week01/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1: LLM Review</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week02/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week02/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2: Documentation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week03/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week03/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3: Reporting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week04/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week04/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4: Agentic AI with CLIs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week05/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week05/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5: Advanced CLI Workflows</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week06/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week06/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 6: From Data to Report</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week07/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week07/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 7: Text as Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week08/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week08/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 8: Sentiment Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week09/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week09/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 9: AI Research: Controls</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week10/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week10/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 10: AI Research: IV</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week11/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week11/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 11: AI Research: DiD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../week12/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../week12/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 12: Dashboards and Apps</span></a>
   </div>
 </li>
@@ -263,37 +265,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../case-studies/VWS/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../case-studies/VWS/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">World Values Survey</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../case-studies/austria-hotels/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../case-studies/austria-hotels/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Austrian Hotels</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../case-studies/interviews/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../case-studies/interviews/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Football Interviews</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../case-studies/earnings/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../case-studies/earnings/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">US Earnings (CPS)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../case-studies/employee_commits/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../case-studies/employee_commits/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Employee Commits</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../case-studies/common-support-r/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../case-studies/common-support-r/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Common Support (R)</span></a>
   </div>
 </li>
@@ -310,43 +312,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../da-knowledge/technical-terms-page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../da-knowledge/technical-terms-page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Glossary of LLM terms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../da-knowledge/which-ai.html" class="sidebar-item-text sidebar-link">
+  <a href="../../da-knowledge/which-ai.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Which AI model</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../da-knowledge/beyond.html" class="sidebar-item-text sidebar-link">
+  <a href="../../da-knowledge/beyond.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Learn More</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../da-knowledge/documentation-readme.html" class="sidebar-item-text sidebar-link">
+  <a href="../../da-knowledge/documentation-readme.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Documentation Fundamentals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Joining Data Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../da-knowledge/terminal-basics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../da-knowledge/terminal-basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Terminal Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../da-knowledge/install-cli.html" class="sidebar-item-text sidebar-link">
+  <a href="../../da-knowledge/install-cli.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Installing AI CLI Tools</span></a>
   </div>
 </li>
@@ -385,8 +387,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#task" id="toc-task" class="nav-link active" data-scroll-target="#task">Task</a></li>
-  <li><a href="#submit" id="toc-submit" class="nav-link" data-scroll-target="#submit">Submit:</a></li>
+  <li><a href="#my-single-prompt" id="toc-my-single-prompt" class="nav-link active" data-scroll-target="#my-single-prompt">my single prompt</a></li>
+  <li><a href="#variable-dictionary" id="toc-variable-dictionary" class="nav-link" data-scroll-target="#variable-dictionary">Variable dictionary</a></li>
   </ul>
 </nav>
     </div>
@@ -395,14 +397,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Assignment 7: Student-Specific Sentiment Analysis</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">CPS MORG 2014 Variable Dictionary by ChatGPT 4o</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>ChatGPT 4o </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 6, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -412,24 +426,186 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="task" class="level3">
-<h3 class="anchored" data-anchor-id="task">Task</h3>
-<p>Student-Specific Sentiment Analysis of a series of texts – Compare manual ratings with AI-generated ratings.</p>
-<p>Steps:</p>
-<ul>
-<li>Download the text <a href="../case-studies/interviews/data/interview-texts-only.xlsx">file of interviews</a> from the <a href="../case-studies/interviews/">Football Manager Interviews case study</a>. Randomly generate a series of 25 numbers between 1 and 121 (<em>without replacement</em>). Those will be your interviews to rate. Filter those interviews and save the file as lastname_firstname_sentiment_rated.xlsx.</li>
-<li>Go through your interviews and manually rate managers’ sentiment (25 total).</li>
-<li>Input full manager interviews (without your rating) into the AI of choice and obtain and compare AI-generated sentiment ratings to initial manual assessments.</li>
-<li>For both exercises, incorporate the guidelines <a href="../week07/assets/sentiment-guidelines.html">HERE</a></li>
-<li>Compare your manual and AI generated ratings, and write one paragraph summarizing similarities and deviation.</li>
-</ul>
+<section id="my-single-prompt" class="level1">
+<h1>my single prompt</h1>
+<pre><code>This is my data and the codebook. Create a variable dictionary. Use the pdf i shared earlier. Output as markdown. For each variable: varname, labels, type, coverage (% missing), mean and mode. Round up numbers. Look at cps and provide short labels. Get me an .md I can download.</code></pre>
 </section>
-<section id="submit" class="level3">
-<h3 class="anchored" data-anchor-id="submit">Submit:</h3>
-<ul>
-<li>A file with your manual ratings and AI generated ratings: lastname_firstname_sentiment_rated.xlsx.</li>
-<li>A text file with the one paragraph summarizing similarities and deviation: lastname_firstname_sentiment_eval.txt/</li>
-</ul>
+<section id="variable-dictionary" class="level1">
+<h1>Variable dictionary</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>varname</th>
+<th>type</th>
+<th>missing (%)</th>
+<th>mean</th>
+<th>mode</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>…1</td>
+<td>int64</td>
+<td>0%</td>
+<td>197435.3</td>
+<td>83378</td>
+</tr>
+<tr class="even">
+<td>hhid</td>
+<td>int64</td>
+<td>0%</td>
+<td>404953427059356.6</td>
+<td>250109964300640</td>
+</tr>
+<tr class="odd">
+<td>intmonth</td>
+<td>object</td>
+<td>0%</td>
+<td>NA</td>
+<td>December</td>
+</tr>
+<tr class="even">
+<td>stfips</td>
+<td>object</td>
+<td>0%</td>
+<td>NA</td>
+<td>FL</td>
+</tr>
+<tr class="odd">
+<td>weight</td>
+<td>float64</td>
+<td>0%</td>
+<td>2550.8</td>
+<td>291.4682</td>
+</tr>
+<tr class="even">
+<td>earnwke</td>
+<td>float64</td>
+<td>0%</td>
+<td>933.7</td>
+<td>2884.61</td>
+</tr>
+<tr class="odd">
+<td>uhours</td>
+<td>int64</td>
+<td>0%</td>
+<td>39.4</td>
+<td>40</td>
+</tr>
+<tr class="even">
+<td>grade92</td>
+<td>int64</td>
+<td>0%</td>
+<td>41.0</td>
+<td>39</td>
+</tr>
+<tr class="odd">
+<td>race</td>
+<td>int64</td>
+<td>0%</td>
+<td>1.5</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>ethnic</td>
+<td>float64</td>
+<td>89%</td>
+<td>3.8</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td>age</td>
+<td>int64</td>
+<td>0%</td>
+<td>41.0</td>
+<td>44</td>
+</tr>
+<tr class="even">
+<td>sex</td>
+<td>int64</td>
+<td>0%</td>
+<td>1.5</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>marital</td>
+<td>int64</td>
+<td>0%</td>
+<td>3.6</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>ownchild</td>
+<td>int64</td>
+<td>0%</td>
+<td>0.6</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>chldpres</td>
+<td>int64</td>
+<td>0%</td>
+<td>1.6</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>prcitshp</td>
+<td>object</td>
+<td>0%</td>
+<td>NA</td>
+<td>Native, Born In US</td>
+</tr>
+<tr class="odd">
+<td>state</td>
+<td>int64</td>
+<td>0%</td>
+<td>5.0</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>ind02</td>
+<td>object</td>
+<td>0%</td>
+<td>NA</td>
+<td>Elementary and secondary schools (6111)</td>
+</tr>
+<tr class="odd">
+<td>occ2012</td>
+<td>int64</td>
+<td>0%</td>
+<td>3917.9</td>
+<td>430</td>
+</tr>
+<tr class="even">
+<td>class</td>
+<td>object</td>
+<td>0%</td>
+<td>NA</td>
+<td>Private, For Profit</td>
+</tr>
+<tr class="odd">
+<td>unionmme</td>
+<td>object</td>
+<td>0%</td>
+<td>NA</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>unioncov</td>
+<td>object</td>
+<td>7%</td>
+<td>NA</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>lfsr94</td>
+<td>object</td>
+<td>0%</td>
+<td>NA</td>
+<td>Employed-At Work</td>
+</tr>
+</tbody>
+</table>
 
 
 <!-- -->
@@ -888,26 +1064,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Assignment 7: Student-Specific Sentiment Analysis"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Student-Specific Sentiment Analysis of a series of texts -- Compare manual ratings with AI-generated ratings.</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Steps:</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Download the text <span class="co">[</span><span class="ot">file of interviews</span><span class="co">](/case-studies/interviews/data/interview-texts-only.xlsx)</span> from the <span class="co">[</span><span class="ot">Football Manager Interviews case study</span><span class="co">](/case-studies/interviews/)</span>. Randomly generate a series of 25 numbers between 1 and 121 (_without replacement_). Those will be your interviews to rate. Filter those interviews and save the file as lastname_firstname_sentiment_rated.xlsx.</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Go through your interviews and manually rate managers' sentiment (25 total).</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Input full manager interviews (without your rating) into the AI of choice and obtain and compare AI-generated sentiment ratings to initial manual assessments.</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>For both exercises, incorporate the guidelines <span class="co">[</span><span class="ot">HERE</span><span class="co">](/week07/assets/sentiment-guidelines.html)</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Compare your manual and AI generated ratings, and write one paragraph summarizing similarities and deviation.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### Submit:</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>A file with your manual ratings and AI generated ratings: lastname_firstname_sentiment_rated.xlsx.</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>A text file with the one paragraph summarizing similarities and deviation: lastname_firstname_sentiment_eval.txt/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "CPS MORG 2014 Variable Dictionary by ChatGPT 4o"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2025-06-06"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "ChatGPT 4o"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu"># my single prompt</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">This is my data and the codebook. Create a variable dictionary. Use the pdf i shared earlier. Output as markdown. For each variable: varname, labels, type, coverage (% missing), mean and mode. Round up numbers. Look at cps and provide short labels. Get me an .md I can download.</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu"># Variable dictionary</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> varname <span class="pp">|</span> type <span class="pp">|</span> missing (%) <span class="pp">|</span> mean <span class="pp">|</span> mode <span class="pp">|</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------|------|--------------|-------|------|</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ...1 <span class="pp">|</span> int64 <span class="pp">|</span> 0% <span class="pp">|</span> 197435.3 <span class="pp">|</span> 83378 <span class="pp">|</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> hhid <span class="pp">|</span> int64 <span class="pp">|</span> 0% <span class="pp">|</span> 404953427059356.6 <span class="pp">|</span> 250109964300640 <span class="pp">|</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> intmonth <span class="pp">|</span> object <span class="pp">|</span> 0% <span class="pp">|</span> NA <span class="pp">|</span> December <span class="pp">|</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> stfips <span class="pp">|</span> object <span class="pp">|</span> 0% <span class="pp">|</span> NA <span class="pp">|</span> FL <span class="pp">|</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> weight <span class="pp">|</span> float64 <span class="pp">|</span> 0% <span class="pp">|</span> 2550.8 <span class="pp">|</span> 291.4682 <span class="pp">|</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> earnwke <span class="pp">|</span> float64 <span class="pp">|</span> 0% <span class="pp">|</span> 933.7 <span class="pp">|</span> 2884.61 <span class="pp">|</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> uhours <span class="pp">|</span> int64 <span class="pp">|</span> 0% <span class="pp">|</span> 39.4 <span class="pp">|</span> 40 <span class="pp">|</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> grade92 <span class="pp">|</span> int64 <span class="pp">|</span> 0% <span class="pp">|</span> 41.0 <span class="pp">|</span> 39 <span class="pp">|</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> race <span class="pp">|</span> int64 <span class="pp">|</span> 0% <span class="pp">|</span> 1.5 <span class="pp">|</span> 1 <span class="pp">|</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ethnic <span class="pp">|</span> float64 <span class="pp">|</span> 89% <span class="pp">|</span> 3.8 <span class="pp">|</span> 1.0 <span class="pp">|</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> age <span class="pp">|</span> int64 <span class="pp">|</span> 0% <span class="pp">|</span> 41.0 <span class="pp">|</span> 44 <span class="pp">|</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> sex <span class="pp">|</span> int64 <span class="pp">|</span> 0% <span class="pp">|</span> 1.5 <span class="pp">|</span> 2 <span class="pp">|</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> marital <span class="pp">|</span> int64 <span class="pp">|</span> 0% <span class="pp">|</span> 3.6 <span class="pp">|</span> 1 <span class="pp">|</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ownchild <span class="pp">|</span> int64 <span class="pp">|</span> 0% <span class="pp">|</span> 0.6 <span class="pp">|</span> 0 <span class="pp">|</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> chldpres <span class="pp">|</span> int64 <span class="pp">|</span> 0% <span class="pp">|</span> 1.6 <span class="pp">|</span> 0 <span class="pp">|</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> prcitshp <span class="pp">|</span> object <span class="pp">|</span> 0% <span class="pp">|</span> NA <span class="pp">|</span> Native, Born In US <span class="pp">|</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> state <span class="pp">|</span> int64 <span class="pp">|</span> 0% <span class="pp">|</span> 5.0 <span class="pp">|</span> 5 <span class="pp">|</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ind02 <span class="pp">|</span> object <span class="pp">|</span> 0% <span class="pp">|</span> NA <span class="pp">|</span> Elementary and secondary schools (6111) <span class="pp">|</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> occ2012 <span class="pp">|</span> int64 <span class="pp">|</span> 0% <span class="pp">|</span> 3917.9 <span class="pp">|</span> 430 <span class="pp">|</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> class <span class="pp">|</span> object <span class="pp">|</span> 0% <span class="pp">|</span> NA <span class="pp">|</span> Private, For Profit <span class="pp">|</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> unionmme <span class="pp">|</span> object <span class="pp">|</span> 0% <span class="pp">|</span> NA <span class="pp">|</span> No <span class="pp">|</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> unioncov <span class="pp">|</span> object <span class="pp">|</span> 7% <span class="pp">|</span> NA <span class="pp">|</span> No <span class="pp">|</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> lfsr94 <span class="pp">|</span> object <span class="pp">|</span> 0% <span class="pp">|</span> NA <span class="pp">|</span> Employed-At Work <span class="pp">|</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

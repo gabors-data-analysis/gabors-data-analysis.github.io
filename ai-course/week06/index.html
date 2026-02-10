@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2026-02-10">
 
-<title>Week 06: Creating Reports – Doing Data Analysis with AI</title>
+<title>Week 06: From Data to Report – Doing Data Analysis with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -152,7 +152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../week00/index.html">Course Weeks</a></li><li class="breadcrumb-item"><a href="../week06/index.html">Week 6: Creating Reports</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../week00/index.html">Course Weeks</a></li><li class="breadcrumb-item"><a href="../week06/index.html">Week 6: From Data to Report</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -212,7 +212,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../week06/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Week 6: Creating Reports</span></a>
+ <span class="menu-text">Week 6: From Data to Report</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -386,17 +386,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-06-creating-reports" id="toc-week-06-creating-reports" class="nav-link active" data-scroll-target="#week-06-creating-reports">Week 06: Creating Reports</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning Outcomes</a></li>
+  </ul></li>
+  <li><a href="#preparation-before-class" id="toc-preparation-before-class" class="nav-link" data-scroll-target="#preparation-before-class">Preparation / Before Class</a></li>
+  <li><a href="#class-material" id="toc-class-material" class="nav-link" data-scroll-target="#class-material">Class Material</a></li>
+  <li><a href="#prompting-tips-for-data-analysis" id="toc-prompting-tips-for-data-analysis" class="nav-link" data-scroll-target="#prompting-tips-for-data-analysis">Prompting Tips for Data Analysis</a></li>
+  <li><a href="#discussion-points" id="toc-discussion-points" class="nav-link" data-scroll-target="#discussion-points">Discussion Points</a></li>
+  <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">Assignment</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../week00/index.html">Course Weeks</a></li><li class="breadcrumb-item"><a href="../week06/index.html">Week 6: Creating Reports</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../week00/index.html">Course Weeks</a></li><li class="breadcrumb-item"><a href="../week06/index.html">Week 6: From Data to Report</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Week 06: Creating Reports</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">AI-assisted report generation and reproducible outputs</p>
+<div class="quarto-title-block"><div><h1 class="title">Week 06: From Data to Report</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Vibe research vs building an economics-quality report with CLI tools</p>
 </div>
 
 
@@ -422,16 +431,194 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="hero-section">
 <div class="container">
 <div class="hero-title">
-<p>Week 06: Creating Reports</p>
+<p>Week 06: From Data to Report</p>
 </div>
 <div class="hero-subtitle">
-<p>AI-assisted report generation and reproducible outputs</p>
+<p>Vibe research vs building an economics-quality report with CLI tools</p>
 </div>
 </div>
 </div>
-<section id="week-06-creating-reports" class="level1">
-<h1>Week 06: Creating Reports</h1>
-<p><em>Content coming soon</em></p>
+<hr>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This week ties together everything from weeks 4-5: you’ll use Claude Code to <strong>download real data</strong>, <strong>explore it</strong>, and <strong>produce a polished PDF report</strong> – all from the terminal. The twist: we start by letting AI loose (“vibe report”) and then compare that to a carefully directed, economics-quality report. The contrast is the lesson.</p>
+<p>We use the <strong>US Earnings (CPS MORG)</strong> case study – real Current Population Survey data on wages, education, occupation, and demographics. Read <a href="https://gabors-data-analysis.com/datasets/#cps-earnings">more on CPS here</a>.</p>
+<section id="learning-outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h3>
+<p>By the end of the session, students will:</p>
+<ul>
+<li>Download and prepare a real dataset from an online repository using CLI tools</li>
+<li>Experience the difference between undirected (“vibe”) and directed AI output</li>
+<li>Iteratively refine graphs from basic to publication-quality</li>
+<li>Produce a constrained, economics-style PDF report with exhibits and regressions</li>
+</ul>
+</section>
+</section>
+<section id="preparation-before-class" class="level2">
+<h2 class="anchored" data-anchor-id="preparation-before-class">Preparation / Before Class</h2>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Prerequisites</strong></p>
+</div>
+<div class="card-body">
+<p><strong>Required:</strong></p>
+<ul>
+<li>Working Claude Code installation from <a href="../week04/index.html">Week 04</a></li>
+<li>Python environment with <code>pandas</code>, <code>matplotlib</code>, <code>seaborn</code>, <code>statsmodels</code> installed</li>
+<li>Familiarity with running Claude Code in a project folder (Week 05)</li>
+</ul>
+<p><strong>Review:</strong></p>
+<ul>
+<li><a href="../case-studies/earnings/">US Earnings case study</a> – browse the data description and key variables</li>
+<li><a href="../da-knowledge/install-cli.html">Installing CLI Tools</a> – if you need to catch up</li>
+</ul>
+<p><strong>Useful background:</strong></p>
+<ul>
+<li>The earnings data comes from the case study on <a href="https://gabors-data-analysis.com/casestudies/#ch09a-estimating-gender-and-age-differences-in-earnings">gender and age differences in earnings</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="class-material" class="level2">
+<h2 class="anchored" data-anchor-id="class-material">Class Material</h2>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Part 1: Get the Data (15 min)</strong></p>
+</div>
+<div class="card-body">
+<p><strong>The goal:</strong> Use Claude Code to download the full CPS MORG dataset from OSF, understand its structure, and prepare it for analysis. This showcases real CLI data work – no browser, no manual downloads.</p>
+<p><strong>Step 1: Download from OSF</strong></p>
+<p>Open Claude Code in your project folder and try:</p>
+<pre><code>Download the CPS MORG 2014 earnings data from OSF.
+The dataset page is at https://osf.io/g8p9j/files/4ay9x
+Also get the codebook PDF from https://osf.io/uqe8z as well as occupation codes from https://osf.io/g8p9j/files/57n9q
+Save all to a data/ folder.</code></pre>
+<p>Claude Code will use <code>curl</code> or <code>wget</code> to fetch the files directly. Watch how it handles the download, checks file sizes, and confirms the data arrived.</p>
+<p><strong>Step 2: First look</strong></p>
+<pre><code>Read in the CSV. How many rows and columns?
+Show me the first few rows and basic summary stats.</code></pre>
+<p>The full MORG file is large. Let’s focus on one.</p>
+<pre><code>Create a frequency table of states. Drop small ones. Make it pretty.</code></pre>
+<p>Pick a state and add to script:</p>
+<pre><code>Filter to the state [your choice]. Print the state code. 
+Save as morg-2014-emp-state5.csv.</code></pre>
+<p>Check the state code in pdf.</p>
+<p><strong>Step 3: Variable dictionary</strong></p>
+<p>This one (bit sleazy) promp, can try something better</p>
+<pre><code>This is my data and the codebook. Create a variable dictionary. Use the pdf i shared earlier. Output as markdown. For each variable: varname, labels, type, coverage (% missing), mean and mode. Round up numbers. Look at cps and provide short labels. Get me an .md I can download.</code></pre>
+<p>Could you refine the prompt to make output better, more structured, or simpler?</p>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Part 2: The Vibe Report (20 min)</strong></p>
+</div>
+<div class="card-body">
+<p><strong>The experiment:</strong> Give AI a vague, open-ended prompt and see what happens.</p>
+<pre><code>Create a nice looking report on an interesting question
+using the content of the data folder only.</code></pre>
+<p>Let Claude Code run. It will likely produce a long, generic report with many graphs, broad research questions, and decorative formatting.</p>
+<p><strong>Code to pdf</strong></p>
+<p>Make sure a pdf is created. It may install bits – here is a guide to <a href="../da-knowledge/pdf-guide.html">create pdf docs directly</a> with AI.</p>
+<p><strong>Class discussion: Evaluate the vibe report?</strong></p>
+<p>Look at what was produced and score (1/10, where 10 is best in class, paper or blogpost) and discuss:</p>
+<ul>
+<li>Length – does everything useful and relevant?</li>
+<li>Is the research question well defined?</li>
+<li>Graphs and tables: good, informative, well labeled?</li>
+<li>Economics rigor: did it create exhibits that are informative and useful? Does it use the appropriate tools (descriptive table, regression, etc)</li>
+<li>Descriptions: Is the text describes the exhibits and results well? Does it interpret them correctly? Does it make the right conclusions?</li>
+</ul>
+<p>Overall, what do you think about the choices it made?</p>
+<p><strong>code</strong></p>
+<p>Check the code. How did it mix analytics and text?</p>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Part 3: Some focused Exercises (30 min)</strong></p>
+</div>
+<div class="card-body">
+<p><strong>Now let’s do it properly.</strong> Go back and build up the analysis step by step, iterating on some exhibits.</p>
+<p><strong>Task 1: Heatmap</strong></p>
+<pre><code>Show a heatmap of hourly wages by occupation and education level. Use viridis.</code></pre>
+<p>Iterate to make it good (if needed)</p>
+<p><strong>Task 2: Adding analysis:</strong> Now add regression analysis to support the graphs.</p>
+<pre><code>Run an OLS regression of hourly wages on gender, controlling for
+age, education (grade92), and occupation (occ2012).
+Report the results in a clean table.</code></pre>
+<p>Iterate on the specification:</p>
+<pre><code>Add age squared. Report robust standard errors.
+Interpret the gender coefficient -- what does it mean in dollar terms?</code></pre>
+</div>
+</div>
+</section>
+<section id="prompting-tips-for-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="prompting-tips-for-data-analysis">Prompting Tips for Data Analysis</h2>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>What We Learned About Prompting</strong></p>
+</div>
+<div class="card-body">
+<p>This week demonstrates several prompting principles in action:</p>
+<p><strong>Be specific about your tools and preferences</strong></p>
+<ul>
+<li>“Using Python with pandas and matplotlib…”</li>
+<li>“Use viridis color scheme” – state your preferences explicitly</li>
+<li>“Save as PDF” – specify output format</li>
+</ul>
+<p><strong>Include data structure information</strong></p>
+<ul>
+<li>Upload the data or describe it: “DataFrame with columns: age, sex, earnwke, grade92, occ2012”</li>
+<li>Point to the codebook: “Use the PDF codebook I shared”</li>
+<li>Specify the unit: “hourly wages, computed as earnwke / uhours”</li>
+</ul>
+<p><strong>Think constraints on output</strong></p>
+<ul>
+<li>“3-5 exhibits, no more”</li>
+<li>“600-800 words”</li>
+<li>“Professional formatting with numbered exhibits”</li>
+</ul>
+<p><strong>Vague vs.&nbsp;specific prompts – a comparison</strong></p>
+<p><em>Vague:</em> <code>"Analyze this earnings data and write a report"</code></p>
+<p><em>Specific:</em> <code>"Using CPS MORG data for California, estimate the gender wage gap controlling for education and occupation. Create a LOESS plot of residual wages by age and gender. Write a 700-word report with 4 exhibits."</code></p>
+<p>The vague prompt gives you <em>something</em>. The specific prompt gives you what you <em>need</em>. You’ll test it in the assignment.</p>
+</div>
+</div>
+</section>
+<section id="discussion-points" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-points">Discussion Points</h2>
+<ul>
+<li>When is a “vibe report” actually useful? (Exploration, brainstorming, first look at data)</li>
+<li>How do you decide how many exhibits belong in a report?</li>
+<li>What’s the right balance between letting AI explore freely vs.&nbsp;directing every step?</li>
+<li>How would this workflow differ if you were using R instead of Python?</li>
+</ul>
+</section>
+<section id="assignment" class="level2">
+<h2 class="anchored" data-anchor-id="assignment">Assignment</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Assignment 6: From Data to Report
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Due:</strong> Before Week 7</p>
+<p>Use Claude Code to download a dataset, explore it, and create a focused PDF report.</p>
+<p><a href="../assignments/assignment_06.html" class="assignment-badge">Full Assignment Details</a></p>
+</div>
+</div>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<p><strong>Case study:</strong> <a href="../case-studies/earnings/">US Earnings (CPS MORG)</a> – data files and documentation</p>
+<p><strong>Graph walkthrough:</strong> <a href="../week06/assets/creating-graphs.html">Creating Graphs</a> – one example with R.</p>
+<p><strong>Data source:</strong> <a href="https://osf.io/4ay9x">OSF - CPS MORG data</a> | <a href="https://osf.io/uqe8z">Codebook PDF</a></p>
+<p><strong>Textbook reference:</strong> <a href="https://gabors-data-analysis.com/casestudies/#ch09a-estimating-gender-and-age-differences-in-earnings">Chapter 9A - Gender and age differences in earnings</a></p>
 
 
 <!-- -->
@@ -890,26 +1077,276 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 06: Creating Reports"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "AI-assisted report generation and reproducible outputs"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-02-10"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>::: {.hero-section}</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>::: {.container}</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>::: {.hero-title}</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Week 06: Creating Reports</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>AI-assisted report generation and reproducible outputs</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu"># Week 06: Creating Reports</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>*Content coming soon*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 06: From Data to Report"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Vibe research vs building an economics-quality report with CLI tools"</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-02-10"</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>::: {.hero-section}</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>::: {.container}</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>::: {.hero-title}</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>Week 06: From Data to Report</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>Vibe research vs building an economics-quality report with CLI tools</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Overview</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>This week ties together everything from weeks 4-5: you'll use Claude Code to **download real data**, **explore it**, and **produce a polished PDF report** -- all from the terminal. The twist: we start by letting AI loose ("vibe report") and then compare that to a carefully directed, economics-quality report. The contrast is the lesson.</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>We use the **US Earnings (CPS MORG)** case study -- real Current Population Survey data on wages, education, occupation, and demographics.</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>Read <span class="co">[</span><span class="ot">more on CPS here</span><span class="co">](https://gabors-data-analysis.com/datasets/#cps-earnings)</span>.</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="fu">### Learning Outcomes</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>By the end of the session, students will:</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Download and prepare a real dataset from an online repository using CLI tools</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Experience the difference between undirected ("vibe") and directed AI output</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Iteratively refine graphs from basic to publication-quality</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Produce a constrained, economics-style PDF report with exhibits and regressions</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preparation / Before Class</span></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>**Prerequisites**</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>**Required:**</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Working Claude Code installation from <span class="co">[</span><span class="ot">Week 04</span><span class="co">](../week04/index.html)</span></span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Python environment with <span class="in">`pandas`</span>, <span class="in">`matplotlib`</span>, <span class="in">`seaborn`</span>, <span class="in">`statsmodels`</span> installed</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Familiarity with running Claude Code in a project folder (Week 05)</span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>**Review:**</span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">US Earnings case study</span><span class="co">](/case-studies/earnings/)</span> -- browse the data description and key variables</span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Installing CLI Tools</span><span class="co">](../da-knowledge/install-cli.html)</span> -- if you need to catch up</span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>**Useful background:**</span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The earnings data comes from the case study on <span class="co">[</span><span class="ot">gender and age differences in earnings</span><span class="co">](https://gabors-data-analysis.com/casestudies/#ch09a-estimating-gender-and-age-differences-in-earnings)</span></span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Class Material</span></span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a>**Part 1: Get the Data (15 min)**</span>
+<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a>**The goal:** Use Claude Code to download the full CPS MORG dataset from OSF, understand its structure, and prepare it for analysis. This showcases real CLI data work -- no browser, no manual downloads.</span>
+<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a>**Step 1: Download from OSF**</span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a>Open Claude Code in your project folder and try:</span>
+<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a><span class="in">Download the CPS MORG 2014 earnings data from OSF.</span></span>
+<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a><span class="in">The dataset page is at https://osf.io/g8p9j/files/4ay9x</span></span>
+<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a><span class="in">Also get the codebook PDF from https://osf.io/uqe8z as well as occupation codes from https://osf.io/g8p9j/files/57n9q</span></span>
+<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a><span class="in">Save all to a data/ folder.</span></span>
+<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a>Claude Code will use <span class="in">`curl`</span> or <span class="in">`wget`</span> to fetch the files directly. Watch how it handles the download, checks file sizes, and confirms the data arrived.</span>
+<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a>**Step 2: First look**</span>
+<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a><span class="in">Read in the CSV. How many rows and columns?</span></span>
+<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a><span class="in">Show me the first few rows and basic summary stats.</span></span>
+<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a>The full MORG file is large. Let's focus on one.</span>
+<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a><span class="in">Create a frequency table of states. Drop small ones. Make it pretty.</span></span>
+<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a>Pick a state and add to script:</span>
+<span id="cb10-101"><a href="#cb10-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a><span class="in">Filter to the state [your choice]. Print the state code. </span></span>
+<span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a><span class="in">Save as morg-2014-emp-state5.csv.</span></span>
+<span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a>Check the state code in pdf. </span>
+<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a>**Step 3: Variable dictionary**</span>
+<span id="cb10-111"><a href="#cb10-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a>This one (bit sleazy) promp, can try something better</span>
+<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a><span class="in">This is my data and the codebook. Create a variable dictionary. Use the pdf i shared earlier. Output as markdown. For each variable: varname, labels, type, coverage (% missing), mean and mode. Round up numbers. Look at cps and provide short labels. Get me an .md I can download.</span></span>
+<span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a>Could you refine the prompt to make output better, more structured, or simpler?</span>
+<span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a>**Part 2: The Vibe Report (20 min)**</span>
+<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a>**The experiment:** Give AI a vague, open-ended prompt and see what happens.</span>
+<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-132"><a href="#cb10-132" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-133"><a href="#cb10-133" aria-hidden="true" tabindex="-1"></a><span class="in">Create a nice looking report on an interesting question</span></span>
+<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a><span class="in">using the content of the data folder only.</span></span>
+<span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a>Let Claude Code run. It will likely produce a long, generic report with many graphs, broad research questions, and decorative formatting.</span>
+<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a>**Code to pdf**</span>
+<span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a>Make sure a pdf is created. It may install bits -- here is a guide to <span class="co">[</span><span class="ot">create pdf docs directly</span><span class="co">](/da-knowledge/pdf-guide.html)</span> with AI.</span>
+<span id="cb10-142"><a href="#cb10-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-143"><a href="#cb10-143" aria-hidden="true" tabindex="-1"></a>**Class discussion: Evaluate the vibe report?**</span>
+<span id="cb10-144"><a href="#cb10-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a>Look at what was produced and score (1/10, where 10 is best in class, paper or blogpost) and discuss:</span>
+<span id="cb10-146"><a href="#cb10-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-147"><a href="#cb10-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Length -- does everything useful and relevant?</span>
+<span id="cb10-148"><a href="#cb10-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Is the research question well defined?</span>
+<span id="cb10-149"><a href="#cb10-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Graphs and tables: good, informative, well labeled? </span>
+<span id="cb10-150"><a href="#cb10-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Economics rigor: did it create exhibits that are informative and useful? Does it use the appropriate tools (descriptive table, regression, etc)</span>
+<span id="cb10-151"><a href="#cb10-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Descriptions: Is the text describes the exhibits and results well? Does it interpret them correctly? Does it make the right conclusions? </span>
+<span id="cb10-152"><a href="#cb10-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-153"><a href="#cb10-153" aria-hidden="true" tabindex="-1"></a>Overall, what do you think about the choices it made?</span>
+<span id="cb10-154"><a href="#cb10-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-155"><a href="#cb10-155" aria-hidden="true" tabindex="-1"></a>**code**</span>
+<span id="cb10-156"><a href="#cb10-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-157"><a href="#cb10-157" aria-hidden="true" tabindex="-1"></a>Check the code. How did it mix analytics and text?</span>
+<span id="cb10-158"><a href="#cb10-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-159"><a href="#cb10-159" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-160"><a href="#cb10-160" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb10-161"><a href="#cb10-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-162"><a href="#cb10-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-163"><a href="#cb10-163" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb10-164"><a href="#cb10-164" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb10-165"><a href="#cb10-165" aria-hidden="true" tabindex="-1"></a>**Part 3: Some focused Exercises  (30 min)**</span>
+<span id="cb10-166"><a href="#cb10-166" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-167"><a href="#cb10-167" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb10-168"><a href="#cb10-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-169"><a href="#cb10-169" aria-hidden="true" tabindex="-1"></a>**Now let's do it properly.** Go back and build up the analysis step by step, iterating on some exhibits.</span>
+<span id="cb10-170"><a href="#cb10-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-171"><a href="#cb10-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-172"><a href="#cb10-172" aria-hidden="true" tabindex="-1"></a>**Task 1: Heatmap**</span>
+<span id="cb10-173"><a href="#cb10-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-174"><a href="#cb10-174" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-175"><a href="#cb10-175" aria-hidden="true" tabindex="-1"></a><span class="in">Show a heatmap of hourly wages by occupation and education level. Use viridis.</span></span>
+<span id="cb10-176"><a href="#cb10-176" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-177"><a href="#cb10-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-178"><a href="#cb10-178" aria-hidden="true" tabindex="-1"></a>Iterate to make it good (if needed)</span>
+<span id="cb10-179"><a href="#cb10-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-180"><a href="#cb10-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-181"><a href="#cb10-181" aria-hidden="true" tabindex="-1"></a>**Task 2: Adding analysis:** Now add regression analysis to support the graphs.</span>
+<span id="cb10-182"><a href="#cb10-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-183"><a href="#cb10-183" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-184"><a href="#cb10-184" aria-hidden="true" tabindex="-1"></a><span class="in">Run an OLS regression of hourly wages on gender, controlling for</span></span>
+<span id="cb10-185"><a href="#cb10-185" aria-hidden="true" tabindex="-1"></a><span class="in">age, education (grade92), and occupation (occ2012).</span></span>
+<span id="cb10-186"><a href="#cb10-186" aria-hidden="true" tabindex="-1"></a><span class="in">Report the results in a clean table.</span></span>
+<span id="cb10-187"><a href="#cb10-187" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-188"><a href="#cb10-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-189"><a href="#cb10-189" aria-hidden="true" tabindex="-1"></a>Iterate on the specification:</span>
+<span id="cb10-190"><a href="#cb10-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-191"><a href="#cb10-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-192"><a href="#cb10-192" aria-hidden="true" tabindex="-1"></a><span class="in">Add age squared. Report robust standard errors.</span></span>
+<span id="cb10-193"><a href="#cb10-193" aria-hidden="true" tabindex="-1"></a><span class="in">Interpret the gender coefficient -- what does it mean in dollar terms?</span></span>
+<span id="cb10-194"><a href="#cb10-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-195"><a href="#cb10-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-196"><a href="#cb10-196" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-197"><a href="#cb10-197" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb10-198"><a href="#cb10-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-199"><a href="#cb10-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-200"><a href="#cb10-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-201"><a href="#cb10-201" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prompting Tips for Data Analysis</span></span>
+<span id="cb10-202"><a href="#cb10-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-203"><a href="#cb10-203" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb10-204"><a href="#cb10-204" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb10-205"><a href="#cb10-205" aria-hidden="true" tabindex="-1"></a>**What We Learned About Prompting**</span>
+<span id="cb10-206"><a href="#cb10-206" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-207"><a href="#cb10-207" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb10-208"><a href="#cb10-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-209"><a href="#cb10-209" aria-hidden="true" tabindex="-1"></a>This week demonstrates several prompting principles in action:</span>
+<span id="cb10-210"><a href="#cb10-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-211"><a href="#cb10-211" aria-hidden="true" tabindex="-1"></a>**Be specific about your tools and preferences**</span>
+<span id="cb10-212"><a href="#cb10-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-213"><a href="#cb10-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Using Python with pandas and matplotlib..." </span>
+<span id="cb10-214"><a href="#cb10-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Use viridis color scheme" -- state your preferences explicitly</span>
+<span id="cb10-215"><a href="#cb10-215" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Save as PDF" -- specify output format</span>
+<span id="cb10-216"><a href="#cb10-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-217"><a href="#cb10-217" aria-hidden="true" tabindex="-1"></a>**Include data structure information**</span>
+<span id="cb10-218"><a href="#cb10-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-219"><a href="#cb10-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Upload the data or describe it: "DataFrame with columns: age, sex, earnwke, grade92, occ2012"</span>
+<span id="cb10-220"><a href="#cb10-220" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Point to the codebook: "Use the PDF codebook I shared"</span>
+<span id="cb10-221"><a href="#cb10-221" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Specify the unit: "hourly wages, computed as earnwke / uhours"</span>
+<span id="cb10-222"><a href="#cb10-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-223"><a href="#cb10-223" aria-hidden="true" tabindex="-1"></a>**Think constraints on output**</span>
+<span id="cb10-224"><a href="#cb10-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-225"><a href="#cb10-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"3-5 exhibits, no more"</span>
+<span id="cb10-226"><a href="#cb10-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"600-800 words"</span>
+<span id="cb10-227"><a href="#cb10-227" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Professional formatting with numbered exhibits"</span>
+<span id="cb10-228"><a href="#cb10-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-229"><a href="#cb10-229" aria-hidden="true" tabindex="-1"></a>**Vague vs. specific prompts -- a comparison**</span>
+<span id="cb10-230"><a href="#cb10-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-231"><a href="#cb10-231" aria-hidden="true" tabindex="-1"></a>*Vague:* <span class="in">`"Analyze this earnings data and write a report"`</span></span>
+<span id="cb10-232"><a href="#cb10-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-233"><a href="#cb10-233" aria-hidden="true" tabindex="-1"></a>*Specific:* <span class="in">`"Using CPS MORG data for California, estimate the gender wage gap controlling for education and occupation. Create a LOESS plot of residual wages by age and gender. Write a 700-word report with 4 exhibits."`</span></span>
+<span id="cb10-234"><a href="#cb10-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-235"><a href="#cb10-235" aria-hidden="true" tabindex="-1"></a>The vague prompt gives you *something*. The specific prompt gives you what you *need*. You'll test it in the assignment.</span>
+<span id="cb10-236"><a href="#cb10-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-237"><a href="#cb10-237" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-238"><a href="#cb10-238" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb10-239"><a href="#cb10-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-240"><a href="#cb10-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-241"><a href="#cb10-241" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion Points</span></span>
+<span id="cb10-242"><a href="#cb10-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-243"><a href="#cb10-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>When is a "vibe report" actually useful? (Exploration, brainstorming, first look at data)</span>
+<span id="cb10-244"><a href="#cb10-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How do you decide how many exhibits belong in a report?</span>
+<span id="cb10-245"><a href="#cb10-245" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What's the right balance between letting AI explore freely vs. directing every step?</span>
+<span id="cb10-246"><a href="#cb10-246" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How would this workflow differ if you were using R instead of Python?</span>
+<span id="cb10-247"><a href="#cb10-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-248"><a href="#cb10-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-249"><a href="#cb10-249" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assignment</span></span>
+<span id="cb10-250"><a href="#cb10-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-251"><a href="#cb10-251" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon="false"}</span>
+<span id="cb10-252"><a href="#cb10-252" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assignment 6: From Data to Report</span></span>
+<span id="cb10-253"><a href="#cb10-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-254"><a href="#cb10-254" aria-hidden="true" tabindex="-1"></a>**Due:** Before Week 7</span>
+<span id="cb10-255"><a href="#cb10-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-256"><a href="#cb10-256" aria-hidden="true" tabindex="-1"></a>Use Claude Code to download a dataset, explore it, and create a focused PDF report.</span>
+<span id="cb10-257"><a href="#cb10-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-258"><a href="#cb10-258" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Full Assignment Details</span><span class="co">](../assignments/assignment_06.html)</span>{.assignment-badge}</span>
+<span id="cb10-259"><a href="#cb10-259" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-260"><a href="#cb10-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-261"><a href="#cb10-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-262"><a href="#cb10-262" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
+<span id="cb10-263"><a href="#cb10-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-264"><a href="#cb10-264" aria-hidden="true" tabindex="-1"></a>**Case study:** <span class="co">[</span><span class="ot">US Earnings (CPS MORG)</span><span class="co">](/case-studies/earnings/)</span> -- data files and documentation</span>
+<span id="cb10-265"><a href="#cb10-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-266"><a href="#cb10-266" aria-hidden="true" tabindex="-1"></a>**Graph walkthrough:** <span class="co">[</span><span class="ot">Creating Graphs</span><span class="co">](/week06/assets/creating-graphs.html)</span> -- one example with R. </span>
+<span id="cb10-267"><a href="#cb10-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-268"><a href="#cb10-268" aria-hidden="true" tabindex="-1"></a>**Data source:** <span class="co">[</span><span class="ot">OSF - CPS MORG data</span><span class="co">](https://osf.io/4ay9x)</span> | <span class="co">[</span><span class="ot">Codebook PDF</span><span class="co">](https://osf.io/uqe8z)</span></span>
+<span id="cb10-269"><a href="#cb10-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-270"><a href="#cb10-270" aria-hidden="true" tabindex="-1"></a>**Textbook reference:** <span class="co">[</span><span class="ot">Chapter 9A - Gender and age differences in earnings</span><span class="co">](https://gabors-data-analysis.com/casestudies/#ch09a-estimating-gender-and-age-differences-in-earnings)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

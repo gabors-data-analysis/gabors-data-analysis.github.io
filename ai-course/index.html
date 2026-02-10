@@ -213,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week06/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 6: Creating Reports</span></a>
+ <span class="menu-text">Week 6: From Data to Report</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -520,7 +520,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Week 3:</strong> AI-assisted report writing with WVS data</li>
 <li><strong>Week 4:</strong> Agentic AI with Claude Code using Austrian hotel data</li>
 <li><strong>Week 5:</strong> Advanced CLI Workflows: custom skills, CLAUDE.md, git integration</li>
-<li><strong>Week 6:</strong> Creating Reports</li>
+<li><strong>Week 6:</strong> From Data to Report – vibe report vs.&nbsp;economics-quality report with CPS earnings data</li>
 <li><strong>Week 7:</strong> Text analysis 1: basics</li>
 <li><strong>Week 8:</strong> Text analysis 2: sentiment analysis</li>
 <li><strong>Week 9:</strong> AI as research companion 1: Control variables</li>
@@ -577,8 +577,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Week05</strong>: Advanced CLI Workflows</p>
 <p>Going deeper with CLI tools: custom skills, project-specific instructions (CLAUDE.md), git integration, and autonomous execution. Turning CLI tools from clever assistants into reproducible research companions.</p>
 <p><a href="week05/">Content</a></p>
-<p><strong>Week06</strong>: Creating Reports</p>
-<p>TBA</p>
+<p><strong>Week06</strong>: From Data to Report</p>
+<p>Download real CPS earnings data via CLI, contrast an undirected “vibe report” with a carefully directed economics-quality report. Iterative graph refinement, OLS regressions, and constrained PDF output.</p>
+<p>Case study: <a href="case-studies/earnings/">US Earnings (CPS)</a></p>
 <p><a href="week06/">Content</a></p>
 <p><strong>Week07</strong>: Text as data 1 – intro lecture</p>
 <p>No course of mine can escape football (soccer). Here we look at post-game interviews to learn basics of text analysis and apply LLMs in what they are best - context dependent learning. Two class series. First is more intro to natural language processing.</p>
@@ -1170,7 +1171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 3:** AI-assisted report writing with WVS data</span>
 <span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 4:** Agentic AI with Claude Code using Austrian hotel data</span>
 <span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 5:** Advanced CLI Workflows: custom skills, CLAUDE.md, git integration</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 6:** Creating Reports</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 6:** From Data to Report -- vibe report vs. economics-quality report with CPS earnings data</span>
 <span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 7:** Text analysis 1: basics</span>
 <span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 8:** Text analysis 2: sentiment analysis</span>
 <span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Week 9:**  AI as research companion 1: Control variables</span>
@@ -1253,86 +1254,88 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week05/)</span></span>
 <span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>**Week06**: Creating Reports</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>**Week06**: From Data to Report</span>
 <span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>TBA</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>Download real CPS earnings data via CLI, contrast an undirected "vibe report" with a carefully directed economics-quality report. Iterative graph refinement, OLS regressions, and constrained PDF output.</span>
 <span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week06/)</span></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">US Earnings (CPS)</span><span class="co">](case-studies/earnings/)</span></span>
 <span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>**Week07**: Text as data 1 -- intro lecture</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week06/)</span></span>
 <span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>No course of mine can escape football (soccer). Here we look at post-game interviews to learn basics of text analysis and apply LLMs in what they are best - context dependent learning. Two class series. First is more intro to natural language processing.</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>**Week07**: Text as data 1 -- intro lecture</span>
 <span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">Football Manager Interviews</span><span class="co">](case-studies/interviews/)</span></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>No course of mine can escape football (soccer). Here we look at post-game interviews to learn basics of text analysis and apply LLMs in what they are best - context dependent learning. Two class series. First is more intro to natural language processing.</span>
 <span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week07/)</span></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">Football Manager Interviews</span><span class="co">](case-studies/interviews/)</span></span>
 <span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>**Week08**: Sentiment Analysis with AI</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week07/)</span></span>
 <span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>Second class, now we are in action. How does LLM compare to humans?</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>**Week08**: Sentiment Analysis with AI</span>
 <span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">Football Manager Interviews</span><span class="co">](case-studies/interviews/)</span></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>Second class, now we are in action. How does LLM compare to humans?</span>
 <span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week08/)</span></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">Football Manager Interviews</span><span class="co">](case-studies/interviews/)</span></span>
 <span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>**Week09**: AI as research companion: Control variables</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week08/)</span></span>
 <span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week09/)</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>**Week09**: AI as research companion: Control variables</span>
 <span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>**Week10**: AI as research companion: Instrumental variables</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week09/)</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week10/)</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>**Week10**: AI as research companion: Instrumental variables</span>
 <span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>**Week11**: AI as research companion: Differences in differences</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week10/)</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>TBA</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>**Week11**: AI as research companion: Differences in differences</span>
 <span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>**Week12**: Creating simulations with apps and dashboards</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>TBA</span>
 <span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week12/)</span></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>**Week12**: Creating simulations with apps and dashboards</span>
 <span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>TBA</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week12/)</span></span>
 <span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learn more</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>TBA</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>I'm adding material to <span class="co">[</span><span class="ot">da-knowledge</span><span class="co">](da-knowledge/)</span> folder. You can start with the <span class="co">[</span><span class="ot">beyond</span><span class="co">](da-knowledge/beyond.html)</span> page. </span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learn more</span></span>
 <span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>I'm adding material to <span class="co">[</span><span class="ot">da-knowledge</span><span class="co">](da-knowledge/)</span> folder. You can start with the <span class="co">[</span><span class="ot">beyond</span><span class="co">](da-knowledge/beyond.html)</span> page. </span>
 <span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rights and acknowledgement </span></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="fu">## You can use it to teach and learn freely</span></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rights and acknowledgement </span></span>
 <span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>**Attribution**: Békés, Gábor: "Doing Data Analysis with AI: a short course", available at <span class="co">[</span><span class="ot">gabors-data-analysis.com/ai-course/</span><span class="co">](https://gabors-data-analysis.com/ai-course/)</span>, v2.0. 2026-01-20. </span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="fu">## You can use it to teach and learn freely</span></span>
 <span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>You can fork it from the Github Repo.  <span class="co">[</span><span class="ot">github.com/gabors-data-analysis/da-w-ai/</span><span class="co">](https://github.com/gabors-data-analysis/da-w-ai/)</span></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>**Attribution**: Békés, Gábor: "Doing Data Analysis with AI: a short course", available at <span class="co">[</span><span class="ot">gabors-data-analysis.com/ai-course/</span><span class="co">](https://gabors-data-analysis.com/ai-course/)</span>, v2.0. 2026-01-20. </span>
 <span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>**License**: <span class="co">[</span><span class="ot">CC BY-NC-SA 4.0</span><span class="co">](https://creativecommons.org/licenses/by-nc-sa/4.0/)</span> -- share, attribute, non-commercial (contact me for corporate gigs)</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>You can fork it from the Github Repo.  <span class="co">[</span><span class="ot">github.com/gabors-data-analysis/da-w-ai/</span><span class="co">](https://github.com/gabors-data-analysis/da-w-ai/)</span></span>
 <span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>**Textbook** Please check out the <span class="co">[</span><span class="ot">textbook</span><span class="co">](https://gabors-data-analysis.com/getting-started)</span> behind all this, buy it if you can. If interested teaching contact the <span class="co">[</span><span class="ot">Cambridge UP</span><span class="co">](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20#overview)</span> or me. </span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>**License**: <span class="co">[</span><span class="ot">CC BY-NC-SA 4.0</span><span class="co">](https://creativecommons.org/licenses/by-nc-sa/4.0/)</span> -- share, attribute, non-commercial (contact me for corporate gigs)</span>
 <span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="fu">## Thanks</span></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>**Textbook** Please check out the <span class="co">[</span><span class="ot">textbook</span><span class="co">](https://gabors-data-analysis.com/getting-started)</span> behind all this, buy it if you can. If interested teaching contact the <span class="co">[</span><span class="ot">Cambridge UP</span><span class="co">](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20#overview)</span> or me. </span>
 <span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>**Thanks:** Developed mostly by <span class="co">[</span><span class="ot">me, Gábor Békés</span><span class="co">](https://sites.google.com/site/bekesg/)</span> Thanks a million to the two wonderful human RAs, <span class="co">[</span><span class="ot">Ms Zsuzsanna Vadle</span><span class="co">](https://bsky.app/profile/zsuzsannavadle.bsky.social)</span> and <span class="co">[</span><span class="ot">Mr Kenneth Colombe</span><span class="co">](https://bsky.app/profile/kcolombe24.bsky.social)</span>, both Phd students. Thanks to Claude.ai that did a great deal of help in creating the simulated dataset. ChatGPT and Claude.ai helped create the slideshows and educated *me* on NLP. This is a beatiful example of collaboration with great young people while heavily benefiting from advanced AI.   </span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="fu">## Thanks</span></span>
 <span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>Thanks for CEU's teaching grant that allowed me pay people and AI. </span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>**Thanks:** Developed mostly by <span class="co">[</span><span class="ot">me, Gábor Békés</span><span class="co">](https://sites.google.com/site/bekesg/)</span> Thanks a million to the two wonderful human RAs, <span class="co">[</span><span class="ot">Ms Zsuzsanna Vadle</span><span class="co">](https://bsky.app/profile/zsuzsannavadle.bsky.social)</span> and <span class="co">[</span><span class="ot">Mr Kenneth Colombe</span><span class="co">](https://bsky.app/profile/kcolombe24.bsky.social)</span>, both Phd students. Thanks to Claude.ai that did a great deal of help in creating the simulated dataset. ChatGPT and Claude.ai helped create the slideshows and educated *me* on NLP. This is a beatiful example of collaboration with great young people while heavily benefiting from advanced AI.   </span>
 <span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>Thanks for <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span> -- it was all drafted and written in Quarto and Rstudio by Posit. </span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>Thanks for CEU's teaching grant that allowed me pay people and AI. </span>
 <span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="fu">## Questions and suggestions</span></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>Thanks for <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span> -- it was all drafted and written in Quarto and Rstudio by Posit. </span>
 <span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>This material is based my course at CEU in Vienna, Austria. Here is the <span class="co">[</span><span class="ot">Github repo</span><span class="co">](https://github.com/gabors-data-analysis/da-w-ai)</span></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="fu">## Questions and suggestions</span></span>
 <span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>If you have questions or suggestions or interested to learn more, just <span class="co">[</span><span class="ot">fill in this form</span><span class="co">](https://docs.google.com/forms/d/e/1FAIpQLSev0oaR2s71hvFTZjhTwCuCPL00ljYWAIjl0hoZQLTn_oG3KQ/viewform?usp=header)</span>.</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>This material is based my course at CEU in Vienna, Austria. Here is the <span class="co">[</span><span class="ot">Github repo</span><span class="co">](https://github.com/gabors-data-analysis/da-w-ai)</span></span>
 <span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="fu">## And now, this.</span></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>If you have questions or suggestions or interested to learn more, just <span class="co">[</span><span class="ot">fill in this form</span><span class="co">](https://docs.google.com/forms/d/e/1FAIpQLSev0oaR2s71hvFTZjhTwCuCPL00ljYWAIjl0hoZQLTn_oG3KQ/viewform?usp=header)</span>.</span>
 <span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>AI use is very costly in terms of energy. Yes, it is becoming cheaper. But humanity is also using *much* more of it. </span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="fu">## And now, this.</span></span>
 <span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/ai-energy-cost.jpeg)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>AI use is very costly in terms of energy. Yes, it is becoming cheaper. But humanity is also using *much* more of it. </span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/ai-energy-cost.jpeg)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
