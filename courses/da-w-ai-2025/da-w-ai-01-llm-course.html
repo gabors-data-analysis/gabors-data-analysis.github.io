@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.32">
 
   <meta name="author" content="Gábor Békés (CEU)">
-  <meta name="dcterms.date" content="2026-01-12">
+  <meta name="dcterms.date" content="2026-02-16">
   <title>Data Analysis with AI: Concepts</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -143,7 +143,7 @@ Gábor Békés (CEU)
 </div>
 </div>
 
-  <p class="date">2026-01-12</p>
+  <p class="date">2026-02-16</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Contents</h2>
@@ -151,9 +151,11 @@ Gábor Békés (CEU)
 <li><a href="#/hello" id="/toc-hello">Hello</a></li>
 <li><a href="#/intro-to-the-concept-of-llms" id="/toc-intro-to-the-concept-of-llms">Intro to the concept of LLMs</a></li>
 <li><a href="#/working-with-llms" id="/toc-working-with-llms">Working with LLMs</a></li>
+<li><a href="#/under-the-hood" id="/toc-under-the-hood">Under the Hood</a></li>
 <li><a href="#/what-can-go-wrong" id="/toc-what-can-go-wrong">What can go wrong</a></li>
 <li><a href="#/ai-use-cases" id="/toc-ai-use-cases">AI use cases</a></li>
-<li><a href="#/ethich-and-law" id="/toc-ethich-and-law">Ethich and Law</a></li>
+<li><a href="#/practical-topics" id="/toc-practical-topics">Practical topics</a></li>
+<li><a href="#/ethics-and-law" id="/toc-ethics-and-law">Ethics and Law</a></li>
 <li><a href="#/conclusions-and-discussion" id="/toc-conclusions-and-discussion">Conclusions and discussion</a></li>
 </ul>
 </nav>
@@ -173,7 +175,7 @@ Gábor Békés (CEU)
 <ul>
 <li>This project is closely related to concepts and material in the book, but can be consumed alone. (or with a drink)</li>
 </ul></li>
-<li>This slideshow was created to help students and instructors active in data analysis in education, research, public policy or business</li>
+<li>This slideshow was created to help students and instructors in economics, social science, and public policy who do data analysis. No CS background required.</li>
 <li>Enjoy.</li>
 </ul>
 </section>
@@ -203,7 +205,7 @@ Gábor Békés (CEU)
 <section id="this-class-approach" class="slide level2 center">
 <h2>This class – approach</h2>
 <ul>
-<li class="fragment">focus on data analysis steps: research question, code, statistics, reporting</li>
+<li class="fragment">focus on data analysis steps familiar from statistics and econometrics: research question, variable selection, data cleaning, regression, reporting</li>
 <li class="fragment">move from execution as key skill to design and debugging</li>
 <li class="fragment">(extra) talk about topics I care about in data analysis</li>
 </ul>
@@ -224,46 +226,45 @@ Gábor Békés (CEU)
 <ul>
 <li>Week 1: Review LLMs – <span style="color: #21918c;">An FT graph</span></li>
 <li>Week 2: EDA and data documentation – <span style="color: #21918c;">World Values Survey (VWS)</span></li>
-<li>Week 3: Analysis and report creation – <span style="color: #21918c;">World Values Survey (VWS)</span></li>
-<li>Week 4: Data manipulation, wrangling – <span style="color: #21918c;">Synthetic Hotels</span></li>
-<li>Week 5: Text analysis and information extraction – <span style="color: #21918c;">Post match interviews (VWS)</span></li>
-<li>Week 6: Different ways of sentiment analysis – <span style="color: #21918c;">Post match interviews (VWS)</span></li>
+<li>Week 3: Analysis and report creation – <span style="color: #21918c;">World Values Survey (VWS)</span> <span style="color: #21918c;">VS Code + GitHub Copilot</span></li>
+<li>Week 4: Data manipulation, wrangling – <span style="color: #21918c;">Synthetic Hotels</span> <span style="color: #21918c;">Claude Code</span></li>
+<li>Week 5: Regression and diagnostics – <span style="color: #21918c;">Synthetic Hotels</span></li>
+<li>Week 6: Reporting and presentation – <span style="color: #21918c;">Earnings</span></li>
 </ul>
 </section>
 <section id="data-analysis-with-ai-2-topics-and-case-studies" class="slide level2 center">
 <h2>Data Analysis with AI 2 – topics and case studies</h2>
 <p>(in progress)</p>
 <ul>
-<li>Week 7: Better coding with AI</li>
-<li>Week 8: SQL like natural language query in a data warehouse</li>
+<li>Week 7: Text analysis and information extraction – <span style="color: #21918c;">Post match interviews (VWS)</span></li>
+<li>Week 8: Different ways of sentiment analysis – <span style="color: #21918c;">Post match interviews (VWS)</span></li>
 <li>Week 9: AI as research companion 1: Control variables</li>
 <li>Week 10: AI as research companion 2: Instrumental Variables</li>
 <li>Week 11: AI as research companion 3: Difference in differences</li>
 <li>Week 12: TBD</li>
 </ul>
 </section>
-<section id="data-analysis-with-ai-1-applications-and-focus-eareas" class="slide level2 center">
-<h2>Data Analysis with AI 1 – Applications and focus eareas</h2>
+<section id="data-analysis-with-ai-1-applications-and-focus-areas" class="slide level2 center">
+<h2>Data Analysis with AI 1 – Applications and focus areas</h2>
 <ul>
 <li>Chat – conversational interface</li>
 <li>Data Analysis – direct code execution / shared canvases</li>
 <li>Context window management</li>
 <li>Tools to connect to sources (Github, Google drive)</li>
-<li>Talk to AI via API calls</li>
+<li>VS code and Github Copilot</li>
+<li>CLI and Claude Code</li>
 </ul>
 </section>
-<section id="data-analysis-with-ai-2-next-course-applications-and-focus-eareas" class="slide level2 center">
-<h2>Data Analysis with AI 2 (next course) – Applications and focus eareas</h2>
+<section id="data-analysis-with-ai-2-next-course-applications-and-focus-areas" class="slide level2 center">
+<h2>Data Analysis with AI 2 (next course) – Applications and focus areas</h2>
 <ul>
+<li>Talk to AI via API calls</li>
 <li>skills and context management
 <ul>
 <li>“my system prompt” (user specific)</li>
 <li>skills use and generation (gems / prompt template): gabors exploratory data analysis skill (sharable)</li>
 </ul></li>
 <li>deep research</li>
-<li>Gemini CLI / Claude Code</li>
-<li>MCP (connect to folders on your computer)</li>
-<li>vibe coding an app: the-human-sql-translator</li>
 </ul>
 </section></section>
 <section>
@@ -278,6 +279,7 @@ Gábor Békés (CEU)
 <p><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">3blue1brown Neural Network series</a></p>
 <p><a href="https://www.3blue1brown.com/">Website with more</a></p>
 <p>Assignment: watch them all.</p>
+<p>For a full reading list: <a href="https://gabors-data-analysis.com/ai-course/da-knowledge/beyond.html">Beyond: Readings &amp; Resources</a></p>
 </section>
 <section id="llm-development-timeline-from-text-to-llm" class="slide level2 center">
 <h2>LLM Development Timeline: From text to LLM</h2>
@@ -323,12 +325,13 @@ Gábor Békés (CEU)
 <li>Transform text/image/video into mathematical space</li>
 <li>Scale (training data) matters enormously</li>
 <li>Pattern recognition at massive scale</li>
+<li>Think of it as a very sophisticated autocomplete trained on every economics paper, textbook, and StackOverflow answer</li>
 </ul>
 </section>
 <section id="llms-as-prediction-machines" class="slide level2 center" data-background-transition="zoom">
 <h2>LLMs as Prediction Machines</h2>
 <ul>
-<li class="fragment"><strong>Economic Framework</strong>: Similar to forecasting models
+<li class="fragment"><strong>Statistical Framework</strong>: Like a regression that learns patterns from data — but instead of predicting prices from covariates, it predicts the next word from all preceding words
 <ul>
 <li class="fragment">Input → Black Box → Predicted Output</li>
 </ul></li>
@@ -341,10 +344,10 @@ Gábor Békés (CEU)
 <h2>Context window</h2>
 <ul>
 <li><p>1 token = 4 characters, 4 tokens= 3 words (In English)</p></li>
-<li><p>varies by models</p></li>
-<li><p>ChatGPT 2022 window of 4,000 tokens.</p></li>
-<li><p>GPT-5.2 2026 window of 400,000 tokens = 1000p book</p></li>
-<li><p>Gemini 3 2026 window of 1 million tokens = the whole Harry Potter series</p></li>
+<li><p>Varies by models and keeps growing</p></li>
+<li><p>ChatGPT 2022 window of 4,000 tokens</p></li>
+<li><p>2026 models: 200k–1M tokens (see <a href="https://gabors-data-analysis.com/ai-course/da-knowledge/which-ai.html">Model Comparison</a>)</p></li>
+<li><p>A 200k-token window holds your entire WVS codebook, data dictionary, and a full conversation about regression specifications</p></li>
 <li><p>Tokens matter – more context, more relevant answers</p></li>
 <li><p>Over limit: hallucinate, off-topic.</p></li>
 </ul>
@@ -372,36 +375,53 @@ Gábor Békés (CEU)
 <li>Context window (relevant info)</li>
 </ul></li>
 </ul>
+<p>See <a href="https://gabors-data-analysis.com/ai-course/da-knowledge/technical-terms-page.html">Glossary</a> for this and 30+ other technical terms</p>
 </section>
-<section id="reasoning-models-2025-q4" class="slide level2 center">
-<h2>Reasoning Models (2025 Q4)</h2>
+<section id="reasoning-models" class="slide level2 center">
+<h2>Reasoning Models</h2>
 <ul>
-<li><strong>Standard Models (GPT-4o)</strong>:
+<li><strong>Standard Models</strong>:
 <ul>
 <li>“Fast thinking”. Predicts the next word immediately.</li>
 <li>Good for creative writing, simple queries.</li>
 </ul></li>
-<li><strong>Reasoning Models (GPT5.2, Gemini 3 Deep Think)</strong>:
+<li><strong>Reasoning Models</strong>:
 <ul>
-<li>“Slow thinking”. Generates hidden “thought chains” before the final answer.</li>
+<li>“Slow thinking” — like working through a proof on a whiteboard before giving the answer.</li>
 <li><strong>Self-Correction</strong>: Can “backtrack” if it detects a logical error.</li>
-<li><strong>Compute-Time Tradeoff</strong>: Spending more time/tokens on <em>thinking</em> yields higher accuracy in math/code.</li>
+<li><strong>Compute-Time Tradeoff</strong>: Spending more time/tokens on <em>thinking</em> yields higher accuracy.</li>
+<li>For data analysis: better at multi-step tasks like checking regression assumptions or designing identification strategies.</li>
 </ul></li>
 </ul>
 </section>
-<section id="whats-new-2025-q4" class="slide level2 center">
-<h2>What’s new (2025 Q4)</h2>
+<section id="reasoning-models-whats-actually-happening" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Reasoning Models: What’s Actually Happening</h2>
+<p>Reasoning steps are <em>approximate</em>, not logically guaranteed. The model generates plausible reasoning chains — it can still make errors within them.</p>
+<p>Think of it as a student showing their work on an exam. The steps look logical, but you still need to check the answer.</p>
+<pre><code>Prompt: "I have panel data on firm exports.
+Should I use fixed effects or random effects?"
+
+Standard model: "Use fixed effects." (no explanation)
+
+Reasoning model thinks through:
+→ "Panel data, firm-level... are firm characteristics
+   correlated with the independent variable?"
+→ "Likely yes — firm size, location are time-invariant
+   but correlated with export decisions"
+→ "Hausman test would confirm, but FE is safer default"
+→ Answer: "Fixed effects, because..." (with reasoning)</code></pre>
+<p><strong>Warning</strong>: The reasoning chain is helpful but not infallible. Always verify the logic — the model may get the econometric reasoning wrong while sounding confident.</p>
+</section>
+<section id="whats-new-2025-26" class="slide level2 center">
+<h2>What’s new (2025-26)</h2>
 <p><span style="color: #21918c;">more will be covered in Data Analysis with AI 2</span></p>
 <ul>
-<li><strong>Reasoning Standardization</strong>: OpenAI and Google have made “reasoning” the default for complex tasks.</li>
-<li><strong>Native Multimodality</strong>: No longer “OCR-ing” images. Models “see” the chart pixels directly.</li>
-<li><strong>Agentic Coding</strong>: Tools like Cursor, Claude Code have matured</li>
-<li><strong>From Chat to Work Canvas</strong>:
-<ul>
-<li>Moving away from linear chat.</li>
-<li>Working in shared artifacts (Canvases, Projects).</li>
-</ul></li>
+<li><strong>Reasoning-First Models</strong>: “Thinking before answering” is now standard for complex tasks.</li>
+<li><strong>Agentic Orchestration</strong>: From single chatbots to multi-agent systems coordinating tasks automatically.</li>
+<li><strong>Native Multimodality</strong>: Models trained natively on text, images, audio, and video — no longer “OCR-ing” images but “seeing” chart pixels directly.</li>
+<li><strong>From Chat to Work Canvas</strong>: Moving away from linear chat. Working in shared artifacts (Canvases, Projects).</li>
 </ul>
+<p>Current model details: <a href="https://gabors-data-analysis.com/ai-course/da-knowledge/which-ai.html">Which AI?</a></p>
 </section></section>
 <section>
 <section id="working-with-llms" class="title-slide slide level1 white center" data-background-color="#3b528b">
@@ -486,7 +506,7 @@ Gábor Békés (CEU)
 <tbody>
 <tr class="odd">
 <td><strong>Plan</strong></td>
-<td>👤 Design research plan<br>🤖 Suggest variables</td>
+<td>👤 Design research question &amp; identification strategy<br>🤖 Suggest variables</td>
 <td>👤🤖 Interactive brainstorming<br>👤🤖 Collaborative refinement</td>
 </tr>
 <tr class="even">
@@ -513,9 +533,10 @@ Gábor Békés (CEU)
 <div class="column" style="width:60%;">
 <ul>
 <li>Humans define high-level goals and intents (start)</li>
-<li>AI Agents autonomously execute tasks</li>
+<li>AI Agents (AI system units) autonomously execute tasks</li>
 <li>Continuous monitoring and adjustment by humans</li>
 <li>Focus on strategy and oversight and review (end)</li>
+<li>Example: “Run a diff-in-diff on state-level policy changes” → agents handle data retrieval, cleaning, estimation, and draft a report</li>
 </ul>
 </div><div class="column" style="width:40%;">
 <p><img data-src="images/orchestrator_compressed.png"></p>
@@ -608,6 +629,150 @@ Gábor Békés (CEU)
 </ol>
 </section></section>
 <section>
+<section id="under-the-hood" class="title-slide slide level1 white center" data-background-color="#3b528b">
+<h1>Under the Hood</h1>
+<p>You don’t need to build models. But understanding a few mechanisms helps you use them better.</p>
+</section>
+<section id="system-prompts" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>System Prompts</h2>
+<ul>
+<li><strong>System Prompt</strong>: The hidden instruction layer defining the AI’s persona and constraints.
+<ul>
+<li><em>User sees</em>: “Analyze this data.”</li>
+<li><em>Model sees</em>: “<strong>You are a research economist. Use R or Stata. Never interpret correlation as causation. Format output as publication-ready tables.</strong> User: Analyze this data.”</li>
+</ul></li>
+<li><strong>Role</strong>:
+<ul>
+<li>Ensures consistency (Persona)</li>
+<li>Safety guardrails (Constitution)</li>
+<li>Format enforcement (XML/JSON)</li>
+</ul></li>
+</ul>
+<p>See <a href="https://gabors-data-analysis.com/ai-course/da-knowledge/technical-terms-page.html">Glossary: System Prompt</a></p>
+</section>
+<section id="how-training-improved" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>How Training Improved</h2>
+<p>Three key methods helped LLMs get much better:</p>
+<ul>
+<li><strong>RLHF</strong> (Reinforcement Learning from Human Feedback): Models learn from human preferences → more helpful, less harmful responses</li>
+<li><strong>Mixture of Experts</strong> (MoE): Only part of the model activates per query → efficiency. This is why models can have trillions of parameters and still respond fast</li>
+<li><strong>Knowledge Distillation</strong>: Smaller “student” models trained to mimic larger “teacher” models → why free tiers can still be decent</li>
+</ul>
+<p>See <a href="https://gabors-data-analysis.com/ai-course/da-knowledge/technical-terms-page.html">Glossary</a> for RLHF, MoE, and other terms</p>
+</section>
+<section id="rag-retrieval-augmented-generation" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>RAG: Retrieval-Augmented Generation</h2>
+<ul>
+<li>LLMs can handle huge context windows, but you cannot dump everything in</li>
+<li><strong>RAG</strong>: Dynamic retrieval of relevant parts from a large collection of documents</li>
+<li><strong>The trade-off</strong>: Long context is best for deep reasoning over a specific set of files. RAG is best for finding needles across a massive library of information</li>
+<li>When you upload a codebook to Claude or ChatGPT, the platform may use RAG behind the scenes to find the most relevant parts</li>
+</ul>
+</section>
+<section id="tool-use-and-mcp" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Tool Use and MCP</h2>
+<ul>
+<li><strong>The Problem</strong>: LLMs are isolated from your data (files, databases, tools)</li>
+<li><strong>The Solution</strong>: <strong>MCP (Model Context Protocol)</strong> — an open standard, like a “USB-C for AI applications”</li>
+<li>MCP lets your AI connect to local files, GitHub, and databases — no more copy-pasting code into chat</li>
+<li>Secure by design: user controls what the model can see and do</li>
+</ul>
+<p><span style="color: #21918c;">More in Data Analysis with AI 2</span></p>
+</section>
+<section id="what-is-an-agent" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>What is an Agent?</h2>
+<p>An <strong>agent</strong> is an AI system that can:</p>
+<ul>
+<li>Receive a goal (“Analyze CPS wage data”)</li>
+<li>Break it into steps autonomously</li>
+<li>Use tools (run code, read files, search the web)</li>
+<li>Evaluate its own output and retry if needed</li>
+</ul>
+<p>Think of it as an RA who can work independently overnight. You give the task in the evening, review the output in the morning.</p>
+<p><strong>Key difference from chat</strong>: In chat, YOU drive every step. With an agent, the AI drives — you set the goal and review.</p>
+</section>
+<section id="single-agent-vs-multi-agent" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Single Agent vs Multi-Agent</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="single-agent">Single Agent</h3>
+<ul>
+<li>One RA does all steps in sequence</li>
+<li>Reads your system prompt, cleans data, runs regression, formats table</li>
+<li>Simpler to set up</li>
+<li>Good for straightforward tasks</li>
+<li>Risk: loses focus on long tasks</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="multi-agent-system">Multi-Agent System</h3>
+<ul>
+<li>Several specialized RAs, coordinated by a lead</li>
+<li>“Data Cleaning RA”, “Regression RA”, “Table-Formatting RA”</li>
+<li>Each sees only what it needs (context isolation)</li>
+<li>Better quality on complex tasks</li>
+<li>This is what Claude Code and Cursor do behind the scenes</li>
+</ul>
+</div></div>
+</section>
+<section id="agentic-ai-a-worked-example" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Agentic AI: A Worked Example</h2>
+<p>You say to an agent: “Analyze the gender wage gap in CPS data”</p>
+<pre><code>1. Agent reads your system prompt
+   → knows you want R, tidyverse, robust SEs
+2. Agent searches for &amp; downloads CPS extract
+3. Agent cleans data (drops missing wages, creates
+   log(wage), experience², education dummies)
+4. Agent runs Mincer regression: log(wage) ~ female +
+   educ + exper + exper²
+5. Agent adds controls, checks robustness
+6. Agent produces publication-ready table
+7. Agent writes a short summary of findings</code></pre>
+<p><strong>YOU</strong>: Review output, check coefficients make sense, verify sample size, iterate.</p>
+<p>The agent does 30 minutes of mechanical work in 2 minutes. Your job shifts from <em>doing</em> to <em>reviewing and directing</em>. This is the Orchestrator model in practice.</p>
+</section>
+<section id="agentic-ai-a-worked-example-1" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Agentic AI: A Worked Example</h2>
+<p>Multi-agent system:</p>
+<pre><code>1. Root Agent
+   → Reads your system prompt
+   → Breaks down task into sub-tasks
+   → Assigns to specialized agents
+2. Data Agent
+   → Finds CPS data, cleans it, creates variables
+3. Analysis Agent
+   → Runs regression, checks assumptions
+4. Reporting Agent
+   → Formats table, writes summary</code></pre>
+<p>These agenst are co-ordinated (orchestrated) by the Root Agent, which also manages the context window and ensures each agent has what it needs to do its job.</p>
+</section>
+<section id="agentic-risks" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Agentic Risks</h2>
+<ul>
+<li><strong>Infinite Loops</strong>: Agents getting stuck trying to fix a bug, burning tokens</li>
+<li><strong>Shadow Operations</strong>: An agent spinning up resources and forgetting to turn them off</li>
+<li><strong>Tool Hallucination</strong>: Invoking a tool (e.g., <code>delete_database</code>) that doesn’t exist or using it wrongly</li>
+<li><strong>Security</strong>: Terminal use — never give an agent unrestricted access</li>
+<li><strong>Silent data changes</strong>: An agent could silently drop observations with missing values, changing your sample without telling you</li>
+</ul>
+</section>
+<section id="cost-token-economics" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Cost &amp; Token Economics</h2>
+<p>Why does AI cost what it costs?</p>
+<ul>
+<li><strong>Input tokens</strong>: What you send (prompt + uploaded files). Cheap.</li>
+<li><strong>Output tokens</strong>: What the model generates. More expensive (~3-5x input).</li>
+<li><strong>Thinking tokens</strong>: Reasoning models “think” internally. Expensive. Pay tokens you never see.</li>
+</ul>
+<h3 id="practical-implications-save-tokens">Practical implications: save tokens</h3>
+<ul>
+<li>Long conversations cost more → <strong>start fresh</strong> when switching tasks</li>
+<li>Uploading a 200-page codebook every message adds up → use <strong>Projects</strong> to persist context</li>
+<li>Reasoning models cost 5-20x more than standard → use them for hard tasks</li>
+<li>Free tiers have daily/weekly limits tied to token budgets</li>
+</ul>
+<p>See <a href="https://gabors-data-analysis.com/ai-course/da-knowledge/technical-terms-page.html">Glossary: Tokens</a></p>
+</section></section>
+<section>
 <section id="what-can-go-wrong" class="title-slide slide level1 white center" data-background-color="#3b528b">
 <h1>What can go wrong</h1>
 
@@ -638,12 +803,12 @@ Gábor Békés (CEU)
 <h3 id="type-i-error-false-positive">Type I Error (False Positive)</h3>
 <ul>
 <li>Generating incorrect but plausible information</li>
-<li>Example: Creating non-existent research citations</li>
+<li>Example: Creating a citation to “Acemoglu &amp; Johnson (2007)” that doesn’t exist</li>
 </ul>
 <h3 id="type-ii-error-false-negative">Type II Error (False Negative)</h3>
 <ul>
 <li>Failing to generate correct information</li>
-<li>Example: Missing key facts in training data</li>
+<li>Example: Missing a key instrumental variables paper relevant to your research question</li>
 </ul>
 <h3 id="economic-impact-of-errors">Economic Impact of errors</h3>
 <ul>
@@ -705,13 +870,82 @@ Gábor Békés (CEU)
 <h2>Hallucination is reduced. ChatGPT in 2026 January</h2>
 
 <img data-src="images/128k-chatgpt_5_2.png" class="r-stretch"></section>
-<section id="llm-vs-human-2025" class="slide level2 center">
-<h2>LLM vs human 2025</h2>
+<section id="reproducibility-non-determinism" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Reproducibility &amp; Non-determinism</h2>
+<p>Same prompt, different day → different output.</p>
 <ul>
-<li>LLM also trained on scientific papers, books</li>
-<li>New methods to improve accuracy</li>
-<li>Solve scientific problems</li>
-<li>Reasoning models, like OpenAI o1 (o3 in Updates)</li>
+<li>LLMs are <strong>stochastic</strong>: they sample from probability distributions</li>
+<li>Run the same regression prompt twice → may get different variable selection advice</li>
+<li>Temperature setting controls randomness (lower = more deterministic, but never fully)</li>
+</ul>
+<h3 id="why-this-matters-for-data-analysis">Why this matters for data analysis</h3>
+<ul>
+<li>Your results should be reproducible. AI-assisted results may not be</li>
+<li><strong>Mitigation</strong>: Save the exact code AI generates, not just the prompt</li>
+<li>Always re-run the code yourself to verify the output</li>
+<li>Pin your analysis to the generated code, not to the AI conversation</li>
+</ul>
+</section>
+<section id="automation-bias-the-polished-output-trap" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Automation Bias: The Polished Output Trap</h2>
+<p>AI output looks <strong>professional and confident</strong> — even when wrong.</p>
+<ul>
+<li>A beautifully formatted regression table can have the wrong sample size</li>
+<li>A plausible-sounding causal claim can confuse correlation and causation</li>
+<li>Clean LaTeX formatting makes everything look “right”</li>
+</ul>
+<h3 id="the-danger-for-data-analysts">The danger for data analysts</h3>
+<ul>
+<li>The more polished the output, the less carefully we check it</li>
+<li>This is <strong>automation bias</strong>: trusting the machine because it looks competent</li>
+<li>Mitigation: Check the <strong>numbers</strong>, not the <strong>formatting</strong></li>
+<li>Same skepticism as a junior RA’s first draft</li>
+</ul>
+</section>
+<section id="data-leakage-privacy" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Data Leakage &amp; Privacy</h2>
+<p>What happens to data you paste into AI chat?</p>
+<ul>
+<li><strong>Free tiers</strong>: Your data may be used for model training (check ToS)</li>
+<li><strong>Paid tiers</strong>: Generally NOT used for training (Claude Pro, ChatGPT Plus)</li>
+<li><strong>Enterprise</strong>: Strongest guarantees — zero data retention</li>
+</ul>
+<p>See <a href="https://gabors-data-analysis.com/ai-course/da-knowledge/which-ai.html">Which AI? — Security</a> for tier comparisons</p>
+<h3 id="for-social-science-researchers">For social science researchers</h3>
+<ul>
+<li><strong>Never paste PII</strong> (names, addresses, survey respondent IDs) into chat</li>
+<li>Sensitive survey data (health, income, political views) requires extra care</li>
+<li><strong>IRB implications</strong>: Human subjects – using AI tools may require IRB approval</li>
+<li><strong>Mitigation</strong>: Anonymize before uploading. Use synthetic data for testing.</li>
+</ul>
+</section>
+<section id="dont-outsource-your-learning" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Don’t Outsource Your Learning</h2>
+<h3 id="ai-as-power-tool">AI as power tool</h3>
+<h3 id="ai-is-a-power-tool-not-a-replacement-for-thinking.">AI is a power tool — not a replacement for thinking.</h3>
+<ul>
+<li>If AI writes all your code, you never learn to debug</li>
+<li>If AI picks your method, you never learn research design</li>
+<li>If AI interprets your coefficients, you never build intuition</li>
+</ul>
+<h3 id="a-practical-test">A practical test</h3>
+<blockquote>
+<p>If the AI disappears tomorrow, can you still do your job? If not, you’re relying too much.</p>
+</blockquote>
+</section>
+<section id="dont-outsource-your-learning-2" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Don’t Outsource Your Learning 2</h2>
+<h3 id="the-self-discipline-challenge">The self-discipline challenge</h3>
+<ul>
+<li>It’s tempting to accept the first answer — resist this</li>
+<li><strong>Use AI to accelerate</strong>, not to skip the learning curve</li>
+<li>Students who rely too much on AI early struggle when problems get novel</li>
+<li>The goal: you should be able to do the work <em>without</em> AI, just slower</li>
+</ul>
+<h3 id="this-is-hard">This is hard</h3>
+<ul>
+<li>This is hard</li>
+<li>Create scenarios where AI is not available</li>
 </ul>
 </section></section>
 <section>
@@ -729,6 +963,7 @@ Gábor Békés (CEU)
 </ul>
 <h3 id="economics-research">Economics research</h3>
 <ul>
+<li><a href="https://doi.org/10.1257/jel.20231736">Korinek (2024): Generative AI for Economic Research</a></li>
 <li>Impact of AI on workers – <a href="https://datainnovation.org/2024/06/evidence-shows-productivity-benefits-of-ai/">paper collection (2024-06)</a></li>
 </ul>
 <h3 id="some-business">Some business</h3>
@@ -759,13 +994,22 @@ Gábor Békés (CEU)
 <li>All the time, ChatGPT 5,2 (Canvas), Claude 4.5 (Projects), Gemini 3.0 all paid tiers.</li>
 <li>I often try around models</li>
 <li>Github Copilot in VSCode and Rstudio (less)</li>
-<li>Experimenting with CLIs</li>
+<li>Use Claude Code (a lot) + Claude Cowork</li>
 </ul>
 <h3 id="approach">Approach</h3>
 <ul>
 <li>Idea generation and development</li>
 <li>Code generation and debugging</li>
 <li>Less so in writing</li>
+</ul>
+</section>
+<section id="how-i-plan-to-use-it" class="slide level2 center">
+<h2>How I plan to use it</h2>
+<h3 id="experimentation">Experimentation</h3>
+<ul>
+<li>OpenRouter and OpenCode</li>
+<li>Open weights model (Qwen 3, Kimi) on a local computer</li>
+<li>Learn more on building agents</li>
 </ul>
 </section>
 <section id="what-were-bad-experience-with-ai" class="slide level2 center">
@@ -792,8 +1036,67 @@ Gábor Békés (CEU)
 </ul>
 </section></section>
 <section>
-<section id="ethich-and-law" class="title-slide slide level1 center">
-<h1>Ethich and Law</h1>
+<section id="practical-topics" class="title-slide slide level1 white center" data-background-color="#3b528b">
+<h1>Practical topics</h1>
+
+</section>
+<section id="ai-in-center-vs-human-in-center" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>AI in center vs Human in center</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="ai-centric">AI centric</h3>
+<ul>
+<li>Data cleaning code</li>
+<li>Formatting tables and charts</li>
+<li>Explaining error messages</li>
+<li>Translating between R/Stata/Python</li>
+<li>First draft of descriptive analysis</li>
+<li>Literature search (with verification)</li>
+</ul>
+</div><div class="column" style="color: #d62828;">
+<h3 id="human-centric">Human centric</h3>
+<ul>
+<li>Choosing your research question</li>
+<li>Causal identification strategy</li>
+<li>Interpreting coefficients</li>
+<li>Policy recommendations</li>
+<li>Ethical judgment calls</li>
+<li>Anything you can’t verify yourself</li>
+</ul>
+</div></div>
+</section>
+<section id="ai-in-center-vs-human-in-center-2" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>AI in center vs Human in center 2</h2>
+<h3 id="two-approaches">Two approaches</h3>
+<p><strong>AI-centric</strong> Let AI plan, execute, and report. You review and supervise all steps.</p>
+<p><strong>Human-centric</strong> You think. AI suggests. Iterate on plan. Execution is mixed. Full review, multiple rounds likely.</p>
+<h3 id="rule-of-thumb">Rule of thumb</h3>
+<p><strong>Rule of thumb</strong>: If you can’t tell whether the AI output is right or wrong, you shouldn’t be using AI for that task yet.</p>
+</section>
+<section id="deep-research-mode" class="slide level2 center" data-background-color="#f8f9fa">
+<h2>Deep Research Mode</h2>
+<p>All major platforms now offer a “deep research” or “research” mode:</p>
+<ul>
+<li>AI spends minutes (not seconds) on your question</li>
+<li>Searches dozens of sources, synthesizes, cites</li>
+<li>Produces a structured report with references</li>
+</ul>
+<h3 id="for-economics-students">For economics students</h3>
+<ul>
+<li><strong>Literature review</strong>: “What papers use diff-in-diff to study minimum wage effects after 2020?”</li>
+<li><strong>Dataset discovery</strong>: “What publicly available panel datasets cover firm-level innovation in Europe?”</li>
+<li><strong>Prior art check</strong>: “Has anyone analyzed the effect of X on Y using Z method?”</li>
+</ul>
+<h3 id="caveats">Caveats</h3>
+<ul>
+<li>Always verify the citations exist (hallucination risk!)</li>
+<li>Better as a starting point than a final answer</li>
+<li>Great for thesis brainstorming and background research</li>
+</ul>
+</section></section>
+<section>
+<section id="ethics-and-law" class="title-slide slide level1 center">
+<h1>Ethics and Law</h1>
 
 </section>
 <section id="copyright" class="slide level2 center">
@@ -872,7 +1175,9 @@ Gábor Békés (CEU)
 <section id="to-learn-more" class="slide level2 center">
 <h2>To learn more</h2>
 <ul>
-<li>Look at <a href="https://gabors-data-analysis.com/ai-course/learn-more/beyond.html">learn more site</a> where I collect blog posts, videos, books, papers.</li>
+<li><a href="https://gabors-data-analysis.com/ai-course/da-knowledge/which-ai.html">Model comparison &amp; selection</a></li>
+<li><a href="https://gabors-data-analysis.com/ai-course/da-knowledge/technical-terms-page.html">Glossary of technical terms</a></li>
+<li><a href="https://gabors-data-analysis.com/ai-course/da-knowledge/beyond.html">Readings &amp; resources</a> where I collect blog posts, videos, books, papers</li>
 </ul>
 </section>
 <section id="gabors-current-take-i" class="slide level2 center">
@@ -909,8 +1214,8 @@ Gábor Békés (CEU)
 <section id="status" class="slide level2 center">
 <h2>Status</h2>
 <ul>
-<li>This is version 0.5.3</li>
-<li>Last updated: 2026-01-12</li>
+<li>This is version 0.6.1</li>
+<li>Last updated: 2026-02-16</li>
 </ul>
 <p><a href="mailto:bekesg@ceu.edu">bekesg@ceu.edu</a></p>
 
@@ -918,7 +1223,7 @@ Gábor Békés (CEU)
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Gabors Data Analysis with AI - 2026-Q1 v0.5.3</p>
+<p>Gabors Data Analysis with AI - 2026-Q1 v0.6.2</p>
 </div>
 </div></div>
 
