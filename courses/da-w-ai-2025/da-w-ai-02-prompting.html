@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.32">
 
   <meta name="author" content="Gábor Békés (CEU)">
-  <meta name="dcterms.date" content="2026-01-19">
+  <meta name="dcterms.date" content="2026-02-22">
   <title>Data Analysis with AI 02: Prompting</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -189,9 +189,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/recharts@2.1.12/umd/Recharts.min.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -209,16 +206,17 @@ Gábor Békés (CEU)
 </div>
 </div>
 
-  <p class="date">2026-01-19</p>
+  <p class="date">2026-02-22</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Contents</h2>
 <ul>
-<li><a href="#/from-prompting-to-context-engineering" id="/toc-from-prompting-to-context-engineering">From Prompting to Context Engineering</a></li>
-<li><a href="#/core-prompting-strategies-updated" id="/toc-core-prompting-strategies-updated">Core Prompting Strategies (Updated)</a></li>
-<li><a href="#/whats-new-in-2025-2026" id="/toc-whats-new-in-2025-2026">What’s New in 2025-2026</a></li>
-<li><a href="#/practical-advice-for-data-analysis" id="/toc-practical-advice-for-data-analysis">Practical Advice for Data Analysis</a></li>
-<li><a href="#/summary" id="/toc-summary">Summary</a></li>
+<li><a href="#/part-1-why-context-engineering" id="/toc-part-1-why-context-engineering">Part 1: Why Context Engineering</a></li>
+<li><a href="#/part-2-canonical-workflow-first" id="/toc-part-2-canonical-workflow-first">Part 2: Canonical Workflow First</a></li>
+<li><a href="#/part-3-six-prompting-strategies-in-practice" id="/toc-part-3-six-prompting-strategies-in-practice">Part 3: Six Prompting Strategies in Practice</a></li>
+<li><a href="#/part-4-2026-capabilities-that-change-prompt-choices" id="/toc-part-4-2026-capabilities-that-change-prompt-choices">Part 4: 2026 Capabilities That Change Prompt Choices</a></li>
+<li><a href="#/part-5-synthesis-and-next-actions" id="/toc-part-5-synthesis-and-next-actions">Part 5: Synthesis and Next Actions</a></li>
+<li><a href="#/appendix" id="/toc-appendix">Appendix</a></li>
 </ul>
 </nav>
 </section>
@@ -233,54 +231,72 @@ Gábor Békés (CEU)
 <ul>
 <li><a href="https://people.ceu.edu/gabor_bekes">I am an economist</a> and not an AI developer, expert, guru, evangelist</li>
 <li>I am an active AI user in teaching and research</li>
-<li>I teach a series a Data Analysis courses based on <a href="https://gabors-data-analysis.com">my textbook</a>
+<li>I teach a series of Data Analysis courses based on <a href="https://gabors-data-analysis.com">my textbook</a>
 <ul>
 <li>This project is closely related to concepts and material in the book, but can be consumed alone.</li>
 </ul></li>
-<li>This slideshow was created to help students and instructors active in data analysis in education, research, public policy or business</li>
-<li>Enjoy.</li>
+<li>This slideshow was created to help students and instructors in economics, social science, and public policy who do data analysis</li>
+<li>Feedback is welcome.</li>
+</ul>
+</section>
+<section id="motivation" class="slide level2 center">
+<h2>Motivation</h2>
+<h3 id="human-agency">Human Agency</h3>
+<ul>
+<li>We don’t want to produce fully automatic products
+<ul>
+<li>Everyone can do it</li>
+</ul></li>
+<li>Not specific to <strong>YOU</strong> or <strong>YOUR</strong> project
+<ul>
+<li>You have agency to make decisions</li>
+</ul></li>
+<li>We want to build workflows that are repeatable and shareable
+<ul>
+<li>Understand how to design them well</li>
+</ul></li>
 </ul>
 </section>
 <section>
-<section id="from-prompting-to-context-engineering" class="title-slide slide level1 center">
-<h1>From Prompting to Context Engineering</h1>
+<section id="part-1-why-context-engineering" class="title-slide slide level1 center">
+<h1>Part 1: Why Context Engineering</h1>
 
 </section>
 <section id="the-big-picture-2024-2026" class="slide level2 center">
 <h2>The Big Picture: 2024 → 2026</h2>
 <ul>
-<li><strong>2024</strong>: “Prompt engineering” was the key skill</li>
-<li><strong>2025</strong>: Rise of “context engineering”</li>
-<li><strong>2026</strong>: Context engineering + agentic workflows</li>
+<li><strong>2024</strong>: “Prompt engineering” was the key skill.</li>
+<li><strong>2025</strong>: Rise of “context engineering”.</li>
+<li><strong>2026</strong>: Context engineering + agentic workflows.</li>
 </ul>
 <p>What changed?</p>
 <ul>
-<li>Models became better at following instructions (literally!)</li>
-<li>Longer context windows (200k → 1M tokens)</li>
-<li>Tool use and agentic capabilities became standard</li>
+<li>Models became much better at literal instruction-following.</li>
+<li>Context windows became much larger.</li>
+<li>Tool use became normal, not exceptional.</li>
 </ul>
 </section>
 <section id="what-is-context-engineering" class="slide level2 center">
-<h2>What is Context Engineering?</h2>
+<h2>What Is Context Engineering?</h2>
 <blockquote>
 <p>“The delicate art and science of filling the context window with just the right information for the next step.” — Andrej Karpathy</p>
 </blockquote>
-<p>It’s not just about <em>what words to use</em> but <em>what configuration of context</em> will produce the desired behavior.</p>
+<p>It is not only about wording prompts. It is about choosing the right combination of instructions, data, tools, and constraints for the task.</p>
 </section>
 <section id="context-more-than-prompts" class="slide level2 center">
 <h2>Context = More than Prompts</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="prompting-old-view">Prompting (old view)</h3>
+<h3 id="prompting-narrow-view">Prompting (narrow view)</h3>
 <ul>
 <li>System prompt</li>
 <li>User message</li>
-<li>Maybe few examples</li>
+<li>Maybe a few examples</li>
 </ul>
-</div><div class="column" style="color: #21918c;">
-<h3 id="context-engineering-new-view">Context Engineering (new view)</h3>
+</div><div class="column" style="width:50%; color: #21918c;">
+<h3 id="context-engineering-full-view">Context Engineering (full view)</h3>
 <ul>
-<li>Instructions &amp; constraints</li>
+<li>Instructions and constraints</li>
 <li>Reference materials</li>
 <li>Memory / history</li>
 <li>Tool definitions</li>
@@ -288,496 +304,512 @@ Gábor Békés (CEU)
 <li>Environmental state</li>
 </ul>
 </div></div>
+</section>
+<section id="example-specification" class="slide level2 center">
+<h2>Example Specification</h2>
+<p>One motivating specification is:</p>
+<ul>
+<li><strong>Schooling and wages (OLS)</strong>: estimate returns to schooling in a log(wage) regression.</li>
+</ul>
+<p>Why this specification?</p>
+<ul>
+<li>It is transparent enough to isolate prompting and context effects.</li>
+<li>It still supports realistic diagnostics, robustness checks, and interpretation risks.</li>
+</ul>
 </section></section>
 <section>
-<section id="core-prompting-strategies-updated" class="title-slide slide level1 center">
-<h1>Core Prompting Strategies (Updated)</h1>
+<section id="part-2-canonical-workflow-first" class="title-slide slide level1 center">
+<h1>Part 2: Canonical Workflow First</h1>
 
 </section>
-<section id="prompting-still-matters" class="slide level2 center">
-<h2>Prompting Still Matters</h2>
-<ul>
-<li>Prompting is the foundation of context engineering</li>
-<li>Think of it as giving instructions to someone else (= The RA approach)</li>
-<li><span style="color: #21918c;">But modern models are more literal</span> — they do exactly what you ask</li>
-</ul>
-</section>
-<section id="key-change-precise-instruction-following" class="slide level2 center">
-<h2>Key Change: Precise Instruction Following</h2>
-<p><strong>Claude 4.x and GPT-4.1+ models:</strong></p>
-<ul>
-<li>Take instructions literally</li>
-<li>Don’t “go above and beyond” unless asked</li>
-<li>If you say “suggest changes” → they suggest, not implement</li>
-</ul>
-<div style="background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
-<p><strong>Implication</strong>: Be more explicit about what you want.</p>
-<p>“Create a dashboard” → might give minimal output</p>
-<p>“Create a fully-featured analytics dashboard with filters, charts, and interactive elements” → what you probably wanted</p>
-</div>
-</section>
-<section id="six-key-prompting-strategies" class="slide level2 center">
-<h2>Six Key Prompting Strategies</h2>
+<section id="canonical-workflow-for-empirical-tasks" class="slide level2 center">
+<h2>Canonical Workflow for Empirical Tasks</h2>
+<p>Recommended protocol for empirical tasks:</p>
 <ol type="1">
-<li>Write clear instructions</li>
-<li>Provide reference materials</li>
-<li>Break complex tasks into subtasks</li>
-<li>Step by step reasoning</li>
-<li>Use external tools</li>
-<li>Test systematically</li>
+<li><strong>Scope</strong>: define objective, audience, and output.</li>
+<li><strong>Context</strong>: provide data and methodological constraints.</li>
+<li><strong>Execute</strong>: run analysis in clear substeps.</li>
+<li><strong>Verify</strong>: test code, outputs, and assumptions.</li>
+<li><strong>Document</strong>: record prompts, checks, and decisions.</li>
 </ol>
-<p>Source: <a href="https://platform.openai.com/docs/guides/prompt-engineering">OpenAI guide to prompt engineering</a></p>
-<p>Still valid, but implementation has evolved.</p>
 </section>
-<section id="clear-instructions" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>1 Clear Instructions</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<h3 id="general-principles">General Principles</h3>
-<ul>
-<li>Be specific about style, requirements</li>
-<li>Include relevant context and constraints</li>
-<li>Use example formats when needed</li>
-<li><span style="color: #21918c;"><strong>New</strong>: Explain <em>why</em> — motivation helps</span></li>
-</ul>
-</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
-<h3 id="data-analysis-apps">Data Analysis Apps 📊</h3>
-<ul>
-<li>Define audience (academic/business/public)</li>
-<li>Define desired statistical approaches</li>
-<li>Clarify output format (tables, graphs, reports)</li>
-<li>Specify level of detail expected</li>
-</ul>
-</div></div>
+<section id="workflow-walkthrough-schooling-and-wages-ols" class="slide level2 center">
+<h2>Workflow Walkthrough: Schooling and Wages (OLS)</h2>
+<ol type="1">
+<li><strong>Scope</strong>: “Estimate wage returns to schooling for policy audience.”</li>
+<li><strong>Context</strong>: data dictionary, variable units, expected signs.</li>
+<li><strong>Execute</strong>: clean data -&gt; OLS with robust SE -&gt; table.</li>
+<li><strong>Verify</strong>: check coefficient signs, N, and standard errors.</li>
+<li><strong>Document</strong>: save final prompt and model specification.</li>
+</ol>
 </section>
-<section id="clear-instructions-implementation" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>1 Clear Instructions Implementation</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<h3 id="general-tactics">General Tactics ⚡</h3>
+<section id="step-2-in-practice-system-prompt-template" class="slide level2 center">
+<h2>Step 2 in Practice: System Prompt Template</h2>
 <ul>
-<li>Adopt personas</li>
-<li>Specify output format explicitly</li>
-<li>Define scope clearly</li>
-<li>Ask for specific extensions</li>
-<li><span style="color: #21918c;"><strong>Use XML tags for structure</strong></span></li>
+<li>Core ideas</li>
+<li>To help reproduce</li>
 </ul>
-</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
-<h3 id="example-prompts">Example Prompts 💡</h3>
 <ul>
-<li>“Write a report for government officials”</li>
-<li>“Format correlation matrices as heatmaps”</li>
-<li>“Show full statistical tests including p-values”</li>
-<li>“Go beyond the basics — include sensitivity checks”</li>
-</ul>
-</div></div>
-</section>
-<section id="clear-instructions-xml-tags" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>1 Clear Instructions: XML Tags</h2>
-<p>Claude specifically benefits from XML tags to structure inputs:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href=""></a>&lt;<span class="kw">context</span>&gt;</span>
-<span id="cb1-2"><a href=""></a>You are analyzing panel data on firm productivity.</span>
-<span id="cb1-3"><a href=""></a>&lt;/<span class="kw">context</span>&gt;</span>
-<span id="cb1-4"><a href=""></a></span>
-<span id="cb1-5"><a href=""></a>&lt;<span class="kw">data_description</span>&gt;</span>
-<span id="cb1-6"><a href=""></a>Variables: firm_id, year, revenue, employees, industry</span>
-<span id="cb1-7"><a href=""></a>Panel: 2010-2020, N=5000 firms</span>
-<span id="cb1-8"><a href=""></a>&lt;/<span class="kw">data_description</span>&gt;</span>
-<span id="cb1-9"><a href=""></a></span>
-<span id="cb1-10"><a href=""></a>&lt;<span class="kw">task</span>&gt;</span>
-<span id="cb1-11"><a href=""></a>Estimate a fixed effects regression with year dummies.</span>
-<span id="cb1-12"><a href=""></a>Report results in a publication-ready table.</span>
-<span id="cb1-13"><a href=""></a>&lt;/<span class="kw">task</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="provide-references" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>2. Provide References</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<h3 id="general-tactics-1">General Tactics ⚡</h3>
-<ul>
-<li>Share relevant documentation</li>
-<li>Include descriptions</li>
-<li>Require citations</li>
-<li><span style="color: #21918c;"><strong>Much improved vs 2024</strong></span></li>
-</ul>
-</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
-<h3 id="data-analysis-apps-1">Data Analysis Apps 📊</h3>
-<ul>
-<li>Reference statistical methodology</li>
-<li>Share domain context and assumptions</li>
-<li>Provide data quality metrics</li>
-<li>Upload data dictionaries</li>
-</ul>
-</div></div>
-</section>
-<section id="provide-references-what-changed" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>2. Provide References: What Changed</h2>
-<ul>
-<li><strong>2024</strong>: Limited context, frequent hallucinations</li>
-<li><strong>2026</strong>: 200k-1M token contexts, much better grounding</li>
-</ul>
-<div style="background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
-<p><strong>New best practice</strong>: Upload full documentation</p>
-<ul>
-<li>Entire codebooks</li>
-<li>Methodology sections from papers</li>
-<li>Sample outputs you want to replicate</li>
-</ul>
-</div>
-</section>
-<section id="break-complex-tasks" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>3. Break Complex Tasks</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<h3 id="general-tactics-2">General Tactics ⚡</h3>
-<ul>
-<li>Divide into logical steps</li>
-<li>Build complexity gradually</li>
-<li>Validate intermediate steps</li>
-</ul>
-</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
-<h3 id="data-analysis-applications">Data Analysis Applications 📊</h3>
-<ul>
-<li>Cleaning → EDA → Analysis</li>
-<li>Xsec OLS → panel FE → event study</li>
-<li>Does OLS <span class="math inline">\(y\)</span>, <span class="math inline">\(x\)</span> make sense?</li>
-</ul>
-</div></div>
-</section>
-<section id="break-complex-tasks-why-still-important" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>3. Break Complex Tasks: Why Still Important</h2>
-<p>Even with massive context windows, breaking tasks helps:</p>
-<ul>
-<li>Not because of context limits</li>
-<li>But because <span style="color: #21918c;"><strong>focused tasks produce higher quality</strong></span></li>
-<li>Easier to catch errors at each step</li>
-<li>Better for iteration</li>
+<li>alternative is not bad: AI makes its own assumptions</li>
+<li>varies more by model</li>
 </ul>
 </section>
-<section id="step-by-step-reasoning" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>4. Step by Step Reasoning</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<h3 id="general-tactics-3">General Tactics ⚡</h3>
-<ul>
-<li>Request step-by-step reasoning</li>
-<li>Explain assumptions</li>
-<li>Validate interim results</li>
-</ul>
-</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
-<h3 id="data-analysis-tactics">Data Analysis Tactics 📊</h3>
-<ul>
-<li>Show data exploration process</li>
-<li>Justify method selection</li>
-<li>Document assumption checks</li>
-<li>Explain statistical decisions</li>
-</ul>
-</div></div>
+<section id="step-2-in-practice-system-prompt-template-1" class="slide level2 center">
+<h2>Step 2 in Practice: System Prompt Template</h2>
+<p><strong>What would you add?</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>You are assisting with empirical economics research.</span>
+<span id="cb1-2"><a href=""></a></span>
+<span id="cb1-3"><a href=""></a>Objective:</span>
+<span id="cb1-4"><a href=""></a>[one-sentence goal]</span>
+<span id="cb1-5"><a href=""></a></span>
+<span id="cb1-6"><a href=""></a>Data context:</span>
+<span id="cb1-7"><a href=""></a>- </span>
+<span id="cb1-8"><a href=""></a>- </span>
+<span id="cb1-9"><a href=""></a>- </span>
+<span id="cb1-10"><a href=""></a></span>
+<span id="cb1-11"><a href=""></a>Method constraints:</span>
+<span id="cb1-12"><a href=""></a>- </span>
+<span id="cb1-13"><a href=""></a>- </span>
+<span id="cb1-14"><a href=""></a>- </span>
+<span id="cb1-15"><a href=""></a></span>
+<span id="cb1-16"><a href=""></a>Output format:</span>
+<span id="cb1-17"><a href=""></a>- </span>
+<span id="cb1-18"><a href=""></a>- </span>
+<span id="cb1-19"><a href=""></a></span>
+<span id="cb1-20"><a href=""></a>Quality bar:</span>
+<span id="cb1-21"><a href=""></a>- </span>
+<span id="cb1-22"><a href=""></a>- </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="step-by-step-reasoning-models" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>4. Step by Step: Reasoning Models</h2>
-<p><strong>Big development</strong>: Dedicated reasoning models</p>
-<ul>
-<li>OpenAI o3, o4-mini</li>
-<li>Claude with extended thinking</li>
-<li>Gemini 3 with thinking levels</li>
-</ul>
-<p>These models “think before responding” — internal chain of thought</p>
-</section>
-<section id="external-tools" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>5. External Tools</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<h3 id="general-tactics-4">General Tactics ⚡</h3>
-<ul>
-<li>Use code execution (Python, R)</li>
-<li>Interactive tools: canvas, artifacts</li>
-<li>Project folders for context</li>
-<li><span style="color: #21918c;"><strong>MCP for tool integration</strong></span></li>
-</ul>
-</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
-<h3 id="data-analysis-tactics-1">Data Analysis Tactics 📊</h3>
-<ul>
-<li>Ask for direct solution with execution</li>
-<li>Upload data files</li>
-<li>Use web search for recent methods</li>
-<li>Connect to databases via MCP</li>
-</ul>
-</div></div>
-</section>
-<section id="test-systematically" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>6. Test Systematically</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<h3 id="general-tactics-5">General Tactics ⚡</h3>
-<ul>
-<li>Validate against known results</li>
-<li>Check validity</li>
-<li>Compare methods</li>
-</ul>
-</div><div class="column" style="color: #21918c; background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
-<h3 id="data-analysis-tactics-2">Data Analysis Tactics 📊</h3>
-<ul>
-<li>Cross-validation</li>
-<li>Benchmark datasets</li>
-<li>Statistical assumption verification</li>
-<li>Sensitivity analysis</li>
-</ul>
-</div></div>
+<section id="step-2-in-practice-system-prompt-template-one-way" class="slide level2 center">
+<h2>Step 2 in Practice: System Prompt Template: One way</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href=""></a>You are assisting with empirical economics research.</span>
+<span id="cb2-2"><a href=""></a></span>
+<span id="cb2-3"><a href=""></a>Objective:</span>
+<span id="cb2-4"><a href=""></a>[one-sentence goal]</span>
+<span id="cb2-5"><a href=""></a></span>
+<span id="cb2-6"><a href=""></a>Data context:</span>
+<span id="cb2-7"><a href=""></a>- Dataset: [name]</span>
+<span id="cb2-8"><a href=""></a>- Key variables: [list]</span>
+<span id="cb2-9"><a href=""></a>- Unit of observation: [e.g., individual]</span>
+<span id="cb2-10"><a href=""></a></span>
+<span id="cb2-11"><a href=""></a>Method constraints:</span>
+<span id="cb2-12"><a href=""></a>- Preferred language: R</span>
+<span id="cb2-13"><a href=""></a>- Required method: [OLS + robustness checks]</span>
+<span id="cb2-14"><a href=""></a>- Must report: robust SE, N, R^2, key diagnostics</span>
+<span id="cb2-15"><a href=""></a></span>
+<span id="cb2-16"><a href=""></a>Output format:</span>
+<span id="cb2-17"><a href=""></a>- Publication-ready table</span>
+<span id="cb2-18"><a href=""></a>- Brief interpretation + limitations</span>
+<span id="cb2-19"><a href=""></a></span>
+<span id="cb2-20"><a href=""></a>Quality bar:</span>
+<span id="cb2-21"><a href=""></a>- Explain assumptions</span>
+<span id="cb2-22"><a href=""></a>- Include explicit validation checks</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
-<section id="whats-new-in-2025-2026" class="title-slide slide level1 center">
-<h1>What’s New in 2025-2026</h1>
+<section id="part-3-six-prompting-strategies-in-practice" class="title-slide slide level1 center">
+<h1>Part 3: Six Prompting Strategies in Practice</h1>
 
 </section>
-<section id="model-specific-prompting" class="slide level2 center">
-<h2>Model-Specific Prompting</h2>
-<p>Different models, different strategies:</p>
+<section id="prompting" class="slide level2 center">
+<h2>Prompting</h2>
+<ul>
+<li>The focus is on workflow</li>
+<li>But good prompting helps get more of what we want</li>
+</ul>
+</section>
+<section id="strategy-1-clear-instructions" class="slide level2 center">
+<h2>Strategy 1: Clear Instructions</h2>
+<p>Core principle: modern models are literal.</p>
+<ul>
+<li>“Analyze this data” is under-specified.</li>
+<li>Good prompts include audience, objective, method, and output format.</li>
+</ul>
+<p>Prompt example:</p>
+<ul>
+<li>“Run OLS of log(wage) on education and experience with robust SEs; output a table and 3-sentence interpretation. It’s for the presentation of research paper”</li>
+</ul>
+<p>If not specified</p>
+<ul>
+<li>the model will make its own assumptions, which may not match your needs.
+<ul>
+<li>But often good. Like get correct SEs</li>
+</ul></li>
+<li>will require more iterations to get right.</li>
+</ul>
+</section>
+<section id="strategy-1-implementation-tactics" class="slide level2 center">
+<h2>Strategy 1: Implementation Tactics</h2>
+<ul>
+<li>Specify audience (academic, policy, business).</li>
+<li>Specify method and constraints, not just topic.</li>
+<li>Ask for explicit output structure.</li>
+<li>Explain why the task matters.</li>
+<li>Use structured blocks or tags for long prompts.</li>
+</ul>
+</section>
+<section id="strategy-1-structured-prompt-example-xml" class="slide level2 center">
+<h2>Strategy 1: Structured Prompt Example (XML)</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb3-1"><a href=""></a>&lt;<span class="kw">context</span>&gt;</span>
+<span id="cb3-2"><a href=""></a>You are analyzing cross-sectional wage data.</span>
+<span id="cb3-3"><a href=""></a>&lt;/<span class="kw">context</span>&gt;</span>
+<span id="cb3-4"><a href=""></a></span>
+<span id="cb3-5"><a href=""></a>&lt;<span class="kw">data_description</span>&gt;</span>
+<span id="cb3-6"><a href=""></a>Variables: wage, education, experience, female, age, industry</span>
+<span id="cb3-7"><a href=""></a>Sample: workers in 2025 survey, N=50,000</span>
+<span id="cb3-8"><a href=""></a>&lt;/<span class="kw">data_description</span>&gt;</span>
+<span id="cb3-9"><a href=""></a></span>
+<span id="cb3-10"><a href=""></a>&lt;<span class="kw">task</span>&gt;</span>
+<span id="cb3-11"><a href=""></a>Estimate OLS of log(wage) on education and experience with robust SEs.</span>
+<span id="cb3-12"><a href=""></a>Report a publication-ready table and diagnostics.</span>
+<span id="cb3-13"><a href=""></a>&lt;/<span class="kw">task</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="sidenote-why-xml-for-system-prompts" class="slide level2 center">
+<h2>Sidenote: Why XML for System Prompts?</h2>
+<p>Using XML tags in system prompts offers several practical benefits:</p>
+<ul>
+<li><strong>Structure</strong> — clearly separates instructions, context, and examples</li>
+<li><strong>Reliability</strong> — models recognize XML tags as meaningful boundaries</li>
+<li><strong>Referencing</strong> — you can point back to specific sections by tag name</li>
+<li><strong>Maintainability and iteration</strong> — easy to edit, swap, and hand off sections</li>
+</ul>
+<blockquote>
+<p><em>Use XML when your prompt is complex – the structure pays off in reliability and maintainability.</em></p>
+</blockquote>
+</section>
+<section id="strategy-2-provide-references" class="slide level2 center">
+<h2>Strategy 2: Provide References</h2>
+<p>Use references to ground outputs:</p>
+<ul>
+<li>Codebooks and data dictionaries.</li>
+<li>Methodology sections from papers.</li>
+<li>Sample output format to imitate.</li>
+</ul>
+<p>Grounding details:</p>
+<ul>
+<li>Wage variable definitions, coding of education/experience, occupation rules, and sample inclusion criteria.</li>
+</ul>
+</section>
+<section id="strategy-2-what-changed-since-2024" class="slide level2 center">
+<h2>Strategy 2: What Changed Since 2024</h2>
+<ul>
+<li><strong>2024</strong>: short contexts, frequent grounding failures.</li>
+<li><strong>2026</strong>: long contexts make full documentation practical.</li>
+</ul>
+<p>Best practice now:</p>
+<ul>
+<li>Upload complete reference material when feasible.</li>
+<li>Ask model to cite variables and assumptions explicitly.</li>
+</ul>
+</section>
+<section id="strategy-3-break-complex-tasks" class="slide level2 center">
+<h2>Strategy 3: Break Complex Tasks</h2>
+<p>Break into checkpoints instead of one giant request.</p>
+<ul>
+<li>Cleaning -&gt; baseline OLS -&gt; robustness and heterogeneity specs -&gt; presentation-ready table.</li>
+</ul>
+<p>This is not only about context limits. It is about error localization and better iteration.</p>
+</section>
+<section id="strategy-3-why-this-still-matters" class="slide level2 center">
+<h2>Strategy 3: Why This Still Matters</h2>
+<p>Even with large context windows:</p>
+<ul>
+<li>Focused subtasks produce cleaner outputs.</li>
+<li>Intermediate checks catch mistakes early.</li>
+<li>Re-running one substep is cheaper than re-running everything.</li>
+</ul>
+</section>
+<section id="strategy-4-reason-step-by-step-for-hard-choices" class="slide level2 center">
+<h2>Strategy 4: Reason Step-by-Step for Hard Choices</h2>
+<p>Use reasoning requests when method choice is non-trivial.</p>
+<p>Ask for:</p>
+<ul>
+<li>assumptions,</li>
+<li>alternatives considered,</li>
+<li>why a chosen specification is preferred.</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>Should we add occupation controls and a quadratic experience term?</li>
+</ul>
+</section>
+<section id="strategy-4-reasoning-models-and-limits" class="slide level2 center">
+<h2>Strategy 4: Reasoning Models and Limits</h2>
+<p>Reasoning-capable models are stronger at multi-step logic and coding, but:</p>
+<ul>
+<li>full internal reasoning is usually hidden,</li>
+<li>visible summaries can still contain errors,</li>
+<li>outputs still require external validation.</li>
+</ul>
+<p>Use them for difficult specification choices, then verify with tests and diagnostics.</p>
+</section>
+<section id="strategy-5-use-external-tools" class="slide level2 center">
+<h2>Strategy 5: Use External Tools</h2>
+<p>Do not rely on text-only answers for computational tasks.</p>
+<p>Use tools for:</p>
+<ul>
+<li>running code (R/Python/Stata),</li>
+<li>reading files and metadata,</li>
+<li>web lookup when facts must be current,</li>
+<li>database access in larger projects.</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>Run regression, subgroup estimates, and a coefficient plot with reproducible code.</li>
+</ul>
+</section>
+<section id="strategy-6-test-systematically-the-pipe-and-the-water" class="slide level2 center">
+<h2>Strategy 6: Test Systematically — the Pipe and the Water</h2>
+<p>Every data-analysis pipeline carries two things you can test:</p>
 <table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Model Type</th>
-<th>Key Insight</th>
+<th></th>
+<th><strong>Pipe</strong> (code &amp; structure)</th>
+<th><strong>Water</strong> (data &amp; results)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Claude 4.x</td>
-<td>Precise instruction following; use XML tags</td>
+<td>Nature</td>
+<td>Deterministic — pass / fail</td>
+<td>Probabilistic — plausible / suspect</td>
 </tr>
 <tr class="even">
-<td>GPT o3/o4-mini</td>
-<td>Reasoning automatic; state objective + format</td>
+<td>Failure looks like</td>
+<td>Error, warning, wrong type</td>
+<td>Implausible sign, odd magnitude, unexpected N</td>
 </tr>
 <tr class="odd">
-<td>GPT-4.1/5</td>
-<td>Classic prompting; break into subtasks</td>
-</tr>
-<tr class="even">
-<td>Gemini 3</td>
-<td>Keep it simple; use default temperature</td>
+<td>Examples</td>
+<td>PDF parser crash, mixed types in a column, silent row drops</td>
+<td>Negative wage premium for education, SE larger than the estimate, distribution anomaly</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="reasoning-models-o3-and-o4-mini" class="slide level2 center">
-<h2>Reasoning Models: o3 and o4-mini</h2>
-<p>Released April 2025. Key features:</p>
+<section id="strategy-6-testing-the-pipe" class="slide level2 center">
+<h2>Strategy 6: Testing the Pipe</h2>
+<p>Structural and mechanical checks — if something is broken you should get a clear signal.</p>
 <ul>
-<li>Internal chain-of-thought (you don’t see it)</li>
-<li>Better at math, coding, multi-step logic</li>
-<li>Can “think with images”</li>
-<li>Less need for “think step-by-step” hacks</li>
+<li>Does the code run without errors or warnings?</li>
+<li>Are variable names, merges, and joins correct?</li>
+<li>Are observations dropped silently?</li>
+<li>Are libraries appropriate and versions pinned?</li>
+<li>Can the model explain each transformation step?</li>
 </ul>
-<p><strong>Prompting tip</strong>: State objective + output format. Reasoning is automatic.</p>
+<p>These are classic <strong>unit-test territory</strong>: the answer is yes or no.</p>
 </section>
-<section id="claude-4.x-best-practices" class="slide level2 center">
-<h2>Claude 4.x Best Practices</h2>
-<p>From <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices">Anthropic’s guidance</a>:</p>
-<ol type="1">
-<li><strong>Be explicit</strong> — models take you literally</li>
-<li><strong>Use XML tags</strong> — structure your inputs</li>
-<li><strong>Provide motivation</strong> — explain <em>why</em> you want something</li>
-<li><strong>Request verbosity</strong> — model is more concise by default</li>
-<li><strong>Extended thinking</strong> — enable for complex problems</li>
-</ol>
-</section>
-<section id="gemini-3-best-practices" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>Gemini 3 Best Practices</h2>
-<p>Released November 2025. <a href="https://ai.google.dev/gemini-api/docs/gemini-3">Google’s guidance</a>:</p>
-<ol type="1">
-<li><strong>Simplify prompts</strong> — Gemini 3 rewards clarity over elaborate scaffolding</li>
-<li><strong>Keep temperature at 1.0</strong> — reasoning optimized for default; lower values can cause loops</li>
-<li><strong>Use thinking levels</strong> — LOW/MEDIUM/HIGH instead of chain-of-thought hacks</li>
-<li><strong>Put directive after input</strong> — place instructions after the data block</li>
-<li><strong>Use grounding for facts</strong> — connect to search for current information</li>
-</ol>
-</section>
-<section id="gemini-3-unique-strengths" class="slide level2 center" data-background-color="#f8f9fa">
-<h2>Gemini 3: Unique Strengths</h2>
-<p>What Gemini 3 does especially well:</p>
+<section id="strategy-6-testing-the-water" class="slide level2 center">
+<h2>Strategy 6: Testing the Water</h2>
+<p>Analytical and domain checks — there is a <em>distribution</em> of acceptable results, but you need anchors.</p>
 <ul>
-<li><strong>Massive context</strong>: 1M tokens standard (2M in some tiers)</li>
-<li><strong>Multimodal reasoning</strong>: Excellent on image + text tasks</li>
-<li><strong>Structured output</strong>: Infers JSON/table formats with minimal cues</li>
-<li><strong>Cost efficiency</strong>: Flash tier very cheap for high-volume tasks</li>
+<li>Do coefficient <strong>signs</strong> match domain expectations?</li>
+<li>Is the <strong>magnitude</strong> in a plausible range?</li>
+<li>Is <strong>N</strong> what you expected after cleaning?</li>
+<li>Are <strong>standard errors</strong> and degrees of freedom reasonable?</li>
+<li>Are table/figure <strong>labels</strong> accurate?</li>
+<li>Can you <strong>replicate one key number</strong> by hand?</li>
 </ul>
-<div style="background-color: rgba(33, 145, 140, 0.1); padding: 15px; border-radius: 8px;">
-<p><strong>For data analysis</strong>: Great for document analysis, long codebooks, and visual data (charts, graphs)</p>
-</div>
+<p>These range from hard constraints (a coefficient <em>must</em> be positive) to softer judgments (is this effect size surprising?).</p>
 </section>
-<section id="extended-thinking" class="slide level2 center">
-<h2>Extended Thinking</h2>
-<p>Claude and other models now support “extended thinking”:</p>
-<ul>
-<li>Model explicitly reasons through problem</li>
-<li>Visible chain of thought</li>
-<li>Much better for complex analysis</li>
-</ul>
-<p><strong>When to use</strong>: Complex reasoning, multi-step problems, data analysis decisions</p>
-<p><strong>Cost</strong>: Higher latency, more tokens</p>
-</section>
-<section id="agentic-workflows" class="slide level2 center">
-<h2>Agentic Workflows</h2>
-<p>Models can now:</p>
-<ul>
-<li>Execute code directly</li>
-<li>Use multiple tools in sequence</li>
-<li>Browse the web</li>
-<li>Read/write files</li>
-<li>Operate autonomously for longer tasks</li>
-</ul>
-<p>This changes how we work with AI.</p>
-</section>
-<section id="agentic-coding-tools" class="slide level2 center">
-<h2>Agentic Coding Tools</h2>
-<p>Command line tools:</p>
-<ul>
-<li><strong>Claude Code</strong></li>
-<li><strong>OpenAI Codex</strong></li>
-</ul>
-<p>IDE’s (Integrated Development Environment):</p>
-<ul>
-<li><strong>GitHub Copilot</strong>: Seamless integration in VS Code</li>
-<li><strong>Cursor</strong>: AI-native code editor</li>
-<li><strong>Antigravity</strong>: Google’s IDE with generous quota limits</li>
-</ul>
-<p>See <a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code Best Practices</a></p>
-</section>
-<section id="context-engineering-in-practice" class="slide level2 center">
-<h2>Context Engineering in Practice</h2>
-<p>For data analysis, think about:</p>
-<ol type="1">
-<li><strong>System context</strong>: Your role, constraints, style</li>
-<li><strong>Data context</strong>: Variable descriptions, data dictionary</li>
-<li><strong>Method context</strong>: Statistical approach, assumptions</li>
-<li><strong>Output context</strong>: Format, audience, length</li>
-</ol>
-</section>
-<section id="context-rot-and-pollution" class="slide level2 center">
-<h2>Context Rot and Pollution</h2>
-<p>Long conversations degrade performance:</p>
-<ul>
-<li><strong>Context rot</strong>: Performance degrades as context fills</li>
-<li><strong>Context pollution</strong>: Irrelevant info distracts model</li>
-<li><strong>Context confusion</strong>: Model loses track of instructions</li>
-</ul>
-<p><strong>Solution</strong>: Start fresh for new tasks, use memory tools</p>
-<p><strong>Next level solution</strong>: <a href="https://claudelog.com/faqs/what-is-claude-code-auto-compact/">Claude Code auto-compact</a>: Keeps your sessions running indefinitely by intelligently summarizing conversations when you approach context limits.</p>
-</section>
-<section id="coming-in-week-03-system-prompts-skills" class="slide level2 center">
-<h2>Coming in Week 03: System Prompts &amp; Skills</h2>
-<p>We’ll dive deeper into:</p>
-<ul>
-<li>Building <strong>custom system prompts</strong> for data analysis</li>
-<li>Creating <strong>Skills</strong> (Claude) and <strong>Gems</strong> (Gemini)</li>
-<li>Reusable prompt templates for common tasks</li>
-<li>Project-level context management</li>
-</ul>
-<p><span style="color: #21918c;">See Week 03: System Prompts and Skills</span></p>
+<section id="strategy-6-in-practice-unit-tests-for-pipe-and-water" class="slide level2 center">
+<h2>Strategy 6 in Practice: Unit Tests — for Pipe <em>and</em> Water</h2>
+<p>Unit tests are yes/no assertions. Most guard the <strong>pipe</strong>, but the powerful ones also guard the <strong>water</strong>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="co"># --- Pipe tests (structure &amp; cleaning) ---</span></span>
+<span id="cb4-2"><a href=""></a><span class="fu">stopifnot</span>(<span class="fu">nrow</span>(df_wage) <span class="sc">==</span> expected_n_wage)</span>
+<span id="cb4-3"><a href=""></a><span class="fu">stopifnot</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(df_wage<span class="sc">$</span>wage)) <span class="sc">==</span> <span class="dv">0</span>)</span>
+<span id="cb4-4"><a href=""></a><span class="fu">stopifnot</span>(<span class="fu">is.numeric</span>(df_wage<span class="sc">$</span>education))</span>
+<span id="cb4-5"><a href=""></a></span>
+<span id="cb4-6"><a href=""></a><span class="co"># --- Water tests (results &amp; plausibility) ---</span></span>
+<span id="cb4-7"><a href=""></a><span class="fu">stopifnot</span>(<span class="fu">coef</span>(ols_wage)[<span class="st">"education"</span>] <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb4-8"><a href=""></a><span class="fu">stopifnot</span>(<span class="fu">summary</span>(ols_wage)<span class="sc">$</span>sigma <span class="sc">&lt;</span> <span class="fl">1e6</span>)</span>
+<span id="cb4-9"><a href=""></a><span class="fu">stopifnot</span>(<span class="fu">summary</span>(ols_wage)<span class="sc">$</span>df[<span class="dv">2</span>] <span class="sc">&gt;</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ask AI to generate both kinds of checks, then run them <strong>before</strong> interpreting results.</p>
 </section></section>
 <section>
-<section id="practical-advice-for-data-analysis" class="title-slide slide level1 center">
-<h1>Practical Advice for Data Analysis</h1>
+<section id="part-4-2026-capabilities-that-change-prompt-choices" class="title-slide slide level1 center">
+<h1>Part 4: 2026 Capabilities That Change Prompt Choices</h1>
 
 </section>
-<section id="iteration-over-one-shot" class="slide level2 center">
-<h2>Iteration Over One-Shot</h2>
-<p>More important than ever:</p>
+<section id="what-changed-for-workflow-design" class="slide level2 center">
+<h2>What Changed for Workflow Design</h2>
+<ul>
+<li>Models follow instructions more literally.</li>
+<li>Long context enables full-document grounding.</li>
+<li>Agentic execution can chain many steps.</li>
+</ul>
+<p>Result: less time on “clever phrasing,” more time on context design and verification design.</p>
+</section>
+<section id="agentic-workflows-and-plan-mode" class="slide level2 center">
+<h2>Agentic Workflows and Plan Mode</h2>
+<p>Plan mode pattern:</p>
 <ol type="1">
-<li>Start with clear objective</li>
-<li>Get initial output</li>
-<li>Refine with specific feedback</li>
-<li>Validate results</li>
-<li>Document process</li>
+<li>Describe objective.</li>
+<li>Agent explores and proposes plan.</li>
+<li>You approve or edit plan.</li>
+<li>Agent executes.</li>
 </ol>
+<p>Why it matters:</p>
+<ul>
+<li>Better architecture before coding.</li>
+<li>Lower token waste from rework.</li>
+<li>Better control on multi-file or complex analysis tasks.</li>
+</ul>
 </section>
-<section id="example-workflow-regression-analysis" class="slide level2 center">
-<h2>Example Workflow: Regression Analysis</h2>
-<pre><code>Turn 1: "Here's my data [upload]. Describe the variables 
-        and check for issues."
-
-Turn 2: "Run OLS of Y on X1, X2 with robust SEs. 
-        Show diagnostics."
-
-Turn 3: "Now add fixed effects. Compare results."
-
-Turn 4: "Create publication-ready table. 
-        AER style, 3 columns."</code></pre>
+<section id="context-rot-pollution-and-recovery" class="slide level2 center">
+<h2>Context Rot, Pollution, and Recovery</h2>
+<p>Long sessions can degrade quality:</p>
+<ul>
+<li><strong>Context rot</strong>: loses key earlier constraints.</li>
+<li><strong>Context pollution</strong>: irrelevant details distract.</li>
+<li><strong>Context confusion</strong>: conflicting instructions accumulate.</li>
+</ul>
+<p>Recovery pattern:</p>
+<ul>
+<li>Start fresh for new tasks.</li>
+<li>Save short written summaries between sessions.</li>
+<li>Reuse system prompt templates.</li>
+</ul>
 </section>
-<section id="what-to-put-in-system-prompts" class="slide level2 center">
-<h2>What to Put in System Prompts</h2>
-<p>For data analysis work:</p>
-<pre><code>You are helping with academic research in economics. 
-
-Preferences:
-- R with tidyverse
-- viridis color scheme
-- Publication-quality output
-- Show code and explain decisions
-- Flag potential issues proactively
-
-Current project: [brief description]</code></pre>
-<p><span style="color: #21918c;">More on this in Week 03</span></p>
+<section id="skills-and-reusable-commands" class="slide level2 center">
+<h2>Skills and Reusable Commands</h2>
+<p>Reusable instructions (skills/gems/custom prompts) help with:</p>
+<ul>
+<li>consistency across sessions,</li>
+<li>sharable team workflows,</li>
+<li>faster startup on repeated tasks.</li>
+</ul>
+<p>Think of them as analysis playbooks for AI workflows.</p>
 </section>
-<section id="should-we-say-pleasethank-you" class="slide level2 center">
-<h2>Should We Say Please/Thank You?</h2>
-
-<img data-src="images/altman-please-2025-04-20.jpg" class="r-stretch"></section>
-<section id="should-we-say-pleasethank-you-1" class="slide level2 center">
-<h2>Should We Say Please/Thank You?</h2>
-
-<img data-src="images/robot-war-save-thank-you-cartoon-2025.jpeg" class="r-stretch"><p><strong>Answer</strong>: Doesn’t matter for output quality. Do what feels natural.</p>
+<section id="preview-later-system-prompts-and-skills" class="slide level2 center">
+<h2>Preview: LATER (System Prompts and Skills)</h2>
+<p>Next week we extend this framework to:</p>
+<ul>
+<li>building strong reusable system prompts,</li>
+<li>creating skills for recurring data tasks,</li>
+<li>project-level context management patterns.</li>
+</ul>
 </section></section>
 <section>
-<section id="summary" class="title-slide slide level1 center">
-<h1>Summary</h1>
+<section id="part-5-synthesis-and-next-actions" class="title-slide slide level1 center">
+<h1>Part 5: Synthesis and Next Actions</h1>
 
 </section>
 <section id="key-takeaways" class="slide level2 center">
 <h2>Key Takeaways</h2>
 <ol type="1">
-<li><strong>Context engineering</strong> &gt; prompt engineering</li>
-<li>Modern models are <strong>more literal</strong> — be explicit</li>
-<li><strong>Reasoning models</strong> handle complexity automatically</li>
-<li><strong>Tools and agents</strong> expand what’s possible</li>
-<li><strong>Iteration</strong> remains essential</li>
-<li><strong>Structure</strong> your inputs (XML tags, clear sections)</li>
+<li>Context engineering is broader than prompt wording.</li>
+<li>Start with one repeatable workflow, then add strategy detail.</li>
+<li>Use the six strategies to prevent specific failure modes.</li>
+<li>Treat verification as mandatory, not optional.</li>
+<li>2026 tools increase capability but also increase need for discipline.</li>
+<li>Separate core concepts from vendor-specific tricks.</li>
 </ol>
 </section>
-<section id="resources" class="slide level2 center">
-<h2>Resources</h2>
+<section id="implementation-protocol-for-applied-projects" class="slide level2 center">
+<h2>Implementation Protocol for Applied Projects</h2>
+<p>Project setup:</p>
+<ol type="1">
+<li>Write a one-sentence objective.</li>
+<li>Gather context documents (dictionary, assumptions, output example).</li>
+<li>Choose which workflow step you are currently in.</li>
+</ol>
+<p>Project closeout:</p>
+<ol type="1">
+<li>Run explicit verification checks.</li>
+<li>Document prompts and decisions.</li>
+<li>Record one limitation and one robustness check.</li>
+</ol>
+</section>
+<section id="core-resources" class="slide level2 center">
+<h2>Core Resources</h2>
+<p><strong>Course reference pages:</strong></p>
 <ul>
-<li><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering">Anthropic Prompt Engineering Docs</a></li>
+<li><a href="https://gabors-data-analysis.com/ai-course/da-knowledge/which-ai.html">Model comparison</a></li>
+<li><a href="https://gabors-data-analysis.com/ai-course/da-knowledge/technical-terms-page.html">Glossary</a></li>
+<li><a href="https://gabors-data-analysis.com/ai-course/da-knowledge/beyond.html">Readings</a></li>
+</ul>
+<p><strong>General documentation:</strong></p>
+<ul>
 <li><a href="https://platform.openai.com/docs/guides/prompt-engineering">OpenAI Prompt Engineering Guide</a></li>
-<li><a href="https://ai.google.dev/gemini-api/docs/gemini-3">Gemini 3 Prompting Guide</a></li>
-<li><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Effective Context Engineering (Anthropic)</a></li>
+<li><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic: Effective Context Engineering for AI Agents</a></li>
+</ul>
+</section></section>
+<section>
+<section id="appendix" class="title-slide slide level1 center">
+<h1>Appendix</h1>
+
+</section>
+<section id="appendix-a-claude-specific-prompting-tips" class="slide level2 center">
+<h2>Appendix A: Claude-Specific Prompting Tips</h2>
+<p>From <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices">Anthropic’s guidance</a>:</p>
+<ol type="1">
+<li>Be explicit; models take instructions literally.</li>
+<li>Use XML tags to structure long inputs.</li>
+<li>Provide motivation and decision context.</li>
+<li>Request output verbosity when needed.</li>
+<li>Enable extended thinking for complex tasks.</li>
+</ol>
+</section>
+<section id="appendix-b-gemini-specific-prompting-tips" class="slide level2 center">
+<h2>Appendix B: Gemini-Specific Prompting Tips</h2>
+<p>From <a href="https://ai.google.dev/gemini-api/docs/gemini-3">Google’s guidance</a>:</p>
+<ol type="1">
+<li>Prefer simpler prompts over elaborate scaffolding.</li>
+<li>Use thinking levels for harder tasks.</li>
+<li>Place directives after large input blocks.</li>
+<li>Use long context for codebooks and documentation.</li>
+<li>Use grounding when factual freshness matters.</li>
+</ol>
+</section>
+<section id="appendix-c-agentic-coding-tool-examples" class="slide level2 center">
+<h2>Appendix C: Agentic Coding Tool Examples</h2>
+<p>Examples:</p>
+<ul>
+<li>CLI tools: Claude Code, Codex.</li>
+<li>IDE tools: Copilot, Cursor, Antigravity.</li>
+</ul>
+<p>Reference links:</p>
+<ul>
+<li><a href="https://gabors-data-analysis.com/ai-course/da-knowledge/which-ai.html">Coding Tools Comparison</a></li>
 <li><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code Best Practices</a></li>
 </ul>
 </section>
+<section id="appendix-d-should-we-say-pleasethank-you" class="slide level2 center">
+<h2>Appendix D: Should We Say Please/Thank You?</h2>
+
+<img data-src="images/altman-please-2025-04-20.jpg" class="r-stretch"></section>
+<section id="appendix-d-answer" class="slide level2 center">
+<h2>Appendix D: Answer</h2>
+
+<img data-src="images/robot-war-save-thank-you-cartoon-2025.jpeg" class="r-stretch"><p><strong>Answer</strong>: It does not materially change output quality. Use the tone that feels natural.</p>
+</section>
 <section id="date-stamp" class="slide level2 center">
 <h2>Date stamp</h2>
-<p>This version: 2026-01-19 (v0.6.0)</p>
-<p>Previous versions: v0.3.2 (2025-05-28), v0.1.2 (2025-04-21)</p>
+<p>This version: 2026-02-22 (v0.8.0)</p>
+<p>Previous versions: v0.7.2 (2026-02-22), v0.7.1 (2026-02-16), v0.7.0 (2026-02-16), v0.6.0 (2026-01-19), v0.3.2 (2025-05-28), v0.1.2 (2025-04-21)</p>
 <p><a href="mailto:bekesg@ceu.edu">bekesg@ceu.edu</a></p>
 </section>
 <section class="slide level2 center">
 
-<!-- 
+<!--
 Document metadata:
-- Iterations with user: 2
-- Internal version: v0.6.0
-- Date: 2026-01-19
-- Model: Claude Opus 4.5 (claude-opus-4-5-20251101)
-- Based on: da-w-ai-02-prompting.qmd v0.3.2
-- Changes: Added Gemini 3 slides, reference to Week 03
+- Internal version: v0.8.0
+- Date: 2026-02-22
+- Based on: v0.7.2
+- Changes: Full content-focused restructure for 60-minute conceptual flow; workflow moved earlier; six standalone prompting strategies; vendor-specific guidance moved to appendix; tone adjusted for master-level delivery.
 -->
 
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Gabors Data Analysis with AI – Prompting – 2026-01-19 v0.6.1</p>
+<p>Gabors Data Analysis with AI – Prompting – 2026-02-23 v0.8.1</p>
 </div>
 </div></div>
 
