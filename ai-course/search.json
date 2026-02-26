@@ -550,7 +550,7 @@
     "href": "da-knowledge/vscode-setup.html#quick-troubleshooting",
     "title": "VS Code + Python or R + GitHub Copilot Setup",
     "section": "Quick Troubleshooting",
-    "text": "Quick Troubleshooting\n\ncode command not found\n\nWindows: close and reopen terminal after install\nmacOS: run Shell Command: Install 'code' command in PATH from Command Palette, then restart terminal\n\n\n\nPython interpreter not found in VS Code\n\nRun Python: Select Interpreter\nIf nothing appears, reinstall Python and restart VS Code\n\n\n\nR extension works but no IntelliSense\nInstall in R:\ninstall.packages(\"languageserver\")\nThen restart VS Code.\n\n\nCopilot sign-in issues\n\nIn VS Code, use Accounts menu to sign out/in GitHub\nCheck your Copilot plan at github.com/settings/copilot",
+    "text": "Quick Troubleshooting\n\ncode command not found\n\nWindows: close and reopen terminal after install\nmacOS: run Shell Command: Install 'code' command in PATH from Command Palette, then restart terminal\n\n\n\nPython interpreter not found in VS Code\n\nRun Python: Select Interpreter\nIf nothing appears, reinstall Python and restart VS Code\n\n\n\nR not found (Windows)\nYou might need to add the R.exe location such as ‘C:Files.3’ to ‘PATH’\nStart → search “Environment Variables” → “Edit the system environment variables”, \nEnvironment Variables…\nUnder your user (or System) variables: Path → Edit → New\nPaste the ...\\bin path → OK → reopen cmd\n\n\nR extension works but no IntelliSense\nInstall in R:\ninstall.packages(\"languageserver\")\nThen restart VS Code.\n\n\nCopilot sign-in issues\n\nIn VS Code, use Accounts menu to sign out/in GitHub\nCheck your Copilot plan at github.com/settings/copilot",
     "crumbs": [
       "Home",
       "Resources",
