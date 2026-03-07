@@ -226,7 +226,7 @@
     "href": "da-knowledge/which-ai.html",
     "title": "Which AI model shall we chose?",
     "section": "",
-    "text": "In what follows, here is my personal take as of date:2026-01-12.",
+    "text": "In what follows, here is my personal take as of date:2026-03-06.",
     "crumbs": [
       "Home",
       "Resources",
@@ -238,7 +238,7 @@
     "href": "da-knowledge/which-ai.html#basics",
     "title": "Which AI model shall we chose?",
     "section": "Basics",
-    "text": "Basics\nGenerative AI based on Large Language Models (genAI) is great for many tasks. In this course we only focus on aspects of Data Analysis:\n\ndesigning analysis\nwriting code\ndata wrangling such as joining tables, sample design, variable transformations\nexploratory data analysis\nmodelling, regressions, machine learning\ncausal inference\ncreating tables and graphs\nwriting reports and presentations",
+    "text": "Basics\nGenerative AI based on Large Language Models (genAI) is a powerful tool with a series of decisions by users. This is my guide with a focus on task related to analyzing data.\n\nLeading models\n\nAs of now the leading (state of the art, SOTA) models are Google’s Gemini (3.0), OpenAI’s ChatGPT (5.4), and Anthropic’s Claude Opus (4.6.)\nOther key model is Mistral AI but there are several others\nOpen source – open weights models are also quite good, Kimi (K2.5), an open weight model, is quite good and free. Deepseek, Qwen the other leading models. Think of them as SOTA 4-9 months ago\n\n\n\nPaid vs free of leading providers\n\nMost models have a free and paid tiers.\nFree ones are good as kind of Google search replacement for everyday tasks and chats.\nFor serious work you’ll be better off with paid tiers or open source models that are much cheaper. (see comparison at open router or price per token)\n\n\n\nThinking\n\nEach model have faster (cheaper) and thinking (more expensive) variants, such as Sonnet and Opus for Claude, Thinking and Instant for ChatGPT. In addition you can have extended thinking\nFor data analysis work, the thinking variants are recommended.\nAll major models have deep research\n\n\n\nTools\n\nAll major models support tool use (e.g. web browsing, code execution) and agentic patterns (multi-step workflows with memory and tool use).\nCurrently Gemini is the weakest here",
     "crumbs": [
       "Home",
       "Resources",
@@ -246,23 +246,11 @@
     ]
   },
   {
-    "objectID": "da-knowledge/which-ai.html#basics-1",
-    "href": "da-knowledge/which-ai.html#basics-1",
+    "objectID": "da-knowledge/which-ai.html#use-cases",
+    "href": "da-knowledge/which-ai.html#use-cases",
     "title": "Which AI model shall we chose?",
-    "section": "Basics",
-    "text": "Basics\n\nMost models have a free and paid tiers. Free ones are good as kind of Google search replacement. For serious work you’ll be better off with paid tiers.\nAs of now the leading models are Google’s Gemini 3.0, OpenAI’s GPT-5.2, and Anthropic’s Claude Opus 4.5.\nEach model have faster (cheaper) and thinking (more expensive) variants. For data analysis work, the thinking variants are recommended.\nAll major models have deep research\nAll major models support tool use (e.g. web browsing, code execution) and agentic patterns (multi-step workflows with memory and tool use).\nOpen weights models are also quite good, Deepseek and Q. You can even run a 7bn parameter model on an expensive computer",
-    "crumbs": [
-      "Home",
-      "Resources",
-      "Which AI model"
-    ]
-  },
-  {
-    "objectID": "da-knowledge/which-ai.html#landscape-overview",
-    "href": "da-knowledge/which-ai.html#landscape-overview",
-    "title": "Which AI model shall we chose?",
-    "section": "landscape overview",
-    "text": "landscape overview\n\n\n\n\n\n\n\n\n\n\nFeature\nGPT-5.2\no3 (reasoning)\nGemini 3 Deep Think\nClaude Opus 4.5\n\n\n\n\nDesign focus\nFlagship multimodal with native reasoning\nDeep reasoning for complex tasks\n1M token context with extended thinking\nCoding & complex instruction following\n\n\nMultimodality\nText + images + audio + video (I/O)\nText + tool calls\nText + images + video\nText + images + Computer Use 2.0\n\n\nBrowsing / tools\nIntegrated search + MCP support\nAuto-search for up-to-date facts\nGrounded in Google Search\nDeep integration with MCP & OS\n\n\nDefault style\nBalanced, adaptive\nConcise, source-cited\nThorough, exploratory\nProfessional, highly structured\n\n\nContext window\n400k tokens\n128k tokens\n1M tokens\n500k tokens\n\n\nStrengths\nAll-rounder, agentic workflows\nStep-wise analysis, audit trail\nLong-context research\nCoding agents, OS automation\n\n\nWeak spots\nExpensive for simple tasks\nNo native media I/O\nSlower response times\nSlower than Haiku/Sonnet",
+    "section": "Use cases",
+    "text": "Use cases\nAI is great for many tasks. In this course we only focus on aspects of Data Analysis:\n\ndesigning analysis\nwriting code\ndata wrangling such as joining tables, sample design, variable transformations\nexploratory data analysis\nmodelling, regressions, machine learning\ncausal inference\ncreating tables and graphs\nwriting reports and presentations",
     "crumbs": [
       "Home",
       "Resources",
@@ -274,7 +262,7 @@
     "href": "da-knowledge/which-ai.html#models-for-data-analysis",
     "title": "Which AI model shall we chose?",
     "section": "Models for data analysis",
-    "text": "Models for data analysis\nFor data-analysis projects, the recommended approach is:\n\nReasoning models (o3, Deep Think) for complex analysis requiring accuracy\nGPT-5.2 for agentic workflows and multimodal tasks\n\nGemini 3 for long-context document analysis (entire datasets, reports)\nClaude Opus 4.5 for coding and complex technical writing\n\nAll major models now support tool use (MCP) and agentic patterns.",
+    "text": "Models for data analysis\nFor data-analysis projects, my current recommended approach is: paid Claude.",
     "crumbs": [
       "Home",
       "Resources",
@@ -298,7 +286,7 @@
     "href": "da-knowledge/which-ai.html#for-data-analysis-workspaces-comparison",
     "title": "Which AI model shall we chose?",
     "section": "For data analysis workspaces – comparison",
-    "text": "For data analysis workspaces – comparison\n\n\n\n\n\n\n\nWorkspace\n2026 Key Features\n\n\n\n\nAnthropic Claude Artifacts\n• Creates interactive applications (tutors, calculators) within the output window.• Real-time iteration on complex document structures.\n\n\nOpenAI ChatGPT Canvas\n• Advanced frontier models with contextual persistence for tone and style.• Inline editing with granular control over specific sections.\n\n\nGoogle NotebookLM\n• Interactive Audio Overviews with user interruption and questioning.• Grounded citations linked directly to uploaded source segments.\n\n\nPerplexity Pages\n• Multi-source synthesis using live web retrieval.• Inline citation and consistency checking against sources.",
+    "text": "For data analysis workspaces – comparison\nLast update: 16 Jan 2026\n\n\n\n\n\n\n\nWorkspace\n2026 Key Features\n\n\n\n\nAnthropic Claude Artifacts\n• Creates interactive applications (tutors, calculators) within the output window.• Real-time iteration on complex document structures.\n\n\nOpenAI ChatGPT Canvas\n• Advanced frontier models with contextual persistence for tone and style.• Inline editing with granular control over specific sections.\n\n\nGoogle NotebookLM\n• Interactive Audio Overviews with user interruption and questioning.• Grounded citations linked directly to uploaded source segments.\n\n\nPerplexity Pages\n• Multi-source synthesis using live web retrieval.• Inline citation and consistency checking against sources.",
     "crumbs": [
       "Home",
       "Resources",
