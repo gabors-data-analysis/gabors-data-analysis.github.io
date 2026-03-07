@@ -16,6 +16,18 @@ redirect_from:
 
 A: We never observe individual treatment effects, and ATE is their average. When we have random assignment or, close to partialling out endogenous variation in x, we have a chance to estimate ATE. But in the data itself, we never observe it. 
 
+## Chapter 21
+
+>**Q: What is the difference between balance of covariates and common support?**
+
+A: True, both are ex post checks on similarity of two subsets of data such as treated and control. But, covariate balance is typically used in context of experiments, while common support is for observational data. 
+
+Common support is about existence of overlap: do treated and untreated observations cover the same range of confounder values, ie combination of $z_1$, $z_2$ etc values? Can we find comparable observations at all? Without common support, some treated units have no untreated counterpart to compare against, so we simply cannot estimate ATE for those units. It's a precondition for causal estimation.
+
+Balance of covariates is about similarity of distributions: even if both groups overlap in range, are the confounders distributed similarly between treated and untreated? It's whether the groups "look alike" on average across the confounders.
+
+In sum, common support = "Do comparable observations exist?" (range overlap), balance = "Are the groups similar?" (distributional similarity) You can have common support without balance (the ranges overlap but one group is concentrated at different values), and you need both for clean causal estimation. 
+
 
 ## Chapter 23
 
