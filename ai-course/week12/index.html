@@ -140,8 +140,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../navbar/resources.html"> 
-<span class="menu-text">Resources</span></a>
+    <a class="nav-link active" href="../navbar/resources.html" aria-current="page"> 
+<span class="menu-text">Knowledge Base</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -322,12 +322,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Resources</span></a>
+ <span class="menu-text">Knowledge Base</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../navbar/resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../da-knowledge/designing-projects.html" class="sidebar-item-text sidebar-link">
@@ -366,6 +372,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/creating-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating Graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../da-knowledge/terminal-basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Terminal Basics</span></a>
   </div>
@@ -380,6 +392,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../da-knowledge/vscode-setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">VS Code + Copilot Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/get-ai-api-key.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Get AI API keys</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/api-use.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">APIs — Intro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/api-advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">APIs — Under the hood</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/walkthrough-wb-fred.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Walkthrough: World Bank + FRED</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/walkthrough-fbref.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Walkthrough: FBref</span></a>
   </div>
 </li>
       </ul>
@@ -518,7 +560,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="card-body">
 <ul>
-<li><strong>Get an API key</strong> (OpenAI, Anthropic, or similar): <a href="../week08/assets/get-ai-api-key.html">How to get AI API keys</a>.</li>
+<li><strong>Get an API key</strong> (OpenAI, Anthropic, or similar): <a href="../da-knowledge/get-ai-api-key.html">How to get AI API keys</a>.</li>
 <li><strong>Budget ~$5</strong> — that is more than enough for a project this size.</li>
 <li><strong>Store the key outside the repo.</strong> Use an environment variable (<code>.env</code>, <code>export</code>) — never commit it.</li>
 <li><strong>Test first.</strong> Run your classification prompt on 10–20 articles before you unleash it on 1,000.</li>
@@ -532,10 +574,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="card-body">
 <p>Pulled into our knowledge base so you can find it after the course:</p>
 <ul>
-<li><a href="../week08/assets/api-use.html">Introduction to APIs</a> — what an API call is, headers, auth, rate limits.</li>
-<li><a href="../week08/assets/api-advanced.html">How APIs work under the hood</a> — idempotency, retries, batching, tokens.</li>
-<li><a href="../week08/assets/walkthrough-wb-fred.html">Simple walkthrough: World Bank + FRED</a> — public data APIs.</li>
-<li><a href="../week08/assets/walkthrough-fbref.html">Football-data walkthrough (FBref)</a> — scraping a sports data source.</li>
+<li><a href="../da-knowledge/api-use.html">Introduction to APIs</a> — what an API call is, headers, auth, rate limits.</li>
+<li><a href="../da-knowledge/api-advanced.html">How APIs work under the hood</a> — idempotency, retries, batching, tokens.</li>
+<li><a href="../da-knowledge/walkthrough-wb-fred.html">Simple walkthrough: World Bank + FRED</a> — public data APIs.</li>
+<li><a href="../da-knowledge/walkthrough-fbref.html">Football-data walkthrough (FBref)</a> — scraping a sports data source.</li>
 </ul>
 <p>If you are new to APIs, spend <strong>15 minutes</strong> on “Introduction to APIs” before you start your work block — it will save you an hour of confused debugging.</p>
 </div>
@@ -1194,7 +1236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Get an API key** (OpenAI, Anthropic, or similar): <span class="co">[</span><span class="ot">How to get AI API keys</span><span class="co">](../week08/assets/get-ai-api-key.qmd)</span>.</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Get an API key** (OpenAI, Anthropic, or similar): <span class="co">[</span><span class="ot">How to get AI API keys</span><span class="co">](../da-knowledge/get-ai-api-key.qmd)</span>.</span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Budget ~$5** — that is more than enough for a project this size.</span>
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Store the key outside the repo.** Use an environment variable (<span class="in">`.env`</span>, <span class="in">`export`</span>) — never commit it.</span>
 <span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Test first.** Run your classification prompt on 10–20 articles before you unleash it on 1,000.</span>
@@ -1210,10 +1252,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>Pulled into our knowledge base so you can find it after the course:</span>
 <span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Introduction to APIs</span><span class="co">](../week08/assets/api-use.qmd)</span> — what an API call is, headers, auth, rate limits.</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">How APIs work under the hood</span><span class="co">](../week08/assets/api-advanced.qmd)</span> — idempotency, retries, batching, tokens.</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Simple walkthrough: World Bank + FRED</span><span class="co">](../week08/assets/walkthrough-wb-fred.qmd)</span> — public data APIs.</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Football-data walkthrough (FBref)</span><span class="co">](../week08/assets/walkthrough-fbref.qmd)</span> — scraping a sports data source.</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Introduction to APIs</span><span class="co">](../da-knowledge/api-use.qmd)</span> — what an API call is, headers, auth, rate limits.</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">How APIs work under the hood</span><span class="co">](../da-knowledge/api-advanced.qmd)</span> — idempotency, retries, batching, tokens.</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Simple walkthrough: World Bank + FRED</span><span class="co">](../da-knowledge/walkthrough-wb-fred.qmd)</span> — public data APIs.</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Football-data walkthrough (FBref)</span><span class="co">](../da-knowledge/walkthrough-fbref.qmd)</span> — scraping a sports data source.</span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>If you are new to APIs, spend **15 minutes** on "Introduction to APIs" before you start your work block — it will save you an hour of confused debugging.</span>
 <span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>:::</span>
