@@ -424,6 +424,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Walkthrough: FBref</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/pdf-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PDF Guide</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -500,7 +506,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>When a project is small — one dataset, one notebook, one question — you can improvise. AI helps, you check the output, you move on.</p>
 <p>When a project is <strong>larger</strong> — many data sources, a multi-step pipeline, a claim you’ll defend in a presentation — improvising backfires. You and your AI assistant spend hours re-litigating decisions, re-inventing conventions, and re-debugging work you already “finished” yesterday.</p>
-<p>This page collects the small set of habits that make bigger projects with AI work. It sits behind the Zero-to-Hero Data Hack, but it applies to any multi-week analytics project.</p>
+<p>This page collects the small set of habits that make bigger projects with AI work. It sits behind the Capstone Project, but it applies to any multi-week analytics project.</p>
 <hr>
 <section id="two-mindsets-for-using-ai" class="level2">
 <h2 class="anchored" data-anchor-id="two-mindsets-for-using-ai">Two mindsets for using AI</h2>
@@ -575,7 +581,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="card-body">
 <p>A <strong>skill</strong> is a small, self-contained instruction packet for a task you’ll do more than once: scraping RSS feeds, calling an LLM classifier, running a DiD event-study, writing a README. Unlike <code>agents.md</code> (which is about <em>this</em> project), skills are <strong>portable</strong> — you carry them from project to project.</p>
 <p>In practice, a skill is a short Markdown file with a clear name that tells the AI <em>how</em> to do one thing well in your style. You keep them in a <code>skills/</code> folder (or wherever your tool expects them), and the AI loads the right one when the task matches.</p>
-<p><strong>Examples of skills you’d build for the hack:</strong></p>
+<p><strong>Examples of skills you’d build for the capstone:</strong></p>
 <ul>
 <li><strong><code>scrape-rss-feed</code></strong> — “Given an RSS URL, return a tidy DataFrame with <code>title, link, published_at, source, raw_text</code>. Use <code>feedparser</code>. Retry on failure with backoff. Log the URL + row count.”</li>
 <li><strong><code>call-llm-classifier</code></strong> — “Batch articles in groups of 20, call the Anthropic API with a fixed system prompt, parse JSON, validate schema, write results to <code>/out/classified_{date}.parquet</code>. Never log the API key.”</li>
@@ -1135,7 +1141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>When a project is **larger** — many data sources, a multi-step pipeline, a claim you'll defend in a presentation — improvising backfires. You and your AI assistant spend hours re-litigating decisions, re-inventing conventions, and re-debugging work you already "finished" yesterday.</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>This page collects the small set of habits that make bigger projects with AI work. It sits behind the Zero-to-Hero Data Hack, but it applies to any multi-week analytics project.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>This page collects the small set of habits that make bigger projects with AI work. It sits behind the Capstone Project, but it applies to any multi-week analytics project.</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
@@ -1236,7 +1242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>In practice, a skill is a short Markdown file with a clear name that tells the AI *how* to do one thing well in your style. You keep them in a <span class="in">`skills/`</span> folder (or wherever your tool expects them), and the AI loads the right one when the task matches.</span>
 <span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>**Examples of skills you'd build for the hack:**</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>**Examples of skills you'd build for the capstone:**</span>
 <span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`scrape-rss-feed`** — "Given an RSS URL, return a tidy DataFrame with <span class="in">`title, link, published_at, source, raw_text`</span>. Use <span class="in">`feedparser`</span>. Retry on failure with backoff. Log the URL + row count."</span>
 <span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`call-llm-classifier`** — "Batch articles in groups of 20, call the Anthropic API with a fixed system prompt, parse JSON, validate schema, write results to <span class="in">`/out/classified_{date}.parquet`</span>. Never log the API key."</span>
