@@ -475,7 +475,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#required-dataset-components" id="toc-required-dataset-components" class="nav-link" data-scroll-target="#required-dataset-components">Required dataset components</a></li>
   <li><a href="#work-tasks-2-hour-block" id="toc-work-tasks-2-hour-block" class="nav-link" data-scroll-target="#work-tasks-2-hour-block">Work tasks (2-hour block)</a>
   <ul class="collapse">
-  <li><a href="#data-source-starting-points" id="toc-data-source-starting-points" class="nav-link" data-scroll-target="#data-source-starting-points">Data-source starting points</a></li>
+  <li><a href="#data-descriptive-statistics" id="toc-data-descriptive-statistics" class="nav-link" data-scroll-target="#data-descriptive-statistics">Data descriptive statistics</a></li>
   </ul></li>
   <li><a href="#discussion-last-hour" id="toc-discussion-last-hour" class="nav-link" data-scroll-target="#discussion-last-hour">Discussion (last hour)</a></li>
   <li><a href="#delivery-session-1" id="toc-delivery-session-1" class="nav-link" data-scroll-target="#delivery-session-1">Delivery (Session 1)</a></li>
@@ -541,6 +541,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>📊 <strong>Core dataset components</strong></p>
 </div>
 <div class="card-body">
+<p>You will need six datasets. Details are up to you, here are some examples.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -557,22 +558,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><strong>Game results</strong></td>
-<td>Date, home team, away team, goals, gameweek, season</td>
+<td>Date, home team, away team, goals, league, season</td>
 <td>☐</td>
 </tr>
 <tr class="even">
-<td><strong>Manager changes</strong></td>
-<td>Date of change, incoming manager, previous manager, team</td>
+<td><strong>Managers</strong></td>
+<td>date, team, manager</td>
 <td>☐</td>
 </tr>
 <tr class="odd">
 <td><strong>Manager characteristics</strong></td>
-<td>Age, experience in league, international experience, previous clubs</td>
+<td>Age, experience, nationality, etc</td>
 <td>☐</td>
 </tr>
 <tr class="even">
 <td><strong>Team information</strong></td>
-<td>Budget or squad value (if available), historical performance, league</td>
+<td>team, season, location, quality, etc</td>
 <td>☐</td>
 </tr>
 <tr class="odd">
@@ -599,7 +600,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="card-body">
 <ol type="1">
-<li><strong>Discuss in teams</strong> — Which country/league? What sources exist? What is realistic in 2 hours?</li>
+<li><strong>Discuss in teams</strong> — Which country/league? What sources exist?</li>
 <li><strong>Self-interview</strong> — have your AI ask <em>you</em> clarifying questions before it writes code. (See <a href="../da-knowledge/designing-projects.html#let-ai-interview-you-before-it-codes">Designing Larger Analytics Projects</a>.)</li>
 <li><strong>Plan</strong> — a short written <code>PLAN.md</code>: sources, primary key, joins, tests, owner per task.</li>
 <li><strong>Execute</strong> — scrape / download / compile from your sources.</li>
@@ -608,25 +609,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </div>
 </div>
-<section id="data-source-starting-points" class="level3">
-<h3 class="anchored" data-anchor-id="data-source-starting-points">Data-source starting points</h3>
-<ul>
-<li><strong>Match results &amp; squads:</strong> FBref (Sports Reference), Understat, Transfermarkt, Flashscore, Wikipedia per-season pages.</li>
-<li><strong>Manager history:</strong> Transfermarkt manager pages, Wikipedia manager tenure tables, league official sites.</li>
-<li><strong>Aggregators with APIs:</strong> Football-Data.co.uk (CSV dumps per season), StatsBomb Open Data (select leagues).</li>
-</ul>
-<p>You are expected to <strong>evaluate</strong> each source (reliability, coverage, licence, cost) before committing.</p>
+<section id="data-descriptive-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="data-descriptive-statistics">Data descriptive statistics</h3>
+<p>You are expected to <strong>evaluate</strong> data quality and understand key characteristics of your dataset.</p>
+<p>Basically create a few important exhibits that describe the data you have.</p>
 <hr>
 </section>
 </section>
 <section id="discussion-last-hour" class="level2">
 <h2 class="anchored" data-anchor-id="discussion-last-hour">Discussion (last hour)</h2>
 <ul>
-<li><strong>Data quality</strong> — What missing/outliers? What does your sample <em>not</em> cover?</li>
+<li><strong>Team work</strong> — How did you divide the work? What worked well? What was hard?</li>
+<li><strong>Data quality</strong></li>
 <li><strong>Cross-country variation</strong> — How does availability change across leagues?</li>
-<li><strong>Tests</strong> — What failed? What did the failure reveal about your assumptions?</li>
-<li><strong>Code quality</strong> — Functions vs scripts; what did you mock; how reproducible is the collection step?</li>
-<li><strong>Next session readiness</strong> — Is the dataset stable enough to join news onto it?</li>
+<li><strong>Tests</strong> — What failed? What do you plan?</li>
+<li><strong>How far ahead</strong> – what is left to do</li>
+<li><strong>Next session readiness</strong> — API, clear UIDs.</li>
 </ul>
 <hr>
 </section>
@@ -640,13 +638,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>Who:</strong> by <strong>group</strong> — you finish what you started in class together.</li>
 <li><strong>Deadline:</strong> <strong>Sunday 23:55</strong> (the Sunday after this session).</li>
-<li><strong>Where:</strong> your team’s GitHub repo for the project.</li>
+<li><strong>Where:</strong> your team’s GitHub repo for the project. (please keep private for now, share with us)</li>
 <li><strong>What:</strong>
 <ul>
 <li>Raw data (or a script that fetches it reproducibly) + processed dataset.</li>
 <li>A short <code>DATA.md</code> describing each table, source, schema, and known issues.</li>
 <li>Test files (data tests, data-describe checks, code tests).</li>
-<li>A one-page <code>PLAN_NEXT.md</code>: what you will need in Session 2 to join news on top.</li>
+<li>Data description (any way, notebook or html) with key statistics and exhibits describing the data you have.</li>
 </ul></li>
 </ul>
 </div>
@@ -1151,78 +1149,82 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Component <span class="pp">|</span> Details <span class="pp">|</span> ☐ <span class="pp">|</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Game results** <span class="pp">|</span> Date, home team, away team, goals, gameweek, season <span class="pp">|</span> ☐ <span class="pp">|</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Manager changes** <span class="pp">|</span> Date of change, incoming manager, previous manager, team <span class="pp">|</span> ☐ <span class="pp">|</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Manager characteristics** <span class="pp">|</span> Age, experience in league, international experience, previous clubs <span class="pp">|</span> ☐ <span class="pp">|</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Team information** <span class="pp">|</span> Budget or squad value (if available), historical performance, league <span class="pp">|</span> ☐ <span class="pp">|</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Data documentation** <span class="pp">|</span> Schema, sources, number of observations, quality notes <span class="pp">|</span> ☐ <span class="pp">|</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Quality assurance** <span class="pp">|</span> No missing critical fields, consistent dates, no duplicates, standardized team names <span class="pp">|</span> ☐ <span class="pp">|</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>You will need six datasets. Details are up to you, here are some examples. </span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Component <span class="pp">|</span> Details <span class="pp">|</span> ☐ <span class="pp">|</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Game results** <span class="pp">|</span> Date, home team, away team, goals, league, season <span class="pp">|</span> ☐ <span class="pp">|</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Managers** <span class="pp">|</span> date, team, manager <span class="pp">|</span> ☐ <span class="pp">|</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Manager characteristics** <span class="pp">|</span> Age, experience, nationality, etc  <span class="pp">|</span> ☐ <span class="pp">|</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Team information** <span class="pp">|</span> team, season, location, quality, etc <span class="pp">|</span> ☐ <span class="pp">|</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Data documentation** <span class="pp">|</span> Schema, sources, number of observations, quality notes <span class="pp">|</span> ☐ <span class="pp">|</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Quality assurance** <span class="pp">|</span> No missing critical fields, consistent dates, no duplicates, standardized team names <span class="pp">|</span> ☐ <span class="pp">|</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>:::::</span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">## Work tasks (2-hour block)</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>🎯 **What you'll do**</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Work tasks (2-hour block)</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>🎯 **What you'll do**</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Discuss in teams** — Which country/league? What sources exist? What is realistic in 2 hours?</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Self-interview** — have your AI ask *you* clarifying questions before it writes code. (See <span class="co">[</span><span class="ot">Designing Larger Analytics Projects</span><span class="co">](../da-knowledge/designing-projects.qmd#let-ai-interview-you-before-it-codes)</span>.)</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Plan** — a short written <span class="in">`PLAN.md`</span>: sources, primary key, joins, tests, owner per task.</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Execute** — scrape / download / compile from your sources.</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Test** — all three kinds: data tests, data-describe, code tests. See the <span class="co">[</span><span class="ot">testing section</span><span class="co">](../da-knowledge/designing-projects.qmd#three-kinds-of-tests)</span> for what each means in practice.</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Understand the data you have** — coverage: how many manager changes? how complete? what is missing for small clubs or early seasons?</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data-source starting points</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Discuss in teams** — Which country/league? What sources exist? </span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Self-interview** — have your AI ask *you* clarifying questions before it writes code. (See <span class="co">[</span><span class="ot">Designing Larger Analytics Projects</span><span class="co">](../da-knowledge/designing-projects.qmd#let-ai-interview-you-before-it-codes)</span>.)</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Plan** — a short written <span class="in">`PLAN.md`</span>: sources, primary key, joins, tests, owner per task.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Execute** — scrape / download / compile from your sources.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Test** — all three kinds: data tests, data-describe, code tests. See the <span class="co">[</span><span class="ot">testing section</span><span class="co">](../da-knowledge/designing-projects.qmd#three-kinds-of-tests)</span> for what each means in practice.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Understand the data you have** — coverage: how many manager changes? how complete? what is missing for small clubs or early seasons?</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>:::::</span>
 <span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Match results &amp; squads:** FBref (Sports Reference), Understat, Transfermarkt, Flashscore, Wikipedia per-season pages.</span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Manager history:** Transfermarkt manager pages, Wikipedia manager tenure tables, league official sites.</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Aggregators with APIs:** Football-Data.co.uk (CSV dumps per season), StatsBomb Open Data (select leagues).</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data descriptive statistics</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>You are expected to **evaluate** data quality and understand key characteristics of your dataset. </span>
 <span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>You are expected to **evaluate** each source (reliability, coverage, licence, cost) before committing.</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>Basically create a few important exhibits that describe the data you have. </span>
 <span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion (last hour)</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>-----------------------------------------------------------------------</span>
 <span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data quality** — What missing/outliers? What does your sample *not* cover?</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Cross-country variation** — How does availability change across leagues?</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tests** — What failed? What did the failure reveal about your assumptions?</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Code quality** — Functions vs scripts; what did you mock; how reproducible is the collection step?</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Next session readiness** — Is the dataset stable enough to join news onto it?</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="fu">## Delivery (Session 1)</span></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>📦 **What to hand in**</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Who:** by **group** — you finish what you started in class together.</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Deadline:** **Sunday 23:55** (the Sunday after this session).</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Where:** your team's GitHub repo for the project.</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**What:**</span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Raw data (or a script that fetches it reproducibly) + processed dataset.</span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>A short <span class="in">`DATA.md`</span> describing each table, source, schema, and known issues.</span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Test files (data tests, data-describe checks, code tests).</span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>A one-page <span class="in">`PLAN_NEXT.md`</span>: what you will need in Session 2 to join news on top.</span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>:::::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion (last hour)</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Team work** — How did you divide the work? What worked well? What was hard?</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data quality** </span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Cross-country variation** — How does availability change across leagues?</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tests** — What failed? What do you plan?</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**How far ahead** -- what is left to do</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Next session readiness** — API, clear UIDs. </span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="fu">## Delivery (Session 1)</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>📦 **What to hand in**</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Who:** by **group** — you finish what you started in class together.</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Deadline:** **Sunday 23:55** (the Sunday after this session).</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Where:** your team's GitHub repo for the project. (please keep private for now, share with us)</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**What:**</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Raw data (or a script that fetches it reproducibly) + processed dataset.</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>A short <span class="in">`DATA.md`</span> describing each table, source, schema, and known issues.</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Test files (data tests, data-describe checks, code tests).</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Data description (any way, notebook or html) with key statistics and exhibits describing the data you have.</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>:::::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
