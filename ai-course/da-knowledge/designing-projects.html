@@ -545,7 +545,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>It exposes gaps that would otherwise show up an hour into implementation.</li>
 <li>It gives the AI enough context that the first code it writes is closer to what you actually need.</li>
 </ul>
-<p>Keep the Q&amp;A in the repo as <code>PLAN.md</code>. Future-you and future-AI will both refer back to it.</p>
+<p>Keep the Q&amp;A in the repo as <code>PLAN.md</code> and reference it from your instructions file (e.g.&nbsp;add <code>@PLAN.md</code> to your <code>CLAUDE.md</code>). Future-you will refer back to it, and the AI will too — as long as the file is in its context.</p>
 </div>
 </div>
 <hr>
@@ -557,7 +557,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>📝 <strong>Tell the AI the rules of <em>this</em> project</strong></p>
 </div>
 <div class="card-body">
-<p>Your AI assistant does not remember your conventions between chats (or, with CLI tools, between runs). Write them down in a file at the repo root — <code>agents.md</code>, <code>AGENTS.md</code>, or <code>CLAUDE.md</code>, depending on the tool. CLI tools read it automatically every turn.</p>
+<p>Each CLI coding agent starts a fresh context window per session. Some (like Claude Code) also build an auto-memory across sessions, but the most reliable way to carry conventions forward is to write them down explicitly. Create a file at the repo root — <code>CLAUDE.md</code> (Claude Code), <code>AGENTS.md</code> (Codex), or <code>GEMINI.md</code> (Gemini CLI). Each tool reads its own file automatically at the start of every session.</p>
 <p>This file is <strong>project-specific</strong>. It describes how <em>this</em> project is organised and what is non-negotiable inside it.</p>
 <p>Split it into two short parts:</p>
 <p><strong>1. Preferences</strong> — what <em>you</em> like.</p>
@@ -573,7 +573,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><em>“Before implementing a function, write a minimal test with 5 rows of mock data.”</em></li>
 </ul>
 <p><strong>Write it at the start</strong>, even if you have to guess some items — you’ll refine them fast. Seed it with your usual rules from past projects; treat that as your personal baseline. <strong>Then update it on the go</strong>: when the AI does something you correct twice, that’s a line for <code>agents.md</code>. When a convention changes mid-project, update the file <em>before</em> the next prompt.</p>
-<p>Keep it short. The AI reads it every turn, so padding dilutes the rules that actually matter.</p>
+<p>Keep it short. The AI reads it at the start of every session, so padding dilutes the rules that actually matter.</p>
 </div>
 </div>
 <hr>
@@ -585,18 +585,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>🧰 <strong>Package repeatable know-how once, reuse it everywhere</strong></p>
 </div>
 <div class="card-body">
-<p>A <strong>skill</strong> is a small, self-contained instruction packet for a task you’ll do more than once: scraping RSS feeds, calling an LLM classifier, running a DiD event-study, writing a README. Unlike <code>agents.md</code> (which is about <em>this</em> project), skills are <strong>portable</strong> — you carry them from project to project.</p>
-<p>In practice, a skill is a short Markdown file with a clear name that tells the AI <em>how</em> to do one thing well in your style. You keep them in a <code>skills/</code> folder (or wherever your tool expects them), and the AI loads the right one when the task matches.</p>
+<p>A <strong>skill</strong> is a small, self-contained instruction packet for a task you’ll do more than once: scraping RSS feeds, calling an LLM classifier, running a DiD event-study, writing a README. Unlike <code>AGENTS.md</code> (which is about <em>this</em> project), skills are <strong>portable</strong> — you carry them from project to project.</p>
+<p>In practice, a skill is a directory with a <code>SKILL.md</code> file that tells the AI <em>how</em> to do one thing well in your style — plus optional scripts, templates, or reference files it can use. You keep them in a <code>.claude/skills/</code>, <code>.gemini/skills/</code>, or <code>.agents/skills/</code> folder (depending on the tool). All three major CLI agents can load a skill automatically when your prompt matches its description.</p>
 <p><strong>Examples of skills you’d build for the capstone:</strong></p>
 <ul>
-<li><strong><code>scrape-rss-feed</code></strong> — “Given an RSS URL, return a tidy DataFrame with <code>title, link, published_at, source, raw_text</code>. Use <code>feedparser</code>. Retry on failure with backoff. Log the URL + row count.”</li>
-<li><strong><code>call-llm-classifier</code></strong> — “Batch articles in groups of 20, call the Anthropic API with a fixed system prompt, parse JSON, validate schema, write results to <code>/out/classified_{date}.parquet</code>. Never log the API key.”</li>
-<li><strong><code>panel-did-event-study</code></strong> — “Given a team-week panel with a treatment date column, run a staggered-DiD event study with leads/lags, cluster SEs by team, and produce a standard plot.”</li>
 <li><strong><code>make-readme</code></strong> — “Generate a README following the structure: purpose, data, how to run, reproducibility notes. Pull the dataset schema from <code>DATA.md</code> if present.”</li>
 <li><strong><code>write-data-tests</code></strong> — “For a given DataFrame schema, produce pytest checks for: required columns, types, primary-key uniqueness, no-null on key fields, plausible ranges.”</li>
+<li><strong><code>scrape-match-data</code></strong> — “Given a league URL, return a tidy DataFrame with <code>date, home, away, home_goals, away_goals, manager_home, manager_away</code>. Use <code>requests</code> + <code>BeautifulSoup</code>. Retry on failure with backoff. Log the URL + row count.”</li>
+<li><strong><code>classify-texts-with-llm</code></strong> — “Batch articles in groups of 20, call an LLM API with a fixed system prompt, parse JSON, validate schema, write results to <code>/out/classified_{date}.csv</code>. Never log the API key.”</li>
+<li><strong><code>did-event-study</code></strong> — “Given a team-week panel with a treatment date column, run a staggered-DiD event study with leads/lags, cluster SEs by team, and produce a standard plot.”</li>
 </ul>
 <p><strong>Write them at the start</strong> — or, more commonly, <strong>carry them over from previous projects</strong>. A good skill, once written, outlives the project that produced it. The second time you do something, promote the working prompt into a skill.</p>
-<p><strong>Then update them on the go.</strong> The first version of <code>scrape-rss-feed</code> will be rough; after the second or third source you’ll know what edge cases matter, and the skill improves. A mature skill is one you’ve used on three different projects without editing.</p>
+<p><strong>Then update them on the go.</strong> The first version of <code>scrape-match-data</code> will be rough; after the second or third source you’ll know what edge cases matter, and the skill improves. A mature skill is one you’ve used on three different projects without editing.</p>
+<p><strong>You don’t have to write skills from scratch.</strong> Most CLI tools ship with a built-in skill creator skills. Describe what the skill should do, and the tool generates the directory structure and <code>SKILL.md</code> for you. Start there and refine.</p>
 <p><strong>Rule of thumb — where does this rule go?</strong></p>
 <table class="caption-top table">
 <thead>
@@ -1192,7 +1193,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It exposes gaps that would otherwise show up an hour into implementation.</span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It gives the AI enough context that the first code it writes is closer to what you actually need.</span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Keep the Q&amp;A in the repo as <span class="in">`PLAN.md`</span>. Future-you and future-AI will both refer back to it.</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Keep the Q&amp;A in the repo as <span class="in">`PLAN.md`</span> and reference it from your instructions file (e.g. add <span class="in">`@PLAN.md`</span> to your <span class="in">`CLAUDE.md`</span>). Future-you will refer back to it, and the AI will too — as long as the file is in its context.</span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>:::::</span>
@@ -1208,7 +1209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>Your AI assistant does not remember your conventions between chats (or, with CLI tools, between runs). Write them down in a file at the repo root — <span class="in">`agents.md`</span>, <span class="in">`AGENTS.md`</span>, or <span class="in">`CLAUDE.md`</span>, depending on the tool. CLI tools read it automatically every turn.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>Each CLI coding agent starts a fresh context window per session. Some (like Claude Code) also build an auto-memory across sessions, but the most reliable way to carry conventions forward is to write them down explicitly. Create a file at the repo root — <span class="in">`CLAUDE.md`</span> (Claude Code), <span class="in">`AGENTS.md`</span> (Codex), or <span class="in">`GEMINI.md`</span> (Gemini CLI). Each tool reads its own file automatically at the start of every session.</span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>This file is **project-specific**. It describes how *this* project is organised and what is non-negotiable inside it.</span>
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
@@ -1228,7 +1229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>**Write it at the start**, even if you have to guess some items — you'll refine them fast. Seed it with your usual rules from past projects; treat that as your personal baseline. **Then update it on the go**: when the AI does something you correct twice, that's a line for <span class="in">`agents.md`</span>. When a convention changes mid-project, update the file *before* the next prompt.</span>
 <span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>Keep it short. The AI reads it every turn, so padding dilutes the rules that actually matter.</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>Keep it short. The AI reads it at the start of every session, so padding dilutes the rules that actually matter.</span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>:::::</span>
@@ -1244,106 +1245,108 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>A **skill** is a small, self-contained instruction packet for a task you'll do more than once: scraping RSS feeds, calling an LLM classifier, running a DiD event-study, writing a README. Unlike `agents.md` (which is about *this* project), skills are **portable** — you carry them from project to project.</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>A **skill** is a small, self-contained instruction packet for a task you'll do more than once: scraping RSS feeds, calling an LLM classifier, running a DiD event-study, writing a README. Unlike `AGENTS.md` (which is about *this* project), skills are **portable** — you carry them from project to project.</span>
 <span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>In practice, a skill is a short Markdown file with a clear name that tells the AI *how* to do one thing well in your style. You keep them in a <span class="in">`skills/`</span> folder (or wherever your tool expects them), and the AI loads the right one when the task matches.</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>In practice, a skill is a directory with a <span class="in">`SKILL.md`</span> file that tells the AI *how* to do one thing well in your style — plus optional scripts, templates, or reference files it can use. You keep them in a <span class="in">`.claude/skills/`</span>, <span class="in">`.gemini/skills/`</span>, or <span class="in">`.agents/skills/`</span> folder (depending on the tool). All three major CLI agents can load a skill automatically when your prompt matches its description.</span>
 <span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>**Examples of skills you'd build for the capstone:**</span>
 <span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`scrape-rss-feed`** — "Given an RSS URL, return a tidy DataFrame with <span class="in">`title, link, published_at, source, raw_text`</span>. Use <span class="in">`feedparser`</span>. Retry on failure with backoff. Log the URL + row count."</span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`call-llm-classifier`** — "Batch articles in groups of 20, call the Anthropic API with a fixed system prompt, parse JSON, validate schema, write results to <span class="in">`/out/classified_{date}.parquet`</span>. Never log the API key."</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`panel-did-event-study`** — "Given a team-week panel with a treatment date column, run a staggered-DiD event study with leads/lags, cluster SEs by team, and produce a standard plot."</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`make-readme`** — "Generate a README following the structure: purpose, data, how to run, reproducibility notes. Pull the dataset schema from <span class="in">`DATA.md`</span> if present."</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`write-data-tests`** — "For a given DataFrame schema, produce pytest checks for: required columns, types, primary-key uniqueness, no-null on key fields, plausible ranges."</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`make-readme`** — "Generate a README following the structure: purpose, data, how to run, reproducibility notes. Pull the dataset schema from <span class="in">`DATA.md`</span> if present."</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`write-data-tests`** — "For a given DataFrame schema, produce pytest checks for: required columns, types, primary-key uniqueness, no-null on key fields, plausible ranges."</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`scrape-match-data`** — "Given a league URL, return a tidy DataFrame with <span class="in">`date, home, away, home_goals, away_goals, manager_home, manager_away`</span>. Use <span class="in">`requests`</span> + <span class="in">`BeautifulSoup`</span>. Retry on failure with backoff. Log the URL + row count."</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`classify-texts-with-llm`** — "Batch articles in groups of 20, call an LLM API with a fixed system prompt, parse JSON, validate schema, write results to <span class="in">`/out/classified_{date}.csv`</span>. Never log the API key."</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`did-event-study`** — "Given a team-week panel with a treatment date column, run a staggered-DiD event study with leads/lags, cluster SEs by team, and produce a standard plot."</span>
 <span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>**Write them at the start** — or, more commonly, **carry them over from previous projects**. A good skill, once written, outlives the project that produced it. The second time you do something, promote the working prompt into a skill.</span>
 <span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>**Then update them on the go.** The first version of <span class="in">`scrape-rss-feed`</span> will be rough; after the second or third source you'll know what edge cases matter, and the skill improves. A mature skill is one you've used on three different projects without editing.</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>**Then update them on the go.** The first version of <span class="in">`scrape-match-data`</span> will be rough; after the second or third source you'll know what edge cases matter, and the skill improves. A mature skill is one you've used on three different projects without editing.</span>
 <span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>**Rule of thumb — where does this rule go?**</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>**You don't have to write skills from scratch.** Most CLI tools ship with a built-in skill creator skills. Describe what the skill should do, and the tool generates the directory structure and <span class="in">`SKILL.md`</span> for you. Start there and refine.</span>
 <span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Scope <span class="pp">|</span> Goes in <span class="pp">|</span></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> True only in this repo <span class="pp">|</span> <span class="in">`agents.md`</span> <span class="pp">|</span></span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> True of a task you'll do again elsewhere <span class="pp">|</span> a skill <span class="pp">|</span></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>When in doubt, start in <span class="in">`agents.md`</span>. Promote to a skill once you find yourself copying the same block into a second project.</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>**Rule of thumb — where does this rule go?**</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Scope <span class="pp">|</span> Goes in <span class="pp">|</span></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> True only in this repo <span class="pp">|</span> <span class="in">`agents.md`</span> <span class="pp">|</span></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> True of a task you'll do again elsewhere <span class="pp">|</span> a skill <span class="pp">|</span></span>
 <span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>When in doubt, start in <span class="in">`agents.md`</span>. Promote to a skill once you find yourself copying the same block into a second project.</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>:::::</span>
 <span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="fu">## Three kinds of tests</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>Students often think "testing" means unit tests. In an analytics project, three different tests live side by side, and all three matter.</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="fu">## Three kinds of tests</span></span>
 <span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>🧪 **Data tests, data-describe, code tests**</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>Students often think "testing" means unit tests. In an analytics project, three different tests live side by side, and all three matter.</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>🧪 **Data tests, data-describe, code tests**</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>**1. Data tests — does the data itself make sense?**</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Fail tests** — schema present? types correct? primary key unique? required columns non-null?</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Variable format** — dates parse? numeric ranges plausible? categorical values from a known set?</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Quality** — no suspicious duplicates, no silent encoding problems, no mixed units.</span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>These run on the data as it enters the pipeline. They should *fail loudly* when the world changes under you.</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>**1. Data tests — does the data itself make sense?**</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Fail tests** — schema present? types correct? primary key unique? required columns non-null?</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Variable format** — dates parse? numeric ranges plausible? categorical values from a known set?</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Quality** — no suspicious duplicates, no silent encoding problems, no mixed units.</span>
 <span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>**2. Data description — do you understand the sample you have?**</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>These run on the data as it enters the pipeline. They should *fail loudly* when the world changes under you.</span>
 <span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>Not a pass/fail test — a ritual. Before any modelling, **describe**:</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>**2. Data description — do you understand the sample you have?**</span>
 <span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Counts: rows, groups, units, events.</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Distributions: of the outcome, of key covariates, of the treatment timing.</span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Edge cases: most frequent, least frequent, earliest, latest, largest, smallest.</span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>If you cannot describe the sample crisply, you do not know what your later regressions are averaging over.</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>Not a pass/fail test — a ritual. Before any modelling, **describe**:</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Counts: rows, groups, units, events.</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Distributions: of the outcome, of key covariates, of the treatment timing.</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Edge cases: most frequent, least frequent, earliest, latest, largest, smallest.</span>
 <span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>**3. Code tests — is your function doing what you think?**</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>If you cannot describe the sample crisply, you do not know what your later regressions are averaging over.</span>
 <span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>Treat each function as <span class="in">`f(x)`</span>. Build a small mock input where you *know* the right answer by hand, and assert the function returns it.</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>**3. Code tests — is your function doing what you think?**</span>
 <span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>These are cheap to write with AI: *"give me a pytest for this function with a mock DataFrame of 3 rows covering these edge cases."*</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>Treat each function as <span class="in">`f(x)`</span>. Build a small mock input where you *know* the right answer by hand, and assert the function returns it.</span>
 <span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>These are cheap to write with AI: *"give me a pytest for this function with a mock DataFrame of 3 rows covering these edge cases."*</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>:::::</span>
 <span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scoping and layering</span></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>📐 **Make the project small before you make it big**</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scoping and layering</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>📐 **Make the project small before you make it big**</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>When you plan the work, divide it into **layers** and ship each one end-to-end before expanding:</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Vertical slice first.** One country, one season, one source, one classification, one regression. Crappy but complete.</span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Then widen.** Add countries, add seasons, add sources — only after the pipeline runs top-to-bottom.</span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Then deepen.** Better prompts, better specs, better robustness — only once you know the slice works.</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>The opposite order (collect everything → classify everything → realise the pipeline is broken) is the single most common way these projects fail.</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>When you plan the work, divide it into **layers** and ship each one end-to-end before expanding:</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Vertical slice first.** One country, one season, one source, one classification, one regression. Crappy but complete.</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Then widen.** Add countries, add seasons, add sources — only after the pipeline runs top-to-bottom.</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Then deepen.** Better prompts, better specs, better robustness — only once you know the slice works.</span>
 <span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>The opposite order (collect everything → classify everything → realise the pipeline is broken) is the single most common way these projects fail.</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>:::::</span>
 <span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quick checklist before you start</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> I know which **mindset** I'm in for today's block (A or B).</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> The AI has **interviewed me** and I wrote a <span class="in">`PLAN.md`</span>.</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> An <span class="in">`agents.md`</span> (or <span class="in">`CLAUDE.md`</span>) exists with preferences + good practices.</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> I pulled in the **skills** from past projects that fit this one, and know which new ones I'll likely write.</span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> I have a **vertical slice** defined — the smallest possible end-to-end run.</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> I know what my **data tests**, **data-describe** checks, and **code tests** will look like.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quick checklist before you start</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> I know which **mindset** I'm in for today's block (A or B).</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> The AI has **interviewed me** and I wrote a <span class="in">`PLAN.md`</span>.</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> An <span class="in">`agents.md`</span> (or <span class="in">`CLAUDE.md`</span>) exists with preferences + good practices.</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> I pulled in the **skills** from past projects that fit this one, and know which new ones I'll likely write.</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> I have a **vertical slice** defined — the smallest possible end-to-end run.</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> I know what my **data tests**, **data-describe** checks, and **code tests** will look like.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
