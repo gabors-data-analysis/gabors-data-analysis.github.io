@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-05-04">
 
-<title>Beyond: suggested readings and resources to learn more – Doing Data Analysis with AI</title>
+<title>Capstone Project — Session 3: Difference-in-Differences &amp; Final Presentation – Doing Data Analysis with AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -153,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/beyond.html">Learn More</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../project01/index.html">Capstone Project</a></li><li class="breadcrumb-item"><a href="../project03/index.html">Session 3: DiD &amp; Presentation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -265,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project03/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../project03/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Session 3: DiD &amp; Presentation</span></a>
   </div>
 </li>
@@ -353,7 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../da-knowledge/beyond.html" class="sidebar-item-text sidebar-link active">
+  <a href="../da-knowledge/beyond.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Learn More</span></a>
   </div>
 </li>
@@ -458,36 +459,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#basics" id="toc-basics" class="nav-link active" data-scroll-target="#basics">Basics</a>
-  <ul class="collapse">
-  <li><a href="#core-readings" id="toc-core-readings" class="nav-link" data-scroll-target="#core-readings">Core readings</a></li>
-  <li><a href="#important-reviews" id="toc-important-reviews" class="nav-link" data-scroll-target="#important-reviews">Important reviews</a></li>
-  <li><a href="#prompting-and-context-management" id="toc-prompting-and-context-management" class="nav-link" data-scroll-target="#prompting-and-context-management">Prompting and context management</a></li>
-  <li><a href="#understanding-llms" id="toc-understanding-llms" class="nav-link" data-scroll-target="#understanding-llms">Understanding LLMs</a></li>
-  <li><a href="#ai-and-business-management" id="toc-ai-and-business-management" class="nav-link" data-scroll-target="#ai-and-business-management">AI and business / management</a></li>
-  </ul></li>
-  <li><a href="#social-impact" id="toc-social-impact" class="nav-link" data-scroll-target="#social-impact">Social impact</a></li>
-  <li><a href="#new-methods-and-tools" id="toc-new-methods-and-tools" class="nav-link" data-scroll-target="#new-methods-and-tools">New methods and tools</a></li>
-  <li><a href="#claude-code-and-clis" id="toc-claude-code-and-clis" class="nav-link" data-scroll-target="#claude-code-and-clis">Claude Code and CLIs</a>
-  <ul class="collapse">
-  <li><a href="#intro-videos-and-use" id="toc-intro-videos-and-use" class="nav-link" data-scroll-target="#intro-videos-and-use">Intro videos and use</a></li>
-  </ul></li>
-  <li><a href="#additional-content" id="toc-additional-content" class="nav-link" data-scroll-target="#additional-content">Additional content</a>
-  <ul class="collapse">
-  <li><a href="#consequence-of-ai" id="toc-consequence-of-ai" class="nav-link" data-scroll-target="#consequence-of-ai">Consequence of AI</a></li>
-  <li><a href="#blogs-newsletters" id="toc-blogs-newsletters" class="nav-link" data-scroll-target="#blogs-newsletters">Blogs, newsletters</a></li>
-  <li><a href="#video-resources-on-ai" id="toc-video-resources-on-ai" class="nav-link" data-scroll-target="#video-resources-on-ai">Video Resources on AI</a></li>
-  </ul></li>
-  <li><a href="#deeper-stuff-on-ai" id="toc-deeper-stuff-on-ai" class="nav-link" data-scroll-target="#deeper-stuff-on-ai">Deeper stuff on AI</a></li>
+  <li><a href="#where-we-are" id="toc-where-we-are" class="nav-link active" data-scroll-target="#where-we-are">Where we are</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#did-in-one-page-draft-use-ai-to-go-deeper" id="toc-did-in-one-page-draft-use-ai-to-go-deeper" class="nav-link" data-scroll-target="#did-in-one-page-draft-use-ai-to-go-deeper">DiD in one page (draft — use AI to go deeper)</a></li>
+  <li><a href="#work-tasks-2-hour-block" id="toc-work-tasks-2-hour-block" class="nav-link" data-scroll-target="#work-tasks-2-hour-block">Work tasks (2-hour block)</a></li>
+  <li><a href="#presentation-last-hour-of-class" id="toc-presentation-last-hour-of-class" class="nav-link" data-scroll-target="#presentation-last-hour-of-class">Presentation (last hour of class)</a></li>
+  <li><a href="#delivery-session-3-end-of-the-project" id="toc-delivery-session-3-end-of-the-project" class="nav-link" data-scroll-target="#delivery-session-3-end-of-the-project">Delivery (Session 3 — end of the project)</a></li>
+  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation">Evaluation</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/beyond.html">Learn More</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../project01/index.html">Capstone Project</a></li><li class="breadcrumb-item"><a href="../project03/index.html">Session 3: DiD &amp; Presentation</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Beyond: suggested readings and resources to learn more</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Capstone Project — Session 3: Difference-in-Differences &amp; Final Presentation</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Causal design on your panel, heterogeneity by expectations, final presentation</p>
 </div>
 
 
@@ -495,6 +483,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 4, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -507,113 +501,166 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="hero-section">
 <div class="container">
 <div class="hero-title">
-<p>Learning more</p>
+<p>Capstone Project — Session 3</p>
 </div>
 <div class="hero-subtitle">
-<p>Beyond: Suggested readings and resources to learn more</p>
+<p>DiD analysis, heterogeneity, and final presentation</p>
 </div>
 </div>
 </div>
-<p>Gábor’s collection of recommended readings, listening. Wide variety from practical to business and nerdy stuff.</p>
-<section id="basics" class="level2">
-<h2 class="anchored" data-anchor-id="basics">Basics</h2>
-<section id="core-readings" class="level3">
-<h3 class="anchored" data-anchor-id="core-readings">Core readings</h3>
+<hr>
+<section id="where-we-are" class="level2">
+<h2 class="anchored" data-anchor-id="where-we-are">Where we are</h2>
 <ul>
-<li>Ethan Mollick “Co-Intelligence: Living and Working with AI” <a href="https://www.penguinrandomhouse.com/books/741805/co-intelligence-by-ethan-mollick/">Penguin Random House 2024</a></li>
-<li>Anton Korinek “Generative AI for Economic Research: Use Cases and Implications for Economists,” <a href="https://doi.org/10.1257/jel.20231736">Journal of Economic Literature 61(4) December 2024 Update 1–74</a></li>
+<li><strong>Session 1 →</strong> match + manager-change panel.</li>
+<li><strong>Session 2 →</strong> expectation score per change.</li>
+<li><strong>Session 3 (today) →</strong> run a <strong>Difference-in-Differences</strong> (DiD) analysis, explore heterogeneity (including by expectations), and present your findings.</li>
 </ul>
+<hr>
 </section>
-<section id="important-reviews" class="level3">
-<h3 class="anchored" data-anchor-id="important-reviews">Important reviews</h3>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<p>By the end of this session your team will:</p>
 <ul>
-<li>Review of LLMs by <a href="https://simonwillison.net/2024/Dec/31/llms-in-2024/">Simon Willison</a></li>
-<li>Machines of Loving Grace <a href="https://darioamodei.com/machines-of-loving-grace">Dario Amodei</a></li>
+<li>Understand DiD as a tool for this exact question, and its main assumptions.</li>
+<li>Specify a DiD that treats manager-change teams as treated and never-changed (or not-yet-changed) teams as controls.</li>
+<li>Report a main effect with confidence intervals, a heterogeneity slice, and an expectations-vs-reality comparison.</li>
+<li>Deliver a clean 10–12 minute presentation.</li>
 </ul>
+<hr>
 </section>
-<section id="prompting-and-context-management" class="level3">
-<h3 class="anchored" data-anchor-id="prompting-and-context-management">Prompting and context management</h3>
+<section id="did-in-one-page-draft-use-ai-to-go-deeper" class="level2">
+<h2 class="anchored" data-anchor-id="did-in-one-page-draft-use-ai-to-go-deeper">DiD in one page (draft — use AI to go deeper)</h2>
+<p>This is a <strong>stub</strong>. Treat it as the minimum vocabulary to work with your AI helper. Use the intro block to plug gaps, then have your AI explain the rest <em>in context of your panel</em>.</p>
+<div class="week-card card">
+<div class="card-header">
+<p>📐 <strong>Key concepts</strong></p>
+</div>
+<div class="card-body">
 <ul>
-<li>AI Frontiers in Plain English: Prompt Engineering guide from Google with LM Notebook <a href="https://creators.spotify.com/pod/profile/steven-ge/episodes/Prompt-Engineering-guide-from-Google-Part-1--LLM-output-configurations-e31eqel">Part 1. LLM output configurations</a> + others</li>
+<li><strong>Treatment</strong> — the event whose effect you want to measure. Here: a manager change.</li>
+<li><strong>Treated unit</strong> — a team that experiences a manager change. <strong>Control unit</strong> — a team that does not (in the same window).</li>
+<li><strong>Pre / post</strong> — periods before vs after the change.</li>
+<li><strong>DiD estimator</strong> — the difference <em>between treated and control</em> in the <em>change</em> from pre to post. In plain words: how much more (or less) did the treated teams’ performance move than the control teams’?</li>
+<li><strong>Two-way fixed effects</strong> (team FE + time FE) — the standard panel regression that, under conditions, recovers the DiD.</li>
+<li><strong>Event-study spec</strong> — one coefficient per lead / lag around the event, to <em>see</em> the dynamics instead of a single number.</li>
+<li><strong>Staggered treatment</strong> — different teams get treated at different times. Modern issue: simple two-way FE can be biased here; look up Callaway-Sant’Anna, de Chaisemartin-D’Haultfoeuille, or Sun-Abraham.</li>
 </ul>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p>⚠️ <strong>Three key challenges</strong></p>
+</div>
+<div class="card-body">
+<ol type="1">
+<li><strong>Parallel trends.</strong> DiD assumes treated and control teams would have moved in parallel absent the change. Plot pre-treatment trends. If they diverge, you have a problem — address it or say so.</li>
+<li><strong>Selection / endogeneity.</strong> Managers are not sacked at random. Teams change managers <em>because</em> they are doing badly — you are likely picking up mean reversion, not manager skill. Think carefully about the control group, the window, and what your coefficient is really measuring.</li>
+<li><strong>Staggered timing.</strong> Teams change managers at different moments over 10 seasons. A naive two-way FE can give you a number that is not the average treatment effect you think it is. Acknowledge this, and use (or at least mention) a staggered-DiD estimator.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use AI to learn the details — ask for worked mini-examples in <em>your</em> setup: “I have a team-week panel with variable X, treatment at irregular times; walk me through a Callaway-Sant’Anna estimator in Python/R.” Then check the code, don’t just run it.</p>
+<p>A starter prompt for unpacking a DiD paper: <a href="../project03/assets/did-understand-prompt.txt"><code>did-understand-prompt.txt</code></a>.</p>
+</div>
+</div>
+<hr>
 </section>
-<section id="understanding-llms" class="level3">
-<h3 class="anchored" data-anchor-id="understanding-llms">Understanding LLMs</h3>
+<section id="work-tasks-2-hour-block" class="level2">
+<h2 class="anchored" data-anchor-id="work-tasks-2-hour-block">Work tasks (2-hour block)</h2>
+<div class="week-card card">
+<div class="card-header">
+<p>🔬 <strong>Analysis workflow</strong></p>
+</div>
+<div class="card-body">
+<ol type="1">
+<li><strong>Plan the spec</strong> in writing before any code:
 <ul>
-<li>Glossary of LLM terms <a href="https://www.vectara.com/glossary-of-llm-terms">Glossary of LLM Terms</a></li>
-<li><a href="https://ig.ft.com/generative-ai/">Financial Times: How AI Large Language Models Work</a></li>
-<li><a href="https://www.economist.com/science-and-technology/2024/07/11/researchers-are-figuring-out-how-large-language-models-work">The Economist: How Large Language Models Work</a></li>
-<li><a href="https://www.oneusefulthing.org/p/thinking-like-an-ai">Thinking like AI</a></li>
-<li>What’s an LLM context window and why is it getting larger? <a href="https://research.ibm.com/blog/larger-context-window">IBM research on context window</a></li>
-</ul>
+<li>Outcome (points per game? goal difference? rolling form?)</li>
+<li>Unit (team-week? team-match?)</li>
+<li>Treatment definition (new manager’s first match? the announcement date?)</li>
+<li>Window (how many matches pre/post?)</li>
+<li>Controls (team FE, season FE, opponent strength?)</li>
+</ul></li>
+<li><strong>Test on a subset</strong> (one league, two seasons) — get the plumbing right.</li>
+<li><strong>Plot parallel trends</strong> for treated vs control.</li>
+<li><strong>Estimate</strong> the main DiD coefficient with a proper standard error (cluster by team).</li>
+<li><strong>Event study</strong> — leads and lags around the change.</li>
+<li><strong>Heterogeneity</strong> — interact treatment with manager experience, team budget, league, and <strong>your Session 2 expectation score</strong>.</li>
+<li><strong>Robustness</strong> — different outcome, window, control group; staggered-DiD estimator if feasible.</li>
+<li><strong>Draft the slides</strong> while the code runs — don’t leave slides for the last 15 minutes.</li>
+</ol>
+</div>
+</div>
+<hr>
 </section>
-<section id="ai-and-business-management" class="level3">
-<h3 class="anchored" data-anchor-id="ai-and-business-management">AI and business / management</h3>
+<section id="presentation-last-hour-of-class" class="level2">
+<h2 class="anchored" data-anchor-id="presentation-last-hour-of-class">Presentation (last hour of class)</h2>
+<div class="week-card card">
+<div class="card-header">
+<p>🎤 <strong>10–12 minutes + Q&amp;A per team</strong></p>
+</div>
+<div class="card-body">
+<p>Refer back to the presentation principles we discussed in <a href="../week07/index.html">Week 07 review</a> and the Week 06 “report vs vibe report” contrast: <strong>less is more</strong>, show only what you understand deeply, precise interpretation beats fancy graphs.</p>
+<p><strong>Slide outline</strong></p>
+<ol type="1">
+<li><strong>Question &amp; context</strong> — league, time span, why it matters.</li>
+<li><strong>Data &amp; sample</strong> — number of matches, number of manager changes, known gaps.</li>
+<li><strong>Identification</strong> — DiD; what is treatment, what is control; parallel-trends plot.</li>
+<li><strong>Main result</strong> — coefficient + 95% CI + plain-English interpretation.</li>
+<li><strong>Heterogeneity</strong> — by manager / team / league; one clear chart.</li>
+<li><strong>Expectations vs reality</strong> — do positive-news changes deliver bigger gains?</li>
+<li><strong>Limitations</strong> — selection, staggered timing, data gaps. Be honest.</li>
+</ol>
+<p><strong>Format options:</strong> Quarto HTML slides, Google Slides, or a short dashboard. Whichever you pick, the repo must reproduce the numbers on the slides.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="delivery-session-3-end-of-the-project" class="level2">
+<h2 class="anchored" data-anchor-id="delivery-session-3-end-of-the-project">Delivery (Session 3 — end of the project)</h2>
+<div class="week-card card">
+<div class="card-header">
+<p>📦 <strong>Final submission</strong></p>
+</div>
+<div class="card-body">
 <ul>
-<li>Strategy in business <a href="https://hbr.org/2023/07/build-a-winning-ai-strategy-for-your-business">Build a winning AI strategy, HBR 2023</a></li>
-<li>Interview with Rafella Sadun on <a href="https://sloanreview.mit.edu/audio/reskilling-the-workforce-with-ai-harvard-business-schools-raffaella-sadun/">Reskilling workforce with AI</a> from MIT Sloan Review</li>
-</ul>
-</section>
-</section>
-<section id="social-impact" class="level2">
-<h2 class="anchored" data-anchor-id="social-impact">Social impact</h2>
+<li><strong>Who:</strong> by <strong>group</strong> — the same team you started with in Session 1. Finish what you started together in the session.</li>
+<li><strong>Deadline:</strong> <strong>Sunday 23:55</strong> (the Sunday after this session).</li>
+<li><strong>What:</strong>
 <ul>
-<li>Anthropic’s philosopher video <a href="https://www.youtube.com/watch?v=I9aGC6Ui3eE">Amanda Askell</a></li>
-<li>Amazing compilation of videos by leading AI Lab founders and leaders on the future of AI by <a href="https://www.nature.com/immersive/d41586-025-03701-5/index.html">Nature</a>, published on 14 November 2025. <a href="https://www.youtube.com/shorts/yM1VFSSw--k">Mustafa Suleyman on fears</a> is one of my favourite short vids here.<br>
-</li>
-<li>Deepmind with Hannah Fry – <a href="https://www.youtube.com/watch?v=PqVbypvxDto">The future of intelligence with Demis Hassabis (DeepMind)</a> and more in the series</li>
+<li>GitHub repo with: data (or fetcher), Session 1 tests, Session 2 article + expectations tables, Session 3 analysis code.</li>
+<li><code>README.md</code> describing how to reproduce all numbers end to end.</li>
+<li>Slides (as used in class, possibly polished).</li>
+<li><code>DATA.md</code> and a short <code>METHODS.md</code> explaining the DiD spec, parallel-trends check, and the robustness you ran.</li>
+<li><strong>Individual reflection (1–2 pages per person)</strong>: hardest part and how you solved it, what you would do differently, how labour was split.</li>
+</ul></li>
 </ul>
+</div>
+</div>
+<hr>
 </section>
-<section id="new-methods-and-tools" class="level2">
-<h2 class="anchored" data-anchor-id="new-methods-and-tools">New methods and tools</h2>
-<ul>
-<li>Best video series on introduction to neural networks and LLMs. [3blue1brown youtube playlist] (https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) 7 times 20-30mins videos, from zero to conversational understanding</li>
-<li>Very usefil video on <a href="https://www.youtube.com/watch?v=MMpaPV3KMFI">skills</a> and Claude’s skill creator.</li>
-<li>Agents – <a href="https://cloudonair.withgoogle.com/events/gemini-at-work-deep-dives">Google’s seminar on agents at work</a> – requires registration</li>
-</ul>
-</section>
-<section id="claude-code-and-clis" class="level2">
-<h2 class="anchored" data-anchor-id="claude-code-and-clis">Claude Code and CLIs</h2>
-<section id="intro-videos-and-use" class="level3">
-<h3 class="anchored" data-anchor-id="intro-videos-and-use">Intro videos and use</h3>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=6eBSHbLKuN0">Getting started with Claude Code 2.0</a> – great 30 mins intro by Anthropic’s dev</li>
-<li><a href="https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/">Sankalp on Claude Code – list</a> – great collection of links and ideas</li>
-</ul>
-</section>
-</section>
-<section id="additional-content" class="level2">
-<h2 class="anchored" data-anchor-id="additional-content">Additional content</h2>
-<section id="consequence-of-ai" class="level3">
-<h3 class="anchored" data-anchor-id="consequence-of-ai">Consequence of AI</h3>
-<p>How NLP was killed by Transformers/ LLMs in <a href="https://www.quantamagazine.org/when-chatgpt-broke-an-entire-field-an-oral-history-20250430/?">Quant magazine 2025 April</a></p>
-</section>
-<section id="blogs-newsletters" class="level3">
-<h3 class="anchored" data-anchor-id="blogs-newsletters">Blogs, newsletters</h3>
-<ul>
-<li>Blog post by Posit <a href="https://posit.co/blog/mall-ai-powered-text-analysis/">Text Summarization, Translation, and Classification using LLMs: mall does it all</a></li>
-<li>Simon Willis blog post <a href="https://simonwillison.net/2025/Mar/11/using-llms-for-code/">LLM and coding</a></li>
-<li>Ethan Mollick substack: <a href="https://www.oneusefulthing.org/">One useful thing</a></li>
-<li><a href="https://alphasignal.ai/">Alpha Signal</a> newsletter</li>
-<li>How <a href="https://x.com/karpathy/status/1915581920022585597">Andrej Karpathy</a> is adopting AI assisted coding.</li>
-<li>Blog by Anthropic <a href="https://www.anthropic.com/claude-explains">Claude explains</a> – cool collection on ideas for coding with Claude</li>
-</ul>
-</section>
-<section id="video-resources-on-ai" class="level3">
-<h3 class="anchored" data-anchor-id="video-resources-on-ai">Video Resources on AI</h3>
-<ul>
-<li>Andrej Karpathy <a href="https://www.youtube.com/watch?v=zjkBMFhNj_g">Introduction to Large Language Models</a> – 1hs overview, a great start</li>
-<li>Andrej Karpathy <a href="https://www.youtube.com/watch?v=7xTGNNLPyMI">Deep Dive into LLMs like ChatGPT</a> – 3hs comprehensive updated version of the Intro video</li>
-<li>Andrej Karpathy: <a href="https://www.youtube.com/watch?v=kCc8FmEb1nY">“Let’s build GPT: from scratch, in code, spelled out”</a></li>
-<li>Interview with a great <a href="https://youtu.be/z_svj3NP968?si=cWUoVAImTF4PZ_aw">Sendhil Mullainathan on direction AI</a></li>
-</ul>
-</section>
-</section>
-<section id="deeper-stuff-on-ai" class="level2">
-<h2 class="anchored" data-anchor-id="deeper-stuff-on-ai">Deeper stuff on AI</h2>
-<ul>
-<li>Artificial intelligence learns to reason in <a href="https://www.science.org/doi/10.1126/science.adw5211">Science</a></li>
-</ul>
+<section id="evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation">Evaluation</h2>
+<p>You will be evaluated on:</p>
+<ol type="1">
+<li><strong>Data quality</strong> — required elements collected, documented, tested.</li>
+<li><strong>News classification</strong> — coverage of changes, validated classification, reproducible prompt.</li>
+<li><strong>Causal identification</strong> — appropriate method, assumptions stated and checked where possible.</li>
+<li><strong>Heterogeneity &amp; expectations</strong> — meaningful comparisons, expectations-vs-reality done rigorously.</li>
+<li><strong>Reproducibility</strong> — somebody else can <code>git clone</code> and rerun.</li>
+<li><strong>Presentation</strong> — clarity for a peer audience, honest about limits.</li>
+</ol>
 
 
 <!-- -->
@@ -1073,103 +1120,177 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Beyond: suggested readings and resources to learn more"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">Date:</span><span class="co"> "2025-06-02"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Capstone Project — Session 3: Difference-in-Differences &amp; Final Presentation"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Causal design on your panel, heterogeneity by expectations, final presentation"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-05-04"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>::: {.hero-section}</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>::: {.container}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>::::::: {.hero-section}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>:::::: {.container}</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>::: {.hero-title}</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Learning more</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Capstone Project — Session 3</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Beyond: Suggested readings and resources to learn more</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>DiD analysis, heterogeneity, and final presentation</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>::::::</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>:::::::</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Gábor's collection of recommended readings, listening. Wide variety from practical to business and nerdy stuff. </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Basics</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### Core readings</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Where we are</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Session 1 →** match + manager-change panel.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Session 2 →** expectation score per change.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Session 3 (today) →** run a **Difference-in-Differences** (DiD) analysis, explore heterogeneity (including by expectations), and present your findings.</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">-  </span>Ethan Mollick "Co-Intelligence: Living and Working with AI"  <span class="co">[</span><span class="ot">Penguin Random House 2024</span><span class="co">](https://www.penguinrandomhouse.com/books/741805/co-intelligence-by-ethan-mollick/)</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Anton Korinek "Generative AI for Economic Research: Use Cases and Implications for Economists," <span class="co">[</span><span class="ot">Journal of Economic Literature 61(4) December 2024 Update 1–74</span><span class="co">](https://doi.org/10.1257/jel.20231736)</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">### Important reviews</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Review of LLMs by <span class="co">[</span><span class="ot">Simon Willison</span><span class="co">](https://simonwillison.net/2024/Dec/31/llms-in-2024/)</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Machines of Loving Grace <span class="co">[</span><span class="ot">Dario Amodei</span><span class="co">](https://darioamodei.com/machines-of-loving-grace)</span> </span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">### Prompting and context management</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>AI Frontiers in Plain English: Prompt Engineering guide from Google with LM Notebook <span class="co">[</span><span class="ot">Part 1. LLM output configurations</span><span class="co">](https://creators.spotify.com/pod/profile/steven-ge/episodes/Prompt-Engineering-guide-from-Google-Part-1--LLM-output-configurations-e31eqel)</span> + others</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning objectives</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>By the end of this session your team will:</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understand DiD as a tool for this exact question, and its main assumptions.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Specify a DiD that treats manager-change teams as treated and never-changed (or not-yet-changed) teams as controls.</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Report a main effect with confidence intervals, a heterogeneity slice, and an expectations-vs-reality comparison.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Deliver a clean 10–12 minute presentation.</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">### Understanding LLMs</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## DiD in one page (draft — use AI to go deeper)</span></span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Glossary of LLM terms <span class="co">[</span><span class="ot">Glossary of LLM Terms</span><span class="co">](https://www.vectara.com/glossary-of-llm-terms)</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Financial Times: How AI Large Language Models Work</span><span class="co">](https://ig.ft.com/generative-ai/)</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">The Economist: How Large Language Models Work</span><span class="co">](https://www.economist.com/science-and-technology/2024/07/11/researchers-are-figuring-out-how-large-language-models-work)</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Thinking like AI</span><span class="co">](https://www.oneusefulthing.org/p/thinking-like-an-ai)</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What's an LLM context window and why is it getting larger? <span class="co">[</span><span class="ot">IBM research on context window</span><span class="co">](https://research.ibm.com/blog/larger-context-window)</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>This is a **stub**. Treat it as the minimum vocabulary to work with your AI helper. Use the intro block to plug gaps, then have your AI explain the rest *in context of your panel*.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>📐 **Key concepts**</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">### AI and business / management</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Strategy in business <span class="co">[</span><span class="ot">Build a winning AI strategy, HBR 2023</span><span class="co">](https://hbr.org/2023/07/build-a-winning-ai-strategy-for-your-business)</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">-  </span>Interview with Rafella Sadun on <span class="co">[</span><span class="ot">Reskilling workforce with AI</span><span class="co">](https://sloanreview.mit.edu/audio/reskilling-the-workforce-with-ai-harvard-business-schools-raffaella-sadun/)</span> from MIT Sloan Review</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## Social impact</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Anthropic's philosopher video <span class="co">[</span><span class="ot">Amanda Askell</span><span class="co">](https://www.youtube.com/watch?v=I9aGC6Ui3eE)</span> </span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Amazing compilation of videos by leading AI Lab founders and leaders on the future of AI by <span class="co">[</span><span class="ot">Nature</span><span class="co">](https://www.nature.com/immersive/d41586-025-03701-5/index.html)</span>, published on 14 November 2025. <span class="co">[</span><span class="ot">Mustafa Suleyman on fears</span><span class="co">](https://www.youtube.com/shorts/yM1VFSSw--k)</span> is one of my favourite short vids here.  </span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Deepmind with Hannah Fry -- <span class="co">[</span><span class="ot">The future of intelligence with Demis Hassabis (DeepMind)</span><span class="co">](https://www.youtube.com/watch?v=PqVbypvxDto)</span> and more in the series</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## New methods and tools</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Treatment** — the event whose effect you want to measure. Here: a manager change.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Treated unit** — a team that experiences a manager change. **Control unit** — a team that does not (in the same window).</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Pre / post** — periods before vs after the change.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**DiD estimator** — the difference *between treated and control* in the *change* from pre to post. In plain words: how much more (or less) did the treated teams' performance move than the control teams'?</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Two-way fixed effects** (team FE + time FE) — the standard panel regression that, under conditions, recovers the DiD.</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Event-study spec** — one coefficient per lead / lag around the event, to *see* the dynamics instead of a single number.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Staggered treatment** — different teams get treated at different times. Modern issue: simple two-way FE can be biased here; look up Callaway-Sant'Anna, de Chaisemartin-D'Haultfoeuille, or Sun-Abraham.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>:::::</span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Best video series on introduction to neural networks and LLMs. <span class="co">[</span><span class="ot">3blue1brown youtube playlist</span><span class="co">]</span> (https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) 7 times 20-30mins videos, from zero to conversational understanding</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Very usefil video on <span class="co">[</span><span class="ot">skills</span><span class="co">](https://www.youtube.com/watch?v=MMpaPV3KMFI)</span> and Claude's skill creator. </span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Agents -- <span class="co">[</span><span class="ot">Google's seminar on agents at work</span><span class="co">](https://cloudonair.withgoogle.com/events/gemini-at-work-deep-dives )</span> -- requires registration</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="fu">## Claude Code and CLIs</span></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="fu">### Intro videos and use</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Getting started with Claude Code 2.0</span><span class="co">](https://www.youtube.com/watch?v=6eBSHbLKuN0)</span> -- great 30 mins intro by Anthropic's dev</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Sankalp on Claude Code -- list</span><span class="co">](https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/)</span> -- great collection of links and ideas</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>⚠️ **Three key challenges**</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Parallel trends.** DiD assumes treated and control teams would have moved in parallel absent the change. Plot pre-treatment trends. If they diverge, you have a problem — address it or say so.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Selection / endogeneity.** Managers are not sacked at random. Teams change managers *because* they are doing badly — you are likely picking up mean reversion, not manager skill. Think carefully about the control group, the window, and what your coefficient is really measuring.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Staggered timing.** Teams change managers at different moments over 10 seasons. A naive two-way FE can give you a number that is not the average treatment effect you think it is. Acknowledge this, and use (or at least mention) a staggered-DiD estimator.</span>
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="fu">## Additional content</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="fu">### Consequence of AI</span></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>How NLP was killed by Transformers/ LLMs in <span class="co">[</span><span class="ot">Quant magazine 2025 April</span><span class="co">](https://www.quantamagazine.org/when-chatgpt-broke-an-entire-field-an-oral-history-20250430/?)</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>Use AI to learn the details — ask for worked mini-examples in *your* setup: "I have a team-week panel with variable X, treatment at irregular times; walk me through a Callaway-Sant'Anna estimator in Python/R." Then check the code, don't just run it.</span>
 <span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="fu">### Blogs, newsletters</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>A starter prompt for unpacking a DiD paper: <span class="co">[</span><span class="ot">`did-understand-prompt.txt`</span><span class="co">](/project03/assets/did-understand-prompt.txt)</span>.</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Blog post by Posit <span class="co">[</span><span class="ot">Text Summarization, Translation, and Classification using LLMs: mall does it all</span><span class="co">](https://posit.co/blog/mall-ai-powered-text-analysis/)</span></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Simon Willis blog post <span class="co">[</span><span class="ot">LLM and coding</span><span class="co">](https://simonwillison.net/2025/Mar/11/using-llms-for-code/)</span></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Ethan Mollick substack: <span class="co">[</span><span class="ot">One useful thing</span><span class="co">](https://www.oneusefulthing.org/)</span></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Alpha Signal</span><span class="co">](https://alphasignal.ai/)</span>  newsletter</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>How <span class="co">[</span><span class="ot">Andrej Karpathy</span><span class="co">](https://x.com/karpathy/status/1915581920022585597)</span> is adopting AI assisted coding.</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Blog by Anthropic <span class="co">[</span><span class="ot">Claude explains</span><span class="co">](https://www.anthropic.com/claude-explains)</span> -- cool collection on ideas for coding with Claude</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="fu">### Video Resources on AI</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Work tasks (2-hour block)</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>🔬 **Analysis workflow**</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Andrej Karpathy <span class="co">[</span><span class="ot">Introduction to Large Language Models</span><span class="co">](https://www.youtube.com/watch?v=zjkBMFhNj_g)</span> -- 1hs overview, a great start</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Andrej Karpathy <span class="co">[</span><span class="ot">Deep Dive into LLMs like ChatGPT</span><span class="co">](https://www.youtube.com/watch?v=7xTGNNLPyMI)</span> -- 3hs comprehensive updated version of the Intro video</span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Andrej Karpathy: <span class="co">[</span><span class="ot">"Let's build GPT: from scratch, in code, spelled out"</span><span class="co">](https://www.youtube.com/watch?v=kCc8FmEb1nY)</span></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interview with a great <span class="co">[</span><span class="ot">Sendhil Mullainathan on direction AI</span><span class="co">](https://youtu.be/z_svj3NP968?si=cWUoVAImTF4PZ_aw)</span></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## Deeper stuff on AI</span></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Artificial intelligence learns to reason in <span class="co">[</span><span class="ot">Science</span><span class="co">](https://www.science.org/doi/10.1126/science.adw5211)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Plan the spec** in writing before any code:</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Outcome (points per game? goal difference? rolling form?)</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Unit (team-week? team-match?)</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Treatment definition (new manager's first match? the announcement date?)</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Window (how many matches pre/post?)</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Controls (team FE, season FE, opponent strength?)</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Test on a subset** (one league, two seasons) — get the plumbing right.</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Plot parallel trends** for treated vs control.</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Estimate** the main DiD coefficient with a proper standard error (cluster by team).</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Event study** — leads and lags around the change.</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Heterogeneity** — interact treatment with manager experience, team budget, league, and **your Session 2 expectation score**.</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**Robustness** — different outcome, window, control group; staggered-DiD estimator if feasible.</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>**Draft the slides** while the code runs — don't leave slides for the last 15 minutes.</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="fu">## Presentation (last hour of class)</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>🎤 **10–12 minutes + Q&amp;A per team**</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>Refer back to the presentation principles we discussed in <span class="co">[</span><span class="ot">Week 07 review</span><span class="co">](../week07/index.qmd)</span> and the Week 06 "report vs vibe report" contrast: **less is more**, show only what you understand deeply, precise interpretation beats fancy graphs.</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>**Slide outline**</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Question &amp; context** — league, time span, why it matters.</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Data &amp; sample** — number of matches, number of manager changes, known gaps.</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Identification** — DiD; what is treatment, what is control; parallel-trends plot.</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Main result** — coefficient + 95% CI + plain-English interpretation.</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Heterogeneity** — by manager / team / league; one clear chart.</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Expectations vs reality** — do positive-news changes deliver bigger gains?</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**Limitations** — selection, staggered timing, data gaps. Be honest.</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>**Format options:** Quarto HTML slides, Google Slides, or a short dashboard. Whichever you pick, the repo must reproduce the numbers on the slides.</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="fu">## Delivery (Session 3 — end of the project)</span></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>📦 **Final submission**</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Who:** by **group** — the same team you started with in Session 1. Finish what you started together in the session.</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Deadline:** **Sunday 23:55** (the Sunday after this session).</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**What:**</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>GitHub repo with: data (or fetcher), Session 1 tests, Session 2 article + expectations tables, Session 3 analysis code.</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`README.md`</span> describing how to reproduce all numbers end to end.</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Slides (as used in class, possibly polished).</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`DATA.md`</span> and a short <span class="in">`METHODS.md`</span> explaining the DiD spec, parallel-trends check, and the robustness you ran.</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Individual reflection (1–2 pages per person)**: hardest part and how you solved it, what you would do differently, how labour was split.</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evaluation</span></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>You will be evaluated on:</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Data quality** — required elements collected, documented, tested.</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**News classification** — coverage of changes, validated classification, reproducible prompt.</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Causal identification** — appropriate method, assumptions stated and checked where possible.</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Heterogeneity &amp; expectations** — meaningful comparisons, expectations-vs-reality done rigorously.</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Reproducibility** — somebody else can <span class="in">`git clone`</span> and rerun.</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Presentation** — clarity for a peer audience, honest about limits.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
