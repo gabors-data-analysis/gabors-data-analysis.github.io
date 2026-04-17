@@ -413,6 +413,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/llm-api-python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LLM APIs in Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../da-knowledge/api-advanced.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">APIs — Under the hood</span></a>
   </div>
@@ -552,6 +558,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>Getting <a href="walkthrough-wb-fred.html">GDP data</a> from World Bank and FRED</li>
 <li>More advanced <a href="walkthrough-fbref.html">Football data</a> (python, R)</li>
+<li>Practical <a href="llm-api-python.html">LLM API calls from Python</a></li>
 </ol>
 </section>
 <section id="whats-different-in-r" class="level2">
@@ -1082,26 +1089,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Getting <span class="co">[</span><span class="ot">GDP data</span><span class="co">](walkthrough-wb-fred.html)</span> from World Bank and FRED</span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>More advanced <span class="co">[</span><span class="ot">Football data</span><span class="co">](walkthrough-fbref.html)</span> (python, R)</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">## What's different in R</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>**Client libraries in other languages:** While our focus is on Python, other programming languages provide similar conveniences. </span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>In R, packages like **`httr`** (for making HTTP requests) and **`jsonlite`** (for parsing JSON) are commonly used to work with web APIs. Many APIs also have R packages or wrappers that function like client libraries, letting you call the API in one or two lines of R code. </span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>The core idea is the same: a client library abstracts the RESTful requests into native language functions. Regardless of language, using a client library means you can integrate an API into your data analysis or application with less hassle, letting you focus on interpreting results rather than the mechanics of HTTP.</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scaling Up with APIs: From 20 to 10,000 and Beyond</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>The introduction of APIs into your workflow transforms what you can accomplish:</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Tasks that were **infeasible by hand** become trivial to automate. You could get results in minutes or hours rather than weeks.</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>You can harness **powerful algorithms** provided by industry leaders. For example, instead of developing your machine learning model, you can use Google’s vision API to tag images or OpenAI’s language API to summarize text. This means you can tackle complex problems without needing to be an expert in those specific subfields.</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>You can work with **real-time** and **large-scale data**. Want to analyze football statistics or financial market data? There are APIs to fetch those streams of information. With APIs, you are not limited to data you can collect manually; you can pull in data from all over the world programmatically.</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>APIs are a bridge to practically unlimited data and capabilities. They let your programs communicate with other services to get things done efficiently. As we continue this course, you’ll get hands-on experience using APIs – turning the concepts you learned here into actual data analysis tasks. Embrace this new tool in your skillset. **Whenever you find yourself needing to scale up or access a specialized service, think: *Is there an API for that?*** Chances are, the answer will be yes, and now you’ll know how to use it!</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">More advanced and supplementary information.</span><span class="co">](api-advanced.html)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Practical <span class="co">[</span><span class="ot">LLM API calls from Python</span><span class="co">](llm-api-python.html)</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="fu">## What's different in R</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>**Client libraries in other languages:** While our focus is on Python, other programming languages provide similar conveniences. </span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>In R, packages like **`httr`** (for making HTTP requests) and **`jsonlite`** (for parsing JSON) are commonly used to work with web APIs. Many APIs also have R packages or wrappers that function like client libraries, letting you call the API in one or two lines of R code. </span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>The core idea is the same: a client library abstracts the RESTful requests into native language functions. Regardless of language, using a client library means you can integrate an API into your data analysis or application with less hassle, letting you focus on interpreting results rather than the mechanics of HTTP.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scaling Up with APIs: From 20 to 10,000 and Beyond</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>The introduction of APIs into your workflow transforms what you can accomplish:</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Tasks that were **infeasible by hand** become trivial to automate. You could get results in minutes or hours rather than weeks.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>You can harness **powerful algorithms** provided by industry leaders. For example, instead of developing your machine learning model, you can use Google’s vision API to tag images or OpenAI’s language API to summarize text. This means you can tackle complex problems without needing to be an expert in those specific subfields.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>You can work with **real-time** and **large-scale data**. Want to analyze football statistics or financial market data? There are APIs to fetch those streams of information. With APIs, you are not limited to data you can collect manually; you can pull in data from all over the world programmatically.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>APIs are a bridge to practically unlimited data and capabilities. They let your programs communicate with other services to get things done efficiently. As we continue this course, you’ll get hands-on experience using APIs – turning the concepts you learned here into actual data analysis tasks. Embrace this new tool in your skillset. **Whenever you find yourself needing to scale up or access a specialized service, think: *Is there an API for that?*** Chances are, the answer will be yes, and now you’ll know how to use it!</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">More advanced and supplementary information.</span><span class="co">](api-advanced.html)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
