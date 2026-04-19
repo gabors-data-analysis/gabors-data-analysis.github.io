@@ -3000,6 +3000,30 @@
     ]
   },
   {
+    "objectID": "project02/index.html#todays-task-purpose-and-expected-output",
+    "href": "project02/index.html#todays-task-purpose-and-expected-output",
+    "title": "Capstone Project — Session 2: From Text to Expectations",
+    "section": "Today’s task — purpose and expected output",
+    "text": "Today’s task — purpose and expected output\n\n\n🎯 Purpose\n\n\nFor every manager change in your panel, produce a numeric expectation score that answers one question:\n\nIn the period before the change was announced, how strongly did the press suggest that a change was coming?\n\nYou are not trying to judge whether the new manager is good, nor whether fans are happy. You are measuring how much of a surprise the change was at the moment it happened.\n\n\n\n\n📤 Expected output\n\n\nBuild the output in two steps.\nStep 1 — article-level list. One row per article:\n\n\n\ncolumn\nwhat it is\n\n\n\n\nnews_uid\nunique id for the article\n\n\nteam\nteam the article is about\n\n\ndate\narticle publication date\n\n\nscore\nLLM-produced expectation score\n\n\n\nKeep source, url, title, reason, is_relevant alongside for traceability, but the four columns above are the backbone.\nStep 2 — team–gameweek panel. Aggregate Step 1 to one row per (team, gameweek) with two key variables:\n\navg_score — average expectation score across articles in the window,\nn_articles — how many articles fed that average.\n\nThis is the object you merge onto your match + manager-change panel in Session 3. We will use lagged values of this score.\nPlus: prompt_classifier.md and a short validation note (hand-labelled n, agreement rate).\n\n\n\n\n\n\nNote\n\n\n\nWhat counts as a “gameweek”? Default to a calendar week, because that is how football coverage is paced. But the unit of time is a choice — it can be shorter (a few days, if you want to see the signal tighten as the change approaches) or longer (a fortnight or month, if article volume is thin). Pick one, document it, and keep it consistent across teams.",
+    "crumbs": [
+      "Home",
+      "Capstone Project",
+      "Session 2: Text to Expectations"
+    ]
+  },
+  {
+    "objectID": "project02/index.html#why-expectations-matter-in-causal-analysis",
+    "href": "project02/index.html#why-expectations-matter-in-causal-analysis",
+    "title": "Capstone Project — Session 2: From Text to Expectations",
+    "section": "Why expectations matter in causal analysis",
+    "text": "Why expectations matter in causal analysis\n\n\n🧭 Expectations and diff-in-diffs\n\n\nDiff-in-diffs compares the pre/post change in outcomes for treated units (teams that changed manager) against a control group, and reads the difference-of-differences as the causal effect. This rests on parallel trends: absent treatment, the two groups would have moved in parallel.\nExpectations break that story in two ways:\n\nAnticipation. If a manager change is widely expected, players, board, opponents and media react before the official announcement. Effort, tactics, transfer talk, press pressure — all shift. The “pre” period is already contaminated, so the estimated effect is biased toward zero (or flipped, if anticipation pushes outcomes the “wrong” way first).\nHeterogeneity. A shock firing after one bad weekend and a long-telegraphed “he’s gone at the end of the month” hire are not the same treatment. Pooling them hides structure: the effect of a new manager plausibly depends on how surprising the change was.\n\nThat is why we build an expectation score per change:\n\nAs a diagnostic — do pre-trends look different for “expected” vs “surprise” changes? If yes, the parallel-trends assumption is doing more work than it should.\nAs a moderator — split or interact the DiD by expectation. This is the main use in Session 3: does the new-manager bounce exist only for surprise hires, only for expected ones, or roughly the same for both?\n\nYou are not trying to remove expectations from the data. You are trying to measure them so the DiD can say something honest about when and for whom a manager change matters.",
+    "crumbs": [
+      "Home",
+      "Capstone Project",
+      "Session 2: Text to Expectations"
+    ]
+  },
+  {
     "objectID": "project02/index.html#learning-objectives",
     "href": "project02/index.html#learning-objectives",
     "title": "Capstone Project — Session 2: From Text to Expectations",
