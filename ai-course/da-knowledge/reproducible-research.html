@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-04-20">
+<meta name="dcterms.date" content="2026-04-21">
 
-<title>Reproducible Research Pipelines – Doing Data Analysis with AI</title>
+<title>Reproducible Research – Doing Data Analysis with AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -154,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/reproducible-research.html">Reproducible Research Pipelines</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/reproducible-research.html">Reproducible Research</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -349,7 +349,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../da-knowledge/reproducible-research.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Reproducible Research Pipelines</span></a>
+ <span class="menu-text">Reproducible Research</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -380,6 +380,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Joining Data Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/nlp-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NLP Basics — Text as Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -483,31 +489,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-counts-as-reproducible" id="toc-what-counts-as-reproducible" class="nav-link active" data-scroll-target="#what-counts-as-reproducible">What counts as reproducible</a></li>
-  <li><a href="#separate-raw-data-generated-data-and-outputs" id="toc-separate-raw-data-generated-data-and-outputs" class="nav-link" data-scroll-target="#separate-raw-data-generated-data-and-outputs">Separate raw data, generated data, and outputs</a></li>
-  <li><a href="#put-stable-steps-in-scripts" id="toc-put-stable-steps-in-scripts" class="nav-link" data-scroll-target="#put-stable-steps-in-scripts">Put stable steps in scripts</a></li>
-  <li><a href="#have-one-command-that-runs-the-pipeline" id="toc-have-one-command-that-runs-the-pipeline" class="nav-link" data-scroll-target="#have-one-command-that-runs-the-pipeline">Have one command that runs the pipeline</a></li>
-  <li><a href="#make-the-environment-reproducible" id="toc-make-the-environment-reproducible" class="nav-link" data-scroll-target="#make-the-environment-reproducible">Make the environment reproducible</a></li>
-  <li><a href="#save-prompts-and-model-settings" id="toc-save-prompts-and-model-settings" class="nav-link" data-scroll-target="#save-prompts-and-model-settings">Save prompts and model settings</a></li>
-  <li><a href="#test-data-not-just-code" id="toc-test-data-not-just-code" class="nav-link" data-scroll-target="#test-data-not-just-code">Test data, not just code</a></li>
-  <li><a href="#document-as-you-go" id="toc-document-as-you-go" class="nav-link" data-scroll-target="#document-as-you-go">Document as you go</a></li>
-  <li><a href="#use-version-control" id="toc-use-version-control" class="nav-link" data-scroll-target="#use-version-control">Use version control</a></li>
-  <li><a href="#checklist" id="toc-checklist" class="nav-link" data-scroll-target="#checklist">Checklist</a></li>
-  <li><a href="#where-to-go-next" id="toc-where-to-go-next" class="nav-link" data-scroll-target="#where-to-go-next">Where to go next</a>
-  <ul class="collapse">
-  <li><a href="#course-pages" id="toc-course-pages" class="nav-link" data-scroll-target="#course-pages">Course pages</a></li>
-  <li><a href="#recommended-reading" id="toc-recommended-reading" class="nav-link" data-scroll-target="#recommended-reading">Recommended reading</a></li>
-  </ul></li>
+  <li><a href="#what-reproducibility-means-concretely" id="toc-what-reproducibility-means-concretely" class="nav-link active" data-scroll-target="#what-reproducibility-means-concretely">What reproducibility means, concretely</a></li>
+  <li><a href="#the-minimum-a-reproducible-project-has" id="toc-the-minimum-a-reproducible-project-has" class="nav-link" data-scroll-target="#the-minimum-a-reproducible-project-has">The minimum a reproducible project has</a></li>
+  <li><a href="#a-working-example-you-can-clone" id="toc-a-working-example-you-can-clone" class="nav-link" data-scroll-target="#a-working-example-you-can-clone">A working example you can clone</a></li>
+  <li><a href="#conventions-worth-copying" id="toc-conventions-worth-copying" class="nav-link" data-scroll-target="#conventions-worth-copying">Conventions worth copying</a></li>
+  <li><a href="#what-about-notebooks" id="toc-what-about-notebooks" class="nav-link" data-scroll-target="#what-about-notebooks">What about notebooks?</a></li>
+  <li><a href="#a-minimum-checklist-before-you-submit" id="toc-a-minimum-checklist-before-you-submit" class="nav-link" data-scroll-target="#a-minimum-checklist-before-you-submit">A minimum checklist before you submit</a></li>
+  <li><a href="#related-pages" id="toc-related-pages" class="nav-link" data-scroll-target="#related-pages">Related pages</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/reproducible-research.html">Reproducible Research Pipelines</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/reproducible-research.html">Reproducible Research</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Reproducible Research Pipelines</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Principles and practical habits for analytics projects</p>
+<div class="quarto-title-block"><div><h1 class="title">Reproducible Research</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">What a submission should look like — and a working example you can clone</p>
 </div>
 
 
@@ -518,7 +516,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 20, 2026</p>
+      <p class="date">April 21, 2026</p>
     </div>
   </div>
   
@@ -530,148 +528,114 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Reproducible research means that the important parts of your work can be rerun and checked — not just the final regression or figure, but the whole path from raw input to final output. The practical standard is: <strong>a collaborator should be able to understand what you did and regenerate the main results without guessing</strong>.</p>
-<p>This is not about perfection. Software changes, APIs change, websites change. The advice on this page draws on a well-established literature (see <a href="#where-to-go-next">recommended reading</a> at the end) and adapts it for team analytics projects that combine code, data, and AI.</p>
+<section id="what-reproducibility-means-concretely" class="level2">
+<h2 class="anchored" data-anchor-id="what-reproducibility-means-concretely">What reproducibility means, concretely</h2>
+<p>A project is <strong>reproducible</strong> when a stranger — someone with your repo and nothing else — can clone it, run one command, and get the same numbers, tables, and plots you got.</p>
+<p>That’s it. No emailing data, no reading your brain, no “I’ll send the cleaned CSV later.” One clone, one command, same outputs.</p>
+<p>This is the bar for every submission in this course.</p>
 <hr>
-<section id="what-counts-as-reproducible" class="level2">
-<h2 class="anchored" data-anchor-id="what-counts-as-reproducible">What counts as reproducible</h2>
-<p>A result is reproducible when the same analysis steps performed on the same data consistently produce the same answer. For the scope of this class’s capstone project it generally means:</p>
+</section>
+<section id="the-minimum-a-reproducible-project-has" class="level2">
+<h2 class="anchored" data-anchor-id="the-minimum-a-reproducible-project-has">The minimum a reproducible project has</h2>
+<p>Every well-organised project in this course shares the same few ingredients:</p>
+<ol type="1">
+<li><strong>A README</strong> that tells a reader (and future-you) what the project does, how to run it, and where outputs land.</li>
+<li><strong>Pinned dependencies</strong> — <code>requirements.txt</code>, <code>renv.lock</code>, or equivalent — so the same code runs the same in six months.</li>
+<li><strong>A one-command entry point</strong> — a <code>Makefile</code>, <code>run.sh</code>, or <code>main.py</code> — that chains fetch → clean → analyse → report.</li>
+<li><strong>A predictable folder structure</strong> — raw data, cleaned data, scripts, outputs all in named places.</li>
+<li><strong>An instructions file for AI agents</strong> — <code>CLAUDE.md</code> / <code>AGENTS.md</code> / <code>GEMINI.md</code> — that captures project conventions once so you don’t re-explain them every session.</li>
+<li><strong>Committed final artefacts</strong> — the PDF, the figure, the result table — so reviewers can see outputs without rerunning the pipeline.</li>
+</ol>
+<p>Behind these ingredients sit a few design habits — data immutability, scoping the work in vertical slices, writing three kinds of tests — that are laid out in <a href="../da-knowledge/designing-projects.html">Designing Larger Analytics Projects with AI</a>.</p>
+<hr>
+</section>
+<section id="a-working-example-you-can-clone" class="level2">
+<h2 class="anchored" data-anchor-id="a-working-example-you-can-clone">A working example you can clone</h2>
+<p>We maintain a minimum reproducible project in Python that you can read, clone, and use as a template:</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>repo:</strong> <a href="https://github.com/gbekes/repro-toy-example">github.com/gbekes/repro-toy-example</a></p>
+</div>
+</div>
+<p>The task it implements is intentionally tiny — aggregate the Austrian Hotels dataset to the city level and render a one-page PDF. <strong>The point is not the analysis. The point is the structure.</strong></p>
+<p><strong>What’s in it:</strong></p>
+<pre><code>repro-toy-example/
+├── README.md            ← how to read and run the repo
+├── requirements.txt     ← pinned Python deps
+├── Makefile             ← `make all` reproduces every output
+├── CLAUDE.md            ← project conventions for AI agents
+├── src/
+│   ├── fetch_data.py    ← download raw CSVs
+│   ├── build_table.py   ← merge + aggregate to city level
+│   └── make_report.py   ← render PDF with table + narrative
+├── data/
+│   ├── raw/             ← gitignored, regenerable
+│   └── clean/           ← gitignored, regenerable
+└── out/
+    ├── city_summary.csv ← committed final artefact
+    └── city_summary.pdf ← committed final artefact</code></pre>
+<p><strong>How it reproduces:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/gbekes/repro-toy-example</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> repro-toy-example</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> all</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Three scripts run in sequence, each printing what it’s doing and where it wrote output. The final PDF lands in <code>out/city_summary.pdf</code>.</p>
+<hr>
+</section>
+<section id="conventions-worth-copying" class="level2">
+<h2 class="anchored" data-anchor-id="conventions-worth-copying">Conventions worth copying</h2>
+<p>These are the conventions in the example — adopt them in your own capstone repo.</p>
+<p><strong>Data is immutable.</strong> Nothing in <code>data/raw/</code> or <code>data/clean/</code> is ever edited in place. If a transformation is needed, write a new file. This makes every step re-runnable and every output traceable to its inputs.</p>
+<p><strong>Regenerable data is gitignored.</strong> <code>data/raw/</code> and <code>data/clean/</code> are in <code>.gitignore</code>. The repo doesn’t carry what the pipeline can re-create. Only <code>out/</code> — the artefacts humans read — is committed.</p>
+<p><strong>One script, one job.</strong> <code>fetch</code>, <code>build</code>, <code>report</code> are separate files. Each runs independently if its inputs exist. Each one prints progress and where it wrote output, so silent failure is impossible.</p>
+<p><strong>One command reproduces everything.</strong> <code>make all</code> walks the whole pipeline from a cold clone. If that doesn’t work, the repo is broken.</p>
+<p><strong>The README is for strangers.</strong> Write it as if the reader has never spoken to you — because they haven’t. Purpose, data source, how to run, where outputs go. Two to three short sections is enough.</p>
+<p><strong><code>CLAUDE.md</code> captures the rules of this project.</strong> Preferences (Python over R, pandas over loops, outputs to <code>/out</code>) and good practices (data immutability, one-command entry, print progress). Short, because AI reads it every session — padding dilutes the rules that matter.</p>
+<hr>
+</section>
+<section id="what-about-notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="what-about-notebooks">What about notebooks?</h2>
+<p>Notebooks are fine for <strong>exploration</strong>. They are not the submission.</p>
+<p>For the capstone:</p>
 <ul>
-<li>there is a documented environment and a documented entry point</li>
-<li>generated files can be traced back to code</li>
-<li>the key decisions are written down</li>
-<li>unstable inputs (scraped pages, API responses, model outputs) are either snapshotted or clearly described</li>
+<li>If you use notebooks to explore, commit them in a separate <code>notebooks/</code> folder with a note in the README.</li>
+<li>The pipeline that produces your final numbers must live in <strong>plain <code>.py</code> scripts</strong> (or <code>.R</code> scripts) that a stranger can run with <code>make all</code>.</li>
+<li>Notebooks that make it into the pipeline must be <strong>executable top-to-bottom from a fresh kernel</strong> — no stale state, no hidden cells.</li>
 </ul>
-<p>If you scrape a website or classify texts through an LLM, save <strong>both</strong> the script that produced the data and a dated snapshot of the data actually used. If the outside world changes later, the project is still auditable.</p>
+<p>The reason is simple: notebooks are easy to run out of order. Reproducibility dies the moment “run cell 7 before cell 4” becomes part of your workflow.</p>
 <hr>
 </section>
-<section id="separate-raw-data-generated-data-and-outputs" class="level2">
-<h2 class="anchored" data-anchor-id="separate-raw-data-generated-data-and-outputs">Separate raw data, generated data, and outputs</h2>
-<p>The most important structural rule is to keep these apart:</p>
-<ul>
-<li><strong><code>data/raw/</code></strong> — original inputs, never edited by hand</li>
-<li><strong><code>data/processed/</code></strong> or <strong><code>data/derived/</code></strong> — cleaned or transformed tables</li>
-<li><strong><code>output/</code></strong> — figures, tables, and final results</li>
-<li><strong><code>scripts/</code></strong> — the code that moves data between these folders</li>
-<li><strong><code>prompts/</code></strong> — prompt templates, if AI is part of the workflow</li>
-</ul>
-<p>You do not need a deeply nested folder tree. The point is that anyone opening the repo can tell what is source, what is generated, and what is final.</p>
-<hr>
-</section>
-<section id="put-stable-steps-in-scripts" class="level2">
-<h2 class="anchored" data-anchor-id="put-stable-steps-in-scripts">Put stable steps in scripts</h2>
-<p>Notebooks are good for exploration and narrative. They are a bad home for pipeline logic that must be rerun reliably. A practical rule:</p>
-<ul>
-<li>if the step is exploratory → notebook</li>
-<li>if the step must be rerun → script</li>
-</ul>
-<p>Each script should do one clear job: read defined inputs, validate assumptions, write one main output, and fail loudly if something is wrong. Avoid hard-coded paths, and accept inputs and outputs as arguments so the script can be called from a single driver command.</p>
-<hr>
-</section>
-<section id="have-one-command-that-runs-the-pipeline" class="level2">
-<h2 class="anchored" data-anchor-id="have-one-command-that-runs-the-pipeline">Have one command that runs the pipeline</h2>
-<p>For every result, you should be able to track how it was produced. The simplest way is a single entry point — a Bash script, a Python driver, or a Makefile — that runs the steps in order. What matters is not the tool but the existence of a documented command a teammate can run.</p>
-<hr>
-</section>
-<section id="make-the-environment-reproducible" class="level2">
-<h2 class="anchored" data-anchor-id="make-the-environment-reproducible">Make the environment reproducible</h2>
-<p>A project is not reproducible if the code only runs on one laptop. At minimum, include a <code>requirements.txt</code> (or equivalent) and document the language version. If API keys are needed, commit a <code>.env.example</code> with the <strong>names</strong> of required variables — never the secrets themselves.</p>
-<hr>
-</section>
-<section id="save-prompts-and-model-settings" class="level2">
-<h2 class="anchored" data-anchor-id="save-prompts-and-model-settings">Save prompts and model settings</h2>
-<p>If AI is used for classification, extraction, or labeling, then the prompt is part of the research method. Save the prompt text, the model name, the date, and the response schema if you used one. If you only say “we used AI to classify the texts,” your pipeline is not documented well enough.</p>
-<hr>
-</section>
-<section id="test-data-not-just-code" class="level2">
-<h2 class="anchored" data-anchor-id="test-data-not-just-code">Test data, not just code</h2>
-<p>Many failures in research pipelines are quiet data mistakes: a join duplicates rows, a date column fails to parse, a filter silently drops half the sample. After every merge or transformation, check row counts, key uniqueness, and value ranges. This is often the fastest way to catch problems before they spread through the whole project.</p>
-<hr>
-</section>
-<section id="document-as-you-go" class="level2">
-<h2 class="anchored" data-anchor-id="document-as-you-go">Document as you go</h2>
-<ul>
-<li><strong><code>README.md</code></strong>: what the project is, how to run it, where outputs appear</li>
-<li><strong><code>DATA.md</code></strong>: what each table contains, unit of observation, keys, sources, known issues</li>
-<li><strong><code>METHODS.md</code></strong>: choices made in cleaning, variable construction, and modeling</li>
-</ul>
-<p>Keep them short and update them as the project evolves.</p>
-<hr>
-</section>
-<section id="use-version-control" class="level2">
-<h2 class="anchored" data-anchor-id="use-version-control">Use version control</h2>
-<p>Git helps you see what changed, when a result changed, and keeps prompt revisions alongside code revisions. Commit small, meaningful changes — “add schema checks for match data” is more useful than “updates.”</p>
-<hr>
-</section>
-<section id="checklist" class="level2">
-<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<section id="a-minimum-checklist-before-you-submit" class="level2">
+<h2 class="anchored" data-anchor-id="a-minimum-checklist-before-you-submit">A minimum checklist before you submit</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">There is one documented command for the main pipeline.</label></li>
-<li><label><input type="checkbox">Raw data and generated data are clearly separated.</label></li>
-<li><label><input type="checkbox">Important outputs come from scripts, not manual editing.</label></li>
-<li><label><input type="checkbox">Prompts and model settings are saved.</label></li>
-<li><label><input type="checkbox">Key joins and schema assumptions are checked.</label></li>
-<li><label><input type="checkbox">The final analysis dataset is saved as a file.</label></li>
-<li><label><input type="checkbox">Tables and figures can be traced back to generated outputs.</label></li>
-<li><label><input type="checkbox"><code>README.md</code>, <code>DATA.md</code>, and <code>METHODS.md</code> are current.</label></li>
-<li><label><input type="checkbox">Anything not fully reproducible is stated honestly.</label></li>
+<li><label><input type="checkbox"><code>README.md</code> explains purpose, data, how to run, where outputs land.</label></li>
+<li><label><input type="checkbox"><code>requirements.txt</code> (or equivalent) pins every dependency to a tested version.</label></li>
+<li><label><input type="checkbox">A single command — <code>make all</code>, <code>python main.py</code>, or <code>bash run.sh</code> — reproduces every output from a cold clone.</label></li>
+<li><label><input type="checkbox">Raw and intermediate data are gitignored; only final artefacts live in <code>out/</code> and are committed.</label></li>
+<li><label><input type="checkbox">Scripts print what they’re doing and where they write output.</label></li>
+<li><label><input type="checkbox"><code>CLAUDE.md</code> / <code>AGENTS.md</code> / <code>GEMINI.md</code> captures the project’s conventions.</label></li>
+<li><label><input type="checkbox">The repo has been cloned to a clean directory at least once, and <code>make all</code> produced the same outputs you committed.</label></li>
 </ul>
+<p>If you’ve done the last item, you’re genuinely reproducible. If you haven’t, you don’t yet know that you are.</p>
 <hr>
 </section>
-<section id="where-to-go-next" class="level2">
-<h2 class="anchored" data-anchor-id="where-to-go-next">Where to go next</h2>
-<section id="course-pages" class="level3">
-<h3 class="anchored" data-anchor-id="course-pages">Course pages</h3>
+<section id="related-pages" class="level2">
+<h2 class="anchored" data-anchor-id="related-pages">Related pages</h2>
 <ul>
-<li><a href="../da-knowledge/designing-projects.html">Designing Larger Analytics Projects with AI</a> — planning, <code>AGENTS.md</code>, and testing habits</li>
-<li><a href="../da-knowledge/documentation-readme.html">Documentation Fundamentals</a> — better <code>README.md</code> and <code>DATA.md</code></li>
-<li><a href="../da-knowledge/llm-api-python.html">Calling LLM APIs from Python</a> — structured AI-assisted workflows</li>
-<li><a href="../da-knowledge/terminal-basics.html">Terminal Basics</a> — if the shell still feels unfamiliar</li>
+<li><a href="../da-knowledge/designing-projects.html">Designing Larger Analytics Projects with AI</a> — mindsets, self-interview, <code>agents.md</code>, skills, and the three kinds of tests.</li>
+<li><a href="../da-knowledge/documentation-readme.html">Documentation Fundamentals</a> — what goes in a README.</li>
 </ul>
-</section>
-<section id="recommended-reading" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-reading">Recommended reading</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Source</th>
-<th>Why read it</th>
-<th>Link</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Sandve et al.&nbsp;(2013). “Ten Simple Rules for Reproducible Computational Research.”</td>
-<td>Short and concrete: track every result, avoid manual steps, version-control scripts, store raw data behind plots.</td>
-<td><a href="https://doi.org/10.1371/journal.pcbi.1003285">doi.org/10.1371/journal.pcbi.1003285</a></td>
-</tr>
-<tr class="even">
-<td>Wilson et al.&nbsp;(2017). “Good Enough Practices in Scientific Computing.”</td>
-<td>Data management, project layout, software habits, and version control for researchers who are not software engineers.</td>
-<td><a href="https://doi.org/10.1371/journal.pcbi.1005510">doi.org/10.1371/journal.pcbi.1005510</a></td>
-</tr>
-<tr class="odd">
-<td>The Turing Way (2019–).</td>
-<td>Community-maintained handbook on reproducible environments, testing, and collaboration.</td>
-<td><a href="https://book.the-turing-way.org/reproducible-research/reproducible-research">book.the-turing-way.org</a></td>
-</tr>
-<tr class="even">
-<td>Broman (2014). “Initial Steps Toward Reproducible Research.”</td>
-<td>Quick-start tutorial: organize files, script everything, automate, use version control.</td>
-<td><a href="https://kbroman.org/steps2rr/">kbroman.org/steps2rr</a></td>
-</tr>
-<tr class="odd">
-<td>Gentzkow &amp; Shapiro (2014). “Code and Data for the Social Sciences.”</td>
-<td>Automation, directory structure, and readable code — written by economists for social-science researchers.</td>
-<td><a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf">web.stanford.edu/~gentzkow/research/CodeAndData.pdf</a></td>
-</tr>
-</tbody>
-</table>
 
 
 <!-- -->
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1126,128 +1090,129 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Reproducible Research Pipelines"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Principles and practical habits for analytics projects"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-04-20"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Reproducible research means that the important parts of your work can be rerun and checked — not just the final regression or figure, but the whole path from raw input to final output. The practical standard is: **a collaborator should be able to understand what you did and regenerate the main results without guessing**.</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>This is not about perfection. Software changes, APIs change, websites change. The advice on this page draws on a well-established literature (see <span class="co">[</span><span class="ot">recommended reading</span><span class="co">](#where-to-go-next)</span> at the end) and adapts it for team analytics projects that combine code, data, and AI.</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## What counts as reproducible</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>A result is reproducible when the same analysis steps performed on the same data consistently produce the same answer. For the scope of this class's capstone project it generally means:</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>there is a documented environment and a documented entry point</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>generated files can be traced back to code</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the key decisions are written down</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>unstable inputs (scraped pages, API responses, model outputs) are either snapshotted or clearly described</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>If you scrape a website or classify texts through an LLM, save **both** the script that produced the data and a dated snapshot of the data actually used. If the outside world changes later, the project is still auditable.</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Separate raw data, generated data, and outputs</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>The most important structural rule is to keep these apart:</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`data/raw/`** — original inputs, never edited by hand</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`data/processed/`** or **`data/derived/`** — cleaned or transformed tables</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`output/`** — figures, tables, and final results</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`scripts/`** — the code that moves data between these folders</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`prompts/`** — prompt templates, if AI is part of the workflow</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>You do not need a deeply nested folder tree. The point is that anyone opening the repo can tell what is source, what is generated, and what is final.</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Put stable steps in scripts</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>Notebooks are good for exploration and narrative. They are a bad home for pipeline logic that must be rerun reliably. A practical rule:</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>if the step is exploratory → notebook</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>if the step must be rerun → script</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Each script should do one clear job: read defined inputs, validate assumptions, write one main output, and fail loudly if something is wrong. Avoid hard-coded paths, and accept inputs and outputs as arguments so the script can be called from a single driver command.</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Have one command that runs the pipeline</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>For every result, you should be able to track how it was produced. The simplest way is a single entry point — a Bash script, a Python driver, or a Makefile — that runs the steps in order. What matters is not the tool but the existence of a documented command a teammate can run.</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="fu">## Make the environment reproducible</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>A project is not reproducible if the code only runs on one laptop. At minimum, include a <span class="in">`requirements.txt`</span> (or equivalent) and document the language version. If API keys are needed, commit a <span class="in">`.env.example`</span> with the **names** of required variables — never the secrets themselves.</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Save prompts and model settings</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>If AI is used for classification, extraction, or labeling, then the prompt is part of the research method. Save the prompt text, the model name, the date, and the response schema if you used one. If you only say "we used AI to classify the texts," your pipeline is not documented well enough.</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Test data, not just code</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>Many failures in research pipelines are quiet data mistakes: a join duplicates rows, a date column fails to parse, a filter silently drops half the sample. After every merge or transformation, check row counts, key uniqueness, and value ranges. This is often the fastest way to catch problems before they spread through the whole project.</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="fu">## Document as you go</span></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`README.md`**: what the project is, how to run it, where outputs appear</span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`DATA.md`**: what each table contains, unit of observation, keys, sources, known issues</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`METHODS.md`**: choices made in cleaning, variable construction, and modeling</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>Keep them short and update them as the project evolves.</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## Use version control</span></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>Git helps you see what changed, when a result changed, and keeps prompt revisions alongside code revisions. Commit small, meaningful changes — "add schema checks for match data" is more useful than "updates."</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="fu">## Checklist</span></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> There is one documented command for the main pipeline.</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Raw data and generated data are clearly separated.</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Important outputs come from scripts, not manual editing.</span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Prompts and model settings are saved.</span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Key joins and schema assumptions are checked.</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> The final analysis dataset is saved as a file.</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Tables and figures can be traced back to generated outputs.</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> <span class="in">`README.md`</span>, <span class="in">`DATA.md`</span>, and <span class="in">`METHODS.md`</span> are current.</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Anything not fully reproducible is stated honestly.</span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="fu">## Where to go next</span></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="fu">### Course pages</span></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Designing Larger Analytics Projects with AI</span><span class="co">](../da-knowledge/designing-projects.qmd)</span> — planning, <span class="in">`AGENTS.md`</span>, and testing habits</span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Documentation Fundamentals</span><span class="co">](../da-knowledge/documentation-readme.qmd)</span> — better <span class="in">`README.md`</span> and <span class="in">`DATA.md`</span></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Calling LLM APIs from Python</span><span class="co">](../da-knowledge/llm-api-python.qmd)</span> — structured AI-assisted workflows</span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](../da-knowledge/terminal-basics.qmd)</span> — if the shell still feels unfamiliar</span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="fu">### Recommended reading</span></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Source <span class="pp">|</span> Why read it <span class="pp">|</span> Link <span class="pp">|</span></span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Sandve et al. (2013). "Ten Simple Rules for Reproducible Computational Research." <span class="pp">|</span> Short and concrete: track every result, avoid manual steps, version-control scripts, store raw data behind plots. <span class="pp">|</span> <span class="co">[</span><span class="ot">doi.org/10.1371/journal.pcbi.1003285</span><span class="co">](https://doi.org/10.1371/journal.pcbi.1003285)</span> <span class="pp">|</span></span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Wilson et al. (2017). "Good Enough Practices in Scientific Computing." <span class="pp">|</span> Data management, project layout, software habits, and version control for researchers who are not software engineers. <span class="pp">|</span> <span class="co">[</span><span class="ot">doi.org/10.1371/journal.pcbi.1005510</span><span class="co">](https://doi.org/10.1371/journal.pcbi.1005510)</span> <span class="pp">|</span></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> The Turing Way (2019–). <span class="pp">|</span> Community-maintained handbook on reproducible environments, testing, and collaboration. <span class="pp">|</span> <span class="co">[</span><span class="ot">book.the-turing-way.org</span><span class="co">](https://book.the-turing-way.org/reproducible-research/reproducible-research)</span> <span class="pp">|</span></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Broman (2014). "Initial Steps Toward Reproducible Research." <span class="pp">|</span> Quick-start tutorial: organize files, script everything, automate, use version control. <span class="pp">|</span> <span class="co">[</span><span class="ot">kbroman.org/steps2rr</span><span class="co">](https://kbroman.org/steps2rr/)</span> <span class="pp">|</span></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Gentzkow &amp; Shapiro (2014). "Code and Data for the Social Sciences." <span class="pp">|</span> Automation, directory structure, and readable code — written by economists for social-science researchers. <span class="pp">|</span> <span class="co">[</span><span class="ot">web.stanford.edu/~gentzkow/research/CodeAndData.pdf</span><span class="co">](https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf)</span> <span class="pp">|</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Reproducible Research"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "What a submission should look like — and a working example you can clone"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-04-21"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## What reproducibility means, concretely</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>A project is **reproducible** when a stranger — someone with your repo and nothing else — can clone it, run one command, and get the same numbers, tables, and plots you got.</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>That's it. No emailing data, no reading your brain, no "I'll send the cleaned CSV later." One clone, one command, same outputs.</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>This is the bar for every submission in this course.</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## The minimum a reproducible project has</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>Every well-organised project in this course shares the same few ingredients:</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**A README** that tells a reader (and future-you) what the project does, how to run it, and where outputs land.</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Pinned dependencies** — <span class="in">`requirements.txt`</span>, <span class="in">`renv.lock`</span>, or equivalent — so the same code runs the same in six months.</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**A one-command entry point** — a <span class="in">`Makefile`</span>, <span class="in">`run.sh`</span>, or <span class="in">`main.py`</span> — that chains fetch → clean → analyse → report.</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**A predictable folder structure** — raw data, cleaned data, scripts, outputs all in named places.</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**An instructions file for AI agents** — <span class="in">`CLAUDE.md`</span> / <span class="in">`AGENTS.md`</span> / <span class="in">`GEMINI.md`</span> — that captures project conventions once so you don't re-explain them every session.</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Committed final artefacts** — the PDF, the figure, the result table — so reviewers can see outputs without rerunning the pipeline.</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>Behind these ingredients sit a few design habits — data immutability, scoping the work in vertical slices, writing three kinds of tests — that are laid out in <span class="co">[</span><span class="ot">Designing Larger Analytics Projects with AI</span><span class="co">](designing-projects.qmd)</span>.</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## A working example you can clone</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>We maintain a minimum reproducible project in Python that you can read, clone, and use as a template:</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>**repo:** <span class="co">[</span><span class="ot">github.com/gbekes/repro-toy-example</span><span class="co">](https://github.com/gbekes/repro-toy-example)</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>The task it implements is intentionally tiny — aggregate the Austrian Hotels dataset to the city level and render a one-page PDF. **The point is not the analysis. The point is the structure.**</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>**What's in it:**</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="in">repro-toy-example/</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="in">├── README.md            ← how to read and run the repo</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="in">├── requirements.txt     ← pinned Python deps</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="in">├── Makefile             ← `make all` reproduces every output</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="in">├── CLAUDE.md            ← project conventions for AI agents</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="in">├── src/</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── fetch_data.py    ← download raw CSVs</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── build_table.py   ← merge + aggregate to city level</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── make_report.py   ← render PDF with table + narrative</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="in">├── data/</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── raw/             ← gitignored, regenerable</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── clean/           ← gitignored, regenerable</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="in">└── out/</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── city_summary.csv ← committed final artefact</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="in">    └── city_summary.pdf ← committed final artefact</span></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>**How it reproduces:**</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/gbekes/repro-toy-example</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> repro-toy-example</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> all</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>Three scripts run in sequence, each printing what it's doing and where it wrote output. The final PDF lands in <span class="in">`out/city_summary.pdf`</span>.</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conventions worth copying</span></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>These are the conventions in the example — adopt them in your own capstone repo.</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>**Data is immutable.** Nothing in <span class="in">`data/raw/`</span> or <span class="in">`data/clean/`</span> is ever edited in place. If a transformation is needed, write a new file. This makes every step re-runnable and every output traceable to its inputs.</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>**Regenerable data is gitignored.** <span class="in">`data/raw/`</span> and <span class="in">`data/clean/`</span> are in <span class="in">`.gitignore`</span>. The repo doesn't carry what the pipeline can re-create. Only <span class="in">`out/`</span> — the artefacts humans read — is committed.</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>**One script, one job.** <span class="in">`fetch`</span>, <span class="in">`build`</span>, <span class="in">`report`</span> are separate files. Each runs independently if its inputs exist. Each one prints progress and where it wrote output, so silent failure is impossible.</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>**One command reproduces everything.** <span class="in">`make all`</span> walks the whole pipeline from a cold clone. If that doesn't work, the repo is broken.</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>**The README is for strangers.** Write it as if the reader has never spoken to you — because they haven't. Purpose, data source, how to run, where outputs go. Two to three short sections is enough.</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>**`CLAUDE.md` captures the rules of this project.** Preferences (Python over R, pandas over loops, outputs to <span class="in">`/out`</span>) and good practices (data immutability, one-command entry, print progress). Short, because AI reads it every session — padding dilutes the rules that matter.</span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="fu">## What about notebooks?</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>Notebooks are fine for **exploration**. They are not the submission.</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>For the capstone:</span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you use notebooks to explore, commit them in a separate <span class="in">`notebooks/`</span> folder with a note in the README.</span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The pipeline that produces your final numbers must live in **plain `.py` scripts** (or <span class="in">`.R`</span> scripts) that a stranger can run with <span class="in">`make all`</span>.</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Notebooks that make it into the pipeline must be **executable top-to-bottom from a fresh kernel** — no stale state, no hidden cells.</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>The reason is simple: notebooks are easy to run out of order. Reproducibility dies the moment "run cell 7 before cell 4" becomes part of your workflow.</span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a><span class="fu">## A minimum checklist before you submit</span></span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> <span class="in">`README.md`</span> explains purpose, data, how to run, where outputs land.</span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> <span class="in">`requirements.txt`</span> (or equivalent) pins every dependency to a tested version.</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> A single command — <span class="in">`make all`</span>, <span class="in">`python main.py`</span>, or <span class="in">`bash run.sh`</span> — reproduces every output from a cold clone.</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Raw and intermediate data are gitignored; only final artefacts live in <span class="in">`out/`</span> and are committed.</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Scripts print what they're doing and where they write output.</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> <span class="in">`CLAUDE.md`</span> / <span class="in">`AGENTS.md`</span> / <span class="in">`GEMINI.md`</span> captures the project's conventions.</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> The repo has been cloned to a clean directory at least once, and <span class="in">`make all`</span> produced the same outputs you committed.</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>If you've done the last item, you're genuinely reproducible. If you haven't, you don't yet know that you are.</span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="fu">## Related pages</span></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Designing Larger Analytics Projects with AI</span><span class="co">](designing-projects.qmd)</span> — mindsets, self-interview, <span class="in">`agents.md`</span>, skills, and the three kinds of tests.</span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Documentation Fundamentals</span><span class="co">](documentation-readme.qmd)</span> — what goes in a README.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

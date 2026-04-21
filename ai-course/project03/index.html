@@ -349,7 +349,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../da-knowledge/reproducible-research.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reproducible Research Pipelines</span></a>
+ <span class="menu-text">Reproducible Research</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -380,6 +380,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Joining Data Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/nlp-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NLP Basics — Text as Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -486,6 +492,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#where-we-are" id="toc-where-we-are" class="nav-link active" data-scroll-target="#where-we-are">Where we are</a></li>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
   <li><a href="#did-in-one-page-draft-use-ai-to-go-deeper" id="toc-did-in-one-page-draft-use-ai-to-go-deeper" class="nav-link" data-scroll-target="#did-in-one-page-draft-use-ai-to-go-deeper">DiD in one page (draft — use AI to go deeper)</a></li>
+  <li><a href="#why-expectations-matter-in-causal-analysis" id="toc-why-expectations-matter-in-causal-analysis" class="nav-link" data-scroll-target="#why-expectations-matter-in-causal-analysis">Why expectations matter in causal analysis</a></li>
   <li><a href="#work-tasks-2-hour-block" id="toc-work-tasks-2-hour-block" class="nav-link" data-scroll-target="#work-tasks-2-hour-block">Work tasks (2-hour block)</a></li>
   <li><a href="#presentation-last-hour-of-class" id="toc-presentation-last-hour-of-class" class="nav-link" data-scroll-target="#presentation-last-hour-of-class">Presentation (last hour of class)</a></li>
   <li><a href="#delivery-session-3-end-of-the-project" id="toc-delivery-session-3-end-of-the-project" class="nav-link" data-scroll-target="#delivery-session-3-end-of-the-project">Delivery (Session 3 — end of the project)</a></li>
@@ -595,6 +602,29 @@ Tip
 <div class="callout-body-container callout-body">
 <p>Use AI to learn the details — ask for worked mini-examples in <em>your</em> setup: “I have a team-week panel with variable X, treatment at irregular times; walk me through a Callaway-Sant’Anna estimator in Python/R.” Then check the code, don’t just run it.</p>
 <p>A starter prompt for unpacking a DiD paper: <a href="../project03/assets/did-understand-prompt.txt"><code>did-understand-prompt.txt</code></a>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="why-expectations-matter-in-causal-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="why-expectations-matter-in-causal-analysis">Why expectations matter in causal analysis</h2>
+<div class="week-card card">
+<div class="card-header">
+<p>🧭 <strong>Expectations and diff-in-diffs</strong></p>
+</div>
+<div class="card-body">
+<p>Diff-in-diffs compares the pre/post change in outcomes for treated units (teams that changed manager) against a control group, and reads the difference-of-differences as the causal effect. This rests on <strong>parallel trends</strong>: absent treatment, the two groups would have moved in parallel.</p>
+<p>Expectations break that story in two ways:</p>
+<ul>
+<li><strong>Anticipation.</strong> If a manager change is widely expected, players, board, opponents and media react <em>before</em> the official announcement. Effort, tactics, transfer talk, press pressure — all shift. The “pre” period is already contaminated, so the estimated effect is biased toward zero (or flipped, if anticipation pushes outcomes the “wrong” way first).</li>
+<li><strong>Heterogeneity.</strong> A shock firing after one bad weekend and a long-telegraphed “he’s gone at the end of the month” hire are not the same treatment. Pooling them hides structure: the effect of a new manager plausibly depends on <strong>how surprising</strong> the change was.</li>
+</ul>
+<p>That is why we build an expectation score per change:</p>
+<ul>
+<li><strong>As a diagnostic</strong> — do pre-trends look different for “expected” vs “surprise” changes? If yes, the parallel-trends assumption is doing more work than it should.</li>
+<li><strong>As a moderator</strong> — split or interact the DiD by expectation. This is the main use in Session 3: does the new-manager bounce exist only for surprise hires, only for expected ones, or roughly the same for both?</li>
+</ul>
+<p>You are not trying to <em>remove</em> expectations from the data. You are trying to <em>measure</em> them so the DiD can say something honest about when and for whom a manager change matters.</p>
 </div>
 </div>
 <hr>
@@ -1213,84 +1243,113 @@ Tip
 <span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Work tasks (2-hour block)</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why expectations matter in causal analysis</span></span>
 <span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
 <span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>🔬 **Analysis workflow**</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>🧭 **Expectations and diff-in-diffs**</span>
 <span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Plan the spec** in writing before any code:</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Outcome (points per game? goal difference? rolling form?)</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Unit (team-week? team-match?)</span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Treatment definition (new manager's first match? the announcement date?)</span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Window (how many matches pre/post?)</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Controls (team FE, season FE, opponent strength?)</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Test on a subset** (one league, two seasons) — get the plumbing right.</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Plot parallel trends** for treated vs control.</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Estimate** the main DiD coefficient with a proper standard error (cluster by team).</span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Event study** — leads and lags around the change.</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Heterogeneity** — interact treatment with manager experience, team budget, league, and **your Session 2 expectation score**.</span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**Robustness** — different outcome, window, control group; staggered-DiD estimator if feasible.</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>**Draft the slides** while the code runs — don't leave slides for the last 15 minutes.</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>Diff-in-diffs compares the pre/post change in outcomes for treated units (teams that changed manager) against a control group, and reads the difference-of-differences as the causal effect. This rests on **parallel trends**: absent treatment, the two groups would have moved in parallel.</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>Expectations break that story in two ways:</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Anticipation.** If a manager change is widely expected, players, board, opponents and media react *before* the official announcement. Effort, tactics, transfer talk, press pressure — all shift. The "pre" period is already contaminated, so the estimated effect is biased toward zero (or flipped, if anticipation pushes outcomes the "wrong" way first).</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Heterogeneity.** A shock firing after one bad weekend and a long-telegraphed "he's gone at the end of the month" hire are not the same treatment. Pooling them hides structure: the effect of a new manager plausibly depends on **how surprising** the change was.</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>That is why we build an expectation score per change:</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**As a diagnostic** — do pre-trends look different for "expected" vs "surprise" changes? If yes, the parallel-trends assumption is doing more work than it should.</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**As a moderator** — split or interact the DiD by expectation. This is the main use in Session 3: does the new-manager bounce exist only for surprise hires, only for expected ones, or roughly the same for both?</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>You are not trying to *remove* expectations from the data. You are trying to *measure* them so the DiD can say something honest about when and for whom a manager change matters.</span>
 <span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>:::::</span>
 <span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="fu">## Presentation (last hour of class)</span></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>🎤 **10–12 minutes + Q&amp;A per team**</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>Refer back to the presentation principles we discussed in <span class="co">[</span><span class="ot">Week 07 review</span><span class="co">](../week07/index.qmd)</span> and the Week 06 "report vs vibe report" contrast: **less is more**, show only what you understand deeply, precise interpretation beats fancy graphs.</span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>**Slide outline**</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Question &amp; context** — league, time span, why it matters.</span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Data &amp; sample** — number of matches, number of manager changes, known gaps.</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Identification** — DiD; what is treatment, what is control; parallel-trends plot.</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Main result** — coefficient + 95% CI + plain-English interpretation.</span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Heterogeneity** — by manager / team / league; one clear chart.</span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Expectations vs reality** — do positive-news changes deliver bigger gains?</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**Limitations** — selection, staggered timing, data gaps. Be honest.</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>**Format options:** Quarto HTML slides, Google Slides, or a short dashboard. Whichever you pick, the repo must reproduce the numbers on the slides.</span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="fu">## Delivery (Session 3 — end of the project)</span></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>📦 **Final submission**</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Who:** by **group** — the same team you started with in Session 1. Finish what you started together in the session.</span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Deadline:** **Sunday 23:55** (the Sunday after this session).</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**What:**</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>GitHub repo with: data (or fetcher), Session 1 tests, Session 2 article + expectations tables, Session 3 analysis code.</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`README.md`</span> describing how to reproduce all numbers end to end.</span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Slides (as used in class, possibly polished).</span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`DATA.md`</span> and a short <span class="in">`METHODS.md`</span> explaining the DiD spec, parallel-trends check, and the robustness you ran.</span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Individual reflection (1–2 pages per person)**: hardest part and how you solved it, what you would do differently, how labour was split.</span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>See <span class="co">[</span><span class="ot">evaluation criteria</span><span class="co">](../capstone/index.qmd#evaluation)</span> in the project description.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="fu">## Work tasks (2-hour block)</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>🔬 **Analysis workflow**</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Plan the spec** in writing before any code:</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Outcome (points per game? goal difference? rolling form?)</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Unit (team-week? team-match?)</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Treatment definition (new manager's first match? the announcement date?)</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Window (how many matches pre/post?)</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Controls (team FE, season FE, opponent strength?)</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Test on a subset** (one league, two seasons) — get the plumbing right.</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Plot parallel trends** for treated vs control.</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Estimate** the main DiD coefficient with a proper standard error (cluster by team).</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Event study** — leads and lags around the change.</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Heterogeneity** — interact treatment with manager experience, team budget, league, and **your Session 2 expectation score**.</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**Robustness** — different outcome, window, control group; staggered-DiD estimator if feasible.</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>**Draft the slides** while the code runs — don't leave slides for the last 15 minutes.</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="fu">## Presentation (last hour of class)</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>🎤 **10–12 minutes + Q&amp;A per team**</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>Refer back to the presentation principles we discussed in <span class="co">[</span><span class="ot">Week 07 review</span><span class="co">](../week07/index.qmd)</span> and the Week 06 "report vs vibe report" contrast: **less is more**, show only what you understand deeply, precise interpretation beats fancy graphs.</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>**Slide outline**</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Question &amp; context** — league, time span, why it matters.</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Data &amp; sample** — number of matches, number of manager changes, known gaps.</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Identification** — DiD; what is treatment, what is control; parallel-trends plot.</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Main result** — coefficient + 95% CI + plain-English interpretation.</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Heterogeneity** — by manager / team / league; one clear chart.</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Expectations vs reality** — do positive-news changes deliver bigger gains?</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**Limitations** — selection, staggered timing, data gaps. Be honest.</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>**Format options:** Quarto HTML slides, Google Slides, or a short dashboard. Whichever you pick, the repo must reproduce the numbers on the slides.</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## Delivery (Session 3 — end of the project)</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>📦 **Final submission**</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Who:** by **group** — the same team you started with in Session 1. Finish what you started together in the session.</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Deadline:** **Sunday 23:55** (the Sunday after this session).</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**What:**</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>GitHub repo with: data (or fetcher), Session 1 tests, Session 2 article + expectations tables, Session 3 analysis code.</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`README.md`</span> describing how to reproduce all numbers end to end.</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Slides (as used in class, possibly polished).</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`DATA.md`</span> and a short <span class="in">`METHODS.md`</span> explaining the DiD spec, parallel-trends check, and the robustness you ran.</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>**Individual reflection (1–2 pages per person)**: hardest part and how you solved it, what you would do differently, how labour was split.</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>See <span class="co">[</span><span class="ot">evaluation criteria</span><span class="co">](../capstone/index.qmd#evaluation)</span> in the project description.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

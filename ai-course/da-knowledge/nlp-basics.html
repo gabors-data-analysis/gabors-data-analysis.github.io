@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-04-20">
+
+<title>NLP Basics — Text as Data – Doing Data Analysis with AI</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a42de2942ca925214836ce3044549515.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">DA with AI</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../navbar/weeks.html"> 
+<span class="menu-text">Weekly Content</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../navbar/assignments.html"> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../navbar/resources.html" aria-current="page"> 
+<span class="menu-text">Knowledge Base</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/nlp-basics.html">NLP Basics — Text as Data</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course Weeks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../week00/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 0: AI Coding Prep</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../week01/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1: LLM Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../week02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2: Documentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../week03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3: Reporting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../week04/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4: Agentic AI with CLIs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../week05/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5: Advanced CLI Workflows</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../week06/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6: From Data to Report</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../week07/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7: Text as Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../week08/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8: Sentiment Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../week09/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 9: AI Research: Controls</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../week10/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10: AI Research: IV</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Capstone Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capstone/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Description</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project01/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 1: Data Collection</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 2: Text to Expectations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 3: DiD &amp; Presentation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Case Studies</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/VWS/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">World Values Survey</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/austria-hotels/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Austrian Hotels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/interviews/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Football Interviews</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/earnings/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">US Earnings (CPS)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/employee_commits/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Employee Commits</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/common-support-r/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Common Support (R)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Knowledge Base</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../navbar/resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/designing-projects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Designing Larger Analytics Projects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/reproducible-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reproducible Research</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/technical-terms-page.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary of LLM terms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/which-ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Which AI model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/beyond.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learn More</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/documentation-readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation Fundamentals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Joining Data Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/nlp-basics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">NLP Basics — Text as Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/creating-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating Graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/terminal-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminal Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/install-cli.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing AI CLI Tools</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/vscode-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code + Copilot Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/get-ai-api-key.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Get AI API keys</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/api-use.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">APIs — Intro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/llm-api-python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LLM APIs in Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/api-advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">APIs — Under the hood</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/walkthrough-wb-fred.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Walkthrough: World Bank + FRED</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/walkthrough-fbref.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Walkthrough: FBref</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/pdf-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PDF Guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Slideshows</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Key concepts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-02-prompting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prompting, Context</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-this-page" id="toc-why-this-page" class="nav-link active" data-scroll-target="#why-this-page">Why this page</a></li>
+  <li><a href="#the-running-example" id="toc-the-running-example" class="nav-link" data-scroll-target="#the-running-example">The running example</a></li>
+  <li><a href="#the-pipeline" id="toc-the-pipeline" class="nav-link" data-scroll-target="#the-pipeline">The pipeline</a></li>
+  <li><a href="#tokenization" id="toc-tokenization" class="nav-link" data-scroll-target="#tokenization">1. Tokenization</a>
+  <ul class="collapse">
+  <li><a href="#whitespace-tokenization" id="toc-whitespace-tokenization" class="nav-link" data-scroll-target="#whitespace-tokenization">Whitespace tokenization</a></li>
+  <li><a href="#word-tokenization-with-a-library" id="toc-word-tokenization-with-a-library" class="nav-link" data-scroll-target="#word-tokenization-with-a-library">Word tokenization with a library</a></li>
+  <li><a href="#sub-word-tokenization-what-llms-use" id="toc-sub-word-tokenization-what-llms-use" class="nav-link" data-scroll-target="#sub-word-tokenization-what-llms-use">Sub-word tokenization (what LLMs use)</a></li>
+  <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters">Why it matters</a></li>
+  </ul></li>
+  <li><a href="#normalization" id="toc-normalization" class="nav-link" data-scroll-target="#normalization">2. Normalization</a>
+  <ul class="collapse">
+  <li><a href="#lowercasing" id="toc-lowercasing" class="nav-link" data-scroll-target="#lowercasing">Lowercasing</a></li>
+  <li><a href="#removing-punctuation" id="toc-removing-punctuation" class="nav-link" data-scroll-target="#removing-punctuation">Removing punctuation</a></li>
+  <li><a href="#removing-stopwords" id="toc-removing-stopwords" class="nav-link" data-scroll-target="#removing-stopwords">Removing stopwords</a></li>
+  </ul></li>
+  <li><a href="#stemming-vs.-lemmatization" id="toc-stemming-vs.-lemmatization" class="nav-link" data-scroll-target="#stemming-vs.-lemmatization">3. Stemming vs.&nbsp;Lemmatization</a>
+  <ul class="collapse">
+  <li><a href="#stemming" id="toc-stemming" class="nav-link" data-scroll-target="#stemming">Stemming</a></li>
+  <li><a href="#lemmatization" id="toc-lemmatization" class="nav-link" data-scroll-target="#lemmatization">Lemmatization</a></li>
+  <li><a href="#which-should-you-use" id="toc-which-should-you-use" class="nav-link" data-scroll-target="#which-should-you-use">Which should you use?</a></li>
+  <li><a href="#applied-to-our-excerpt" id="toc-applied-to-our-excerpt" class="nav-link" data-scroll-target="#applied-to-our-excerpt">Applied to our excerpt</a></li>
+  </ul></li>
+  <li><a href="#bag-of-words" id="toc-bag-of-words" class="nav-link" data-scroll-target="#bag-of-words">4. Bag of Words</a>
+  <ul class="collapse">
+  <li><a href="#what-you-can-do-with-a-bow" id="toc-what-you-can-do-with-a-bow" class="nav-link" data-scroll-target="#what-you-can-do-with-a-bow">What you can do with a BoW</a></li>
+  <li><a href="#what-bow-throws-away" id="toc-what-bow-throws-away" class="nav-link" data-scroll-target="#what-bow-throws-away">What BoW throws away</a></li>
+  </ul></li>
+  <li><a href="#n-grams" id="toc-n-grams" class="nav-link" data-scroll-target="#n-grams">5. N-grams</a>
+  <ul class="collapse">
+  <li><a href="#what-n-grams-buy-you" id="toc-what-n-grams-buy-you" class="nav-link" data-scroll-target="#what-n-grams-buy-you">What n-grams buy you</a></li>
+  <li><a href="#the-cost" id="toc-the-cost" class="nav-link" data-scroll-target="#the-cost">The cost</a></li>
+  <li><a href="#how-in-code" id="toc-how-in-code" class="nav-link" data-scroll-target="#how-in-code">How in code</a></li>
+  </ul></li>
+  <li><a href="#tf-idf" id="toc-tf-idf" class="nav-link" data-scroll-target="#tf-idf">6. TF-IDF</a>
+  <ul class="collapse">
+  <li><a href="#the-formulas" id="toc-the-formulas" class="nav-link" data-scroll-target="#the-formulas">The formulas</a></li>
+  <li><a href="#applied-to-our-setup" id="toc-applied-to-our-setup" class="nav-link" data-scroll-target="#applied-to-our-setup">Applied to our setup</a></li>
+  <li><a href="#in-code" id="toc-in-code" class="nav-link" data-scroll-target="#in-code">In code</a></li>
+  </ul></li>
+  <li><a href="#what-bow-n-grams-tf-idf-cant-do" id="toc-what-bow-n-grams-tf-idf-cant-do" class="nav-link" data-scroll-target="#what-bow-n-grams-tf-idf-cant-do">7. What BoW + n-grams + TF-IDF can’t do</a></li>
+  <li><a href="#how-this-connects-to-the-capstone" id="toc-how-this-connects-to-the-capstone" class="nav-link" data-scroll-target="#how-this-connects-to-the-capstone">How this connects to the capstone</a></li>
+  <li><a href="#quick-reference-cheatsheet" id="toc-quick-reference-cheatsheet" class="nav-link" data-scroll-target="#quick-reference-cheatsheet">Quick-reference cheatsheet</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/nlp-basics.html">NLP Basics — Text as Data</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">NLP Basics — Text as Data</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Core concepts for turning text into something you can count, compare, and model</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 20, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="why-this-page" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-page">Why this page</h2>
+<p>A lot of interesting questions live in text: news articles, earnings calls, interviews, reviews, policy documents. Before you can run any analysis on text, you have to turn it into something numeric — tokens, counts, vectors.</p>
+<p>This page is a <strong>30-minute primer</strong> on the vocabulary and the pipeline. It’s what you need to understand before Session 2 of the capstone, where you’ll ask an LLM to turn news articles into a numeric expectation score for manager changes.</p>
+<p>We intentionally stop <strong>before sentiment analysis and embeddings</strong> — those build on everything here, but they come next.</p>
+<hr>
+</section>
+<section id="the-running-example" class="level2">
+<h2 class="anchored" data-anchor-id="the-running-example">The running example</h2>
+<p>Everything below uses the same short Reuters excerpt — a post-match quote from Manchester United manager Ruben Amorim after a 2-2 draw at Nottingham Forest on 1 November 2025:</p>
+<blockquote class="blockquote">
+<p>“We lost control of the game for five minutes. But my feeling is that the players tried, really tried. They tried during the week and they tried today. In the past, if we had this kind of bad five minutes and we suffered two goals, we didn’t recover. Today is a different feeling.”</p>
+</blockquote>
+<p>Short enough to work through by hand, long enough to see every step matter.</p>
+<hr>
+</section>
+<section id="the-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="the-pipeline">The pipeline</h2>
+<p>Every classical text-as-data workflow looks roughly the same:</p>
+<pre><code>Raw text
+   │
+   ▼
+Tokenization         ← split into units
+   │
+   ▼
+Normalization        ← lowercase, strip punctuation, remove stopwords
+   │
+   ▼
+Stemming / Lemmatization   ← collapse word variants
+   │
+   ▼
+Feature extraction   ← Bag of Words, n-grams, TF-IDF
+   │
+   ▼
+Analysis             ← counts, classification, regression, LLM scoring</code></pre>
+<p>Each step is a <strong>choice</strong>. Different choices give you different numbers, and different numbers give you different answers. Being able to name each step is half the battle.</p>
+<hr>
+</section>
+<section id="tokenization" class="level2">
+<h2 class="anchored" data-anchor-id="tokenization">1. Tokenization</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Tokenization</strong> is breaking a string of text into smaller units called <strong>tokens</strong>. Usually words, sometimes punctuation, sometimes sub-word pieces.</p>
+</div>
+</div>
+<p>Take the first sentence of our quote:</p>
+<blockquote class="blockquote">
+<p>“We lost control of the game for five minutes.”</p>
+</blockquote>
+<section id="whitespace-tokenization" class="level3">
+<h3 class="anchored" data-anchor-id="whitespace-tokenization">Whitespace tokenization</h3>
+<p>The simplest thing: split on spaces.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="st">"We lost control of the game for five minutes."</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> text.split()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ['We', 'lost', 'control', 'of', 'the', 'game', 'for', 'five', 'minutes.']</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Fast, but the last token is <code>"minutes."</code> — the period is glued on. That’s a problem: <code>"minutes"</code> and <code>"minutes."</code> look like different words to a computer.</p>
+</section>
+<section id="word-tokenization-with-a-library" class="level3">
+<h3 class="anchored" data-anchor-id="word-tokenization-with-a-library">Word tokenization with a library</h3>
+<p>Libraries like <strong>NLTK</strong> or <strong>spaCy</strong> handle punctuation properly:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.tokenize <span class="im">import</span> word_tokenize</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> word_tokenize(<span class="st">"We lost control of the game for five minutes."</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ['We', 'lost', 'control', 'of', 'the', 'game', 'for', 'five', 'minutes', '.']</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now the period is its own token. You can keep it or drop it.</p>
+</section>
+<section id="sub-word-tokenization-what-llms-use" class="level3">
+<h3 class="anchored" data-anchor-id="sub-word-tokenization-what-llms-use">Sub-word tokenization (what LLMs use)</h3>
+<p>Modern LLMs (Claude, GPT, Gemini) don’t use word tokenization. They use <strong>sub-word</strong> tokenizers like Byte-Pair Encoding (BPE). A word like <code>"Nottingham"</code> might become two tokens: <code>"Not"</code> + <code>"tingham"</code>. A rare word like <code>"Amorim"</code> might be three or four pieces.</p>
+<p>This matters because:</p>
+<ul>
+<li><strong>Cost and limits are in tokens</strong>, not words. A 1,000-word article is usually 1,300–1,500 tokens.</li>
+<li><strong>LLMs “see” sub-words</strong>, which is why they can handle misspellings and new words they’ve never seen.</li>
+<li>You do <strong>not</strong> need to tokenize yourself when you call an LLM API. The API does it for you.</li>
+</ul>
+<p><strong>Rule of thumb for English:</strong> 1 token ≈ 0.75 words, or about 4 characters.</p>
+</section>
+<section id="why-it-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-it-matters">Why it matters</h3>
+<p>Tokenization is the foundation. Every later step operates on tokens, not raw text. A bad tokenizer — one that splits <code>"Man United"</code> into <code>"Man"</code> and <code>"United"</code> — throws away meaning that downstream steps can’t recover.</p>
+<hr>
+</section>
+</section>
+<section id="normalization" class="level2">
+<h2 class="anchored" data-anchor-id="normalization">2. Normalization</h2>
+<p>Once you have tokens, you typically clean them up.</p>
+<section id="lowercasing" class="level3">
+<h3 class="anchored" data-anchor-id="lowercasing">Lowercasing</h3>
+<p><code>"We"</code> and <code>"we"</code> are the same word for most purposes. Most pipelines lowercase everything:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> [t.lower() <span class="cf">for</span> t <span class="kw">in</span> tokens]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ['we', 'lost', 'control', 'of', 'the', 'game', 'for', 'five', 'minutes', '.']</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When not to lowercase:</strong> if casing carries information (e.g., named entities like <code>"United"</code> the club vs.&nbsp;<code>"united"</code> the adjective, or sentiment cues like <code>"AMAZING"</code>).</p>
+</section>
+<section id="removing-punctuation" class="level3">
+<h3 class="anchored" data-anchor-id="removing-punctuation">Removing punctuation</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> [t <span class="cf">for</span> t <span class="kw">in</span> tokens <span class="cf">if</span> t.isalpha()]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ['we', 'lost', 'control', 'of', 'the', 'game', 'for', 'five', 'minutes']</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="removing-stopwords" class="level3">
+<h3 class="anchored" data-anchor-id="removing-stopwords">Removing stopwords</h3>
+<p><strong>Stopwords</strong> are very common words that carry little meaning on their own: <code>the</code>, <code>of</code>, <code>a</code>, <code>is</code>, <code>we</code>, <code>and</code>. Dropping them focuses the analysis on content words.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.corpus <span class="im">import</span> stopwords</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>stop <span class="op">=</span> <span class="bu">set</span>(stopwords.words(<span class="st">'english'</span>))</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> [t <span class="cf">for</span> t <span class="kw">in</span> tokens <span class="cf">if</span> t <span class="kw">not</span> <span class="kw">in</span> stop]</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ['lost', 'control', 'game', 'five', 'minutes']</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>From 10 tokens down to 5. The sentence’s <em>gist</em> — “lost control of the game” — survives.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Stopwords are not always safe to drop.</strong> <code>"not"</code> is a stopword in most lists, but <code>"not recover"</code> and <code>"recover"</code> mean opposite things. For any analysis that cares about negation, keep stopwords.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="stemming-vs.-lemmatization" class="level2">
+<h2 class="anchored" data-anchor-id="stemming-vs.-lemmatization">3. Stemming vs.&nbsp;Lemmatization</h2>
+<p>Many words come in variants: <em>try</em>, <em>tried</em>, <em>trying</em>, <em>tries</em>. For most counting tasks you want to treat them as one thing.</p>
+<section id="stemming" class="level3">
+<h3 class="anchored" data-anchor-id="stemming">Stemming</h3>
+<p>A <strong>stemmer</strong> chops off common endings using simple rules. Fast, crude, sometimes produces non-words.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.stem <span class="im">import</span> PorterStemmer</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>stem <span class="op">=</span> PorterStemmer()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>[stem.stem(w) <span class="cf">for</span> w <span class="kw">in</span> [<span class="st">'tried'</span>, <span class="st">'trying'</span>, <span class="st">'tries'</span>, <span class="st">'recover'</span>, <span class="st">'recovered'</span>]]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ['tri', 'tri', 'tri', 'recov', 'recov']</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Notice <code>"tried"</code> → <code>"tri"</code>. That’s not a real word — but all three forms collapse to the same token, which is what we wanted.</p>
+</section>
+<section id="lemmatization" class="level3">
+<h3 class="anchored" data-anchor-id="lemmatization">Lemmatization</h3>
+<p>A <strong>lemmatizer</strong> uses a dictionary to return the proper base form (the <em>lemma</em>). Slower, more accurate.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.stem <span class="im">import</span> WordNetLemmatizer</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>lem <span class="op">=</span> WordNetLemmatizer()</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>[lem.lemmatize(w, pos<span class="op">=</span><span class="st">'v'</span>) <span class="cf">for</span> w <span class="kw">in</span> [<span class="st">'tried'</span>, <span class="st">'trying'</span>, <span class="st">'tries'</span>, <span class="st">'recover'</span>, <span class="st">'recovered'</span>]]</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ['try', 'try', 'try', 'recover', 'recover']</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now we get real words: <code>"try"</code>, <code>"recover"</code>.</p>
+</section>
+<section id="which-should-you-use" class="level3">
+<h3 class="anchored" data-anchor-id="which-should-you-use">Which should you use?</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Stemming</th>
+<th>Lemmatization</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Speed</td>
+<td>Fast</td>
+<td>Slower</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td>Sometimes non-words</td>
+<td>Real dictionary words</td>
+</tr>
+<tr class="odd">
+<td>Accuracy</td>
+<td>Lower</td>
+<td>Higher</td>
+</tr>
+<tr class="even">
+<td>Needs POS tag?</td>
+<td>No</td>
+<td>Often yes</td>
+</tr>
+<tr class="odd">
+<td>Typical use</td>
+<td>Large corpora, search</td>
+<td>Analysis where interpretability matters</td>
+</tr>
+</tbody>
+</table>
+<p>For a small research corpus where you’ll read the tokens yourself, <strong>lemmatize</strong>. For billion-document search, <strong>stem</strong>.</p>
+</section>
+<section id="applied-to-our-excerpt" class="level3">
+<h3 class="anchored" data-anchor-id="applied-to-our-excerpt">Applied to our excerpt</h3>
+<p>After tokenizing, lowercasing, removing punctuation and stopwords, and lemmatizing verbs, the Amorim quote reduces to roughly:</p>
+<pre><code>['lose', 'control', 'game', 'five', 'minute', 'feel', 'player', 'try',
+ 'really', 'try', 'try', 'week', 'try', 'today', 'past', 'kind', 'bad',
+ 'five', 'minute', 'suffer', 'two', 'goal', 'recover', 'today',
+ 'different', 'feel']</code></pre>
+<p>26 tokens left from about 65 words. Already you can see the shape of the text: <strong>try</strong> appears four times; <strong>minute</strong> and <strong>today</strong> twice; <strong>feel</strong> twice; <strong>recover</strong> once. Without reading it, you can already guess this is a quote about <em>effort</em> and <em>resilience</em>.</p>
+<hr>
+</section>
+</section>
+<section id="bag-of-words" class="level2">
+<h2 class="anchored" data-anchor-id="bag-of-words">4. Bag of Words</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Bag of Words (BoW)</strong> represents a document as the set of its tokens and how often each one appears — ignoring grammar and order.</p>
+</div>
+</div>
+<p>Take the cleaned token list above and count:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>token</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>try</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>minute</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>today</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>feel</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>five</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>lose</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>control</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>game</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>player</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>suffer</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>goal</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>recover</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>different</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>That’s the bag. A Python dict, a pandas Series, a sparse vector — same idea.</p>
+<section id="what-you-can-do-with-a-bow" class="level3">
+<h3 class="anchored" data-anchor-id="what-you-can-do-with-a-bow">What you can do with a BoW</h3>
+<ul>
+<li><strong>Summarize</strong> a document at a glance (top words)</li>
+<li><strong>Compare</strong> documents (cosine similarity between their vectors)</li>
+<li><strong>Classify</strong> documents (logistic regression on BoW vectors is a surprisingly strong baseline)</li>
+<li><strong>Track change over time</strong> (BoW for this week’s articles vs.&nbsp;last week’s)</li>
+</ul>
+</section>
+<section id="what-bow-throws-away" class="level3">
+<h3 class="anchored" data-anchor-id="what-bow-throws-away">What BoW throws away</h3>
+<p>This is the crucial part. BoW knows nothing about:</p>
+<ol type="1">
+<li><strong>Word order.</strong> <code>"We lost control"</code> and <code>"control we lost"</code> are identical bags.</li>
+<li><strong>Negation.</strong> <code>"did not recover"</code> counts <code>"recover"</code> as a positive appearance.</li>
+<li><strong>Multi-word expressions.</strong> <code>"Premier League"</code> becomes two separate tokens.</li>
+<li><strong>Context.</strong> <code>"bad five minutes"</code> and <code>"bad loss"</code> both contribute one <code>"bad"</code>.</li>
+</ol>
+<p>The next three sections each patch one of these holes.</p>
+<hr>
+</section>
+</section>
+<section id="n-grams" class="level2">
+<h2 class="anchored" data-anchor-id="n-grams">5. N-grams</h2>
+<p>An <strong>n-gram</strong> is a sequence of <em>n</em> consecutive tokens. <strong>Bigrams</strong> are pairs; <strong>trigrams</strong> are triples.</p>
+<p>From the cleaned Amorim tokens, some bigrams:</p>
+<ul>
+<li><code>("lose", "control")</code></li>
+<li><code>("really", "try")</code></li>
+<li><code>("bad", "minute")</code> (after collapsing “five bad minutes” → roughly this)</li>
+<li><code>("different", "feel")</code></li>
+</ul>
+<p>And some trigrams:</p>
+<ul>
+<li><code>("try", "really", "try")</code></li>
+<li><code>("mental", "strength", "secure")</code> (from the full article)</li>
+</ul>
+<section id="what-n-grams-buy-you" class="level3">
+<h3 class="anchored" data-anchor-id="what-n-grams-buy-you">What n-grams buy you</h3>
+<ul>
+<li>Capture <strong>local word order</strong>: <code>"not recover"</code> is its own feature, distinct from <code>"recover"</code>.</li>
+<li>Capture <strong>phrases</strong>: <code>"premier league"</code>, <code>"manchester united"</code>, <code>"manager amorim"</code>.</li>
+<li>Capture <strong>idioms</strong> the BoW can’t see: <code>"under pressure"</code>, <code>"on the brink"</code>.</li>
+</ul>
+</section>
+<section id="the-cost" class="level3">
+<h3 class="anchored" data-anchor-id="the-cost">The cost</h3>
+<p>Vocabulary explodes. A corpus with 10,000 unigrams can easily have 200,000 bigrams, most of them appearing once. You’ll typically cap n-gram features by <strong>minimum document frequency</strong> (e.g., keep a bigram only if it appears in at least 5 documents).</p>
+</section>
+<section id="how-in-code" class="level3">
+<h3 class="anchored" data-anchor-id="how-in-code">How in code</h3>
+<p><code>scikit-learn</code>’s <code>CountVectorizer</code> handles this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> CountVectorizer</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>vec <span class="op">=</span> CountVectorizer(ngram_range<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">2</span>), min_df<span class="op">=</span><span class="dv">2</span>, stop_words<span class="op">=</span><span class="st">'english'</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> vec.fit_transform(list_of_documents)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>ngram_range=(1, 2)</code> means “unigrams and bigrams”; <code>min_df=2</code> means “drop anything appearing in fewer than 2 documents.”</p>
+<hr>
+</section>
+</section>
+<section id="tf-idf" class="level2">
+<h2 class="anchored" data-anchor-id="tf-idf">6. TF-IDF</h2>
+<p>Bag of Words and n-grams tell you <em>what’s in</em> a document. They don’t tell you what’s <strong>distinctive</strong> about it.</p>
+<p>If every Premier League post-match article mentions “game”, “half”, “team”, and “player”, those words tell you nothing about a specific article. They’re noise dressed up as signal.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>TF-IDF</strong> (Term Frequency × Inverse Document Frequency) weights each token by how often it appears in <em>this</em> document, down-weighted by how often it appears across <em>all</em> documents.</p>
+</div>
+</div>
+<section id="the-formulas" class="level3">
+<h3 class="anchored" data-anchor-id="the-formulas">The formulas</h3>
+<ul>
+<li><strong>TF (term frequency):</strong> how often term <em>t</em> appears in document <em>d</em>.</li>
+<li><strong>DF (document frequency):</strong> how many documents contain term <em>t</em>.</li>
+<li><strong>IDF (inverse document frequency):</strong> <code>log(N / DF)</code>, where <em>N</em> is the total number of documents.</li>
+<li><strong>TF-IDF:</strong> <code>TF × IDF</code>.</li>
+</ul>
+<p>A word that appears everywhere has <code>DF = N</code>, so <code>IDF = log(1) = 0</code>, so its TF-IDF is zero. A word that appears in only one document out of 10,000 has a high IDF and, if it appears several times in that one document, a very high TF-IDF.</p>
+</section>
+<section id="applied-to-our-setup" class="level3">
+<h3 class="anchored" data-anchor-id="applied-to-our-setup">Applied to our setup</h3>
+<p>Imagine a corpus of 500 post-match articles about Premier League clubs. For the Amorim article:</p>
+<ul>
+<li><strong>Low TF-IDF</strong> (common across all articles): <code>game</code>, <code>half</code>, <code>team</code>, <code>player</code>, <code>manager</code>, <code>coach</code>, <code>goal</code></li>
+<li><strong>High TF-IDF</strong> (distinctive to this article): <code>try</code>, <code>recover</code>, <code>mental strength</code>, <code>five minutes</code>, <code>different feeling</code></li>
+</ul>
+<p>TF-IDF is doing exactly what a human skim-reader does: ignore the boilerplate, notice the unusual.</p>
+</section>
+<section id="in-code" class="level3">
+<h3 class="anchored" data-anchor-id="in-code">In code</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> TfidfVectorizer</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>vec <span class="op">=</span> TfidfVectorizer(ngram_range<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">2</span>), min_df<span class="op">=</span><span class="dv">5</span>, stop_words<span class="op">=</span><span class="st">'english'</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> vec.fit_transform(list_of_documents)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Same interface as <code>CountVectorizer</code>, different weighting.</p>
+<hr>
+</section>
+</section>
+<section id="what-bow-n-grams-tf-idf-cant-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-bow-n-grams-tf-idf-cant-do">7. What BoW + n-grams + TF-IDF can’t do</h2>
+<p>The tools above are <strong>sparse</strong> — every token is its own feature, with no built-in relationship to any other. That has real limits.</p>
+<ol type="1">
+<li><strong>No synonyms.</strong> <code>"manager"</code> and <code>"coach"</code> and <code>"boss"</code> are three different features. The model has to learn from scratch that they’re related.</li>
+<li><strong>No context.</strong> <code>"bank"</code> (financial) and <code>"bank"</code> (river) are the same token.</li>
+<li><strong>No world knowledge.</strong> The model doesn’t know that “two quickfire goals” is bad news for the defending team.</li>
+<li><strong>Negation is brittle.</strong> <code>"not recover"</code> as a bigram helps, but <code>"we did not, in the end, recover"</code> defeats bigrams.</li>
+</ol>
+<p>The next generation of tools — <strong>word embeddings</strong> (Word2Vec, GloVe), <strong>contextual embeddings</strong> (BERT), and <strong>LLMs</strong> (Claude, GPT) — each relax one of these constraints. Embeddings give you synonymy. Contextual embeddings give you sense disambiguation. LLMs give you world knowledge and can handle arbitrary negation.</p>
+<p>But the sparse tools above are not obsolete:</p>
+<ul>
+<li>They’re <strong>fast</strong> (milliseconds vs.&nbsp;seconds per document)</li>
+<li>They’re <strong>transparent</strong> (you can read the features)</li>
+<li>They’re <strong>cheap</strong> (no API calls, no GPUs)</li>
+<li>They’re a <strong>strong baseline</strong> (often within a few points of expensive models on classification tasks)</li>
+</ul>
+<p>When you call an LLM to do text analysis, you are skipping steps 1–6 of the pipeline. That’s fine — but knowing what you’ve skipped helps you reason about why the LLM gave you the answer it did, and where it might fail.</p>
+<hr>
+</section>
+<section id="how-this-connects-to-the-capstone" class="level2">
+<h2 class="anchored" data-anchor-id="how-this-connects-to-the-capstone">How this connects to the capstone</h2>
+<p>In <a href="../project02/index.html">Session 2</a> you score news articles about football managers. You will <strong>not</strong> write a tokenizer or a TF-IDF pipeline — you’ll send the article text to an LLM and ask for a number. But every decision you make still maps onto the vocabulary above:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Capstone choice</th>
+<th>NLP concept</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Which articles go into the corpus?</td>
+<td>Document selection</td>
+</tr>
+<tr class="even">
+<td>Strip HTML/ads before sending to the LLM?</td>
+<td>Normalization</td>
+</tr>
+<tr class="odd">
+<td>One article at a time, or batched?</td>
+<td>Document vs.&nbsp;corpus</td>
+</tr>
+<tr class="even">
+<td>Average scores within a gameweek?</td>
+<td>Aggregation across a window</td>
+</tr>
+<tr class="odd">
+<td>Keep quotes/names or paraphrase?</td>
+<td>Feature preservation</td>
+</tr>
+</tbody>
+</table>
+<p>The LLM replaces the middle of the pipeline. The choices at the edges — what goes in, what you do with the output — are still yours.</p>
+<hr>
+</section>
+<section id="quick-reference-cheatsheet" class="level2">
+<h2 class="anchored" data-anchor-id="quick-reference-cheatsheet">Quick-reference cheatsheet</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>What it does</th>
+<th>Typical library</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tokenization</td>
+<td>Split text into tokens</td>
+<td><code>nltk.word_tokenize</code>, <code>spacy</code></td>
+</tr>
+<tr class="even">
+<td>Lowercasing</td>
+<td><code>"We"</code> → <code>"we"</code></td>
+<td><code>str.lower()</code></td>
+</tr>
+<tr class="odd">
+<td>Stopword removal</td>
+<td>Drop <code>the</code>, <code>of</code>, <code>is</code>, …</td>
+<td><code>nltk.corpus.stopwords</code></td>
+</tr>
+<tr class="even">
+<td>Stemming</td>
+<td><code>"trying"</code> → <code>"tri"</code></td>
+<td><code>PorterStemmer</code></td>
+</tr>
+<tr class="odd">
+<td>Lemmatization</td>
+<td><code>"trying"</code> → <code>"try"</code></td>
+<td><code>WordNetLemmatizer</code>, <code>spacy</code></td>
+</tr>
+<tr class="even">
+<td>BoW</td>
+<td>Count tokens per document</td>
+<td><code>CountVectorizer</code></td>
+</tr>
+<tr class="odd">
+<td>N-grams</td>
+<td>Count token sequences</td>
+<td><code>CountVectorizer(ngram_range=...)</code></td>
+</tr>
+<tr class="even">
+<td>TF-IDF</td>
+<td>Count × inverse document frequency</td>
+<td><code>TfidfVectorizer</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+<ul>
+<li><a href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Language Processing (Jurafsky &amp; Martin)</a> — the standard NLP textbook, free online.</li>
+<li><a href="https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html">scikit-learn: Working with text data</a></li>
+<li><a href="https://spacy.io/usage/spacy-101">spaCy 101</a> — modern tokenization and linguistic features.</li>
+<li><a href="https://huggingface.co/docs/tokenizers">Hugging Face Tokenizers</a> — if you’re curious about the sub-word tokenizers that LLMs use.</li>
+</ul>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/gabors-data-analysis\.com\/ai-course");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "NLP Basics — Text as Data"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Core concepts for turning text into something you can count, compare, and model"</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-04-20"</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why this page</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>A lot of interesting questions live in text: news articles, earnings calls, interviews, reviews, policy documents. Before you can run any analysis on text, you have to turn it into something numeric — tokens, counts, vectors.</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>This page is a **30-minute primer** on the vocabulary and the pipeline. It's what you need to understand before Session 2 of the capstone, where you'll ask an LLM to turn news articles into a numeric expectation score for manager changes.</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>We intentionally stop **before sentiment analysis and embeddings** — those build on everything here, but they come next.</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## The running example</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>Everything below uses the same short Reuters excerpt — a post-match quote from Manchester United manager Ruben Amorim after a 2-2 draw at Nottingham Forest on 1 November 2025:</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "We lost control of the game for five minutes. But my feeling is that the players tried, really tried. They tried during the week and they tried today. In the past, if we had this kind of bad five minutes and we suffered two goals, we didn't recover. Today is a different feeling."</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>Short enough to work through by hand, long enough to see every step matter.</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## The pipeline</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>Every classical text-as-data workflow looks roughly the same:</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="in">Raw text</span></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="in">   │</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a><span class="in">   ▼</span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a><span class="in">Tokenization         ← split into units</span></span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a><span class="in">   │</span></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a><span class="in">   ▼</span></span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a><span class="in">Normalization        ← lowercase, strip punctuation, remove stopwords</span></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a><span class="in">   │</span></span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a><span class="in">   ▼</span></span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a><span class="in">Stemming / Lemmatization   ← collapse word variants</span></span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a><span class="in">   │</span></span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a><span class="in">   ▼</span></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="in">Feature extraction   ← Bag of Words, n-grams, TF-IDF</span></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a><span class="in">   │</span></span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a><span class="in">   ▼</span></span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a><span class="in">Analysis             ← counts, classification, regression, LLM scoring</span></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>Each step is a **choice**. Different choices give you different numbers, and different numbers give you different answers. Being able to name each step is half the battle.</span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Tokenization</span></span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a>**Tokenization** is breaking a string of text into smaller units called **tokens**. Usually words, sometimes punctuation, sometimes sub-word pieces.</span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>Take the first sentence of our quote:</span>
+<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "We lost control of the game for five minutes."</span></span>
+<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a><span class="fu">### Whitespace tokenization</span></span>
+<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a>The simplest thing: split on spaces.</span>
+<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="st">"We lost control of the game for five minutes."</span></span>
+<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> text.split()</span>
+<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a><span class="co"># ['We', 'lost', 'control', 'of', 'the', 'game', 'for', 'five', 'minutes.']</span></span>
+<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a>Fast, but the last token is <span class="in">`"minutes."`</span> — the period is glued on. That's a problem: <span class="in">`"minutes"`</span> and <span class="in">`"minutes."`</span> look like different words to a computer.</span>
+<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a><span class="fu">### Word tokenization with a library</span></span>
+<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a>Libraries like **NLTK** or **spaCy** handle punctuation properly:</span>
+<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.tokenize <span class="im">import</span> word_tokenize</span>
+<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> word_tokenize(<span class="st">"We lost control of the game for five minutes."</span>)</span>
+<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a><span class="co"># ['We', 'lost', 'control', 'of', 'the', 'game', 'for', 'five', 'minutes', '.']</span></span>
+<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a>Now the period is its own token. You can keep it or drop it.</span>
+<span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a><span class="fu">### Sub-word tokenization (what LLMs use)</span></span>
+<span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a>Modern LLMs (Claude, GPT, Gemini) don't use word tokenization. They use **sub-word** tokenizers like Byte-Pair Encoding (BPE). A word like <span class="in">`"Nottingham"`</span> might become two tokens: <span class="in">`"Not"`</span> + <span class="in">`"tingham"`</span>. A rare word like <span class="in">`"Amorim"`</span> might be three or four pieces.</span>
+<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-93"><a href="#cb12-93" aria-hidden="true" tabindex="-1"></a>This matters because:</span>
+<span id="cb12-94"><a href="#cb12-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-95"><a href="#cb12-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Cost and limits are in tokens**, not words. A 1,000-word article is usually 1,300–1,500 tokens.</span>
+<span id="cb12-96"><a href="#cb12-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**LLMs "see" sub-words**, which is why they can handle misspellings and new words they've never seen.</span>
+<span id="cb12-97"><a href="#cb12-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You do **not** need to tokenize yourself when you call an LLM API. The API does it for you.</span>
+<span id="cb12-98"><a href="#cb12-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-99"><a href="#cb12-99" aria-hidden="true" tabindex="-1"></a>**Rule of thumb for English:** 1 token ≈ 0.75 words, or about 4 characters.</span>
+<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a><span class="fu">### Why it matters</span></span>
+<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a>Tokenization is the foundation. Every later step operates on tokens, not raw text. A bad tokenizer — one that splits <span class="in">`"Man United"`</span> into <span class="in">`"Man"`</span> and <span class="in">`"United"`</span> — throws away meaning that downstream steps can't recover.</span>
+<span id="cb12-104"><a href="#cb12-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-105"><a href="#cb12-105" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-106"><a href="#cb12-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-107"><a href="#cb12-107" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Normalization</span></span>
+<span id="cb12-108"><a href="#cb12-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a>Once you have tokens, you typically clean them up.</span>
+<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a><span class="fu">### Lowercasing</span></span>
+<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a><span class="in">`"We"`</span> and <span class="in">`"we"`</span> are the same word for most purposes. Most pipelines lowercase everything:</span>
+<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> [t.lower() <span class="cf">for</span> t <span class="kw">in</span> tokens]</span>
+<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a><span class="co"># ['we', 'lost', 'control', 'of', 'the', 'game', 'for', 'five', 'minutes', '.']</span></span>
+<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-120"><a href="#cb12-120" aria-hidden="true" tabindex="-1"></a>**When not to lowercase:** if casing carries information (e.g., named entities like <span class="in">`"United"`</span> the club vs. <span class="in">`"united"`</span> the adjective, or sentiment cues like <span class="in">`"AMAZING"`</span>).</span>
+<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a><span class="fu">### Removing punctuation</span></span>
+<span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb12-125"><a href="#cb12-125" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> [t <span class="cf">for</span> t <span class="kw">in</span> tokens <span class="cf">if</span> t.isalpha()]</span>
+<span id="cb12-126"><a href="#cb12-126" aria-hidden="true" tabindex="-1"></a><span class="co"># ['we', 'lost', 'control', 'of', 'the', 'game', 'for', 'five', 'minutes']</span></span>
+<span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-128"><a href="#cb12-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-129"><a href="#cb12-129" aria-hidden="true" tabindex="-1"></a><span class="fu">### Removing stopwords</span></span>
+<span id="cb12-130"><a href="#cb12-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-131"><a href="#cb12-131" aria-hidden="true" tabindex="-1"></a>**Stopwords** are very common words that carry little meaning on their own: <span class="in">`the`</span>, <span class="in">`of`</span>, <span class="in">`a`</span>, <span class="in">`is`</span>, <span class="in">`we`</span>, <span class="in">`and`</span>. Dropping them focuses the analysis on content words.</span>
+<span id="cb12-132"><a href="#cb12-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-133"><a href="#cb12-133" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb12-134"><a href="#cb12-134" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.corpus <span class="im">import</span> stopwords</span>
+<span id="cb12-135"><a href="#cb12-135" aria-hidden="true" tabindex="-1"></a>stop <span class="op">=</span> <span class="bu">set</span>(stopwords.words(<span class="st">'english'</span>))</span>
+<span id="cb12-136"><a href="#cb12-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-137"><a href="#cb12-137" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> [t <span class="cf">for</span> t <span class="kw">in</span> tokens <span class="cf">if</span> t <span class="kw">not</span> <span class="kw">in</span> stop]</span>
+<span id="cb12-138"><a href="#cb12-138" aria-hidden="true" tabindex="-1"></a><span class="co"># ['lost', 'control', 'game', 'five', 'minutes']</span></span>
+<span id="cb12-139"><a href="#cb12-139" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-140"><a href="#cb12-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-141"><a href="#cb12-141" aria-hidden="true" tabindex="-1"></a>From 10 tokens down to 5. The sentence's *gist* — "lost control of the game" — survives.</span>
+<span id="cb12-142"><a href="#cb12-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-143"><a href="#cb12-143" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb12-144"><a href="#cb12-144" aria-hidden="true" tabindex="-1"></a>**Stopwords are not always safe to drop.** <span class="in">`"not"`</span> is a stopword in most lists, but <span class="in">`"not recover"`</span> and <span class="in">`"recover"`</span> mean opposite things. For any analysis that cares about negation, keep stopwords.</span>
+<span id="cb12-145"><a href="#cb12-145" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-146"><a href="#cb12-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-147"><a href="#cb12-147" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-148"><a href="#cb12-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-149"><a href="#cb12-149" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Stemming vs. Lemmatization</span></span>
+<span id="cb12-150"><a href="#cb12-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-151"><a href="#cb12-151" aria-hidden="true" tabindex="-1"></a>Many words come in variants: *try*, *tried*, *trying*, *tries*. For most counting tasks you want to treat them as one thing.</span>
+<span id="cb12-152"><a href="#cb12-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-153"><a href="#cb12-153" aria-hidden="true" tabindex="-1"></a><span class="fu">### Stemming</span></span>
+<span id="cb12-154"><a href="#cb12-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-155"><a href="#cb12-155" aria-hidden="true" tabindex="-1"></a>A **stemmer** chops off common endings using simple rules. Fast, crude, sometimes produces non-words.</span>
+<span id="cb12-156"><a href="#cb12-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-157"><a href="#cb12-157" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb12-158"><a href="#cb12-158" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.stem <span class="im">import</span> PorterStemmer</span>
+<span id="cb12-159"><a href="#cb12-159" aria-hidden="true" tabindex="-1"></a>stem <span class="op">=</span> PorterStemmer()</span>
+<span id="cb12-160"><a href="#cb12-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-161"><a href="#cb12-161" aria-hidden="true" tabindex="-1"></a>[stem.stem(w) <span class="cf">for</span> w <span class="kw">in</span> [<span class="st">'tried'</span>, <span class="st">'trying'</span>, <span class="st">'tries'</span>, <span class="st">'recover'</span>, <span class="st">'recovered'</span>]]</span>
+<span id="cb12-162"><a href="#cb12-162" aria-hidden="true" tabindex="-1"></a><span class="co"># ['tri', 'tri', 'tri', 'recov', 'recov']</span></span>
+<span id="cb12-163"><a href="#cb12-163" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-164"><a href="#cb12-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-165"><a href="#cb12-165" aria-hidden="true" tabindex="-1"></a>Notice <span class="in">`"tried"`</span> → <span class="in">`"tri"`</span>. That's not a real word — but all three forms collapse to the same token, which is what we wanted.</span>
+<span id="cb12-166"><a href="#cb12-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-167"><a href="#cb12-167" aria-hidden="true" tabindex="-1"></a><span class="fu">### Lemmatization</span></span>
+<span id="cb12-168"><a href="#cb12-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-169"><a href="#cb12-169" aria-hidden="true" tabindex="-1"></a>A **lemmatizer** uses a dictionary to return the proper base form (the *lemma*). Slower, more accurate.</span>
+<span id="cb12-170"><a href="#cb12-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-171"><a href="#cb12-171" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb12-172"><a href="#cb12-172" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.stem <span class="im">import</span> WordNetLemmatizer</span>
+<span id="cb12-173"><a href="#cb12-173" aria-hidden="true" tabindex="-1"></a>lem <span class="op">=</span> WordNetLemmatizer()</span>
+<span id="cb12-174"><a href="#cb12-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-175"><a href="#cb12-175" aria-hidden="true" tabindex="-1"></a>[lem.lemmatize(w, pos<span class="op">=</span><span class="st">'v'</span>) <span class="cf">for</span> w <span class="kw">in</span> [<span class="st">'tried'</span>, <span class="st">'trying'</span>, <span class="st">'tries'</span>, <span class="st">'recover'</span>, <span class="st">'recovered'</span>]]</span>
+<span id="cb12-176"><a href="#cb12-176" aria-hidden="true" tabindex="-1"></a><span class="co"># ['try', 'try', 'try', 'recover', 'recover']</span></span>
+<span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-179"><a href="#cb12-179" aria-hidden="true" tabindex="-1"></a>Now we get real words: <span class="in">`"try"`</span>, <span class="in">`"recover"`</span>.</span>
+<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a><span class="fu">### Which should you use?</span></span>
+<span id="cb12-182"><a href="#cb12-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-183"><a href="#cb12-183" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="pp">|</span> Stemming <span class="pp">|</span> Lemmatization <span class="pp">|</span></span>
+<span id="cb12-184"><a href="#cb12-184" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Speed <span class="pp">|</span> Fast <span class="pp">|</span> Slower <span class="pp">|</span></span>
+<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Output <span class="pp">|</span> Sometimes non-words <span class="pp">|</span> Real dictionary words <span class="pp">|</span></span>
+<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Accuracy <span class="pp">|</span> Lower <span class="pp">|</span> Higher <span class="pp">|</span></span>
+<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Needs POS tag? <span class="pp">|</span> No <span class="pp">|</span> Often yes <span class="pp">|</span></span>
+<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Typical use <span class="pp">|</span> Large corpora, search <span class="pp">|</span> Analysis where interpretability matters <span class="pp">|</span></span>
+<span id="cb12-190"><a href="#cb12-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-191"><a href="#cb12-191" aria-hidden="true" tabindex="-1"></a>For a small research corpus where you'll read the tokens yourself, **lemmatize**. For billion-document search, **stem**.</span>
+<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a><span class="fu">### Applied to our excerpt</span></span>
+<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-195"><a href="#cb12-195" aria-hidden="true" tabindex="-1"></a>After tokenizing, lowercasing, removing punctuation and stopwords, and lemmatizing verbs, the Amorim quote reduces to roughly:</span>
+<span id="cb12-196"><a href="#cb12-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a><span class="in">['lose', 'control', 'game', 'five', 'minute', 'feel', 'player', 'try',</span></span>
+<span id="cb12-199"><a href="#cb12-199" aria-hidden="true" tabindex="-1"></a><span class="in"> 'really', 'try', 'try', 'week', 'try', 'today', 'past', 'kind', 'bad',</span></span>
+<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a><span class="in"> 'five', 'minute', 'suffer', 'two', 'goal', 'recover', 'today',</span></span>
+<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a><span class="in"> 'different', 'feel']</span></span>
+<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a>26 tokens left from about 65 words. Already you can see the shape of the text: **try** appears four times; **minute** and **today** twice; **feel** twice; **recover** once. Without reading it, you can already guess this is a quote about *effort* and *resilience*.</span>
+<span id="cb12-205"><a href="#cb12-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-206"><a href="#cb12-206" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Bag of Words</span></span>
+<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a>**Bag of Words (BoW)** represents a document as the set of its tokens and how often each one appears — ignoring grammar and order.</span>
+<span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a>Take the cleaned token list above and count:</span>
+<span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> token <span class="pp">|</span> count <span class="pp">|</span></span>
+<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> try <span class="pp">|</span> 4 <span class="pp">|</span></span>
+<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> minute <span class="pp">|</span> 2 <span class="pp">|</span></span>
+<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> today <span class="pp">|</span> 2 <span class="pp">|</span></span>
+<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> feel <span class="pp">|</span> 2 <span class="pp">|</span></span>
+<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> five <span class="pp">|</span> 2 <span class="pp">|</span></span>
+<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> lose <span class="pp">|</span> 1 <span class="pp">|</span></span>
+<span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> control <span class="pp">|</span> 1 <span class="pp">|</span></span>
+<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> game <span class="pp">|</span> 1 <span class="pp">|</span></span>
+<span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> player <span class="pp">|</span> 1 <span class="pp">|</span></span>
+<span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> suffer <span class="pp">|</span> 1 <span class="pp">|</span></span>
+<span id="cb12-228"><a href="#cb12-228" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> goal <span class="pp">|</span> 1 <span class="pp">|</span></span>
+<span id="cb12-229"><a href="#cb12-229" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> recover <span class="pp">|</span> 1 <span class="pp">|</span></span>
+<span id="cb12-230"><a href="#cb12-230" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> different <span class="pp">|</span> 1 <span class="pp">|</span></span>
+<span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ... <span class="pp">|</span> ... <span class="pp">|</span></span>
+<span id="cb12-232"><a href="#cb12-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-233"><a href="#cb12-233" aria-hidden="true" tabindex="-1"></a>That's the bag. A Python dict, a pandas Series, a sparse vector — same idea.</span>
+<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a><span class="fu">### What you can do with a BoW</span></span>
+<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Summarize** a document at a glance (top words)</span>
+<span id="cb12-238"><a href="#cb12-238" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Compare** documents (cosine similarity between their vectors)</span>
+<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Classify** documents (logistic regression on BoW vectors is a surprisingly strong baseline)</span>
+<span id="cb12-240"><a href="#cb12-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Track change over time** (BoW for this week's articles vs. last week's)</span>
+<span id="cb12-241"><a href="#cb12-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a><span class="fu">### What BoW throws away</span></span>
+<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a>This is the crucial part. BoW knows nothing about:</span>
+<span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Word order.** <span class="in">`"We lost control"`</span> and <span class="in">`"control we lost"`</span> are identical bags.</span>
+<span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Negation.** <span class="in">`"did not recover"`</span> counts <span class="in">`"recover"`</span> as a positive appearance.</span>
+<span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Multi-word expressions.** <span class="in">`"Premier League"`</span> becomes two separate tokens.</span>
+<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Context.** <span class="in">`"bad five minutes"`</span> and <span class="in">`"bad loss"`</span> both contribute one <span class="in">`"bad"`</span>.</span>
+<span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a>The next three sections each patch one of these holes.</span>
+<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. N-grams</span></span>
+<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a>An **n-gram** is a sequence of *n* consecutive tokens. **Bigrams** are pairs; **trigrams** are triples.</span>
+<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a>From the cleaned Amorim tokens, some bigrams:</span>
+<span id="cb12-260"><a href="#cb12-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-261"><a href="#cb12-261" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`("lose", "control")`</span></span>
+<span id="cb12-262"><a href="#cb12-262" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`("really", "try")`</span></span>
+<span id="cb12-263"><a href="#cb12-263" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`("bad", "minute")`</span> (after collapsing "five bad minutes" → roughly this)</span>
+<span id="cb12-264"><a href="#cb12-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`("different", "feel")`</span></span>
+<span id="cb12-265"><a href="#cb12-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-266"><a href="#cb12-266" aria-hidden="true" tabindex="-1"></a>And some trigrams:</span>
+<span id="cb12-267"><a href="#cb12-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-268"><a href="#cb12-268" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`("try", "really", "try")`</span></span>
+<span id="cb12-269"><a href="#cb12-269" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`("mental", "strength", "secure")`</span> (from the full article)</span>
+<span id="cb12-270"><a href="#cb12-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-271"><a href="#cb12-271" aria-hidden="true" tabindex="-1"></a><span class="fu">### What n-grams buy you</span></span>
+<span id="cb12-272"><a href="#cb12-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-273"><a href="#cb12-273" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Capture **local word order**: <span class="in">`"not recover"`</span> is its own feature, distinct from <span class="in">`"recover"`</span>.</span>
+<span id="cb12-274"><a href="#cb12-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Capture **phrases**: <span class="in">`"premier league"`</span>, <span class="in">`"manchester united"`</span>, <span class="in">`"manager amorim"`</span>.</span>
+<span id="cb12-275"><a href="#cb12-275" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Capture **idioms** the BoW can't see: <span class="in">`"under pressure"`</span>, <span class="in">`"on the brink"`</span>.</span>
+<span id="cb12-276"><a href="#cb12-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-277"><a href="#cb12-277" aria-hidden="true" tabindex="-1"></a><span class="fu">### The cost</span></span>
+<span id="cb12-278"><a href="#cb12-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-279"><a href="#cb12-279" aria-hidden="true" tabindex="-1"></a>Vocabulary explodes. A corpus with 10,000 unigrams can easily have 200,000 bigrams, most of them appearing once. You'll typically cap n-gram features by **minimum document frequency** (e.g., keep a bigram only if it appears in at least 5 documents).</span>
+<span id="cb12-280"><a href="#cb12-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-281"><a href="#cb12-281" aria-hidden="true" tabindex="-1"></a><span class="fu">### How in code</span></span>
+<span id="cb12-282"><a href="#cb12-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-283"><a href="#cb12-283" aria-hidden="true" tabindex="-1"></a><span class="in">`scikit-learn`</span>'s <span class="in">`CountVectorizer`</span> handles this:</span>
+<span id="cb12-284"><a href="#cb12-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-285"><a href="#cb12-285" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb12-286"><a href="#cb12-286" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> CountVectorizer</span>
+<span id="cb12-287"><a href="#cb12-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-288"><a href="#cb12-288" aria-hidden="true" tabindex="-1"></a>vec <span class="op">=</span> CountVectorizer(ngram_range<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">2</span>), min_df<span class="op">=</span><span class="dv">2</span>, stop_words<span class="op">=</span><span class="st">'english'</span>)</span>
+<span id="cb12-289"><a href="#cb12-289" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> vec.fit_transform(list_of_documents)</span>
+<span id="cb12-290"><a href="#cb12-290" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-291"><a href="#cb12-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-292"><a href="#cb12-292" aria-hidden="true" tabindex="-1"></a><span class="in">`ngram_range=(1, 2)`</span> means "unigrams and bigrams"; <span class="in">`min_df=2`</span> means "drop anything appearing in fewer than 2 documents."</span>
+<span id="cb12-293"><a href="#cb12-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-294"><a href="#cb12-294" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-295"><a href="#cb12-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-296"><a href="#cb12-296" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6. TF-IDF</span></span>
+<span id="cb12-297"><a href="#cb12-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-298"><a href="#cb12-298" aria-hidden="true" tabindex="-1"></a>Bag of Words and n-grams tell you *what's in* a document. They don't tell you what's **distinctive** about it.</span>
+<span id="cb12-299"><a href="#cb12-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-300"><a href="#cb12-300" aria-hidden="true" tabindex="-1"></a>If every Premier League post-match article mentions "game", "half", "team", and "player", those words tell you nothing about a specific article. They're noise dressed up as signal.</span>
+<span id="cb12-301"><a href="#cb12-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-302"><a href="#cb12-302" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb12-303"><a href="#cb12-303" aria-hidden="true" tabindex="-1"></a>**TF-IDF** (Term Frequency × Inverse Document Frequency) weights each token by how often it appears in *this* document, down-weighted by how often it appears across *all* documents.</span>
+<span id="cb12-304"><a href="#cb12-304" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-305"><a href="#cb12-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-306"><a href="#cb12-306" aria-hidden="true" tabindex="-1"></a><span class="fu">### The formulas</span></span>
+<span id="cb12-307"><a href="#cb12-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-308"><a href="#cb12-308" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**TF (term frequency):** how often term *t* appears in document *d*.</span>
+<span id="cb12-309"><a href="#cb12-309" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**DF (document frequency):** how many documents contain term *t*.</span>
+<span id="cb12-310"><a href="#cb12-310" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**IDF (inverse document frequency):** <span class="in">`log(N / DF)`</span>, where *N* is the total number of documents.</span>
+<span id="cb12-311"><a href="#cb12-311" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**TF-IDF:** <span class="in">`TF × IDF`</span>.</span>
+<span id="cb12-312"><a href="#cb12-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-313"><a href="#cb12-313" aria-hidden="true" tabindex="-1"></a>A word that appears everywhere has <span class="in">`DF = N`</span>, so <span class="in">`IDF = log(1) = 0`</span>, so its TF-IDF is zero. A word that appears in only one document out of 10,000 has a high IDF and, if it appears several times in that one document, a very high TF-IDF.</span>
+<span id="cb12-314"><a href="#cb12-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-315"><a href="#cb12-315" aria-hidden="true" tabindex="-1"></a><span class="fu">### Applied to our setup</span></span>
+<span id="cb12-316"><a href="#cb12-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-317"><a href="#cb12-317" aria-hidden="true" tabindex="-1"></a>Imagine a corpus of 500 post-match articles about Premier League clubs. For the Amorim article:</span>
+<span id="cb12-318"><a href="#cb12-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-319"><a href="#cb12-319" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Low TF-IDF** (common across all articles): <span class="in">`game`</span>, <span class="in">`half`</span>, <span class="in">`team`</span>, <span class="in">`player`</span>, <span class="in">`manager`</span>, <span class="in">`coach`</span>, <span class="in">`goal`</span></span>
+<span id="cb12-320"><a href="#cb12-320" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**High TF-IDF** (distinctive to this article): <span class="in">`try`</span>, <span class="in">`recover`</span>, <span class="in">`mental strength`</span>, <span class="in">`five minutes`</span>, <span class="in">`different feeling`</span></span>
+<span id="cb12-321"><a href="#cb12-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-322"><a href="#cb12-322" aria-hidden="true" tabindex="-1"></a>TF-IDF is doing exactly what a human skim-reader does: ignore the boilerplate, notice the unusual.</span>
+<span id="cb12-323"><a href="#cb12-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-324"><a href="#cb12-324" aria-hidden="true" tabindex="-1"></a><span class="fu">### In code</span></span>
+<span id="cb12-325"><a href="#cb12-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-326"><a href="#cb12-326" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb12-327"><a href="#cb12-327" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> TfidfVectorizer</span>
+<span id="cb12-328"><a href="#cb12-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-329"><a href="#cb12-329" aria-hidden="true" tabindex="-1"></a>vec <span class="op">=</span> TfidfVectorizer(ngram_range<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">2</span>), min_df<span class="op">=</span><span class="dv">5</span>, stop_words<span class="op">=</span><span class="st">'english'</span>)</span>
+<span id="cb12-330"><a href="#cb12-330" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> vec.fit_transform(list_of_documents)</span>
+<span id="cb12-331"><a href="#cb12-331" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-332"><a href="#cb12-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-333"><a href="#cb12-333" aria-hidden="true" tabindex="-1"></a>Same interface as <span class="in">`CountVectorizer`</span>, different weighting.</span>
+<span id="cb12-334"><a href="#cb12-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-335"><a href="#cb12-335" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-336"><a href="#cb12-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-337"><a href="#cb12-337" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7. What BoW + n-grams + TF-IDF can't do</span></span>
+<span id="cb12-338"><a href="#cb12-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-339"><a href="#cb12-339" aria-hidden="true" tabindex="-1"></a>The tools above are **sparse** — every token is its own feature, with no built-in relationship to any other. That has real limits.</span>
+<span id="cb12-340"><a href="#cb12-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-341"><a href="#cb12-341" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**No synonyms.** <span class="in">`"manager"`</span> and <span class="in">`"coach"`</span> and <span class="in">`"boss"`</span> are three different features. The model has to learn from scratch that they're related.</span>
+<span id="cb12-342"><a href="#cb12-342" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**No context.** <span class="in">`"bank"`</span> (financial) and <span class="in">`"bank"`</span> (river) are the same token.</span>
+<span id="cb12-343"><a href="#cb12-343" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**No world knowledge.** The model doesn't know that "two quickfire goals" is bad news for the defending team.</span>
+<span id="cb12-344"><a href="#cb12-344" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Negation is brittle.** <span class="in">`"not recover"`</span> as a bigram helps, but <span class="in">`"we did not, in the end, recover"`</span> defeats bigrams.</span>
+<span id="cb12-345"><a href="#cb12-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-346"><a href="#cb12-346" aria-hidden="true" tabindex="-1"></a>The next generation of tools — **word embeddings** (Word2Vec, GloVe), **contextual embeddings** (BERT), and **LLMs** (Claude, GPT) — each relax one of these constraints. Embeddings give you synonymy. Contextual embeddings give you sense disambiguation. LLMs give you world knowledge and can handle arbitrary negation.</span>
+<span id="cb12-347"><a href="#cb12-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-348"><a href="#cb12-348" aria-hidden="true" tabindex="-1"></a>But the sparse tools above are not obsolete:</span>
+<span id="cb12-349"><a href="#cb12-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-350"><a href="#cb12-350" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They're **fast** (milliseconds vs. seconds per document)</span>
+<span id="cb12-351"><a href="#cb12-351" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They're **transparent** (you can read the features)</span>
+<span id="cb12-352"><a href="#cb12-352" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They're **cheap** (no API calls, no GPUs)</span>
+<span id="cb12-353"><a href="#cb12-353" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>They're a **strong baseline** (often within a few points of expensive models on classification tasks)</span>
+<span id="cb12-354"><a href="#cb12-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-355"><a href="#cb12-355" aria-hidden="true" tabindex="-1"></a>When you call an LLM to do text analysis, you are skipping steps 1–6 of the pipeline. That's fine — but knowing what you've skipped helps you reason about why the LLM gave you the answer it did, and where it might fail.</span>
+<span id="cb12-356"><a href="#cb12-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-357"><a href="#cb12-357" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-358"><a href="#cb12-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-359"><a href="#cb12-359" aria-hidden="true" tabindex="-1"></a><span class="fu">## How this connects to the capstone</span></span>
+<span id="cb12-360"><a href="#cb12-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-361"><a href="#cb12-361" aria-hidden="true" tabindex="-1"></a>In <span class="co">[</span><span class="ot">Session 2</span><span class="co">](../project02/index.qmd)</span> you score news articles about football managers. You will **not** write a tokenizer or a TF-IDF pipeline — you'll send the article text to an LLM and ask for a number. But every decision you make still maps onto the vocabulary above:</span>
+<span id="cb12-362"><a href="#cb12-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-363"><a href="#cb12-363" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capstone choice <span class="pp">|</span> NLP concept <span class="pp">|</span></span>
+<span id="cb12-364"><a href="#cb12-364" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb12-365"><a href="#cb12-365" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Which articles go into the corpus? <span class="pp">|</span> Document selection <span class="pp">|</span></span>
+<span id="cb12-366"><a href="#cb12-366" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Strip HTML/ads before sending to the LLM? <span class="pp">|</span> Normalization <span class="pp">|</span></span>
+<span id="cb12-367"><a href="#cb12-367" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> One article at a time, or batched? <span class="pp">|</span> Document vs. corpus <span class="pp">|</span></span>
+<span id="cb12-368"><a href="#cb12-368" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Average scores within a gameweek? <span class="pp">|</span> Aggregation across a window <span class="pp">|</span></span>
+<span id="cb12-369"><a href="#cb12-369" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Keep quotes/names or paraphrase? <span class="pp">|</span> Feature preservation <span class="pp">|</span></span>
+<span id="cb12-370"><a href="#cb12-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-371"><a href="#cb12-371" aria-hidden="true" tabindex="-1"></a>The LLM replaces the middle of the pipeline. The choices at the edges — what goes in, what you do with the output — are still yours.</span>
+<span id="cb12-372"><a href="#cb12-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-373"><a href="#cb12-373" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-374"><a href="#cb12-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-375"><a href="#cb12-375" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quick-reference cheatsheet</span></span>
+<span id="cb12-376"><a href="#cb12-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-377"><a href="#cb12-377" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Step <span class="pp">|</span> What it does <span class="pp">|</span> Typical library <span class="pp">|</span></span>
+<span id="cb12-378"><a href="#cb12-378" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb12-379"><a href="#cb12-379" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Tokenization <span class="pp">|</span> Split text into tokens <span class="pp">|</span> <span class="in">`nltk.word_tokenize`</span>, <span class="in">`spacy`</span> <span class="pp">|</span></span>
+<span id="cb12-380"><a href="#cb12-380" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lowercasing <span class="pp">|</span> <span class="in">`"We"`</span> → <span class="in">`"we"`</span> <span class="pp">|</span> <span class="in">`str.lower()`</span> <span class="pp">|</span></span>
+<span id="cb12-381"><a href="#cb12-381" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stopword removal <span class="pp">|</span> Drop <span class="in">`the`</span>, <span class="in">`of`</span>, <span class="in">`is`</span>, ... <span class="pp">|</span> <span class="in">`nltk.corpus.stopwords`</span> <span class="pp">|</span></span>
+<span id="cb12-382"><a href="#cb12-382" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stemming <span class="pp">|</span> <span class="in">`"trying"`</span> → <span class="in">`"tri"`</span> <span class="pp">|</span> <span class="in">`PorterStemmer`</span> <span class="pp">|</span></span>
+<span id="cb12-383"><a href="#cb12-383" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lemmatization <span class="pp">|</span> <span class="in">`"trying"`</span> → <span class="in">`"try"`</span> <span class="pp">|</span> <span class="in">`WordNetLemmatizer`</span>, <span class="in">`spacy`</span> <span class="pp">|</span></span>
+<span id="cb12-384"><a href="#cb12-384" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> BoW <span class="pp">|</span> Count tokens per document <span class="pp">|</span> <span class="in">`CountVectorizer`</span> <span class="pp">|</span></span>
+<span id="cb12-385"><a href="#cb12-385" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> N-grams <span class="pp">|</span> Count token sequences <span class="pp">|</span> <span class="in">`CountVectorizer(ngram_range=...)`</span> <span class="pp">|</span></span>
+<span id="cb12-386"><a href="#cb12-386" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> TF-IDF <span class="pp">|</span> Count × inverse document frequency <span class="pp">|</span> <span class="in">`TfidfVectorizer`</span> <span class="pp">|</span></span>
+<span id="cb12-387"><a href="#cb12-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-388"><a href="#cb12-388" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb12-389"><a href="#cb12-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-390"><a href="#cb12-390" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further reading</span></span>
+<span id="cb12-391"><a href="#cb12-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-392"><a href="#cb12-392" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Speech and Language Processing (Jurafsky &amp; Martin)</span><span class="co">](https://web.stanford.edu/~jurafsky/slp3/)</span> — the standard NLP textbook, free online.</span>
+<span id="cb12-393"><a href="#cb12-393" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">scikit-learn: Working with text data</span><span class="co">](https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html)</span></span>
+<span id="cb12-394"><a href="#cb12-394" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">spaCy 101</span><span class="co">](https://spacy.io/usage/spacy-101)</span> — modern tokenization and linguistic features.</span>
+<span id="cb12-395"><a href="#cb12-395" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Hugging Face Tokenizers</span><span class="co">](https://huggingface.co/docs/tokenizers)</span> — if you're curious about the sub-word tokenizers that LLMs use.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
