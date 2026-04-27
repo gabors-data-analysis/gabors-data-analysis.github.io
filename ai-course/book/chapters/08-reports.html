@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Writing Reports with AI – Doing Data Analysis with AI</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a42de2942ca925214836ce3044549515.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">DA with AI</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../navbar/weeks.html"> 
+<span class="menu-text">Weekly Content</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../navbar/assignments.html"> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../navbar/resources.html" aria-current="page"> 
+<span class="menu-text">Knowledge Base</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Writing Reports with AI</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course Weeks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week00/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 0: AI Coding Prep</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week01/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1: LLM Review</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2: Documentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3: Reporting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week04/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4: Agentic AI with CLIs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week05/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5: Advanced CLI Workflows</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week06/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6: From Data to Report</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week07/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7: Text as Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week08/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8: Sentiment Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week09/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 9: AI Research: Controls</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../week10/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10: AI Research: IV</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Capstone Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../capstone/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Description</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project01/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 1: Data Collection</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 2: Text to Expectations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 3: DiD &amp; Presentation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Case Studies</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../case-studies/VWS/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">World Values Survey</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../case-studies/austria-hotels/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Austrian Hotels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../case-studies/interviews/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Football Interviews</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../case-studies/earnings/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">US Earnings (CPS)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../case-studies/employee_commits/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Employee Commits</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../case-studies/common-support-r/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Common Support (R)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Knowledge Base</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../navbar/resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/designing-projects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Designing Larger Analytics Projects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/reproducible-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reproducible Research</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/technical-terms-page.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary of LLM terms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/which-ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Which AI model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/beyond.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learn More</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/documentation-readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation Fundamentals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Joining Data Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/nlp-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NLP Basics — Text as Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/creating-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating Graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/terminal-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminal Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/install-cli.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing AI CLI Tools</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/vscode-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code + Copilot Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/get-ai-api-key.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Get AI API keys</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/api-use.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">APIs — Intro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/llm-api-python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LLM APIs in Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/api-advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">APIs — Under the hood</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/walkthrough-wb-fred.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Walkthrough: World Bank + FRED</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/walkthrough-fbref.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Walkthrough: FBref</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../da-knowledge/pdf-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PDF Guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Slideshows</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Key concepts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-02-prompting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prompting, Context</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#writing-reports-with-ai" id="toc-writing-reports-with-ai" class="nav-link active" data-scroll-target="#writing-reports-with-ai">Writing Reports with AI</a>
+  <ul class="collapse">
+  <li><a href="#about-this-class" id="toc-about-this-class" class="nav-link" data-scroll-target="#about-this-class">About this class</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#preparation-before-class" id="toc-preparation-before-class" class="nav-link" data-scroll-target="#preparation-before-class">Preparation BEFORE class</a></li>
+  <li><a href="#class-plan" id="toc-class-plan" class="nav-link" data-scroll-target="#class-plan">Class plan</a>
+  <ul class="collapse">
+  <li><a href="#block-a-get-and-explore-the-data-25-min" id="toc-block-a-get-and-explore-the-data-25-min" class="nav-link" data-scroll-target="#block-a-get-and-explore-the-data-25-min">Block A: Get and explore the data (25 min)</a></li>
+  <li><a href="#block-b-clean-create-variables-aggregate-and-join-25-min" id="toc-block-b-clean-create-variables-aggregate-and-join-25-min" class="nav-link" data-scroll-target="#block-b-clean-create-variables-aggregate-and-join-25-min">Block B: Clean, create variables, aggregate, and join (25 min)</a></li>
+  <li><a href="#block-c-first-look-at-the-data-25-min" id="toc-block-c-first-look-at-the-data-25-min" class="nav-link" data-scroll-target="#block-c-first-look-at-the-data-25-min">Block C: First look at the data (25 min)</a></li>
+  </ul></li>
+  <li><a href="#wrap-up-5-min" id="toc-wrap-up-5-min" class="nav-link" data-scroll-target="#wrap-up-5-min">Wrap-up (5 min)</a></li>
+  <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment">Assignment</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Writing Reports with AI</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="writing-reports-with-ai" class="level1">
+<h1>Writing Reports with AI</h1>
+<p>From a one-shot prompt to an iterated draft, and the gap between them. We compare a vibe-report with a directed report on the same data.</p>
+<div class="hero-section">
+<div class="container">
+<div class="hero-title">
+<p>Week 03 From raw data to report with AI assisted coding</p>
+</div>
+<div class="hero-subtitle">
+<p>Download, explore, clean, aggregate, join, and report — all with AI-assisted coding in VS Code</p>
+</div>
+</div>
+</div>
+<hr>
+<p><img src="../images/week3_pic.png" class="img-fluid"></p>
+<section id="about-this-class" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-class">About this class</h2>
+<p>Students begin with the <strong>raw World Values Survey (WVS) Wave 7 file</strong> (~180 MB, 97k rows, 613 columns). The class walks through the full data pipeline — download, explore, select, clean, aggregate, join with GDP — and finishes with a first graph. We use <strong>VS Code + GitHub Copilot</strong> as the primary tool. Each task is self-contained (5–15 min), so faster students complete all of them and slower students still cover the core.</p>
+</section>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>By the end of class, students will be able to:</p>
+<ul>
+<li>Download a large public dataset from code using an API/URL.</li>
+<li>Use GitHub Copilot in VS Code to explore, select, and clean variables from a 600-column file.</li>
+<li>Define a broad research topic, identify relevant survey items, and construct a composite variable (standardize + average).</li>
+<li>Aggregate individual-level survey data to country-level summaries.</li>
+<li>Join two datasets (WVS aggregates + World Bank GDP) by country and year.</li>
+<li>Produce a scatter plot from self-prepared data.</li>
+</ul>
+</section>
+<section id="preparation-before-class" class="level2">
+<h2 class="anchored" data-anchor-id="preparation-before-class">Preparation BEFORE class</h2>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Required setup (before class)</strong></p>
+</div>
+<div class="card-body">
+<ol type="1">
+<li><strong>VS Code + language + Copilot</strong> must be working. Follow the <a href="../../da-knowledge/vscode-setup.html">VS Code setup guide</a> if not done yet.</li>
+<li>Read the <a href="../../case-studies/VWS/">World Values Survey case study page</a> to understand what the data is about.</li>
+<li>Skim the <a href="../../case-studies/VWS/data/codebook.pdf">WVS codebook</a> (pages 1–10 are enough) to get a feel for variable naming.</li>
+<li>Install the packages you will need (run once before class):</li>
+</ol>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">R</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install pandas numpy matplotlib requests statsmodels wbgapi</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"dplyr"</span>, <span class="st">"readr"</span>, <span class="st">"ggplot2"</span>, <span class="st">"WDI"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="class-plan" class="level2">
+<h2 class="anchored" data-anchor-id="class-plan">Class plan</h2>
+<p>The class is 75 minutes. There are <strong>8 tasks</strong> organized in three blocks. Core tasks (1–6) take about 55 min; tasks 7–8 are stretch goals. Students work individually or in pairs at their own pace.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Pacing guide
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tasks are designed so that every student completes at least tasks 1–6. Fast students will reach tasks 7–8. The instructor checks in after each block.</p>
+</div>
+</div>
+<hr>
+<section id="block-a-get-and-explore-the-data-25-min" class="level3">
+<h3 class="anchored" data-anchor-id="block-a-get-and-explore-the-data-25-min">Block A: Get and explore the data (25 min)</h3>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Task 1: Download the raw data from code (5 min)</strong></p>
+</div>
+<div class="card-body">
+<p>Download the WVS Wave 7 CSV directly from the Open Science Framework. Do <strong>not</strong> download manually — write code.</p>
+<p><strong>Data source:</strong> The file <code>WVS_Cross-National_Wave_7_csv_v6_0.csv</code> is hosted on OSF at: <a href="https://osf.io/36dgb" target="_blank">osf.io/36dgb</a></p>
+<p>The direct download URL is <code>https://osf.io/36dgb/download</code>. Ask Copilot to help you write a script that downloads and saves this file.</p>
+<!-- INSTRUCTOR: Good Copilot prompts for this task:
+- Python: "Download the CSV file from https://osf.io/36dgb/download and save it locally as wvs_raw.csv"
+- R: "Use the osfr package to download file ID 36dgb from OSF into a data/ folder"
+- R alternative: download.file() with the direct URL also works fine
+-->
+<p><strong>Check:</strong> You have a ~180 MB CSV file on disk. Load it and confirm it has <strong>97,220 rows</strong> and <strong>613 columns</strong>.</p>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Task 2: Explore the raw data (10 min)</strong></p>
+</div>
+<div class="card-body">
+<p>The file has 613 columns. You cannot read all of them. Use the codebook and Copilot to answer these questions:</p>
+<ol type="1">
+<li>How many unique countries are in the data? (hint: look for <code>B_COUNTRY_ALPHA</code>)</li>
+<li>What years does the data cover? (hint: <code>A_YEAR</code>)</li>
+<li>What do columns <code>Q1</code> through <code>Q89</code> represent? The codebook organizes them into broad sections — identify the sections.</li>
+<li>What do negative values (−1 to −5) mean in the Q columns?</li>
+</ol>
+<p><strong>How to use Copilot for this:</strong></p>
+<ul>
+<li>Use <strong>Copilot Chat</strong> (<code>Ctrl+Shift+I</code> / <code>Cmd+Shift+I</code>) to ask questions about your data.</li>
+<li>Try typing a comment like <code># Show the first 5 rows and column names</code> and let Copilot autocomplete.</li>
+</ul>
+<!-- INSTRUCTOR: The key sections in Q1-Q89 are:
+- Q1-Q6: Important in life (family, friends, leisure, politics, work, religion)
+- Q7-Q17: Important child qualities (independence, hard work, tolerance, etc.)
+- Q18-Q26: Social tolerance / neighbors
+- Q27-Q45: Social norms, gender equality, work-family attitudes
+- Q46-Q56: Happiness, wellbeing, health, life satisfaction
+- Q57-Q63: Interpersonal trust (general, family, neighborhood, strangers)
+- Q64-Q89: Confidence in institutions (courts, government, parliament, press, UN, etc.)
+Students should be able to find the broad groupings from the codebook. -->
+<p><strong>Check:</strong> You can name at least 5 Q-variables and know what they measure.</p>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Task 3: Pick a topic and identify your variables (10 min)</strong></p>
+</div>
+<div class="card-body">
+<p>Pick <strong>one broad topic</strong> from the WVS that interests you. Examples:</p>
+<ul>
+<li><strong>Trust</strong> — do richer countries have higher interpersonal and institutional trust?</li>
+<li><strong>Gender equality</strong> — does income level relate to attitudes about gender roles?</li>
+<li><strong>Happiness and wellbeing</strong> — are people in richer countries happier / more satisfied?</li>
+<li><strong>Tolerance</strong> — does economic development relate to social tolerance?</li>
+</ul>
+<p>For your chosen topic:</p>
+<ol type="1">
+<li>Browse the codebook (or ask Copilot) to find <strong>3–6 related Q variables</strong> that capture your concept. For example, if your topic is “trust”, you might pick Q57 (generalized trust), Q58–Q63 (trust in specific groups), Q69 (confidence in police), Q70 (confidence in courts).</li>
+<li>Write down which variables you chose and why.</li>
+<li>Decide on your x-variable: <code>GDP per capita PPP</code> (income level, comparable across countries).</li>
+</ol>
+<p><strong>Important:</strong> Do not just pick a single variable. The assignment will ask you to create a <strong>composite score</strong> from multiple items — start thinking about which variables belong together.</p>
+<!-- INSTRUCTOR: This is a key pedagogical moment. Students need to:
+- Justify why certain Q items belong together conceptually
+- Notice that some items have different scales (e.g., Q57 is 1-2 binary, Q46 is 1-4)
+- Think about which direction each variable points (some need reversing)
+Good prompts to suggest if students struggle:
+- "Which Q variables in the WVS codebook relate to [trust/gender/happiness]?"
+- "What are the response scales for Q57, Q58, Q59, Q60?"
+-->
+<p><strong>Check:</strong> You have a list of 3–6 Q variables with a sentence explaining why they capture your topic.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="block-b-clean-create-variables-aggregate-and-join-25-min" class="level3">
+<h3 class="anchored" data-anchor-id="block-b-clean-create-variables-aggregate-and-join-25-min">Block B: Clean, create variables, aggregate, and join (25 min)</h3>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Task 4: Select, clean, and create your composite variable (10 min)</strong></p>
+</div>
+<div class="card-body">
+<p>From the 613 columns, select only what you need:</p>
+<ul>
+<li><strong>Identifiers:</strong> <code>B_COUNTRY_ALPHA</code>, <code>A_YEAR</code>, <code>A_WAVE</code></li>
+<li><strong>Weight:</strong> <code>W_WEIGHT</code></li>
+<li><strong>Your chosen Q variables</strong> (the 3–6 you identified in Task 3)</li>
+<li><strong>Demographics:</strong> <code>Q260</code> (sex), <code>Q262</code> (age), <code>Q275</code> (education)</li>
+</ul>
+<p>Then clean and create your composite variable:</p>
+<ol type="1">
+<li>Filter to <strong>Wave 7 only</strong> (<code>A_WAVE == 7</code>)</li>
+<li>Replace negative values (−1 to −5) with <code>NA</code>/<code>NaN</code> — these are WVS missing-value codes</li>
+<li><strong>Create a composite score:</strong> Standardize each of your chosen Q variables (z-score: subtract mean, divide by standard deviation), then average them into a single index. This handles the problem that different Q items use different scales.</li>
+</ol>
+<p>Ask Copilot for help with the standardization step.</p>
+<!-- INSTRUCTOR: Good Copilot prompt:
+"Standardize columns Q57, Q58, Q59, Q60, Q61, Q62, Q63 to z-scores (subtract mean, divide by std). Then create a new column 'trust_index' as the row-wise mean of the z-scored columns, ignoring NaN."
+
+Key teaching points:
+- Why standardize? Variables have different scales (1-2, 1-4, 1-10)
+- Why average? Reduces noise, captures the common signal
+- Should some items be reversed? E.g., if higher values mean less trust on some items
+- row-wise mean (not column mean) — each respondent gets a score
+-->
+<p><strong>Check:</strong> Your cleaned dataframe has a new composite column. Verify it has mean ≈ 0 and reasonable spread.</p>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Task 5: Aggregate to country level (5 min)</strong></p>
+</div>
+<div class="card-body">
+<p>Survey data is at the individual level. For cross-country analysis you need country-level summaries.</p>
+<p>Group by <code>B_COUNTRY_ALPHA</code> and <code>A_YEAR</code>, then compute:</p>
+<ul>
+<li><strong>Mean</strong> of your composite score and individual Q variables</li>
+<li><strong>Count</strong> of respondents per country</li>
+</ul>
+<!-- INSTRUCTOR: Good Copilot prompt:
+"Group the dataframe by B_COUNTRY_ALPHA and A_YEAR. Compute the mean of all numeric Q columns and the composite score, ignoring NaN. Also count the number of rows per group. Store result as country_data."
+-->
+<p><strong>Check:</strong> You should have about <strong>66 rows</strong> (one per country-year combination).</p>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Task 6: Get GDP data and join (10 min)</strong></p>
+</div>
+<div class="card-body">
+<p>Now bring in economic data from the World Bank. You need:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Indicator</th>
+<th>World Bank code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GDP (current USD)</td>
+<td><code>NY.GDP.MKTP.CD</code></td>
+<td>Total GDP</td>
+</tr>
+<tr class="even">
+<td>GDP per capita PPP</td>
+<td><code>NY.GDP.PCAP.PP.CD</code></td>
+<td>Income level, comparable across countries</td>
+</tr>
+<tr class="odd">
+<td>Population</td>
+<td><code>SP.POP.TOTL</code></td>
+<td>Country size</td>
+</tr>
+</tbody>
+</table>
+<p>Download for years <strong>2017–2023</strong> (the range of WVS Wave 7 fieldwork). Ask Copilot how to use the World Bank API in your language.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">R</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Use <code>wbgapi</code> — ask Copilot to help you download the three indicators and reshape the result into a tidy dataframe with columns for country code, year, and each indicator.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Use the <code>WDI</code> package — ask Copilot to help you download the three indicators for years 2017–2023.</p>
+</div>
+</div>
+</div>
+<p><strong>Join</strong> the GDP data to your country-level WVS data, matching on country code and year.</p>
+<p><strong>Key decision:</strong> Which type of join? (left join — keep all WVS countries, even if GDP is missing)</p>
+<p>Save the merged country-level data as a CSV file.</p>
+<p><strong>Check:</strong> Your merged dataframe still has ~66 rows, now with GDP and population columns added.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="block-c-first-look-at-the-data-25-min" class="level3">
+<h3 class="anchored" data-anchor-id="block-c-first-look-at-the-data-25-min">Block C: First look at the data (25 min)</h3>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Task 7: Scatter plot — income and your composite variable (15 min)</strong></p>
+</div>
+<div class="card-body">
+<p>Create a <strong>scatter plot</strong> of your composite variable against income:</p>
+<ul>
+<li>x-axis: log GDP per capita PPP</li>
+<li>y-axis: your composite score (country mean)</li>
+<li>Label a few interesting countries (e.g., outliers)</li>
+<li>Add a title that uses <strong>non-causal</strong> language (association, not effect)</li>
+</ul>
+<!-- INSTRUCTOR: Good Copilot prompt:
+"Create a scatter plot of trust_index (y) vs log GDP per capita PPP (x) from country_data. Label points for USA, CHN, IND, DEU, NGA. Add a linear fit line. Title: Association between income level and generalized trust."
+-->
+<p><strong>Check:</strong> Your graph shows a recognizable pattern. Labels are readable. Title avoids causal claims.</p>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p><strong>Task 8: Compare composite vs.&nbsp;single variable (10 min)</strong></p>
+</div>
+<div class="card-body">
+<p>Make the same scatter plot but using just <strong>one</strong> of your individual Q variables instead of the composite score. Put the two plots side by side.</p>
+<ul>
+<li>Does the pattern look different?</li>
+<li>Is the relationship stronger or weaker with the composite?</li>
+<li>Why might averaging multiple indicators give a cleaner signal?</li>
+</ul>
+<p>Write 2–3 sentences comparing the two plots. This comparison is useful for your assignment.</p>
+<p><strong>Check:</strong> You have two plots side by side and a short written comparison.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="wrap-up-5-min" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up-5-min">Wrap-up (5 min)</h2>
+<p>Quick class discussion:</p>
+<ul>
+<li>Which task did Copilot help with the most?</li>
+<li>Where did you have to correct Copilot’s suggestions?</li>
+<li>What was the hardest part — downloading, cleaning, creating the composite, or interpreting?</li>
+<li>How does starting from raw data change your understanding compared to getting a curated file?</li>
+</ul>
+</section>
+<section id="assignment" class="level2">
+<h2 class="anchored" data-anchor-id="assignment">Assignment</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="../../assignments/assignment_03.html">Assignment 3: From data pipeline to report</a></p>
+<p>You will extend the in-class pipeline into a polished short report. The assignment builds directly on the code and variables you created today.</p>
+</div>
+</div>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<ul>
+<li><a href="../../da-knowledge/vscode-setup.html">VS Code + Copilot setup guide</a></li>
+<li><a href="../../case-studies/VWS/">World Values Survey case study</a></li>
+<li><a href="../../case-studies/VWS/data/codebook.pdf">WVS codebook</a></li>
+<li><a href="../../case-studies/VWS/data/README_WVS.html">WVS processing notes (README_WVS.md)</a></li>
+<li><a href="https://pypi.org/project/wbgapi/">World Bank Data API (wbgapi for Python)</a></li>
+<li><a href="https://cran.r-project.org/package=WDI">WDI package for R</a></li>
+</ul>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/gabors-data-analysis\.com\/ai-course");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Writing Reports with AI"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Writing Reports with AI</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>From a one-shot prompt to an iterated draft, and the gap between them. We compare a vibe-report with a directed report on the same data.</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>::: {.hero-section}</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>::: {.container}</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>::: {.hero-title}</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>Week 03 From raw data to report with AI assisted coding</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>Download, explore, clean, aggregate, join, and report — all with AI-assisted coding in VS Code</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/week3_pic.png)</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## About this class</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>Students begin with the **raw World Values Survey (WVS) Wave 7 file** (~180 MB, 97k rows, 613 columns). The class walks through the full data pipeline — download, explore, select, clean, aggregate, join with GDP — and finishes with a first graph. We use **VS Code + GitHub Copilot** as the primary tool. Each task is self-contained (5–15 min), so faster students complete all of them and slower students still cover the core.</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objectives</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>By the end of class, students will be able to:</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Download a large public dataset from code using an API/URL.</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Use GitHub Copilot in VS Code to explore, select, and clean variables from a 600-column file.</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Define a broad research topic, identify relevant survey items, and construct a composite variable (standardize + average).</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Aggregate individual-level survey data to country-level summaries.</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Join two datasets (WVS aggregates + World Bank GDP) by country and year.</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Produce a scatter plot from self-prepared data.</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preparation BEFORE class</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>**Required setup (before class)**</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**VS Code + language + Copilot** must be working. Follow the <span class="co">[</span><span class="ot">VS Code setup guide</span><span class="co">](/da-knowledge/vscode-setup.html)</span> if not done yet.</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Read the <span class="co">[</span><span class="ot">World Values Survey case study page</span><span class="co">](/case-studies/VWS/)</span> to understand what the data is about.</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Skim the <span class="co">[</span><span class="ot">WVS codebook</span><span class="co">](/case-studies/VWS/data/codebook.pdf)</span> (pages 1–10 are enough) to get a feel for variable naming.</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Install the packages you will need (run once before class):</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Python</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>pip install pandas numpy matplotlib requests statsmodels wbgapi</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="fu">#### R</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"dplyr"</span>, <span class="st">"readr"</span>, <span class="st">"ggplot2"</span>, <span class="st">"WDI"</span>))</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a><span class="fu">## Class plan</span></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>The class is 75 minutes. There are **8 tasks** organized in three blocks. Core tasks (1–6) take about 55 min; tasks 7–8 are stretch goals. Students work individually or in pairs at their own pace.</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pacing guide</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>Tasks are designed so that every student completes at least tasks 1–6. Fast students will reach tasks 7–8. The instructor checks in after each block.</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="fu">### Block A: Get and explore the data (25 min)</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>**Task 1: Download the raw data from code (5 min)**</span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>Download the WVS Wave 7 CSV directly from the Open Science Framework. Do **not** download manually — write code.</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>**Data source:** The file <span class="in">`WVS_Cross-National_Wave_7_csv_v6_0.csv`</span> is hosted on OSF at: <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://osf.io/36dgb"</span><span class="ot"> target</span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>osf.io/36dgb<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>The direct download URL is <span class="in">`https://osf.io/36dgb/download`</span>. Ask Copilot to help you write a script that downloads and saves this file.</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- INSTRUCTOR: Good Copilot prompts for this task:</span></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a><span class="co">- Python: "Download the CSV file from https://osf.io/36dgb/download and save it locally as wvs_raw.csv"</span></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a><span class="co">- R: "Use the osfr package to download file ID 36dgb from OSF into a data/ folder"</span></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="co">- R alternative: download.file() with the direct URL also works fine</span></span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>**Check:** You have a ~180 MB CSV file on disk. Load it and confirm it has **97,220 rows** and **613 columns**.</span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>**Task 2: Explore the raw data (10 min)**</span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>The file has 613 columns. You cannot read all of them. Use the codebook and Copilot to answer these questions:</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>How many unique countries are in the data? (hint: look for <span class="in">`B_COUNTRY_ALPHA`</span>)</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>What years does the data cover? (hint: <span class="in">`A_YEAR`</span>)</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>What do columns <span class="in">`Q1`</span> through <span class="in">`Q89`</span> represent? The codebook organizes them into broad sections — identify the sections.</span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>What do negative values (−1 to −5) mean in the Q columns?</span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>**How to use Copilot for this:**</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use **Copilot Chat** (<span class="in">`Ctrl+Shift+I`</span> / <span class="in">`Cmd+Shift+I`</span>) to ask questions about your data.</span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Try typing a comment like <span class="in">`# Show the first 5 rows and column names`</span> and let Copilot autocomplete.</span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- INSTRUCTOR: The key sections in Q1-Q89 are:</span></span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a><span class="co">- Q1-Q6: Important in life (family, friends, leisure, politics, work, religion)</span></span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a><span class="co">- Q7-Q17: Important child qualities (independence, hard work, tolerance, etc.)</span></span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a><span class="co">- Q18-Q26: Social tolerance / neighbors</span></span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a><span class="co">- Q27-Q45: Social norms, gender equality, work-family attitudes</span></span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a><span class="co">- Q46-Q56: Happiness, wellbeing, health, life satisfaction</span></span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a><span class="co">- Q57-Q63: Interpersonal trust (general, family, neighborhood, strangers)</span></span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a><span class="co">- Q64-Q89: Confidence in institutions (courts, government, parliament, press, UN, etc.)</span></span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a><span class="co">Students should be able to find the broad groupings from the codebook. --&gt;</span></span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>**Check:** You can name at least 5 Q-variables and know what they measure.</span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>**Task 3: Pick a topic and identify your variables (10 min)**</span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>Pick **one broad topic** from the WVS that interests you. Examples:</span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Trust** — do richer countries have higher interpersonal and institutional trust?</span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Gender equality** — does income level relate to attitudes about gender roles?</span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Happiness and wellbeing** — are people in richer countries happier / more satisfied?</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tolerance** — does economic development relate to social tolerance?</span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>For your chosen topic:</span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Browse the codebook (or ask Copilot) to find **3–6 related Q variables** that capture your concept. For example, if your topic is "trust", you might pick Q57 (generalized trust), Q58–Q63 (trust in specific groups), Q69 (confidence in police), Q70 (confidence in courts).</span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Write down which variables you chose and why.</span>
+<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Decide on your x-variable: <span class="in">`GDP per capita PPP`</span> (income level, comparable across countries).</span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>**Important:** Do not just pick a single variable. The assignment will ask you to create a **composite score** from multiple items — start thinking about which variables belong together.</span>
+<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- INSTRUCTOR: This is a key pedagogical moment. Students need to:</span></span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a><span class="co">- Justify why certain Q items belong together conceptually</span></span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a><span class="co">- Notice that some items have different scales (e.g., Q57 is 1-2 binary, Q46 is 1-4)</span></span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a><span class="co">- Think about which direction each variable points (some need reversing)</span></span>
+<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a><span class="co">Good prompts to suggest if students struggle:</span></span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a><span class="co">- "Which Q variables in the WVS codebook relate to [trust/gender/happiness]?"</span></span>
+<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a><span class="co">- "What are the response scales for Q57, Q58, Q59, Q60?"</span></span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a>**Check:** You have a list of 3–6 Q variables with a sentence explaining why they capture your topic.</span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a><span class="fu">### Block B: Clean, create variables, aggregate, and join (25 min)</span></span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a>**Task 4: Select, clean, and create your composite variable (10 min)**</span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>From the 613 columns, select only what you need:</span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Identifiers:** <span class="in">`B_COUNTRY_ALPHA`</span>, <span class="in">`A_YEAR`</span>, <span class="in">`A_WAVE`</span></span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Weight:** <span class="in">`W_WEIGHT`</span></span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Your chosen Q variables** (the 3–6 you identified in Task 3)</span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Demographics:** <span class="in">`Q260`</span> (sex), <span class="in">`Q262`</span> (age), <span class="in">`Q275`</span> (education)</span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>Then clean and create your composite variable:</span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Filter to **Wave 7 only** (<span class="in">`A_WAVE == 7`</span>)</span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Replace negative values (−1 to −5) with <span class="in">`NA`</span>/<span class="in">`NaN`</span> — these are WVS missing-value codes</span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Create a composite score:** Standardize each of your chosen Q variables (z-score: subtract mean, divide by standard deviation), then average them into a single index. This handles the problem that different Q items use different scales.</span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a>Ask Copilot for help with the standardization step.</span>
+<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- INSTRUCTOR: Good Copilot prompt:</span></span>
+<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a><span class="co">"Standardize columns Q57, Q58, Q59, Q60, Q61, Q62, Q63 to z-scores (subtract mean, divide by std). Then create a new column 'trust_index' as the row-wise mean of the z-scored columns, ignoring NaN."</span></span>
+<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a><span class="co">Key teaching points:</span></span>
+<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a><span class="co">- Why standardize? Variables have different scales (1-2, 1-4, 1-10)</span></span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a><span class="co">- Why average? Reduces noise, captures the common signal</span></span>
+<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a><span class="co">- Should some items be reversed? E.g., if higher values mean less trust on some items</span></span>
+<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a><span class="co">- row-wise mean (not column mean) — each respondent gets a score</span></span>
+<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>**Check:** Your cleaned dataframe has a new composite column. Verify it has mean ≈ 0 and reasonable spread.</span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a>**Task 5: Aggregate to country level (5 min)**</span>
+<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a>Survey data is at the individual level. For cross-country analysis you need country-level summaries.</span>
+<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a>Group by <span class="in">`B_COUNTRY_ALPHA`</span> and <span class="in">`A_YEAR`</span>, then compute:</span>
+<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Mean** of your composite score and individual Q variables</span>
+<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Count** of respondents per country</span>
+<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- INSTRUCTOR: Good Copilot prompt:</span></span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a><span class="co">"Group the dataframe by B_COUNTRY_ALPHA and A_YEAR. Compute the mean of all numeric Q columns and the composite score, ignoring NaN. Also count the number of rows per group. Store result as country_data."</span></span>
+<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a>**Check:** You should have about **66 rows** (one per country-year combination).</span>
+<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a>**Task 6: Get GDP data and join (10 min)**</span>
+<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a>Now bring in economic data from the World Bank. You need:</span>
+<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Indicator <span class="pp">|</span> World Bank code <span class="pp">|</span> Description <span class="pp">|</span></span>
+<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> GDP (current USD) <span class="pp">|</span> <span class="in">`NY.GDP.MKTP.CD`</span> <span class="pp">|</span> Total GDP <span class="pp">|</span></span>
+<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> GDP per capita PPP <span class="pp">|</span> <span class="in">`NY.GDP.PCAP.PP.CD`</span> <span class="pp">|</span> Income level, comparable across countries <span class="pp">|</span></span>
+<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Population <span class="pp">|</span> <span class="in">`SP.POP.TOTL`</span> <span class="pp">|</span> Country size <span class="pp">|</span></span>
+<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a>Download for years **2017–2023** (the range of WVS Wave 7 fieldwork). Ask Copilot how to use the World Bank API in your language.</span>
+<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Python</span></span>
+<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a>Use <span class="in">`wbgapi`</span> — ask Copilot to help you download the three indicators and reshape the result into a tidy dataframe with columns for country code, year, and each indicator.</span>
+<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a><span class="fu">#### R</span></span>
+<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a>Use the <span class="in">`WDI`</span> package — ask Copilot to help you download the three indicators for years 2017–2023.</span>
+<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a>**Join** the GDP data to your country-level WVS data, matching on country code and year.</span>
+<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a>**Key decision:** Which type of join? (left join — keep all WVS countries, even if GDP is missing)</span>
+<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a>Save the merged country-level data as a CSV file.</span>
+<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-270"><a href="#cb3-270" aria-hidden="true" tabindex="-1"></a>**Check:** Your merged dataframe still has ~66 rows, now with GDP and population columns added.</span>
+<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a><span class="fu">### Block C: First look at the data (25 min)</span></span>
+<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a>**Task 7: Scatter plot — income and your composite variable (15 min)**</span>
+<span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a>Create a **scatter plot** of your composite variable against income:</span>
+<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>x-axis: log GDP per capita PPP</span>
+<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>y-axis: your composite score (country mean)</span>
+<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Label a few interesting countries (e.g., outliers)</span>
+<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add a title that uses **non-causal** language (association, not effect)</span>
+<span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- INSTRUCTOR: Good Copilot prompt:</span></span>
+<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a><span class="co">"Create a scatter plot of trust_index (y) vs log GDP per capita PPP (x) from country_data. Label points for USA, CHN, IND, DEU, NGA. Add a linear fit line. Title: Association between income level and generalized trust."</span></span>
+<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span>
+<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a>**Check:** Your graph shows a recognizable pattern. Labels are readable. Title avoids causal claims.</span>
+<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a>::: {.week-card .card}</span>
+<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a>::: {.card-header}</span>
+<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a>**Task 8: Compare composite vs. single variable (10 min)**</span>
+<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a>::: {.card-body}</span>
+<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a>Make the same scatter plot but using just **one** of your individual Q variables instead of the composite score. Put the two plots side by side.</span>
+<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Does the pattern look different?</span>
+<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Is the relationship stronger or weaker with the composite?</span>
+<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Why might averaging multiple indicators give a cleaner signal?</span>
+<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a>Write 2–3 sentences comparing the two plots. This comparison is useful for your assignment.</span>
+<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a>**Check:** You have two plots side by side and a short written comparison.</span>
+<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a><span class="fu">## Wrap-up (5 min)</span></span>
+<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a>Quick class discussion:</span>
+<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Which task did Copilot help with the most?</span>
+<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Where did you have to correct Copilot's suggestions?</span>
+<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What was the hardest part — downloading, cleaning, creating the composite, or interpreting?</span>
+<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>How does starting from raw data change your understanding compared to getting a curated file?</span>
+<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assignment</span></span>
+<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a>::: {.callout-note icon="📝"}</span>
+<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Assignment 3: From data pipeline to report</span><span class="co">](/assignments/assignment_03.html)</span></span>
+<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a>You will extend the in-class pipeline into a polished short report. The assignment builds directly on the code and variables you created today.</span>
+<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
+<span id="cb3-342"><a href="#cb3-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">VS Code + Copilot setup guide</span><span class="co">](/da-knowledge/vscode-setup.html)</span></span>
+<span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">World Values Survey case study</span><span class="co">](/case-studies/VWS/)</span></span>
+<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">WVS codebook</span><span class="co">](/case-studies/VWS/data/codebook.pdf)</span></span>
+<span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">WVS processing notes (README_WVS.md)</span><span class="co">](/case-studies/VWS/data/README_WVS.md)</span></span>
+<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">World Bank Data API (wbgapi for Python)</span><span class="co">](https://pypi.org/project/wbgapi/)</span></span>
+<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">WDI package for R</span><span class="co">](https://cran.r-project.org/package=WDI)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
