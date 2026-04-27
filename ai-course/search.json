@@ -4386,9 +4386,9 @@
   {
     "objectID": "project03/index.html",
     "href": "project03/index.html",
-    "title": "Capstone Project — Session 3: Difference-in-Differences & Final Presentation",
+    "title": "Capstone Project — Session 3: Causal Analysis & Final Presentation",
     "section": "",
-    "text": "Capstone Project — Session 3\n\n\nDiD analysis, heterogeneity, and final presentation",
+    "text": "Capstone Project — Session 3\n\n\nFrom panel to causal effect — and how to present what you found",
     "crumbs": [
       "Home",
       "Capstone Project",
@@ -4398,9 +4398,9 @@
   {
     "objectID": "project03/index.html#where-we-are",
     "href": "project03/index.html#where-we-are",
-    "title": "Capstone Project — Session 3: Difference-in-Differences & Final Presentation",
-    "section": "Where we are",
-    "text": "Where we are\n\nSession 1 → match + manager-change panel.\nSession 2 → expectation score per change.\nSession 3 (today) → run a Difference-in-Differences (DiD) analysis, explore heterogeneity (including by expectations), and present your findings.",
+    "title": "Capstone Project — Session 3: Causal Analysis & Final Presentation",
+    "section": "1. Where we are",
+    "text": "1. Where we are\n\nSession 1 → match + manager-change dataset.\nSession 2 → a text-based expectation score per change.\nSession 3 (today) → build the analysis panel, run a causal design (difference-in-differences), explore heterogeneity — especially by expectations — and present your findings.",
     "crumbs": [
       "Home",
       "Capstone Project",
@@ -4408,11 +4408,11 @@
     ]
   },
   {
-    "objectID": "project03/index.html#learning-objectives",
-    "href": "project03/index.html#learning-objectives",
-    "title": "Capstone Project — Session 3: Difference-in-Differences & Final Presentation",
-    "section": "Learning objectives",
-    "text": "Learning objectives\nBy the end of this session your team will:\n\nUnderstand DiD as a tool for this exact question, and its main assumptions.\nSpecify a DiD that treats manager-change teams as treated and never-changed (or not-yet-changed) teams as controls.\nReport a main effect with confidence intervals, a heterogeneity slice, and an expectations-vs-reality comparison.\nDeliver a clean 10–12 minute presentation.",
+    "objectID": "project03/index.html#the-causal-question",
+    "href": "project03/index.html#the-causal-question",
+    "title": "Capstone Project — Session 3: Causal Analysis & Final Presentation",
+    "section": "2. The causal question",
+    "text": "2. The causal question\n\n\n🎯 What are we actually trying to answer?\n\n\nResearch question: Does changing a manager improve team performance? And does the impact vary by manager and team characteristics?\nYour first task is to translate it into a very specific question you will estimate.\n\nDefine all aspects of the question\nMake editorial decisions.\n\nThink about what can go wrong:\n\nsample design\nconfounders\nanything else",
     "crumbs": [
       "Home",
       "Capstone Project",
@@ -4420,11 +4420,11 @@
     ]
   },
   {
-    "objectID": "project03/index.html#did-in-one-page-draft-use-ai-to-go-deeper",
-    "href": "project03/index.html#did-in-one-page-draft-use-ai-to-go-deeper",
-    "title": "Capstone Project — Session 3: Difference-in-Differences & Final Presentation",
-    "section": "DiD in one page (draft — use AI to go deeper)",
-    "text": "DiD in one page (draft — use AI to go deeper)\nThis is a stub. Treat it as the minimum vocabulary to work with your AI helper. Use the intro block to plug gaps, then have your AI explain the rest in context of your panel.\n\n\n📐 Key concepts\n\n\n\nTreatment — the event whose effect you want to measure. Here: a manager change.\nTreated unit — a team that experiences a manager change. Control unit — a team that does not (in the same window).\nPre / post — periods before vs after the change.\nDiD estimator — the difference between treated and control in the change from pre to post. In plain words: how much more (or less) did the treated teams’ performance move than the control teams’?\nTwo-way fixed effects (team FE + time FE) — the standard panel regression that, under conditions, recovers the DiD.\nEvent-study spec — one coefficient per lead / lag around the event, to see the dynamics instead of a single number.\nStaggered treatment — different teams get treated at different times. Modern issue: simple two-way FE can be biased here; look up Callaway-Sant’Anna, de Chaisemartin-D’Haultfoeuille, or Sun-Abraham.\n\n\n\n\n\n⚠️ Three key challenges\n\n\n\nParallel trends. DiD assumes treated and control teams would have moved in parallel absent the change. Plot pre-treatment trends. If they diverge, you have a problem — address it or say so.\nSelection / endogeneity. Managers are not sacked at random. Teams change managers because they are doing badly — you are likely picking up mean reversion, not manager skill. Think carefully about the control group, the window, and what your coefficient is really measuring.\nStaggered timing. Teams change managers at different moments over 10 seasons. A naive two-way FE can give you a number that is not the average treatment effect you think it is. Acknowledge this, and use (or at least mention) a staggered-DiD estimator.\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nUse AI to learn the details — ask for worked mini-examples in your setup: “I have a team-week panel with variable X, treatment at irregular times; walk me through a Callaway-Sant’Anna estimator in Python/R.” Then check the code, don’t just run it.\nA starter prompt for unpacking a DiD paper: did-understand-prompt.txt.",
+    "objectID": "project03/index.html#building-the-analysis-panel",
+    "href": "project03/index.html#building-the-analysis-panel",
+    "title": "Capstone Project — Session 3: Causal Analysis & Final Presentation",
+    "section": "3. Building the analysis panel",
+    "text": "3. Building the analysis panel\n\n\n🧩 Your two datasets don’t quite fit together\n\n\nYou arrive at Session 3 with two outputs:\nFrom Session 1:\n\na match/manager-change panel. Rows indexed by some combination of team, season, date, match_id.\nteam characteristics\nmanager characteristics\n\nFrom Session 2:\n\nan article-level table\na (team, gameweek) → avg_score aggregation.\n\nPotential issues\nWe have to create a single panel dataset.\nA short list of what to expect:\n\nEntity resolution\nTime unit problems, inconsistencies and mismatch\nCoverage gaps regarding the expectation data\nDate alignment\n\nThese are not bugs in your pipeline. They are the substance of working with real data. Fixing them is the first half of this session. Don’t start the regression until you have a merge you trust.\n\n\n\n\n🏗️ Decisions you have to name (write them in PANEL.md)\n\n\nBefore you merge anything, pick and write down your answers to these:\n\nUnit of observation. (team, match)? (team, calendar_week)? (team, gameweek)?\nTime index.\nEntity keys. One clean team identifier across all tables. One clean manager identifier.\nTreatment timing. What is “the” date of the change.\nPre / post window. How many periods before and after the change do you include? 5 matches? 10 weeks? To end of season?\nMissing-coverage policy. A (team, week) with zero articles: do you drop it, impute zero, or carry forward the previous week’s score?\n\nNone of these has a universally right answer. But you do need to commit to one answer per question and defend it in the slides.",
     "crumbs": [
       "Home",
       "Capstone Project",
@@ -4432,11 +4432,11 @@
     ]
   },
   {
-    "objectID": "project03/index.html#why-expectations-matter-in-causal-analysis",
-    "href": "project03/index.html#why-expectations-matter-in-causal-analysis",
-    "title": "Capstone Project — Session 3: Difference-in-Differences & Final Presentation",
-    "section": "Why expectations matter in causal analysis",
-    "text": "Why expectations matter in causal analysis\n\n\n🧭 Expectations and diff-in-diffs\n\n\nDiff-in-diffs compares the pre/post change in outcomes for treated units (teams that changed manager) against a control group, and reads the difference-of-differences as the causal effect. This rests on parallel trends: absent treatment, the two groups would have moved in parallel.\nExpectations break that story in two ways:\n\nAnticipation. If a manager change is widely expected, players, board, opponents and media react before the official announcement. Effort, tactics, transfer talk, press pressure — all shift. The “pre” period is already contaminated, so the estimated effect is biased toward zero (or flipped, if anticipation pushes outcomes the “wrong” way first).\nHeterogeneity. A shock firing after one bad weekend and a long-telegraphed “he’s gone at the end of the month” hire are not the same treatment. Pooling them hides structure: the effect of a new manager plausibly depends on how surprising the change was.\n\nThat is why we build an expectation score per change:\n\nAs a diagnostic — do pre-trends look different for “expected” vs “surprise” changes? If yes, the parallel-trends assumption is doing more work than it should.\nAs a moderator — split or interact the DiD by expectation. This is the main use in Session 3: does the new-manager bounce exist only for surprise hires, only for expected ones, or roughly the same for both?\n\nYou are not trying to remove expectations from the data. You are trying to measure them so the DiD can say something honest about when and for whom a manager change matters.",
+    "objectID": "project03/index.html#difference-in-differences-vocabulary-tools",
+    "href": "project03/index.html#difference-in-differences-vocabulary-tools",
+    "title": "Capstone Project — Session 3: Causal Analysis & Final Presentation",
+    "section": "4. Difference-in-Differences — vocabulary & tools",
+    "text": "4. Difference-in-Differences — vocabulary & tools\nThis is a vocabulary to get started. You can learn the rest with AI — not a from-scratch DiD lecture.\n\n\n📐 Key concepts\n\n\nSetup\n\nTreatment — the event whose effect you want to measure. Here: a manager change.\nTreated unit — a team that experiences a manager change. Control unit — a team that does not (in the same window).\n\nMethods\n\nTwo-way fixed effects (team FE + time FE) — the standard panel regression that could be a good start.\nEvent-study specification — transform data into event time (when the intervention happens); one coefficient per lead / lag around the event, to see the dynamics rather than a single number.\nPre / post — periods before vs after the change.\nDiD estimator — the difference between treated and control in the change from pre to post. In plain words: how much more (or less) did treated teams’ performance move than control teams’?\n\nKey challenges\n\nParallel trends — the core assumption: absent treatment, treated and control would have moved in parallel. Mostly untestable, but pre-trends are a useful proxy.\nStaggered treatment — different teams are treated at different times. This has important econometric implications that you shall investigate.\nAsk AI on what can go wrong with a naive DiD in your setup.\n\n\n\n\n\n📦 Package pointers\n\n\nPython\n\ndiff-diff — a general difference-in-differences / event-study package with sensible defaults. New but already great.\npyfixest — general regression package with options for difference in differences.\n\nR (if you prefer)\n\ndid — the original Callaway–Sant’Anna implementation.\nfixest — fastest FE in the ecosystem; feols, etable, coefplot.\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nUse AI to learn the details\n— ask for worked mini-examples in your setup. Then read the code, don’t just run it. - Use the AI-interviews-me technique to better understand the setup, what you expect, and what your key modelling choices are.",
     "crumbs": [
       "Home",
       "Capstone Project",
@@ -4444,11 +4444,11 @@
     ]
   },
   {
-    "objectID": "project03/index.html#work-tasks-2-hour-block",
-    "href": "project03/index.html#work-tasks-2-hour-block",
-    "title": "Capstone Project — Session 3: Difference-in-Differences & Final Presentation",
-    "section": "Work tasks (2-hour block)",
-    "text": "Work tasks (2-hour block)\n\n\n🔬 Analysis workflow\n\n\n\nPlan the spec in writing before any code:\n\nOutcome (points per game? goal difference? rolling form?)\nUnit (team-week? team-match?)\nTreatment definition (new manager’s first match? the announcement date?)\nWindow (how many matches pre/post?)\nControls (team FE, season FE, opponent strength?)\n\nTest on a subset (one league, two seasons) — get the plumbing right.\nPlot parallel trends for treated vs control.\nEstimate the main DiD coefficient with a proper standard error (cluster by team).\nEvent study — leads and lags around the change.\nHeterogeneity — interact treatment with manager experience, team budget, league, and your Session 2 expectation score.\nRobustness — different outcome, window, control group; staggered-DiD estimator if feasible.\nDraft the slides while the code runs — don’t leave slides for the last 15 minutes.",
+    "objectID": "project03/index.html#the-expectations-angle",
+    "href": "project03/index.html#the-expectations-angle",
+    "title": "Capstone Project — Session 3: Causal Analysis & Final Presentation",
+    "section": "5. The expectations angle",
+    "text": "5. The expectations angle\n\n\n🧭 What is the purpose of knowing if a manager change was expected?\n\n\nLook at data\n\nFocus on the season(s) you have data on expectations.\nDescriptive: What share of changes were expected? Were there cases when expectation was high but the manager was not fired?\n\nEconometrics\n\nParallel trends: what does it mean in this context?\nWhat does it mean to have anticipation in terms of the causal estimation?\n\nUse\n\nHeterogeneity: do expected changes have a different effect than unexpected ones?\n\nCompare dynamics and simple diff-in-diffs estimates.",
     "crumbs": [
       "Home",
       "Capstone Project",
@@ -4456,11 +4456,11 @@
     ]
   },
   {
-    "objectID": "project03/index.html#presentation-last-hour-of-class",
-    "href": "project03/index.html#presentation-last-hour-of-class",
-    "title": "Capstone Project — Session 3: Difference-in-Differences & Final Presentation",
-    "section": "Presentation (last hour of class)",
-    "text": "Presentation (last hour of class)\n\n\n🎤 10–12 minutes + Q&A per team\n\n\nRefer back to the presentation principles we discussed in Week 07 review and the Week 06 “report vs vibe report” contrast: less is more, show only what you understand deeply, precise interpretation beats fancy graphs.\nSlide outline\n\nQuestion & context — league, time span, why it matters.\nData & sample — number of matches, number of manager changes, known gaps.\nIdentification — DiD; what is treatment, what is control; parallel-trends plot.\nMain result — coefficient + 95% CI + plain-English interpretation.\nHeterogeneity — by manager / team / league; one clear chart.\nExpectations vs reality — do positive-news changes deliver bigger gains?\nLimitations — selection, staggered timing, data gaps. Be honest.\n\nFormat options: Quarto HTML slides, Google Slides, or a short dashboard. Whichever you pick, the repo must reproduce the numbers on the slides.",
+    "objectID": "project03/index.html#analysis-work-block-90-min",
+    "href": "project03/index.html#analysis-work-block-90-min",
+    "title": "Capstone Project — Session 3: Causal Analysis & Final Presentation",
+    "section": "6. Analysis work block (90 min)",
+    "text": "6. Analysis work block (90 min)\n\n\n🔬 Suggested workflow\n\n\nHere is a suggested workflow. But you can proceed differently.\n\nMerge & validate. Join Session 1 and Session 2 on your chosen keys. Print counts before and after. Eyeball a few rows.\nWrite the spec — in METHODS.md, before any regression:\n\nOutcome.\nUnit.\nTreatment definition (date, caretaker handling).\nWindow (pre/post periods).\nControls (team FE, time FE, opponent strength).\nCluster level for SEs (team).\n\nTest on a subset — one season. Get the plumbing right before you scale.\nTry out one or two models — think about what econometric models you shall use. Start with something you understand.\nTest additional econometric model — think about time, dynamics. Carefully interact with AI to pick one or two extra models.\nHeterogeneity 1 — interact with a binary indicator of manager characteristic. Repeat for team characteristic.\nExpectations — interact with expectation score.\nRobustness — think about 2 key decisions you have made. Test how much they matter.\nDraft slides while code runs. Don’t leave them for the last 15 minutes.",
     "crumbs": [
       "Home",
       "Capstone Project",
@@ -4468,11 +4468,23 @@
     ]
   },
   {
-    "objectID": "project03/index.html#delivery-session-3-end-of-the-project",
-    "href": "project03/index.html#delivery-session-3-end-of-the-project",
-    "title": "Capstone Project — Session 3: Difference-in-Differences & Final Presentation",
-    "section": "Delivery (Session 3 — end of the project)",
-    "text": "Delivery (Session 3 — end of the project)\n\n\n📦 Final submission\n\n\n\nWho: by group — the same team you started with in Session 1. Finish what you started together in the session.\nDeadline: Sunday 23:55 (the Sunday after this session).\nWhat:\n\nGitHub repo with: data (or fetcher), Session 1 tests, Session 2 article + expectations tables, Session 3 analysis code.\nREADME.md describing how to reproduce all numbers end to end.\nSlides (as used in class, possibly polished).\nDATA.md and a short METHODS.md explaining the DiD spec, parallel-trends check, and the robustness you ran.\nIndividual reflection (1–2 pages per person): hardest part and how you solved it, what you would do differently, how labour was split.\n\n\n\n\nSee evaluation criteria in the project description.",
+    "objectID": "project03/index.html#deliverables",
+    "href": "project03/index.html#deliverables",
+    "title": "Capstone Project — Session 3: Causal Analysis & Final Presentation",
+    "section": "7. Deliverables",
+    "text": "7. Deliverables\n\n\n📑 The presentation\n\n\nOne piece, with a choice of delivery format:\n\nHTML presentation\nInteractive dashboard\nPDF report generated from markdown or LaTeX\n\nThis must be fully human reviewed.\n\n\n\n\n📦 Submission\n\n\n\nWho: by group — same team you started with in Session 1.\nDeadline: Sunday 23:55 (the Sunday after this session).\nWhat:\n\nGitHub repo with: data (or fetcher), Session 1 tests, Session 2 article + expectations tables, Session 3 analysis code, and the rendered HTML report.\nREADME.md describing how to reproduce all numbers end to end (make all should work from a cold clone — see Reproducible Research).\nPANEL.md — the six panel-construction decisions and your answers.\nMETHODS.md — the DiD spec, parallel-trends check, packages used, robustness run.\nDATA.md — updated with the final merged panel documented.\nIndividual reflection (1–2 pages per person): hardest part and how you solved it, what you would do differently, how labour was split.\n\n\n\n\nSee evaluation criteria in the project description.",
+    "crumbs": [
+      "Home",
+      "Capstone Project",
+      "Session 3: DiD & Presentation"
+    ]
+  },
+  {
+    "objectID": "project03/index.html#further-resources",
+    "href": "project03/index.html#further-resources",
+    "title": "Capstone Project — Session 3: Causal Analysis & Final Presentation",
+    "section": "8. Further resources",
+    "text": "8. Further resources\nFor going deeper on modern DiD, two canonical stops:\n\nPedro Sant’Anna — DiD resources — the maintained hub for modern difference-in-differences. Papers, code, slides, videos, curated by one of the authors of the Callaway–Sant’Anna estimator. Start here for anything staggered.\nCarlos Mendez — DiD in Python — a worked Python tutorial walking through classic and event-study / staggered DiD on real data. Good companion to the csdid / pyfixest pointers above.",
     "crumbs": [
       "Home",
       "Capstone Project",
