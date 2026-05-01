@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gábor Békés, Central European University (Austria, EU)">
-<meta name="dcterms.date" content="2026-04-14">
+<meta name="dcterms.date" content="2026-05-01">
 
 <title>Data Analysis with AI – Doing Data Analysis with AI</title>
 <style>
@@ -79,7 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7cdf71ef5bb4b2c8bc90b981c04c53a3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a42de2942ca925214836ce3044549515.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -176,12 +176,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./week00/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 0: AI Coding Prep</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week01/index.html" class="sidebar-item-text sidebar-link">
@@ -343,6 +337,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./da-knowledge/ai-coding-prep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI Coding Prep</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./da-knowledge/designing-projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Designing Larger Analytics Projects</span></a>
   </div>
@@ -492,12 +492,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#whats-this" id="toc-whats-this" class="nav-link active" data-scroll-target="#whats-this">What’s this</a>
   <ul class="collapse">
-  <li><a href="#for-whom" id="toc-for-whom" class="nav-link" data-scroll-target="#for-whom">For whom?</a></li>
+  <li><a href="#two-parts" id="toc-two-parts" class="nav-link" data-scroll-target="#two-parts">Two parts</a></li>
   <li><a href="#ai-and-me" id="toc-ai-and-me" class="nav-link" data-scroll-target="#ai-and-me">AI and me</a></li>
   </ul></li>
   <li><a href="#course-description" id="toc-course-description" class="nav-link" data-scroll-target="#course-description">Course description</a>
   <ul class="collapse">
-  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
+  <li><a href="#content-part-1-weekly-classes" id="toc-content-part-1-weekly-classes" class="nav-link" data-scroll-target="#content-part-1-weekly-classes">Content — Part 1: weekly classes</a></li>
+  <li><a href="#content-part-2-capstone" id="toc-content-part-2-capstone" class="nav-link" data-scroll-target="#content-part-2-capstone">Content — Part 2: capstone</a></li>
   <li><a href="#background-data-analysis-econometrics" id="toc-background-data-analysis-econometrics" class="nav-link" data-scroll-target="#background-data-analysis-econometrics">Background: data analysis / econometrics</a></li>
   <li><a href="#background-coding" id="toc-background-coding" class="nav-link" data-scroll-target="#background-coding">Background: coding</a></li>
   <li><a href="#relevance" id="toc-relevance" class="nav-link" data-scroll-target="#relevance">Relevance</a></li>
@@ -505,10 +506,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#target-audience" id="toc-target-audience" class="nav-link" data-scroll-target="#target-audience">Target audience</a></li>
   </ul></li>
   <li><a href="#assignments" id="toc-assignments" class="nav-link" data-scroll-target="#assignments">Assignments</a></li>
-  <li><a href="#content-1" id="toc-content-1" class="nav-link" data-scroll-target="#content-1">Content</a>
-  <ul class="collapse">
-  <li><a href="#capstone-project-3-sessions" id="toc-capstone-project-3-sessions" class="nav-link" data-scroll-target="#capstone-project-3-sessions">Capstone Project (3 sessions)</a></li>
-  </ul></li>
+  <li><a href="#weekly-content-part-1" id="toc-weekly-content-part-1" class="nav-link" data-scroll-target="#weekly-content-part-1">Weekly content (Part 1)</a></li>
+  <li><a href="#capstone-part-2-three-sessions-doing-things-you-have-never-done" id="toc-capstone-part-2-three-sessions-doing-things-you-have-never-done" class="nav-link" data-scroll-target="#capstone-part-2-three-sessions-doing-things-you-have-never-done">Capstone (Part 2): three sessions — doing things you have never done</a></li>
   <li><a href="#knowledge-base" id="toc-knowledge-base" class="nav-link" data-scroll-target="#knowledge-base">Knowledge Base</a></li>
   <li><a href="#rights-and-acknowledgement" id="toc-rights-and-acknowledgement" class="nav-link" data-scroll-target="#rights-and-acknowledgement">Rights and acknowledgement</a>
   <ul class="collapse">
@@ -516,7 +515,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#thanks" id="toc-thanks" class="nav-link" data-scroll-target="#thanks">Thanks</a></li>
   <li><a href="#questions-and-suggestions" id="toc-questions-and-suggestions" class="nav-link" data-scroll-target="#questions-and-suggestions">Questions and suggestions</a></li>
-  <li><a href="#and-now-this." id="toc-and-now-this." class="nav-link" data-scroll-target="#and-now-this.">And now, this.</a></li>
   </ul>
 </nav>
     </div>
@@ -543,7 +541,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 14, 2026</p>
+      <p class="date">May 1, 2026</p>
     </div>
   </div>
   
@@ -563,13 +561,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="whats-this" class="level2">
 <h2 class="anchored" data-anchor-id="whats-this">What’s this</h2>
-<p>This course will equip students, who are already versed in core data analysis methods, with experience to harness AI technologies to improve productivity (<em>yes this is classic LLM sentence</em>). But, yeah, the idea is to help students who studied data analysis / econometrics / quant methods and want to think about <strong>how to include AI in their analytics routine</strong>, and spend time to share experiences.</p>
-<p>As AI becomes more and more powerful, it is also important to provide a platform to <strong>discuss human agency in data analysis</strong>. So a key element of the course and its instructor to lead discussions on the role of AI and humans in various aspects of data analysis.</p>
+<p>A course for students who already know <strong>data analysis / econometrics</strong> and want to seriously rework their practice around AI. The aim is not “tips and tricks”: it is to spend a semester <strong>building real things with AI as a teammate</strong>, and to think honestly about where it helps, where it lies, and where it lets you do work you genuinely could not do alone.</p>
+<p>As AI becomes more and more powerful, it is also important to provide a platform to <strong>discuss human agency in data analysis</strong>. A core role of the instructor is to lead that discussion across the term — what we delegate, what we keep, and how we stay accountable for the result.</p>
 <p><strong>This is the 2026 Spring edition release</strong></p>
-<section id="for-whom" class="level3">
-<h3 class="anchored" data-anchor-id="for-whom">For whom?</h3>
-<p>This material is aimed at data science and analytics instructors who can guide their students through the material sharing the experience and domain specific examples. All of this is open source, may be modified (see rights below).</p>
-<p>But, dear reader (students, practitioners, researchers, journalists and more), you can also go alone, checking ideas and practice sessions.</p>
+<section id="two-parts" class="level3">
+<h3 class="anchored" data-anchor-id="two-parts">Two parts</h3>
+<p>The course has two clearly distinct halves:</p>
+<ul>
+<li><strong>Part 1 — Weeks 1–10.</strong> Use AI on tasks students mostly <em>can</em> do unaided: documentation, reporting, exploratory analysis, simple text work, control-variable selection, IV reasoning. The goal is fluency and good habits — chat-based work, then agentic CLIs (Claude Code), then AI as a research companion.</li>
+<li><strong>Part 2 — Capstone (3 sessions).</strong> A team project that pushes students into work they have <strong>never done before</strong>: production-style <strong>web scraping</strong>, <strong>text-as-data classification using LLM APIs</strong>, and <strong>modern causal econometrics</strong> (difference-in-differences with staggered treatment, event-study designs). The whole point is that AI makes this newly accessible — and the course makes students actually do it.</li>
+</ul>
 </section>
 <section id="ai-and-me" class="level3">
 <h3 class="anchored" data-anchor-id="ai-and-me">AI and me</h3>
@@ -583,11 +584,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="course-description" class="level2">
 <h2 class="anchored" data-anchor-id="course-description">Course description</h2>
-<section id="content" class="level3">
-<h3 class="anchored" data-anchor-id="content">Content</h3>
-<p>The course focuses on using large language models (LLMs — ChatGPT, Claude, Gemini, Le Chat and others) to <strong>carry out tasks in data analysis</strong>: data extraction and wrangling, exploration and description, reporting, and turning text into data. It ends with a three-session <strong>capstone project</strong> where small teams build a full analysis from scratch.</p>
-<p>There are several <strong>case studies</strong> used across the weekly material. We have simulated set of data tables on hotels in Austria, work with the World Values Survey, and a series of interview texts.</p>
-<p>The course material includes weekly practice <strong>assignments</strong> and a <a href="da-knowledge/beyond.html">learning-more collection</a> with blogs, papers, and video recommendations.</p>
+<section id="content-part-1-weekly-classes" class="level3">
+<h3 class="anchored" data-anchor-id="content-part-1-weekly-classes">Content — Part 1: weekly classes</h3>
+<p>Weeks 1–10 cover using large language models (LLMs — ChatGPT, Claude, Gemini, Le Chat and others) to <strong>carry out tasks in data analysis</strong>: code and data documentation, writing reports, agentic work in the terminal, going from raw data to a constrained PDF, text-as-data on football interviews, and using AI as a research companion to think about controls and instruments.</p>
+<p>Several <strong>case studies</strong> run across the weekly material — simulated hotel data from Austria, the World Values Survey, US CPS earnings, football manager post-match interviews. There are weekly practice <strong>assignments</strong> and a <a href="da-knowledge/beyond.html">learning-more collection</a> with blogs, papers, and video recommendations.</p>
+</section>
+<section id="content-part-2-capstone" class="level3">
+<h3 class="anchored" data-anchor-id="content-part-2-capstone">Content — Part 2: capstone</h3>
+<p>A three-session team project on <strong>manager changes in football</strong>. Each team picks a country, builds a 10+ season match-and-manager panel, scrapes news around each change, uses an LLM API to score how <em>expected</em> each change was, then runs a difference-in-differences analysis with heterogeneity by manager type, team, and expectation.</p>
+<p>The capstone deliberately requires <strong>three things students typically have not done</strong>:</p>
+<ol type="1">
+<li><strong>Web scraping at project scale</strong> — RSS feeds, article pages, hundreds to thousands of items across sources and languages.</li>
+<li><strong>Text-as-data with LLM APIs</strong> — designing a classification prompt, structured outputs, hand-validation against the model, cost and reproducibility.</li>
+<li><strong>Modern causal econometrics</strong> — staggered DiD, event-study specifications, parallel-trends diagnostics, anticipation effects.</li>
+</ol>
+<p>The argument of the course is that <strong>AI is what makes this scope realistic in three sessions</strong> — and the capstone is where students prove that to themselves.</p>
 </section>
 <section id="background-data-analysis-econometrics" class="level3">
 <h3 class="anchored" data-anchor-id="background-data-analysis-econometrics">Background: data analysis / econometrics</h3>
@@ -596,7 +607,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="background-coding" class="level3">
 <h3 class="anchored" data-anchor-id="background-coding">Background: coding</h3>
-<p>Students are expected to have some basic <strong>coding knowledge</strong> in Python or R (Stata also fine mostly).</p>
+<p>Students are expected to have some basic <strong>coding knowledge</strong> in Python or R (Stata also fine for the early weeks). The capstone is realistically Python or R only — scraping and API work in Stata is painful.</p>
 </section>
 <section id="relevance" class="level3">
 <h3 class="anchored" data-anchor-id="relevance">Relevance</h3>
@@ -604,19 +615,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="learning-outcomes" class="level3">
 <h3 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h3>
-<p>Key outcomes. By the end of the course, students will be able to</p>
+<p>By the end of the course, students will be able to</p>
 <ul>
-<li>Gain experience and confidence using genAI to carry out key tasks in data analysis.</li>
-<li>Build AI in coding practice including data wrangling, description and reporting and text analysis</li>
-<li>Have some idea of use cases when AI assistance is OK to use as is vs needs strong human supervision</li>
-<li>Have an understanding of resources to follow for updates.</li>
+<li>Use genAI fluently across the standard data-analysis stack — wrangling, description, reporting, light text analysis.</li>
+<li>Work with <strong>agentic CLI tools</strong> (Claude Code and similar) on a real repo, with reproducibility and tests.</li>
+<li><strong>Scrape</strong> structured data from the web for a defined research goal.</li>
+<li>Use an <strong>LLM API</strong> to turn text into numbers, including prompt design, structured output, and hand-validation.</li>
+<li>Run a <strong>modern difference-in-differences / event-study</strong> analysis with staggered treatment and discuss its limits honestly.</li>
+<li>Distinguish AI uses where the output is fine as-is from those that need strong human supervision.</li>
 <li>Run a multi-week team project from data collection to causal analysis, using AI throughout.</li>
 </ul>
 </section>
 <section id="target-audience" class="level3">
 <h3 class="anchored" data-anchor-id="target-audience">Target audience</h3>
-<p>This is a course aimed at college students in any program who already have the required background. Economics, Quantitative Social science, Political Science, Sociology, History. To be frank, all students shall learn data analysis and be comfortable using AI.</p>
-<p>But, anyone can use it with adequate background.</p>
+<p>The course is aimed primarily at <strong>graduate and advanced-undergraduate students</strong> in economics, quantitative social science, political science, sociology, business analytics, and adjacent fields — students who have done a real econometrics or data-analysis course and now need to reset their practice around AI. The capstone in particular assumes you are willing to push past your current toolkit.</p>
+<p>The material is also designed to be <strong>forkable by instructors</strong>: all open source under CC BY-NC-SA, so teachers can pick weeks, swap case studies, and run their own version. Practitioners, researchers, and journalists with the background can absolutely go through it solo.</p>
 </section>
 </section>
 <section id="assignments" class="level2">
@@ -624,11 +637,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Assignments are available for all classes</p>
 <p>Important to note for assignments: * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this.</p>
 </section>
-<section id="content-1" class="level2">
-<h2 class="anchored" data-anchor-id="content-1">Content</h2>
-<p><strong>Week00: AI for coding</strong></p>
-<p>Using AI for code. May not be covered in this class, as it had often been already covered in coding classes.</p>
-<p><a href="week00">Content</a></p>
+<section id="weekly-content-part-1" class="level2">
+<h2 class="anchored" data-anchor-id="weekly-content-part-1">Weekly content (Part 1)</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Before Week 1.</strong> Get your environment in shape and pick up a few prompting-for-code habits — see <a href="./da-knowledge/ai-coding-prep.html">AI Coding Prep</a>. Skip it if you already use Copilot/Cursor on real projects.</p>
+</div>
+</div>
 <p><strong>Week01: LLM Review</strong></p>
 <p>What are LLMs, how is the magic happening. A non-technical brief intro. How to work with LLMs? Plus ideas on applications. Includes suggested readings, podcasts, and vids to listen to. See also <a href="da-knowledge/which-ai.html">which AI model to use</a>.</p>
 <p><a href="week01/">Content</a></p>
@@ -663,13 +686,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="week09/">Content</a></p>
 <p><strong>Week10</strong>: AI as research companion: Instrumental variables</p>
 <p><a href="week10/">Content</a></p>
-<section id="capstone-project-3-sessions" class="level3">
-<h3 class="anchored" data-anchor-id="capstone-project-3-sessions">Capstone Project (3 sessions)</h3>
-<p>A three-session team project on manager changes in football: collect data, build a news-based expectation score with APIs, and run a Difference-in-Differences analysis. — <a href="capstone/">Project description</a></p>
-<p><strong>Session 1</strong>: Data collection &amp; description — <a href="project01/">Content</a></p>
-<p><strong>Session 2</strong>: From text to expectations (scraping + LLM APIs) — <a href="project02/">Content</a></p>
-<p><strong>Session 3</strong>: Difference-in-Differences analysis + final presentation — <a href="project03/">Content</a></p>
 </section>
+<section id="capstone-part-2-three-sessions-doing-things-you-have-never-done" class="level2">
+<h2 class="anchored" data-anchor-id="capstone-part-2-three-sessions-doing-things-you-have-never-done">Capstone (Part 2): three sessions — doing things you have never done</h2>
+<p>A three-session team project on <strong>manager changes in football</strong>, deliberately scoped so that each session forces students into territory they have not been in before. Pick a country, build a 10+ season panel, score the news, run the causal design. — <a href="capstone/">Project description</a></p>
+<p><strong>Session 1 — Data collection &amp; description.</strong> Build a multi-table match-and-manager panel from messy public sources. Real entity resolution, real data quality work. — <a href="project01/">Content</a></p>
+<p><strong>Session 2 — From text to expectations (web scraping + LLM APIs).</strong> Scrape news articles around each manager change, then use an LLM API to score how <em>expected</em> the change was. Prompt design, structured output, hand-validation, cost. — <a href="project02/">Content</a></p>
+<p><strong>Session 3 — Difference-in-Differences + final presentation.</strong> Modern causal econometrics: staggered DiD, event-study, parallel-trends diagnostics, heterogeneity by manager / team / expectation. Honest presentation of what the data can and cannot say. — <a href="project03/">Content</a></p>
 </section>
 <section id="knowledge-base" class="level2">
 <h2 class="anchored" data-anchor-id="knowledge-base">Knowledge Base</h2>
@@ -680,7 +703,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="rights-and-acknowledgement">Rights and acknowledgement</h2>
 <section id="you-can-use-it-to-teach-and-learn-freely" class="level3">
 <h3 class="anchored" data-anchor-id="you-can-use-it-to-teach-and-learn-freely">You can use it to teach and learn freely</h3>
-<p><strong>Attribution</strong>: Békés, Gábor: “Data Analysis with AI: a comprehensive course”, available at <a href="https://gabors-data-analysis.com/ai-course/">gabors-data-analysis.com/ai-course/</a>, v2.1. 2026-04-13.</p>
+<p><strong>Attribution</strong>: Békés, Gábor: “Data Analysis with AI: a comprehensive course”, available at <a href="https://gabors-data-analysis.com/ai-course/">gabors-data-analysis.com/ai-course/</a>, v2.2. 2026-05-01.</p>
 <p>You can fork it from the Github Repo. <a href="https://github.com/gabors-data-analysis/da-w-ai/">github.com/gabors-data-analysis/da-w-ai/</a></p>
 <p><strong>License</strong>: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> – share, attribute, non-commercial (contact me for corporate gigs)</p>
 <p><strong>Textbook</strong> Please check out the <a href="https://gabors-data-analysis.com/getting-started">textbook</a> behind all this, buy it if you can. If interested teaching contact the <a href="https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20#overview">Cambridge UP</a> or me.</p>
@@ -695,9 +718,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="questions-and-suggestions">Questions and suggestions</h2>
 <p>This material is based my course at CEU in Vienna, Austria. Here is the <a href="https://github.com/gabors-data-analysis/da-w-ai">Github repo</a></p>
 <p>If you have questions or suggestions or interested to learn more, just <a href="https://docs.google.com/forms/d/e/1FAIpQLSev0oaR2s71hvFTZjhTwCuCPL00ljYWAIjl0hoZQLTn_oG3KQ/viewform?usp=header">fill in this form</a>.</p>
-</section>
-<section id="and-now-this." class="level2">
-<h2 class="anchored" data-anchor-id="and-now-this.">And now, this.</h2>
 
 
 <!-- -->
@@ -1160,206 +1180,213 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Data Analysis with AI"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "A comprehensive course"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "[Gábor Békés](https://sites.google.com/site/bekesg/), Central European University (Austria, EU)"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-04-14"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-05-01"</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="al">![Gabor's Data Analysis with AI](images/gabors-data-analysis-with-ai.png)</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## What's this</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>This course will equip students, who are already versed in core data analysis methods, with experience to harness AI technologies to improve productivity (*yes this is classic LLM sentence*). But, yeah, the idea is to help students who studied data analysis / econometrics / quant methods and want to think about **how to include AI in their analytics routine**, and spend time to share experiences. </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>A course for students who already know **data analysis / econometrics** and want to seriously rework their practice around AI. The aim is not "tips and tricks": it is to spend a semester **building real things with AI as a teammate**, and to think honestly about where it helps, where it lies, and where it lets you do work you genuinely could not do alone.</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>As AI becomes more and more powerful, it is also important to provide a platform to **discuss human agency in data analysis**. So a key element of the course and its instructor to lead discussions on the role of AI and humans in various aspects of data analysis. </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>As AI becomes more and more powerful, it is also important to provide a platform to **discuss human agency in data analysis**. A core role of the instructor is to lead that discussion across the term — what we delegate, what we keep, and how we stay accountable for the result.</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>**This is the 2026 Spring edition release**</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">### For whom?</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">### Two parts</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>This material is aimed at data science and analytics instructors who can guide their students through the material sharing the experience and domain specific examples. All of this is open source, may be modified (see rights below).</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>The course has two clearly distinct halves:</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>But, dear reader (students, practitioners, researchers, journalists and more), you can also go alone, checking ideas and practice sessions. </span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### AI and me</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>At the end of all classes, instructors and students should always consider these three questions. </span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>How did AI **support** me do what I planned.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>How did AI **fail** me: gave half-truths, buggy code, imprecise arguments</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>How did AI **extend** me: helped do things I could not, or gave new ideas </span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Part 1 — Weeks 1–10.** Use AI on tasks students mostly *can* do unaided: documentation, reporting, exploratory analysis, simple text work, control-variable selection, IV reasoning. The goal is fluency and good habits — chat-based work, then agentic CLIs (Claude Code), then AI as a research companion.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Part 2 — Capstone (3 sessions).** A team project that pushes students into work they have **never done before**: production-style **web scraping**, **text-as-data classification using LLM APIs**, and **modern causal econometrics** (difference-in-differences with staggered treatment, event-study designs). The whole point is that AI makes this newly accessible — and the course makes students actually do it.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">### AI and me</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>At the end of all classes, instructors and students should always consider these three questions.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>How did AI **support** me do what I planned.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>How did AI **fail** me: gave half-truths, buggy code, imprecise arguments</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>How did AI **extend** me: helped do things I could not, or gave new ideas</span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Course description</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">### Content</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>The course focuses on using large language models (LLMs — ChatGPT, Claude, Gemini, Le Chat and others) to **carry out tasks in data analysis**: data extraction and wrangling, exploration and description, reporting, and turning text into data. It ends with a three-session **capstone project** where small teams build a full analysis from scratch.</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>There are several **case studies** used across the weekly material. We have simulated set of data tables on hotels in Austria, work with the World Values Survey, and a series of interview texts. </span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>The course material includes weekly practice **assignments** and a <span class="co">[</span><span class="ot">learning-more collection</span><span class="co">](da-knowledge/beyond.html)</span> with blogs, papers, and video recommendations.</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## Course description</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">### Content — Part 1: weekly classes</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>Weeks 1–10 cover using large language models (LLMs — ChatGPT, Claude, Gemini, Le Chat and others) to **carry out tasks in data analysis**: code and data documentation, writing reports, agentic work in the terminal, going from raw data to a constrained PDF, text-as-data on football interviews, and using AI as a research companion to think about controls and instruments.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>Several **case studies** run across the weekly material — simulated hotel data from Austria, the World Values Survey, US CPS earnings, football manager post-match interviews. There are weekly practice **assignments** and a <span class="co">[</span><span class="ot">learning-more collection</span><span class="co">](da-knowledge/beyond.html)</span> with blogs, papers, and video recommendations.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="fu">### Content — Part 2: capstone</span></span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">### Background: data analysis / econometrics</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>A three-session team project on **manager changes in football**. Each team picks a country, builds a 10+ season match-and-manager panel, scrapes news around each change, uses an LLM API to score how *expected* each change was, then runs a difference-in-differences analysis with heterogeneity by manager type, team, and expectation.</span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>You need a background in **Data Analysis / Econometrics**, a good introductory course is enough. I, *of course*, suggest Chapters 1-12 and 19 of <span class="co">[</span><span class="ot">Data Analysis for Business, Economics and Policy (Cambridge UP, 2021)</span><span class="co">](https://gabors-data-analysis.com/getting-started)</span>. Full slideshows, data and code are open source. But consider buying the book!🤝 </span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>The capstone deliberately requires **three things students typically have not done**:</span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>In particular, the course builds on <span class="co">[</span><span class="ot">Chapters 1-6 and 7-10, and 19 and 22-24 of Data Analysis </span><span class="co">](https://gabors-data-analysis.com/chapter-details/)</span> but other Introductory Econometrics + basics of data science knowledge is ok.</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="fu">### Background: coding</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Web scraping at project scale** — RSS feeds, article pages, hundreds to thousands of items across sources and languages.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Text-as-data with LLM APIs** — designing a classification prompt, structured outputs, hand-validation against the model, cost and reproducibility.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Modern causal econometrics** — staggered DiD, event-study specifications, parallel-trends diagnostics, anticipation effects.</span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>Students are expected to have some basic **coding knowledge** in Python or R (Stata also fine mostly). </span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>The argument of the course is that **AI is what makes this scope realistic in three sessions** — and the capstone is where students prove that to themselves.</span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">### Relevance</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>AI is everywhere and has become essential, most analytic work will be using it. It's like the Internet a while back. Does not solve all problems, but almost all intellectual tasks will rely on inputs from it. </span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="fu">### Learning Outcomes</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>Key outcomes. By the end of the course, students will be able to</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Gain experience and confidence using genAI to carry out key tasks in data analysis.</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Build AI in coding practice including data wrangling, description and reporting and text analysis</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Have some idea of use cases when AI assistance is OK to use as is vs needs strong human supervision</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Have an understanding of resources to follow for updates.</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Run a multi-week team project from data collection to causal analysis, using AI throughout.</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="fu">### Target audience</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>This is a course aimed at college students in any program who already have the required background. Economics, Quantitative Social science, Political Science, Sociology, History. To be frank, all students shall learn data analysis and be comfortable using AI. </span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>But, anyone can use it with adequate background. </span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assignments</span></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>Assignments are available for all classes</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="fu">### Background: data analysis / econometrics</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>You need a background in **Data Analysis / Econometrics**, a good introductory course is enough. I, *of course*, suggest Chapters 1-12 and 19 of <span class="co">[</span><span class="ot">Data Analysis for Business, Economics and Policy (Cambridge UP, 2021)</span><span class="co">](https://gabors-data-analysis.com/getting-started)</span>. Full slideshows, data and code are open source. But consider buying the book!🤝</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>In particular, the course builds on <span class="co">[</span><span class="ot">Chapters 1-6 and 7-10, and 19 and 22-24 of Data Analysis </span><span class="co">](https://gabors-data-analysis.com/chapter-details/)</span> but other Introductory Econometrics + basics of data science knowledge is ok.</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu">### Background: coding</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>Students are expected to have some basic **coding knowledge** in Python or R (Stata also fine for the early weeks). The capstone is realistically Python or R only — scraping and API work in Stata is painful.</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="fu">### Relevance</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>AI is everywhere and has become essential, most analytic work will be using it. It's like the Internet a while back. Does not solve all problems, but almost all intellectual tasks will rely on inputs from it.</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="fu">### Learning Outcomes</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>By the end of the course, students will be able to</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Use genAI fluently across the standard data-analysis stack — wrangling, description, reporting, light text analysis.</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Work with **agentic CLI tools** (Claude Code and similar) on a real repo, with reproducibility and tests.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Scrape** structured data from the web for a defined research goal.</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Use an **LLM API** to turn text into numbers, including prompt design, structured output, and hand-validation.</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Run a **modern difference-in-differences / event-study** analysis with staggered treatment and discuss its limits honestly.</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Distinguish AI uses where the output is fine as-is from those that need strong human supervision.</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Run a multi-week team project from data collection to causal analysis, using AI throughout.</span>
 <span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>Important to note for assignments: </span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Use AI but do not submit something that was created by AI. AI is your assistant.</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>One of the goals of the course is to practice this. </span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="fu">### Target audience</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>The course is aimed primarily at **graduate and advanced-undergraduate students** in economics, quantitative social science, political science, sociology, business analytics, and adjacent fields — students who have done a real econometrics or data-analysis course and now need to reset their practice around AI. The capstone in particular assumes you are willing to push past your current toolkit.</span>
 <span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Content</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>The material is also designed to be **forkable by instructors**: all open source under CC BY-NC-SA, so teachers can pick weeks, swap case studies, and run their own version. Practitioners, researchers, and journalists with the background can absolutely go through it solo.</span>
 <span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>**Week00: AI for coding**</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>Using AI for code. May not be covered in this class, as it had often been already covered in coding classes. </span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week00)</span></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>**Week01: LLM Review**</span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>What are LLMs, how is the magic happening. A non-technical brief intro. How to work with LLMs? Plus ideas on applications. Includes suggested readings, podcasts, and vids to listen to. See also <span class="co">[</span><span class="ot">which AI model to use</span><span class="co">](da-knowledge/which-ai.html)</span>.</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week01/)</span></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>**Week02**: Data and code discovery and documentation with AI</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>Learn how to write a clear and professional code and data documentation. LLMs are great help once you know the basics. </span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">World Values Survey</span><span class="co">](case-studies/VWS/)</span></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week02/)</span></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>**Week 03**: Writing Reports</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>You have your data and task, and need to write a short report. We compare different options with LLM, from one-shot prompt to iteration. </span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">World Values Survey</span><span class="co">](case-studies/VWS/)</span></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week03/)</span></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>**Week04**: Agentic AI with Claude Code</span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>From chat to terminal - introducing Claude Code for data analysis. Students learn to use agentic AI that works directly with files, generates data, and iterates on analysis.</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">Austrian Hotels</span><span class="co">](case-studies/austria-hotels/)</span></span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week04/)</span></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>**Week05**: Advanced CLI Workflows</span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>Going deeper with CLI tools: custom skills, project-specific instructions (CLAUDE.md), git integration, and autonomous execution. Turning CLI tools from clever assistants into reproducible research companions.</span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week05/)</span></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>**Week06**: From Data to Report</span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>Download real CPS earnings data via CLI, contrast an undirected "vibe report" with a carefully directed economics-quality report. Iterative graph refinement, OLS regressions, and constrained PDF output.</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">US Earnings (CPS)</span><span class="co">](case-studies/earnings/)</span></span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week06/)</span></span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>**Week07**: Text as data 1 -- intro lecture</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>No course of mine can escape football (soccer). Here we look at post-game interviews to learn basics of text analysis and apply LLMs in what they are best - context dependent learning. Two class series. First is more intro to natural language processing.</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">Football Manager Interviews</span><span class="co">](case-studies/interviews/)</span></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week07/)</span></span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>**Week08**: Sentiment Analysis with AI</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>Second class, now we are in action. How does LLM compare to humans?</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">Football Manager Interviews</span><span class="co">](case-studies/interviews/)</span></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week08/)</span></span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>**Week09**: AI as research companion: Control variables</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week09/)</span></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assignments</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>Assignments are available for all classes</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>Important to note for assignments: </span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Use AI but do not submit something that was created by AI. AI is your assistant.</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>One of the goals of the course is to practice this. </span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="fu">## Weekly content (Part 1)</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>**Before Week 1.** Get your environment in shape and pick up a few prompting-for-code habits — see <span class="co">[</span><span class="ot">AI Coding Prep</span><span class="co">](da-knowledge/ai-coding-prep.qmd)</span>. Skip it if you already use Copilot/Cursor on real projects.</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>**Week01: LLM Review**</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>What are LLMs, how is the magic happening. A non-technical brief intro. How to work with LLMs? Plus ideas on applications. Includes suggested readings, podcasts, and vids to listen to. See also <span class="co">[</span><span class="ot">which AI model to use</span><span class="co">](da-knowledge/which-ai.html)</span>.</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week01/)</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>**Week02**: Data and code discovery and documentation with AI</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>Learn how to write a clear and professional code and data documentation. LLMs are great help once you know the basics. </span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">World Values Survey</span><span class="co">](case-studies/VWS/)</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week02/)</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>**Week 03**: Writing Reports</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>You have your data and task, and need to write a short report. We compare different options with LLM, from one-shot prompt to iteration. </span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">World Values Survey</span><span class="co">](case-studies/VWS/)</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week03/)</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>**Week04**: Agentic AI with Claude Code</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>From chat to terminal - introducing Claude Code for data analysis. Students learn to use agentic AI that works directly with files, generates data, and iterates on analysis.</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">Austrian Hotels</span><span class="co">](case-studies/austria-hotels/)</span></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week04/)</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>**Week05**: Advanced CLI Workflows</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>Going deeper with CLI tools: custom skills, project-specific instructions (CLAUDE.md), git integration, and autonomous execution. Turning CLI tools from clever assistants into reproducible research companions.</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week05/)</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>**Week06**: From Data to Report</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>Download real CPS earnings data via CLI, contrast an undirected "vibe report" with a carefully directed economics-quality report. Iterative graph refinement, OLS regressions, and constrained PDF output.</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">US Earnings (CPS)</span><span class="co">](case-studies/earnings/)</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week06/)</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>**Week07**: Text as data 1 -- intro lecture</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>No course of mine can escape football (soccer). Here we look at post-game interviews to learn basics of text analysis and apply LLMs in what they are best - context dependent learning. Two class series. First is more intro to natural language processing.</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">Football Manager Interviews</span><span class="co">](case-studies/interviews/)</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week07/)</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>**Week08**: Sentiment Analysis with AI</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>Second class, now we are in action. How does LLM compare to humans?</span>
 <span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>**Week10**: AI as research companion: Instrumental variables</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>Case study: <span class="co">[</span><span class="ot">Football Manager Interviews</span><span class="co">](case-studies/interviews/)</span></span>
 <span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week10/)</span></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week08/)</span></span>
 <span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="fu">### Capstone Project (3 sessions)</span></span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>A three-session team project on manager changes in football: collect data, build a news-based expectation score with APIs, and run a Difference-in-Differences analysis. — <span class="co">[</span><span class="ot">Project description</span><span class="co">](capstone/)</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>**Week09**: AI as research companion: Control variables</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week09/)</span></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>**Session 1**: Data collection &amp; description — <span class="co">[</span><span class="ot">Content</span><span class="co">](project01/)</span></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>**Week10**: AI as research companion: Instrumental variables</span>
 <span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>**Session 2**: From text to expectations (scraping + LLM APIs) — <span class="co">[</span><span class="ot">Content</span><span class="co">](project02/)</span></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Content</span><span class="co">](week10/)</span></span>
 <span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>**Session 3**: Difference-in-Differences analysis + final presentation — <span class="co">[</span><span class="ot">Content</span><span class="co">](project03/)</span></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="fu">## Capstone (Part 2): three sessions — doing things you have never done</span></span>
 <span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="fu">## Knowledge Base</span></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>A three-session team project on **manager changes in football**, deliberately scoped so that each session forces students into territory they have not been in before. Pick a country, build a 10+ season panel, score the news, run the causal design. — <span class="co">[</span><span class="ot">Project description</span><span class="co">](capstone/)</span></span>
 <span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>Reusable reference pages on APIs, tools setup, project design, and more — see the <span class="co">[</span><span class="ot">Knowledge Base</span><span class="co">](navbar/resources.html)</span>. For further reading beyond the course, check the <span class="co">[</span><span class="ot">beyond</span><span class="co">](da-knowledge/beyond.html)</span> page.</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>**Session 1 — Data collection &amp; description.** Build a multi-table match-and-manager panel from messy public sources. Real entity resolution, real data quality work. — <span class="co">[</span><span class="ot">Content</span><span class="co">](project01/)</span></span>
 <span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>**Session 2 — From text to expectations (web scraping + LLM APIs).** Scrape news articles around each manager change, then use an LLM API to score how *expected* the change was. Prompt design, structured output, hand-validation, cost. — <span class="co">[</span><span class="ot">Content</span><span class="co">](project02/)</span></span>
 <span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rights and acknowledgement</span></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>**Session 3 — Difference-in-Differences + final presentation.** Modern causal econometrics: staggered DiD, event-study, parallel-trends diagnostics, heterogeneity by manager / team / expectation. Honest presentation of what the data can and cannot say. — <span class="co">[</span><span class="ot">Content</span><span class="co">](project03/)</span></span>
 <span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="fu">### You can use it to teach and learn freely</span></span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>**Attribution**: Békés, Gábor: "Data Analysis with AI: a comprehensive course", available at <span class="co">[</span><span class="ot">gabors-data-analysis.com/ai-course/</span><span class="co">](https://gabors-data-analysis.com/ai-course/)</span>, v2.1. 2026-04-13.</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>You can fork it from the Github Repo.  <span class="co">[</span><span class="ot">github.com/gabors-data-analysis/da-w-ai/</span><span class="co">](https://github.com/gabors-data-analysis/da-w-ai/)</span></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>**License**: <span class="co">[</span><span class="ot">CC BY-NC-SA 4.0</span><span class="co">](https://creativecommons.org/licenses/by-nc-sa/4.0/)</span> -- share, attribute, non-commercial (contact me for corporate gigs)</span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>**Textbook** Please check out the <span class="co">[</span><span class="ot">textbook</span><span class="co">](https://gabors-data-analysis.com/getting-started)</span> behind all this, buy it if you can. If interested teaching contact the <span class="co">[</span><span class="ot">Cambridge UP</span><span class="co">](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20#overview)</span> or me. </span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="fu">## Thanks</span></span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>**Thanks:** Developed mostly by <span class="co">[</span><span class="ot">me, Gábor Békés</span><span class="co">](https://sites.google.com/site/bekesg/)</span> Thanks a million to the two wonderful human RAs, <span class="co">[</span><span class="ot">Ms Zsuzsanna Vadle</span><span class="co">](https://bsky.app/profile/zsuzsannavadle.bsky.social)</span> and <span class="co">[</span><span class="ot">Mr Kenneth Colombe</span><span class="co">](https://bsky.app/profile/kcolombe24.bsky.social)</span>, both Phd students. Also thanks to <span class="co">[</span><span class="ot">Adam Víg</span><span class="co">](https://www.linkedin.com/in/adam-vig-250729196/)</span>, long term collaborator now at Google. Thanks to Claude and ChatGPT to craft pages, improve consistency, create the simulated dataset. They helped create the slideshows and educated *me* on a bunch of topics like reinforcement learning or NLP. This is a beautiful example of collaboration with great young people while heavily benefiting from advanced AI. Thanks for <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span> -- it was all drafted and written in Quarto and Rstudio by Posit. Plus all the love from Github. </span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>Thanks for CEU's teaching grant that allowed me pay people and AI. </span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="fu">## Knowledge Base</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>Reusable reference pages on APIs, tools setup, project design, and more — see the <span class="co">[</span><span class="ot">Knowledge Base</span><span class="co">](navbar/resources.html)</span>. For further reading beyond the course, check the <span class="co">[</span><span class="ot">beyond</span><span class="co">](da-knowledge/beyond.html)</span> page.</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rights and acknowledgement</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="fu">### You can use it to teach and learn freely</span></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>**Attribution**: Békés, Gábor: "Data Analysis with AI: a comprehensive course", available at <span class="co">[</span><span class="ot">gabors-data-analysis.com/ai-course/</span><span class="co">](https://gabors-data-analysis.com/ai-course/)</span>, v2.2. 2026-05-01.</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>You can fork it from the Github Repo.  <span class="co">[</span><span class="ot">github.com/gabors-data-analysis/da-w-ai/</span><span class="co">](https://github.com/gabors-data-analysis/da-w-ai/)</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>**License**: <span class="co">[</span><span class="ot">CC BY-NC-SA 4.0</span><span class="co">](https://creativecommons.org/licenses/by-nc-sa/4.0/)</span> -- share, attribute, non-commercial (contact me for corporate gigs)</span>
 <span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="fu">## Questions and suggestions</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>**Textbook** Please check out the <span class="co">[</span><span class="ot">textbook</span><span class="co">](https://gabors-data-analysis.com/getting-started)</span> behind all this, buy it if you can. If interested teaching contact the <span class="co">[</span><span class="ot">Cambridge UP</span><span class="co">](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20#overview)</span> or me. </span>
 <span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>This material is based my course at CEU in Vienna, Austria. Here is the <span class="co">[</span><span class="ot">Github repo</span><span class="co">](https://github.com/gabors-data-analysis/da-w-ai)</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="fu">## Thanks</span></span>
 <span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>If you have questions or suggestions or interested to learn more, just <span class="co">[</span><span class="ot">fill in this form</span><span class="co">](https://docs.google.com/forms/d/e/1FAIpQLSev0oaR2s71hvFTZjhTwCuCPL00ljYWAIjl0hoZQLTn_oG3KQ/viewform?usp=header)</span>.</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>**Thanks:** Developed mostly by <span class="co">[</span><span class="ot">me, Gábor Békés</span><span class="co">](https://sites.google.com/site/bekesg/)</span> Thanks a million to the two wonderful human RAs, <span class="co">[</span><span class="ot">Ms Zsuzsanna Vadle</span><span class="co">](https://bsky.app/profile/zsuzsannavadle.bsky.social)</span> and <span class="co">[</span><span class="ot">Mr Kenneth Colombe</span><span class="co">](https://bsky.app/profile/kcolombe24.bsky.social)</span>, both Phd students. Also thanks to <span class="co">[</span><span class="ot">Adam Víg</span><span class="co">](https://www.linkedin.com/in/adam-vig-250729196/)</span>, long term collaborator now at Google. Thanks to Claude and ChatGPT to craft pages, improve consistency, create the simulated dataset. They helped create the slideshows and educated *me* on a bunch of topics like reinforcement learning or NLP. This is a beautiful example of collaboration with great young people while heavily benefiting from advanced AI. Thanks for <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span> -- it was all drafted and written in Quarto and Rstudio by Posit. Plus all the love from Github. </span>
 <span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="fu">## And now, this.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>Thanks for CEU's teaching grant that allowed me pay people and AI. </span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="fu">## Questions and suggestions</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>This material is based my course at CEU in Vienna, Austria. Here is the <span class="co">[</span><span class="ot">Github repo</span><span class="co">](https://github.com/gabors-data-analysis/da-w-ai)</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>If you have questions or suggestions or interested to learn more, just <span class="co">[</span><span class="ot">fill in this form</span><span class="co">](https://docs.google.com/forms/d/e/1FAIpQLSev0oaR2s71hvFTZjhTwCuCPL00ljYWAIjl0hoZQLTn_oG3KQ/viewform?usp=header)</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
