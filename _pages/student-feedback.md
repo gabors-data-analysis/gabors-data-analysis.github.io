@@ -4,8 +4,6 @@ title: "Student Feedback"
 classes: wide
 toc: false
 author_profile: false
-redirect_from:
-  - /student-feedback.html
 ---
 ___
 

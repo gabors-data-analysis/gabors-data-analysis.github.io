@@ -4,8 +4,6 @@ title: "Instructor Reviews"
 toc: false
 classes: [wide, fullbleed]
 author_profile: false
-redirect_from:
-  - /instructor-reviews.html
 ---
 ___
 

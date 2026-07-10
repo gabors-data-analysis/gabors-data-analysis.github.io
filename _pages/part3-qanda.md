@@ -5,8 +5,6 @@ layout: single
 classes: wide
 toc: false
 author_profile: false
-redirect_from:
-  - /part3-qanda.html
 ---
 
 

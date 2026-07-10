@@ -4,8 +4,6 @@ title: "Data Analysis for Business, Economics, and Policy"
 classes: wide
 toc: false
 author_profile: false
-redirect_from:
-  - /getting-started.html
 youtubeId: gVDcWFpTycQ
 ---
 

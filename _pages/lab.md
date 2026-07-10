@@ -3,8 +3,6 @@ permalink: /lab
 title: "Gabors Data Analysis and AI Lab"
 toc: false
 author_profile: false
-redirect_from:
-  - /lab.html
 ---
 
 

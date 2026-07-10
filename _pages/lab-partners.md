@@ -3,8 +3,6 @@ permalink: /lab-partners
 title: "Corporate Partners"
 toc: false
 author_profile: false
-redirect_from:
-  - /lab-partners.html
 ---
 
 The Lab serves as a bridge between academia and business.

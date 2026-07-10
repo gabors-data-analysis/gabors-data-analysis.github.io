@@ -5,8 +5,6 @@ permalink: /beyond
 title: "Beyond: Directions to frontier"
 toc: false
 author_profile: false
-redirect_from:
-  - /beyond.html
 ---
 ___
 

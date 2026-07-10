@@ -5,8 +5,6 @@ description: "What leading scholars and practitioners say about Data Analysis fo
 classes: [wide, fullbleed]
 toc: false
 author_profile: false
-redirect_from:
-  - /endorsements.html
 ---
 
 <style>

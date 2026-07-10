@@ -3,8 +3,6 @@ permalink: /overleaf-users
 title: "User agreement for Overleaf access"
 toc: false
 author_profile: false
-redirect_from:
-  - /overleaf-users.html
 ---
 
 Happy day!

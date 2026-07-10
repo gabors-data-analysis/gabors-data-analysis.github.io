@@ -3,8 +3,6 @@ permalink: /ai-era-textbook
 title: "Designing the AI-Era Data Analysis Textbook"
 toc: false
 author_profile: false
-redirect_from:
-  - /ai-era-textbook.html
 ---
 
 ## Designing the AI-Era Data Analysis Textbook

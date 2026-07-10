@@ -4,8 +4,6 @@ title: "Reading recommendations"
 classes: wide
 toc: false
 author_profile: false
-redirect_from:
-  - /readings.html
 ---
 ___
 

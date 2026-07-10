@@ -4,8 +4,6 @@ title: "Data source ideas"
 classes: wide
 toc: false
 author_profile: false
-redirect_from:
-  - /data-source-ideas.html
 ---
 ___
 

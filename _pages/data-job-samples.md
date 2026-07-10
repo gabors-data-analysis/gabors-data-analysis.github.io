@@ -3,8 +3,6 @@ permalink: /data-job-samples
 title: "Sample data analysis job ads"
 toc: false
 author_profile: false
-redirect_from:
-  - /data-job-samples.html
 ---
 ___
 

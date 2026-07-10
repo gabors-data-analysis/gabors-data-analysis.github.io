@@ -3,8 +3,6 @@ permalink: /preorder
 title: "Order options"
 toc: false
 author_profile: false
-redirect_from:
-  - /preorder.html
 ---
 
 ## Publisher

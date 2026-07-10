@@ -4,8 +4,6 @@ title: "Additional Reading Suggestions"
 classes: [wide, fullbleed]
 toc: false
 author_profile: false
-redirect_from:
-  - /additional-reading.html
 ---
 ___
 

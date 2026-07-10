@@ -3,8 +3,6 @@ permalink: /gabors-lab-projects
 title: "Projects"
 toc: false
 author_profile: false
-redirect_from:
-  - /gabors-lab-projects.html
 ---
 
 

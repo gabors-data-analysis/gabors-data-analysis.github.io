@@ -5,8 +5,6 @@ permalink: /additional-data-exercises
 title: "Additional Data Exercises "
 toc: false
 author_profile: false
-redirect_from:
-  - /additional-data-exercises.html
 ---
 ___
 
