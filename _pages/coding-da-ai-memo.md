@@ -5,8 +5,9 @@ title: "Coding for Data Analysis -- teaching in the era of AI"
 permalink: /coding-da-ai-memo/
 author_profile: true
 redirect_from:
-  - /md/
   - /coding-da-ai-memo.html
+  - /coding-data-analysis-ai-memo/
+  - /coding-data-analysis-ai-memo.html
 ---
 
 {% include base_path %}
