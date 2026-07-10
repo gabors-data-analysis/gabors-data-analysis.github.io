@@ -14,6 +14,8 @@ redirect_from:
 
 
 
+*Part of [Data & Code]({{ "/data-and-code/" | relative_url }}).*
+
 # Folder setup
 **First**, decide about where to store data and code for this textbook. In all codes we will call on data and code folders separately, so you will have to set them at the start of the code. 
 

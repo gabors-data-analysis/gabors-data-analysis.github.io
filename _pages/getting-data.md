@@ -8,6 +8,8 @@ redirect_from:
   - /getting-data.html
 ---
 
+*Part of [Data & Code]({{ "/data-and-code/" | relative_url }}).*
+
 You can download dataset folders from [OSF.io](https://osf.io/7epdj/)
 
 ## There are several options. 

@@ -27,7 +27,7 @@ This textbook supports independent study with clear explanations, practical advi
 
 1. **Open your chapter**: go to the **[Chapters]({{ '/chapters/' | relative_url }})** overview or pick a **[case study]({{ '/casestudies/' | relative_url }})**.  
 
-2. **Set up and get the materials**: choose *Stata*, *R*, or *Python* follow the [setup guides]({{ '/data-and-code/' | relative_url }}#full-setup-guides), and download the datasets and scripts from **[Data & Code]({{ '/data-and-code/' | relative_url }})** — the same files used in the book.  
+2. **Set up and get the materials**: choose *Stata*, *R*, or *Python* follow the [setup guides]({{ '/data-and-code/' | relative_url }}#set-up-your-machine), and download the datasets and scripts from **[Data & Code]({{ '/data-and-code/' | relative_url }})** — the same files used in the book.  
 
 3. **Practice with exercises**: after each chapter, complete the questions and coding tasks to check your understanding and build confidence.  
 

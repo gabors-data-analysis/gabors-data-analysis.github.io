@@ -9,6 +9,8 @@ redirect_from:
 ---
 
 
+*Part of [Data & Code]({{ "/data-and-code/" | relative_url }}).*
+
 This textbook is coding language neutral. This means, that the book does not include code snippets, and nothing there depends on what coding (scripting) language you may use. There are many tools to carry out all the tasks in our case studies. We decided to focus the three most widely used tools for data analysis: R, Stata and Python. 
 
 

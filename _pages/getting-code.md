@@ -9,6 +9,8 @@ redirect_from:
 ---
 
 
+*Part of [Data & Code]({{ "/data-and-code/" | relative_url }}).*
+
 The codebase for the whole textbook lives in github:
 
 >  [github.com/gabors-data-analysis/da_case_studies](https://github.com/gabors-data-analysis/da_case_studies){:target="_blank"} 
