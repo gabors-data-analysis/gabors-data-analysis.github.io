@@ -1,4 +1,5 @@
 ---
+description: "All 47 case studies of the Bekes-Kezdi Data Analysis textbook: real questions answered with real-world data, with links to slides, code, and datasets."
 layout: single
 classes: #wide
 permalink: /casestudies/

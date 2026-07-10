@@ -1,4 +1,5 @@
 ---
+description: "How to get all data and code for the Data Analysis textbook: raw and clean datasets on OSF, full case study code in R, Python, and Stata on GitHub."
 layout: single
 classes: wide
 # title: "Data and code"

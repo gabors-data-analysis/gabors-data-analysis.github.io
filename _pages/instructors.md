@@ -1,4 +1,5 @@
 ---
+description: "Teaching resources for Data Analysis for Business, Economics, and Policy: slides, solutions, teaching guide, FAQs, and adoption examples."
 layout: single
 title: "Teaching Resources"
 permalink: /instructors/

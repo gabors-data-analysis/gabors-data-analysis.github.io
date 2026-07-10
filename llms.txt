@@ -1,0 +1,52 @@
+# Gabors Data Analysis
+
+> Companion website for the textbook "Data Analysis for Business, Economics, and Policy" by Gábor Békés and Gábor Kézdi (Cambridge University Press, 2021). A complete data analysis curriculum — data wrangling, regression, prediction with machine learning, and causal analysis — taught through 47 case studies using real-world data, with full openly available code in R, Python, and Stata and all datasets on OSF.
+
+Key facts:
+- 24 chapters in four parts: Data Exploration (ch 1–6), Regression Analysis (ch 7–12), Prediction (ch 13–18), Causal Analysis (ch 19–24)
+- 47 case studies, 360+ practice questions, 120 data exercises
+- Adopted by 90+ university programmes worldwide
+- All data and code are free and open; the book itself is a commercial publication
+
+## The book
+
+- [Why this book](https://gabors-data-analysis.com/whythisbook/): scope, philosophy, and intended audiences
+- [Chapters and slides](https://gabors-data-analysis.com/chapters/): summaries and free lecture slides (PDF) for all 24 chapters
+- [Endorsements](https://gabors-data-analysis.com/endorsements): reviews by David Card, Joshua Angrist, and others
+- [Errata](https://gabors-data-analysis.com/errata/): known errors and corrections
+- [Order options](https://gabors-data-analysis.com/order): where to buy; examination copies for instructors
+- [About the authors](https://gabors-data-analysis.com/authors/)
+
+## Case studies and data
+
+- [All case studies](https://gabors-data-analysis.com/casestudies/): descriptions of all 47 case studies with links to chapter, slides, code, and data
+- [Dataset summaries](https://gabors-data-analysis.com/datasets/): content, key variables, sources, and licenses of the datasets
+- [Data and code hub](https://gabors-data-analysis.com/data-and-code/): how to get everything
+- [Data on OSF](https://osf.io/7epdj/): raw and clean versions of all datasets
+- [Code on GitHub](https://github.com/gabors-data-analysis/da_case_studies): full reproduction code for every case study in R, Python, and Stata
+
+## For instructors
+
+- [Instructor hub](https://gabors-data-analysis.com/instructors/): slides, solutions, adoption examples
+- [Teaching guide](https://gabors-data-analysis.com/teaching-guide/): course design for undergraduate, graduate, and PhD programmes
+- [Instructor FAQ](https://gabors-data-analysis.com/instructor-faq/)
+- [Courses using the book](https://gabors-data-analysis.com/courses-using/)
+
+## For students
+
+- [Student hub](https://gabors-data-analysis.com/students/): quick links, setup, practice
+- [Getting started](https://gabors-data-analysis.com/getting-started)
+- [Coding courses](https://gabors-data-analysis.com/code-courses/): free open courses for R, Python, and Stata from zero
+- Setup guides: [R](https://gabors-data-analysis.com/howto-r/), [Python](https://gabors-data-analysis.com/howto-python/), [Stata](https://gabors-data-analysis.com/howto-stata/)
+
+## Data analysis with AI
+
+- [Data analysis with AI](https://gabors-data-analysis.com/data-analysis-with-ai/): overview of AI-related materials
+- [Full AI course material](https://gabors-data-analysis.com/ai-course/): "Doing Data Analysis with AI" course by Gábor Békés
+- [Textbook in the AI era](https://gabors-data-analysis.com/ai-era-textbook): notes on the planned AI-era edition
+
+## Optional
+
+- [Site source on GitHub](https://github.com/gabors-data-analysis/gabors-data-analysis.github.io): all pages are Jekyll Markdown files in `_pages/`
+- [Sitemap](https://gabors-data-analysis.com/sitemap.xml)
+- [Blog posts](https://gabors-data-analysis.com/blog/): short notes on sampling, OLS notation, visualization, and more

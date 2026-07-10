@@ -123,6 +123,7 @@
     "@context": "https://schema.org",
     {% if site.social.type == "Organization" %}
       "@type": "Organization",
+      "name": {{ site.title | jsonify }},
       "url": {{ '/' | absolute_url | jsonify }}{% if site.og_image %},
       "logo": {{ site_og_image | jsonify }}{% endif %}
     {% else %}
@@ -133,6 +134,28 @@
     {% endif %}
   }
 </script>
+
+{% if page.url == "/" %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Data Analysis for Business, Economics, and Policy",
+    "author": [
+      { "@type": "Person", "name": "Gábor Békés", "url": "https://sites.google.com/site/bekesg" },
+      { "@type": "Person", "name": "Gábor Kézdi", "url": "https://sites.google.com/site/gaborkezdi" }
+    ],
+    "publisher": { "@type": "Organization", "name": "Cambridge University Press" },
+    "datePublished": "2021",
+    "inLanguage": "en",
+    "isbn": "9781108483018",
+    "image": {{ '/images/cover-full_hd.png' | absolute_url | jsonify }},
+    "url": {{ '/' | absolute_url | jsonify }},
+    "about": ["data analysis", "econometrics", "data science", "machine learning", "causal inference", "statistics"],
+    "sameAs": "https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20"
+  }
+</script>
+{% endif %}
 
 {% if site.google_site_verification %}
   <meta name="google-site-verification" content="{{ site.google_site_verification }}" />

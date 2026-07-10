@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gabors-data-analysis.com/sitemap.xml
+
+# AI crawlers and agents are welcome.
+# A structured guide to this site's content is at /llms.txt

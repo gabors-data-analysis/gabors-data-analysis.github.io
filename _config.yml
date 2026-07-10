@@ -23,7 +23,7 @@ description              : "A comprehensive textbook on data analysis for busine
 port                     : 4000
 host                     : "0.0.0.0"
 
-url                      :  # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://gabors-data-analysis.com" # the base hostname & protocol for your site
 baseurl                  :  # the subpath of your site, e.g. "/blog"
 repository               : "gabors-data-analysis"
 
@@ -79,7 +79,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/images/cover-full_hd.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:

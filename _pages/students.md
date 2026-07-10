@@ -1,4 +1,5 @@
 ---
+description: "Student resources for the Data Analysis textbook: quick links, coding setup in R, Python, or Stata, practice Q&A, and study advice."
 layout: single
 classes: [wide]
 title: "Student Resources"

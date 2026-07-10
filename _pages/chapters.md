@@ -1,4 +1,5 @@
 ---
+description: "Summaries, outlines, free lecture slides (PDF), and case study links for all 24 chapters of Data Analysis for Business, Economics, and Policy."
 layout: single
 classes: [wide, fullbleed]
 permalink: /chapters/

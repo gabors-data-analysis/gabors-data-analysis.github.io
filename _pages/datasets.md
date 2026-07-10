@@ -1,4 +1,5 @@
 ---
+description: "Summaries of the datasets used in the Data Analysis textbook case studies: content, key variables, sources, licenses, and download links (OSF)."
 permalink: /datasets/
 # title: "Datasets summary"
 excerpt: "Datasets details for case studiesa"
