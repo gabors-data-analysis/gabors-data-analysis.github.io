@@ -44,6 +44,8 @@ main:
     children:
       - title: "Get data & code"
         url: /data-and-code/
+      - title: "Open-source ecosystem"
+        url: /ecosystem/
       - title: "Dataset summaries"
         url: /datasets/
       - title: "Setup: R"
@@ -88,6 +90,8 @@ main:
         url: /data-analysis-with-ai/
       - title: "AI course — full material"
         url: /ai-course/
+      - title: "Open book: Data Analysis with AI"
+        url: /da-w-ai-book/
       - title: "Textbook in the AI era"
         url: /ai-era-textbook
 
@@ -116,6 +120,8 @@ sidebar:
     children:
       - title: "Get data & code"
         url: /data-and-code/
+      - title: "Open-source ecosystem"
+        url: /ecosystem/
       - title: "Dataset summaries"
         url: /datasets/
       - title: "Setup guides (R, Python, Stata)"
@@ -154,6 +160,8 @@ sidebar:
         url: /data-analysis-with-ai/
       - title: "AI course — full material"
         url: /ai-course/
+      - title: "Open book: Data Analysis with AI"
+        url: /da-w-ai-book/
       - title: "Textbook in the AI era"
         url: /ai-era-textbook
 

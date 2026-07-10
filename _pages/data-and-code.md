@@ -16,7 +16,7 @@ redirect_from:
 
 The textbook is a complete, reproducible package of **text, code, and data**. The code and datasets are freely available, and each case study provides what you need to reproduce its analyses, figures, and tables.  
 
-**Quick links**: [**Data (OSF)**](https://osf.io/7epdj/){: .btn .btn--success } [**Dataset summaries**]({{ '/datasets/' | relative_url }}){: .btn .btn--success } [**Code in GitHub**](https://github.com/gabors-data-analysis/da_case_studies){: .btn .btn--success }
+**Quick links**: [**Data (OSF)**](https://osf.io/7epdj/){: .btn .btn--success } [**Dataset summaries**]({{ '/datasets/' | relative_url }}){: .btn .btn--success } [**Code in GitHub**](https://github.com/gabors-data-analysis/da_case_studies){: .btn .btn--success } [**Open-source ecosystem**]({{ '/ecosystem/' | relative_url }}){: .btn .btn--secondary }
 
 
 ## Getting data    

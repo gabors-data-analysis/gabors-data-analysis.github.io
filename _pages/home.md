@@ -73,7 +73,7 @@ redirect_from:
       <ul class="gda-card__links">
         <li><a href="https://osf.io/7epdj/" target="_blank" rel="noopener">Datasets on OSF</a></li>
         <li><a href="https://github.com/gabors-data-analysis/da_case_studies" target="_blank" rel="noopener">Code on GitHub</a></li>
-        <li><a href="{{ '/datasets/' | relative_url }}">Dataset summaries</a></li>
+        <li><a href="{{ '/ecosystem/' | relative_url }}">Open-source ecosystem</a></li>
       </ul>
     </div>
     <div class="gda-card gda-card--purple">
@@ -81,7 +81,7 @@ redirect_from:
       <p class="gda-card__text">New: teaching and doing data analysis in the age of LLMs — a full course and materials in progress.</p>
       <ul class="gda-card__links">
         <li><a href="{{ '/ai-course/' | relative_url }}">AI course — full material</a></li>
-        <li><a href="{{ '/ai-era-textbook' | relative_url }}">Textbook in the AI era</a></li>
+        <li><a href="{{ '/da-w-ai-book/' | relative_url }}">Open book: Data Analysis with AI</a></li>
       </ul>
     </div>
   </div>
