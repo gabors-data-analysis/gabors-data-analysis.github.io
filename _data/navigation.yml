@@ -13,8 +13,10 @@ main:
     children:
       - title: "Why this book?"
         url: /whythisbook/
-      - title: "Chapters & slides"
+      - title: "Chapters"
         url: /chapters/
+      - title: "Slides — all 24 chapters"
+        url: /slides/
       - title: "Authors"
         url: /authors/
       - title: "Endorsements"
@@ -23,6 +25,9 @@ main:
         url: /errata/
       - title: "Get the book"
         url: /order
+
+  - title: "Slides"
+    url: /slides/
 
   - title: "Case Studies"
     url: /casestudies/
@@ -93,8 +98,10 @@ sidebar:
     children:
       - title: "Why this book?"
         url: /whythisbook/
-      - title: "Chapters & slides"
+      - title: "Chapters"
         url: /chapters/
+      - title: "Slides — all 24 chapters"
+        url: /slides/
       - title: "Case studies"
         url: /casestudies/
       - title: "Endorsements"

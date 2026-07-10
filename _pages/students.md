@@ -14,7 +14,7 @@ All the resources you need as a student using **Data Analysis for Business, Econ
 
 ## Quick links
 
-- [Chapters & Slides]({{ '/chapters/' | relative_url }}){: .btn .btn--primary style="margin-top:0.1rem; display:inline-block;"}  
+- [Slides — all 24 chapters]({{ '/slides/' | relative_url }}){: .btn .btn--primary style="margin-top:0.1rem; display:inline-block;"}  [Chapters]({{ '/chapters/' | relative_url }}){: .btn .btn--primary style="margin-top:0.1rem; display:inline-block;"}  
 - [Case studies]({{ '/casestudies/' | relative_url }}){: .btn .btn--accent style="margin-top:0.1rem; display:inline-block;"}  
 - [Data & code]({{ '/data-and-code/' | relative_url }}){: .btn .btn--secondary style="margin-top:0.1rem; display:inline-block;"}  [GitHub repository](https://github.com/gabors-data-analysis/da_case_studies){: .btn .btn--secondary target="_blank" rel="noopener noreferrer"}
 - [Datasets on OSF](https://osf.io/7epdj/){: .btn .btn--plum target="_blank" rel="noopener noreferrer"}  [Dataset summaries]({{ '/datasets/' | relative_url }}){: .btn .btn--plum target="_blank" rel="noopener noreferrer"} 

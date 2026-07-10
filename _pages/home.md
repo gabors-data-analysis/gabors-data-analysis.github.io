@@ -26,10 +26,10 @@ redirect_from:
       47 case studies using real-world data, with all code in <strong>R, Python, and Stata</strong>.
     </p>
     <div class="gda-cta-row">
-      <a href="{{ '/order' | relative_url }}" class="gda-btn gda-btn--primary">Get the book</a>
-      <a href="{{ '/instructors/' | relative_url }}" class="gda-btn gda-btn--green">For instructors</a>
-      <a href="{{ '/students/' | relative_url }}" class="gda-btn gda-btn--green">For students</a>
-      <a href="{{ '/chapters/' | relative_url }}" class="gda-btn gda-btn--ghost">Browse chapters</a>
+      <a href="{{ '/slides/' | relative_url }}" class="gda-btn gda-btn--primary">Free slides — all 24 chapters</a>
+      <a href="{{ '/order' | relative_url }}" class="gda-btn gda-btn--green">Get the book</a>
+      <a href="{{ '/instructors/' | relative_url }}" class="gda-btn gda-btn--ghost">For instructors</a>
+      <a href="{{ '/students/' | relative_url }}" class="gda-btn gda-btn--ghost">For students</a>
     </div>
   </div>
   <div class="gda-hero__cover">
@@ -53,8 +53,8 @@ redirect_from:
       <h3 class="gda-card__title"><a href="{{ '/instructors/' | relative_url }}">Instructors</a></h3>
       <p class="gda-card__text">Adopt and teach with the book: slides for every chapter, teaching guide, solutions, and adoption examples.</p>
       <ul class="gda-card__links">
+        <li><a href="{{ '/slides/' | relative_url }}">Slides for all 24 chapters</a></li>
         <li><a href="{{ '/teaching-guide/' | relative_url }}">Teaching guide</a></li>
-        <li><a href="{{ '/instructor-faq/' | relative_url }}">Instructor FAQ</a></li>
         <li><a href="https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/examination-copy/login" target="_blank" rel="noopener">Request an examination copy</a></li>
       </ul>
     </div>

@@ -13,6 +13,8 @@ redirect_from:
 
 Everything you need to **adopt** and **teach** *Data Analysis for Business, Economics, and Policy*: slides, solutions, teaching guide, datasets, FAQs, and adoption examples.
 
+**Quick links**: [Slides — all 24 chapters]({{ '/slides/' | relative_url }}){: .btn .btn--primary} [Teaching guide]({{ '/teaching-guide/' | relative_url }}){: .btn .btn--success} [Instructor FAQ]({{ '/instructor-faq/' | relative_url }}){: .btn .btn--success} [Examination copy](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/examination-copy/login){: .btn .btn--secondary target="_blank" rel="noopener"}
+
 ---
 
 ## Why teach with this book?
