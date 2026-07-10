@@ -1,0 +1,110 @@
+/* ==========================================================================
+   GABORS DATA ANALYSIS — site customizations
+   Masthead dropdown navigation + modern design layer.
+   Imported last from assets/css/main.scss so it can override theme rules.
+   ========================================================================== */
+
+/*
+   Masthead dropdown navigation
+   ========================================================================== */
+
+.greedy-nav {
+  /* allow dropdowns to escape the nav bar (theme default clips them) */
+  .visible-links {
+    overflow: visible;
+
+    li.masthead__menu-item--has-children {
+      position: relative;
+    }
+
+    .subnav {
+      position: absolute;
+      top: 100%;
+      left: 0.5rem;
+      z-index: 30;
+      min-width: 15em;
+      margin: 0;
+      padding: 0.4em 0;
+      list-style: none;
+      background: #fff;
+      border: 1px solid $border-color;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+    }
+
+    li:hover > .subnav,
+    li:focus-within > .subnav {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .subnav li {
+      float: none;
+      display: block;
+    }
+
+    .subnav a {
+      display: block;
+      margin: 0;
+      padding: 0.45em 1.1em;
+      font-size: 0.85em;
+      white-space: nowrap;
+
+      /* no animated underline inside dropdowns */
+      &:before {
+        display: none;
+      }
+
+      &:hover {
+        background: mix(#fff, $primary-color, 92%);
+      }
+    }
+  }
+
+  /* caret hint on parents with children */
+  .subnav__caret {
+    display: inline-block;
+    margin-left: 0.35em;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    opacity: 0.6;
+  }
+
+  /* collapsed (mobile / overflow) menu: render children as indented group */
+  .hidden-links {
+    .subnav {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      margin: 0;
+      padding: 0 0 0.3em 0;
+      list-style: none;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+    }
+
+    .subnav a {
+      padding: 6px 20px 6px 34px;
+      font-size: $type-size-6;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .subnav__caret {
+      display: none;
+    }
+  }
+}

@@ -31,3 +31,6 @@ Dockerfile
 _asset_bundler_cache
 _site
 ai-course/code/interviews/my-openai-api-key.R
+
+# Claude Code local config
+.claude/

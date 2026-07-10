@@ -1,101 +1,161 @@
-# main links links
+# Site navigation
+#
+# `main` drives the masthead (top) menu. Items with `children` render as
+# dropdowns on desktop and as indented groups in the collapsed mobile menu.
+# Parent items link to a real hub page, so navigation works without the dropdown.
+#
+# `sidebar` drives the grouped left-hand navigation shown on content pages
+# (wired up via `sidebar: nav: "sidebar"` in _config.yml defaults).
+
 main:
-  - title: "Chapters"
-    url: /chapters/
+  - title: "Book"
+    url: /whythisbook/
+    children:
+      - title: "Why this book?"
+        url: /whythisbook/
+      - title: "Chapters & slides"
+        url: /chapters/
+      - title: "Authors"
+        url: /authors/
+      - title: "Endorsements"
+        url: /endorsements
+      - title: "Errata"
+        url: /errata/
+      - title: "Get the book"
+        url: /order
 
   - title: "Case Studies"
     url: /casestudies/
+    children:
+      - title: "All 47 case studies"
+        url: /casestudies/
+      - title: "Dataset summaries"
+        url: /datasets/
+      - title: "Extra data exercises"
+        url: /additional-data-exercises
 
-  - title: "Data and Code"
+  - title: "Data & Code"
     url: /data-and-code/
-
-  - title: "Students"
-    url: /students/
+    children:
+      - title: "Get data & code"
+        url: /data-and-code/
+      - title: "Dataset summaries"
+        url: /datasets/
+      - title: "Setup: R"
+        url: /howto-r/
+      - title: "Setup: Python"
+        url: /howto-python/
+      - title: "Setup: Stata"
+        url: /howto-stata/
+      - title: "Coding courses"
+        url: /code-courses/
 
   - title: "Instructors"
     url: /instructors/
+    children:
+      - title: "Instructor hub"
+        url: /instructors/
+      - title: "Teaching guide"
+        url: /teaching-guide/
+      - title: "Instructor FAQ"
+        url: /instructor-faq/
+      - title: "Courses using the book"
+        url: /courses-using/
+      - title: "Instructor feedback"
+        url: /instructor-feedback/
 
-  # - title: "Why this book?"
-  #   url: /whythisbook/
+  - title: "Students"
+    url: /students/
+    children:
+      - title: "Student hub"
+        url: /students/
+      - title: "Getting started"
+        url: /getting-started
+      - title: "Coding courses"
+        url: /code-courses/
+      - title: "Dictionary (EN–HU)"
+        url: /dictionary
 
-  # - title: "Blog"
-  #   url: /blog/
+  - title: "AI"
+    url: /data-analysis-with-ai/
+    children:
+      - title: "Data analysis with AI"
+        url: /data-analysis-with-ai/
+      - title: "AI course — full material"
+        url: /ai-course/
+      - title: "Textbook in the AI era"
+        url: /ai-era-textbook
 
-# sidebar:
-#   - title: About
-#     url: /
-#     children:
-#       - title: Authors
-#         url: /authors/
-#       - title: "Endorsements"
-#         url: /endorsements
-#       - title: "Why this book?"
-#         url: /whythisbook/
-#       - title: "Order the book"
-#         url: /preorder
-#       - title: "Contact us"
-#         url: /contact-us
-#       - title: "Our thanks"
-#         url: /our-thanks
-#       - title: "Errors we made"
-#         url: /errata
+# Grouped sidebar navigation, shown on content pages for site-wide wayfinding.
+sidebar:
+  - title: The Book
+    url: /whythisbook/
+    children:
+      - title: "Why this book?"
+        url: /whythisbook/
+      - title: "Chapters & slides"
+        url: /chapters/
+      - title: "Case studies"
+        url: /casestudies/
+      - title: "Endorsements"
+        url: /endorsements
+      - title: "Errata"
+        url: /errata/
+      - title: "Get the book"
+        url: /order
 
-#   - title: Teaching guide
-#     url: /
-#     children:     
-#       - title: "Teaching guide"
-#         url: /teaching-guide/
-#       - title: "Sample Chapters"
-#         url: https://www.book2look.com/vbook.aspx?id=9781108483018
-#       - title: "Instructor FAQ"
-#         url: /instructor-faq/
-    
-#   - title: Data and code
-#     url: /data-and-code/
-#     children:
-#       - title: "How get data, code"
-#         url: /data-and-code/
-#       - title: "Datasets used"
-#         url: /datasets
-#       - title: "Link to code"
-#         url: https://github.com/gabors-data-analysis/da_case_studies
-#       - title: "Link to data"
-#         url: https://osf.io/7epdj/
-      
+  - title: Data & Code
+    url: /data-and-code/
+    children:
+      - title: "Get data & code"
+        url: /data-and-code/
+      - title: "Dataset summaries"
+        url: /datasets/
+      - title: "Setup guides (R, Python, Stata)"
+        url: /howto-r/
+      - title: "Coding courses"
+        url: /code-courses/
 
-  # - title: Chapters
-  #   url: /chapters/
-  #   children:
-  #     - title: "Part I"
-  #       url: /chapters/part-I
-  #     - title: "Part II"
-  #       url: /chapters/part-II
-  #     - title: "Part III"
-  #       url: /chapters/part-III
-  #     - title: "Part IV"
-  #       url: /chapters/part-IV
+  - title: Teaching
+    url: /instructors/
+    children:
+      - title: "Instructor hub"
+        url: /instructors/
+      - title: "Teaching guide"
+        url: /teaching-guide/
+      - title: "Instructor FAQ"
+        url: /instructor-faq/
+      - title: "Courses using the book"
+        url: /courses-using/
 
-  # - title: Case studies
-  #   url: /casestudies/
-  #   children:
-  #     - title: "Part I"
-  #       url: /casestudies/part-I
-  #     - title: "Part II"
-  #       url: /casestudies/part-II
-  #     - title: "Part III"
-  #       url: /casestudies/part-III
-  #     - title: "Part IV"
-  #       url: /casestudies/part-IV
+  - title: Learning
+    url: /students/
+    children:
+      - title: "Student hub"
+        url: /students/
+      - title: "Getting started"
+        url: /getting-started
+      - title: "Practice: Q&A by part"
+        url: /part1-qanda
+      - title: "Dictionary (EN–HU)"
+        url: /dictionary
 
-  # - title: Blog 
-  #   url: /blog
+  - title: AI
+    url: /data-analysis-with-ai/
+    children:
+      - title: "Data analysis with AI"
+        url: /data-analysis-with-ai/
+      - title: "AI course — full material"
+        url: /ai-course/
+      - title: "Textbook in the AI era"
+        url: /ai-era-textbook
 
-  # - title: Setup
-  #   url: /data-and-code/
-  #   children:
-  #   - title: "Setup with R"
-  #     url: /howto-r/
-  #   - title: "Setup with Stata"
-  #     url: /howto-stata/
-  #   - title: "Setup with Python"
-  #     url: /howto-python/
+  - title: About
+    url: /authors/
+    children:
+      - title: "Authors"
+        url: /authors/
+      - title: "Our thanks"
+        url: /our-thanks/
+      - title: "Contact us"
+        url: /contact-us/
