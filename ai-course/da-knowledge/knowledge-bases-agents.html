@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-01-17">
+<meta name="dcterms.date" content="2026-06-19">
 
-<title>Assignment 2: Data exploration and documentation – Doing Data Analysis with AI</title>
+<title>Knowledge Bases for Agents – Doing Data Analysis with AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -154,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Assignment 2: Data exploration and documentation</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/designing-projects.html">Doing the analysis</a></li><li class="breadcrumb-item"><a href="../da-knowledge/knowledge-bases-agents.html">Knowledge Bases for Agents</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -456,7 +456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../da-knowledge/knowledge-bases-agents.html" class="sidebar-item-text sidebar-link">
+  <a href="../da-knowledge/knowledge-bases-agents.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Knowledge Bases for Agents</span></a>
   </div>
 </li>
@@ -527,18 +527,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#task" id="toc-task" class="nav-link active" data-scroll-target="#task">Task</a></li>
-  <li><a href="#to-submit" id="toc-to-submit" class="nav-link" data-scroll-target="#to-submit">To submit</a></li>
-  <li><a href="#ai-use-restrictions" id="toc-ai-use-restrictions" class="nav-link" data-scroll-target="#ai-use-restrictions">AI use restrictions</a></li>
+  <li><a href="#why-this-matters-now" id="toc-why-this-matters-now" class="nav-link active" data-scroll-target="#why-this-matters-now">Why This Matters Now</a></li>
+  <li><a href="#metadata-as-code" id="toc-metadata-as-code" class="nav-link" data-scroll-target="#metadata-as-code">Metadata as Code</a></li>
+  <li><a href="#the-open-knowledge-format" id="toc-the-open-knowledge-format" class="nav-link" data-scroll-target="#the-open-knowledge-format">The Open Knowledge Format</a>
+  <ul class="collapse">
+  <li><a href="#what-a-concept-file-looks-like" id="toc-what-a-concept-file-looks-like" class="nav-link" data-scroll-target="#what-a-concept-file-looks-like">What a concept file looks like</a></li>
+  <li><a href="#the-frontmatter-fields" id="toc-the-frontmatter-fields" class="nav-link" data-scroll-target="#the-frontmatter-fields">The frontmatter fields</a></li>
+  </ul></li>
+  <li><a href="#a-readme-vs.-an-okf-bundle" id="toc-a-readme-vs.-an-okf-bundle" class="nav-link" data-scroll-target="#a-readme-vs.-an-okf-bundle">A README vs.&nbsp;an OKF Bundle</a></li>
+  <li><a href="#maintaining-it-with-ai" id="toc-maintaining-it-with-ai" class="nav-link" data-scroll-target="#maintaining-it-with-ai">Maintaining It with AI</a></li>
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">Try It</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/designing-projects.html">Doing the analysis</a></li><li class="breadcrumb-item"><a href="../da-knowledge/knowledge-bases-agents.html">Knowledge Bases for Agents</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Assignment 2: Data exploration and documentation</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Knowledge Bases for Agents</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Metadata as Code and the Open Knowledge Format</p>
 </div>
 
 
@@ -549,7 +558,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 17, 2026</p>
+      <p class="date">June 19, 2026</p>
     </div>
   </div>
   
@@ -561,39 +570,197 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="task" class="level3">
-<h3 class="anchored" data-anchor-id="task">Task</h3>
-<p>In this assignment, you will continue exploring the data, and create a readme document. This is an <strong>individual</strong> assignment.</p>
-<ul>
-<li>Review good practices for readme and data documentation</li>
-<li>First, consider the WVS Survey we used in class: <a href="../case-studies/VWS/data/codebook.pdf">Codebook</a>, <a href="../case-studies/VWS/data/WVS_random_subset2000.csv">sample data</a>. See the <a href="../case-studies/VWS/">World Values Survey case study</a> for more info. Link it to your AI. (Can move to google drive.)</li>
-<li>Second, choose a research question using the VWS data. It can be broad or specific. Ask AI for ideas.</li>
-<li>What variables would you use to investigate the research question? Pick the most relevant ones (min 8, max 25)</li>
-<li>Review survey timing and discuss consequences</li>
-<li>Considering these variables <strong>only</strong> create a single README.md (in markdown).</li>
-</ul>
-<p><strong>The readme</strong></p>
-<p>In the readme, include:</p>
-<ul>
-<li>key info on the dataset itself (you need to figure out what this key info is based on the lecture and examples)</li>
-<li>key variables description</li>
-<li>table with descriptive statistics for the 5 most important selected variables</li>
-</ul>
+<section id="why-this-matters-now" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matters-now">Why This Matters Now</h2>
+<p>A README is written for a person reading top to bottom. An AI agent works differently: it lands in your project cold, needs to find the one table relevant to the question, and wants to load <em>only that</em> — not your entire 400-line data description. As we hand more of our analysis to agentic tools like Claude Code, the way we document data starts to matter for machines as much as for humans.</p>
+<p>The good news: the same plain-markdown habits that make documentation good for people also make it navigable for agents — if you add a little structure. This page introduces <strong>metadata as code</strong> and a lightweight convention built on it, the <strong>Open Knowledge Format (OKF)</strong>.</p>
+<p>This builds directly on <a href="../da-knowledge/documentation-readme.html">Documentation Fundamentals</a> — read that first if you haven’t.</p>
 </section>
-<section id="to-submit" class="level3">
-<h3 class="anchored" data-anchor-id="to-submit">To submit</h3>
-<ul>
-<li>README.md file. (lastname_firstname_dawai_week02_readme.md) (16p)</li>
-<li>What advice would you give to a fellow data analysis student on <strong>using AI to create README documents</strong>? (lastname_firstname_dawai_week02_advice.txt) (4p)
-<ul>
-<li>List 2–3 pieces of advice based on your own experience using AI for this specific task.</li>
-</ul></li>
-</ul>
+<section id="metadata-as-code" class="level2">
+<h2 class="anchored" data-anchor-id="metadata-as-code">Metadata as Code</h2>
+<p>“Metadata as code” means your documentation about the data lives <strong>in the repository, in plain text, under version control</strong> — right next to the code and data it describes. Not in a separate wiki, not in a vendor’s catalog UI, not in a shared drive that drifts out of date.</p>
+<p>The benefits mirror those of code itself:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 58%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Property</th>
+<th>What you get</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Version controlled</strong></td>
+<td>Documentation changes are tracked in git alongside data changes</td>
+</tr>
+<tr class="even">
+<td><strong>Diffable</strong></td>
+<td>You can see exactly what changed in a table description and when</td>
+</tr>
+<tr class="odd">
+<td><strong>Portable</strong></td>
+<td>Move the repo, the knowledge comes with it — no lock-in</td>
+</tr>
+<tr class="even">
+<td><strong>Readable by both</strong></td>
+<td>Same file serves a human (renders nicely) and an agent (parses cleanly)</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="ai-use-restrictions" class="level3">
-<h3 class="anchored" data-anchor-id="ai-use-restrictions">AI use restrictions</h3>
+<section id="the-open-knowledge-format" class="level2">
+<h2 class="anchored" data-anchor-id="the-open-knowledge-format">The Open Knowledge Format</h2>
+<p><a href="https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf">OKF</a> is an open, vendor-neutral convention published by Google Cloud in 2026. Strip away the cloud framing and it is deliberately tiny — the whole spec fits on a page:</p>
+<ol type="1">
+<li>A <strong>directory of markdown files</strong>, one per “concept” — a table, a dataset, a metric. The file path <em>is</em> the concept’s name.</li>
+<li>Each file opens with <strong>YAML frontmatter</strong>: a small block of structured fields. Only <code>type:</code> is required; everything else is optional but queryable.</li>
+<li>Concepts <strong>link to each other with ordinary markdown links</strong>, forming a knowledge graph richer than the folder tree.</li>
+<li>Optional <code>index.md</code> files let an agent navigate in progressively, and <code>log.md</code> files record change history.</li>
+</ol>
+<p>That’s it. No SDK, no database, no runtime. It works with the text editor, git, and AI tools you already use. The bet — voiced by Andrej Karpathy — is that the tedious cross-reference bookkeeping that makes humans abandon wikis is exactly what LLMs do tirelessly.</p>
+<section id="what-a-concept-file-looks-like" class="level3">
+<h3 class="anchored" data-anchor-id="what-a-concept-file-looks-like">What a concept file looks like</h3>
+<p>Here is a single table from a football dataset, documented OKF-style:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">type:</span><span class="co"> Table</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> matches</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> One row per match — the core fact table for 2024/25.</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">resource:</span><span class="co"> ../data/matches.csv</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">tags:</span><span class="co"> [football, fact-table]</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="an">updated:</span><span class="co"> 2026-06-19</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu"># matches</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Core fact table. 1,752 rows across the top-5 leagues.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Schema</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Column <span class="pp">|</span> Type <span class="pp">|</span> Coverage <span class="pp">|</span> Notes <span class="pp">|</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|--------|------|----------|-------|</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`match_id`</span>  <span class="pp">|</span> string <span class="pp">|</span> 100%  <span class="pp">|</span> Deterministic ID <span class="pp">|</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`home_xg`</span>   <span class="pp">|</span> float  <span class="pp">|</span> 99.9% <span class="pp">|</span> Expected goals (Understat) <span class="pp">|</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`referee`</span>   <span class="pp">|</span> string <span class="pp">|</span> 22%   <span class="pp">|</span> Only EPL has referee data <span class="pp">|</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Joins</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`match_id`</span> → <span class="co">[</span><span class="ot">match_stats</span><span class="co">](match_stats.md)</span> (1:2, perfect)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`match_id`</span> → <span class="co">[</span><span class="ot">lineups</span><span class="co">](lineups.md)</span> (1:~31, perfect)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Two things to notice. The <strong>frontmatter</strong> is filterable: an agent can ask “show me every <code>type: Table</code> updated this month” without reading the bodies. And the <strong>foreign key is written as a link</strong> — <code>match_id → [lineups](lineups.md)</code> — so the agent follows join paths the way you follow hyperlinks.</p>
+</section>
+<section id="the-frontmatter-fields" class="level3">
+<h3 class="anchored" data-anchor-id="the-frontmatter-fields">The frontmatter fields</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 47%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Required?</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>type</code></td>
+<td><strong>Yes</strong></td>
+<td><code>Dataset</code>, <code>Table</code>, <code>Metric</code>, <code>Concept</code>, …</td>
+</tr>
+<tr class="even">
+<td><code>title</code></td>
+<td>No</td>
+<td>Human label</td>
+</tr>
+<tr class="odd">
+<td><code>description</code></td>
+<td>No</td>
+<td>One sentence the agent reads first</td>
+</tr>
+<tr class="even">
+<td><code>resource</code></td>
+<td>No</td>
+<td>Path or URL to the thing described (the CSV, the dashboard)</td>
+</tr>
+<tr class="odd">
+<td><code>tags</code></td>
+<td>No</td>
+<td>Flat list for grouping</td>
+</tr>
+<tr class="even">
+<td><code>updated</code></td>
+<td>No</td>
+<td><code>YYYY-MM-DD</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="a-readme-vs.-an-okf-bundle" class="level2">
+<h2 class="anchored" data-anchor-id="a-readme-vs.-an-okf-bundle">A README vs.&nbsp;an OKF Bundle</h2>
+<p>These are complements, not competitors. A useful way to see the difference:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>README / single doc</th>
+<th>OKF bundle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Audience</strong></td>
+<td>Human reading start to finish</td>
+<td>Agent fetching one slice</td>
+</tr>
+<tr class="even">
+<td><strong>Shape</strong></td>
+<td>One file, narrative</td>
+<td>Many files, one per concept</td>
+</tr>
+<tr class="odd">
+<td><strong>Relationships</strong></td>
+<td>Described in prose</td>
+<td>Encoded as markdown links</td>
+</tr>
+<tr class="even">
+<td><strong>Best for</strong></td>
+<td>Project overview, setup, the “why”</td>
+<td>Rich relational datasets with many tables</td>
+</tr>
+</tbody>
+</table>
+<p>The honest guidance: <strong>don’t convert everything.</strong> A one-off script or a single CSV needs a good README, not a bundle. The payoff of OKF appears when you have a genuinely relational dataset — several tables with foreign keys — that an agent will query repeatedly over time. For that case, splitting a long data description into linked per-table files means the agent loads only what it needs and can walk the joins.</p>
+</section>
+<section id="maintaining-it-with-ai" class="level2">
+<h2 class="anchored" data-anchor-id="maintaining-it-with-ai">Maintaining It with AI</h2>
+<p>This is where it becomes practical rather than aspirational. Keeping cross- references current is exactly the chore that kills hand-maintained documentation — and exactly what an agent is good at. A workable loop:</p>
+<ol type="1">
+<li><strong>Generate the first draft</strong> — point Claude Code at your data folder and ask it to draft one concept file per table, with schema and inferred join paths.</li>
+<li><strong>Verify against the data</strong> — the non-negotiable step. Check that column types, coverage percentages, and especially the join keys are <em>real</em>, not plausible inventions. (See the verification discipline in <a href="../da-knowledge/documentation-readme.html">Documentation Fundamentals</a>.)</li>
+<li><strong>Let the agent maintain it</strong> — when the data changes, ask the agent to update the affected files and fix every cross-reference in one pass.</li>
+</ol>
+<p>The first draft is cheap; the verification is where your judgment earns its keep. An agent will happily write <code>coverage: 100%</code> for a column that is half empty.</p>
+</section>
+<section id="try-it" class="level2">
+<h2 class="anchored" data-anchor-id="try-it">Try It</h2>
+<p>A complete worked example — the seven-table European football dataset converted into an OKF bundle — accompanies this course’s data-linking material. Open it and notice how each table file links to the ones it joins, and how the top-level <code>index.md</code> carries the whole join map.</p>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further Reading</h2>
 <ul>
-<li>Do not use AI to help you generate the advice. We want to hear your personal examples and reflections, not AI-generated suggestions.</li>
+<li><a href="https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf">Open Knowledge Format spec &amp; samples</a> — the one-page spec, plus sample bundles (GA4, Stack Overflow)</li>
+<li>Google Cloud, <a href="https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing">How the Open Knowledge Format can improve data sharing</a> — the announcement</li>
+<li><a href="../da-knowledge/documentation-readme.html">Documentation Fundamentals</a> — READMEs and codebooks, the human-facing counterpart</li>
+<li><a href="../da-knowledge/joining-tables.html">Joining Data Tables</a> — why foreign keys are worth documenting carefully</li>
 </ul>
 
 
@@ -1053,41 +1220,159 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Assignment 2: Data exploration and documentation"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-01-17"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>In this assignment, you will continue exploring the data, and create a readme document. This is an **individual** assignment. </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Review good practices for readme and data documentation</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>First, consider the WVS Survey we used in class: <span class="co">[</span><span class="ot">Codebook</span><span class="co">](/case-studies/VWS/data/codebook.pdf)</span>, <span class="co">[</span><span class="ot">sample data</span><span class="co">](/case-studies/VWS/data/WVS_random_subset2000.csv)</span>. See the <span class="co">[</span><span class="ot">World Values Survey case study</span><span class="co">](/case-studies/VWS/)</span> for more info. Link it to your AI. (Can move to google drive.)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Second, choose a research question using the VWS data. It can be broad or specific. Ask AI for ideas.</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What variables would you use to investigate the research question? Pick the most relevant ones (min 8, max 25)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Review survey timing and discuss consequences</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Considering these variables **only** create a single README.md (in markdown). </span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>**The readme**</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>In the readme, include:</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>key info on the dataset itself (you need to figure out what this key info is based on the lecture and examples)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>key variables description</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>table with descriptive statistics for the 5 most important selected variables</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">### To submit</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>README.md file. (lastname_firstname_dawai_week02_readme.md) (16p)</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>What advice would you give to a fellow data analysis student on **using AI to create README documents**? (lastname_firstname_dawai_week02_advice.txt) (4p)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>List 2–3 pieces of advice based on your own experience using AI for this specific task.</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">### AI use restrictions</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Do not use AI to help you generate the advice. We want to hear your personal examples and reflections, not AI-generated suggestions.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Knowledge Bases for Agents"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Metadata as Code and the Open Knowledge Format"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-06-19"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why This Matters Now</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>A README is written for a person reading top to bottom. An AI agent works</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>differently: it lands in your project cold, needs to find the one table relevant</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>to the question, and wants to load *only that* — not your entire 400-line data</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>description. As we hand more of our analysis to agentic tools like Claude Code,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>the way we document data starts to matter for machines as much as for humans.</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>The good news: the same plain-markdown habits that make documentation good for</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>people also make it navigable for agents — if you add a little structure. This</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>page introduces **metadata as code** and a lightweight convention built on it,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>the **Open Knowledge Format (OKF)**.</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>This builds directly on <span class="co">[</span><span class="ot">Documentation Fundamentals</span><span class="co">](documentation-readme.qmd)</span> —</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>read that first if you haven't.</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Metadata as Code</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>"Metadata as code" means your documentation about the data lives **in the</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>repository, in plain text, under version control** — right next to the code and</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>data it describes. Not in a separate wiki, not in a vendor's catalog UI, not in a</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>shared drive that drifts out of date.</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>The benefits mirror those of code itself:</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Property <span class="pp">|</span> What you get <span class="pp">|</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="pp">|----------|--------------|</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Version controlled** <span class="pp">|</span> Documentation changes are tracked in git alongside data changes <span class="pp">|</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Diffable** <span class="pp">|</span> You can see exactly what changed in a table description and when <span class="pp">|</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Portable** <span class="pp">|</span> Move the repo, the knowledge comes with it — no lock-in <span class="pp">|</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Readable by both** <span class="pp">|</span> Same file serves a human (renders nicely) and an agent (parses cleanly) <span class="pp">|</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Open Knowledge Format</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">OKF</span><span class="co">](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf)</span> is</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>an open, vendor-neutral convention published by Google Cloud in 2026. Strip away</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>the cloud framing and it is deliberately tiny — the whole spec fits on a page:</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>A **directory of markdown files**, one per "concept" — a table, a dataset, a</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>   metric. The file path *is* the concept's name.</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Each file opens with **YAML frontmatter**: a small block of structured fields.</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>   Only <span class="in">`type:`</span> is required; everything else is optional but queryable.</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Concepts **link to each other with ordinary markdown links**, forming a</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>   knowledge graph richer than the folder tree.</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Optional <span class="in">`index.md`</span> files let an agent navigate in progressively, and <span class="in">`log.md`</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>   files record change history.</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>That's it. No SDK, no database, no runtime. It works with the text editor, git,</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>and AI tools you already use. The bet — voiced by Andrej Karpathy — is that the</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>tedious cross-reference bookkeeping that makes humans abandon wikis is exactly</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>what LLMs do tirelessly.</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="fu">### What a concept file looks like</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>Here is a single table from a football dataset, documented OKF-style:</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>type: Table</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>title: matches</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>description: One row per match — the core fact table for 2024/25.</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>resource: ../data/matches.csv</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>tags: <span class="co">[</span><span class="ot">football, fact-table</span><span class="co">]</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>updated: 2026-06-19</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="fu"># matches</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>Core fact table. 1,752 rows across the top-5 leagues.</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="fu">## Schema</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Column <span class="pp">|</span> Type <span class="pp">|</span> Coverage <span class="pp">|</span> Notes <span class="pp">|</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="pp">|--------|------|----------|-------|</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`match_id`</span>  <span class="pp">|</span> string <span class="pp">|</span> 100%  <span class="pp">|</span> Deterministic ID <span class="pp">|</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`home_xg`</span>   <span class="pp">|</span> float  <span class="pp">|</span> 99.9% <span class="pp">|</span> Expected goals (Understat) <span class="pp">|</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`referee`</span>   <span class="pp">|</span> string <span class="pp">|</span> 22%   <span class="pp">|</span> Only EPL has referee data <span class="pp">|</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Joins</span></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`match_id`</span> → <span class="co">[</span><span class="ot">match_stats</span><span class="co">](match_stats.md)</span> (1:2, perfect)</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`match_id`</span> → <span class="co">[</span><span class="ot">lineups</span><span class="co">](lineups.md)</span> (1:~31, perfect)</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="in">Two things to notice. The **frontmatter** is filterable: an agent can ask "show me</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="in">every `type: Table` updated this month" without reading the bodies. And the</span></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="in">**foreign key is written as a link** — `match_id → [lineups](lineups.md)` — so the</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="in">agent follows join paths the way you follow hyperlinks.</span></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="in">### The frontmatter fields</span></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="in">| Field | Required? | Use |</span></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="in">|-------|-----------|-----|</span></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="in">| `type` | **Yes** | `Dataset`, `Table`, `Metric`, `Concept`, … |</span></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="in">| `title` | No | Human label |</span></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="in">| `description` | No | One sentence the agent reads first |</span></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="in">| `resource` | No | Path or URL to the thing described (the CSV, the dashboard) |</span></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="in">| `tags` | No | Flat list for grouping |</span></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="in">| `updated` | No | `YYYY-MM-DD` |</span></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="in">## A README vs. an OKF Bundle</span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="in">These are complements, not competitors. A useful way to see the difference:</span></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="in">| | README / single doc | OKF bundle |</span></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="in">|---|---|---|</span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="in">| **Audience** | Human reading start to finish | Agent fetching one slice |</span></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a><span class="in">| **Shape** | One file, narrative | Many files, one per concept |</span></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a><span class="in">| **Relationships** | Described in prose | Encoded as markdown links |</span></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="in">| **Best for** | Project overview, setup, the "why" | Rich relational datasets with many tables |</span></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="in">The honest guidance: **don't convert everything.** A one-off script or a single</span></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a><span class="in">CSV needs a good README, not a bundle. The payoff of OKF appears when you have a</span></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="in">genuinely relational dataset — several tables with foreign keys — that an agent</span></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="in">will query repeatedly over time. For that case, splitting a long data description</span></span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a><span class="in">into linked per-table files means the agent loads only what it needs and can walk</span></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="in">the joins.</span></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="in">## Maintaining It with AI</span></span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="in">This is where it becomes practical rather than aspirational. Keeping cross-</span></span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="in">references current is exactly the chore that kills hand-maintained documentation —</span></span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a><span class="in">and exactly what an agent is good at. A workable loop:</span></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="in">1. **Generate the first draft** — point Claude Code at your data folder and ask it</span></span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="in">   to draft one concept file per table, with schema and inferred join paths.</span></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a><span class="in">2. **Verify against the data** — the non-negotiable step. Check that column types,</span></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="in">   coverage percentages, and especially the join keys are *real*, not plausible</span></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="in">   inventions. (See the verification discipline in</span></span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a><span class="in">   [Documentation Fundamentals](documentation-readme.qmd).)</span></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a><span class="in">3. **Let the agent maintain it** — when the data changes, ask the agent to update</span></span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a><span class="in">   the affected files and fix every cross-reference in one pass.</span></span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a><span class="in">The first draft is cheap; the verification is where your judgment earns its keep.</span></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="in">An agent will happily write `coverage: 100%` for a column that is half empty.</span></span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a><span class="in">## Try It</span></span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a><span class="in">A complete worked example — the seven-table European football dataset converted</span></span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a><span class="in">into an OKF bundle — accompanies this course's data-linking material. Open it and</span></span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a><span class="in">notice how each table file links to the ones it joins, and how the top-level</span></span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="in">`index.md` carries the whole join map.</span></span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a><span class="in">## Further Reading</span></span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a><span class="in">- [Open Knowledge Format spec &amp; samples](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf) — the one-page spec, plus sample bundles (GA4, Stack Overflow)</span></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a><span class="in">- Google Cloud, [How the Open Knowledge Format can improve data sharing](https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing) — the announcement</span></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a><span class="in">- [Documentation Fundamentals](documentation-readme.qmd) — READMEs and codebooks, the human-facing counterpart</span></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="in">- [Joining Data Tables](joining-tables.qmd) — why foreign keys are worth documenting carefully</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

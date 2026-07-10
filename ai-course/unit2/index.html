@@ -78,7 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-42b21599acf394268ff0442d968b2b0d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c8a7cad7a24c8a192e828ffa2eae63cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -456,6 +456,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/knowledge-bases-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Bases for Agents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Joining Data Tables</span></a>
   </div>
@@ -574,6 +580,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 <p><img src="../images/week3_pic.png" class="img-fluid"></p>
 <p>This is the first core-analysis week. You meet a genuinely messy, 600-column raw file, use AI to <em>understand and document</em> it, then run the whole pipeline — from that raw file to a finished short report. Two lessons live in the room: how to <strong>face an unfamiliar dataset</strong> with AI as a research assistant, and the contrast between an undirected <em>“vibe report”</em> and a carefully directed, analysis-quality one.</p>
+<p>It is also your <strong>first full working session inside a harness</strong>. Instead of copy-pasting through a chat window, you drive Claude Code (or Codex / Copilot) through the whole pipeline: it reads the codebook and samples from your project folder, writes and runs the scripts, and saves real outputs to disk. Learning to <em>steer</em> that loop — plan, instruct, watch, verify — is as much the point of today as the analysis itself.</p>
 <hr>
 <section id="before-you-come-to-class-3060-min" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-come-to-class-3060-min">Before you come to class (30–60 min)</h2>
@@ -583,7 +590,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="card-body">
 <ul class="task-list">
-<li><label><input type="checkbox"><strong>Tech</strong> — confirm Claude Code <strong>and</strong> VS Code + Copilot still run (from Week 1). Be able to run Python/R from a terminal.</label></li>
+<li><label><input type="checkbox"><strong>Tech</strong> — confirm your harness from Week 1 still runs (Claude Code desktop <strong>and</strong> CLI — or Codex / Copilot). Be able to run Python/R from a terminal: the harness writes the scripts, but <em>your</em> machine executes them.</label></li>
 <li><label><input type="checkbox"><strong>Packages</strong> — install once:</label></li>
 </ul>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -675,6 +682,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="week-card card">
 <div class="card-header">
+<p>🛠️ <strong>Driving the harness — how to actually work in Claude Code today</strong></p>
+</div>
+<div class="card-body">
+<p>The prompting habits above apply in any chat. Working <em>in a harness</em> adds a workflow of its own. Today’s session is built around it:</p>
+<ol type="1">
+<li><strong>Launch where the work is.</strong> Make one project folder (<code>wvs-project/</code>), put the codebook PDF and the 2,000-row sample in it, <code>cd</code> there, run <code>claude</code>. The folder <em>is</em> the shared workspace — no uploading; the agent reads what it needs.</li>
+<li><strong>Plan before code.</strong> Start big tasks with <em>“Don’t write code yet — propose a plan”</em> (in Claude Code, <code>Shift+Tab</code> toggles plan mode). Approve or edit the plan, <em>then</em> let it execute. This one habit prevents most runaway sessions.</li>
+<li><strong>Ask for scripts, not answers.</strong> <em>“Write <code>01_download.py</code> that fetches the WVS file, then run it”</em> beats <em>“download the data”</em>. Scripts on disk are what make your pipeline reproducible; a chat answer evaporates. By day’s end you want a numbered set: <code>01_download</code> → <code>02_clean</code> → <code>03_aggregate</code> → <code>04_join</code> → <code>05_report</code>.</li>
+<li><strong>Don’t let the big file near the context window.</strong> The agent should <em>never</em> “read” the 180 MB CSV — it should <strong>peek at it with code</strong> (<code>head</code>, shapes, dtypes, value counts). If you see it trying to open the whole file, stop it and say so. Codebook + samples in context; full data only through code.</li>
+<li><strong>Make it verify — then verify yourself.</strong> After every step: <em>“Print row counts before and after. Show 5 random rows. Do the country codes look right?”</em> Then open the output CSV yourself. The agent checking its own work is good; you spot-checking it is non-negotiable.</li>
+<li><strong>Watch the permission prompts.</strong> The harness asks before running commands or editing files. Read them — that’s you staying in charge. Reading files and running your analysis scripts: approve freely. Installs, deletions, anything network-facing: think first.</li>
+<li><strong>One phase, one session.</strong> When you finish a phase (say, cleaning), start a fresh session (<code>/clear</code>) and open with a one-line recap: <em>“Cleaned data is in <code>data_clean/wvs.csv</code>, one row per respondent; now let’s aggregate to countries.”</em> A short restated context beats a bloated window.</li>
+<li><strong>Checkpoint with git.</strong> <code>git init</code> at the start; ask the agent to commit after each working stage (<em>“commit with a message describing the cleaning step”</em>). Cheap insurance and a readable history of your decisions. Week 3 builds this into a full discipline (instruction files, skills, tests).</li>
+</ol>
+<p><strong>If something goes sideways:</strong> press <code>Esc</code> to interrupt; ask <em>“what did you just change?”</em>; use <code>git diff</code> to see exactly what happened. You’re never more than one commit away from safety.</p>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
 <p>🧭 <strong>Facing an unfamiliar dataset: discovery &amp; documentation</strong></p>
 </div>
 <div class="card-body">
@@ -709,7 +735,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="card-body">
 <p><strong>1. Discover without AI first (5 min).</strong> Open the <a href="../case-studies/VWS/data/WVS_random_subset2000.csv">2,000-row sample</a> and the codebook. Jot down what you can tell <em>unaided</em>, and a first guess at a research question (a <code>y</code> and an <code>x</code>). This sharpens what AI is actually adding.</p>
-<p><strong>2. Understand with AI.</strong> Upload the codebook + sample. Ask: how many countries? what years? what do <code>Q1</code>–<code>Q89</code> cover (which sections)? what do negative values (−1…−5) mean? Then <strong>test it</strong>: <em>“Explain the difference between Q6 and Q7 in simple terms.”</em> <em>Check:</em> you can name 5 Q-variables and what they measure.</p>
+<p><strong>2. Understand with AI.</strong> Put the codebook PDF and the sample CSV in your project folder and launch the harness there — then just ask; it reads both itself. Ask: how many countries? what years? what do <code>Q1</code>–<code>Q89</code> cover (which sections)? what do negative values (−1…−5) mean? Then <strong>test it</strong>: <em>“Explain the difference between Q6 and Q7 in simple terms.”</em> <em>Check:</em> you can name 5 Q-variables and what they measure.</p>
+<p><em>Harness hint:</em> a 400-page codebook is exactly what the harness is for — it can search the PDF for the pages about a specific variable instead of stuffing the whole thing into context. Ask <em>“where in the codebook is Q57 defined? Quote the exact wording.”</em> Quoting forces it to actually look.</p>
 <p><strong>3. Write a mini data dictionary / README.</strong> For the variables you’ll use, document name, meaning, scale, and missing codes. Iterate it with AI, but verify every technical detail. <em>Check:</em> a teammate could pick up your <code>DATA.md</code> and know what each column is.</p>
 </div>
 </div>
@@ -718,11 +745,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>🎯 <strong>Part 2 — The pipeline, end to end (move to the full file)</strong></p>
 </div>
 <div class="card-body">
-<p><strong>4. Download from code.</strong> Fetch the WVS Wave 7 CSV from OSF (<code>https://osf.io/36dgb/download</code>) — write a script, don’t click. <em>Check:</em> 97,220 rows × 613 columns.</p>
+<p><strong>4. Download from code.</strong> Fetch the WVS Wave 7 CSV from OSF (<code>https://osf.io/36dgb/download</code>) — write a script, don’t click. In the harness: <em>“Write <code>01_download.py</code> (or <code>.R</code>) that downloads the WVS file to <code>data_raw/</code>, run it, and confirm the file size and shape.”</em> <em>Check:</em> 97,220 rows × 613 columns.</p>
+<p><em>Harness hint:</em> from here on, the agent must work on the full file <strong>through code only</strong> — shapes, dtypes, value counts — never by reading it into context. If it stalls or tries, tell it explicitly: <em>“don’t read the CSV, inspect it with pandas.”</em></p>
 <p><strong>5. Pick a topic &amp; variables.</strong> Choose one concept (trust, gender equality, happiness, tolerance) and 3–6 related Q-items. Decide your x-variable: GDP per capita PPP. <em>Check:</em> a short list with a sentence on why these items belong together.</p>
 <p><strong>6. Clean &amp; build a composite.</strong> Keep identifiers (<code>B_COUNTRY_ALPHA</code>, <code>A_YEAR</code>, <code>A_WAVE</code>), weight (<code>W_WEIGHT</code>), your Q-items, demographics (<code>Q260</code> sex, <code>Q262</code> age, <code>Q275</code> education). Filter to Wave 7, recode negatives to missing, <strong>z-score each item and average into one index</strong> (handles the different scales). <em>Check:</em> composite has mean ≈ 0, sensible spread.</p>
+<p><em>Harness hint:</em> this is the step where silent errors live (a −2 treated as a real value will poison the index). Ask the agent to <strong>prove</strong> the recode: <em>“Show the value counts of Q57 before and after recoding, side by side.”</em> And make it a script (<code>02_clean.py</code>), not throwaway session code — you’ll rerun it.</p>
 <p><strong>7. Aggregate.</strong> Group by country (and year); mean composite + respondent count. <em>Check:</em> ~66 country-year rows.</p>
 <p><strong>8. Get GDP &amp; join.</strong> Pull World Bank indicators for 2017–2023; <strong>left-join</strong> onto your country panel. Save the merged CSV.</p>
+<p><em>Harness hint:</em> joins are where row counts lie. Before accepting the result, ask: <em>“How many rows before and after the join? Which countries failed to match, and why?”</em> (Country-code mismatches — <code>GBR</code> vs <code>UK</code> — are the classic.) Make it list the unmatched rows, not just count them.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -754,6 +784,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="card-body">
 <p><strong>9. The directed report.</strong> Produce a short report: a scatter of your composite vs <strong>log</strong> GDP per capita (label a few countries, non-causal title) + a 2–3 sentence interpretation. Constrain it: 3–5 exhibits, ~700 words.</p>
+<p><em>Harness hint:</em> ask for a <strong>rendered artifact</strong>, not chat text: <em>“Create <code>report.qmd</code> (or a notebook) with the scatter, the table, and the text; render it to HTML.”</em> Then iterate on the file: <em>“labels overlap in the bottom-left — fix”</em>, <em>“the title implies causality — soften it.”</em> Editing a real document beats regenerating chat answers.</p>
 <p><strong>10. Composite vs single item (stretch).</strong> Redo the scatter with one raw Q-item; put side by side; explain why averaging gives a cleaner signal.</p>
 </div>
 </div>
@@ -776,6 +807,7 @@ Tip
 <h2 class="anchored" data-anchor-id="discussion-50-min">Discussion (50 min)</h2>
 <ul>
 <li>Score the vibe report (1–10): length, is the question well defined, are exhibits informative and well labelled, is the text honest about what it shows?</li>
+<li><strong>The harness itself:</strong> what did you approve without reading? Did plan mode change what got built? When did you interrupt, and what had gone wrong by then? How does driving an agent differ from prompting a chat?</li>
 <li><strong>Discovery &amp; docs:</strong> Was there any benefit to looking at the data <em>without</em> AI first? What was AI’s biggest contribution? How did the first result compare to the version after a few iterations?</li>
 <li>Where did AI’s understanding of the codebook break down — and how did your “test” prompt catch it?</li>
 <li>Which task did AI help with most? Where did you have to correct it?</li>
@@ -1291,226 +1323,262 @@ Tip
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>This is the first core-analysis week. You meet a genuinely messy, 600-column raw file, use AI to *understand and document* it, then run the whole pipeline — from that raw file to a finished short report. Two lessons live in the room: how to **face an unfamiliar dataset** with AI as a research assistant, and the contrast between an undirected *"vibe report"* and a carefully directed, analysis-quality one.</span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>It is also your **first full working session inside a harness**. Instead of copy-pasting through a chat window, you drive Claude Code (or Codex / Copilot) through the whole pipeline: it reads the codebook and samples from your project folder, writes and runs the scripts, and saves real outputs to disk. Learning to *steer* that loop — plan, instruct, watch, verify — is as much the point of today as the analysis itself.</span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Before you come to class (30–60 min)</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>✅ **Pre-class checklist**</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Before you come to class (30–60 min)</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>✅ **Pre-class checklist**</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Tech** — confirm Claude Code **and** VS Code + Copilot still run (from Week 1). Be able to run Python/R from a terminal.</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Packages** — install once:</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Python</span></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pandas numpy matplotlib seaborn statsmodels requests wbgapi</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="fu">#### R</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"dplyr"</span>, <span class="st">"readr"</span>, <span class="st">"ggplot2"</span>, <span class="st">"WDI"</span>))</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Read** — the <span class="co">[</span><span class="ot">World Values Survey case study</span><span class="co">](../case-studies/VWS/index.qmd)</span>; skim the <span class="co">[</span><span class="ot">WVS codebook</span><span class="co">](../case-studies/VWS/data/codebook.pdf)</span> (pages 1–10). Also read <span class="co">[</span><span class="ot">Data Documentation 101</span><span class="co">](../da-knowledge/documentation-readme.qmd)</span> — you'll write a README today.</span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Grab the practice subset** — the <span class="co">[</span><span class="ot">2,000-row WVS sample</span><span class="co">](../case-studies/VWS/data/WVS_random_subset2000.csv)</span> (covers all countries) for fast iteration before you touch the full file.</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Review terms** — tidy data, join, aggregate, data dictionary, composite index (<span class="co">[</span><span class="ot">glossary</span><span class="co">](../da-knowledge/technical-terms-page.qmd)</span>).</span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Tech** — confirm your harness from Week 1 still runs (Claude Code desktop **and** CLI — or Codex / Copilot). Be able to run Python/R from a terminal: the harness writes the scripts, but *your* machine executes them.</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Packages** — install once:</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Python</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pandas numpy matplotlib seaborn statsmodels requests wbgapi</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="fu">#### R</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"dplyr"</span>, <span class="st">"readr"</span>, <span class="st">"ggplot2"</span>, <span class="st">"WDI"</span>))</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Read** — the <span class="co">[</span><span class="ot">World Values Survey case study</span><span class="co">](../case-studies/VWS/index.qmd)</span>; skim the <span class="co">[</span><span class="ot">WVS codebook</span><span class="co">](../case-studies/VWS/data/codebook.pdf)</span> (pages 1–10). Also read <span class="co">[</span><span class="ot">Data Documentation 101</span><span class="co">](../da-knowledge/documentation-readme.qmd)</span> — you'll write a README today.</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Grab the practice subset** — the <span class="co">[</span><span class="ot">2,000-row WVS sample</span><span class="co">](../case-studies/VWS/data/WVS_random_subset2000.csv)</span> (covers all countries) for fast iteration before you touch the full file.</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Review terms** — tidy data, join, aggregate, data dictionary, composite index (<span class="co">[</span><span class="ot">glossary</span><span class="co">](../da-knowledge/technical-terms-page.qmd)</span>).</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>:::::</span>
 <span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning objectives</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>By the end of this unit you will be able to:</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning objectives</span></span>
 <span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use AI and the context window effectively to understand a complex, hundreds-of-columns dataset and its codebook.</span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Write a clear, professional **README / data dictionary** for an unfamiliar dataset, and verify AI's understanding rather than trusting it.</span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Download a large public dataset from code (API/URL), not by hand.</span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Explore, select, and clean variables from a wide file with AI assistance.</span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Construct a composite variable, aggregate to a new unit of observation, and join two datasets.</span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tell the difference between an undirected "vibe report" and a directed, analysis-quality report — and produce the latter.</span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>By the end of this unit you will be able to:</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use AI and the context window effectively to understand a complex, hundreds-of-columns dataset and its codebook.</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Write a clear, professional **README / data dictionary** for an unfamiliar dataset, and verify AI's understanding rather than trusting it.</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Download a large public dataset from code (API/URL), not by hand.</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Explore, select, and clean variables from a wide file with AI assistance.</span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Construct a composite variable, aggregate to a new unit of observation, and join two datasets.</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tell the difference between an undirected "vibe report" and a directed, analysis-quality report — and produce the latter.</span>
 <span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a><span class="fu">## Session shape (200 min · 50·100·50)</span></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Block <span class="pp">|</span> Focus <span class="pp">|</span> Mode <span class="pp">|</span></span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Intro (50) <span class="pp">|</span> Prompting &amp; context windows · discovery &amp; documentation · the vibe-vs-directed idea <span class="pp">|</span> Talk <span class="pp">|</span></span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Task (100) <span class="pp">|</span> Understand &amp; document → run the full pipeline → produce a directed report <span class="pp">|</span> Individual / pairs <span class="pp">|</span></span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Discussion (50) <span class="pp">|</span> Where AI steered wrong, documentation, reproducibility <span class="pp">|</span> Group <span class="pp">|</span></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="fu">## Session shape (200 min · 50·100·50)</span></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Block <span class="pp">|</span> Focus <span class="pp">|</span> Mode <span class="pp">|</span></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Intro (50) <span class="pp">|</span> Prompting &amp; context windows · discovery &amp; documentation · the vibe-vs-directed idea <span class="pp">|</span> Talk <span class="pp">|</span></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Task (100) <span class="pp">|</span> Understand &amp; document → run the full pipeline → produce a directed report <span class="pp">|</span> Individual / pairs <span class="pp">|</span></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Discussion (50) <span class="pp">|</span> Where AI steered wrong, documentation, reproducibility <span class="pp">|</span> Group <span class="pp">|</span></span>
 <span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a><span class="fu">## Intro (50 min)</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>💬 **Prompting for code &amp; managing the context window**</span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Intro (50 min)</span></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>💬 **Prompting for code &amp; managing the context window**</span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>**[Slideshow: Prompting &amp; context-window management](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-02-prompting.html)**</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>Habits that pay off all term (fuller checklist in <span class="co">[</span><span class="ot">AI Coding Prep</span><span class="co">](../da-knowledge/ai-coding-prep.qmd)</span>):</span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>**[Slideshow: Prompting &amp; context-window management](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-02-prompting.html)**</span>
 <span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Be specific about the stack.** "Using pandas and seaborn…" / "Using R and tidyverse…" / "Prefer polars to pandas unless I ask".</span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Show the data shape.** Paste column names + dtypes, or upload a 1/1000 random sample. Better still, build a small **data dictionary** first (we do that today).</span>
-<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Specify the output.** "Tidy data frame, one row per (country, year)" / "PNG 1200×800" / "3–5 exhibits, no more".</span>
-<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Set defaults once.** ChatGPT Custom Instructions, a Claude Project, or a <span class="in">`CLAUDE.md`</span> for language, libraries, and comment style — so you don't repeat yourself every chat.</span>
-<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Mind the context window.** A 180 MB file does not fit in a prompt. Feed AI the *codebook* + a *sample* + *column lists*, not the whole table.</span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>*Vague:* <span class="in">`"Analyze this data and write a report."`</span></span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>*Specific:* <span class="in">`"Estimate the association between income and trust across countries, controlling for region. One LOESS scatter + one table. 700 words, non-causal language."`</span></span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>🧭 **Facing an unfamiliar dataset: discovery &amp; documentation**</span>
-<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>Habits that pay off all term (fuller checklist in <span class="co">[</span><span class="ot">AI Coding Prep</span><span class="co">](../da-knowledge/ai-coding-prep.qmd)</span>):</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Be specific about the stack.** "Using pandas and seaborn…" / "Using R and tidyverse…" / "Prefer polars to pandas unless I ask".</span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Show the data shape.** Paste column names + dtypes, or upload a 1/1000 random sample. Better still, build a small **data dictionary** first (we do that today).</span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Specify the output.** "Tidy data frame, one row per (country, year)" / "PNG 1200×800" / "3–5 exhibits, no more".</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Set defaults once.** ChatGPT Custom Instructions, a Claude Project, or a <span class="in">`CLAUDE.md`</span> for language, libraries, and comment style — so you don't repeat yourself every chat.</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Mind the context window.** A 180 MB file does not fit in a prompt. Feed AI the *codebook* + a *sample* + *column lists*, not the whole table.</span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>*Vague:* <span class="in">`"Analyze this data and write a report."`</span></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>*Specific:* <span class="in">`"Estimate the association between income and trust across countries, controlling for region. One LOESS scatter + one table. 700 words, non-causal language."`</span></span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>🛠️ **Driving the harness — how to actually work in Claude Code today**</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>Often the hard part isn't the analysis — it's that the data is messy and *you don't know what it is yet.* AI is a strong research assistant for this, but it makes mistakes, so you verify.</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Understand with AI.** Upload the codebook (PDF) + a small sample (CSV). Ask what variables mean, how they're encoded, what the missing-value codes are.</span>
-<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Test AI's understanding.** Ask it to *"explain the difference between Q6 and Q7 in plain terms."* If it can't, it hasn't really read the codebook — and neither answer can be trusted yet.</span>
-<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Document as you go.** A short data dictionary / README is the artefact that makes everything downstream reproducible. See <span class="co">[</span><span class="ot">Data Documentation 101</span><span class="co">](../da-knowledge/documentation-readme.qmd)</span>.</span>
-<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *Note from Gábor:* when we first built this in 2024, AI stumbled badly on a 400-page codebook. By 2025 it read it cleanly; by 2026 it handles larger files and several at once. The skill that lasts is **verification**, not the tool.</span></span>
-<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>🔬 **The experiment: vibe vs directed**</span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>The prompting habits above apply in any chat. Working *in a harness* adds a workflow of its own. Today's session is built around it:</span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Launch where the work is.** Make one project folder (<span class="in">`wvs-project/`</span>), put the codebook PDF and the 2,000-row sample in it, <span class="in">`cd`</span> there, run <span class="in">`claude`</span>. The folder *is* the shared workspace — no uploading; the agent reads what it needs.</span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Plan before code.** Start big tasks with *"Don't write code yet — propose a plan"* (in Claude Code, `Shift+Tab` toggles plan mode). Approve or edit the plan, *then* let it execute. This one habit prevents most runaway sessions.</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Ask for scripts, not answers.** *"Write `01_download.py` that fetches the WVS file, then run it"* beats *"download the data"*. Scripts on disk are what make your pipeline reproducible; a chat answer evaporates. By day's end you want a numbered set: <span class="in">`01_download`</span> → <span class="in">`02_clean`</span> → <span class="in">`03_aggregate`</span> → <span class="in">`04_join`</span> → <span class="in">`05_report`</span>.</span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Don't let the big file near the context window.** The agent should *never* "read" the 180 MB CSV — it should **peek at it with code** (<span class="in">`head`</span>, shapes, dtypes, value counts). If you see it trying to open the whole file, stop it and say so. Codebook + samples in context; full data only through code.</span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Make it verify — then verify yourself.** After every step: *"Print row counts before and after. Show 5 random rows. Do the country codes look right?"* Then open the output CSV yourself. The agent checking its own work is good; you spot-checking it is non-negotiable.</span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Watch the permission prompts.** The harness asks before running commands or editing files. Read them — that's you staying in charge. Reading files and running your analysis scripts: approve freely. Installs, deletions, anything network-facing: think first.</span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**One phase, one session.** When you finish a phase (say, cleaning), start a fresh session (<span class="in">`/clear`</span>) and open with a one-line recap: *"Cleaned data is in `data_clean/wvs.csv`, one row per respondent; now let's aggregate to countries."* A short restated context beats a bloated window.</span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>**Checkpoint with git.** <span class="in">`git init`</span> at the start; ask the agent to commit after each working stage (*"commit with a message describing the cleaning step"*). Cheap insurance and a readable history of your decisions. Week 3 builds this into a full discipline (instruction files, skills, tests).</span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>**If something goes sideways:** press <span class="in">`Esc`</span> to interrupt; ask *"what did you just change?"*; use <span class="in">`git diff`</span> to see exactly what happened. You're never more than one commit away from safety.</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>:::::</span>
 <span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>The pipeline: <span class="in">`understand → document → download → explore → clean → create variables → aggregate → join → report`</span>. We use the **World Values Survey (WVS) Wave 7** raw file (~180 MB, 97k rows, 613 columns).</span>
-<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>**The lesson:** first let AI loose with a vague prompt — *"Create a nice looking report on an interesting question using this data"* — and score the result (1–10). Then build the analysis deliberately, step by step. The contrast is the point.</span>
-<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>🧭 **Facing an unfamiliar dataset: discovery &amp; documentation**</span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>Often the hard part isn't the analysis — it's that the data is messy and *you don't know what it is yet.* AI is a strong research assistant for this, but it makes mistakes, so you verify.</span>
 <span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a><span class="fu">## Task block (100 min · individual or pairs)</span></span>
-<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>Work at your own pace. Tasks 1–8 are core; 9–10 are stretch. Verify after every step.</span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Understand with AI.** Upload the codebook (PDF) + a small sample (CSV). Ask what variables mean, how they're encoded, what the missing-value codes are.</span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Test AI's understanding.** Ask it to *"explain the difference between Q6 and Q7 in plain terms."* If it can't, it hasn't really read the codebook — and neither answer can be trusted yet.</span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Document as you go.** A short data dictionary / README is the artefact that makes everything downstream reproducible. See <span class="co">[</span><span class="ot">Data Documentation 101</span><span class="co">](../da-knowledge/documentation-readme.qmd)</span>.</span>
 <span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>🧭 **Part 1 — Understand &amp; document (start on the 2,000-row sample)**</span>
-<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *Note from Gábor:* when we first built this in 2024, AI stumbled badly on a 400-page codebook. By 2025 it read it cleanly; by 2026 it handles larger files and several at once. The skill that lasts is **verification**, not the tool.</span></span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>:::::</span>
 <span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>**1. Discover without AI first (5 min).** Open the <span class="co">[</span><span class="ot">2,000-row sample</span><span class="co">](../case-studies/VWS/data/WVS_random_subset2000.csv)</span> and the codebook. Jot down what you can tell *unaided*, and a first guess at a research question (a <span class="in">`y`</span> and an <span class="in">`x`</span>). This sharpens what AI is actually adding.</span>
-<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a>**2. Understand with AI.** Upload the codebook + sample. Ask: how many countries? what years? what do `Q1`–`Q89` cover (which sections)? what do negative values (−1…−5) mean? Then **test it**: *"Explain the difference between Q6 and Q7 in simple terms."* *Check:* you can name 5 Q-variables and what they measure.</span>
-<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>**3. Write a mini data dictionary / README.** For the variables you'll use, document name, meaning, scale, and missing codes. Iterate it with AI, but verify every technical detail. *Check:* a teammate could pick up your <span class="in">`DATA.md`</span> and know what each column is.</span>
-<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>🔬 **The experiment: vibe vs directed**</span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a>The pipeline: <span class="in">`understand → document → download → explore → clean → create variables → aggregate → join → report`</span>. We use the **World Values Survey (WVS) Wave 7** raw file (~180 MB, 97k rows, 613 columns).</span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>**The lesson:** first let AI loose with a vague prompt — *"Create a nice looking report on an interesting question using this data"* — and score the result (1–10). Then build the analysis deliberately, step by step. The contrast is the point.</span>
 <span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a>🎯 **Part 2 — The pipeline, end to end (move to the full file)**</span>
-<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a><span class="fu">## Task block (100 min · individual or pairs)</span></span>
 <span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a>**4. Download from code.** Fetch the WVS Wave 7 CSV from OSF (<span class="in">`https://osf.io/36dgb/download`</span>) — write a script, don't click. *Check:* 97,220 rows × 613 columns.</span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a>Work at your own pace. Tasks 1–8 are core; 9–10 are stretch. Verify after every step.</span>
 <span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a>**5. Pick a topic &amp; variables.** Choose one concept (trust, gender equality, happiness, tolerance) and 3–6 related Q-items. Decide your x-variable: GDP per capita PPP. *Check:* a short list with a sentence on why these items belong together.</span>
-<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>**6. Clean &amp; build a composite.** Keep identifiers (`B_COUNTRY_ALPHA`, `A_YEAR`, `A_WAVE`), weight (`W_WEIGHT`), your Q-items, demographics (`Q260` sex, `Q262` age, `Q275` education). Filter to Wave 7, recode negatives to missing, **z-score each item and average into one index** (handles the different scales). *Check:* composite has mean ≈ 0, sensible spread.</span>
-<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a>**7. Aggregate.** Group by country (and year); mean composite + respondent count. *Check:* ~66 country-year rows.</span>
-<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a>**8. Get GDP &amp; join.** Pull World Bank indicators for 2017–2023; **left-join** onto your country panel. Save the merged CSV.</span>
-<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Indicator <span class="pp">|</span> World Bank code <span class="pp">|</span></span>
-<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
-<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> GDP per capita PPP <span class="pp">|</span> <span class="in">`NY.GDP.PCAP.PP.CD`</span> <span class="pp">|</span></span>
-<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> GDP (current USD) <span class="pp">|</span> <span class="in">`NY.GDP.MKTP.CD`</span> <span class="pp">|</span></span>
-<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Population <span class="pp">|</span> <span class="in">`SP.POP.TOTL`</span> <span class="pp">|</span></span>
-<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a>*Check:* still ~66 rows, now with GDP columns.</span>
-<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>📊 **Part 3 — The report (your deliverable)**</span>
-<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a>**9. The directed report.** Produce a short report: a scatter of your composite vs **log** GDP per capita (label a few countries, non-causal title) + a 2–3 sentence interpretation. Constrain it: 3–5 exhibits, ~700 words.</span>
-<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a>**10. Composite vs single item (stretch).** Redo the scatter with one raw Q-item; put side by side; explain why averaging gives a cleaner signal.</span>
-<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>🧭 **Part 1 — Understand &amp; document (start on the 2,000-row sample)**</span>
+<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a>**1. Discover without AI first (5 min).** Open the <span class="co">[</span><span class="ot">2,000-row sample</span><span class="co">](../case-studies/VWS/data/WVS_random_subset2000.csv)</span> and the codebook. Jot down what you can tell *unaided*, and a first guess at a research question (a <span class="in">`y`</span> and an <span class="in">`x`</span>). This sharpens what AI is actually adding.</span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a>**2. Understand with AI.** Put the codebook PDF and the sample CSV in your project folder and launch the harness there — then just ask; it reads both itself. Ask: how many countries? what years? what do `Q1`–`Q89` cover (which sections)? what do negative values (−1…−5) mean? Then **test it**: *"Explain the difference between Q6 and Q7 in simple terms."* *Check:* you can name 5 Q-variables and what they measure.</span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a>  *Harness hint:* a 400-page codebook is exactly what the harness is for — it can search the PDF for the pages about a specific variable instead of stuffing the whole thing into context. Ask *"where in the codebook is Q57 defined? Quote the exact wording."* Quoting forces it to actually look.</span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>**3. Write a mini data dictionary / README.** For the variables you'll use, document name, meaning, scale, and missing codes. Iterate it with AI, but verify every technical detail. *Check:* a teammate could pick up your <span class="in">`DATA.md`</span> and know what each column is.</span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a>🎯 **Part 2 — The pipeline, end to end (move to the full file)**</span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a>**4. Download from code.** Fetch the WVS Wave 7 CSV from OSF (<span class="in">`https://osf.io/36dgb/download`</span>) — write a script, don't click. In the harness: *"Write `01_download.py` (or `.R`) that downloads the WVS file to `data_raw/`, run it, and confirm the file size and shape."* *Check:* 97,220 rows × 613 columns.</span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a>  *Harness hint:* from here on, the agent must work on the full file **through code only** — shapes, dtypes, value counts — never by reading it into context. If it stalls or tries, tell it explicitly: *"don't read the CSV, inspect it with pandas."*</span>
+<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a>**5. Pick a topic &amp; variables.** Choose one concept (trust, gender equality, happiness, tolerance) and 3–6 related Q-items. Decide your x-variable: GDP per capita PPP. *Check:* a short list with a sentence on why these items belong together.</span>
+<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a>**6. Clean &amp; build a composite.** Keep identifiers (`B_COUNTRY_ALPHA`, `A_YEAR`, `A_WAVE`), weight (`W_WEIGHT`), your Q-items, demographics (`Q260` sex, `Q262` age, `Q275` education). Filter to Wave 7, recode negatives to missing, **z-score each item and average into one index** (handles the different scales). *Check:* composite has mean ≈ 0, sensible spread.</span>
 <span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a>**Run the vibe report too.** Before or after the directed build, give AI the vague prompt and keep its output — you'll compare the two in discussion. Want a second example on different data? The same contrast shows up on the CPS earnings data (<span class="co">[</span><span class="ot">US Earnings case study</span><span class="co">](../case-studies/earnings/index.qmd)</span>).</span>
-<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a>  *Harness hint:* this is the step where silent errors live (a −2 treated as a real value will poison the index). Ask the agent to **prove** the recode: *"Show the value counts of Q57 before and after recoding, side by side."* And make it a script (<span class="in">`02_clean.py`</span>), not throwaway session code — you'll rerun it.</span>
+<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>**7. Aggregate.** Group by country (and year); mean composite + respondent count. *Check:* ~66 country-year rows.</span>
 <span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a>**8. Get GDP &amp; join.** Pull World Bank indicators for 2017–2023; **left-join** onto your country panel. Save the merged CSV.</span>
 <span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion (50 min)</span></span>
+<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a>  *Harness hint:* joins are where row counts lie. Before accepting the result, ask: *"How many rows before and after the join? Which countries failed to match, and why?"* (Country-code mismatches — <span class="in">`GBR`</span> vs <span class="in">`UK`</span> — are the classic.) Make it list the unmatched rows, not just count them.</span>
 <span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Score the vibe report (1–10): length, is the question well defined, are exhibits informative and well labelled, is the text honest about what it shows?</span>
-<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Discovery &amp; docs:** Was there any benefit to looking at the data *without* AI first? What was AI's biggest contribution? How did the first result compare to the version after a few iterations?</span>
-<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Where did AI's understanding of the codebook break down — and how did your "test" prompt catch it?</span>
-<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Which task did AI help with most? Where did you have to correct it?</span>
-<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How does starting from *raw* data change your understanding vs a curated file?</span>
-<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Could someone else rerun your pipeline from scratch using your README?</span>
-<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a><span class="fu">## Delivery</span></span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Indicator <span class="pp">|</span> World Bank code <span class="pp">|</span></span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> GDP per capita PPP <span class="pp">|</span> <span class="in">`NY.GDP.PCAP.PP.CD`</span> <span class="pp">|</span></span>
+<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> GDP (current USD) <span class="pp">|</span> <span class="in">`NY.GDP.MKTP.CD`</span> <span class="pp">|</span></span>
+<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Population <span class="pp">|</span> <span class="in">`SP.POP.TOTL`</span> <span class="pp">|</span></span>
+<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a>*Check:* still ~66 rows, now with GDP columns.</span>
+<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a>:::::</span>
 <span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
 <span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a>📦 **What to hand in (Sunday 23:55)**</span>
+<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a>📊 **Part 3 — The report (your deliverable)**</span>
 <span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The short directed report** (notebook or HTML) — your scatter + table + ~700-word interpretation, non-causal language.</span>
-<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The pipeline script(s)** that download, clean, build the composite, aggregate, and join — reproducibly.</span>
-<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`DATA.md`** — your data dictionary / README for the variables you used.</span>
-<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**One paragraph** comparing your vibe report to your directed report.</span>
-<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a><span class="fu">## Knowledge Base</span></span>
-<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">World Values Survey case study</span><span class="co">](../case-studies/VWS/index.qmd)</span> · <span class="co">[</span><span class="ot">US Earnings (CPS)</span><span class="co">](../case-studies/earnings/index.qmd)</span></span>
-<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Data Documentation 101</span><span class="co">](../da-knowledge/documentation-readme.qmd)</span> · <span class="co">[</span><span class="ot">Joining Data Tables</span><span class="co">](../da-knowledge/joining-tables.qmd)</span> · <span class="co">[</span><span class="ot">Creating Graphs</span><span class="co">](../da-knowledge/creating-graphs.qmd)</span></span>
-<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">AI Coding Prep</span><span class="co">](../da-knowledge/ai-coding-prep.qmd)</span> · <span class="co">[</span><span class="ot">PDF Guide</span><span class="co">](../da-knowledge/pdf-guide.qmd)</span></span>
-<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Prompting &amp; context-window slideshow</span><span class="co">](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-02-prompting.html)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a>**9. The directed report.** Produce a short report: a scatter of your composite vs **log** GDP per capita (label a few countries, non-causal title) + a 2–3 sentence interpretation. Constrain it: 3–5 exhibits, ~700 words.</span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a>  *Harness hint:* ask for a **rendered artifact**, not chat text: *"Create `report.qmd` (or a notebook) with the scatter, the table, and the text; render it to HTML."* Then iterate on the file: *"labels overlap in the bottom-left — fix"*, *"the title implies causality — soften it."* Editing a real document beats regenerating chat answers.</span>
+<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a>**10. Composite vs single item (stretch).** Redo the scatter with one raw Q-item; put side by side; explain why averaging gives a cleaner signal.</span>
+<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a>**Run the vibe report too.** Before or after the directed build, give AI the vague prompt and keep its output — you'll compare the two in discussion. Want a second example on different data? The same contrast shows up on the CPS earnings data (<span class="co">[</span><span class="ot">US Earnings case study</span><span class="co">](../case-studies/earnings/index.qmd)</span>).</span>
+<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion (50 min)</span></span>
+<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Score the vibe report (1–10): length, is the question well defined, are exhibits informative and well labelled, is the text honest about what it shows?</span>
+<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The harness itself:** what did you approve without reading? Did plan mode change what got built? When did you interrupt, and what had gone wrong by then? How does driving an agent differ from prompting a chat?</span>
+<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Discovery &amp; docs:** Was there any benefit to looking at the data *without* AI first? What was AI's biggest contribution? How did the first result compare to the version after a few iterations?</span>
+<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Where did AI's understanding of the codebook break down — and how did your "test" prompt catch it?</span>
+<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Which task did AI help with most? Where did you have to correct it?</span>
+<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How does starting from *raw* data change your understanding vs a curated file?</span>
+<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Could someone else rerun your pipeline from scratch using your README?</span>
+<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a><span class="fu">## Delivery</span></span>
+<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a>📦 **What to hand in (Sunday 23:55)**</span>
+<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The short directed report** (notebook or HTML) — your scatter + table + ~700-word interpretation, non-causal language.</span>
+<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The pipeline script(s)** that download, clean, build the composite, aggregate, and join — reproducibly.</span>
+<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`DATA.md`** — your data dictionary / README for the variables you used.</span>
+<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**One paragraph** comparing your vibe report to your directed report.</span>
+<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-270"><a href="#cb3-270" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a><span class="fu">## Knowledge Base</span></span>
+<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">World Values Survey case study</span><span class="co">](../case-studies/VWS/index.qmd)</span> · <span class="co">[</span><span class="ot">US Earnings (CPS)</span><span class="co">](../case-studies/earnings/index.qmd)</span></span>
+<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Data Documentation 101</span><span class="co">](../da-knowledge/documentation-readme.qmd)</span> · <span class="co">[</span><span class="ot">Joining Data Tables</span><span class="co">](../da-knowledge/joining-tables.qmd)</span> · <span class="co">[</span><span class="ot">Creating Graphs</span><span class="co">](../da-knowledge/creating-graphs.qmd)</span></span>
+<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">AI Coding Prep</span><span class="co">](../da-knowledge/ai-coding-prep.qmd)</span> · <span class="co">[</span><span class="ot">PDF Guide</span><span class="co">](../da-knowledge/pdf-guide.qmd)</span></span>
+<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Prompting &amp; context-window slideshow</span><span class="co">](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-02-prompting.html)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

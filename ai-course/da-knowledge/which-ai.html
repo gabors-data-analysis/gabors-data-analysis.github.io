@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-03-06">
+<meta name="dcterms.date" content="2026-07-10">
 
-<title>Which AI model shall we chose? – Doing Data Analysis with AI</title>
+<title>Which AI model shall we choose? – Doing Data Analysis with AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -78,7 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-42b21599acf394268ff0442d968b2b0d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c8a7cad7a24c8a192e828ffa2eae63cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -456,6 +456,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/knowledge-bases-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Bases for Agents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Joining Data Tables</span></a>
   </div>
@@ -546,7 +552,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/technical-terms-page.html">AI &amp; LLM fundamentals</a></li><li class="breadcrumb-item"><a href="../da-knowledge/which-ai.html">Which AI model</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Which AI model shall we chose?</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Which AI model shall we choose?</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -557,7 +563,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 6, 2026</p>
+      <p class="date">July 10, 2026</p>
     </div>
   </div>
   
@@ -569,14 +575,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>In what follows, here is my personal take as of <code>date:2026-03-06</code>.</p>
+<p>In what follows, here is my personal take as of <code>date:2026-07-10</code>.</p>
 <section id="basics" class="level2">
 <h2 class="anchored" data-anchor-id="basics">Basics</h2>
 <p>Generative AI based on Large Language Models (genAI) is a powerful tool with a series of decisions by users. This is my guide with a focus on task related to analyzing data.</p>
 <section id="leading-models" class="level3">
 <h3 class="anchored" data-anchor-id="leading-models">Leading models</h3>
 <ul>
-<li>As of now the leading (state of the art, SOTA) models are Google’s Gemini (3.0), OpenAI’s ChatGPT (5.4), and Anthropic’s Claude Opus (4.6.)</li>
+<li>As of now the leading (state of the art, SOTA) models are Google’s Gemini (3), OpenAI’s GPT (5.5), and Anthropic’s Claude (Opus 4.8 and the Claude 5 family).</li>
 <li>Other key model is <a href="https://mistral.ai/">Mistral AI</a> but there are several others</li>
 <li>Open source – open weights models are also quite good, <a href="https://www.kimi.com/ai-models/kimi-k2-5">Kimi (K2.5)</a>, an open weight model, is quite good and free. Deepseek, Qwen the other leading models. Think of them as SOTA 4-9 months ago</li>
 </ul>
@@ -1218,11 +1224,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Which AI model shall we chose?"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-03-06"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Which AI model shall we choose?"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-07-10"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>In what follows, here is my personal take as of <span class="in">`date:2026-03-06`</span>.</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>In what follows, here is my personal take as of <span class="in">`date:2026-07-10`</span>.</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Basics</span></span>
@@ -1231,7 +1237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### Leading models</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>As of now the leading (state of the art, SOTA) models are Google's Gemini (3.0), OpenAI's ChatGPT (5.4), and Anthropic's Claude Opus (4.6.)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>As of now the leading (state of the art, SOTA) models are Google's Gemini (3), OpenAI's GPT (5.5), and Anthropic's Claude (Opus 4.8 and the Claude 5 family).</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Other key model is <span class="co">[</span><span class="ot">Mistral AI</span><span class="co">](https://mistral.ai/)</span> but there are several others</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Open source -- open weights models are also quite good, <span class="co">[</span><span class="ot">Kimi (K2.5)</span><span class="co">](https://www.kimi.com/ai-models/kimi-k2-5)</span>, an open weight model, is quite good and free. Deepseek, Qwen the other leading models. Think of them as SOTA 4-9 months ago </span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>

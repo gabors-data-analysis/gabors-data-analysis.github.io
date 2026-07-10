@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-06-01">
+<meta name="dcterms.date" content="2026-07-10">
 
-<title>Week 1 — LLMs, Models &amp; Harnesses + Setup – Doing Data Analysis with AI</title>
+<title>Week 1 — LLMs, Harnesses &amp; Setup – Doing Data Analysis with AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -78,7 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-42b21599acf394268ff0442d968b2b0d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c8a7cad7a24c8a192e828ffa2eae63cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -456,6 +456,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/knowledge-bases-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Bases for Agents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Joining Data Tables</span></a>
   </div>
@@ -523,11 +529,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#before-you-come-to-class-3060-min" id="toc-before-you-come-to-class-3060-min" class="nav-link active" data-scroll-target="#before-you-come-to-class-3060-min">Before you come to class (30–60 min)</a></li>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
-  <li><a href="#session-shape-200-min-5050404020" id="toc-session-shape-200-min-5050404020" class="nav-link" data-scroll-target="#session-shape-200-min-5050404020">Session shape (200 min · 50·50·40·40·20)</a></li>
-  <li><a href="#chunk-1-llms-the-model-landscape-50-min-talk" id="toc-chunk-1-llms-the-model-landscape-50-min-talk" class="nav-link" data-scroll-target="#chunk-1-llms-the-model-landscape-50-min-talk">Chunk 1 — LLMs &amp; the model landscape (50 min · talk)</a></li>
-  <li><a href="#chunk-2-harnesses-open-code-open-weights-50-min-talk" id="toc-chunk-2-harnesses-open-code-open-weights-50-min-talk" class="nav-link" data-scroll-target="#chunk-2-harnesses-open-code-open-weights-50-min-talk">Chunk 2 — Harnesses, open-code &amp; open-weights (50 min · talk)</a></li>
-  <li><a href="#chunk-3-hands-on-claude-code-40-min-individual" id="toc-chunk-3-hands-on-claude-code-40-min-individual" class="nav-link" data-scroll-target="#chunk-3-hands-on-claude-code-40-min-individual">Chunk 3 — Hands-on: Claude Code (40 min · individual)</a></li>
-  <li><a href="#chunk-4-hands-on-vs-code-copilot-the-comparison-40-min-individual" id="toc-chunk-4-hands-on-vs-code-copilot-the-comparison-40-min-individual" class="nav-link" data-scroll-target="#chunk-4-hands-on-vs-code-copilot-the-comparison-40-min-individual">Chunk 4 — Hands-on: VS Code + Copilot + the comparison (40 min · individual)</a></li>
+  <li><a href="#session-shape-200-min-4040604020" id="toc-session-shape-200-min-4040604020" class="nav-link" data-scroll-target="#session-shape-200-min-4040604020">Session shape (200 min · 40·40·60·40·20)</a></li>
+  <li><a href="#chunk-1-whats-behind-the-chat-box-40-min-talk" id="toc-chunk-1-whats-behind-the-chat-box-40-min-talk" class="nav-link" data-scroll-target="#chunk-1-whats-behind-the-chat-box-40-min-talk">Chunk 1 — What’s behind the chat box (40 min · talk)</a></li>
+  <li><a href="#chunk-2-free-vs-paid-and-what-a-harness-adds-40-min-talk-demo" id="toc-chunk-2-free-vs-paid-and-what-a-harness-adds-40-min-talk-demo" class="nav-link" data-scroll-target="#chunk-2-free-vs-paid-and-what-a-harness-adds-40-min-talk-demo">Chunk 2 — Free vs paid, and what a harness adds (40 min · talk + demo)</a></li>
+  <li><a href="#chunk-3-hands-on-install-your-harness-60-min-individual" id="toc-chunk-3-hands-on-install-your-harness-60-min-individual" class="nav-link" data-scroll-target="#chunk-3-hands-on-install-your-harness-60-min-individual">Chunk 3 — Hands-on: install your harness (60 min · individual)</a></li>
+  <li><a href="#chunk-4-hands-on-one-real-task-two-surfaces-40-min-individual" id="toc-chunk-4-hands-on-one-real-task-two-surfaces-40-min-individual" class="nav-link" data-scroll-target="#chunk-4-hands-on-one-real-task-two-surfaces-40-min-individual">Chunk 4 — Hands-on: one real task, two surfaces (40 min · individual)</a></li>
+  <li><a href="#closing-talk-beyond-subscriptions-openrouter-local-models" id="toc-closing-talk-beyond-subscriptions-openrouter-local-models" class="nav-link" data-scroll-target="#closing-talk-beyond-subscriptions-openrouter-local-models">Closing talk — beyond subscriptions: OpenRouter &amp; local models</a></li>
   <li><a href="#discussion-20-min" id="toc-discussion-20-min" class="nav-link" data-scroll-target="#discussion-20-min">Discussion (20 min)</a></li>
   <li><a href="#delivery" id="toc-delivery" class="nav-link" data-scroll-target="#delivery">Delivery</a></li>
   <li><a href="#academic-integrity-ai-use" id="toc-academic-integrity-ai-use" class="nav-link" data-scroll-target="#academic-integrity-ai-use">Academic integrity &amp; AI use</a></li>
@@ -541,8 +548,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unit1/index.html">Core course</a></li><li class="breadcrumb-item"><a href="../unit1/index.html">Week 1: LLMs, Harnesses &amp; Setup</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Week 1 — LLMs, Models &amp; Harnesses + Setup</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">The model landscape and getting your two harnesses working</p>
+<div class="quarto-title-block"><div><h1 class="title">Week 1 — LLMs, Harnesses &amp; Setup</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">From the free ChatGPT box to a full AI workbench — concepts, subscriptions, and your first harness</p>
 </div>
 
 
@@ -553,7 +560,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 1, 2026</p>
+      <p class="date">July 10, 2026</p>
     </div>
   </div>
   
@@ -568,16 +575,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="hero-section">
 <div class="container">
 <div class="hero-title">
-<p>Week 1 — LLMs, Models &amp; Harnesses</p>
+<p>Week 1 — LLMs, Harnesses &amp; Setup</p>
 </div>
 <div class="hero-subtitle">
-<p>The model landscape, what a harness is, and getting Claude Code + VS Code/Copilot working</p>
+<p>What is actually behind the chat box, when a paid subscription is worth it, what a harness adds — and getting one running on your machine</p>
 </div>
 </div>
 </div>
 <hr>
 <p><img src="../images/week1_pic.png" class="img-fluid"></p>
-<p>This is the opening week of the course — the one front-facing, lecture-heavier session. By the end you understand the model landscape (including open-weights models), what a harness is and why it matters, and you have <strong>both course harnesses working</strong> on your machine.</p>
+<p>This week starts where most people actually are: <strong>you have used the free ChatGPT (or Claude, or Gemini) in a browser, and that’s it.</strong> That is a fine starting point — but it is roughly like having only ever used a calculator when a spreadsheet exists. By the end of this session you will understand what an LLM actually does, what happens when you share a document with one, when paying $20/month is worth it (and when it isn’t), what a <strong>harness</strong> is and why it changes everything for data work — and you will have at least one harness <strong>installed and working</strong> on your own machine.</p>
+<p>This is the one lecture-heavy week. Everything after this is hands-on.</p>
 <hr>
 <section id="before-you-come-to-class-3060-min" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-come-to-class-3060-min">Before you come to class (30–60 min)</h2>
@@ -587,11 +595,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="card-body">
 <ul class="task-list">
-<li><label><input type="checkbox"><strong>Accounts</strong> — create an Anthropic/Claude account and confirm GitHub Copilot access. Install VS Code.</label></li>
-<li><label><input type="checkbox"><strong>Installs</strong> — follow <a href="../da-knowledge/install-cli.html">Installing AI CLI Tools</a> and the <a href="../da-knowledge/vscode-setup.html">VS Code + Copilot setup guide</a>. New to the terminal? Skim <a href="../da-knowledge/terminal-basics.html">Terminal Basics</a>.</label></li>
+<li><label><input type="checkbox"><strong>Accounts</strong> — create (free) accounts at <a href="https://claude.ai">claude.ai</a> and <a href="https://chatgpt.com">chatgpt.com</a> if you don’t have them. If you are a student, claim the free <strong>GitHub Student Developer Pack</strong> at <a href="https://education.github.com/pack">education.github.com</a> — it includes GitHub Copilot Pro at no cost.</label></li>
+<li><label><input type="checkbox"><strong>One paid plan</strong> — for this course you need <em>one</em> $20-tier subscription that includes a coding agent: <strong>Claude Pro</strong> (recommended — the course demos use Claude Code) or <strong>ChatGPT Plus</strong> (includes Codex). Students with the GitHub pack can alternatively rely on Copilot. Details and comparison below — read that section first if unsure.</label></li>
+<li><label><input type="checkbox"><strong>Install VS Code</strong> — from <a href="https://code.visualstudio.com/">code.visualstudio.com</a>. Even if you use another editor, we use it in class.</label></li>
 <li><label><input type="checkbox"><strong>Read</strong> — <a href="../da-knowledge/which-ai.html">Which AI model</a>. That’s the only required reading.</label></li>
+<li><label><input type="checkbox"><strong>New to the terminal?</strong> Skim <a href="../da-knowledge/terminal-basics.html">Terminal Basics</a> — 10 minutes, and the hands-on block will feel much easier.</label></li>
 </ul>
-<p>That’s enough. We finish setup together in class.</p>
+<p>We finish installation together in class — don’t worry if something fails at home.</p>
 </div>
 </div>
 <hr>
@@ -600,16 +610,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
 <p>By the end of this unit you will be able to:</p>
 <ul>
-<li>Explain what an LLM is, what a context window is, and why both matter for data work.</li>
-<li>Distinguish closed/frontier models from <strong>open-weights</strong> models and say when each is the right choice.</li>
-<li>Explain what a <strong>harness</strong> is and why it matters as much as the model.</li>
-<li>Run an identical small task across <strong>Claude Code (terminal + desktop)</strong> and <strong>VS Code + Copilot</strong>, and articulate the differences.</li>
+<li>Explain what an LLM is, what tokens and a <strong>context window</strong> are, and what actually happens when you upload a document to a chat.</li>
+<li>Compare <strong>free vs paid</strong> subscription tiers and decide, for your own situation, when a subscription is worth it.</li>
+<li>Explain what a <strong>harness</strong> is, and what a coding agent like Claude Code adds on top of the same $20 subscription — folder access, tool use, running code, managing agents.</li>
+<li>Install and authenticate at least one harness (<strong>Claude Code</strong>, <strong>Codex</strong>, or <strong>GitHub Copilot</strong>) — desktop app and CLI — and run a first real task in it.</li>
+<li>Describe the role of <strong>OpenRouter / APIs</strong> and <strong>open-weights models on local hardware</strong>, and say when each is the right choice.</li>
 </ul>
 <hr>
 </section>
-<section id="session-shape-200-min-5050404020" class="level2">
-<h2 class="anchored" data-anchor-id="session-shape-200-min-5050404020">Session shape (200 min · 50·50·40·40·20)</h2>
+<section id="session-shape-200-min-4040604020" class="level2">
+<h2 class="anchored" data-anchor-id="session-shape-200-min-4040604020">Session shape (200 min · 40·40·60·40·20)</h2>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Chunk</th>
@@ -619,153 +635,346 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td>1 (50)</td>
-<td>LLMs &amp; the model landscape</td>
+<td>1 (40)</td>
+<td>What’s behind the chat box — LLM concepts</td>
 <td>Talk</td>
 </tr>
 <tr class="even">
-<td>2 (50)</td>
-<td>Harnesses, open-code, open-weights</td>
-<td>Talk</td>
+<td>2 (40)</td>
+<td>Free vs paid · documents &amp; context · what a harness adds</td>
+<td>Talk + demo</td>
 </tr>
 <tr class="odd">
-<td>3 (40)</td>
-<td>Hands-on: Claude Code (terminal + desktop)</td>
+<td>3 (60)</td>
+<td>Hands-on: install your harness (desktop first, then CLI)</td>
 <td>Individual</td>
 </tr>
 <tr class="even">
 <td>4 (40)</td>
-<td>Hands-on: VS Code + Copilot + the comparison</td>
+<td>Hands-on: one real task, two surfaces</td>
 <td>Individual</td>
 </tr>
 <tr class="odd">
 <td>Discussion (20)</td>
-<td>Surfaces, trust, the jagged frontier</td>
+<td>Trust, surfaces, the jagged frontier</td>
 <td>Group</td>
 </tr>
 </tbody>
 </table>
 <hr>
 </section>
-<section id="chunk-1-llms-the-model-landscape-50-min-talk" class="level2">
-<h2 class="anchored" data-anchor-id="chunk-1-llms-the-model-landscape-50-min-talk">Chunk 1 — LLMs &amp; the model landscape (50 min · talk)</h2>
+<section id="chunk-1-whats-behind-the-chat-box-40-min-talk" class="level2">
+<h2 class="anchored" data-anchor-id="chunk-1-whats-behind-the-chat-box-40-min-talk">Chunk 1 — What’s behind the chat box (40 min · talk)</h2>
 <div class="week-card card">
 <div class="card-header">
-<p>📊 <strong>Core LLM concepts</strong></p>
+<p>📊 <strong>Core LLM concepts — no math required</strong></p>
 </div>
 <div class="card-body">
 <p><strong><a href="https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html">Slideshow: LLM Concepts and Applications</a></strong></p>
 <ul>
-<li><strong>What an LLM is</strong> — a statistical model predicting the next token from massive training data.</li>
-<li><strong>The transformer revolution</strong> — how 2017’s <em>“Attention is All You Need”</em> made today’s models possible.</li>
-<li><strong>Context windows</strong> — what they are and why they shape every data-analysis workflow.</li>
-<li><strong>Training &amp; feedback</strong> — pre-training, resources, and human feedback (RLHF); why models differ.</li>
-<li><strong>The jagged frontier</strong> — where LLMs excel and where they quietly fail. See <a href="https://www.oneusefulthing.org/p/the-shape-of-ai-jaggedness-bottlenecks">Mollick on the shape of AI jaggedness</a>.</li>
+<li><strong>What an LLM is</strong> — a statistical model that predicts the next <em>token</em> (word piece) given everything so far, trained on a huge slice of human text. No database of facts, no lookup — prediction. This one idea explains both the magic and the failure modes.</li>
+<li><strong>Tokens</strong> — models don’t see words or characters; they see tokens (~¾ of a word in English). Everything is metered in tokens: what you can fit in, what you pay for via API, how fast it responds.</li>
+<li><strong>The transformer</strong> — how 2017’s <em>“Attention Is All You Need”</em> made today’s models possible. You don’t need the details; you need the consequence: the model attends to <em>everything in its context at once</em>.</li>
+<li><strong>Training &amp; feedback</strong> — pre-training on text, then instruction-tuning and human feedback (RLHF). This is why models are helpful and polite, and also why they’d rather produce a confident wrong answer than say “I don’t know.”</li>
+<li><strong>The jagged frontier</strong> — LLMs are superhuman at some tasks and surprisingly bad at adjacent ones, and the boundary is invisible until you test it. See <a href="https://www.oneusefulthing.org/p/the-shape-of-ai-jaggedness-bottlenecks">Mollick on AI jaggedness</a>.</li>
 <li><strong>Cyborg vs Centaur</strong> — two ways to split work with AI (Mollick): the <em>Centaur</em> hands off whole sub-tasks; the <em>Cyborg</em> interleaves human and AI move-by-move. You’ll feel both this term.</li>
 </ul>
-<p><strong>The model landscape (see <a href="../da-knowledge/which-ai.html">Which AI model</a>):</strong></p>
+<p><strong>The model landscape</strong> (details in <a href="../da-knowledge/which-ai.html">Which AI model</a>):</p>
 <ul>
-<li><strong>Frontier closed models</strong> — Claude, GPT, Gemini. State of the art, rented per token.</li>
-<li><strong>Open-weights models</strong> — Llama, Qwen, Mistral, DeepSeek, Kimi. Download and run yourself; roughly SOTA-minus-a-few-months. Why they matter: <strong>privacy, cost at scale, reproducibility</strong>. Full orientation in <a href="../da-knowledge/open-weights-models.html">Open-weights &amp; local models</a>.</li>
+<li><strong>Frontier closed models</strong> — Claude (Anthropic), GPT (OpenAI), Gemini (Google). State of the art; you rent them per month or per token.</li>
+<li><strong>Open-weights models</strong> — Llama, Qwen, Mistral, DeepSeek, Kimi. You can download the weights and run them yourself; think of them as roughly SOTA-minus-a-few-months. Why they matter: <strong>privacy, cost at scale, reproducibility</strong>. We return to them at the end of today.</li>
 </ul>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p>🧠 <strong>The context window — the concept that explains almost everything</strong></p>
+</div>
+<div class="card-body">
+<p>The <strong>context window</strong> is the model’s working memory: everything it can “see” at once — your messages, its answers, any files you shared. Current frontier models handle roughly 200K–1M tokens (a few hundred pages), and models are typically stronger early in the window than when it is stuffed full.</p>
+<p>What follows from this single concept:</p>
+<ul>
+<li><strong>A new chat is a blank slate.</strong> The model does not remember yesterday’s conversation (unless the app injects a “memory” summary — that’s a product feature, not the model).</li>
+<li><strong>Long chats degrade.</strong> As the window fills up, earlier details get crowded out or attended to poorly. For serious work: start fresh chats per task, and re-state what matters.</li>
+<li><strong>What happens when you upload a document:</strong> the file is converted to tokens and <em>placed into the context window</em>. Nothing is “learned”; the model reads it like a very fast skimmer. A 30-page PDF fits comfortably. A 180 MB CSV does <strong>not</strong> — the app will silently truncate, sample, or use a code tool to peek at it. If you don’t know which happened, you can’t trust the answer.</li>
+<li><strong>This is why data workflows need more than chat.</strong> Real datasets don’t fit in a context window. The professional pattern — which this whole course teaches — is: give the model the <em>codebook, column lists, and small samples</em>, and have it write <strong>code</strong> that processes the full data outside the window.</li>
+</ul>
+<p><strong>Privacy — where your documents go.</strong> An uploaded file goes to the provider’s servers. On consumer plans, chats may be used to train future models depending on your data settings — check them (ChatGPT: <em>Settings → Data controls</em>; Claude: privacy settings). Paid business/enterprise tiers and API access come with stronger no-training guarantees. House rule for this course: <strong>nothing confidential goes into a chat you wouldn’t put in an email to an outside company.</strong></p>
 </div>
 </div>
 <hr>
 </section>
-<section id="chunk-2-harnesses-open-code-open-weights-50-min-talk" class="level2">
-<h2 class="anchored" data-anchor-id="chunk-2-harnesses-open-code-open-weights-50-min-talk">Chunk 2 — Harnesses, open-code &amp; open-weights (50 min · talk)</h2>
+<section id="chunk-2-free-vs-paid-and-what-a-harness-adds-40-min-talk-demo" class="level2">
+<h2 class="anchored" data-anchor-id="chunk-2-free-vs-paid-and-what-a-harness-adds-40-min-talk-demo">Chunk 2 — Free vs paid, and what a harness adds (40 min · talk + demo)</h2>
 <div class="week-card card">
 <div class="card-header">
-<p>🔧 <strong>The model is the engine; the harness is the car</strong></p>
+<p>💳 <strong>Free vs paid — the honest comparison</strong></p>
 </div>
 <div class="card-body">
-<p>A <strong>harness</strong> wraps a model and lets it actually <em>do</em> things — read your files, run code, edit files, iterate. The harness matters as much as the model.</p>
-<p><strong>This course uses exactly two harnesses:</strong></p>
+<p>All major providers run the same ladder. Prices as of mid-2026 (check current pages before subscribing):</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Harness</th>
-<th>Surfaces</th>
-<th>Notes</th>
+<th>Tier</th>
+<th>ChatGPT</th>
+<th>Claude</th>
+<th>What you actually get</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong><a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code</a></strong></td>
-<td>Terminal <strong>and</strong> desktop app</td>
-<td>Terminal-native agent that sees your project, runs code, iterates.</td>
+<td><strong>Free</strong></td>
+<td>$0 (with ads in some countries)</td>
+<td>$0</td>
+<td>Limited messages that fall back to smaller models when you hit the cap; limited file upload; smallest context; fine for casual questions</td>
 </tr>
 <tr class="even">
-<td><strong>VS Code + <a href="https://docs.github.com/copilot">GitHub Copilot</a></strong></td>
-<td>IDE</td>
-<td>In-editor assistance; you can point it at different backing models.</td>
+<td><strong>Budget</strong></td>
+<td>Go — ~$8/mo</td>
+<td>—</td>
+<td>More messages on mid-tier models</td>
+</tr>
+<tr class="odd">
+<td><strong>Standard</strong></td>
+<td>Plus — $20/mo</td>
+<td>Pro — $20/mo</td>
+<td>The full frontier models incl.&nbsp;extended thinking, deep research, projects, big file uploads, <strong>and the coding agent (Codex / Claude Code)</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Power</strong></td>
+<td>Pro — $100–200/mo</td>
+<td>Max — $100–200/mo</td>
+<td>5×–20× the usage limits, best-model access all day</td>
 </tr>
 </tbody>
 </table>
-<p>That’s it — no other tools to learn. Everything transfers conceptually to alternatives.</p>
-<p><strong>Two awareness topics (not required to install):</strong></p>
+<p>(Gemini has the same shape: free tier and Google AI Pro at ~$20/mo. GitHub Copilot is the outlier: ~$10/mo, <strong>free for verified students and teachers</strong>.)</p>
+<p><strong>What the free tier really costs you</strong> for data work: you get routed to smaller models mid-conversation, you can’t attach much, deep research and thinking modes are capped or absent — and crucially, <strong>you don’t get the coding agent</strong>.</p>
+<p><strong>When should you subscribe? A rule of thumb:</strong></p>
 <ul>
-<li><strong><a href="../da-knowledge/open-code-tools.html">Open-code tools</a></strong> — open-source agentic harnesses you run yourself and point at any model.</li>
-<li><strong><a href="../da-knowledge/open-weights-models.html">Open-weights / local models</a></strong> — running a private, frozen model locally (e.g.&nbsp;via Ollama), and pointing a harness at it.</li>
+<li>If you use AI a few times a week to look things up or draft a paragraph → <strong>free is fine.</strong></li>
+<li>If you do analytical work (coding, data, writing reports) more than ~2–3 hours a week → the <strong>$20 tier pays for itself in the first afternoon.</strong> One consultant-hour costs more.</li>
+<li>The $100+ tiers are for people who run agents much of the day. You will not need them for this course.</li>
+<li><strong>For this course, a $20 tier that includes a coding agent is effectively required</strong> — that’s Claude Pro or ChatGPT Plus (or student Copilot).</li>
 </ul>
-<p><strong>IDE assistance vs terminal-native execution</strong> — the jump this course makes is not “AI vs no AI.” It’s about <em>where</em> the AI runs and how tight the loop is. Copilot keeps you in the editor; a CLI agent compresses the ask→run→inspect→fix loop into one place.</p>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p>🔧 <strong>Harnesses — the model is the engine, the harness is the car</strong></p>
+</div>
+<div class="card-body">
+<p>A <strong>harness</strong> is the software wrapped around a model that lets it actually <em>do</em> things. The chat website is one harness — the simplest one. A <strong>coding agent</strong> like Claude Code, Codex, or Copilot is a different harness around <em>the same model</em>, and it is the reason this course exists.</p>
+<p>Here is what changes, on the same $20 subscription:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Chat app (browser)</th>
+<th>Harness / coding agent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Files</strong></td>
+<td>You upload them one by one, into the context window</td>
+<td>It <strong>reads your folders directly</strong> — a whole project of CSVs, scripts, PDFs, hundreds of files, fetching what it needs when it needs it</td>
+</tr>
+<tr class="even">
+<td><strong>Code</strong></td>
+<td>Writes snippets; maybe runs them in a remote sandbox</td>
+<td><strong>Writes, runs, and debugs code on your machine</strong>, sees the error, fixes it, reruns</td>
+</tr>
+<tr class="odd">
+<td><strong>Output</strong></td>
+<td>Text you copy-paste</td>
+<td><strong>Real files</strong>: edited scripts, saved figures, cleaned CSVs, reports</td>
+</tr>
+<tr class="even">
+<td><strong>Tools</strong></td>
+<td>Fixed set (search, maybe a sandbox)</td>
+<td><strong>Tool use</strong>: shell, git, package installs, web fetch, your own scripts, MCP connectors</td>
+</tr>
+<tr class="odd">
+<td><strong>Scale of work</strong></td>
+<td>One answer per prompt</td>
+<td><strong>Agentic loops</strong>: plans multi-step tasks, works for minutes to hours, can manage <strong>sub-agents</strong> working in parallel</td>
+</tr>
+<tr class="even">
+<td><strong>Memory across sessions</strong></td>
+<td>Product “memory,” opaque</td>
+<td><strong>Instruction files you control</strong> (<code>CLAUDE.md</code> / <code>AGENTS.md</code>): project conventions the agent reads every time</td>
+</tr>
+</tbody>
+</table>
+<p>So: the $20 chat subscription answers questions; the <em>same</em> $20 pointed at a harness <strong>does the work with you</strong> — on a great deal of material, in your folders, with tools, verifiably. The trade: it runs on <em>your</em> machine with real permissions, so you also learn safety habits (it asks before running commands; you review diffs; git is your undo button).</p>
+<p><strong>The three harnesses on the menu today</strong> (skills transfer 1:1 between them):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Harness</th>
+<th>Comes with</th>
+<th>Surfaces</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><a href="https://code.claude.com/docs">Claude Code</a></strong> (course default)</td>
+<td>Claude Pro/Max $20+</td>
+<td>Desktop app · terminal CLI · VS Code extension</td>
+</tr>
+<tr class="even">
+<td><strong><a href="https://developers.openai.com/codex">Codex</a></strong></td>
+<td>ChatGPT Plus/Pro $20+</td>
+<td>ChatGPT desktop app · terminal CLI · IDE extension</td>
+</tr>
+<tr class="odd">
+<td><strong><a href="https://github.com/features/copilot">GitHub Copilot</a></strong></td>
+<td>~$10/mo, free for students</td>
+<td>VS Code (agent mode) · terminal CLI</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Awareness, not required:</strong> there are also <a href="../da-knowledge/open-code-tools.html">open-code harnesses</a> — open-source agents you point at any model, including a local one. Same workflow, swappable engine.</p>
 </div>
 </div>
 <hr>
 </section>
-<section id="chunk-3-hands-on-claude-code-40-min-individual" class="level2">
-<h2 class="anchored" data-anchor-id="chunk-3-hands-on-claude-code-40-min-individual">Chunk 3 — Hands-on: Claude Code (40 min · individual)</h2>
+<section id="chunk-3-hands-on-install-your-harness-60-min-individual" class="level2">
+<h2 class="anchored" data-anchor-id="chunk-3-hands-on-install-your-harness-60-min-individual">Chunk 3 — Hands-on: install your harness (60 min · individual)</h2>
+<p>Set up <strong>at least one</strong> tool fully — desktop <em>and</em> CLI. Course demos use Claude Code, so that’s the default; if your subscription is ChatGPT or Copilot, use the matching tab. (Full reference: <a href="../da-knowledge/install-cli.html">Installing AI CLI Tools</a>.)</p>
+<p><strong>Why desktop first, then CLI?</strong> The desktop app is the friendly on-ramp: sign in, point it at a folder, go. The CLI is the same agent in the terminal — more control, scriptable, and the surface we’ll use for real pipelines from Week 3 on. You want both working.</p>
 <div class="week-card card">
 <div class="card-header">
-<p>🖥️ <strong>Same task, two surfaces — terminal then desktop</strong></p>
+<p>🟠 <strong>Option A — Claude Code (course default)</strong></p>
 </div>
 <div class="card-body">
-<ol type="1">
-<li><strong>Install &amp; authenticate Claude Code in the terminal</strong> (finish <a href="../da-knowledge/install-cli.html">Installing AI CLI Tools</a> if needed). Open a terminal, make a folder, and launch:</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> my-first-agent <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> my-first-agent</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="2" type="1">
-<li><strong>A first real task.</strong> Try a tiny data-search prompt and verify the result against reality:</li>
-</ol>
-<pre><code>Get me an income dataset by planning region (county) in Connecticut for 2023.
-Present the results as a table I can copy and edit.</code></pre>
-<p>Then <strong>find the actual data and compare.</strong> Try it more than once; tweak the prompt to be more specific.</p>
-<ol start="3" type="1">
-<li><strong>Now do the same thing in the Claude desktop app.</strong> Notice what changes between terminal and desktop: file access, permissions, how you see the work.</li>
-</ol>
+<p><strong>Step 1 — Desktop app.</strong> Download from <a href="https://claude.com/product/claude-code">claude.com/product/claude-code</a>, install, sign in with your Claude account. Create a folder <code>my-first-agent</code> with any CSV in it, open the folder in the app, and ask: <em>“What’s in this folder? Describe the CSV.”</em> Watch it read your files and ask permission before acting — that permission dialog is the safety model.</p>
+<p><strong>Step 2 — CLI.</strong></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>In PowerShell:</p>
+<pre><code>irm https://claude.ai/install.ps1 | iex</code></pre>
+<p>Then close and reopen the terminal.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://claude.ai/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Or: <code>brew install claude</code></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://claude.ai/install.sh <span class="kw">|</span> <span class="fu">bash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p><strong>Step 3 — Launch and authenticate.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-first-agent</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>First run opens a browser window to log in — pick your Claude subscription. Then try <code>/help</code>, and ask the same folder question you asked the desktop app.</p>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p>⚪ <strong>Option B — Codex (with ChatGPT Plus)</strong></p>
+</div>
+<div class="card-body">
+<p><strong>Step 1 — Desktop app.</strong> The ChatGPT desktop app (<a href="https://chatgpt.com/download">download</a>) now includes Codex: sign in with your ChatGPT account, open the <strong>Codex</strong> tab, and point it at a local folder. Same experiment: <em>“What’s in this folder?”</em></p>
+<p><strong>Step 2 — CLI.</strong></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>In PowerShell:</p>
+<pre><code>powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"</code></pre>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://chatgpt.com/codex/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Or: <code>npm install -g @openai/codex</code></p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://chatgpt.com/codex/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p><strong>Step 3 — Launch and authenticate.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-first-agent</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">codex</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Choose <strong>Sign in with ChatGPT</strong> (uses your Plus plan — no API key needed).</p>
+</div>
+</div>
+<div class="week-card card">
+<div class="card-header">
+<p>⚫ <strong>Option C — GitHub Copilot (free for students)</strong></p>
+</div>
+<div class="card-body">
+<p><strong>Step 1 — VS Code first</strong> (Copilot’s “desktop” is your editor). Install the <strong>GitHub Copilot</strong> extension in VS Code, sign in with the GitHub account that has your Copilot access, open Copilot Chat (<code>Ctrl+Shift+I</code> / <code>Cmd+Shift+I</code>) and switch it to <strong>Agent</strong> mode. Full guide: <a href="../da-knowledge/vscode-setup.html">VS Code + Copilot setup</a>.</p>
+<p><strong>Step 2 — Copilot CLI.</strong></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<pre><code>winget install GitHub.Copilot</code></pre>
+<p>Or: <code>npm install -g @github/copilot</code> (needs Node.js 22+)</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> copilot-cli</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Or: <code>npm install -g @github/copilot</code></p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> @github/copilot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p><strong>Step 3 — Launch and authenticate.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-first-agent</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">copilot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Sign in with GitHub when prompted.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Setup verified when:</strong> (1) the desktop app can read a local folder; (2) the CLI launches in a folder, authenticates, and answers <em>“what’s in this folder?”</em> by actually listing your files. If you finish early, set up a <strong>second</strong> tool — comparing harnesses is part of Chunk 4.</p>
 </div>
 </div>
 <hr>
 </section>
-<section id="chunk-4-hands-on-vs-code-copilot-the-comparison-40-min-individual" class="level2">
-<h2 class="anchored" data-anchor-id="chunk-4-hands-on-vs-code-copilot-the-comparison-40-min-individual">Chunk 4 — Hands-on: VS Code + Copilot + the comparison (40 min · individual)</h2>
+<section id="chunk-4-hands-on-one-real-task-two-surfaces-40-min-individual" class="level2">
+<h2 class="anchored" data-anchor-id="chunk-4-hands-on-one-real-task-two-surfaces-40-min-individual">Chunk 4 — Hands-on: one real task, two surfaces (40 min · individual)</h2>
 <div class="week-card card">
 <div class="card-header">
-<p>🧩 <strong>The IDE harness</strong></p>
+<p>🎯 <strong>The task: a small, checkable analysis</strong></p>
 </div>
 <div class="card-body">
-<ol type="1">
-<li><strong>Set up VS Code + Copilot</strong> (<a href="../da-knowledge/vscode-setup.html">guide</a>). Open Copilot Chat (<code>Ctrl+Shift+I</code> / <code>Cmd+Shift+I</code>) and run the <em>same</em> Connecticut data task. Then <strong>switch the backing model</strong> in Copilot (e.g.&nbsp;a GPT model vs a Claude model) and rerun — notice whether the answer or the workflow changes.</li>
-</ol>
-</div>
-</div>
-<div class="week-card card">
-<div class="card-header">
-<p>🎯 <strong>The task: one small analysis, three surfaces</strong></p>
-</div>
-<div class="card-body">
-<p>Don’t just <em>look up</em> data — make something. Pick <strong>one</strong> small, checkable analysis and run it on all three surfaces (Claude Code terminal, Claude desktop, VS Code + Copilot):</p>
+<p>Don’t just look up data — make something. Run this <strong>same prompt</strong> on (a) the plain chat app in the browser, and (b) your harness (desktop or CLI):</p>
 <blockquote class="blockquote">
 <p><em>“Get Connecticut median household income by county for 2023, load it into a dataframe, and make one labelled bar chart sorted high to low. Save the chart as a PNG.”</em></p>
 </blockquote>
 <p>For each surface, note:</p>
 <ul>
-<li><strong>Did it actually run</strong> the code and produce the PNG, or just hand you a snippet?</li>
-<li><strong>Was the data right?</strong> Open the numbers and compare to the <a href="https://data.census.gov/">Census/ACS source</a>. Flag anything invented.</li>
+<li><strong>Did it actually run</strong> the code and produce a PNG on your disk, or just hand you a snippet?</li>
+<li><strong>Was the data right?</strong> Open the numbers and compare to the <a href="https://data.census.gov/">Census/ACS source</a>. Flag anything invented. (Connecticut switched from counties to planning regions — did the AI mention that, or quietly paper over it?)</li>
 <li><strong>How many turns</strong> did it take to get a correct chart?</li>
 </ul>
-<p>Fill in a tiny comparison table — this is the raw material for your delivery note:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 20%">
@@ -778,28 +987,21 @@ Present the results as a table I can copy and edit.</code></pre>
 <tr class="header">
 <th>Surface</th>
 <th>Ran the code?</th>
+<th>PNG on disk?</th>
 <th>Data correct?</th>
-<th>Turns to a good chart</th>
-<th>Felt best for…</th>
+<th>Turns needed</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Claude Code (terminal)</td>
+<td>Chat app (browser)</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Claude desktop</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>VS Code + Copilot</td>
+<td>Harness (desktop or CLI)</td>
 <td></td>
 <td></td>
 <td></td>
@@ -807,14 +1009,76 @@ Present the results as a table I can copy and edit.</code></pre>
 </tr>
 </tbody>
 </table>
+<p>This tiny table is the raw material for your delivery note — and your first data point on the chat-vs-harness question.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="closing-talk-beyond-subscriptions-openrouter-local-models" class="level2">
+<h2 class="anchored" data-anchor-id="closing-talk-beyond-subscriptions-openrouter-local-models">Closing talk — beyond subscriptions: OpenRouter &amp; local models</h2>
+<div class="week-card card">
+<div class="card-header">
+<p>🌐 <strong>OpenRouter — one key, every model</strong></p>
+</div>
+<div class="card-body">
+<p>Subscriptions are one door to the models; the other is the <strong>API</strong> — pay per token, no monthly fee. <a href="https://openrouter.ai/models">OpenRouter</a> is a marketplace that puts <em>hundreds</em> of models (frontier and open-weights) behind <strong>one API key and one bill</strong>. Why an analyst cares:</p>
+<ul>
+<li><strong>Compare models on your task</strong> — run the same prompt through Claude, GPT, Gemini, DeepSeek, Kimi and diff the answers.</li>
+<li><strong>Cheap bulk work</strong> — classifying 100,000 texts (as in our capstone) through an open-weights model can cost a few dollars instead of a few hundred.</li>
+<li><strong>One integration</strong> — most harnesses and libraries accept an OpenRouter endpoint; you swap models by changing one string.</li>
+</ul>
+<p>We use APIs seriously in Week 5 and the capstone — see <a href="../da-knowledge/get-ai-api-key.html">Get AI API keys</a> when you get there.</p>
 </div>
 </div>
 <div class="week-card card">
 <div class="card-header">
-<p>🦙 <strong>Stretch (optional) — run a model locally</strong></p>
+<p>🦙 <strong>Running an open-weights model on your own computer</strong></p>
 </div>
 <div class="card-body">
-<p>Read <a href="../da-knowledge/open-weights-models.html">Open-weights &amp; local models</a>. If you’re curious, install <a href="https://ollama.com/">Ollama</a>, pull a small model (e.g.&nbsp;<code>ollama run llama3.2</code>), and run a tiny task locally. Reflect on the privacy/cost/capability trade-off versus the frontier models you used above.</p>
+<p>The final rung of independence: download the weights, run the model locally. <strong>Nothing leaves your machine</strong> — the answer to privacy, offline work, and perfectly reproducible (“frozen”) models. The easy on-ramp is <a href="https://ollama.com/">Ollama</a> or <a href="https://lmstudio.ai/">LM Studio</a>.</p>
+<p><strong>What machine do you need?</strong> The model must fit in your GPU memory (VRAM) or a Mac’s unified memory:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model size</th>
+<th>Hardware needed</th>
+<th>What it’s like</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3–4B</td>
+<td>Any modern laptop, 8 GB RAM</td>
+<td>Autocomplete-plus; fine for drafts and simple extraction</td>
+</tr>
+<tr class="even">
+<td>7–8B</td>
+<td>16 GB RAM laptop or 8 GB VRAM GPU</td>
+<td>Genuinely useful for summarising, classification, simple code</td>
+</tr>
+<tr class="odd">
+<td>14–32B</td>
+<td>24 GB VRAM GPU (RTX 4090/5090-class) or 32 GB+ Apple Silicon</td>
+<td>Solid mid-tier assistant; the sweet spot for local</td>
+</tr>
+<tr class="even">
+<td>70B</td>
+<td>48–64 GB — big GPU rig or 64–128 GB Mac</td>
+<td>Approaches last year’s frontier</td>
+</tr>
+<tr class="odd">
+<td>Frontier-scale open models (DeepSeek, Kimi)</td>
+<td>Server-class, multiple GPUs</td>
+<td>Don’t run these at home — rent them via OpenRouter</td>
+</tr>
+</tbody>
+</table>
+<p>Try it if curious: <code>ollama run llama3.2</code> and give it the Connecticut prompt. Feel the capability gap versus the frontier model — that gap <em>is</em> the price of privacy. Full orientation: <a href="../da-knowledge/open-weights-models.html">Open-weights &amp; local models</a>.</p>
 </div>
 </div>
 <hr>
@@ -822,10 +1086,10 @@ Present the results as a table I can copy and edit.</code></pre>
 <section id="discussion-20-min" class="level2">
 <h2 class="anchored" data-anchor-id="discussion-20-min">Discussion (20 min)</h2>
 <ul>
-<li>Terminal vs desktop vs IDE — which felt right for which kind of task?</li>
-<li>Closed vs open-weights — when would privacy or cost push you to a local model?</li>
+<li>Chat vs harness on the same task — what concretely changed? What did the harness do that the browser couldn’t?</li>
+<li>When would <em>you</em> pay $20? When $0? Is there any task in your life worth $100/month?</li>
+<li>Documents and privacy: what would you upload to a free chat, a paid chat, an API, a local model? Draw your personal line.</li>
 <li>The jagged frontier — what did the AI nail, and where did it quietly get the Connecticut data wrong? How did you catch it?</li>
-<li>Switching the backing model in Copilot — did it change the answer, the style, or nothing you could see?</li>
 </ul>
 <hr>
 </section>
@@ -837,8 +1101,8 @@ Present the results as a table I can copy and edit.</code></pre>
 </div>
 <div class="card-body">
 <ul>
-<li><strong>Working environment</strong> — evidence that Claude Code (terminal + desktop) and VS Code + Copilot all run (a screenshot of each completing the Connecticut task is fine).</li>
-<li><strong>A short note (½ page)</strong>: which setup you’ll use for the rest of the course and why; one thing the AI got wrong on the Connecticut task and how you caught it.</li>
+<li><strong>Working environment</strong> — a screenshot of your harness (desktop <em>and</em> CLI) completing the Connecticut task, PNG visible on disk.</li>
+<li><strong>A short note (½ page):</strong> (1) your chat-vs-harness comparison table with two sentences of interpretation; (2) which subscription/tool you’ll use this term and why; (3) one thing the AI got wrong and how you caught it.</li>
 </ul>
 </div>
 </div>
@@ -857,19 +1121,19 @@ Present the results as a table I can copy and edit.</code></pre>
 <section id="knowledge-base" class="level2">
 <h2 class="anchored" data-anchor-id="knowledge-base">Knowledge Base</h2>
 <ul>
-<li><a href="../da-knowledge/which-ai.html">Which AI model</a></li>
-<li><a href="../da-knowledge/open-weights-models.html">Open-weights &amp; local models</a></li>
-<li><a href="../da-knowledge/open-code-tools.html">Open-code tools</a></li>
-<li><a href="../da-knowledge/technical-terms-page.html">Glossary of LLM terms</a></li>
+<li><a href="../da-knowledge/which-ai.html">Which AI model</a> · <a href="../da-knowledge/technical-terms-page.html">Glossary of LLM terms</a></li>
 <li><a href="../da-knowledge/install-cli.html">Installing AI CLI Tools</a> · <a href="../da-knowledge/vscode-setup.html">VS Code + Copilot setup</a> · <a href="../da-knowledge/terminal-basics.html">Terminal Basics</a></li>
+<li><a href="../da-knowledge/open-weights-models.html">Open-weights &amp; local models</a> · <a href="../da-knowledge/open-code-tools.html">Open-code tools</a></li>
+<li><a href="../da-knowledge/get-ai-api-key.html">Get AI API keys</a> — for later weeks</li>
 </ul>
 </section>
 <section id="further-reading-optional" class="level2">
 <h2 class="anchored" data-anchor-id="further-reading-optional">Further reading (optional)</h2>
 <ul>
 <li>Ethan Mollick, <em>Co-Intelligence: Living and Working with AI</em> — Chapters 1–2 for the Cyborg/Centaur framing.</li>
-<li><a href="https://www.oneusefulthing.org/p/the-shape-of-ai-jaggedness-bottlenecks">Mollick — The shape of AI jaggedness</a>.</li>
+<li><a href="https://www.oneusefulthing.org/p/the-shape-of-ai-jaggedness-bottlenecks">Mollick — The shape of AI jaggedness</a></li>
 <li><a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need (2017)</a> — the transformer paper, if you’re curious about the engine.</li>
+<li><a href="https://code.claude.com/docs">Claude Code documentation</a> · <a href="https://developers.openai.com/codex">Codex documentation</a> · <a href="https://docs.github.com/en/copilot/how-tos/copilot-cli">Copilot CLI</a></li>
 </ul>
 
 
@@ -1329,271 +1593,462 @@ Present the results as a table I can copy and edit.</code></pre>
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 1 — LLMs, Models &amp; Harnesses + Setup"</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "The model landscape and getting your two harnesses working"</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-06-01"</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>::::::: {.hero-section}</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>:::::: {.container}</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>::: {.hero-title}</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>Week 1 — LLMs, Models &amp; Harnesses</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>The model landscape, what a harness is, and getting Claude Code + VS Code/Copilot working</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>::::::</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>:::::::</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/week1_pic.png)</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>This is the opening week of the course — the one front-facing, lecture-heavier session. By the end you understand the model landscape (including open-weights models), what a harness is and why it matters, and you have **both course harnesses working** on your machine.</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Before you come to class (30–60 min)</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>✅ **Pre-class checklist**</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Accounts** — create an Anthropic/Claude account and confirm GitHub Copilot access. Install VS Code.</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Installs** — follow <span class="co">[</span><span class="ot">Installing AI CLI Tools</span><span class="co">](../da-knowledge/install-cli.qmd)</span> and the <span class="co">[</span><span class="ot">VS Code + Copilot setup guide</span><span class="co">](../da-knowledge/vscode-setup.qmd)</span>. New to the terminal? Skim <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](../da-knowledge/terminal-basics.qmd)</span>.</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Read** — <span class="co">[</span><span class="ot">Which AI model</span><span class="co">](../da-knowledge/which-ai.qmd)</span>. That's the only required reading.</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>That's enough. We finish setup together in class.</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning objectives</span></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>By the end of this unit you will be able to:</span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Explain what an LLM is, what a context window is, and why both matter for data work.</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Distinguish closed/frontier models from **open-weights** models and say when each is the right choice.</span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Explain what a **harness** is and why it matters as much as the model.</span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Run an identical small task across **Claude Code (terminal + desktop)** and **VS Code + Copilot**, and articulate the differences.</span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## Session shape (200 min · 50·50·40·40·20)</span></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Chunk <span class="pp">|</span> Focus <span class="pp">|</span> Mode <span class="pp">|</span></span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1 (50) <span class="pp">|</span> LLMs &amp; the model landscape <span class="pp">|</span> Talk <span class="pp">|</span></span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2 (50) <span class="pp">|</span> Harnesses, open-code, open-weights <span class="pp">|</span> Talk <span class="pp">|</span></span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 3 (40) <span class="pp">|</span> Hands-on: Claude Code (terminal + desktop) <span class="pp">|</span> Individual <span class="pp">|</span></span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 4 (40) <span class="pp">|</span> Hands-on: VS Code + Copilot + the comparison <span class="pp">|</span> Individual <span class="pp">|</span></span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Discussion (20) <span class="pp">|</span> Surfaces, trust, the jagged frontier <span class="pp">|</span> Group <span class="pp">|</span></span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chunk 1 — LLMs &amp; the model landscape (50 min · talk)</span></span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>📊 **Core LLM concepts**</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>**[Slideshow: LLM Concepts and Applications](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html)**</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**What an LLM is** — a statistical model predicting the next token from massive training data.</span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The transformer revolution** — how 2017's *"Attention is All You Need"* made today's models possible.</span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Context windows** — what they are and why they shape every data-analysis workflow.</span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Training &amp; feedback** — pre-training, resources, and human feedback (RLHF); why models differ.</span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The jagged frontier** — where LLMs excel and where they quietly fail. See <span class="co">[</span><span class="ot">Mollick on the shape of AI jaggedness</span><span class="co">](https://www.oneusefulthing.org/p/the-shape-of-ai-jaggedness-bottlenecks)</span>.</span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Cyborg vs Centaur** — two ways to split work with AI (Mollick): the *Centaur* hands off whole sub-tasks; the *Cyborg* interleaves human and AI move-by-move. You'll feel both this term.</span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>**The model landscape (see [Which AI model](../da-knowledge/which-ai.qmd)):**</span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Frontier closed models** — Claude, GPT, Gemini. State of the art, rented per token.</span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Open-weights models** — Llama, Qwen, Mistral, DeepSeek, Kimi. Download and run yourself; roughly SOTA-minus-a-few-months. Why they matter: **privacy, cost at scale, reproducibility**. Full orientation in <span class="co">[</span><span class="ot">Open-weights &amp; local models</span><span class="co">](../da-knowledge/open-weights-models.qmd)</span>.</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chunk 2 — Harnesses, open-code &amp; open-weights (50 min · talk)</span></span>
-<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>🔧 **The model is the engine; the harness is the car**</span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>A **harness** wraps a model and lets it actually *do* things — read your files, run code, edit files, iterate. The harness matters as much as the model.</span>
-<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>**This course uses exactly two harnesses:**</span>
-<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Harness <span class="pp">|</span> Surfaces <span class="pp">|</span> Notes <span class="pp">|</span></span>
-<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)** | Terminal **and** desktop app <span class="pp">|</span> Terminal-native agent that sees your project, runs code, iterates. <span class="pp">|</span></span>
-<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **VS Code + [GitHub Copilot](https://docs.github.com/copilot)** <span class="pp">|</span> IDE <span class="pp">|</span> In-editor assistance; you can point it at different backing models. <span class="pp">|</span></span>
-<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>That's it — no other tools to learn. Everything transfers conceptually to alternatives.</span>
-<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>**Two awareness topics (not required to install):**</span>
-<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**[Open-code tools](../da-knowledge/open-code-tools.qmd)** — open-source agentic harnesses you run yourself and point at any model.</span>
-<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**[Open-weights / local models](../da-knowledge/open-weights-models.qmd)** — running a private, frozen model locally (e.g. via Ollama), and pointing a harness at it.</span>
-<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>**IDE assistance vs terminal-native execution** — the jump this course makes is not "AI vs no AI." It's about *where* the AI runs and how tight the loop is. Copilot keeps you in the editor; a CLI agent compresses the ask→run→inspect→fix loop into one place.</span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chunk 3 — Hands-on: Claude Code (40 min · individual)</span></span>
-<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>🖥️ **Same task, two surfaces — terminal then desktop**</span>
-<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Install &amp; authenticate Claude Code in the terminal** (finish <span class="co">[</span><span class="ot">Installing AI CLI Tools</span><span class="co">](../da-knowledge/install-cli.qmd)</span> if needed). Open a terminal, make a folder, and launch:</span>
-<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> my-first-agent <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> my-first-agent</span>
-<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span>
-<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**A first real task.** Try a tiny data-search prompt and verify the result against reality:</span>
-<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a><span class="in">Get me an income dataset by planning region (county) in Connecticut for 2023.</span></span>
-<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a><span class="in">Present the results as a table I can copy and edit.</span></span>
-<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>   Then **find the actual data and compare.** Try it more than once; tweak the prompt to be more specific.</span>
-<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Now do the same thing in the Claude desktop app.** Notice what changes between terminal and desktop: file access, permissions, how you see the work.</span>
-<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chunk 4 — Hands-on: VS Code + Copilot + the comparison (40 min · individual)</span></span>
-<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a>🧩 **The IDE harness**</span>
-<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Set up VS Code + Copilot** ([guide](../da-knowledge/vscode-setup.qmd)). Open Copilot Chat (`Ctrl+Shift+I` / `Cmd+Shift+I`) and run the *same* Connecticut data task. Then **switch the backing model** in Copilot (e.g. a GPT model vs a Claude model) and rerun — notice whether the answer or the workflow changes.</span>
-<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a>🎯 **The task: one small analysis, three surfaces**</span>
-<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a>Don't just *look up* data — make something. Pick **one** small, checkable analysis and run it on all three surfaces (Claude Code terminal, Claude desktop, VS Code + Copilot):</span>
-<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *"Get Connecticut median household income by county for 2023, load it into a dataframe, and make one labelled bar chart sorted high to low. Save the chart as a PNG."*</span></span>
-<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>For each surface, note:</span>
-<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Did it actually run** the code and produce the PNG, or just hand you a snippet?</span>
-<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Was the data right?** Open the numbers and compare to the <span class="co">[</span><span class="ot">Census/ACS source</span><span class="co">](https://data.census.gov/)</span>. Flag anything invented.</span>
-<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**How many turns** did it take to get a correct chart?</span>
-<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>Fill in a tiny comparison table — this is the raw material for your delivery note:</span>
-<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Surface <span class="pp">|</span> Ran the code? <span class="pp">|</span> Data correct? <span class="pp">|</span> Turns to a good chart <span class="pp">|</span> Felt best for… <span class="pp">|</span></span>
-<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|---|</span></span>
-<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Claude Code (terminal) <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span></span>
-<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Claude desktop <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span></span>
-<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> VS Code + Copilot <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span></span>
-<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a>🦙 **Stretch (optional) — run a model locally**</span>
-<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a>Read <span class="co">[</span><span class="ot">Open-weights &amp; local models</span><span class="co">](../da-knowledge/open-weights-models.qmd)</span>. If you're curious, install <span class="co">[</span><span class="ot">Ollama</span><span class="co">](https://ollama.com/)</span>, pull a small model (e.g. <span class="in">`ollama run llama3.2`</span>), and run a tiny task locally. Reflect on the privacy/cost/capability trade-off versus the frontier models you used above.</span>
-<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion (20 min)</span></span>
-<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Terminal vs desktop vs IDE — which felt right for which kind of task?</span>
-<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Closed vs open-weights — when would privacy or cost push you to a local model?</span>
-<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The jagged frontier — what did the AI nail, and where did it quietly get the Connecticut data wrong? How did you catch it?</span>
-<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Switching the backing model in Copilot — did it change the answer, the style, or nothing you could see?</span>
-<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a><span class="fu">## Delivery</span></span>
-<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a>📦 **What to hand in (Sunday 23:55)**</span>
-<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Working environment** — evidence that Claude Code (terminal + desktop) and VS Code + Copilot all run (a screenshot of each completing the Connecticut task is fine).</span>
-<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A short note (½ page)**: which setup you'll use for the rest of the course and why; one thing the AI got wrong on the Connecticut task and how you caught it.</span>
-<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a><span class="fu">## Academic integrity &amp; AI use</span></span>
-<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**AI as assistant** — use AI to enhance your capabilities, not replace your thinking.</span>
-<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Maintain authority** — you remain responsible for all outputs and interpretations.</span>
-<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Verify everything** — always validate AI suggestions, especially statistical claims.</span>
-<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Document usage** — keep track of how AI helped, to learn and for transparency.</span>
-<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a>**Red lines:** never submit unverified AI output as your own; always understand the analysis you present; don't outsource critical thinking.</span>
-<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a><span class="fu">## Knowledge Base</span></span>
-<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Which AI model</span><span class="co">](../da-knowledge/which-ai.qmd)</span></span>
-<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Open-weights &amp; local models</span><span class="co">](../da-knowledge/open-weights-models.qmd)</span></span>
-<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Open-code tools</span><span class="co">](../da-knowledge/open-code-tools.qmd)</span></span>
-<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Glossary of LLM terms</span><span class="co">](../da-knowledge/technical-terms-page.qmd)</span></span>
-<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Installing AI CLI Tools</span><span class="co">](../da-knowledge/install-cli.qmd)</span> · <span class="co">[</span><span class="ot">VS Code + Copilot setup</span><span class="co">](../da-knowledge/vscode-setup.qmd)</span> · <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](../da-knowledge/terminal-basics.qmd)</span></span>
-<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further reading (optional)</span></span>
-<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ethan Mollick, *Co-Intelligence: Living and Working with AI* — Chapters 1–2 for the Cyborg/Centaur framing.</span>
-<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Mollick — The shape of AI jaggedness</span><span class="co">](https://www.oneusefulthing.org/p/the-shape-of-ai-jaggedness-bottlenecks)</span>.</span>
-<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Attention Is All You Need (2017)</span><span class="co">](https://arxiv.org/abs/1706.03762)</span> — the transformer paper, if you're curious about the engine.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Week 1 — LLMs, Harnesses &amp; Setup"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "From the free ChatGPT box to a full AI workbench — concepts, subscriptions, and your first harness"</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-07-10"</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>::::::: {.hero-section}</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>:::::: {.container}</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>::: {.hero-title}</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>Week 1 — LLMs, Harnesses &amp; Setup</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>What is actually behind the chat box, when a paid subscription is worth it, what a harness adds — and getting one running on your machine</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>::::::</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>:::::::</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/week1_pic.png)</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>This week starts where most people actually are: **you have used the free ChatGPT (or Claude, or Gemini) in a browser, and that's it.** That is a fine starting point — but it is roughly like having only ever used a calculator when a spreadsheet exists. By the end of this session you will understand what an LLM actually does, what happens when you share a document with one, when paying \$20/month is worth it (and when it isn't), what a **harness** is and why it changes everything for data work — and you will have at least one harness **installed and working** on your own machine.</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>This is the one lecture-heavy week. Everything after this is hands-on.</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Before you come to class (30–60 min)</span></span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>✅ **Pre-class checklist**</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Accounts** — create (free) accounts at [claude.ai](https://claude.ai) and [chatgpt.com](https://chatgpt.com) if you don't have them. If you are a student, claim the free **GitHub Student Developer Pack** at <span class="co">[</span><span class="ot">education.github.com</span><span class="co">](https://education.github.com/pack)</span> — it includes GitHub Copilot Pro at no cost.</span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **One paid plan** — for this course you need *one* \$20-tier subscription that includes a coding agent: **Claude Pro** (recommended — the course demos use Claude Code) or **ChatGPT Plus** (includes Codex). Students with the GitHub pack can alternatively rely on Copilot. Details and comparison below — read that section first if unsure.</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Install VS Code** — from <span class="co">[</span><span class="ot">code.visualstudio.com</span><span class="co">](https://code.visualstudio.com/)</span>. Even if you use another editor, we use it in class.</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **Read** — <span class="co">[</span><span class="ot">Which AI model</span><span class="co">](../da-knowledge/which-ai.qmd)</span>. That's the only required reading.</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ **New to the terminal?** Skim <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](../da-knowledge/terminal-basics.qmd)</span> — 10 minutes, and the hands-on block will feel much easier.</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>We finish installation together in class — don't worry if something fails at home.</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning objectives</span></span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a>By the end of this unit you will be able to:</span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Explain what an LLM is, what tokens and a **context window** are, and what actually happens when you upload a document to a chat.</span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Compare **free vs paid** subscription tiers and decide, for your own situation, when a subscription is worth it.</span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Explain what a **harness** is, and what a coding agent like Claude Code adds on top of the same \$20 subscription — folder access, tool use, running code, managing agents.</span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Install and authenticate at least one harness (**Claude Code**, **Codex**, or **GitHub Copilot**) — desktop app and CLI — and run a first real task in it.</span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Describe the role of **OpenRouter / APIs** and **open-weights models on local hardware**, and say when each is the right choice.</span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Session shape (200 min · 40·40·60·40·20)</span></span>
+<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Chunk <span class="pp">|</span> Focus <span class="pp">|</span> Mode <span class="pp">|</span></span>
+<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1 (40) <span class="pp">|</span> What's behind the chat box — LLM concepts <span class="pp">|</span> Talk <span class="pp">|</span></span>
+<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2 (40) <span class="pp">|</span> Free vs paid · documents &amp; context · what a harness adds <span class="pp">|</span> Talk + demo <span class="pp">|</span></span>
+<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 3 (60) <span class="pp">|</span> Hands-on: install your harness (desktop first, then CLI) <span class="pp">|</span> Individual <span class="pp">|</span></span>
+<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 4 (40) <span class="pp">|</span> Hands-on: one real task, two surfaces <span class="pp">|</span> Individual <span class="pp">|</span></span>
+<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Discussion (20) <span class="pp">|</span> Trust, surfaces, the jagged frontier <span class="pp">|</span> Group <span class="pp">|</span></span>
+<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chunk 1 — What's behind the chat box (40 min · talk)</span></span>
+<span id="cb13-76"><a href="#cb13-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-77"><a href="#cb13-77" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb13-78"><a href="#cb13-78" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb13-79"><a href="#cb13-79" aria-hidden="true" tabindex="-1"></a>📊 **Core LLM concepts — no math required**</span>
+<span id="cb13-80"><a href="#cb13-80" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-81"><a href="#cb13-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb13-83"><a href="#cb13-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-84"><a href="#cb13-84" aria-hidden="true" tabindex="-1"></a>**[Slideshow: LLM Concepts and Applications](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html)**</span>
+<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**What an LLM is** — a statistical model that predicts the next *token* (word piece) given everything so far, trained on a huge slice of human text. No database of facts, no lookup — prediction. This one idea explains both the magic and the failure modes.</span>
+<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tokens** — models don't see words or characters; they see tokens (~¾ of a word in English). Everything is metered in tokens: what you can fit in, what you pay for via API, how fast it responds.</span>
+<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The transformer** — how 2017's *"Attention Is All You Need"* made today's models possible. You don't need the details; you need the consequence: the model attends to *everything in its context at once*.</span>
+<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Training &amp; feedback** — pre-training on text, then instruction-tuning and human feedback (RLHF). This is why models are helpful and polite, and also why they'd rather produce a confident wrong answer than say "I don't know."</span>
+<span id="cb13-90"><a href="#cb13-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The jagged frontier** — LLMs are superhuman at some tasks and surprisingly bad at adjacent ones, and the boundary is invisible until you test it. See <span class="co">[</span><span class="ot">Mollick on AI jaggedness</span><span class="co">](https://www.oneusefulthing.org/p/the-shape-of-ai-jaggedness-bottlenecks)</span>.</span>
+<span id="cb13-91"><a href="#cb13-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Cyborg vs Centaur** — two ways to split work with AI (Mollick): the *Centaur* hands off whole sub-tasks; the *Cyborg* interleaves human and AI move-by-move. You'll feel both this term.</span>
+<span id="cb13-92"><a href="#cb13-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-93"><a href="#cb13-93" aria-hidden="true" tabindex="-1"></a>**The model landscape** (details in <span class="co">[</span><span class="ot">Which AI model</span><span class="co">](../da-knowledge/which-ai.qmd)</span>):</span>
+<span id="cb13-94"><a href="#cb13-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-95"><a href="#cb13-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Frontier closed models** — Claude (Anthropic), GPT (OpenAI), Gemini (Google). State of the art; you rent them per month or per token.</span>
+<span id="cb13-96"><a href="#cb13-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Open-weights models** — Llama, Qwen, Mistral, DeepSeek, Kimi. You can download the weights and run them yourself; think of them as roughly SOTA-minus-a-few-months. Why they matter: **privacy, cost at scale, reproducibility**. We return to them at the end of today.</span>
+<span id="cb13-97"><a href="#cb13-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-98"><a href="#cb13-98" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-99"><a href="#cb13-99" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb13-100"><a href="#cb13-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-101"><a href="#cb13-101" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb13-102"><a href="#cb13-102" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb13-103"><a href="#cb13-103" aria-hidden="true" tabindex="-1"></a>🧠 **The context window — the concept that explains almost everything**</span>
+<span id="cb13-104"><a href="#cb13-104" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-105"><a href="#cb13-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-106"><a href="#cb13-106" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb13-107"><a href="#cb13-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-108"><a href="#cb13-108" aria-hidden="true" tabindex="-1"></a>The **context window** is the model's working memory: everything it can "see" at once — your messages, its answers, any files you shared. Current frontier models handle roughly 200K–1M tokens (a few hundred pages), and models are typically stronger early in the window than when it is stuffed full.</span>
+<span id="cb13-109"><a href="#cb13-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-110"><a href="#cb13-110" aria-hidden="true" tabindex="-1"></a>What follows from this single concept:</span>
+<span id="cb13-111"><a href="#cb13-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-112"><a href="#cb13-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A new chat is a blank slate.** The model does not remember yesterday's conversation (unless the app injects a "memory" summary — that's a product feature, not the model).</span>
+<span id="cb13-113"><a href="#cb13-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Long chats degrade.** As the window fills up, earlier details get crowded out or attended to poorly. For serious work: start fresh chats per task, and re-state what matters.</span>
+<span id="cb13-114"><a href="#cb13-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**What happens when you upload a document:** the file is converted to tokens and *placed into the context window*. Nothing is "learned"; the model reads it like a very fast skimmer. A 30-page PDF fits comfortably. A 180 MB CSV does **not** — the app will silently truncate, sample, or use a code tool to peek at it. If you don't know which happened, you can't trust the answer.</span>
+<span id="cb13-115"><a href="#cb13-115" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**This is why data workflows need more than chat.** Real datasets don't fit in a context window. The professional pattern — which this whole course teaches — is: give the model the *codebook, column lists, and small samples*, and have it write **code** that processes the full data outside the window.</span>
+<span id="cb13-116"><a href="#cb13-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-117"><a href="#cb13-117" aria-hidden="true" tabindex="-1"></a>**Privacy — where your documents go.** An uploaded file goes to the provider's servers. On consumer plans, chats may be used to train future models depending on your data settings — check them (ChatGPT: *Settings → Data controls*; Claude: privacy settings). Paid business/enterprise tiers and API access come with stronger no-training guarantees. House rule for this course: **nothing confidential goes into a chat you wouldn't put in an email to an outside company.**</span>
+<span id="cb13-118"><a href="#cb13-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-119"><a href="#cb13-119" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-120"><a href="#cb13-120" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb13-121"><a href="#cb13-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-122"><a href="#cb13-122" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb13-123"><a href="#cb13-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-124"><a href="#cb13-124" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chunk 2 — Free vs paid, and what a harness adds (40 min · talk + demo)</span></span>
+<span id="cb13-125"><a href="#cb13-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-126"><a href="#cb13-126" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb13-127"><a href="#cb13-127" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb13-128"><a href="#cb13-128" aria-hidden="true" tabindex="-1"></a>💳 **Free vs paid — the honest comparison**</span>
+<span id="cb13-129"><a href="#cb13-129" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-130"><a href="#cb13-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-131"><a href="#cb13-131" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb13-132"><a href="#cb13-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-133"><a href="#cb13-133" aria-hidden="true" tabindex="-1"></a>All major providers run the same ladder. Prices as of mid-2026 (check current pages before subscribing):</span>
+<span id="cb13-134"><a href="#cb13-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-135"><a href="#cb13-135" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Tier <span class="pp">|</span> ChatGPT <span class="pp">|</span> Claude <span class="pp">|</span> What you actually get <span class="pp">|</span></span>
+<span id="cb13-136"><a href="#cb13-136" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb13-137"><a href="#cb13-137" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Free** <span class="pp">|</span> \$0 (with ads in some countries) <span class="pp">|</span> \$0 <span class="pp">|</span> Limited messages that fall back to smaller models when you hit the cap; limited file upload; smallest context; fine for casual questions <span class="pp">|</span></span>
+<span id="cb13-138"><a href="#cb13-138" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Budget** <span class="pp">|</span> Go — ~\$8/mo <span class="pp">|</span> — <span class="pp">|</span> More messages on mid-tier models <span class="pp">|</span></span>
+<span id="cb13-139"><a href="#cb13-139" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Standard** | Plus — \$20/mo | Pro — \$20/mo | The full frontier models incl. extended thinking, deep research, projects, big file uploads, **and the coding agent (Codex / Claude Code)** <span class="pp">|</span></span>
+<span id="cb13-140"><a href="#cb13-140" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Power** <span class="pp">|</span> Pro — \$100–200/mo <span class="pp">|</span> Max — \$100–200/mo <span class="pp">|</span> 5×–20× the usage limits, best-model access all day <span class="pp">|</span></span>
+<span id="cb13-141"><a href="#cb13-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-142"><a href="#cb13-142" aria-hidden="true" tabindex="-1"></a>(Gemini has the same shape: free tier and Google AI Pro at ~\$20/mo. GitHub Copilot is the outlier: ~\$10/mo, **free for verified students and teachers**.)</span>
+<span id="cb13-143"><a href="#cb13-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-144"><a href="#cb13-144" aria-hidden="true" tabindex="-1"></a>**What the free tier really costs you** for data work: you get routed to smaller models mid-conversation, you can't attach much, deep research and thinking modes are capped or absent — and crucially, **you don't get the coding agent**.</span>
+<span id="cb13-145"><a href="#cb13-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-146"><a href="#cb13-146" aria-hidden="true" tabindex="-1"></a>**When should you subscribe? A rule of thumb:**</span>
+<span id="cb13-147"><a href="#cb13-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-148"><a href="#cb13-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you use AI a few times a week to look things up or draft a paragraph → **free is fine.**</span>
+<span id="cb13-149"><a href="#cb13-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you do analytical work (coding, data, writing reports) more than ~2–3 hours a week → the **\$20 tier pays for itself in the first afternoon.** One consultant-hour costs more.</span>
+<span id="cb13-150"><a href="#cb13-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The \$100+ tiers are for people who run agents much of the day. You will not need them for this course.</span>
+<span id="cb13-151"><a href="#cb13-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**For this course, a \$20 tier that includes a coding agent is effectively required** — that's Claude Pro or ChatGPT Plus (or student Copilot).</span>
+<span id="cb13-152"><a href="#cb13-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-153"><a href="#cb13-153" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-154"><a href="#cb13-154" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb13-155"><a href="#cb13-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-156"><a href="#cb13-156" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb13-157"><a href="#cb13-157" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb13-158"><a href="#cb13-158" aria-hidden="true" tabindex="-1"></a>🔧 **Harnesses — the model is the engine, the harness is the car**</span>
+<span id="cb13-159"><a href="#cb13-159" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-160"><a href="#cb13-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-161"><a href="#cb13-161" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb13-162"><a href="#cb13-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-163"><a href="#cb13-163" aria-hidden="true" tabindex="-1"></a>A **harness** is the software wrapped around a model that lets it actually *do* things. The chat website is one harness — the simplest one. A **coding agent** like Claude Code, Codex, or Copilot is a different harness around *the same model*, and it is the reason this course exists.</span>
+<span id="cb13-164"><a href="#cb13-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-165"><a href="#cb13-165" aria-hidden="true" tabindex="-1"></a>Here is what changes, on the same \$20 subscription:</span>
+<span id="cb13-166"><a href="#cb13-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-167"><a href="#cb13-167" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="pp">|</span> Chat app (browser) <span class="pp">|</span> Harness / coding agent <span class="pp">|</span></span>
+<span id="cb13-168"><a href="#cb13-168" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb13-169"><a href="#cb13-169" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Files** | You upload them one by one, into the context window | It **reads your folders directly** — a whole project of CSVs, scripts, PDFs, hundreds of files, fetching what it needs when it needs it <span class="pp">|</span></span>
+<span id="cb13-170"><a href="#cb13-170" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Code** | Writes snippets; maybe runs them in a remote sandbox | **Writes, runs, and debugs code on your machine**, sees the error, fixes it, reruns <span class="pp">|</span></span>
+<span id="cb13-171"><a href="#cb13-171" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Output** | Text you copy-paste | **Real files**: edited scripts, saved figures, cleaned CSVs, reports <span class="pp">|</span></span>
+<span id="cb13-172"><a href="#cb13-172" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Tools** | Fixed set (search, maybe a sandbox) | **Tool use**: shell, git, package installs, web fetch, your own scripts, MCP connectors <span class="pp">|</span></span>
+<span id="cb13-173"><a href="#cb13-173" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Scale of work** | One answer per prompt | **Agentic loops**: plans multi-step tasks, works for minutes to hours, can manage **sub-agents** working in parallel <span class="pp">|</span></span>
+<span id="cb13-174"><a href="#cb13-174" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Memory across sessions** | Product "memory," opaque | **Instruction files you control** (<span class="in">`CLAUDE.md`</span> / <span class="in">`AGENTS.md`</span>): project conventions the agent reads every time <span class="pp">|</span></span>
+<span id="cb13-175"><a href="#cb13-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-176"><a href="#cb13-176" aria-hidden="true" tabindex="-1"></a>So: the \$20 chat subscription answers questions; the *same* \$20 pointed at a harness **does the work with you** — on a great deal of material, in your folders, with tools, verifiably. The trade: it runs on *your* machine with real permissions, so you also learn safety habits (it asks before running commands; you review diffs; git is your undo button).</span>
+<span id="cb13-177"><a href="#cb13-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-178"><a href="#cb13-178" aria-hidden="true" tabindex="-1"></a>**The three harnesses on the menu today** (skills transfer 1:1 between them):</span>
+<span id="cb13-179"><a href="#cb13-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-180"><a href="#cb13-180" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Harness <span class="pp">|</span> Comes with <span class="pp">|</span> Surfaces <span class="pp">|</span></span>
+<span id="cb13-181"><a href="#cb13-181" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb13-182"><a href="#cb13-182" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Claude Code](https://code.claude.com/docs)** (course default) <span class="pp">|</span> Claude Pro/Max \$20+ <span class="pp">|</span> Desktop app · terminal CLI · VS Code extension <span class="pp">|</span></span>
+<span id="cb13-183"><a href="#cb13-183" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[Codex](https://developers.openai.com/codex)** <span class="pp">|</span> ChatGPT Plus/Pro \$20+ <span class="pp">|</span> ChatGPT desktop app · terminal CLI · IDE extension <span class="pp">|</span></span>
+<span id="cb13-184"><a href="#cb13-184" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **[GitHub Copilot](https://github.com/features/copilot)** <span class="pp">|</span> ~\$10/mo, free for students <span class="pp">|</span> VS Code (agent mode) · terminal CLI <span class="pp">|</span></span>
+<span id="cb13-185"><a href="#cb13-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-186"><a href="#cb13-186" aria-hidden="true" tabindex="-1"></a>**Awareness, not required:** there are also <span class="co">[</span><span class="ot">open-code harnesses</span><span class="co">](../da-knowledge/open-code-tools.qmd)</span> — open-source agents you point at any model, including a local one. Same workflow, swappable engine.</span>
+<span id="cb13-187"><a href="#cb13-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-188"><a href="#cb13-188" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-189"><a href="#cb13-189" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb13-190"><a href="#cb13-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-191"><a href="#cb13-191" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb13-192"><a href="#cb13-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-193"><a href="#cb13-193" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chunk 3 — Hands-on: install your harness (60 min · individual)</span></span>
+<span id="cb13-194"><a href="#cb13-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-195"><a href="#cb13-195" aria-hidden="true" tabindex="-1"></a>Set up **at least one** tool fully — desktop *and* CLI. Course demos use Claude Code, so that's the default; if your subscription is ChatGPT or Copilot, use the matching tab. (Full reference: <span class="co">[</span><span class="ot">Installing AI CLI Tools</span><span class="co">](../da-knowledge/install-cli.qmd)</span>.)</span>
+<span id="cb13-196"><a href="#cb13-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-197"><a href="#cb13-197" aria-hidden="true" tabindex="-1"></a>**Why desktop first, then CLI?** The desktop app is the friendly on-ramp: sign in, point it at a folder, go. The CLI is the same agent in the terminal — more control, scriptable, and the surface we'll use for real pipelines from Week 3 on. You want both working.</span>
+<span id="cb13-198"><a href="#cb13-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-199"><a href="#cb13-199" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb13-200"><a href="#cb13-200" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb13-201"><a href="#cb13-201" aria-hidden="true" tabindex="-1"></a>🟠 **Option A — Claude Code (course default)**</span>
+<span id="cb13-202"><a href="#cb13-202" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-203"><a href="#cb13-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-204"><a href="#cb13-204" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb13-205"><a href="#cb13-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-206"><a href="#cb13-206" aria-hidden="true" tabindex="-1"></a>**Step 1 — Desktop app.** Download from <span class="co">[</span><span class="ot">claude.com/product/claude-code</span><span class="co">](https://claude.com/product/claude-code)</span>, install, sign in with your Claude account. Create a folder <span class="in">`my-first-agent`</span> with any CSV in it, open the folder in the app, and ask: *"What's in this folder? Describe the CSV."* Watch it read your files and ask permission before acting — that permission dialog is the safety model.</span>
+<span id="cb13-207"><a href="#cb13-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-208"><a href="#cb13-208" aria-hidden="true" tabindex="-1"></a>**Step 2 — CLI.**</span>
+<span id="cb13-209"><a href="#cb13-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-210"><a href="#cb13-210" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb13-211"><a href="#cb13-211" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Windows</span></span>
+<span id="cb13-212"><a href="#cb13-212" aria-hidden="true" tabindex="-1"></a>In PowerShell:</span>
+<span id="cb13-213"><a href="#cb13-213" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-214"><a href="#cb13-214" aria-hidden="true" tabindex="-1"></a><span class="in">irm https://claude.ai/install.ps1 | iex</span></span>
+<span id="cb13-215"><a href="#cb13-215" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-216"><a href="#cb13-216" aria-hidden="true" tabindex="-1"></a>Then close and reopen the terminal.</span>
+<span id="cb13-217"><a href="#cb13-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-218"><a href="#cb13-218" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Mac</span></span>
+<span id="cb13-219"><a href="#cb13-219" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb13-220"><a href="#cb13-220" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://claude.ai/install.sh <span class="kw">|</span> <span class="fu">bash</span></span>
+<span id="cb13-221"><a href="#cb13-221" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-222"><a href="#cb13-222" aria-hidden="true" tabindex="-1"></a>Or: <span class="in">`brew install claude`</span></span>
+<span id="cb13-223"><a href="#cb13-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-224"><a href="#cb13-224" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Linux</span></span>
+<span id="cb13-225"><a href="#cb13-225" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb13-226"><a href="#cb13-226" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://claude.ai/install.sh <span class="kw">|</span> <span class="fu">bash</span></span>
+<span id="cb13-227"><a href="#cb13-227" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-228"><a href="#cb13-228" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-229"><a href="#cb13-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-230"><a href="#cb13-230" aria-hidden="true" tabindex="-1"></a>**Step 3 — Launch and authenticate.**</span>
+<span id="cb13-231"><a href="#cb13-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-232"><a href="#cb13-232" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb13-233"><a href="#cb13-233" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-first-agent</span>
+<span id="cb13-234"><a href="#cb13-234" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span>
+<span id="cb13-235"><a href="#cb13-235" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-236"><a href="#cb13-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-237"><a href="#cb13-237" aria-hidden="true" tabindex="-1"></a>First run opens a browser window to log in — pick your Claude subscription. Then try <span class="in">`/help`</span>, and ask the same folder question you asked the desktop app.</span>
+<span id="cb13-238"><a href="#cb13-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-239"><a href="#cb13-239" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-240"><a href="#cb13-240" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb13-241"><a href="#cb13-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-242"><a href="#cb13-242" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb13-243"><a href="#cb13-243" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb13-244"><a href="#cb13-244" aria-hidden="true" tabindex="-1"></a>⚪ **Option B — Codex (with ChatGPT Plus)**</span>
+<span id="cb13-245"><a href="#cb13-245" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-246"><a href="#cb13-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-247"><a href="#cb13-247" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb13-248"><a href="#cb13-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-249"><a href="#cb13-249" aria-hidden="true" tabindex="-1"></a>**Step 1 — Desktop app.** The ChatGPT desktop app ([download](https://chatgpt.com/download)) now includes Codex: sign in with your ChatGPT account, open the **Codex** tab, and point it at a local folder. Same experiment: *"What's in this folder?"*</span>
+<span id="cb13-250"><a href="#cb13-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-251"><a href="#cb13-251" aria-hidden="true" tabindex="-1"></a>**Step 2 — CLI.**</span>
+<span id="cb13-252"><a href="#cb13-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-253"><a href="#cb13-253" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb13-254"><a href="#cb13-254" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Windows</span></span>
+<span id="cb13-255"><a href="#cb13-255" aria-hidden="true" tabindex="-1"></a>In PowerShell:</span>
+<span id="cb13-256"><a href="#cb13-256" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-257"><a href="#cb13-257" aria-hidden="true" tabindex="-1"></a><span class="in">powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"</span></span>
+<span id="cb13-258"><a href="#cb13-258" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-259"><a href="#cb13-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-260"><a href="#cb13-260" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Mac</span></span>
+<span id="cb13-261"><a href="#cb13-261" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb13-262"><a href="#cb13-262" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://chatgpt.com/codex/install.sh <span class="kw">|</span> <span class="fu">sh</span></span>
+<span id="cb13-263"><a href="#cb13-263" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-264"><a href="#cb13-264" aria-hidden="true" tabindex="-1"></a>Or: <span class="in">`npm install -g @openai/codex`</span></span>
+<span id="cb13-265"><a href="#cb13-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-266"><a href="#cb13-266" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Linux</span></span>
+<span id="cb13-267"><a href="#cb13-267" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb13-268"><a href="#cb13-268" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://chatgpt.com/codex/install.sh <span class="kw">|</span> <span class="fu">sh</span></span>
+<span id="cb13-269"><a href="#cb13-269" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-270"><a href="#cb13-270" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-271"><a href="#cb13-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-272"><a href="#cb13-272" aria-hidden="true" tabindex="-1"></a>**Step 3 — Launch and authenticate.**</span>
+<span id="cb13-273"><a href="#cb13-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-274"><a href="#cb13-274" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb13-275"><a href="#cb13-275" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-first-agent</span>
+<span id="cb13-276"><a href="#cb13-276" aria-hidden="true" tabindex="-1"></a><span class="ex">codex</span></span>
+<span id="cb13-277"><a href="#cb13-277" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-278"><a href="#cb13-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-279"><a href="#cb13-279" aria-hidden="true" tabindex="-1"></a>Choose **Sign in with ChatGPT** (uses your Plus plan — no API key needed).</span>
+<span id="cb13-280"><a href="#cb13-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-281"><a href="#cb13-281" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-282"><a href="#cb13-282" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb13-283"><a href="#cb13-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-284"><a href="#cb13-284" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb13-285"><a href="#cb13-285" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb13-286"><a href="#cb13-286" aria-hidden="true" tabindex="-1"></a>⚫ **Option C — GitHub Copilot (free for students)**</span>
+<span id="cb13-287"><a href="#cb13-287" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-288"><a href="#cb13-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-289"><a href="#cb13-289" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb13-290"><a href="#cb13-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-291"><a href="#cb13-291" aria-hidden="true" tabindex="-1"></a>**Step 1 — VS Code first** (Copilot's "desktop" is your editor). Install the **GitHub Copilot** extension in VS Code, sign in with the GitHub account that has your Copilot access, open Copilot Chat (`Ctrl+Shift+I` / `Cmd+Shift+I`) and switch it to **Agent** mode. Full guide: <span class="co">[</span><span class="ot">VS Code + Copilot setup</span><span class="co">](../da-knowledge/vscode-setup.qmd)</span>.</span>
+<span id="cb13-292"><a href="#cb13-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-293"><a href="#cb13-293" aria-hidden="true" tabindex="-1"></a>**Step 2 — Copilot CLI.**</span>
+<span id="cb13-294"><a href="#cb13-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-295"><a href="#cb13-295" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb13-296"><a href="#cb13-296" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Windows</span></span>
+<span id="cb13-297"><a href="#cb13-297" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-298"><a href="#cb13-298" aria-hidden="true" tabindex="-1"></a><span class="in">winget install GitHub.Copilot</span></span>
+<span id="cb13-299"><a href="#cb13-299" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-300"><a href="#cb13-300" aria-hidden="true" tabindex="-1"></a>Or: <span class="in">`npm install -g @github/copilot`</span> (needs Node.js 22+)</span>
+<span id="cb13-301"><a href="#cb13-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-302"><a href="#cb13-302" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Mac</span></span>
+<span id="cb13-303"><a href="#cb13-303" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb13-304"><a href="#cb13-304" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> copilot-cli</span>
+<span id="cb13-305"><a href="#cb13-305" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-306"><a href="#cb13-306" aria-hidden="true" tabindex="-1"></a>Or: <span class="in">`npm install -g @github/copilot`</span></span>
+<span id="cb13-307"><a href="#cb13-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-308"><a href="#cb13-308" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Linux</span></span>
+<span id="cb13-309"><a href="#cb13-309" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb13-310"><a href="#cb13-310" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> @github/copilot</span>
+<span id="cb13-311"><a href="#cb13-311" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-312"><a href="#cb13-312" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-313"><a href="#cb13-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-314"><a href="#cb13-314" aria-hidden="true" tabindex="-1"></a>**Step 3 — Launch and authenticate.**</span>
+<span id="cb13-315"><a href="#cb13-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-316"><a href="#cb13-316" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb13-317"><a href="#cb13-317" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-first-agent</span>
+<span id="cb13-318"><a href="#cb13-318" aria-hidden="true" tabindex="-1"></a><span class="ex">copilot</span></span>
+<span id="cb13-319"><a href="#cb13-319" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-320"><a href="#cb13-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-321"><a href="#cb13-321" aria-hidden="true" tabindex="-1"></a>Sign in with GitHub when prompted.</span>
+<span id="cb13-322"><a href="#cb13-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-323"><a href="#cb13-323" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-324"><a href="#cb13-324" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb13-325"><a href="#cb13-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-326"><a href="#cb13-326" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb13-327"><a href="#cb13-327" aria-hidden="true" tabindex="-1"></a>**Setup verified when:** (1) the desktop app can read a local folder; (2) the CLI launches in a folder, authenticates, and answers *"what's in this folder?"* by actually listing your files. If you finish early, set up a **second** tool — comparing harnesses is part of Chunk 4.</span>
+<span id="cb13-328"><a href="#cb13-328" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-329"><a href="#cb13-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-330"><a href="#cb13-330" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb13-331"><a href="#cb13-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-332"><a href="#cb13-332" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chunk 4 — Hands-on: one real task, two surfaces (40 min · individual)</span></span>
+<span id="cb13-333"><a href="#cb13-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-334"><a href="#cb13-334" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb13-335"><a href="#cb13-335" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb13-336"><a href="#cb13-336" aria-hidden="true" tabindex="-1"></a>🎯 **The task: a small, checkable analysis**</span>
+<span id="cb13-337"><a href="#cb13-337" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-338"><a href="#cb13-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-339"><a href="#cb13-339" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb13-340"><a href="#cb13-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-341"><a href="#cb13-341" aria-hidden="true" tabindex="-1"></a>Don't just look up data — make something. Run this **same prompt** on (a) the plain chat app in the browser, and (b) your harness (desktop or CLI):</span>
+<span id="cb13-342"><a href="#cb13-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-343"><a href="#cb13-343" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *"Get Connecticut median household income by county for 2023, load it into a dataframe, and make one labelled bar chart sorted high to low. Save the chart as a PNG."*</span></span>
+<span id="cb13-344"><a href="#cb13-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-345"><a href="#cb13-345" aria-hidden="true" tabindex="-1"></a>For each surface, note:</span>
+<span id="cb13-346"><a href="#cb13-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-347"><a href="#cb13-347" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Did it actually run** the code and produce a PNG on your disk, or just hand you a snippet?</span>
+<span id="cb13-348"><a href="#cb13-348" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Was the data right?** Open the numbers and compare to the <span class="co">[</span><span class="ot">Census/ACS source</span><span class="co">](https://data.census.gov/)</span>. Flag anything invented. (Connecticut switched from counties to planning regions — did the AI mention that, or quietly paper over it?)</span>
+<span id="cb13-349"><a href="#cb13-349" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**How many turns** did it take to get a correct chart?</span>
+<span id="cb13-350"><a href="#cb13-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-351"><a href="#cb13-351" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Surface <span class="pp">|</span> Ran the code? <span class="pp">|</span> PNG on disk? <span class="pp">|</span> Data correct? <span class="pp">|</span> Turns needed <span class="pp">|</span></span>
+<span id="cb13-352"><a href="#cb13-352" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|---|</span></span>
+<span id="cb13-353"><a href="#cb13-353" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Chat app (browser) <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span></span>
+<span id="cb13-354"><a href="#cb13-354" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Harness (desktop or CLI) <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span></span>
+<span id="cb13-355"><a href="#cb13-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-356"><a href="#cb13-356" aria-hidden="true" tabindex="-1"></a>This tiny table is the raw material for your delivery note — and your first data point on the chat-vs-harness question.</span>
+<span id="cb13-357"><a href="#cb13-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-358"><a href="#cb13-358" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-359"><a href="#cb13-359" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb13-360"><a href="#cb13-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-361"><a href="#cb13-361" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb13-362"><a href="#cb13-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-363"><a href="#cb13-363" aria-hidden="true" tabindex="-1"></a><span class="fu">## Closing talk — beyond subscriptions: OpenRouter &amp; local models</span></span>
+<span id="cb13-364"><a href="#cb13-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-365"><a href="#cb13-365" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb13-366"><a href="#cb13-366" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb13-367"><a href="#cb13-367" aria-hidden="true" tabindex="-1"></a>🌐 **OpenRouter — one key, every model**</span>
+<span id="cb13-368"><a href="#cb13-368" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-369"><a href="#cb13-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-370"><a href="#cb13-370" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb13-371"><a href="#cb13-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-372"><a href="#cb13-372" aria-hidden="true" tabindex="-1"></a>Subscriptions are one door to the models; the other is the **API** — pay per token, no monthly fee. [OpenRouter](https://openrouter.ai/models) is a marketplace that puts *hundreds* of models (frontier and open-weights) behind **one API key and one bill**. Why an analyst cares:</span>
+<span id="cb13-373"><a href="#cb13-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-374"><a href="#cb13-374" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Compare models on your task** — run the same prompt through Claude, GPT, Gemini, DeepSeek, Kimi and diff the answers.</span>
+<span id="cb13-375"><a href="#cb13-375" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Cheap bulk work** — classifying 100,000 texts (as in our capstone) through an open-weights model can cost a few dollars instead of a few hundred.</span>
+<span id="cb13-376"><a href="#cb13-376" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**One integration** — most harnesses and libraries accept an OpenRouter endpoint; you swap models by changing one string.</span>
+<span id="cb13-377"><a href="#cb13-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-378"><a href="#cb13-378" aria-hidden="true" tabindex="-1"></a>We use APIs seriously in Week 5 and the capstone — see <span class="co">[</span><span class="ot">Get AI API keys</span><span class="co">](../da-knowledge/get-ai-api-key.qmd)</span> when you get there.</span>
+<span id="cb13-379"><a href="#cb13-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-380"><a href="#cb13-380" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-381"><a href="#cb13-381" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb13-382"><a href="#cb13-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-383"><a href="#cb13-383" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb13-384"><a href="#cb13-384" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb13-385"><a href="#cb13-385" aria-hidden="true" tabindex="-1"></a>🦙 **Running an open-weights model on your own computer**</span>
+<span id="cb13-386"><a href="#cb13-386" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-387"><a href="#cb13-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-388"><a href="#cb13-388" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb13-389"><a href="#cb13-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-390"><a href="#cb13-390" aria-hidden="true" tabindex="-1"></a>The final rung of independence: download the weights, run the model locally. **Nothing leaves your machine** — the answer to privacy, offline work, and perfectly reproducible ("frozen") models. The easy on-ramp is <span class="co">[</span><span class="ot">Ollama</span><span class="co">](https://ollama.com/)</span> or <span class="co">[</span><span class="ot">LM Studio</span><span class="co">](https://lmstudio.ai/)</span>.</span>
+<span id="cb13-391"><a href="#cb13-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-392"><a href="#cb13-392" aria-hidden="true" tabindex="-1"></a>**What machine do you need?** The model must fit in your GPU memory (VRAM) or a Mac's unified memory:</span>
+<span id="cb13-393"><a href="#cb13-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-394"><a href="#cb13-394" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Model size <span class="pp">|</span> Hardware needed <span class="pp">|</span> What it's like <span class="pp">|</span></span>
+<span id="cb13-395"><a href="#cb13-395" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb13-396"><a href="#cb13-396" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 3–4B <span class="pp">|</span> Any modern laptop, 8 GB RAM <span class="pp">|</span> Autocomplete-plus; fine for drafts and simple extraction <span class="pp">|</span></span>
+<span id="cb13-397"><a href="#cb13-397" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 7–8B <span class="pp">|</span> 16 GB RAM laptop or 8 GB VRAM GPU <span class="pp">|</span> Genuinely useful for summarising, classification, simple code <span class="pp">|</span></span>
+<span id="cb13-398"><a href="#cb13-398" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 14–32B <span class="pp">|</span> 24 GB VRAM GPU (RTX 4090/5090-class) or 32 GB+ Apple Silicon <span class="pp">|</span> Solid mid-tier assistant; the sweet spot for local <span class="pp">|</span></span>
+<span id="cb13-399"><a href="#cb13-399" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 70B <span class="pp">|</span> 48–64 GB — big GPU rig or 64–128 GB Mac <span class="pp">|</span> Approaches last year's frontier <span class="pp">|</span></span>
+<span id="cb13-400"><a href="#cb13-400" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Frontier-scale open models (DeepSeek, Kimi) <span class="pp">|</span> Server-class, multiple GPUs <span class="pp">|</span> Don't run these at home — rent them via OpenRouter <span class="pp">|</span></span>
+<span id="cb13-401"><a href="#cb13-401" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-402"><a href="#cb13-402" aria-hidden="true" tabindex="-1"></a>Try it if curious: <span class="in">`ollama run llama3.2`</span> and give it the Connecticut prompt. Feel the capability gap versus the frontier model — that gap *is* the price of privacy. Full orientation: <span class="co">[</span><span class="ot">Open-weights &amp; local models</span><span class="co">](../da-knowledge/open-weights-models.qmd)</span>.</span>
+<span id="cb13-403"><a href="#cb13-403" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-404"><a href="#cb13-404" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-405"><a href="#cb13-405" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb13-406"><a href="#cb13-406" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-407"><a href="#cb13-407" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb13-408"><a href="#cb13-408" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-409"><a href="#cb13-409" aria-hidden="true" tabindex="-1"></a><span class="fu">## Discussion (20 min)</span></span>
+<span id="cb13-410"><a href="#cb13-410" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-411"><a href="#cb13-411" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chat vs harness on the same task — what concretely changed? What did the harness do that the browser couldn't?</span>
+<span id="cb13-412"><a href="#cb13-412" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>When would *you* pay \$20? When \$0? Is there any task in your life worth \$100/month?</span>
+<span id="cb13-413"><a href="#cb13-413" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Documents and privacy: what would you upload to a free chat, a paid chat, an API, a local model? Draw your personal line.</span>
+<span id="cb13-414"><a href="#cb13-414" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The jagged frontier — what did the AI nail, and where did it quietly get the Connecticut data wrong? How did you catch it?</span>
+<span id="cb13-415"><a href="#cb13-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-416"><a href="#cb13-416" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb13-417"><a href="#cb13-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-418"><a href="#cb13-418" aria-hidden="true" tabindex="-1"></a><span class="fu">## Delivery</span></span>
+<span id="cb13-419"><a href="#cb13-419" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-420"><a href="#cb13-420" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
+<span id="cb13-421"><a href="#cb13-421" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
+<span id="cb13-422"><a href="#cb13-422" aria-hidden="true" tabindex="-1"></a>📦 **What to hand in (Sunday 23:55)**</span>
+<span id="cb13-423"><a href="#cb13-423" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-424"><a href="#cb13-424" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-425"><a href="#cb13-425" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
+<span id="cb13-426"><a href="#cb13-426" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-427"><a href="#cb13-427" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Working environment** — a screenshot of your harness (desktop *and* CLI) completing the Connecticut task, PNG visible on disk.</span>
+<span id="cb13-428"><a href="#cb13-428" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A short note (½ page):** (1) your chat-vs-harness comparison table with two sentences of interpretation; (2) which subscription/tool you'll use this term and why; (3) one thing the AI got wrong and how you caught it.</span>
+<span id="cb13-429"><a href="#cb13-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-430"><a href="#cb13-430" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-431"><a href="#cb13-431" aria-hidden="true" tabindex="-1"></a>:::::</span>
+<span id="cb13-432"><a href="#cb13-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-433"><a href="#cb13-433" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb13-434"><a href="#cb13-434" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-435"><a href="#cb13-435" aria-hidden="true" tabindex="-1"></a><span class="fu">## Academic integrity &amp; AI use</span></span>
+<span id="cb13-436"><a href="#cb13-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-437"><a href="#cb13-437" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**AI as assistant** — use AI to enhance your capabilities, not replace your thinking.</span>
+<span id="cb13-438"><a href="#cb13-438" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Maintain authority** — you remain responsible for all outputs and interpretations.</span>
+<span id="cb13-439"><a href="#cb13-439" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Verify everything** — always validate AI suggestions, especially statistical claims.</span>
+<span id="cb13-440"><a href="#cb13-440" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Document usage** — keep track of how AI helped, to learn and for transparency.</span>
+<span id="cb13-441"><a href="#cb13-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-442"><a href="#cb13-442" aria-hidden="true" tabindex="-1"></a>**Red lines:** never submit unverified AI output as your own; always understand the analysis you present; don't outsource critical thinking.</span>
+<span id="cb13-443"><a href="#cb13-443" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-444"><a href="#cb13-444" aria-hidden="true" tabindex="-1"></a><span class="fu">## Knowledge Base</span></span>
+<span id="cb13-445"><a href="#cb13-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-446"><a href="#cb13-446" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Which AI model</span><span class="co">](../da-knowledge/which-ai.qmd)</span> · <span class="co">[</span><span class="ot">Glossary of LLM terms</span><span class="co">](../da-knowledge/technical-terms-page.qmd)</span></span>
+<span id="cb13-447"><a href="#cb13-447" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Installing AI CLI Tools</span><span class="co">](../da-knowledge/install-cli.qmd)</span> · <span class="co">[</span><span class="ot">VS Code + Copilot setup</span><span class="co">](../da-knowledge/vscode-setup.qmd)</span> · <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](../da-knowledge/terminal-basics.qmd)</span></span>
+<span id="cb13-448"><a href="#cb13-448" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Open-weights &amp; local models</span><span class="co">](../da-knowledge/open-weights-models.qmd)</span> · <span class="co">[</span><span class="ot">Open-code tools</span><span class="co">](../da-knowledge/open-code-tools.qmd)</span></span>
+<span id="cb13-449"><a href="#cb13-449" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Get AI API keys</span><span class="co">](../da-knowledge/get-ai-api-key.qmd)</span> — for later weeks</span>
+<span id="cb13-450"><a href="#cb13-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-451"><a href="#cb13-451" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further reading (optional)</span></span>
+<span id="cb13-452"><a href="#cb13-452" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-453"><a href="#cb13-453" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ethan Mollick, *Co-Intelligence: Living and Working with AI* — Chapters 1–2 for the Cyborg/Centaur framing.</span>
+<span id="cb13-454"><a href="#cb13-454" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Mollick — The shape of AI jaggedness</span><span class="co">](https://www.oneusefulthing.org/p/the-shape-of-ai-jaggedness-bottlenecks)</span></span>
+<span id="cb13-455"><a href="#cb13-455" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Attention Is All You Need (2017)</span><span class="co">](https://arxiv.org/abs/1706.03762)</span> — the transformer paper, if you're curious about the engine.</span>
+<span id="cb13-456"><a href="#cb13-456" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Claude Code documentation</span><span class="co">](https://code.claude.com/docs)</span> · <span class="co">[</span><span class="ot">Codex documentation</span><span class="co">](https://developers.openai.com/codex)</span> · <span class="co">[</span><span class="ot">Copilot CLI</span><span class="co">](https://docs.github.com/en/copilot/how-tos/copilot-cli)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
