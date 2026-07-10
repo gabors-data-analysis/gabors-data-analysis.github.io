@@ -319,6 +319,15 @@ body.gda-landing .page {
   }
 }
 
+.gda-btn--teal {
+  background: $gda-teal;
+  color: #fff !important;
+
+  &:hover {
+    background: mix(#000, $gda-teal, 12%);
+  }
+}
+
 .gda-btn--ghost {
   background: transparent;
   color: $gda-navy !important;
