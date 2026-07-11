@@ -1,6 +1,6 @@
 ---
 title: "The Gabors Data Analysis ecosystem"
-description: "Open-source projects around the Bekes-Kezdi Data Analysis textbook: case study code, coding courses in R, Python, and Stata, an open AI book, interactive Shiny apps, and teaching simulations — all free on GitHub."
+description: "Open-source projects around the Bekes-Kezdi Data Analysis textbook: case study code, coding courses in R, Python, and Stata, an open AI course, and interactive teaching dashboards — all free."
 permalink: /ecosystem/
 layout: single
 classes: wide
@@ -14,7 +14,7 @@ redirect_from:
 
 {% include base_path %}
 
-We wanted to create more than a textbook: an **ecosystem** of open materials for learning and teaching data analysis. Everything below is free and lives in our [GitHub organization](https://github.com/gabors-data-analysis){:target="_blank" rel="noopener"} — code, courses, interactive apps, and an open-access book.
+We wanted to create more than a textbook: an **ecosystem** of open materials for learning and teaching data analysis. Everything below is free and lives in our [GitHub organization](https://github.com/gabors-data-analysis){:target="_blank" rel="noopener"} — code, courses, and interactive teaching tools.
 
 ## Core textbook materials
 
@@ -74,14 +74,6 @@ Full open coding courses that accompany the textbook, taking you from zero to do
       <li><a href="https://github.com/gabors-data-analysis/da-w-ai" target="_blank" rel="noopener">Source on GitHub</a></li>
     </ul>
   </div>
-  <div class="gda-card gda-card--yellow">
-    <h3 class="gda-card__title"><a href="{{ '/da-w-ai-book/' | relative_url }}">Data Analysis with AI — the open book</a></h3>
-    <p class="gda-card__text">An open-source Quarto book for social science students, companion to the course. Free to read online (CC BY-NC-SA 4.0).</p>
-    <ul class="gda-card__links">
-      <li><a href="{{ '/da-w-ai-book/' | relative_url }}">Read online</a></li>
-      <li><a href="https://github.com/gabors-data-analysis/da-w-ai-book" target="_blank" rel="noopener">Source on GitHub</a></li>
-    </ul>
-  </div>
 </div>
 
 ## Interactive dashboards
@@ -117,13 +109,6 @@ Play with the concepts in your browser instead of just reading about them. Our *
 Standalone apps and datasets we built for the classroom.
 
 <div class="gda-cards">
-  <div class="gda-card gda-card--green">
-    <h3 class="gda-card__title"><a href="https://github.com/gabors-data-analysis/fwl-simulation" target="_blank" rel="noopener">Frisch–Waugh–Lovell explorer</a></h3>
-    <p class="gda-card__text">A Shiny dashboard illustrating the FWL theorem, with a growth-regression example (Mankiw–Romer–Weil) and simulated data (chapter 10).</p>
-    <ul class="gda-card__links">
-      <li><a href="https://github.com/gabors-data-analysis/fwl-simulation" target="_blank" rel="noopener">Source on GitHub</a></li>
-    </ul>
-  </div>
   <div class="gda-card gda-card--blue">
     <h3 class="gda-card__title"><a href="https://github.com/gabors-data-analysis/da-simulated-hotel-wrangling" target="_blank" rel="noopener">Austrian hotels wrangling dataset</a></h3>
     <p class="gda-card__text">A realistic, synthetically generated multi-table hotel dataset for practicing data wrangling and joins.</p>

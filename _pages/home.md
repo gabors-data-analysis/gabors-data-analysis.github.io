@@ -95,7 +95,6 @@ redirect_from:
       <p class="gda-card__text">New: teaching and doing data analysis in the age of LLMs — a full course and materials in progress.</p>
       <ul class="gda-card__links">
         <li><a href="{{ '/ai-course/' | relative_url }}">AI course — full material</a></li>
-        <li><a href="{{ '/da-w-ai-book/' | relative_url }}">Open book: Data Analysis with AI</a></li>
       </ul>
     </div>
   </div>
@@ -111,9 +110,9 @@ redirect_from:
     </div>
     <div class="gda-card gda-card--purple">
       <h3 class="gda-card__title"><a href="{{ '/data-analysis-with-ai/' | relative_url }}">Data Analysis with AI</a></h3>
-      <p class="gda-card__text">Doing and teaching data analysis in the age of LLMs — a full open course and a companion open-access book.</p>
+      <p class="gda-card__text">Doing and teaching data analysis in the age of LLMs — a full open course, free to use.</p>
       <ul class="gda-card__links">
-        <li><a href="{{ '/ai-course/' | relative_url }}">AI course</a> · <a href="{{ '/da-w-ai-book/' | relative_url }}">open book</a></li>
+        <li><a href="{{ '/ai-course/' | relative_url }}">AI course — full material</a></li>
       </ul>
     </div>
     <div class="gda-card gda-card--teal">
@@ -300,12 +299,12 @@ redirect_from:
 
 <div markdown="1">
 ### Gábor Békés
-[Gábor Békés](https://sites.google.com/site/bekesg) is an Assistant Professor at the Department of Economics and Business of the [Central European University](https://economics.ceu.edu/) and director of the [MS in Business Analytics](https://economics.ceu.edu/program/master-science-business-analytics) program. He is a senior fellow at KRTK and a research affiliate at CEPR. He has published in top economics journals on multinational firms, productivity, business clusters, and innovation spillovers, and has taught graduate-level data analysis courses since 2012.
+[Gábor Békés](https://sites.google.com/site/bekesg) is an Associate Professor at the Department of Economics and Business of the [Central European University](https://economics.ceu.edu/) and director of the [MS in Business Analytics](https://economics.ceu.edu/program/master-science-business-analytics) program. He is a research associate at CEPR and an advising fellow at Microsoft AIEI. He has published in top economics journals on multinational firms, productivity, business clusters, and innovation spillovers, and has taught graduate-level data analysis courses since 2012.
 </div>
 
 <div markdown="1">
 ### Gábor Kézdi
-[Gábor Kézdi](https://sites.google.com/site/gaborkezdi/home?authuser=1) is a Research Associate Professor at the University of Michigan's [Institute for Social Research](https://isr.umich.edu/). He has published in top journals in economics, statistics, and political science on household finances, health, education, demography, and ethnic disadvantage, and is co-investigator of the [Health and Retirement Study](https://hrs.isr.umich.edu/about) in the U.S. He has taught data analysis and econometrics from undergraduate to PhD level since 2002.
+[Gábor Kézdi](https://kezdigabor.life/) was a Research Associate Professor at the University of Michigan's [Institute for Social Research](https://isr.umich.edu/). He published in top journals in economics, statistics, and political science on household finances, health, education, demography, and ethnic disadvantage, and was co-investigator of the [Health and Retirement Study](https://hrs.isr.umich.edu/about) in the U.S. He taught data analysis and econometrics from undergraduate to PhD level from 2002.
 </div>
 
   </div>
