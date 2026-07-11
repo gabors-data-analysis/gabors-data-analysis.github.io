@@ -49,6 +49,18 @@ redirect_from:
 </div>
 
 <section class="gda-section">
+  <h2 class="gda-section__title">The book &amp; its ecosystem — in 100 seconds</h2>
+  <div class="gda-video">
+    <video controls preload="none" playsinline
+           poster="{{ '/images/social/da-video-poster.jpg' | relative_url }}">
+      <source src="{{ '/videos/da-intro.mp4' | relative_url }}" type="video/mp4">
+      Your browser does not support the video tag —
+      <a href="{{ '/videos/da-intro.mp4' | relative_url }}">download the video</a>.
+    </video>
+  </div>
+</section>
+
+<section class="gda-section">
   <h2 class="gda-section__title">Find your path</h2>
   <div class="gda-cards">
     <div class="gda-card gda-card--blue">

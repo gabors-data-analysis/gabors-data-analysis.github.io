@@ -11,6 +11,7 @@ Key facts:
 ## The book
 
 - [Why this book](https://gabors-data-analysis.com/whythisbook/): scope, philosophy, and intended audiences
+- [Intro video](https://gabors-data-analysis.com/videos/da-intro.mp4): 100-second overview of the book and its open ecosystem
 - [Slides](https://gabors-data-analysis.com/slides/): free lecture slides (PDF) for all 24 chapters, one click per chapter
 - [Chapters](https://gabors-data-analysis.com/chapters/): chapter summaries, outlines, and case study links
 - [Endorsements](https://gabors-data-analysis.com/endorsements): reviews by David Card, Joshua Angrist, and others

@@ -552,6 +552,20 @@ a.gda-card:visited {
   }
 }
 
+/* intro video */
+.gda-video {
+  max-width: 960px;
+  margin: 1.4rem auto 0;
+
+  video {
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 16px 40px rgba(43, 55, 99, 0.3);
+    background: $gda-navy-dark;
+  }
+}
+
 /* endorsement carousel */
 .gda-carousel {
   position: relative;
