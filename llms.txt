@@ -44,7 +44,6 @@ Key facts:
 
 ## Data analysis with AI
 
-- [Data analysis with AI](https://gabors-data-analysis.com/data-analysis-with-ai/): overview of AI-related materials
 - [Full AI course material](https://gabors-data-analysis.com/ai-course/): "Doing Data Analysis with AI" course by Gábor Békés
 
 ## Open-source ecosystem

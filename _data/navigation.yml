@@ -73,28 +73,6 @@ main:
       - title: "Instructor feedback"
         url: /instructor-feedback/
 
-  - title: "Students"
-    url: /students/
-    children:
-      - title: "Student hub"
-        url: /students/
-      - title: "Getting started"
-        url: /getting-started
-      - title: "Coding courses"
-        url: /code-courses/
-      - title: "Interactive dashboards"
-        url: https://dashboards.gabors-data-analysis.com/
-      - title: "Dictionary (EN–HU)"
-        url: /dictionary
-
-  - title: "AI"
-    url: /data-analysis-with-ai/
-    children:
-      - title: "Data analysis with AI"
-        url: /data-analysis-with-ai/
-      - title: "AI course — full material"
-        url: /ai-course/
-
   - title: "Errata"
     url: /errata/
 
@@ -159,10 +137,8 @@ sidebar:
         url: /dictionary
 
   - title: AI
-    url: /data-analysis-with-ai/
+    url: /ai-course/
     children:
-      - title: "Data analysis with AI"
-        url: /data-analysis-with-ai/
       - title: "AI course — full material"
         url: /ai-course/
 

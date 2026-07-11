@@ -91,7 +91,7 @@ redirect_from:
       </ul>
     </div>
     <div class="gda-card gda-card--purple">
-      <h3 class="gda-card__title"><a href="{{ '/data-analysis-with-ai/' | relative_url }}">Data Analysis with AI</a></h3>
+      <h3 class="gda-card__title"><a href="{{ '/ai-course/' | relative_url }}">Data Analysis with AI</a></h3>
       <p class="gda-card__text">New: teaching and doing data analysis in the age of LLMs — a full course and materials in progress.</p>
       <ul class="gda-card__links">
         <li><a href="{{ '/ai-course/' | relative_url }}">AI course — full material</a></li>
@@ -109,7 +109,7 @@ redirect_from:
       <p class="gda-card__text">Learn to code from zero in R, Python, or Stata — full open courses that carry you all the way to the case studies.</p>
     </div>
     <div class="gda-card gda-card--purple">
-      <h3 class="gda-card__title"><a href="{{ '/data-analysis-with-ai/' | relative_url }}">Data Analysis with AI</a></h3>
+      <h3 class="gda-card__title"><a href="{{ '/ai-course/' | relative_url }}">Data Analysis with AI</a></h3>
       <p class="gda-card__text">Doing and teaching data analysis in the age of LLMs — a full open course, free to use.</p>
       <ul class="gda-card__links">
         <li><a href="{{ '/ai-course/' | relative_url }}">AI course — full material</a></li>
