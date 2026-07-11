@@ -79,7 +79,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "/images/cover-full_hd.png" # Open Graph/Twitter default site image
+og_image                 : "/images/social/da-promo-1200x630.png" # Open Graph/Twitter default site image (1200x630, matches site design)
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
