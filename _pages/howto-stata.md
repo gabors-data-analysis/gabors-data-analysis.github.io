@@ -8,6 +8,7 @@ redirect_from:
   - "/nmp.html"
 ---
 
+*Part of [Data & Code]({{ "/data-and-code/" | relative_url }}). Full guide: [Stata setup](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-stata.md){:target="_blank" rel="noopener"}.*
 
 ## Get Stata
 1. You will need a Stata license to use it. Your institution may have access, check for that.
@@ -19,7 +20,7 @@ redirect_from:
 
 ## Setting up in Stata
 
-1. Create a folder structure as described in [setting up folders](/data-and-code/#folder-setup), basically having one directory for the codes (.do files) and one for data.
+1. Create a folder structure as described in [setting up folders]({{ '/folders/' | relative_url }}), basically having one directory for the codes (.do files) and one for data.
 2. The first time you use these codes, you shall use run `ch00-tech-prep/ch00_install_libraries` from the case study working directory - this will install user written programs we use in the textbook. 
 
 

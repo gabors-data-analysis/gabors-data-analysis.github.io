@@ -89,6 +89,36 @@ redirect_from:
 </section>
 
 <section class="gda-section">
+  <h2 class="gda-section__title">More than a textbook — free tools &amp; courses</h2>
+  <p class="gda-section__intro">Around the book we built a whole open ecosystem: learn to code from scratch, do data analysis with AI, and explore the concepts hands-on in interactive dashboards. All free.</p>
+  <div class="gda-cards">
+    <div class="gda-card gda-card--green">
+      <h3 class="gda-card__title"><a href="{{ '/code-courses/' | relative_url }}">Coding courses</a></h3>
+      <p class="gda-card__text">Learn to code from zero in R, Python, or Stata — full open courses that carry you all the way to the case studies.</p>
+    </div>
+    <div class="gda-card gda-card--purple">
+      <h3 class="gda-card__title"><a href="{{ '/data-analysis-with-ai/' | relative_url }}">Data Analysis with AI</a></h3>
+      <p class="gda-card__text">Doing and teaching data analysis in the age of LLMs — a full open course and a companion open-access book.</p>
+      <ul class="gda-card__links">
+        <li><a href="{{ '/ai-course/' | relative_url }}">AI course</a> · <a href="{{ '/da-w-ai-book/' | relative_url }}">open book</a></li>
+      </ul>
+    </div>
+    <div class="gda-card gda-card--teal">
+      <h3 class="gda-card__title"><a href="https://dashboards.gabors-data-analysis.com/" target="_blank" rel="noopener">Interactive dashboards</a></h3>
+      <p class="gda-card__text">Play with the concepts in your browser — eight teaching dashboards, from distributions to causal inference.</p>
+      <ul class="gda-card__links">
+        <li><a href="https://dashboards.gabors-data-analysis.com/app/hotels" target="_blank" rel="noopener">Hotels Europe case study →</a></li>
+        <li><a href="https://dashboards.gabors-data-analysis.com/app/ch10_multireg" target="_blank" rel="noopener">Multiple linear regression →</a></li>
+      </ul>
+    </div>
+    <div class="gda-card gda-card--blue">
+      <h3 class="gda-card__title"><a href="{{ '/ecosystem/' | relative_url }}">The full ecosystem</a></h3>
+      <p class="gda-card__text">Case study code, datasets, courses, AI materials, and teaching apps — everything we built, in one place.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gda-section">
   <h2 class="gda-section__title">What the book covers</h2>
   <p class="gda-section__intro">A complete, curated curriculum that equips future data analysts with the most important tools, methods, and skills — through the entire process of data analysis, to answer real-life questions.</p>
   <div class="gda-cards">
@@ -129,18 +159,18 @@ redirect_from:
 
 <section class="gda-section">
   <h2 class="gda-section__title">Endorsements</h2>
+  <div class="gda-quote gda-quote--featured">
+    <p class="gda-quote__text">This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible. Like a good confidence interval, the Gabors have got you almost completely covered!</p>
+    <p class="gda-quote__who">Joshua Angrist <span>Professor of Economics, MIT · Nobel laureate</span></p>
+  </div>
   <div class="gda-quotes">
     <div class="gda-quote">
-      <p class="gda-quote__text">Comprehensive and accessible… exactly what is needed.</p>
+      <p class="gda-quote__text">A beautiful integration of Econometrics and Data Science, exactly what is needed to equip the next generation of students.</p>
       <p class="gda-quote__who">David Card <span>UC Berkeley · Nobel laureate</span></p>
     </div>
     <div class="gda-quote">
-      <p class="gda-quote__text">A beautiful integration of Econometrics and Data Science.</p>
-      <p class="gda-quote__who">Joshua Angrist <span>MIT · Nobel laureate</span></p>
-    </div>
-    <div class="gda-quote">
-      <p class="gda-quote__text">Must purchase for anyone doing applied work… Perfect for data scientists of all stripes (including Econ).</p>
-      <p class="gda-quote__who">Scott Cunningham <span>Baylor University · Author of Causal Inference: The Mixtape</span></p>
+      <p class="gda-quote__text">Must purchase for anyone doing applied work… perfect for data scientists of all stripes.</p>
+      <p class="gda-quote__who">Scott Cunningham <span>Author of Causal Inference: The Mixtape</span></p>
     </div>
   </div>
   <p><em><a href="{{ '/endorsements' | relative_url }}">More endorsements →</a></em> · <em><a href="{{ '/instructor-feedback' | relative_url }}">Instructor feedback →</a></em></p>

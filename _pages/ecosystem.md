@@ -84,27 +84,39 @@ Full open coding courses that accompany the textbook, taking you from zero to do
   </div>
 </div>
 
-## Interactive apps and simulations
+## Interactive dashboards
 
-Small tools we built for teaching — play with the concepts instead of just reading about them.
+Play with the concepts in your browser instead of just reading about them. Our **[teaching dashboards](https://dashboards.gabors-data-analysis.com/){:target="_blank" rel="noopener"}** cover eight topics across the book — distributions, generalization, measurement error, regression, confounders, common support, panel models, and the hotels case study.
 
 <div class="gda-cards">
   <div class="gda-card gda-card--teal">
-    <h3 class="gda-card__title"><a href="https://gabors-data-analysis.shinyapps.io/hotels-europe/" target="_blank" rel="noopener">Gabors Interactive Data Analysis</a></h3>
-    <p class="gda-card__text">A Shiny app to explore the hotels-europe case study data interactively (beta).</p>
+    <h3 class="gda-card__title"><a href="https://dashboards.gabors-data-analysis.com/" target="_blank" rel="noopener">All dashboards ★</a></h3>
+    <p class="gda-card__text">One home for every interactive dashboard — eight and counting, no install needed.</p>
     <ul class="gda-card__links">
-      <li><a href="https://gabors-data-analysis.shinyapps.io/hotels-europe/" target="_blank" rel="noopener">Open the app</a></li>
-      <li><a href="https://github.com/gabors-data-analysis/da_interactive" target="_blank" rel="noopener">Source on GitHub</a></li>
+      <li><a href="https://dashboards.gabors-data-analysis.com/" target="_blank" rel="noopener">dashboards.gabors-data-analysis.com →</a></li>
     </ul>
   </div>
-  <div class="gda-card gda-card--yellow">
-    <h3 class="gda-card__title"><a href="https://gabors-data-analysis.shinyapps.io/did-simulation/" target="_blank" rel="noopener">Difference-in-differences simulator</a></h3>
-    <p class="gda-card__text">Interactive panel data and event study simulation — see how DiD estimates behave under different setups (chapters 22–24).</p>
+  <div class="gda-card gda-card--blue">
+    <h3 class="gda-card__title"><a href="https://dashboards.gabors-data-analysis.com/app/hotels" target="_blank" rel="noopener">Hotels Europe</a></h3>
+    <p class="gda-card__text">Explore the flagship case study data — exploratory analysis, regression, and messy-data handling on real hotel prices.</p>
     <ul class="gda-card__links">
-      <li><a href="https://gabors-data-analysis.shinyapps.io/did-simulation/" target="_blank" rel="noopener">Open the app</a></li>
-      <li><a href="https://github.com/gabors-data-analysis/did-simulation" target="_blank" rel="noopener">Source on GitHub</a></li>
+      <li><a href="https://dashboards.gabors-data-analysis.com/app/hotels" target="_blank" rel="noopener">Open the dashboard →</a></li>
     </ul>
   </div>
+  <div class="gda-card gda-card--purple">
+    <h3 class="gda-card__title"><a href="https://dashboards.gabors-data-analysis.com/app/ch10_multireg" target="_blank" rel="noopener">Multiple linear regression</a></h3>
+    <p class="gda-card__text">Build and interpret multiple regression models on earnings data, one coefficient at a time (chapter 10).</p>
+    <ul class="gda-card__links">
+      <li><a href="https://dashboards.gabors-data-analysis.com/app/ch10_multireg" target="_blank" rel="noopener">Open the dashboard →</a></li>
+    </ul>
+  </div>
+</div>
+
+## More teaching tools
+
+Standalone apps and datasets we built for the classroom.
+
+<div class="gda-cards">
   <div class="gda-card gda-card--green">
     <h3 class="gda-card__title"><a href="https://github.com/gabors-data-analysis/fwl-simulation" target="_blank" rel="noopener">Frisch–Waugh–Lovell explorer</a></h3>
     <p class="gda-card__text">A Shiny dashboard illustrating the FWL theorem, with a growth-regression example (Mankiw–Romer–Weil) and simulated data (chapter 10).</p>

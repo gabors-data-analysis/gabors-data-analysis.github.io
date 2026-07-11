@@ -38,7 +38,8 @@ Key facts:
 - [Student hub](https://gabors-data-analysis.com/students/): quick links, setup, practice
 - [Getting started](https://gabors-data-analysis.com/getting-started)
 - [Coding courses](https://gabors-data-analysis.com/code-courses/): free open courses for R, Python, and Stata from zero
-- Setup guides: [R](https://gabors-data-analysis.com/howto-r/), [Python](https://gabors-data-analysis.com/howto-python/), [Stata](https://gabors-data-analysis.com/howto-stata/)
+- [Interactive dashboards](https://dashboards.gabors-data-analysis.com/): eight browser-based teaching dashboards (distributions, regression, causal inference, the hotels case study, and more)
+- Setup: run in the cloud with [GitHub Codespaces](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-codespaces.md) (no install; best for starters), or set up locally — [R (renv)](https://gabors-data-analysis.com/howto-r/), [Python (uv)](https://gabors-data-analysis.com/howto-python/), [Stata](https://gabors-data-analysis.com/howto-stata/)
 
 ## Data analysis with AI
 
@@ -51,8 +52,7 @@ Key facts:
 
 - [Ecosystem overview](https://gabors-data-analysis.com/ecosystem/): all open projects around the textbook
 - [GitHub organization](https://github.com/gabors-data-analysis): case study code, coding courses (R, Python, Stata), simulations
-- [Interactive hotels-europe explorer](https://gabors-data-analysis.shinyapps.io/hotels-europe/): Shiny app on case study data
-- [Difference-in-differences simulator](https://gabors-data-analysis.shinyapps.io/did-simulation/): interactive panel/event-study teaching app
+- [Interactive dashboards](https://dashboards.gabors-data-analysis.com/): eight teaching dashboards, e.g. the [hotels-europe case study](https://dashboards.gabors-data-analysis.com/app/hotels) and [multiple linear regression](https://dashboards.gabors-data-analysis.com/app/ch10_multireg)
 
 ## Optional
 

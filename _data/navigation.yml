@@ -46,6 +46,8 @@ main:
         url: /data-and-code/
       - title: "Open-source ecosystem"
         url: /ecosystem/
+      - title: "Interactive dashboards"
+        url: https://dashboards.gabors-data-analysis.com/
       - title: "Dataset summaries"
         url: /datasets/
       - title: "Setup: R"
@@ -80,6 +82,8 @@ main:
         url: /getting-started
       - title: "Coding courses"
         url: /code-courses/
+      - title: "Interactive dashboards"
+        url: https://dashboards.gabors-data-analysis.com/
       - title: "Dictionary (EN–HU)"
         url: /dictionary
 
@@ -122,6 +126,8 @@ sidebar:
         url: /data-and-code/
       - title: "Open-source ecosystem"
         url: /ecosystem/
+      - title: "Interactive dashboards"
+        url: https://dashboards.gabors-data-analysis.com/
       - title: "Dataset summaries"
         url: /datasets/
       - title: "Setup guides (R, Python, Stata)"

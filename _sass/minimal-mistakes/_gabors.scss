@@ -518,6 +518,27 @@ a.gda-card:visited {
   font-style: italic;
 }
 
+/* featured full-width endorsement */
+.gda-quote--featured {
+  margin: 1.4rem 0;
+  padding: 1.8rem 1.8rem 1.5rem;
+  border-left: 5px solid $gda-green;
+
+  &:before {
+    font-size: 4em;
+    color: rgba(63, 179, 105, 0.28);
+  }
+
+  .gda-quote__text {
+    font-size: 1.18rem;
+    line-height: 1.5;
+  }
+
+  .gda-quote__who {
+    font-size: 0.9rem;
+  }
+}
+
 .gda-quote__who {
   margin: 0;
   font-size: 0.8rem;

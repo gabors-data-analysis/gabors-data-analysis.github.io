@@ -1,54 +1,20 @@
 ---
 permalink: /howto-python/
-title: "How to set up your computer for Python"
+title: "Set up Python for the case studies"
+description: "How to set up Python for the Data Analysis case studies using uv — or skip the install and run in the cloud with GitHub Codespaces."
 author_profile: false
 redirect_from:
   - "/nmpp/"
   - "/nmpp.html"
 ---
 
-## Get Python
+*Part of [Data & Code]({{ "/data-and-code/" | relative_url }}).*
 
-1. Install latest version of Python from the [official website](https://www.python.org/downloads/){:target="_blank"}. **We used [version 3.8](https://www.python.org/downloads/release/python-3811/){:target="_blank"}**
+The case study code runs on a reproducible Python environment managed with [**uv**](https://docs.astral.sh/uv/){:target="_blank" rel="noopener"}. You don't install Python separately — uv installs the correct version and the exact packages from `uv.lock` in one step.
 
-2. We suggest to use [Jupyter Notebook](https://jupyter-notebook.readthedocs.io/en/stable/){:target="_blank"} to edit and run Python code. You can install it via `pip` by running `pip3 install jupyter` in your terminal/PowerShell. 
+## Two ways to start
 
+- **No install (recommended for starters):** run everything in the browser with [**GitHub Codespaces**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-codespaces.md){:target="_blank" rel="noopener"} — pre-configured, nothing to set up locally.
+- **Local setup:** follow the [**Python setup guide (uv)**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-python.md){:target="_blank" rel="noopener"} — install uv, VS Code, and Git, then create the environment.
 
-## How to run case studies in Python
-
-1. **Install `Pipenv`**
-
-    We use [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/index.html){:target="_blank"} for Python dependency management. First, install it via `pip` by running the following code in your terminal/PowerShell:
-
-    ```
-    pip3 install pipenv
-    ```
-
-2. **Create virtual environment and install required packages**
-
-    Go to the `da_case_studies` folder to create a virtual environment and install packages by running the following code in your terminal/PowerShell:
-
-    ```
-    pipenv sync
-    ```
-
-    This installs the required Python version and packages stored in the `Pipfile.lock`.
-
-**NOTE:** For Windows users, the above code might result in an error, because the `pipenv` terminal shortcut sometimes does not install properly. In this case, run ```python3 -m pipenv sync```.
-{: .notice--success}
-
-**NOTE:** Python environment was testet thoroughly only on Mac OS. Windows users might experience bugs, therefore we prepared `requirements.txt` for all package==version we used in the notebooks and `requirements_pipenv.txt` for all packages and dependencies used in the virtual environment.
-{: .notice--success}
-
-3. **Run Jupyter Notebook**
-
-    To start a Jupyter Notebook in this virtual environment, go to the `da_case_studies` folder and run the following code in your terminal/PowerShell:
-
-    ```
-    pipenv run jupyter notebook
-    ```
-
-    The jupyter environment should be opened on your default browser. You are good to go!
-
-**NOTE:** For Windows users, the above code might result in an error, because the `pipenv` terminal shortcut sometimes does not install properly. In this case, run ```python3 -m pipenv run jupyter notebook```.
-{: .notice--success}
+The setup guides are maintained alongside the code, so they always match the current version. See [Data & Code]({{ '/data-and-code/' | relative_url }}) for the datasets and folder setup.

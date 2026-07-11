@@ -1,37 +1,13 @@
 ---
 permalink: /howto-python-docker/
-title: "How to set up your computer for Python"
+title: "Run the case studies in the cloud"
+description: "Run the Data Analysis case studies with no local install using GitHub Codespaces, a pre-configured container-based environment."
 author_profile: false
-redirect_from:
-  - "/nmpp/"
-  - "/nmpp.html"
 ---
 
-## How to run case studies in Python
+*Part of [Data & Code]({{ "/data-and-code/" | relative_url }}).*
 
+Looking for a container-based, no-install way to run the case studies? The recommended option is now [**GitHub Codespaces**]({{ '/howto-python/' | relative_url }}) — a pre-configured environment (built on the repository's dev container) that opens in your browser with one click, for both R and Python.
 
-#### Without Docker:
-Install requirements.txt from ch00-tech-prep folder, and use jupyter-notebook to run notebooks!
-
-#### Recommended steps with Docker:
-
- 1.  Please install [Docker](https://docs.docker.com/get-docker/) on your computer. 
- 2. Create a project folder with any name and any location!
- 
-	 - Clone this repository into the project folder or download and extract the da_case_studies folder.
-	 - Download the data folder into the project folder.
-	 - Make sure you have da_case_studies and da_data_repo in your project folder.
-		 - If you use different names please update the Dockerfile!
- 3.  Open terminal (Linux & MacOS) or PowerShell/Docker Terminal (Windows) and navigate to you project folder.
- 4. Use the following code to build docker image (after that use run command only):
-	```
-	docker build -t "da_jupyter" -f da_case_studies/Dockerfile .
-	```
- 5. Start this image with the following:
- ```
-docker run --rm -p 443:443 da_jupyter
-```
- 6. Use Ctrl+click (Cmd+click) on jupyter link in your terminal or just copy and paste into your browser
- 7. ENJOY!
- 
-
+- [**Codespaces setup guide**](https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-codespaces.md){:target="_blank" rel="noopener"}
+- Prefer a local install? See the [Python (uv) setup]({{ '/howto-python/' | relative_url }}).

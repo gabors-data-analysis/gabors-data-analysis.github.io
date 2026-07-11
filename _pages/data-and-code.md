@@ -62,31 +62,31 @@ The textbook is a complete, reproducible package of **text, code, and data** —
 
 ## Set up your machine
 
-Pick your language and follow the setup guide — install the software, prepare folders, connect code with data.
+The fastest way to start is in the cloud — no install needed. Or set up locally in your language of choice; each guide installs the software, prepares folders, and connects code with data.
 
 <div class="gda-cards">
-  <div class="gda-card gda-card--blue">
-    <h3 class="gda-card__title"><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-r.md" target="_blank" rel="noopener">R setup</a></h3>
-    <p class="gda-card__text">R + RStudio, packages, and project setup.</p>
-  </div>
-  <div class="gda-card gda-card--green">
-    <h3 class="gda-card__title"><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-python.md" target="_blank" rel="noopener">Python setup</a></h3>
-    <p class="gda-card__text">Full environment (Anaconda, VS Code, Git) or a minimal Python + Jupyter install to start fast.</p>
+  <div class="gda-card gda-card--teal">
+    <h3 class="gda-card__title"><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-codespaces.md" target="_blank" rel="noopener">Run in the cloud — GitHub Codespaces ★</a></h3>
+    <p class="gda-card__text"><strong>Best for starters.</strong> One click opens a ready-made environment in your browser — pre-configured for both R and Python, nothing to install, no version headaches. You get a full VS&nbsp;Code workspace on GitHub's servers; just open a case study and run it. Ideal for a first course or trying things out fast.</p>
     <ul class="gda-card__links">
-      <li><a href="{{ '/howto-python-docker/' | relative_url }}">Docker option →</a></li>
+      <li><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-codespaces.md" target="_blank" rel="noopener">Codespaces setup guide →</a></li>
     </ul>
   </div>
-  <div class="gda-card gda-card--purple">
-    <h3 class="gda-card__title"><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-stata.md" target="_blank" rel="noopener">Stata setup</a></h3>
-    <p class="gda-card__text">Folder setup and the few edits needed to run the do-files.</p>
+  <div class="gda-card gda-card--blue">
+    <h3 class="gda-card__title"><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-r.md" target="_blank" rel="noopener">R (local)</a></h3>
+    <p class="gda-card__text">R + RStudio, with <code>renv</code> restoring the exact package versions from the lockfile.</p>
   </div>
-  <div class="gda-card gda-card--yellow">
-    <h3 class="gda-card__title"><a href="{{ '/languages/' | relative_url }}">Which language?</a></h3>
-    <p class="gda-card__text">The book is language-neutral — R, Python, and Stata all work. Not sure which to pick?</p>
+  <div class="gda-card gda-card--green">
+    <h3 class="gda-card__title"><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-python.md" target="_blank" rel="noopener">Python (local)</a></h3>
+    <p class="gda-card__text">Uses <a href="https://docs.astral.sh/uv/" target="_blank" rel="noopener">uv</a>: it installs the right Python and the exact packages from <code>uv.lock</code> in one step. Plus VS&nbsp;Code and Git.</p>
+  </div>
+  <div class="gda-card gda-card--purple">
+    <h3 class="gda-card__title"><a href="https://github.com/gabors-data-analysis/da_case_studies/blob/master/ch00-tech-prep/da-setup-stata.md" target="_blank" rel="noopener">Stata (local)</a></h3>
+    <p class="gda-card__text">Folder setup and the few edits needed to run the do-files.</p>
   </div>
 </div>
 
-<p class="gda-section__intro" markdown="1">Results in the book come from R; Stata and Python match closely, with small differences from plotting defaults, randomization, and formula defaults. New to coding? See [advice on learning to code]({{ '/code-learn/' | relative_url }}).</p>
+<p class="gda-section__intro" markdown="1">The book is language-neutral — R, Python, and Stata all work; [compare the languages]({{ '/languages/' | relative_url }}) or read [advice on learning to code]({{ '/code-learn/' | relative_url }}). Results in the book come from R; Stata and Python match closely, with small differences from plotting defaults, randomization, and formula defaults.</p>
 
 ---
 
