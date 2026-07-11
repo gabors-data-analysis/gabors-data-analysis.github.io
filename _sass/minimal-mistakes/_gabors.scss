@@ -328,6 +328,15 @@ body.gda-landing .page {
   }
 }
 
+.gda-btn--yellow {
+  background: $gda-yellow;
+  color: $gda-navy-dark !important;
+
+  &:hover {
+    background: mix(#000, $gda-yellow, 10%);
+  }
+}
+
 .gda-btn--ghost {
   background: transparent;
   color: $gda-navy !important;

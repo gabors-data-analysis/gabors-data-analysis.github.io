@@ -73,9 +73,6 @@ main:
       - title: "Instructor feedback"
         url: /instructor-feedback/
 
-  - title: "Errata"
-    url: /errata/
-
 # Grouped sidebar navigation, shown on content pages for site-wide wayfinding.
 sidebar:
   - title: The Book

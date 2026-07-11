@@ -28,6 +28,7 @@ redirect_from:
     <div class="gda-cta-row">
       <a href="{{ '/slides/' | relative_url }}" class="gda-btn gda-btn--primary">Free slides — all 24 chapters</a>
       <a href="{{ '/order' | relative_url }}" class="gda-btn gda-btn--green">Get the book</a>
+      <a href="{{ '/errata/' | relative_url }}" class="gda-btn gda-btn--yellow">Errata</a>
       <a href="{{ '/ecosystem/' | relative_url }}" class="gda-btn gda-btn--teal">Open-source ecosystem</a>
       <a href="{{ '/instructors/' | relative_url }}" class="gda-btn gda-btn--ghost">For instructors</a>
       <a href="{{ '/students/' | relative_url }}" class="gda-btn gda-btn--ghost">For students</a>
