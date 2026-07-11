@@ -159,22 +159,117 @@ redirect_from:
 
 <section class="gda-section">
   <h2 class="gda-section__title">Endorsements</h2>
-  <div class="gda-quote gda-quote--featured">
-    <p class="gda-quote__text">This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible. Like a good confidence interval, the Gabors have got you almost completely covered!</p>
-    <p class="gda-quote__who">Joshua Angrist <span>Professor of Economics, MIT · Nobel laureate</span></p>
-  </div>
-  <div class="gda-quotes">
-    <div class="gda-quote">
-      <p class="gda-quote__text">A beautiful integration of Econometrics and Data Science, exactly what is needed to equip the next generation of students.</p>
-      <p class="gda-quote__who">David Card <span>UC Berkeley · Nobel laureate</span></p>
+  <div class="gda-carousel" data-autoplay="6500" role="group" aria-roledescription="carousel" aria-label="Endorsements" tabindex="0">
+    <button class="gda-carousel__nav gda-carousel__nav--prev" type="button" aria-label="Previous endorsement">&lsaquo;</button>
+    <div class="gda-carousel__viewport">
+      <ul class="gda-carousel__track">
+        <li class="gda-carousel__slide">
+          <p class="gda-carousel__text">This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible. Like a good confidence interval, the Gabors have got you almost completely covered!</p>
+          <p class="gda-carousel__who">Joshua Angrist <span>Professor of Economics, MIT · Nobel laureate</span></p>
+        </li>
+        <li class="gda-carousel__slide">
+          <p class="gda-carousel__text">A beautiful integration of Econometrics and Data Science that provides a direct path from data collection and exploratory analysis to conventional regression modeling, then on to prediction and causal modeling. Exactly what is needed to equip the next generation of students.</p>
+          <p class="gda-carousel__who">David Card <span>UC Berkeley · Nobel laureate</span></p>
+        </li>
+        <li class="gda-carousel__slide">
+          <p class="gda-carousel__text">This is an excellent book for students learning the art of modern data analytics. It combines the latest techniques with practical applications… For students looking to learn data analysis from one textbook this is a great way to proceed.</p>
+          <p class="gda-carousel__who">Nicholas Bloom <span>Professor, Stanford Economics &amp; Graduate School of Business</span></p>
+        </li>
+        <li class="gda-carousel__slide">
+          <p class="gda-carousel__text">I know of few books about data analysis and visualization that are as comprehensive, deep, practical, and current as this one; and I know of almost none that are as fun to read.</p>
+          <p class="gda-carousel__who">Alberto Cairo <span>Professor, University of Miami, School of Journalism</span></p>
+        </li>
+        <li class="gda-carousel__slide">
+          <p class="gda-carousel__text">A rigorous textbook grounded in real-world learning, at once accessible and engaging to novice scholars and advanced practitioners alike. I have every confidence it will be valued by future generations.</p>
+          <p class="gda-carousel__who">Kerwin K. Charles <span>Dean, Yale School of Management</span></p>
+        </li>
+        <li class="gda-carousel__slide">
+          <p class="gda-carousel__text">This is not an econometrics textbook, but a data analysis textbook. And a highly unusual one — written in plain English, based on simplified notation and full of case studies. An excellent starting point for future data analysts.</p>
+          <p class="gda-carousel__who">Beata Javorcik <span>Professor, University of Oxford; Chief Economist, EBRD</span></p>
+        </li>
+        <li class="gda-carousel__slide">
+          <p class="gda-carousel__text">This is a fantastic book to have. Strong data skills are critical for modern business and economic research, and this text provides a thorough and practical guide to acquiring them. Highly recommended.</p>
+          <p class="gda-carousel__who">John Van Reenen <span>Professor, MIT Sloan &amp; Department of Economics</span></p>
+        </li>
+        <li class="gda-carousel__slide">
+          <p class="gda-carousel__text">This sophisticatedly simple book is ideal for undergraduate or Master's level Data Analytics courses with a broad audience. Using well-chosen case studies, they illustrate the techniques and discuss them patiently and thoroughly.</p>
+          <p class="gda-carousel__who">Carter Hill <span>Professor of Economics, Louisiana State University</span></p>
+        </li>
+        <li class="gda-carousel__slide">
+          <p class="gda-carousel__text">In addition to the comprehensive treatment of modern econometric techniques, the book also covers the less glamorous but crucial aspects of procuring and cleaning data, and drawing useful inferences from less-than-perfect datasets.</p>
+          <p class="gda-carousel__who">Laszlo Varro <span>Chief Economist, International Energy Agency</span></p>
+        </li>
+        <li class="gda-carousel__slide">
+          <p class="gda-carousel__text">Must purchase for anyone doing applied work… perfect for data scientists of all stripes.</p>
+          <p class="gda-carousel__who">Scott Cunningham <span>Author of Causal Inference: The Mixtape</span></p>
+        </li>
+      </ul>
     </div>
-    <div class="gda-quote">
-      <p class="gda-quote__text">Must purchase for anyone doing applied work… perfect for data scientists of all stripes.</p>
-      <p class="gda-quote__who">Scott Cunningham <span>Author of Causal Inference: The Mixtape</span></p>
-    </div>
+    <button class="gda-carousel__nav gda-carousel__nav--next" type="button" aria-label="Next endorsement">&rsaquo;</button>
+    <div class="gda-carousel__dots" role="tablist" aria-label="Choose endorsement"></div>
   </div>
   <p><em><a href="{{ '/endorsements' | relative_url }}">More endorsements →</a></em> · <em><a href="{{ '/instructor-feedback' | relative_url }}">Instructor feedback →</a></em></p>
 </section>
+
+<script>
+(function () {
+  var root = document.querySelector('.gda-carousel');
+  if (!root) return;
+  var track = root.querySelector('.gda-carousel__track');
+  var slides = Array.prototype.slice.call(root.querySelectorAll('.gda-carousel__slide'));
+  var prev = root.querySelector('.gda-carousel__nav--prev');
+  var next = root.querySelector('.gda-carousel__nav--next');
+  var dotsWrap = root.querySelector('.gda-carousel__dots');
+  var i = 0, n = slides.length, timer = null;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var interval = parseInt(root.getAttribute('data-autoplay'), 10) || 6500;
+
+  var dots = slides.map(function (_, idx) {
+    var b = document.createElement('button');
+    b.className = 'gda-carousel__dot';
+    b.type = 'button';
+    b.setAttribute('aria-label', 'Endorsement ' + (idx + 1) + ' of ' + n);
+    b.addEventListener('click', function () { go(idx); restart(); });
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  function render() {
+    track.style.transform = 'translateX(' + (-i * 100) + '%)';
+    slides.forEach(function (s, idx) { s.setAttribute('aria-hidden', idx === i ? 'false' : 'true'); });
+    dots.forEach(function (d, idx) {
+      if (idx === i) { d.setAttribute('aria-current', 'true'); } else { d.removeAttribute('aria-current'); }
+    });
+  }
+  function go(idx) { i = (idx + n) % n; render(); }
+  function step() { go(i + 1); }
+  function start() { if (reduce || n < 2) return; stop(); timer = setInterval(step, interval); }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  function restart() { stop(); start(); }
+
+  next.addEventListener('click', function () { go(i + 1); restart(); });
+  prev.addEventListener('click', function () { go(i - 1); restart(); });
+  root.addEventListener('mouseenter', stop);
+  root.addEventListener('mouseleave', start);
+  root.addEventListener('focusin', stop);
+  root.addEventListener('focusout', start);
+  root.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { go(i + 1); restart(); }
+    else if (e.key === 'ArrowLeft') { go(i - 1); restart(); }
+  });
+  var x0 = null;
+  root.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  root.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) { go(dx < 0 ? i + 1 : i - 1); restart(); }
+    x0 = null;
+  }, { passive: true });
+
+  render();
+  start();
+})();
+</script>
 
 <section class="gda-section">
   <h2 class="gda-section__title">Adopted by 90+ programmes worldwide</h2>
