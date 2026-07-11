@@ -38,7 +38,7 @@ Key sections:
 
 ## Programmes using the textbook
 
-The textbook has been adopted by more than **90 programmes worldwide** in Economics, Finance, Analytics, Business, and Public Policy, including:  
+The textbook has been adopted in more than **200 courses in 40 countries** — undergraduate and Master's programmes in Economics, Finance, Analytics, Business, and Public Policy, including:  
 
 - **USA/Canada:** Columbia, University of Texas, University of Michigan, Penn State, Toronto, McGill  
 - **UK:** UCL, LSE, Oxford, Cambridge Judge, City, Essex  

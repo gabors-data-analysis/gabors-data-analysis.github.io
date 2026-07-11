@@ -43,7 +43,8 @@ redirect_from:
   <div><span class="gda-stat__num">47</span><span class="gda-stat__label">Case studies</span></div>
   <div><span class="gda-stat__num">360+</span><span class="gda-stat__label">Practice questions</span></div>
   <div><span class="gda-stat__num">120</span><span class="gda-stat__label">Data exercises</span></div>
-  <div><span class="gda-stat__num">90+</span><span class="gda-stat__label">Programmes worldwide</span></div>
+  <div><span class="gda-stat__num">200+</span><span class="gda-stat__label">Courses worldwide</span></div>
+  <div><span class="gda-stat__num">40</span><span class="gda-stat__label">Countries</span></div>
   <div><span class="gda-stat__num">3</span><span class="gda-stat__label">Languages: R · Python · Stata</span></div>
 </div>
 
@@ -52,7 +53,7 @@ redirect_from:
   <div class="gda-cards">
     <div class="gda-card gda-card--blue">
       <h3 class="gda-card__title"><a href="{{ '/instructors/' | relative_url }}">Instructors</a></h3>
-      <p class="gda-card__text">Adopt and teach with the book: slides for every chapter, teaching guide, solutions, and adoption examples.</p>
+      <p class="gda-card__text">Adopt and teach with the book in undergraduate or Master's programmes: slides for every chapter, course designs, solutions, and adoption examples.</p>
       <ul class="gda-card__links">
         <li><a href="{{ '/slides/' | relative_url }}">Slides for all 24 chapters</a></li>
         <li><a href="{{ '/teaching-guide/' | relative_url }}">Teaching guide</a></li>
@@ -272,7 +273,7 @@ redirect_from:
 </script>
 
 <section class="gda-section">
-  <h2 class="gda-section__title">Adopted by 90+ programmes worldwide</h2>
+  <h2 class="gda-section__title">Adopted in 200+ courses in 40 countries</h2>
   <p class="gda-section__intro">In Economics, Finance, Analytics, Business, and Public Policy — from Columbia and Michigan to Bocconi, CEU, and beyond. <em><a href="{{ '/courses-using' | relative_url }}">Full list of courses →</a></em></p>
 
   <iframe src="https://www.google.com/maps/d/embed?mid=1pC2_o2u9oILlA6nLYkXm34UpVSKoxQQP&ehbc=2E312F"

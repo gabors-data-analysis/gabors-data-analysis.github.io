@@ -5,7 +5,7 @@
 Key facts:
 - 24 chapters in four parts: Data Exploration (ch 1–6), Regression Analysis (ch 7–12), Prediction (ch 13–18), Causal Analysis (ch 19–24)
 - 47 case studies, 360+ practice questions, 120 data exercises
-- Adopted by 90+ university programmes worldwide
+- Adopted in 200+ university courses in 40 countries (undergraduate and Master's level)
 - All data and code are free and open; the book itself is a commercial publication
 
 ## The book
