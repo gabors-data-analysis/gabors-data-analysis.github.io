@@ -11,6 +11,10 @@
 - Allow per-post or per-collection `date_format` values. (#5477)
 - Replace inline style `padding-left` with `padding-inline-start` for RTL support (#5480)
 
+### Bug Fixes
+
+- Fix animations to pass Lighthouse. (#5494)
+
 ### Documentation & Maintenance
 
 - Update /docs/javascript/ to reflect changes in `0b8b523`

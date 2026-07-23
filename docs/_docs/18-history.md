@@ -5,7 +5,7 @@ permalink: "/docs/history/"
 excerpt: Change log of enhancements and bug fixes made to the theme.
 sidebar:
   nav: docs
-last_modified_at: '2026-06-28T19:52:07+08:00'
+last_modified_at: '2026-07-23T12:17:42+08:00'
 toc: false
 ---
 
@@ -25,6 +25,10 @@ toc: false
 - Silence "Sass @import rules are deprecated" warning
 - Allow per-post or per-collection `date_format` values. [#5477](https://github.com/mmistakes/minimal-mistakes/issues/5477)
 - Replace inline style `padding-left` with `padding-inline-start` for RTL support [#5480](https://github.com/mmistakes/minimal-mistakes/issues/5480)
+
+### Bug Fixes
+
+- Fix animations to pass Lighthouse. [#5494](https://github.com/mmistakes/minimal-mistakes/issues/5494)
 
 ### Documentation & Maintenance
 
