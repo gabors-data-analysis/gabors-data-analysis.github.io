@@ -272,7 +272,7 @@
                 {
                   "type": "list",
                   "ordered": true,
-                  "size": "normal",
+                  "size": "small",
                   "items": [
                     {
                       "content": "Origins of data",
@@ -352,7 +352,7 @@
                 {
                   "type": "list",
                   "ordered": true,
-                  "size": "normal",
+                  "size": "small",
                   "items": [
                     {
                       "content": "Simple regression",
@@ -432,7 +432,7 @@
                 {
                   "type": "list",
                   "ordered": true,
-                  "size": "normal",
+                  "size": "small",
                   "items": [
                     {
                       "content": "A framework for prediction",
@@ -512,7 +512,7 @@
                 {
                   "type": "list",
                   "ordered": true,
-                  "size": "normal",
+                  "size": "small",
                   "items": [
                     {
                       "content": "A framework for causal analysis",
