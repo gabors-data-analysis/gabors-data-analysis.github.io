@@ -67,9 +67,9 @@
               "blocks": [
                 {
                   "type": "image",
-                  "src": "https://gabors-data-analysis.com/images/cover-full_hd.png",
+                  "src": "cover-front.jpg",
                   "caption": "",
-                  "width": "80%",
+                  "width": "100%",
                   "fit": "contain",
                   "focus": "center",
                   "step": 0
@@ -107,7 +107,7 @@
               "number": 1
             },
             {
-              "content": "Collect data, or check whether the data we have can answer it",
+              "content": "Collect data, or check if existing data can answer it",
               "number": 2
             },
             {
