@@ -272,7 +272,7 @@
                 {
                   "type": "list",
                   "ordered": true,
-                  "size": "small",
+                  "size": "normal",
                   "items": [
                     {
                       "content": "Origins of data",
@@ -352,7 +352,7 @@
                 {
                   "type": "list",
                   "ordered": true,
-                  "size": "small",
+                  "size": "normal",
                   "items": [
                     {
                       "content": "Simple regression",
@@ -432,7 +432,7 @@
                 {
                   "type": "list",
                   "ordered": true,
-                  "size": "small",
+                  "size": "normal",
                   "items": [
                     {
                       "content": "A framework for prediction",
@@ -512,7 +512,7 @@
                 {
                   "type": "list",
                   "ordered": true,
-                  "size": "small",
+                  "size": "normal",
                   "items": [
                     {
                       "content": "A framework for causal analysis",
@@ -575,6 +575,11 @@
       "steps": 0,
       "blocks": [
         {
+          "type": "title",
+          "content": "What colleagues say about the approach",
+          "step": 0
+        },
+        {
           "type": "columns",
           "widths": [
             1,
@@ -585,9 +590,15 @@
             {
               "blocks": [
                 {
-                  "type": "quote",
-                  "content": "A beautiful integration of Econometrics and Data Science that provides a direct path from data collection and exploratory analysis to conventional regression modeling, then on to prediction and causal modeling.",
-                  "source": "David Card, UC Berkeley",
+                  "type": "text",
+                  "size": "normal",
+                  "content": "*“A beautiful integration of Econometrics and Data Science that provides a direct path from data collection and exploratory analysis to conventional regression modeling, then on to prediction and causal modeling.”*",
+                  "step": 0
+                },
+                {
+                  "type": "text",
+                  "size": "small",
+                  "content": "David Card, UC Berkeley",
                   "step": 0
                 }
               ]
@@ -595,9 +606,15 @@
             {
               "blocks": [
                 {
-                  "type": "quote",
-                  "content": "I know of few books about data analysis and visualization that are as comprehensive, deep, practical, and current as this one; and I know of almost none that are as fun to read.",
-                  "source": "Alberto Cairo, University of Miami",
+                  "type": "text",
+                  "size": "normal",
+                  "content": "*“I know of few books about data analysis and visualization that are as comprehensive, deep, practical, and current as this one; and I know of almost none that are as fun to read.”*",
+                  "step": 0
+                },
+                {
+                  "type": "text",
+                  "size": "small",
+                  "content": "Alberto Cairo, University of Miami",
                   "step": 0
                 }
               ]
@@ -861,6 +878,11 @@
       "steps": 0,
       "blocks": [
         {
+          "type": "title",
+          "content": "What colleagues say about the writing",
+          "step": 0
+        },
+        {
           "type": "columns",
           "widths": [
             1,
@@ -871,9 +893,15 @@
             {
               "blocks": [
                 {
-                  "type": "quote",
-                  "content": "The authors discuss the key aspects of examining data, regression analysis, prediction, Lasso, and random forests and more using elegant prose instead of algebra.",
-                  "source": "Carter Hill, Louisiana State University",
+                  "type": "text",
+                  "size": "normal",
+                  "content": "*“The authors discuss the key aspects of examining data, regression analysis, prediction, Lasso, and random forests and more using elegant prose instead of algebra.”*",
+                  "step": 0
+                },
+                {
+                  "type": "text",
+                  "size": "small",
+                  "content": "Carter Hill, Louisiana State University",
                   "step": 0
                 }
               ]
@@ -881,9 +909,15 @@
             {
               "blocks": [
                 {
-                  "type": "quote",
-                  "content": "… the book also covers the less glamorous but crucial aspects of procuring and cleaning data, and drawing useful inferences from less-than-perfect datasets.",
-                  "source": "Laszlo Varro, Chief Economist, International Energy Agency",
+                  "type": "text",
+                  "size": "normal",
+                  "content": "*“… the book also covers the less glamorous but crucial aspects of procuring and cleaning data, and drawing useful inferences from less-than-perfect datasets.”*",
+                  "step": 0
+                },
+                {
+                  "type": "text",
+                  "size": "small",
+                  "content": "Laszlo Varro, Chief Economist, International Energy Agency",
                   "step": 0
                 }
               ]
