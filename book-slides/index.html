@@ -5184,6 +5184,61 @@ body.edit-mode #presentation-view { visibility: hidden; pointer-events: none; }
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 }
 
+/* ===== gabors-data-analysis.com patch: Viridis theme + per-slide colours for DA-Textbook ===== */
+.theme-viridis {
+  --v0: #440154; --v1: #482878; --v2: #3E4A89; --v3: #31688E; --v4: #26828E;
+  --v5: #1F9E89; --v6: #35B779; --v7: #6DCD59; --v8: #B4DE2C; --v9: #FDE725;
+  --viridis: linear-gradient(90deg, #440154, #3E4A89, #26828E, #1F9E89, #35B779, #B4DE2C, #FDE725);
+  --bg: #fbfaf7; --text: #1e1b2e; --accent: var(--v3); --accent-2: #5b6475; --line: #dcdfe6;
+  --body-font: Figtree, Lato, Arial, sans-serif; --display-font: Outfit, Montserrat, Arial, sans-serif; --sans-font: Figtree, Arial, sans-serif;
+  --title-weight: 700; --title-color: var(--v0); --title-border: .26cqw solid var(--v6); --title-letter-spacing: -.01em;
+  --title-pad-bottom: .5cqw; --title-margin-bottom: 1cqw; --flow-width: 84%;
+  --bold-color: var(--v2); --italic-color: var(--v4);
+  --col-gap: 1.6cqw; --col-pad: .9cqw; --col-bg: #ffffff; --col-border: .05cqw solid #e2dfeb; --col-radius: .6cqw;
+  --table-header-bg: var(--v3); --table-header-color: #fff; --table-row-alt: #eef6f4; --table-border: .05cqw solid #dfe3ea;
+  --progress-height: .45cqw; --progress-bg: var(--viridis);
+  --footer-color: #7a7f8c;
+  /* viridis ribbon along the top edge */
+  --stage-decoration: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g'%3E%3Cstop offset='0' stop-color='%23440154'/%3E%3Cstop offset='.17' stop-color='%233E4A89'/%3E%3Cstop offset='.33' stop-color='%2326828E'/%3E%3Cstop offset='.5' stop-color='%231F9E89'/%3E%3Cstop offset='.67' stop-color='%2335B779'/%3E%3Cstop offset='.83' stop-color='%23B4DE2C'/%3E%3Cstop offset='1' stop-color='%23FDE725'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1600' height='12' fill='url(%23g)'/%3E%3C/svg%3E");
+}
+.theme-viridis li::marker { color: var(--v5); font-weight: 700; }
+.theme-viridis .block-quote { border-left-width: .45cqw; border-left-color: var(--v6); }
+
+/* Title slide and full-slide quotes: dark viridis backgrounds */
+.theme-viridis[data-slide-id="title"] {
+  --bg: var(--v0); --text: #f3effa; --title-color: #ffffff; --title-border: .3cqw solid var(--v9);
+  --accent-2: #c9bfe0; --footer-color: #b9add6; --col-bg: transparent; --col-border: 0 solid transparent; --italic-color: var(--v9);
+}
+.theme-viridis[data-slide-id="quote-angrist"] { --bg: var(--v2); --text: #fff; --accent: var(--v9); --accent-2: #d7e8f0; --footer-color: #b8c6e0; }
+.theme-viridis[data-slide-id="endorsement"]   { --bg: var(--v4); --text: #fff; --accent: var(--v9); --accent-2: #e2f4f1; --footer-color: #c4e6e2; }
+.theme-viridis[data-slide-id="quote-angrist"] .block-quote,
+.theme-viridis[data-slide-id="endorsement"] .block-quote { background: rgba(255,255,255,.08); border-left-color: var(--v9); }
+.theme-viridis[data-slide-id="gap"] { --bg: #f4f1fa; --title-border: .26cqw solid var(--v1); }
+
+/* The four parts walk along the viridis scale */
+.theme-viridis[data-slide-id="part-1"] { --title-color: var(--v0); --title-border: .3cqw solid var(--v1); --col-border: .05cqw solid #ddd3ea; }
+.theme-viridis[data-slide-id="part-2"] { --title-color: var(--v2); --title-border: .3cqw solid var(--v3); --col-border: .05cqw solid #d3dbea; }
+.theme-viridis[data-slide-id="part-3"] { --title-color: #1d6f78; --title-border: .3cqw solid var(--v5); --col-border: .05cqw solid #cfe6e3; }
+.theme-viridis[data-slide-id="part-4"] { --title-color: #1b7a52; --title-border: .3cqw solid var(--v7); --col-border: .05cqw solid #d6ecd0; }
+.theme-viridis[data-slide-id="part-1"] li::marker { color: var(--v0); }
+.theme-viridis[data-slide-id="part-2"] li::marker { color: var(--v2); }
+.theme-viridis[data-slide-id="part-3"] li::marker { color: var(--v4); }
+.theme-viridis[data-slide-id="part-4"] li::marker { color: var(--v6); }
+
+/* Overview table: each part's name in its own colour */
+.theme-viridis[data-slide-id="structure"] tr:nth-child(2) td:first-child { color: var(--v0); font-weight: 700; }
+.theme-viridis[data-slide-id="structure"] tr:nth-child(3) td:first-child { color: var(--v2); font-weight: 700; }
+.theme-viridis[data-slide-id="structure"] tr:nth-child(4) td:first-child { color: #1d6f78; font-weight: 700; }
+.theme-viridis[data-slide-id="structure"] tr:nth-child(5) td:first-child { color: #1b7a52; font-weight: 700; }
+
+/* Paired-quote slides: tinted cards */
+.theme-viridis[data-slide-id="quotes-card-cairo"] { --col-bg: #f2eef9; --col-border: 0 solid transparent; --title-border: .26cqw solid var(--v1); }
+.theme-viridis[data-slide-id="quotes-hill-varro"] { --col-bg: #ebf6f3; --col-border: 0 solid transparent; --title-border: .26cqw solid var(--v5); }
+.theme-viridis[data-slide-id="resources"] { --col-bg: #f3f8ee; --col-border: 0 solid transparent; }
+
+/* Second edition: the yellow end of the scale */
+.theme-viridis[data-slide-id="second-edition"] { --bg: #fffbe3; --title-border: .4cqw solid var(--v9); --line: #efe3a0; }
+/* ===== end patch ===== */
 </style>
 </head>
 <body>
@@ -5494,6 +5549,7 @@ const HISTORY_LIMIT = 10;
 const DEFAULT_THEME = 'pintori';
 const MAX_HISTORY = 60;
 const THEME_IDS = [
+  ['viridis', "Viridis"], // gabors-data-analysis.com patch
   ['pintori', "Pintori"],
   ['index', "Index"],
   ['diptych', "Diptych"],
