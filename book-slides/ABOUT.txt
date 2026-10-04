@@ -2,8 +2,11 @@ book-slides — browser slides about the textbook, built with ModernSlides by Ke
 Upstream: https://github.com/kevincure/ModernSlides  (copied from commit 5c8371d, 2026-10-01)
 Licence: MIT (Copyright (c) 2025 Kevin A. Bryan). Full usage notes are in the upstream README.
 
-Local change: one line in index.html (marked "gabors-data-analysis.com patch") makes the page
-open the DA-Textbook deck when no ?deck= is given. Everything else is unmodified.
+Local changes in index.html, all marked "gabors-data-analysis.com patch":
+  1. the page opens the DA-Textbook deck when no ?deck= is given;
+  2. a "viridis" theme (CSS at the end of #app-styles, plus an entry in THEME_IDS), with
+     per-slide colours keyed on DA-Textbook slide ids (title, quotes, part-1..4, second-edition).
+Everything else is unmodified. Keep these when updating index.html from upstream.
 The PHP "Publish" helpers are not included (GitHub Pages cannot run PHP).
 
 Decks:
