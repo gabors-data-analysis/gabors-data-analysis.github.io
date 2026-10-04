@@ -1,0 +1,13 @@
+book-slides — browser slides about the textbook, built with ModernSlides by Kevin A. Bryan
+Upstream: https://github.com/kevincure/ModernSlides  (copied from commit 5c8371d, 2026-10-01)
+Licence: MIT (Copyright (c) 2025 Kevin A. Bryan). Full usage notes are in the upstream README.
+
+Local change: one line in index.html (marked "gabors-data-analysis.com patch") makes the page
+open the DA-Textbook deck when no ?deck= is given. Everything else is unmodified.
+The PHP "Publish" helpers are not included (GitHub Pages cannot run PHP).
+
+Decks:
+  DA-Textbook/DA-Textbook.json  -> https://gabors-data-analysis.com/book-slides/
+  <Name>/<Name>.json            -> https://gabors-data-analysis.com/book-slides/?deck=<Name>
+
+Editing: open the page, press e (edit), Download the .json, put it back in its folder, push.

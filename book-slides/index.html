@@ -9518,7 +9518,7 @@ async function initialize() {
   const selfTest = runRoundTripSelfTest();
   if (!selfTest.ok) console.error('ModernSlides round-trip self-test failed', selfTest);
   const params = new URLSearchParams(location.search);
-  const query = params.get('deck') || params.get('xml');
+  const query = params.get('deck') || params.get('xml') || 'DA-Textbook'; // gabors-data-analysis.com patch: default deck
   await migrateLegacyRestoreSlot();
   /* Startup never overwrites local work: the autosaved deck is either reopened,
      kept (when it holds edits to the same linked deck), or saved as a restore point. */

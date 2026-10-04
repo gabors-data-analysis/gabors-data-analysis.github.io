@@ -82,6 +82,25 @@
       ]
     },
     {
+      "id": "quote-angrist",
+      "hidden": false,
+      "layout": "statement",
+      "background": null,
+      "header": "",
+      "aside": "",
+      "speaker": "",
+      "print": "Endorsements: https://gabors-data-analysis.com/endorsements",
+      "steps": 0,
+      "blocks": [
+        {
+          "type": "quote",
+          "content": "This exciting new text covers everything today's aspiring data scientist needs to know, managing to be comprehensive as well as accessible. Like a good confidence interval, the Gabors have got you almost completely covered!",
+          "source": "Joshua Angrist, MIT",
+          "step": 0
+        }
+      ]
+    },
+    {
       "id": "process",
       "hidden": false,
       "layout": "auto",
@@ -221,6 +240,370 @@
             "c",
             "l"
           ]
+        }
+      ]
+    },
+    {
+      "id": "part-1",
+      "hidden": false,
+      "layout": "auto",
+      "background": null,
+      "header": "",
+      "aside": "",
+      "speaker": "Part I starts with how data is born and ends with testing. The figure compares the price distributions of hotels in two cities.",
+      "print": "",
+      "steps": 0,
+      "blocks": [
+        {
+          "type": "title",
+          "content": "Part I · Data exploration",
+          "step": 0
+        },
+        {
+          "type": "columns",
+          "widths": [
+            1,
+            1.35
+          ],
+          "valign": "center",
+          "columns": [
+            {
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": true,
+                  "size": "small",
+                  "items": [
+                    {
+                      "content": "Origins of data",
+                      "number": 1
+                    },
+                    {
+                      "content": "Preparing data for analysis",
+                      "number": 2
+                    },
+                    {
+                      "content": "Exploratory data analysis",
+                      "number": 3
+                    },
+                    {
+                      "content": "Comparison and correlation",
+                      "number": 4
+                    },
+                    {
+                      "content": "Generalizing from data",
+                      "number": 5
+                    },
+                    {
+                      "content": "Testing hypotheses",
+                      "number": 6
+                    }
+                  ],
+                  "step": 0,
+                  "start": 1,
+                  "progressive": false
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "image",
+                  "src": "fig-3-7-vienna-london.png",
+                  "caption": "Figure 3.7 · Hotel prices, Vienna vs London (case study 3B)",
+                  "width": "100%",
+                  "fit": "contain",
+                  "focus": "center",
+                  "step": 0
+                }
+              ]
+            }
+          ],
+          "step": 0
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "hidden": false,
+      "layout": "auto",
+      "background": null,
+      "header": "",
+      "aside": "",
+      "speaker": "Residuals from a simple regression of price on distance identify the candidate good deals. Chapter 10 returns to the same question with multiple regression.",
+      "print": "",
+      "steps": 0,
+      "blocks": [
+        {
+          "type": "title",
+          "content": "Part II · Regression analysis",
+          "step": 0
+        },
+        {
+          "type": "columns",
+          "widths": [
+            1,
+            1.35
+          ],
+          "valign": "center",
+          "columns": [
+            {
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": true,
+                  "size": "small",
+                  "items": [
+                    {
+                      "content": "Simple regression",
+                      "number": 7
+                    },
+                    {
+                      "content": "Complicated patterns and messy data",
+                      "number": 8
+                    },
+                    {
+                      "content": "Generalizing results of a regression",
+                      "number": 9
+                    },
+                    {
+                      "content": "Multiple linear regression",
+                      "number": 10
+                    },
+                    {
+                      "content": "Modeling probabilities",
+                      "number": 11
+                    },
+                    {
+                      "content": "Regression with time series data",
+                      "number": 12
+                    }
+                  ],
+                  "step": 0,
+                  "start": 7,
+                  "progressive": false
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "image",
+                  "src": "fig-7-7-underpriced-hotels.png",
+                  "caption": "Figure 7.7 · The most underpriced hotels in Vienna (case study 7A)",
+                  "width": "100%",
+                  "fit": "contain",
+                  "focus": "center",
+                  "step": 0
+                }
+              ]
+            }
+          ],
+          "step": 0
+        }
+      ]
+    },
+    {
+      "id": "part-3",
+      "hidden": false,
+      "layout": "auto",
+      "background": null,
+      "header": "",
+      "aside": "",
+      "speaker": "Prediction gets its own framework: loss functions, cross-validation, then machine learning methods compared with regression on the same data.",
+      "print": "",
+      "steps": 0,
+      "blocks": [
+        {
+          "type": "title",
+          "content": "Part III · Prediction",
+          "step": 0
+        },
+        {
+          "type": "columns",
+          "widths": [
+            1,
+            1.35
+          ],
+          "valign": "center",
+          "columns": [
+            {
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": true,
+                  "size": "small",
+                  "items": [
+                    {
+                      "content": "A framework for prediction",
+                      "number": 13
+                    },
+                    {
+                      "content": "Model building for prediction",
+                      "number": 14
+                    },
+                    {
+                      "content": "Regression trees",
+                      "number": 15
+                    },
+                    {
+                      "content": "Random forest and boosting",
+                      "number": 16
+                    },
+                    {
+                      "content": "Probability prediction and classification",
+                      "number": 17
+                    },
+                    {
+                      "content": "Forecasting from time series data",
+                      "number": 18
+                    }
+                  ],
+                  "step": 0,
+                  "start": 13,
+                  "progressive": false
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "image",
+                  "src": "fig-17-2b-roc-firm-exit.png",
+                  "caption": "Figure 17.2b · ROC curve for predicting firm exit (case study 17A)",
+                  "width": "100%",
+                  "fit": "contain",
+                  "focus": "center",
+                  "step": 0
+                }
+              ]
+            }
+          ],
+          "step": 0
+        }
+      ]
+    },
+    {
+      "id": "part-4",
+      "hidden": false,
+      "layout": "auto",
+      "background": null,
+      "header": "",
+      "aside": "",
+      "speaker": "Potential outcomes and causal maps first, then experiments, then the observational designs. The figure is the raw material of a difference-in-differences analysis.",
+      "print": "",
+      "steps": 0,
+      "blocks": [
+        {
+          "type": "title",
+          "content": "Part IV · Causal analysis",
+          "step": 0
+        },
+        {
+          "type": "columns",
+          "widths": [
+            1,
+            1.35
+          ],
+          "valign": "center",
+          "columns": [
+            {
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": true,
+                  "size": "small",
+                  "items": [
+                    {
+                      "content": "A framework for causal analysis",
+                      "number": 19
+                    },
+                    {
+                      "content": "Designing and analyzing experiments",
+                      "number": 20
+                    },
+                    {
+                      "content": "Regression and matching with observational data",
+                      "number": 21
+                    },
+                    {
+                      "content": "Difference-in-differences",
+                      "number": 22
+                    },
+                    {
+                      "content": "Methods for panel data",
+                      "number": 23
+                    },
+                    {
+                      "content": "Appropriate control groups for panel data",
+                      "number": 24
+                    }
+                  ],
+                  "step": 0,
+                  "start": 19,
+                  "progressive": false
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "image",
+                  "src": "fig-22-2-airline-merger.png",
+                  "caption": "Figure 22.2 · Airline prices in markets affected and not affected by a merger (case study 22A)",
+                  "width": "100%",
+                  "fit": "contain",
+                  "focus": "center",
+                  "step": 0
+                }
+              ]
+            }
+          ],
+          "step": 0
+        }
+      ]
+    },
+    {
+      "id": "quotes-card-cairo",
+      "hidden": false,
+      "layout": "auto",
+      "background": null,
+      "header": "",
+      "aside": "",
+      "speaker": "",
+      "print": "Endorsements: https://gabors-data-analysis.com/endorsements",
+      "steps": 0,
+      "blocks": [
+        {
+          "type": "columns",
+          "widths": [
+            1,
+            1
+          ],
+          "valign": "center",
+          "columns": [
+            {
+              "blocks": [
+                {
+                  "type": "quote",
+                  "content": "A beautiful integration of Econometrics and Data Science that provides a direct path from data collection and exploratory analysis to conventional regression modeling, then on to prediction and causal modeling.",
+                  "source": "David Card, UC Berkeley",
+                  "step": 0
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "quote",
+                  "content": "I know of few books about data analysis and visualization that are as comprehensive, deep, practical, and current as this one; and I know of almost none that are as fun to read.",
+                  "source": "Alberto Cairo, University of Miami",
+                  "step": 0
+                }
+              ]
+            }
+          ],
+          "step": 0
         }
       ]
     },
@@ -462,6 +845,50 @@
           "type": "text",
           "size": "tiny",
           "content": "[osf.io/7epdj](https://osf.io/7epdj/) · [github.com/gabors-data-analysis/da_case_studies](https://github.com/gabors-data-analysis/da_case_studies)",
+          "step": 0
+        }
+      ]
+    },
+    {
+      "id": "quotes-hill-varro",
+      "hidden": false,
+      "layout": "auto",
+      "background": null,
+      "header": "",
+      "aside": "",
+      "speaker": "",
+      "print": "Endorsements: https://gabors-data-analysis.com/endorsements",
+      "steps": 0,
+      "blocks": [
+        {
+          "type": "columns",
+          "widths": [
+            1,
+            1
+          ],
+          "valign": "center",
+          "columns": [
+            {
+              "blocks": [
+                {
+                  "type": "quote",
+                  "content": "The authors discuss the key aspects of examining data, regression analysis, prediction, Lasso, and random forests and more using elegant prose instead of algebra.",
+                  "source": "Carter Hill, Louisiana State University",
+                  "step": 0
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "quote",
+                  "content": "… the book also covers the less glamorous but crucial aspects of procuring and cleaning data, and drawing useful inferences from less-than-perfect datasets.",
+                  "source": "Laszlo Varro, Chief Economist, International Energy Agency",
+                  "step": 0
+                }
+              ]
+            }
+          ],
           "step": 0
         }
       ]
@@ -737,6 +1164,49 @@
       ]
     },
     {
+      "id": "second-edition",
+      "hidden": false,
+      "layout": "auto",
+      "background": null,
+      "header": "",
+      "aside": "",
+      "speaker": "Plans: gabors-data-analysis.com/second-edition. No date announced.",
+      "print": "",
+      "steps": 0,
+      "blocks": [
+        {
+          "type": "title",
+          "content": "Second edition: in preparation",
+          "step": 0
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "size": "normal",
+          "items": [
+            {
+              "content": "Errata fixed and explanations improved, based on feedback from readers and instructors"
+            },
+            {
+              "content": "New subsections, such as the Frisch–Waugh–Lovell theorem and staggered difference-in-differences"
+            },
+            {
+              "content": "Same chapters and case studies, so existing course plans carry over"
+            }
+          ],
+          "step": 0,
+          "start": 1,
+          "progressive": false
+        },
+        {
+          "type": "text",
+          "size": "small",
+          "content": "Suggestions are welcome: [contact us](https://gabors-data-analysis.com/contact-us/)",
+          "step": 0
+        }
+      ]
+    },
+    {
       "id": "next",
       "hidden": false,
       "layout": "auto",
@@ -773,6 +1243,12 @@
           "step": 0,
           "start": 1,
           "progressive": false
+        },
+        {
+          "type": "text",
+          "size": "tiny",
+          "content": "Slide design: [ModernSlides](https://github.com/kevincure/ModernSlides) by Kevin Bryan",
+          "step": 0
         }
       ]
     }
