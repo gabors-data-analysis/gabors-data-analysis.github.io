@@ -28,12 +28,10 @@ redirect_from:
       47 case studies using real-world data, with all code in <strong>R, Python, and Stata</strong>.
     </p>
     <div class="gda-cta-row">
-      <a href="{{ '/slides/' | relative_url }}" class="gda-btn gda-btn--primary">Free slides — all 24 chapters</a>
       <a href="{{ '/order' | relative_url }}" class="gda-btn gda-btn--green">Get the book</a>
+      <a href="{{ '/slides/' | relative_url }}" class="gda-btn gda-btn--primary">Free slides for all 24 chapters</a>
+      <a href="{{ '/resources/' | relative_url }}" class="gda-btn gda-btn--teal">Free courses and tools</a>
       <a href="{{ '/errata/' | relative_url }}" class="gda-btn gda-btn--yellow">Errata</a>
-      <a href="{{ '/resources/' | relative_url }}" class="gda-btn gda-btn--teal">Free resources</a>
-      <a href="{{ '/instructors/' | relative_url }}" class="gda-btn gda-btn--ghost">For instructors</a>
-      <a href="{{ '/students/' | relative_url }}" class="gda-btn gda-btn--ghost">For students</a>
     </div>
   </div>
   <div class="gda-hero__cover">
@@ -52,128 +50,7 @@ redirect_from:
 </div>
 
 <section class="gda-section">
-  <h2 class="gda-section__title">The book &amp; its ecosystem — in 100 seconds</h2>
-  <div class="gda-video">
-    <video controls preload="none" playsinline
-           poster="{{ '/images/social/da-video-poster.jpg' | relative_url }}">
-      <source src="{{ '/videos/da-intro.mp4' | relative_url }}" type="video/mp4">
-      Your browser does not support the video tag —
-      <a href="{{ '/videos/da-intro.mp4' | relative_url }}">download the video</a>.
-    </video>
-  </div>
-</section>
-
-<section class="gda-section">
-  <h2 class="gda-section__title">Find your path</h2>
-  <div class="gda-cards">
-    <div class="gda-card gda-card--blue">
-      <h3 class="gda-card__title"><a href="{{ '/instructors/' | relative_url }}">Instructors</a></h3>
-      <p class="gda-card__text">Adopt and teach with the book in undergraduate or Master's programmes: slides for every chapter, course designs, solutions, and adoption examples.</p>
-      <ul class="gda-card__links">
-        <li><a href="{{ '/slides/' | relative_url }}">Slides for all 24 chapters</a></li>
-        <li><a href="{{ '/teaching-guide/' | relative_url }}">Teaching guide</a></li>
-        <li><a href="https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/examination-copy/login" target="_blank" rel="noopener">Request an examination copy</a></li>
-      </ul>
-    </div>
-    <div class="gda-card gda-card--green">
-      <h3 class="gda-card__title"><a href="{{ '/students/' | relative_url }}">Students</a></h3>
-      <p class="gda-card__text">Learn with the book: quick links, coding setup in R, Python, or Stata, practice Q&amp;A, and study advice.</p>
-      <ul class="gda-card__links">
-        <li><a href="{{ '/students/#start-here-in-3-steps' | relative_url }}">Getting started</a></li>
-        <li><a href="{{ '/code-courses/' | relative_url }}">Coding courses</a></li>
-        <li><a href="{{ '/part1-qanda' | relative_url }}">Practice Q&amp;A</a></li>
-      </ul>
-    </div>
-    <div class="gda-card gda-card--teal">
-      <h3 class="gda-card__title"><a href="{{ '/data-and-code/' | relative_url }}">Data &amp; Code</a></h3>
-      <p class="gda-card__text">Everything is reproducible: raw and clean datasets on OSF, full code for every case study on GitHub.</p>
-      <ul class="gda-card__links">
-        <li><a href="https://osf.io/7epdj/" target="_blank" rel="noopener">Datasets on OSF</a></li>
-        <li><a href="https://github.com/gabors-data-analysis/da_case_studies" target="_blank" rel="noopener">Code on GitHub</a></li>
-        <li><a href="{{ '/resources/' | relative_url }}">All free resources</a></li>
-      </ul>
-    </div>
-    <div class="gda-card gda-card--purple">
-      <h3 class="gda-card__title"><a href="{{ '/ai-course/' | relative_url }}">Data Analysis with AI</a></h3>
-      <p class="gda-card__text">New: teaching and doing data analysis in the age of LLMs — a full course and materials in progress.</p>
-      <ul class="gda-card__links">
-        <li><a href="{{ '/ai-course/' | relative_url }}">AI course — full material</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="gda-section">
-  <h2 class="gda-section__title">More than a textbook — free tools &amp; courses</h2>
-  <p class="gda-section__intro">Around the book we built a whole open ecosystem: learn to code from scratch, do data analysis with AI, and explore the concepts hands-on in interactive dashboards. All free.</p>
-  <div class="gda-cards">
-    <div class="gda-card gda-card--green">
-      <h3 class="gda-card__title"><a href="{{ '/code-courses/' | relative_url }}">Coding courses</a></h3>
-      <p class="gda-card__text">Learn to code from zero in R, Python, or Stata — full open courses that carry you all the way to the case studies.</p>
-    </div>
-    <div class="gda-card gda-card--purple">
-      <h3 class="gda-card__title"><a href="{{ '/ai-course/' | relative_url }}">Data Analysis with AI</a></h3>
-      <p class="gda-card__text">Doing and teaching data analysis in the age of LLMs — a full open course, free to use.</p>
-      <ul class="gda-card__links">
-        <li><a href="{{ '/ai-course/' | relative_url }}">AI course — full material</a></li>
-      </ul>
-    </div>
-    <div class="gda-card gda-card--teal">
-      <h3 class="gda-card__title"><a href="https://dashboards.gabors-data-analysis.com/" target="_blank" rel="noopener">Interactive dashboards</a></h3>
-      <p class="gda-card__text">Play with the concepts in your browser — eight teaching dashboards, from distributions to causal inference.</p>
-      <ul class="gda-card__links">
-        <li><a href="https://dashboards.gabors-data-analysis.com/app/hotels" target="_blank" rel="noopener">Hotels Europe case study →</a></li>
-        <li><a href="https://dashboards.gabors-data-analysis.com/app/ch10_multireg" target="_blank" rel="noopener">Multiple linear regression →</a></li>
-      </ul>
-    </div>
-    <div class="gda-card gda-card--blue">
-      <h3 class="gda-card__title"><a href="{{ '/resources/' | relative_url }}">All resources</a></h3>
-      <p class="gda-card__text">Case study code, datasets, courses, AI materials, and teaching apps — everything we built, in one place.</p>
-    </div>
-  </div>
-</section>
-
-<section class="gda-section">
-  <h2 class="gda-section__title">What the book covers</h2>
-  <p class="gda-section__intro">A complete, curated curriculum that equips future data analysts with the most important tools, methods, and skills — through the entire process of data analysis, to answer real-life questions.</p>
-  <div class="gda-cards">
-    <a class="gda-card gda-card--blue" href="{{ '/chapters/#part-i-data-exploration' | relative_url }}">
-      <h3 class="gda-card__title">I · Data Exploration</h3>
-      <p class="gda-card__text">Data collection and quality, tidy data and wrangling, exploratory analysis and visualization, generalizing from data, hypothesis testing.</p>
-    </a>
-    <a class="gda-card gda-card--green" href="{{ '/chapters/#part-ii-regression-analysis' | relative_url }}">
-      <h3 class="gda-card__title">II · Regression Analysis</h3>
-      <p class="gda-card__text">Non-parametric and linear models, functional form, internal and external validity, probability models, time series regressions.</p>
-    </a>
-    <a class="gda-card gda-card--purple" href="{{ '/chapters/#part-iii-prediction' | relative_url }}">
-      <h3 class="gda-card__title">III · Prediction</h3>
-      <p class="gda-card__text">Loss functions, cross-validation, LASSO, tree-based machine learning (CART, random forest, boosting), classification, forecasting.</p>
-    </a>
-    <a class="gda-card gda-card--yellow" href="{{ '/chapters/#part-iv-causal-analysis' | relative_url }}">
-      <h3 class="gda-card__title">IV · Causal Analysis</h3>
-      <p class="gda-card__text">Potential outcomes and DAGs, experiments, matching, difference-in-differences, panel data methods, synthetic control, event studies.</p>
-    </a>
-  </div>
-  <p><em><a href="{{ '/chapters' | relative_url }}">More on the chapters →</a></em> · <em><a href="{{ '/whythisbook' | relative_url }}">Why use this book? →</a></em></p>
-</section>
-
-<section class="gda-section">
-  <h2 class="gda-section__title">Case studies: global and diverse</h2>
-  <p class="gda-section__intro">Each of the 47 case studies begins with a real question and ends with an answer, based on real data and the methods taught in that chapter. For example:</p>
-
-  <ul>
-    <li>Estimating gender and age differences in earnings (USA). <a href="{{ '/casestudies/#ch09a-estimating-gender-and-age-differences-in-earnings' | relative_url }}"><em>More</em></a></li>
-    <li>Management quality, firm size and family ownership (Mexico, International). <a href="{{ '/casestudies/#ch04a-management-quality-and-firm-size-describing-patterns-of-association' | relative_url }}"><em>More</em></a></li>
-    <li>Predicting company default with machine learning (EU). <a href="{{ '/casestudies/#ch17a-predicting-firm-exit-probability-and-classification' | relative_url }}"><em>More</em></a></li>
-    <li>Working from home and employee performance (China). <a href="{{ '/casestudies/#ch20a-working-from-home-and-employee-performance' | relative_url }}"><em>More</em></a></li>
-    <li>Identifying successful football managers, and the effect of a change (UK). <a href="{{ '/casestudies/#ch24-estimating-the-impact-of-replacing-football-team-managers' | relative_url }}"><em>More</em></a></li>
-  </ul>
-
-  <p><em><a href="{{ '/casestudies/' | relative_url }}">All case studies →</a></em></p>
-</section>
-
-<section class="gda-section">
-  <h2 class="gda-section__title">Endorsements</h2>
+  <h2 class="gda-section__title">What people say</h2>
   <div class="gda-carousel" data-autoplay="6500" role="group" aria-roledescription="carousel" aria-label="Endorsements" tabindex="0">
     <button class="gda-carousel__nav gda-carousel__nav--prev" type="button" aria-label="Previous endorsement">&lsaquo;</button>
     <div class="gda-carousel__viewport">
@@ -223,7 +100,7 @@ redirect_from:
     <button class="gda-carousel__nav gda-carousel__nav--next" type="button" aria-label="Next endorsement">&rsaquo;</button>
     <div class="gda-carousel__dots" role="tablist" aria-label="Choose endorsement"></div>
   </div>
-  <p><em><a href="{{ '/endorsements' | relative_url }}">More endorsements →</a></em> · <em><a href="{{ '/instructor-feedback' | relative_url }}">Instructor feedback →</a></em></p>
+  <p><em><a href="{{ '/endorsements' | relative_url }}">More endorsements, from instructors and students too →</a></em> · <em><a href="{{ '/instructor-feedback' | relative_url }}">Instructor feedback →</a></em></p>
 </section>
 
 <script>
@@ -285,6 +162,120 @@ redirect_from:
   start();
 })();
 </script>
+
+<section class="gda-section">
+  <h2 class="gda-section__title">Find your path</h2>
+  <div class="gda-cards">
+    <div class="gda-card gda-card--blue">
+      <h3 class="gda-card__title"><a href="{{ '/instructors/' | relative_url }}">Instructors</a></h3>
+      <p class="gda-card__text">Adopt and teach with the book in undergraduate or Master's programmes: slides for every chapter, course designs, solutions, and adoption examples.</p>
+      <ul class="gda-card__links">
+        <li><a href="{{ '/slides/' | relative_url }}">Slides for all 24 chapters</a></li>
+        <li><a href="{{ '/teaching-guide/' | relative_url }}">Teaching guide</a></li>
+        <li><a href="https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20/examination-copy/login" target="_blank" rel="noopener">Request an examination copy</a></li>
+      </ul>
+    </div>
+    <div class="gda-card gda-card--green">
+      <h3 class="gda-card__title"><a href="{{ '/students/' | relative_url }}">Students</a></h3>
+      <p class="gda-card__text">Learn with the book: where to start, coding setup in R, Python, or Stata, practice Q&amp;A, and study advice.</p>
+      <ul class="gda-card__links">
+        <li><a href="{{ '/students/#start-here-in-3-steps' | relative_url }}">Getting started</a></li>
+        <li><a href="{{ '/code-courses/' | relative_url }}">Coding courses</a></li>
+        <li><a href="{{ '/students/#student-qa-and-support' | relative_url }}">Practice Q&amp;A</a></li>
+      </ul>
+    </div>
+    <div class="gda-card gda-card--teal">
+      <h3 class="gda-card__title"><a href="{{ '/data-and-code/' | relative_url }}">Data &amp; Code</a></h3>
+      <p class="gda-card__text">Everything is reproducible: raw and clean datasets on OSF, full code for every case study on GitHub.</p>
+      <ul class="gda-card__links">
+        <li><a href="https://osf.io/7epdj/" target="_blank" rel="noopener">Datasets on OSF</a></li>
+        <li><a href="https://github.com/gabors-data-analysis/da_case_studies" target="_blank" rel="noopener">Code on GitHub</a></li>
+        <li><a href="{{ '/datasets/' | relative_url }}">Dataset summaries</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="gda-section">
+  <h2 class="gda-section__title">What the book covers</h2>
+  <p class="gda-section__intro">The book follows the whole process of data analysis, from collecting and cleaning data to answering real-life questions. It has four parts.</p>
+  <div class="gda-cards">
+    <a class="gda-card gda-card--blue" href="{{ '/chapters/#part-i-data-exploration' | relative_url }}">
+      <h3 class="gda-card__title">I · Data Exploration</h3>
+      <p class="gda-card__text">Data collection and quality, tidy data and wrangling, exploratory analysis and visualization, generalizing from data, hypothesis testing.</p>
+    </a>
+    <a class="gda-card gda-card--green" href="{{ '/chapters/#part-ii-regression-analysis' | relative_url }}">
+      <h3 class="gda-card__title">II · Regression Analysis</h3>
+      <p class="gda-card__text">Non-parametric and linear models, functional form, internal and external validity, probability models, time series regressions.</p>
+    </a>
+    <a class="gda-card gda-card--purple" href="{{ '/chapters/#part-iii-prediction' | relative_url }}">
+      <h3 class="gda-card__title">III · Prediction</h3>
+      <p class="gda-card__text">Loss functions, cross-validation, LASSO, tree-based machine learning (CART, random forest, boosting), classification, forecasting.</p>
+    </a>
+    <a class="gda-card gda-card--yellow" href="{{ '/chapters/#part-iv-causal-analysis' | relative_url }}">
+      <h3 class="gda-card__title">IV · Causal Analysis</h3>
+      <p class="gda-card__text">Potential outcomes and DAGs, experiments, matching, difference-in-differences, panel data methods, synthetic control, event studies.</p>
+    </a>
+  </div>
+  <p><em><a href="{{ '/chapters' | relative_url }}">More on the chapters →</a></em> · <em><a href="{{ '/whythisbook' | relative_url }}">Why use this book? →</a></em></p>
+</section>
+
+<section class="gda-section">
+  <h2 class="gda-section__title">Case studies: global and diverse</h2>
+  <p class="gda-section__intro">Each of the 47 case studies begins with a real question and ends with an answer, based on real data and the methods taught in that chapter. For example:</p>
+
+  <ul>
+    <li>Estimating gender and age differences in earnings (USA). <a href="{{ '/casestudies/#ch09a-estimating-gender-and-age-differences-in-earnings' | relative_url }}"><em>More</em></a></li>
+    <li>Management quality, firm size and family ownership (Mexico, International). <a href="{{ '/casestudies/#ch04a-management-quality-and-firm-size-describing-patterns-of-association' | relative_url }}"><em>More</em></a></li>
+    <li>Predicting company default with machine learning (EU). <a href="{{ '/casestudies/#ch17a-predicting-firm-exit-probability-and-classification' | relative_url }}"><em>More</em></a></li>
+    <li>Working from home and employee performance (China). <a href="{{ '/casestudies/#ch20a-working-from-home-and-employee-performance' | relative_url }}"><em>More</em></a></li>
+    <li>Identifying successful football managers, and the effect of a change (UK). <a href="{{ '/casestudies/#ch24-estimating-the-impact-of-replacing-football-team-managers' | relative_url }}"><em>More</em></a></li>
+  </ul>
+
+  <p><em><a href="{{ '/casestudies/' | relative_url }}">All case studies →</a></em></p>
+</section>
+
+<section class="gda-section">
+  <h2 class="gda-section__title">More than a textbook: free courses and tools</h2>
+  <p class="gda-section__intro">Around the book we built courses and tools that anyone can use. You can learn to code from zero, learn to do data analysis with AI, and play with the concepts in interactive dashboards. All of it is free.</p>
+  <div class="gda-cards">
+    <div class="gda-card gda-card--green">
+      <h3 class="gda-card__title"><a href="{{ '/code-courses/' | relative_url }}">Coding courses</a></h3>
+      <p class="gda-card__text">Learn to code from zero in R, Python, or Stata. Full open courses that take you all the way to doing the case studies yourself.</p>
+    </div>
+    <div class="gda-card gda-card--purple">
+      <h3 class="gda-card__title"><a href="{{ '/ai-course/' | relative_url }}">Data Analysis with AI</a></h3>
+      <p class="gda-card__text">A full open course on doing data analysis with LLMs and agentic tools: eight sessions, assignments, case studies, and a capstone.</p>
+      <ul class="gda-card__links">
+        <li><a href="{{ '/ai-course/' | relative_url }}">Course site →</a></li>
+      </ul>
+    </div>
+    <div class="gda-card gda-card--teal">
+      <h3 class="gda-card__title"><a href="https://dashboards.gabors-data-analysis.com/" target="_blank" rel="noopener">Interactive dashboards</a></h3>
+      <p class="gda-card__text">Play with the concepts in your browser: eight teaching dashboards, from distributions to causal inference.</p>
+      <ul class="gda-card__links">
+        <li><a href="https://dashboards.gabors-data-analysis.com/app/hotels" target="_blank" rel="noopener">Hotels Europe case study →</a></li>
+        <li><a href="https://dashboards.gabors-data-analysis.com/app/ch10_multireg" target="_blank" rel="noopener">Multiple linear regression →</a></li>
+      </ul>
+    </div>
+    <div class="gda-card gda-card--blue">
+      <h3 class="gda-card__title"><a href="{{ '/resources/' | relative_url }}">All resources</a></h3>
+      <p class="gda-card__text">Practice questions, data exercises, reading suggestions and data sources, together with everything above, on one page.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gda-section">
+  <h2 class="gda-section__title">The book in 100 seconds</h2>
+  <div class="gda-video">
+    <video controls preload="none" playsinline
+           poster="{{ '/images/social/da-video-poster.jpg' | relative_url }}">
+      <source src="{{ '/videos/da-intro.mp4' | relative_url }}" type="video/mp4">
+      Your browser does not support the video tag —
+      <a href="{{ '/videos/da-intro.mp4' | relative_url }}">download the video</a>.
+    </video>
+  </div>
+</section>
 
 <section class="gda-section">
   <h2 class="gda-section__title">Adopted in 200+ courses in 40 countries</h2>
