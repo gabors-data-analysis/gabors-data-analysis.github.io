@@ -34,12 +34,11 @@ To learn R, here are some oher ideas:
 1. To learn tidyverse, you may start with the wonderful book by Hadley Wickham and Garrett Grolemund [R for Data Science](https://r4ds.had.co.nz/){:target="_blank"}.  
 2. A wonderful intro, with a focus on starting R and data wrangling, is by Jenny Briant's [Data wrangling, exploration, and analysis with R](https://stat545.com/){:target="_blank"} course, aka STAT545.   
 3. U Cincinatti has a very nice guide with discussions on basics, workflow, manipulation in [R Programming Guide](https://uc-r.github.io/){:target="_blank"}.   
-4. At CMU, Alexandra Chouldechova has a nice [programming in R materials](https://www.andrew.cmu.edu/user/achoulde/94842/){:target="_blank"}.  
-5. A great online course is by Roger Peng, Jeff Leek and Brian Caffo  [R programming onCoursera](https://www.coursera.org/learn/r-programming)
-6. At Data Carpentry, François Michonneau and Auriel Fournier has a fantastic content --[Data Analysis and Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/){:target="_blank"}.  
-7. Grant McDermott has a more advanced lecture series with amazing content [Data Science for Economists](https://github.com/uo-ec607/lectures){:target="_blank"}.   
-8. Working with *time series* is hard. A great resource by Hansjörg Neth: Data Science for Psychologists [Chapter 10 Dates and times](https://bookdown.org/hneth/ds4psy/10-time.html){:target="_blank"}.   
-9. What They Forgot to Teach You About R, awesome material by Jennifer Bryan and Jim Hester. [workshop material](https://rstats.wtf/){:target="_blank"}.   
+4. A great online course is by Roger Peng, Jeff Leek and Brian Caffo  [R programming onCoursera](https://www.coursera.org/learn/r-programming)
+5. At Data Carpentry, François Michonneau and Auriel Fournier has a fantastic content --[Data Analysis and Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/){:target="_blank"}.  
+6. Grant McDermott has a more advanced lecture series with amazing content [Data Science for Economists](https://github.com/uo-ec607/lectures){:target="_blank"}.   
+7. Working with *time series* is hard. A great resource by Hansjörg Neth: Data Science for Psychologists [Chapter 10 Dates and times](https://bookdown.org/hneth/ds4psy/10-time.html){:target="_blank"}.   
+8. What They Forgot to Teach You About R, awesome material by Jennifer Bryan and Jim Hester. [workshop material](https://rstats.wtf/){:target="_blank"}.   
 10. Great style guide with suggestions on coding by Sean Higgins. [R guide](https://github.com/skhiggins/R_guide){:target="_blank"}.   
 11. Nice, dplyr focused intro into called *An introductory workshop on modern data analyses and workflows* by folks at Aarhus, available as [Reproducible Research in R](https://r-cubed.rostools.org/index.html)
 12. A list of useful stuff: [Hacks](https://towardsdatascience.com/ten-time-saving-r-hacks-b411add26b96), 
@@ -102,14 +101,12 @@ Take an example: management quality and firm size, descriptive statistics
 ## R for Stata users
 In Economics and many other social sciences, we use Stata for research, and learnt R or Python as a second language. Here are some links and tutorials we found useful.  
 1. Matthieu Gomez has a wonderful intro to [ R for Stata users ](https://www.matthieugomez.com/statar/index.html){:target="_blank"}. For instance the bit on [regressions](https://www.matthieugomez.com/statar/regressions.html){:target="_blank"} is pretty useful, I come back to it regularly.   
-2. John Ricco has a short intro to [basics of data wrangling](https://johnricco.github.io/2016/06/14/stata-dplyr/){:target="_blank"}  
-3. Nick Huntington-Klein, Grant McDermott and Kyle Butts collaborate for a new (2021) and superb transition resource [From Stata to R](https://stata2r.github.io), like check this out on [cleaning](https://stata2r.github.io/data_cleaning.html#sort). A key position I love is building with a few pacakges only!
+2. Nick Huntington-Klein, Grant McDermott and Kyle Butts collaborate for a new (2021) and superb transition resource [From Stata to R](https://stata2r.github.io). A key position I love is building with a few pacakges only!
 
 ## R to/from Python
 For this textbook, Stata and R code were developed early on, and we started to work on Python code set only after the proof was ready. Some ideas we (and our RAs) found useful
 1. [GGplot for Python by Monash ](https://monashdatafluency.github.io/python-workshop-base/modules/plotting_with_ggplot/){:target="_blank"}    
-2. [Pandas and tidyverse](https://www.carloscamara.es/en/blog/2020/02/08/manipulating-dataframes-in-r-and-python/){:target="_blank"}     
-3. A new textbook, [Foundations of Statistics for Data Scientists ](http://stat4ds.rwth-aachen.de/) by Alan Agresti and Maria Kateri has a very expansive code support in [R](http://stat4ds.rwth-aachen.de/pdf/DS_R_webAppendix.pdf), [Python](http://stat4ds.rwth-aachen.de/pdf/DS_Python_webAppendix.pdf) 
+2. A new textbook, [Foundations of Statistics for Data Scientists ](http://stat4ds.rwth-aachen.de/) by Alan Agresti and Maria Kateri has a very expansive code support in [R](http://stat4ds.rwth-aachen.de/pdf/DS_R_webAppendix.pdf), [Python](http://stat4ds.rwth-aachen.de/pdf/DS_Python_webAppendix.pdf) 
 
 ## Python for Stata users
 1. Adam Ross Nelson (2020) [Going From Stata to Pandas](https://towardsdatascience.com/going-from-stata-to-pandas-706888525acf) -- a longer post on Medium

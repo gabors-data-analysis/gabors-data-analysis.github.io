@@ -1,4 +1,5 @@
 ---
+search: false  # unlisted: keep out of site search
 layout: single
 classes: wide
 title: "Data Analysis, AI and Human Agency -- links"

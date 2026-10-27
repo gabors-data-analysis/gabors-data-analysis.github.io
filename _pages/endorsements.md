@@ -3,7 +3,7 @@ permalink: /endorsements
 redirect_from:
   - /instructor-reviews
   - /student-feedback
-# title: "Endorsements"
+title: "What people say"
 description: "What leading scholars and practitioners say about Data Analysis for Business, Economics, and Policy by Gábor Békés and Gábor Kézdi."
 classes: [wide, fullbleed]
 toc: false

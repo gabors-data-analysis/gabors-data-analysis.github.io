@@ -84,10 +84,6 @@ The book comes with much more than slides and code. Everything below is free: co
     <p class="gda-card__text">Our favourite external books and courses for R, Python and Stata.</p>
   </div>
   <div class="gda-card gda-card--purple">
-    <h3 class="gda-card__title"><a href="https://github.com/gabors-data-analysis/da-simulated-hotel-wrangling" target="_blank" rel="noopener">Austrian hotels wrangling dataset</a></h3>
-    <p class="gda-card__text">A realistic, synthetically generated multi-table hotel dataset for practicing data wrangling and joins.</p>
-  </div>
-  <div class="gda-card gda-card--teal">
     <h3 class="gda-card__title"><a href="{{ '/data-job-samples' | relative_url }}">Data job ads</a></h3>
     <p class="gda-card__text">Real job ads in data analysis, to see what skills employers ask for.</p>
   </div>

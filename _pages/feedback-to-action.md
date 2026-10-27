@@ -1,4 +1,5 @@
 ---
+search: false  # unlisted: keep out of site search
 layout: single
 classes: wide
 title: "CUP Feedback to action for second edition"

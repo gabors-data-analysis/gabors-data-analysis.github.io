@@ -1,4 +1,5 @@
 ---
+search: false  # unlisted: keep out of site search
 permalink: /magyar-eloadas/
 title: "Rövid magyar előadás"
 toc: false

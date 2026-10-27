@@ -24,7 +24,7 @@ Our mission is "Creating innovative open-source educational resources and suppor
 
 The lab serves as a bridge between academia and business, and between research and teaching. We create high-quality and innovative teaching materials for data analysis and econometrics and support data sciene and AI intensive research projects in economics and social sciences. 
 
-The lab was founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK](https://www.gaborbekes.com)) and [Gábor Kézdi](https://kezdigabor.life/) (formerly: Corvinus, CEU, KRTK and U Michigan, USA) 
+The lab was founded by Gábor Békés ([CEU, Austria; KRTK, Hungary and CEPR, UK](https://www.gaborbekes.com)) and [Gábor Kézdi](https://sites.google.com/site/gaborkezdi/) (formerly: Corvinus, CEU, KRTK and U Michigan, USA) 
 
 
 ## What we do

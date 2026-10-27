@@ -1,6 +1,7 @@
 ---
 permalink: /blogs-and-more
 title: "Blogs and more"
+description: "Articles, blog posts, podcasts, and practice data and code on data analysis and statistics, recommended by the authors of the Békés–Kézdi Data Analysis textbook."
 classes: wide
 toc: false
 author_profile: false

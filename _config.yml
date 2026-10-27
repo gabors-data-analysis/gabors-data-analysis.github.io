@@ -133,9 +133,6 @@ footer:
     - label: "Lab"
       icon: "fas fa-fw fa-flask"
       url: /lab
-    - label: "Sitemap"
-      icon: "fas fa-fw fa-sitemap"
-      url: /sitemap/
     - label: "Terms & privacy"
       icon: "fas fa-fw fa-file-alt"
       url: /terms/

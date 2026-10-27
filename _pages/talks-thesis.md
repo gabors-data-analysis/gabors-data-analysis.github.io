@@ -1,4 +1,5 @@
 ---
+search: false  # unlisted: keep out of site search
 permalink: /talks-thesis
 title: "The seven steps of data analysis"
 layout: single

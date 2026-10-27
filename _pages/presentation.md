@@ -1,4 +1,5 @@
 ---
+search: false  # unlisted: keep out of site search
 permalink: /presentation/
 title: "Presentations"
 toc: false

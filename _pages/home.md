@@ -164,7 +164,7 @@ redirect_from:
 </script>
 
 <section class="gda-section">
-  <h2 class="gda-section__title">Find your path</h2>
+  <h2 class="gda-section__title">Jump to key content</h2>
   <div class="gda-cards">
     <div class="gda-card gda-card--blue">
       <h3 class="gda-card__title"><a href="{{ '/instructors/' | relative_url }}">Instructors</a></h3>
@@ -298,7 +298,7 @@ redirect_from:
 
 <div markdown="1">
 ### Gábor Kézdi
-[Gábor Kézdi](https://kezdigabor.life/) was a Research Associate Professor at the University of Michigan's [Institute for Social Research](https://isr.umich.edu/). He published in top journals in economics, statistics, and political science on household finances, health, education, demography, and ethnic disadvantage, and was co-investigator of the [Health and Retirement Study](https://hrs.isr.umich.edu/about) in the U.S. He taught data analysis and econometrics from undergraduate to PhD level from 2002.
+[Gábor Kézdi](https://sites.google.com/site/gaborkezdi/) was a Research Associate Professor at the University of Michigan's [Institute for Social Research](https://isr.umich.edu/). He published in top journals in economics, statistics, and political science on household finances, health, education, demography, and ethnic disadvantage, and was co-investigator of the [Health and Retirement Study](https://hrs.isr.umich.edu/about) in the U.S. He taught data analysis and econometrics from undergraduate to PhD level from 2002.
 </div>
 
   </div>

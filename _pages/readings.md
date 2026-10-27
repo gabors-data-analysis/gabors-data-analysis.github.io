@@ -1,6 +1,7 @@
 ---
 permalink: /readings
 title: "Reading recommendations"
+description: "Books we recommend next to the Békés–Kézdi Data Analysis textbook: popular books on data and decisions, sports analytics, data visualization, and advanced books on prediction and causal inference."
 classes: wide
 toc: false
 author_profile: false
