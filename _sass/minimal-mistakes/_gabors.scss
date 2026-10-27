@@ -17,6 +17,17 @@
       position: relative;
     }
 
+    /* tighter than the theme's 1rem so all groups fit at laptop widths */
+    > li > a {
+      margin: 0 0.7rem;
+    }
+
+    /* last dropdown opens leftwards so it stays on screen */
+    > li:last-child > .subnav {
+      left: auto;
+      right: 0.5rem;
+    }
+
     .subnav {
       position: absolute;
       top: 100%;

@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title: "Teaching Information and Resources"
-permalink: /resources/
+permalink: /instructor-resources/
 author_profile: true
 redirect_from:
   - /md/

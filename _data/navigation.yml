@@ -6,6 +6,9 @@
 #
 # `sidebar` drives the grouped left-hand navigation shown on content pages
 # (wired up via `sidebar: nav: "sidebar"` in _config.yml defaults).
+# It mirrors `main` and adds About; keep the two in step.
+# v2: no Students group (student guide sits under Book); Resources hub replaces
+# Further reading and absorbs coding courses, dashboards and practice material.
 
 main:
   - title: "Book"
@@ -15,49 +18,68 @@ main:
         url: /whythisbook/
       - title: "Chapters"
         url: /chapters/
+      - title: "Case studies"
+        url: /casestudies/
       - title: "Slides — all 24 chapters"
         url: /slides/
-      - title: "Authors"
-        url: /authors/
-      - title: "Endorsements"
+      - title: "Student guide"
+        url: /students/
+      - title: "What people say"
         url: /endorsements
       - title: "Errata"
         url: /errata/
+      - title: "2nd edition (in progress)"
+        url: /second-edition/
+      - title: "Magyar kiadás"
+        url: /magyar-kiadas/
       - title: "Get the book"
         url: /order
-
-  - title: "Slides"
-    url: /slides/
-
-  - title: "Case Studies"
-    url: /casestudies/
-    children:
-      - title: "All 47 case studies"
-        url: /casestudies/
-      - title: "Dataset summaries"
-        url: /datasets/
-      - title: "Extra data exercises"
-        url: /additional-data-exercises
 
   - title: "Data & Code"
     url: /data-and-code/
     children:
       - title: "Get data & code"
         url: /data-and-code/
-      - title: "Open-source ecosystem"
-        url: /ecosystem/
-      - title: "Interactive dashboards"
-        url: https://dashboards.gabors-data-analysis.com/
       - title: "Dataset summaries"
         url: /datasets/
-      - title: "Setup: R"
-        url: /howto-r/
-      - title: "Setup: Python"
-        url: /howto-python/
-      - title: "Setup: Stata"
-        url: /howto-stata/
+      - title: "Set up R, Python, Stata"
+        url: /data-and-code/#set-up-your-machine
+      - title: "Interactive dashboards"
+        url: https://dashboards.gabors-data-analysis.com/
+
+  - title: "Resources"
+    url: /resources/
+    children:
+      - title: "All resources"
+        url: /resources/
       - title: "Coding courses"
         url: /code-courses/
+      - title: "Interactive dashboards"
+        url: https://dashboards.gabors-data-analysis.com/
+      - title: "Practice questions"
+        url: /students/#student-qa-and-support
+      - title: "Extra data exercises"
+        url: /additional-data-exercises
+      - title: "Books"
+        url: /readings
+      - title: "Extra reading by chapter"
+        url: /additional-reading
+      - title: "Blogs, articles, podcasts"
+        url: /blogs-and-more
+      - title: "Beyond the book"
+        url: /beyond
+      - title: "Data source ideas"
+        url: /data-source-ideas
+
+  - title: "AI"
+    url: /ai-course/
+    children:
+      - title: "Data Analysis with AI course"
+        url: /ai-course/
+      - title: "AI policy for classes"
+        url: /aipolicy/
+      - title: "Teaching coding in the AI era"
+        url: /coding-da-ai-memo/
 
   - title: "Instructors"
     url: /instructors/
@@ -72,44 +94,82 @@ main:
         url: /courses-using/
       - title: "Instructor feedback"
         url: /instructor-feedback/
+      - title: "Slide sources (Overleaf)"
+        url: /overleaf-users
 
 # Grouped sidebar navigation, shown on content pages for site-wide wayfinding.
 sidebar:
-  - title: The Book
+  - title: "Book"
     url: /whythisbook/
     children:
       - title: "Why this book?"
         url: /whythisbook/
       - title: "Chapters"
         url: /chapters/
-      - title: "Slides — all 24 chapters"
-        url: /slides/
       - title: "Case studies"
         url: /casestudies/
-      - title: "Endorsements"
+      - title: "Slides — all 24 chapters"
+        url: /slides/
+      - title: "Student guide"
+        url: /students/
+      - title: "What people say"
         url: /endorsements
       - title: "Errata"
         url: /errata/
+      - title: "2nd edition (in progress)"
+        url: /second-edition/
+      - title: "Magyar kiadás"
+        url: /magyar-kiadas/
       - title: "Get the book"
         url: /order
 
-  - title: Data & Code
+  - title: "Data & Code"
     url: /data-and-code/
     children:
       - title: "Get data & code"
         url: /data-and-code/
-      - title: "Open-source ecosystem"
-        url: /ecosystem/
-      - title: "Interactive dashboards"
-        url: https://dashboards.gabors-data-analysis.com/
       - title: "Dataset summaries"
         url: /datasets/
-      - title: "Setup guides (R, Python, Stata)"
-        url: /howto-r/
+      - title: "Set up R, Python, Stata"
+        url: /data-and-code/#set-up-your-machine
+      - title: "Interactive dashboards"
+        url: https://dashboards.gabors-data-analysis.com/
+
+  - title: "Resources"
+    url: /resources/
+    children:
+      - title: "All resources"
+        url: /resources/
       - title: "Coding courses"
         url: /code-courses/
+      - title: "Interactive dashboards"
+        url: https://dashboards.gabors-data-analysis.com/
+      - title: "Practice questions"
+        url: /students/#student-qa-and-support
+      - title: "Extra data exercises"
+        url: /additional-data-exercises
+      - title: "Books"
+        url: /readings
+      - title: "Extra reading by chapter"
+        url: /additional-reading
+      - title: "Blogs, articles, podcasts"
+        url: /blogs-and-more
+      - title: "Beyond the book"
+        url: /beyond
+      - title: "Data source ideas"
+        url: /data-source-ideas
 
-  - title: Teaching
+  - title: "AI"
+    url: /ai-course/
+    children:
+      - title: "Data Analysis with AI course"
+        url: /ai-course/
+      - title: "AI policy for classes"
+        url: /aipolicy/
+      - title: "Teaching coding in the AI era"
+        url: /coding-da-ai-memo/
+
+  - title: "Instructors"
     url: /instructors/
     children:
       - title: "Instructor hub"
@@ -120,31 +180,21 @@ sidebar:
         url: /instructor-faq/
       - title: "Courses using the book"
         url: /courses-using/
+      - title: "Instructor feedback"
+        url: /instructor-feedback/
+      - title: "Slide sources (Overleaf)"
+        url: /overleaf-users
 
-  - title: Learning
-    url: /students/
-    children:
-      - title: "Student hub"
-        url: /students/
-      - title: "Getting started"
-        url: /getting-started
-      - title: "Practice: Q&A by part"
-        url: /part1-qanda
-      - title: "Dictionary (EN–HU)"
-        url: /dictionary
-
-  - title: AI
-    url: /ai-course/
-    children:
-      - title: "AI course — full material"
-        url: /ai-course/
-
-  - title: About
+  - title: "About"
     url: /authors/
     children:
       - title: "Authors"
         url: /authors/
+      - title: "Gabors Data Analysis and AI Lab"
+        url: /lab
       - title: "Our thanks"
         url: /our-thanks/
+      - title: "Pictures"
+        url: /book-pictures/
       - title: "Contact us"
         url: /contact-us/

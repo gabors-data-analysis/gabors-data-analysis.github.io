@@ -127,6 +127,18 @@ footer:
     - label: "Contact us"
       icon: "fas fa-envelope-square"
       url: /contact-us
+    - label: "Authors"
+      icon: "fas fa-fw fa-user"
+      url: /authors/
+    - label: "Lab"
+      icon: "fas fa-fw fa-flask"
+      url: /lab
+    - label: "Sitemap"
+      icon: "fas fa-fw fa-sitemap"
+      url: /sitemap/
+    - label: "Terms & privacy"
+      icon: "fas fa-fw fa-file-alt"
+      url: /terms/
 
 
 # Reading Files
