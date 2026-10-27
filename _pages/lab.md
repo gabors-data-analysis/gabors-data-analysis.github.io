@@ -1,5 +1,9 @@
 ---
 permalink: /lab
+redirect_from:
+  - /gabors-lab
+  - /dawai-ra/
+  - /dawai-ra.html
 title: "Gabors Data Analysis and AI Lab"
 toc: false
 author_profile: false
@@ -32,7 +36,7 @@ Example projects are:
 * [Data Analysis with AI course](https://gabors-data-analysis.com/ai-course/)
 * [introduction to data science course](https://github.com/earino/ECBS5294)
 
-For more details, see [our projetcs](/gabors-lab-projects.md)
+For more details, see [our projects]({{ '/gabors-lab-projects' | relative_url }}).
 
 ## Where we are
 
@@ -41,6 +45,8 @@ We work in Vienna (AT), Budapest (HU) and online.
 We are at [LinkedIn](https://www.linkedin.com/company/gabors-data-lab/)
 
 ## Partners
+
+What we do with partners, and how to join: [corporate partners]({{ '/lab-partners' | relative_url }}).
 
 ### Academic
 

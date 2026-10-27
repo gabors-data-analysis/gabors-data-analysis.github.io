@@ -11,15 +11,9 @@ redirect_from:
 
 Here is some tip and advice on how to learn coding.
 
-# NEW! Neu! Nuevo! Új! Nouveau! Our own coding courses
+# Our own coding courses
 
-Well, well, well. We are developing coding courses to go along with the matreial in the book. 
-
-The courses serve as an introduction to the R/Python/Stata programming languages and software environments for data exploration, data munging, data visualization, reporting, and modeling.
-
-* Coding for Data Analysis with **[Rstats](https://github.com/gabors-data-analysis/da-coding-rstats)**  - first version out
-* Coding for Data Analysis with **[Python](https://github.com/gabors-data-analysis/da-coding-python)** - first version soon
-* Coding for Data Analysis with **[Stata](https://github.com/gabors-data-analysis/da-coding-stata)** - in development 
+We have free coding courses that go along with the book, in **[R](https://github.com/gabors-data-analysis/da-coding-rstats)**, **[Python](https://github.com/gabors-data-analysis/da-coding-python)** and **[Stata](https://github.com/gabors-data-analysis/da-coding-stata)**. See [Coding courses]({{ '/code-courses/' | relative_url }}) for details.
 
 
 # Big picture

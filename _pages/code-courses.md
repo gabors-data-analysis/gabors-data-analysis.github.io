@@ -10,9 +10,9 @@ redirect_from:
 
 
 
-# NEW! Neu! Nuevo! Új! Nouveau! Our own coding courses
+# Our own coding courses
 
-Well, well, well. We are developing coding courses to go along with the matreial in the book. 
+We built free coding courses to go along with the material in the book.
 
 This course material is a supplement to **[Data Analysis for Business, Economics, and Policy](https://www.cambridge.org/highereducation/books/data-analysis-for-business-economics-and-policy/D67A1B0B56176D6D6A92E27F3F82AA20)**. For more, see the textbook's website [**gabors-data-analysis.com**](https://gabors-data-analysis.com/).
 

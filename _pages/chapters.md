@@ -6,8 +6,9 @@ permalink: /chapters/
 title: "Chapters"
 author_profile: false
 redirect_from:
-  - /md/
   - /chapters.html
+  - /chapter-details/
+  - /chapter-details.html
 ---
 
 {% include base_path %}

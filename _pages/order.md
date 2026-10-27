@@ -1,5 +1,7 @@
 ---
 permalink: /order
+redirect_from:
+  - /preorder
 title: "Order options"
 toc: false
 author_profile: false
@@ -13,6 +15,8 @@ Paperback, hardcover, or e-book.
 ![textbook xmas](/images/book-xmas.jpg){:height="60%" width="60%"}
 
 
+
+Want to share it with colleagues or students? [Download the one-page flyer]({{ '/flyer' | relative_url }}).
 
 ## Publisher
 

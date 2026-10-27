@@ -9,6 +9,8 @@ toc_sticky: true
 redirect_from:
   - /md/
   - /instructors.html
+  - /instructor-resources/
+  - /materials/
 ---
 
 Everything you need to **adopt** and **teach** *Data Analysis for Business, Economics, and Policy*: slides, solutions, teaching guide, datasets, FAQs, and adoption examples.
@@ -54,24 +56,34 @@ Further resources:
 [Instructor FAQ]({{ '/instructor-faq' | relative_url }}){: .btn .btn--primary} · [Instructors’ feedback and reviews]({{ '/instructor-feedback' | relative_url }}){: .btn .btn--primary} · [Endorsements]({{ '/endorsements' | relative_url }}){: .btn .btn--primary}
 
 
-## Recources
+## Resources
 
-- **Slides**: PDF versions are available on the [Chapters page]({{ '/chapters' | relative_url }}).  
-  Editable Overleaf/LaTeX source files can be requested via [contact us]({{ '/contact-us' | relative_url }}).  
+- **Slides**: PDF slides for all 24 chapters are on the [Slides page]({{ '/slides/' | relative_url }}).  
+  Instructors adopting the book can get the editable LaTeX/Overleaf sources, with all graphs and tables, to adapt them to their course: see [slide sources on Overleaf]({{ '/overleaf-users' | relative_url }}) or [contact us]({{ '/contact-us' | relative_url }}).  
 
 - **Solutions to practice questions**: A 100-page set containing solutions to 360 practice questions, available via [Cambridge University Press](https://www.cambridge.org/bekeskezdi) (registration required).  
 
 {: .notice--info}
 Solutions for instructors are provided through Cambridge University Press (CUP); instructor verification may be required.
 
+## Look inside the book
+
+- [Front matter (PDF)](https://assets.cambridge.org/97811084/83018/frontmatter/9781108483018_frontmatter.pdf){:target="_blank" rel="noopener"} · [Table of contents (PDF)](https://assets.cambridge.org/97811084/83018/toc/9781108483018_toc.pdf){:target="_blank" rel="noopener"} · [Index (PDF)](https://assets.cambridge.org/97811084/83018/index/9781108483018_index.pdf){:target="_blank" rel="noopener"}
+- [Sample chapters 10 and 15](https://www.book2look.com/vbook.aspx?id=9781108483018){:target="_blank" rel="noopener"}
+- [Chapter-by-chapter summaries]({{ '/chapters/' | relative_url }})
+- [Short summary on why use this book (PDF)]({{ '/files/bekes-kezdi-data-analysis-summary.pdf' | relative_url }})
+- [Cover image (high resolution)]({{ '/images/cover-full_hd.png' | relative_url }})
+
 ## Supplementary resources
 
-[Reading suggestions]({{ '/readings' | relative_url }}){: .btn .btn--primary} · [Suggested datasets]({{ '/data-source-ideas' | relative_url }}){: .btn .btn--primary} · [Learning-to-code ideas]({{ '/code-learn' | relative_url }}){: .btn .btn--primary}
+Coding courses, interactive dashboards, practice questions and reading recommendations are collected on the [Resources page]({{ '/resources/' | relative_url }}).
+
+[Reading suggestions]({{ '/readings' | relative_url }}){: .btn .btn--primary} · [Blogs, articles, podcasts]({{ '/blogs-and-more' | relative_url }}){: .btn .btn--primary} · [Suggested datasets]({{ '/data-source-ideas' | relative_url }}){: .btn .btn--primary} · [Learning-to-code ideas]({{ '/code-learn' | relative_url }}){: .btn .btn--primary}
 
 
 ## Support & updates
 
-- [Errata]({{ '/errata' | relative_url }}) – corrections and updates  
+- [Errata]({{ '/errata' | relative_url }}) – corrections and updates; if you find one, please [let us know]({{ '/contact-us' | relative_url }})  
 - Chapter Q&A archives: [Part I]({{ '/part1-qanda' | relative_url }}) · [Part II]({{ '/part2-qanda' | relative_url }}) · [Part III]({{ '/part3-qanda' | relative_url }}) · [Part IV]({{ '/part4-qanda' | relative_url }})  
 - [GitHub issues](https://github.com/gabors-data-analysis/da_case_studies/issues){:target="_blank" rel="noopener noreferrer"} – to report issues or suggest improvements  
 - [Cambridge University Press (CUP) hub](https://www.cambridge.org/bekeskezdi){:target="_blank" rel="noopener noreferrer"} – official publisher resources  

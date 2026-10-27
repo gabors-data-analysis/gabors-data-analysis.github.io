@@ -2,6 +2,11 @@
 title: "Resources"
 description: "Free resources around the Bekes-Kezdi Data Analysis textbook: coding courses in R, Python and Stata, the Data Analysis with AI course, interactive dashboards, practice questions, and reading recommendations."
 permalink: /resources/
+redirect_from:
+  - /resources.html
+  - /ecosystem/
+  - /ecosystem.html
+  - /open-source/
 layout: single
 classes: wide
 author_profile: false

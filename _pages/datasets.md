@@ -294,7 +294,7 @@ Each dataset entry shows its content and coverage, key variables, related case s
 [CH21A]({{ '/casestudies/#ch21a-founderfamily-ownership-and-quality-of-management' | relative_url }}){: .btn .btn--accent } - Founder/family ownership and quality of management
 
 <small>**Source**: Prepared for this study by the [World Management Survey project](https://worldmanagementsurvey.org/about-us/){:target="_blank"}.    
-*Thanks to Scur, Bloom and Van Reenen!*  
+*Thanks to Scur, Bloom and Van Reenen!* More on our [collaboration with the World Management Survey]({{ '/wms-gabors/' | relative_url }}).  
 **Copyright**: Must reference</small>
 
 

@@ -7,6 +7,8 @@ author_profile: true
 redirect_from:
   - /md/
   - /errata.html
+  - /errata-ch14/
+  - /errata-ch14.html
 ---
 
 {% include base_path %}

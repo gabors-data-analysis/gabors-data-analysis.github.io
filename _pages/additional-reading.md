@@ -1,6 +1,6 @@
 ---
 permalink: /additional-reading
-title: "Additional Reading Suggestions"
+title: "Extra reading by chapter"
 classes: [wide, fullbleed]
 toc: false
 author_profile: false

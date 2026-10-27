@@ -90,4 +90,4 @@ The fastest way to start is in the cloud — no install needed. Or set up locall
 
 ---
 
-**Looking for more?** Coding courses from zero, the AI course and open book, and interactive teaching apps all live in the [**open-source ecosystem**]({{ '/ecosystem/' | relative_url }}).
+**Looking for more?** Coding courses from zero, the AI course and open book, and interactive teaching apps are collected on the [**Resources page**]({{ '/resources/' | relative_url }}).

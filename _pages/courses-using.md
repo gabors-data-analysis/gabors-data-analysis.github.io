@@ -7,6 +7,8 @@ toc: false
 author_profile: false
 redirect_from:
   - /courses-using.html
+  - /courses-map/
+  - /courses-map.html
 ---
 
 

@@ -6,6 +6,8 @@ author_profile: false
 redirect_from:
   - "/nmpp/"
   - "/nmpp.html"
+  - /which-coding-language/
+  - /which-coding-language.html
 ---
 
 
@@ -43,6 +45,14 @@ But,
 6. If machine learning is something that matters, R and Python are equally good (maybe Python has some new libraries first), Stata is currently much weaker
 7. If you plan to work with large datasets and speed matters, R and Python have often some very fast solutions. 
 
+
+### The 2022 debate
+
+In December 2022 we ran a public R vs Python vs Stata debate at CEU, with a poll of the audience and a survey. The anonymised [poll and survey data are on GitHub](https://github.com/gabors-data-analysis/r-python-stata){:target="_blank" rel="noopener"}; feel free to use them, and let us know if you do.
+
+## Learn to code
+
+Whichever language you pick, our free [coding courses]({{ '/code-courses/' | relative_url }}) take you from zero to doing the case studies yourself, in [R](https://github.com/gabors-data-analysis/da-coding-rstats){:target="_blank" rel="noopener"}, [Python](https://github.com/gabors-data-analysis/da-coding-python){:target="_blank" rel="noopener"} or [Stata](https://github.com/gabors-data-analysis/da-coding-stata){:target="_blank" rel="noopener"}. For more, see our list of [external resources for learning to code]({{ '/code-learn/' | relative_url }}).
 
 ## Others
 There are many other popular tools, such as SAS, SPSS, MATLAB and newer languages like Julia. We do not have codes in these tools, but if you want to *translate* our scripts, we would love to share them, too. 

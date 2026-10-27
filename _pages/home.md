@@ -12,6 +12,8 @@ redirect_from:
   - /home.html
   - /about/
   - /about.html
+  - /one-page-summary
+  - /getting-started
 ---
 
 {% include base_path %}
@@ -29,7 +31,7 @@ redirect_from:
       <a href="{{ '/slides/' | relative_url }}" class="gda-btn gda-btn--primary">Free slides — all 24 chapters</a>
       <a href="{{ '/order' | relative_url }}" class="gda-btn gda-btn--green">Get the book</a>
       <a href="{{ '/errata/' | relative_url }}" class="gda-btn gda-btn--yellow">Errata</a>
-      <a href="{{ '/ecosystem/' | relative_url }}" class="gda-btn gda-btn--teal">Open-source ecosystem</a>
+      <a href="{{ '/resources/' | relative_url }}" class="gda-btn gda-btn--teal">Free resources</a>
       <a href="{{ '/instructors/' | relative_url }}" class="gda-btn gda-btn--ghost">For instructors</a>
       <a href="{{ '/students/' | relative_url }}" class="gda-btn gda-btn--ghost">For students</a>
     </div>
@@ -77,7 +79,7 @@ redirect_from:
       <h3 class="gda-card__title"><a href="{{ '/students/' | relative_url }}">Students</a></h3>
       <p class="gda-card__text">Learn with the book: quick links, coding setup in R, Python, or Stata, practice Q&amp;A, and study advice.</p>
       <ul class="gda-card__links">
-        <li><a href="{{ '/getting-started' | relative_url }}">Getting started</a></li>
+        <li><a href="{{ '/students/#start-here-in-3-steps' | relative_url }}">Getting started</a></li>
         <li><a href="{{ '/code-courses/' | relative_url }}">Coding courses</a></li>
         <li><a href="{{ '/part1-qanda' | relative_url }}">Practice Q&amp;A</a></li>
       </ul>
@@ -88,7 +90,7 @@ redirect_from:
       <ul class="gda-card__links">
         <li><a href="https://osf.io/7epdj/" target="_blank" rel="noopener">Datasets on OSF</a></li>
         <li><a href="https://github.com/gabors-data-analysis/da_case_studies" target="_blank" rel="noopener">Code on GitHub</a></li>
-        <li><a href="{{ '/ecosystem/' | relative_url }}">Open-source ecosystem</a></li>
+        <li><a href="{{ '/resources/' | relative_url }}">All free resources</a></li>
       </ul>
     </div>
     <div class="gda-card gda-card--purple">
@@ -125,7 +127,7 @@ redirect_from:
       </ul>
     </div>
     <div class="gda-card gda-card--blue">
-      <h3 class="gda-card__title"><a href="{{ '/ecosystem/' | relative_url }}">The full ecosystem</a></h3>
+      <h3 class="gda-card__title"><a href="{{ '/resources/' | relative_url }}">All resources</a></h3>
       <p class="gda-card__text">Case study code, datasets, courses, AI materials, and teaching apps — everything we built, in one place.</p>
     </div>
   </div>
