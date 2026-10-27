@@ -1,8 +1,9 @@
 ---
 title: "Resources"
-description: "Free resources around the Bekes-Kezdi Data Analysis textbook: coding courses in R, Python and Stata, the Data Analysis with AI course, interactive dashboards, practice questions, and reading recommendations."
+description: "Free resources around the Bekes-Kezdi Data Analysis textbook: coding courses in R, Python and Stata, the Data Analysis with AI course, interactive dashboards, and reading recommendations."
 permalink: /resources/
 redirect_from:
+  - /additional-data-exercises
   - /resources.html
   - /ecosystem/
   - /ecosystem.html
@@ -16,7 +17,7 @@ toc_sticky: true
 
 The book comes with much more than slides and code. Everything below is free: courses, interactive tools, practice material, and what to read next. Most of it lives in our [GitHub organization](https://github.com/gabors-data-analysis){:target="_blank" rel="noopener"}.
 
-## Learn and practice
+## Courses and tools
 
 <div class="gda-cards">
   <div class="gda-card gda-card--blue">
@@ -39,14 +40,6 @@ The book comes with much more than slides and code. Everything below is free: co
     <p class="gda-card__text">Play with the concepts in your browser: distributions, generalization, measurement error, regression, confounders, common support, panel models, and the hotels case study.</p>
     <ul class="gda-card__links">
       <li><a href="https://dashboards.gabors-data-analysis.com/" target="_blank" rel="noopener">All dashboards →</a></li>
-    </ul>
-  </div>
-  <div class="gda-card gda-card--green">
-    <h3 class="gda-card__title"><a href="{{ '/students/#student-qa-and-support' | relative_url }}">Practice questions</a></h3>
-    <p class="gda-card__text">Questions and answers by part of the book, plus extra data exercises for each chapter.</p>
-    <ul class="gda-card__links">
-      <li>Q&amp;A: <a href="{{ '/part1-qanda' | relative_url }}">Part I</a> · <a href="{{ '/part2-qanda' | relative_url }}">II</a> · <a href="{{ '/part3-qanda' | relative_url }}">III</a> · <a href="{{ '/part4-qanda' | relative_url }}">IV</a></li>
-      <li><a href="{{ '/additional-data-exercises' | relative_url }}">Extra data exercises</a></li>
     </ul>
   </div>
 </div>

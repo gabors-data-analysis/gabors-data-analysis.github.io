@@ -56,10 +56,6 @@ main:
         url: /code-courses/
       - title: "Interactive dashboards"
         url: https://dashboards.gabors-data-analysis.com/
-      - title: "Practice questions"
-        url: /students/#student-qa-and-support
-      - title: "Extra data exercises"
-        url: /additional-data-exercises
       - title: "Books"
         url: /readings
       - title: "Extra reading by chapter"
@@ -144,10 +140,6 @@ sidebar:
         url: /code-courses/
       - title: "Interactive dashboards"
         url: https://dashboards.gabors-data-analysis.com/
-      - title: "Practice questions"
-        url: /students/#student-qa-and-support
-      - title: "Extra data exercises"
-        url: /additional-data-exercises
       - title: "Books"
         url: /readings
       - title: "Extra reading by chapter"

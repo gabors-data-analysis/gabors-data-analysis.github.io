@@ -76,7 +76,7 @@ Solutions for instructors are provided through Cambridge University Press (CUP);
 
 ## Supplementary resources
 
-Coding courses, interactive dashboards, practice questions and reading recommendations are collected on the [Resources page]({{ '/resources/' | relative_url }}).
+Coding courses, interactive dashboards and reading recommendations are collected on the [Resources page]({{ '/resources/' | relative_url }}).
 
 [Reading suggestions]({{ '/readings' | relative_url }}){: .btn .btn--primary} · [Blogs, articles, podcasts]({{ '/blogs-and-more' | relative_url }}){: .btn .btn--primary} · [Suggested datasets]({{ '/data-source-ideas' | relative_url }}){: .btn .btn--primary} · [Learning-to-code ideas]({{ '/code-learn' | relative_url }}){: .btn .btn--primary}
 

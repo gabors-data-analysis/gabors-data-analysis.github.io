@@ -181,7 +181,6 @@ redirect_from:
       <ul class="gda-card__links">
         <li><a href="{{ '/students/#start-here-in-3-steps' | relative_url }}">Getting started</a></li>
         <li><a href="{{ '/code-courses/' | relative_url }}">Coding courses</a></li>
-        <li><a href="{{ '/students/#student-qa-and-support' | relative_url }}">Practice Q&amp;A</a></li>
       </ul>
     </div>
     <div class="gda-card gda-card--teal">
@@ -260,7 +259,7 @@ redirect_from:
     </div>
     <div class="gda-card gda-card--blue">
       <h3 class="gda-card__title"><a href="{{ '/resources/' | relative_url }}">All resources</a></h3>
-      <p class="gda-card__text">Practice questions, data exercises, reading suggestions and data sources, together with everything above, on one page.</p>
+      <p class="gda-card__text">Reading suggestions and data sources, together with everything above, on one page.</p>
     </div>
   </div>
 </section>
