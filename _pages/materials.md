@@ -38,6 +38,7 @@ redirect_from:
 
 ### Suggestions and resources
 * [Reading recommendation](/readings)
+* [Blogs, articles and podcasts](/blogs-and-more)
 * [Suggested datasets for projects and practice](/data-source-ideas)
 * [Learning to code ideas](/code-learn)
 
