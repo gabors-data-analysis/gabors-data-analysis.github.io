@@ -200,6 +200,9 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 
 ## Adopting Universities around the world
 
-<iframe src="https://www.google.com/maps/d/embed?mid=1pC2_o2u9oILlA6nLYkXm34UpVSKoxQQP&ehbc=2E312F"
-  onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
-  style="height:500px;width:100%;border:none;overflow:hidden;"></iframe>
+<iframe src="{{ '/files/adoption-map.html' | relative_url }}"
+  title="Map of courses using the textbook"
+  loading="lazy"
+  style="width:100%;aspect-ratio:1000/545;min-height:260px;border:none;overflow:hidden;"></iframe>
+
+The map is built from CUP's adoption records (2020–2026), this list and CUP's 2025 instructor survey, so it covers more courses than the tables above.
