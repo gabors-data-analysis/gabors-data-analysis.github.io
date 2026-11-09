@@ -2,7 +2,7 @@
 layout: single
 classes: [wide, compact-tables]
 permalink: /courses-using/
-title: "List of courses already adopting the textbook"
+title: "Courses using the textbook"
 toc: false
 author_profile: false
 redirect_from:
@@ -13,10 +13,14 @@ redirect_from:
 
 
 
-## Details of adopting programs and syllabi
+The textbook is used in **300+ courses at 186 universities in 35 countries** — in Economics, Finance, Business Analytics, Data Science, Public Policy, Business, and beyond. One dot per city, sized by the number of courses; the year buttons replay the spread since 2020.
 
-This is a (not comprehensive) list of courses that use the textbook (September 2022).  
-*(Contact/DM if you teach a course that is not listed here!)*
+<iframe src="{{ '/files/adoption-map.html' | relative_url }}"
+  title="Map of courses using the textbook"
+  loading="lazy"
+  style="width:100%;aspect-ratio:1000/545;min-height:260px;border:none;overflow:hidden;"></iframe>
+
+*Teaching with the book and not on the map? [Let us know]({{ '/contact-us/' | relative_url }}).*
 
 <style>
 /* --- Ultra-compact tables only on this page (classes: compact-tables) --- */
@@ -60,8 +64,24 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 .compact-tables .page__content td {
   border: 1px solid var(--mm-grey-200, #e6e6e6);
 }
+.compact-tables details.course-list > summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.05em;
+  padding: .6rem .8rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background: #f7f9fc;
+}
+.compact-tables details.course-list > summary:hover { background: #eef2f8; }
+.compact-tables details.course-list[open] > summary { margin-bottom: .6rem; }
+/* the responsive table rule above sets display:block, which would override the
+   browser's hiding of closed-details content — force-hide when collapsed */
+.compact-tables details.course-list:not([open]) > :not(summary) { display: none !important; }
 </style>
 
+<details class="course-list" markdown="1">
+<summary>Detailed list of adopting courses and syllabi, by field — click to open (a 2022–23 snapshot; adoption has grown since)</summary>
 
 ## Economics
 
@@ -197,12 +217,6 @@ This is a (not comprehensive) list of courses that use the textbook (September 2
 | University of Plymouth | UK | Logistics, Systems and Methods | IT | MS |  |  |
 | Eindhoven University of Technology | Netherlands | [Social Cost Benefit Analysis](https://research.tue.nl/en/courses/economic-policy-in-practice-social-cost-benefit-analysis) | Industrial Engineering / Innovation | MA/MSc |  | - |
 
-
-## Adopting Universities around the world
-
-<iframe src="{{ '/files/adoption-map.html' | relative_url }}"
-  title="Map of courses using the textbook"
-  loading="lazy"
-  style="width:100%;aspect-ratio:1000/545;min-height:260px;border:none;overflow:hidden;"></iframe>
+</details>
 
 The map is built from CUP's adoption records (2020–2026), this list and CUP's 2025 instructor survey, so it covers more courses than the tables above.
