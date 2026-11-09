@@ -197,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../friendly-agentic-ai-intro/checking-work.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Part 3: Checking the work</span></a>
+ <span class="menu-text">Part 3: Staying in charge</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -543,16 +543,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#before-you-start" id="toc-before-you-start" class="nav-link active" data-scroll-target="#before-you-start">Before you start</a></li>
-  <li><a href="#step-6-working-on-word-documents" id="toc-step-6-working-on-word-documents" class="nav-link" data-scroll-target="#step-6-working-on-word-documents">Step 6 — Working on Word documents</a>
+  <li><a href="#step-2.1-working-on-word-documents" id="toc-step-2.1-working-on-word-documents" class="nav-link" data-scroll-target="#step-2.1-working-on-word-documents">Step 2.1 — Working on Word documents</a>
   <ul class="collapse">
   <li><a href="#ask-for-comments-not-changes" id="toc-ask-for-comments-not-changes" class="nav-link" data-scroll-target="#ask-for-comments-not-changes">Ask for comments, not changes</a></li>
   <li><a href="#ask-for-edits-then-review-them-as-tracked-changes" id="toc-ask-for-edits-then-review-them-as-tracked-changes" class="nav-link" data-scroll-target="#ask-for-edits-then-review-them-as-tracked-changes">Ask for edits, then review them as tracked changes</a></li>
   <li><a href="#write-in-markdown-finish-in-word" id="toc-write-in-markdown-finish-in-word" class="nav-link" data-scroll-target="#write-in-markdown-finish-in-word">Write in Markdown, finish in Word</a></li>
   <li><a href="#margin-comments" id="toc-margin-comments" class="nav-link" data-scroll-target="#margin-comments">Margin comments</a></li>
   </ul></li>
-  <li><a href="#step-7-give-the-agent-standing-instructions-agents.md" id="toc-step-7-give-the-agent-standing-instructions-agents.md" class="nav-link" data-scroll-target="#step-7-give-the-agent-standing-instructions-agents.md">Step 7 — Give the agent standing instructions: AGENTS.md</a></li>
-  <li><a href="#step-8-add-two-skills" id="toc-step-8-add-two-skills" class="nav-link" data-scroll-target="#step-8-add-two-skills">Step 8 — Add two skills</a></li>
-  <li><a href="#step-9-a-first-real-task-with-data" id="toc-step-9-a-first-real-task-with-data" class="nav-link" data-scroll-target="#step-9-a-first-real-task-with-data">Step 9 — A first real task with data</a></li>
+  <li><a href="#step-2.2-give-the-agent-standing-instructions-agents.md" id="toc-step-2.2-give-the-agent-standing-instructions-agents.md" class="nav-link" data-scroll-target="#step-2.2-give-the-agent-standing-instructions-agents.md">Step 2.2 — Give the agent standing instructions: AGENTS.md</a></li>
+  <li><a href="#step-2.3-add-two-skills" id="toc-step-2.3-add-two-skills" class="nav-link" data-scroll-target="#step-2.3-add-two-skills">Step 2.3 — Add two skills</a></li>
+  <li><a href="#step-2.4-a-first-real-task-with-data" id="toc-step-2.4-a-first-real-task-with-data" class="nav-link" data-scroll-target="#step-2.4-a-first-real-task-with-data">Step 2.4 — A first real task with data</a></li>
   <li><a href="#habits-that-make-it-work" id="toc-habits-that-make-it-work" class="nav-link" data-scroll-target="#habits-that-make-it-work">Habits that make it work</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
   <li><a href="#where-to-go-next" id="toc-where-to-go-next" class="nav-link" data-scroll-target="#where-to-go-next">Where to go next</a></li>
@@ -602,7 +602,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="before-you-start" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-start">Before you start</h2>
 <p>This is Part 2 of the mini course <a href="../friendly-agentic-ai-intro/index.html">Friendly Introduction to Agentic AI for Social Scientists</a>. It assumes you have done <a href="../friendly-agentic-ai-intro/setup.html">Part 1 — Setup</a>: the Claude desktop app works, your <code>first-project</code> folder is open in the <strong>Code</strong> tab in <strong>Manual</strong> mode, Python is set up, and Typora opens <code>.md</code> files.</p>
-<p>Part 2 takes about an hour. The step numbers continue from Part 1.</p>
+<p>Part 2 takes about an hour.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -623,8 +623,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="step-6-working-on-word-documents" class="level2">
-<h2 class="anchored" data-anchor-id="step-6-working-on-word-documents">Step 6 — Working on Word documents</h2>
+<section id="step-2.1-working-on-word-documents" class="level2">
+<h2 class="anchored" data-anchor-id="step-2.1-working-on-word-documents">Step 2.1 — Working on Word documents</h2>
 <p>Most of your writing lives in Word, and so does your coauthors’. The agent can read Word files, comment on them, edit them and produce new ones. The routine below keeps you in control: <strong>the agent never touches your original, and you see every change it made as tracked changes in Word.</strong></p>
 <p><strong>Getting started.</strong> Copy a Word document you know well into your project folder, in a subfolder <code>docs/</code> (a paper draft, a grant proposal, a referee report you wrote). Use something that is not confidential.</p>
 <section id="ask-for-comments-not-changes" class="level3">
@@ -664,8 +664,8 @@ Use docs/my-template.docx for the styles (fonts, headings, margins).</code></pre
 <hr>
 </section>
 </section>
-<section id="step-7-give-the-agent-standing-instructions-agents.md" class="level2">
-<h2 class="anchored" data-anchor-id="step-7-give-the-agent-standing-instructions-agents.md">Step 7 — Give the agent standing instructions: AGENTS.md</h2>
+<section id="step-2.2-give-the-agent-standing-instructions-agents.md" class="level2">
+<h2 class="anchored" data-anchor-id="step-2.2-give-the-agent-standing-instructions-agents.md">Step 2.2 — Give the agent standing instructions: AGENTS.md</h2>
 <p>Each session with the agent starts from zero. It does not remember yesterday. So we write down, once, what it should always know: who you are, how you like to work, what it must never do. This file is called <strong><code>AGENTS.md</code></strong> and sits in the project folder. The agent reads it at the start of every session.</p>
 <p>I prepared a starter file based on how I work with agents. Ask the agent to fetch it and set up the folders:</p>
 <pre class="text"><code>Download this file exactly (use a download command, do not retype it) and
@@ -754,8 +754,8 @@ and summarize the instructions for me in five bullet points.</code></pre>
 <p>It is good practice to grow this file slowly. <strong>When the agent makes the same mistake twice, add one line to <code>AGENTS.md</code>.</strong> After a month it will reflect how you work, and that is worth more than any template.</p>
 <hr>
 </section>
-<section id="step-8-add-two-skills" class="level2">
-<h2 class="anchored" data-anchor-id="step-8-add-two-skills">Step 8 — Add two skills</h2>
+<section id="step-2.3-add-two-skills" class="level2">
+<h2 class="anchored" data-anchor-id="step-2.3-add-two-skills">Step 2.3 — Add two skills</h2>
 <p>A <strong>skill</strong> is a recipe the agent follows for one type of task. It is a Markdown file called <code>SKILL.md</code> in its own folder. The agent sees a short description of each skill and uses it when the task matches. You can also call a skill by name: type <code>/</code> and its name in the prompt box.</p>
 <p>Here are two to start with:</p>
 <ul>
@@ -899,8 +899,8 @@ Then tell me in two sentences what each skill does.</code></pre>
 <p><strong>Try the PDF skill.</strong> Put a paper you know well into the folder, then ask: <em>“Use the read-pdf skill on [file name]. What is the research question, the data, the main result? Give page numbers.”</em> Check one of the page numbers yourself. Then try the harder question: <em>“What are the three weakest points of this paper?”</em> and judge the answer as a referee would.</p>
 <hr>
 </section>
-<section id="step-9-a-first-real-task-with-data" class="level2">
-<h2 class="anchored" data-anchor-id="step-9-a-first-real-task-with-data">Step 9 — A first real task with data</h2>
+<section id="step-2.4-a-first-real-task-with-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-2.4-a-first-real-task-with-data">Step 2.4 — A first real task with data</h2>
 <p>Now everything comes together. Start a new session. This time, before you send the prompt, switch the permission mode to <strong>Plan</strong>. In Plan mode the agent only thinks and proposes; it changes nothing until you agree.</p>
 <pre class="text"><code>Using the World Bank's open data (its API, no key needed), get for all
 EU countries for 2023:
@@ -920,7 +920,7 @@ Keep the decision log as you go.</code></pre>
 <li>Read <code>DECISIONS.md</code>. Which countries were missing for 2023, and what did the agent do about it? Did it use a different year, drop them, or tell you?</li>
 <li>Read the memo. Does it say “effect” or “causes” anywhere? It shouldn’t. A cross-country scatter shows an association.</li>
 </ol>
-<p>If you find a mistake, tell the agent what you found, and add a line to <code>AGENTS.md</code> if it is the kind of mistake that could happen again. Finally, ask for the memo as a Word file (Step 6).</p>
+<p>If you find a mistake, tell the agent what you found, and add a line to <code>AGENTS.md</code> if it is the kind of mistake that could happen again. Finally, ask for the memo as a Word file (Step 2.1).</p>
 <hr>
 </section>
 <section id="habits-that-make-it-work" class="level2">
@@ -978,7 +978,7 @@ Keep the decision log as you go.</code></pre>
 <section id="where-to-go-next" class="level2">
 <h2 class="anchored" data-anchor-id="where-to-go-next">Where to go next</h2>
 <ul>
-<li><a href="../friendly-agentic-ai-intro/checking-work.html">Part 3 — Checking the agent’s work</a>: keep the agent inside its folder, see what it did, and build checks into the work.</li>
+<li><a href="../friendly-agentic-ai-intro/checking-work.html">Part 3 — Staying in charge</a>: trust, verification and control. Keep the agent inside its folder, see what it did, and build checks into the work.</li>
 <li><a href="../unit1/index.html">Week 1 — LLMs, Harnesses &amp; Setup</a>: what is behind the chat box, and other agents.</li>
 <li><a href="../unit2/index.html">Week 2 — From Raw Data to Report</a>: a full analysis project with an agent.</li>
 <li><a href="../da-knowledge/technical-terms-page.html">Glossary of LLM terms</a> · <a href="../da-knowledge/which-ai.html">Which AI model</a> · <a href="../da-knowledge/terminal-basics.html">Terminal Basics</a>, if you get curious</li>
@@ -1544,7 +1544,7 @@ Keep the decision log as you go.</code></pre>
 <span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>This is Part 2 of the mini course <span class="co">[</span><span class="ot">Friendly Introduction to Agentic AI for Social Scientists</span><span class="co">](index.qmd)</span>. It assumes you have done <span class="co">[</span><span class="ot">Part 1 — Setup</span><span class="co">](setup.qmd)</span>: the Claude desktop app works, your <span class="in">`first-project`</span> folder is open in the **Code** tab in **Manual** mode, Python is set up, and Typora opens <span class="in">`.md`</span> files.</span>
 <span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>Part 2 takes about an hour. The step numbers continue from Part 1.</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>Part 2 takes about an hour.</span>
 <span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
 <span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## What you will have at the end</span></span>
@@ -1557,7 +1557,7 @@ Keep the decision log as you go.</code></pre>
 <span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 6 — Working on Word documents</span></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2.1 — Working on Word documents</span></span>
 <span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>Most of your writing lives in Word, and so does your coauthors'. The agent can read Word files, comment on them, edit them and produce new ones. The routine below keeps you in control: **the agent never touches your original, and you see every change it made as tracked changes in Word.**</span>
 <span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
@@ -1611,7 +1611,7 @@ Keep the decision log as you go.</code></pre>
 <span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 7 — Give the agent standing instructions: AGENTS.md</span></span>
+<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2.2 — Give the agent standing instructions: AGENTS.md</span></span>
 <span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a>Each session with the agent starts from zero. It does not remember yesterday. So we write down, once, what it should always know: who you are, how you like to work, what it must never do. This file is called **`AGENTS.md`** and sits in the project folder. The agent reads it at the start of every session.</span>
 <span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a></span>
@@ -1642,7 +1642,7 @@ Keep the decision log as you go.</code></pre>
 <span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 8 — Add two skills</span></span>
+<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2.3 — Add two skills</span></span>
 <span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a>A **skill** is a recipe the agent follows for one type of task. It is a Markdown file called <span class="in">`SKILL.md`</span> in its own folder. The agent sees a short description of each skill and uses it when the task matches. You can also call a skill by name: type <span class="in">`/`</span> and its name in the prompt box.</span>
 <span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a></span>
@@ -1685,7 +1685,7 @@ Keep the decision log as you go.</code></pre>
 <span id="cb10-165"><a href="#cb10-165" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-166"><a href="#cb10-166" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-167"><a href="#cb10-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-168"><a href="#cb10-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 9 — A first real task with data</span></span>
+<span id="cb10-168"><a href="#cb10-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2.4 — A first real task with data</span></span>
 <span id="cb10-169"><a href="#cb10-169" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-170"><a href="#cb10-170" aria-hidden="true" tabindex="-1"></a>Now everything comes together. Start a new session. This time, before you send the prompt, switch the permission mode to **Plan**. In Plan mode the agent only thinks and proposes; it changes nothing until you agree.</span>
 <span id="cb10-171"><a href="#cb10-171" aria-hidden="true" tabindex="-1"></a></span>
@@ -1711,7 +1711,7 @@ Keep the decision log as you go.</code></pre>
 <span id="cb10-191"><a href="#cb10-191" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Read <span class="in">`DECISIONS.md`</span>. Which countries were missing for 2023, and what did the agent do about it? Did it use a different year, drop them, or tell you?</span>
 <span id="cb10-192"><a href="#cb10-192" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Read the memo. Does it say "effect" or "causes" anywhere? It shouldn't. A cross-country scatter shows an association.</span>
 <span id="cb10-193"><a href="#cb10-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-194"><a href="#cb10-194" aria-hidden="true" tabindex="-1"></a>If you find a mistake, tell the agent what you found, and add a line to <span class="in">`AGENTS.md`</span> if it is the kind of mistake that could happen again. Finally, ask for the memo as a Word file (Step 6).</span>
+<span id="cb10-194"><a href="#cb10-194" aria-hidden="true" tabindex="-1"></a>If you find a mistake, tell the agent what you found, and add a line to <span class="in">`AGENTS.md`</span> if it is the kind of mistake that could happen again. Finally, ask for the memo as a Word file (Step 2.1).</span>
 <span id="cb10-195"><a href="#cb10-195" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-196"><a href="#cb10-196" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
 <span id="cb10-197"><a href="#cb10-197" aria-hidden="true" tabindex="-1"></a></span>
@@ -1744,7 +1744,7 @@ Keep the decision log as you go.</code></pre>
 <span id="cb10-224"><a href="#cb10-224" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-225"><a href="#cb10-225" aria-hidden="true" tabindex="-1"></a><span class="fu">## Where to go next</span></span>
 <span id="cb10-226"><a href="#cb10-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-227"><a href="#cb10-227" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Part 3 — Checking the agent's work</span><span class="co">](checking-work.qmd)</span>: keep the agent inside its folder, see what it did, and build checks into the work.</span>
+<span id="cb10-227"><a href="#cb10-227" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Part 3 — Staying in charge</span><span class="co">](checking-work.qmd)</span>: trust, verification and control. Keep the agent inside its folder, see what it did, and build checks into the work.</span>
 <span id="cb10-228"><a href="#cb10-228" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Week 1 — LLMs, Harnesses &amp; Setup</span><span class="co">](../unit1/index.qmd)</span>: what is behind the chat box, and other agents.</span>
 <span id="cb10-229"><a href="#cb10-229" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Week 2 — From Raw Data to Report</span><span class="co">](../unit2/index.qmd)</span>: a full analysis project with an agent.</span>
 <span id="cb10-230"><a href="#cb10-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Glossary of LLM terms</span><span class="co">](../da-knowledge/technical-terms-page.qmd)</span> · <span class="co">[</span><span class="ot">Which AI model</span><span class="co">](../da-knowledge/which-ai.qmd)</span> · <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](../da-knowledge/terminal-basics.qmd)</span>, if you get curious</span>
