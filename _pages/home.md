@@ -45,9 +45,19 @@ redirect_from:
   <div><span class="gda-stat__num">360+</span><span class="gda-stat__label">Practice questions</span></div>
   <div><span class="gda-stat__num">120</span><span class="gda-stat__label">Data exercises</span></div>
   <div><span class="gda-stat__num">300+</span><span class="gda-stat__label">Courses worldwide</span></div>
-  <div><span class="gda-stat__num">40</span><span class="gda-stat__label">Countries</span></div>
+  <div><span class="gda-stat__num">35</span><span class="gda-stat__label">Countries</span></div>
   <div><span class="gda-stat__num">3</span><span class="gda-stat__label">Languages: R · Python · Stata</span></div>
 </div>
+
+<section class="gda-section">
+  <h2 class="gda-section__title">Adopted in 300+ courses in 35 countries</h2>
+  <p class="gda-section__intro">In Economics, Finance, Analytics, Business, and Public Policy — from Columbia and Michigan to Bocconi, CEU, and beyond. <em><a href="{{ '/courses-using' | relative_url }}">Full list of courses and the year-by-year map →</a></em></p>
+
+  <iframe src="{{ '/files/adoption-map.html?latest=1' | relative_url }}"
+    title="Map of courses using the textbook"
+    loading="lazy"
+    style="width:100%;aspect-ratio:1000/545;min-height:260px;border:none;overflow:hidden;border-radius:12px;"></iframe>
+</section>
 
 <section class="gda-section">
   <h2 class="gda-section__title">What people say</h2>
@@ -274,16 +284,6 @@ redirect_from:
       <a href="{{ '/videos/da-intro.mp4' | relative_url }}">download the video</a>.
     </video>
   </div>
-</section>
-
-<section class="gda-section">
-  <h2 class="gda-section__title">Adopted in 300+ courses in 35 countries</h2>
-  <p class="gda-section__intro">In Economics, Finance, Analytics, Business, and Public Policy — from Columbia and Michigan to Bocconi, CEU, and beyond. <em><a href="{{ '/courses-using' | relative_url }}">Full list of courses →</a></em></p>
-
-  <iframe src="{{ '/files/adoption-map.html' | relative_url }}"
-    title="Map of courses using the textbook"
-    loading="lazy"
-    style="width:100%;aspect-ratio:1000/545;min-height:260px;border:none;overflow:hidden;border-radius:12px;"></iframe>
 </section>
 
 <section class="gda-section">
