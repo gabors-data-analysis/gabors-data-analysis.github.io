@@ -7,6 +7,7 @@
     "text": "Week 5 — Text as Data\n\n\nTurning a series of short texts into tabular data — lexicons, ML, and LLMs via API — and the ground-truth problem\nThe second research-focused week. You turn unstructured text into numbers you can analyse, compare how you score text against how AI scores it, and build a small pipeline that scales from 5 texts to hundreds via an API. Running case: post-match football manager interviews.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 5: Text as Data"
     ]
@@ -19,6 +20,7 @@
     "text": "Before you come to class (30–60 min)\n\n\n✅ Pre-class checklist\n\n\n\nAPI key — set up an LLM API key (OpenAI or Anthropic). See How to get AI API keys. Budget ~$5. Store the key outside the repo (env var, never commit).\nRead — NLP Basics — Text as Data and Introduction to APIs (15 min).\nReview terms — token, lexicon, classification, sentiment, ground truth (glossary).\nGrab the data — 5-interview practice file and the sentiment scale.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 5: Text as Data"
     ]
@@ -31,6 +33,7 @@
     "text": "Learning objectives\nBy the end of this unit you will be able to:\n\nExplain the classical NLP pipeline (tokenization → BoW → TF-IDF) and where LLMs fit.\nCompare the four ways to score sentiment: pre-built lexicons, custom lexicons, ML models, LLMs.\nScore text by hand and by AI, and reason about agreement and ground truth.\nBuild a small text→data pipeline that calls an LLM API at scale, with a reusable prompt.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 5: Text as Data"
     ]
@@ -43,6 +46,7 @@
     "text": "Session shape (200 min · 50·100·50)\n\n\n\n\n\n\n\n\nBlock\nFocus\nMode\n\n\n\n\nIntro (50)\nNLP pipeline; four approaches; humans vs AI\nTalk + hand-rating\n\n\nTask (100)\nBuild a text→data pipeline, classify via API\nIndividual / pairs\n\n\nDiscussion (50)\nValidation, ground truth, reproducibility\nGroup",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 5: Text as Data"
     ]
@@ -55,6 +59,7 @@
     "text": "Intro (50 min)\n\n\n📖 From bag-of-words to LLMs\n\n\nSlideshow: Text to Data\n\nClassical pipeline — tokenization, preprocessing (stemming, stop words), bag-of-words, TF-IDF.\nWhy domain knowledge matters — “clinical” is a compliment in football; a generic lexicon misses that.\nSentiment — detecting tone, not just which words appear.\n\nFour ways to score sentiment (trade-offs matter):\n\n\n\n\nPre-built lexicon\nCustom lexicon\nML model\nLLM (API)\n\n\n\n\nSetup\nLow\nMedium\nHigh\nLow\n\n\nDomain fit\nLow\nHigh\nMed–High\nHigh\n\n\nContext\nMedium\nMedium\nHigh\nVery high\n\n\nTransparency\nHigh\nHigh\nLow\nMedium\n\n\nScalability\nHigh\nMedium\nHigh\nLow–Medium\n\n\nCost\nFree\nDev time\nCompute\nAPI tokens\n\n\n\nExamples: VADER/TextBlob (pre-built); an AI-built football lexicon (custom); a fine-tuned BERT (ML); GPT/Claude as the scorer (LLM).\n\n\n\n\n⚽ Hand-rate first (15 min)\n\n\nBefore any AI: rate the 5 manager statements yourself on the −2 … +2 scale. Then have an AI rate the same 5 — simple prompt vs detailed prompt — and compare its reasoning to yours. Look at the football-specific lexicon to see how domain knowledge changes interpretation.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 5: Text as Data"
     ]
@@ -67,6 +72,7 @@
     "text": "Task block (100 min · individual or pairs)\nScale up from 5 texts to a real pipeline. Start small, validate, then expand.\n\n\n🎯 Build a text → data pipeline\n\n\n\nGet the corpus. Use the combined interview dataset (text_id level) from the interviews case study. One row per text.\nDesign the prompt. Decide the scale/labels, how to handle irrelevant text, and an output schema (e.g. score, reason, confidence). Prefer structured output over free text. Sketch in sentiment guidelines.\nValidate before scaling. Hand-label ~20 texts, run the prompt, compare. Aim for ≥ 80% agreement; if below, revise the prompt before going further.\nClassify via API. Call an LLM API over the full set. Reference: Calling LLM APIs from Python, and the case-study Python / R implementations.\nCompare methods. Put human average, domain-lexicon score, and AI average side by side. Where do they disagree most?\nStretch. Ask the AI to predict the match result (win/draw/loss) or speaker gender from text alone — and discuss what linguistic cues it’s using and whether they’re reliable.\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nAPIs beyond LLMs. Getting the data often means data APIs too. If you want practice: World Bank + FRED walkthrough and the FBref football walkthrough. How APIs work under the hood: api-advanced.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 5: Text as Data"
     ]
@@ -79,6 +85,7 @@
     "text": "Discussion (50 min)\n\nGround truth — what is the correct answer when humans disagree? How do you validate?\nHuman vs AI — where did you and the AI diverge most? How did that feel?\nConsistency — did the AI rate similar texts consistently? Was there a systematic gap?\nAPIs at scale — benefits and costs/risks of scaling text analysis with an API. Could someone rerun your pipeline?",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 5: Text as Data"
     ]
@@ -91,6 +98,7 @@
     "text": "Delivery\n\n\n📦 What to hand in (Sunday 23:55)\n\n\n\nThe pipeline (script/notebook) that reads texts, calls the API, and writes a scored table.\nThe scored dataset — one row per text with score (+ reason/confidence if used).\nThe reusable prompt (prompt_classifier.md) and a short validation note: n hand-labelled, agreement rate.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 5: Text as Data"
     ]
@@ -103,6 +111,7 @@
     "text": "Knowledge Base\n\nNLP Basics — Text as Data\nIntroduction to APIs · Calling LLM APIs from Python · APIs under the hood\nHow to get AI API keys\nFootball interviews case study",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 5: Text as Data"
     ]
@@ -122,6 +131,7 @@
     "text": "Week 3 — Data Wrangling & Debugging\n\n\nAgentic CLI workflows on a real repo — project instructions, skills, tests, git, and the discipline of reviewing what the AI did\nThe longest hands-on session in the course. AI writes code fast, but output that looks right isn’t always right. This unit does two things at once: it makes you fluent with an agentic CLI tool working across a multi-file project, and it drills the habits that turn a clever assistant into a reproducible research companion — project instruction files, reusable skills, tests, git, and documentation — all wrapped in the discipline of reviewing what the AI did.\nThe whole session runs on one continuous case study — the Austrian Hotels dataset — so each step builds on the last.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 3: Data Wrangling & Debugging"
     ]
@@ -134,6 +144,7 @@
     "text": "Before you come to class (30–60 min)\n\n\n✅ Pre-class checklist\n\n\n\nTech — confirm Claude Code runs (from Week 1). New to the terminal? Skim Terminal Basics. The workflow transfers to Codex / Copilot CLI / Gemini CLI, but we demo Claude Code.\nPython — Claude Code runs Python for you, so it must be installed and on PATH (python --version). Install the basics:\n\n\nPythonR\n\n\npython -m pip install pandas numpy matplotlib\n\n\ninstall.packages(c(\"tidyverse\"))\n\n\n\n\nGit — a GitHub account and the basics (git status, git diff, branch, commit).\nGet the data — download the Austrian Hotels dataset (messy data + AI-generated code with bugs) and unzip it into a fresh project folder.\nRead (skim) — Designing Larger Analytics Projects and Reproducible Research Pipelines.\nReview terms — agents.md (project instruction file), skill, and the three kinds of tests (data tests, data-describe checks, code tests). See Documentation Fundamentals and Joining Data Tables.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 3: Data Wrangling & Debugging"
     ]
@@ -146,6 +157,7 @@
     "text": "Learning objectives\nBy the end of this unit you will be able to:\n\nExplain why a terminal-native agent compresses the ask → run → inspect → fix loop compared with IDE/chat assistance — and where each still wins.\nUse a CLI agent to explore, clean, join, and aggregate a multi-file dataset, and to generate realistic synthetic data.\nReview and debug AI-written data code rather than trusting it blindly (row counts around joins, missing values, plausible-but-wrong results).\nWrite a project instruction file (CLAUDE.md / agents.md) so the AI follows your conventions automatically.\nBuild one reusable skill that automates a multi-step workflow.\nTurn assumptions into tests that return the failing rows, use git for traceable iteration, and apply a safety checklist for autonomous execution.\nDocument data with a README / DATA.md.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 3: Data Wrangling & Debugging"
     ]
@@ -158,6 +170,7 @@
     "text": "Session shape (200 min · 50·100·50)\n\n\n\n\n\n\n\n\nBlock\nFocus\nMode\n\n\n\n\nIntro (50)\nWhy CLI; reviewing AI’s work; instruction files, skills, tests, git, autonomy\nTalk + demo\n\n\nTask (100)\nExplore → clean → join → generate data → instructions → skill → tests → git → document\nIndividual / pairs\n\n\nDiscussion (50)\nSilent failures, what tests caught, when to trust autonomy\nGroup",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 3: Data Wrangling & Debugging"
     ]
@@ -170,6 +183,7 @@
     "text": "Intro (50 min)\n\n\n⚡ Why a CLI agent if Copilot already works?\n\n\nIn Units 1–2 you used VS Code + Copilot and Claude Code. The jump here is not “AI vs no AI.” It is IDE assistance vs terminal-native execution. With Copilot the loop is still manual:\n\nAsk for code in the editor → 2. run it in the terminal → 3. read the logs/errors yourself → 4. go back and re-prompt. Repeat.\n\nA CLI agent compresses that loop:\n\nFiles are already there. Claude Code sees your CSVs, scripts, and outputs directly — no uploading, no copy-paste. Just: “Look at these files and calculate average occupancy by city.”\nCode runs immediately. It writes code, executes it, sees the error, and fixes it — you get results, not just snippets.\nContext stays intact. It remembers your project structure and how files relate (hotels.csv joins to cities.csv) across many steps.\nIteration is fast. “Something looks wrong” → it investigates without you shuttling data around.\n\nWhat stays exactly the same: prompting discipline, statistical thinking (you still define variables, assumptions, checks), verification habits (joins, units, missing values), and the iteration mindset. What changes is only the execution surface — you remain responsible for quality.\n\n\n\n\n🔍 Trust but verify — the operating discipline\n\n\nReviewing AI-written code. Common failure modes to hunt for:\n\nWrong join type — “How many rows before and after the join? Did we lose data?”\nMissing values — “Are there NaNs? Where did they come from?”\nPlausible-but-wrong — a result that looks right but isn’t. Ask: “Walk me through the calculation step by step.”\nHallucinated code or stats. Always verify against the data.\n\nGood habit, every time: Explain the code you just wrote. What assumptions did you make?\nAlways check: row counts after joins; summary statistics (do the means make sense?); a few random rows (do the values look realistic?).\n\n\n\n\n📋 Project instruction files (CLAUDE.md / agents.md)\n\n\nInstead of repeating preferences in every prompt, write them once in a file the harness reads automatically: CLAUDE.md (Claude Code), GEMINI.md (Gemini CLI), AGENTS.md/agents.md (Codex and others).\n## Code Style\n- Use tidyverse for R; pandas for Python\n- Prefer ggplot2 / matplotlib with the viridis palette\n\n## Data Standards\n- Dates in ISO 8601 (YYYY-MM-DD); column names lowercase_with_underscores\n\n## Analysis Preferences\n- Always check for missing values before analysis\n- Report sample sizes in every table\nHierarchical loading: global defaults → project file → subfolder file. More specific files override general ones.\n\n\n\n\n🛠️ Skills, tests, git & autonomy\n\n\n\nSkills — reusable instruction sets the agent runs on demand. A project skill lives at .claude/skills/&lt;name&gt;/SKILL.md; a personal one at ~/.claude/skills/&lt;name&gt;/SKILL.md. Then typing /&lt;name&gt; runs the workflow consistently.\nTests = guardrails. Turn assumptions into assertions across raw → clean → analysis: schema/type, completeness (not-null), validity (0 ≤ occupancy ≤ 100), relationships (foreign keys exist), volume (row-count range). Prefer tests that return the failing rows, not just pass/fail.\nGit — version control + AI = traceable, reproducible analysis. Branch, change, commit with a clear message, inspect the diff. The agent can also read git history to explain why a past decision was made.\nAutonomous execution — fine for trusted, repetitive pipelines with a clear success criterion; risky for new code or shared resources. Always: confirm the branch, write a success criterion, inspect git diff after, and run tests.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 3: Data Wrangling & Debugging"
     ]
@@ -182,6 +196,7 @@
     "text": "Task block (100 min · individual or pairs)\nRunning case: the Austrian Hotels dataset — messy data plus AI-generated code that has bugs. Work in a git project folder; commit as you go. Verify after every step.\n\n\n🗂️ 1. Set up & explore as linked tables\n\n\nLaunch the agent in your project folder:\ncd austrian-hotels-data\nclaude\n\n“What files are in this folder? Give me a quick overview.”\n“Show me 5 sample rows from each CSV file.”\n“Read the hotels and cities files. How are they related? What’s the join key?”\n\nCheck: you can name each table, its grain, and the keys (city links hotels→cities; hotel_id links hotels→monthly occupancy).\n\n\n\n\n🧹 2. Find the bugs & clean\n\n\n\nDiscuss first: what are the crucial steps when cleaning tabular data?\nUse the agent to inspect the provided code: check row counts around joins, hunt missing values, standardise team/city names, dates, and keys.\nProduce clean tables in a new /data_cleaned folder.\n\n\n\n\n\n🔗 3. Join, aggregate & investigate\n\n\nQuick refresher: Joining Tables Guide.\n\nJoin — “Join the hotels and cities data. How many hotels are in each province?”\nAggregate — “What’s the average occupancy rate by city? Show a table sorted highest to lowest.”\nInvestigate — “Which 5-star hotels have the lowest average daily rate? Something seems off — investigate.”\n\nTips: if something looks wrong, ask “Why did that happen?” or “Check the row counts.” Ask to see intermediate steps: “Show me the data after the join, before aggregating.” Then open a created table manually and look into it — how would you test and debug it yourself?\n\n\n\n\n✨ 4. The power move — generate new data\n\n\nOne of the most useful CLI capabilities is generating realistic synthetic data. (The Austrian Hotels dataset itself was generated by an earlier Claude!)\nI want to create a new CSV file called hotel_bookings.csv that shows what\npercentage of each hotel's bookings come from different channels (Direct,\nBooking.com, Expedia, HRS, Travel Agent). Percentages must sum to 100% per\nhotel; 5-star hotels skew to Direct (35–45%), 3-star to OTAs (Booking.com 40%+);\nadd a commission rate (Direct = 0%, OTAs = 10–18%). Write Python code that uses\nhotels_modified.csv as input, run it, and show me a summary.\nThen verify: do percentages sum to 100? Are the patterns realistic? Can you join it back to hotels? Be more specific to get realistic patterns. Brainstorm one more join table of your own (weather by city/month, staff by hotel, nearby attractions by city…) and generate it.\n\n\n\n\n📋 5. Set conventions — write CLAUDE.md / agents.md\n\n\nCreate a project instruction file (style, data standards, analysis preferences — see the intro example). Re-run one analysis prompt and notice how the behaviour changes now that conventions are automatic.\n\n\n\n\n🤖 6. Build a skill\n\n\nCreate .claude/skills/clean-hotels-data/SKILL.md:\n---\nname: clean-hotels-data\ndescription: Clean and validate Austrian Hotels data for analysis.\n---\n\nRun the Austrian Hotels cleaning pipeline:\n1. Check missing values in `data/hotels_raw.csv`\n2. Run the cleaning script\n3. Verify output dimensions in `data/hotels_clean.csv`\n4. Generate a short data-quality report\nNow typing /clean-hotels-data runs the workflow consistently. What other repetitive tasks could become skills?\n\n\n\n\n✅ 7. Write tests (guardrails)\n\n\nAsk the CLI to generate and run ~5 tests for the cleaning pipeline:\n\nhotel_id is unique in the cleaned table\nkey fields not null (hotel_id, city_id, date)\ncity_id values exist in the city lookup table (foreign key)\noccupancy_rate between 0 and 100\nrow count within an expected range after cleaning/joining\n\nReview one failing test together, fix the underlying cause, and rerun. Prefer tests that return the failing rows so you can inspect those exact rows first.\n\n\n\n\n🌿 8. Git + a peek at autonomy\n\n\n\n“Create a branch hotels-robustness-checks, run the robustness checks, and prepare a summary of changes.” Then inspect the diff and explain every changed file to a partner.\n“Look at the git history for the cleaning script. Why did we change the outlier threshold?” — the agent reads commit messages and diffs.\nAutonomy, carefully. A non-interactive run looks like:\n\nclaude -p \"Run the /clean-hotels-data skill and the robustness checks, then summarize changed files\"\nApply the safety protocol: right branch, written success criterion, git diff after, tests after. Only on familiar, verified pipelines — never on new code or shared resources.\n\n\n\n\n📄 9. Document\n\n\nWrite a README / DATA.md: each table, its source, schema, and known issues. This is what lets someone else (or future you) rerun the whole thing.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 3: Data Wrangling & Debugging"
     ]
@@ -194,6 +209,7 @@
     "text": "Operation tips\n\nUse git-based projects. CLI tools are file-based, so git gives safer iteration and easy rollbacks.\nA reliable three-step loop: Inventory (“What files are here?”) → Plan (“What steps should we run?”) → Execute and verify.\nRead error messages before re-prompting — often the agent fixes errors itself if you just let it run.\n\nBottom line — CLI shines for: complex multi-file pipelines (raw → clean → analysis → exhibits), reproducible workflows others can run, large datasets/documents needing context, and iterative analysis where the AI tests and debugs autonomously. IDE/chat is still better for: quick one-off questions, exploratory methodology conversations, and moments when you want tight control over each step.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 3: Data Wrangling & Debugging"
     ]
@@ -206,6 +222,7 @@
     "text": "Discussion (50 min)\n\nWhat failed silently — looked fine but was wrong? How did you catch it (or not)?\nWhich test caught the most? Which two tests would you add to your own pipeline first?\nHow did agents.md / skills change the AI’s behaviour?\nWhat did you learn from generating synthetic data — and where could it mislead?\nWhen is autonomous execution appropriate vs risky in a research context? How do you balance speed with verification?",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 3: Data Wrangling & Debugging"
     ]
@@ -218,6 +235,7 @@
     "text": "Delivery\n\n\n📦 What to hand in (Sunday 23:55)\n\n\n\nFixed repo with: a CLAUDE.md/agents.md, cleaned data in /data_cleaned, at least one AI-generated join table (with a note on how you verified it), a passing test suite (with a note on the failing test you fixed), the /clean-hotels-data skill, and a README/DATA.md.\nA short note: the most important bug you found and how you caught it; plus one sentence on how the CLI workflow felt different from Copilot/chat.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 3: Data Wrangling & Debugging"
     ]
@@ -230,6 +248,7 @@
     "text": "Knowledge Base & resources\n\nDesigning Larger Analytics Projects · Reproducible Research\nDocumentation Fundamentals · Joining Data Tables\nAustrian Hotels case study · Terminal Basics · Installing AI CLI Tools\nClaude Code common workflows · settings & memory\nShort showcase of what’s possible now (15 min, must-watch)",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 3: Data Wrangling & Debugging"
     ]
@@ -242,6 +261,7 @@
     "text": "Week 1 — LLMs, Harnesses & Setup\n\n\nWhat is actually behind the chat box, when a paid subscription is worth it, what a harness adds — and getting one running on your machine\nThis week starts where most people actually are: you have used the free ChatGPT (or Claude, or Gemini) in a browser, and that’s it. That is a fine starting point — but it is roughly like having only ever used a calculator when a spreadsheet exists. By the end of this session you will understand what an LLM actually does, what happens when you share a document with one, when paying $20/month is worth it (and when it isn’t), what a harness is and why it changes everything for data work — and you will have at least one harness installed and working on your own machine.\nThis is the one lecture-heavy week. Everything after this is hands-on.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -254,6 +274,7 @@
     "text": "Before you come to class (30–60 min)\n\n\n✅ Pre-class checklist\n\n\n\nAccounts — create (free) accounts at claude.ai and chatgpt.com if you don’t have them. If you are a student, claim the free GitHub Student Developer Pack at education.github.com — it includes GitHub Copilot Pro at no cost.\nOne paid plan — for this course you need one $20-tier subscription that includes a coding agent: Claude Pro (recommended — the course demos use Claude Code) or ChatGPT Plus (includes Codex). Students with the GitHub pack can alternatively rely on Copilot. Details and comparison below — read that section first if unsure.\nInstall VS Code — from code.visualstudio.com. Even if you use another editor, we use it in class.\nRead — Which AI model. That’s the only required reading.\nNew to the terminal? Skim Terminal Basics — 10 minutes, and the hands-on block will feel much easier.\n\nWe finish installation together in class — don’t worry if something fails at home.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -266,6 +287,7 @@
     "text": "Learning objectives\nBy the end of this unit you will be able to:\n\nExplain what an LLM is, what tokens and a context window are, and what actually happens when you upload a document to a chat.\nCompare free vs paid subscription tiers and decide, for your own situation, when a subscription is worth it.\nExplain what a harness is, and what a coding agent like Claude Code adds on top of the same $20 subscription — folder access, tool use, running code, managing agents.\nInstall and authenticate at least one harness (Claude Code, Codex, or GitHub Copilot) — desktop app and CLI — and run a first real task in it.\nDescribe the role of OpenRouter / APIs and open-weights models on local hardware, and say when each is the right choice.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -278,6 +300,7 @@
     "text": "Session shape (200 min · 40·40·60·40·20)\n\n\n\n\n\n\n\n\nChunk\nFocus\nMode\n\n\n\n\n1 (40)\nWhat’s behind the chat box — LLM concepts\nTalk\n\n\n2 (40)\nFree vs paid · documents & context · what a harness adds\nTalk + demo\n\n\n3 (60)\nHands-on: install your harness (desktop first, then CLI)\nIndividual\n\n\n4 (40)\nHands-on: one real task, two surfaces\nIndividual\n\n\nDiscussion (20)\nTrust, surfaces, the jagged frontier\nGroup",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -290,6 +313,7 @@
     "text": "Chunk 1 — What’s behind the chat box (40 min · talk)\n\n\n📊 Core LLM concepts — no math required\n\n\nSlideshow: LLM Concepts and Applications\n\nWhat an LLM is — a statistical model that predicts the next token (word piece) given everything so far, trained on a huge slice of human text. No database of facts, no lookup — prediction. This one idea explains both the magic and the failure modes.\nTokens — models don’t see words or characters; they see tokens (~¾ of a word in English). Everything is metered in tokens: what you can fit in, what you pay for via API, how fast it responds.\nThe transformer — how 2017’s “Attention Is All You Need” made today’s models possible. You don’t need the details; you need the consequence: the model attends to everything in its context at once.\nTraining & feedback — pre-training on text, then instruction-tuning and human feedback (RLHF). This is why models are helpful and polite, and also why they’d rather produce a confident wrong answer than say “I don’t know.”\nThe jagged frontier — LLMs are superhuman at some tasks and surprisingly bad at adjacent ones, and the boundary is invisible until you test it. See Mollick on AI jaggedness.\nCyborg vs Centaur — two ways to split work with AI (Mollick): the Centaur hands off whole sub-tasks; the Cyborg interleaves human and AI move-by-move. You’ll feel both this term.\n\nThe model landscape (details in Which AI model):\n\nFrontier closed models — Claude (Anthropic), GPT (OpenAI), Gemini (Google). State of the art; you rent them per month or per token.\nOpen-weights models — Llama, Qwen, Mistral, DeepSeek, Kimi. You can download the weights and run them yourself; think of them as roughly SOTA-minus-a-few-months. Why they matter: privacy, cost at scale, reproducibility. We return to them at the end of today.\n\n\n\n\n\n🧠 The context window — the concept that explains almost everything\n\n\nThe context window is the model’s working memory: everything it can “see” at once — your messages, its answers, any files you shared. Current frontier models handle roughly 200K–1M tokens (a few hundred pages), and models are typically stronger early in the window than when it is stuffed full.\nWhat follows from this single concept:\n\nA new chat is a blank slate. The model does not remember yesterday’s conversation (unless the app injects a “memory” summary — that’s a product feature, not the model).\nLong chats degrade. As the window fills up, earlier details get crowded out or attended to poorly. For serious work: start fresh chats per task, and re-state what matters.\nWhat happens when you upload a document: the file is converted to tokens and placed into the context window. Nothing is “learned”; the model reads it like a very fast skimmer. A 30-page PDF fits comfortably. A 180 MB CSV does not — the app will silently truncate, sample, or use a code tool to peek at it. If you don’t know which happened, you can’t trust the answer.\nThis is why data workflows need more than chat. Real datasets don’t fit in a context window. The professional pattern — which this whole course teaches — is: give the model the codebook, column lists, and small samples, and have it write code that processes the full data outside the window.\n\nPrivacy — where your documents go. An uploaded file goes to the provider’s servers. On consumer plans, chats may be used to train future models depending on your data settings — check them (ChatGPT: Settings → Data controls; Claude: privacy settings). Paid business/enterprise tiers and API access come with stronger no-training guarantees. House rule for this course: nothing confidential goes into a chat you wouldn’t put in an email to an outside company.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -302,6 +326,7 @@
     "text": "Chunk 2 — Free vs paid, and what a harness adds (40 min · talk + demo)\n\n\n💳 Free vs paid — the honest comparison\n\n\nAll major providers run the same ladder. Prices as of mid-2026 (check current pages before subscribing):\n\n\n\n\n\n\n\n\n\nTier\nChatGPT\nClaude\nWhat you actually get\n\n\n\n\nFree\n$0 (with ads in some countries)\n$0\nLimited messages that fall back to smaller models when you hit the cap; limited file upload; smallest context; fine for casual questions\n\n\nBudget\nGo — ~$8/mo\n—\nMore messages on mid-tier models\n\n\nStandard\nPlus — $20/mo\nPro — $20/mo\nThe full frontier models incl. extended thinking, deep research, projects, big file uploads, and the coding agent (Codex / Claude Code)\n\n\nPower\nPro — $100–200/mo\nMax — $100–200/mo\n5×–20× the usage limits, best-model access all day\n\n\n\n(Gemini has the same shape: free tier and Google AI Pro at ~$20/mo. GitHub Copilot is the outlier: ~$10/mo, free for verified students and teachers.)\nWhat the free tier really costs you for data work: you get routed to smaller models mid-conversation, you can’t attach much, deep research and thinking modes are capped or absent — and crucially, you don’t get the coding agent.\nWhen should you subscribe? A rule of thumb:\n\nIf you use AI a few times a week to look things up or draft a paragraph → free is fine.\nIf you do analytical work (coding, data, writing reports) more than ~2–3 hours a week → the $20 tier pays for itself in the first afternoon. One consultant-hour costs more.\nThe $100+ tiers are for people who run agents much of the day. You will not need them for this course.\nFor this course, a $20 tier that includes a coding agent is effectively required — that’s Claude Pro or ChatGPT Plus (or student Copilot).\n\n\n\n\n\n🔧 Harnesses — the model is the engine, the harness is the car\n\n\nA harness is the software wrapped around a model that lets it actually do things. The chat website is one harness — the simplest one. A coding agent like Claude Code, Codex, or Copilot is a different harness around the same model, and it is the reason this course exists.\nHere is what changes, on the same $20 subscription:\n\n\n\n\n\n\n\n\n\nChat app (browser)\nHarness / coding agent\n\n\n\n\nFiles\nYou upload them one by one, into the context window\nIt reads your folders directly — a whole project of CSVs, scripts, PDFs, hundreds of files, fetching what it needs when it needs it\n\n\nCode\nWrites snippets; maybe runs them in a remote sandbox\nWrites, runs, and debugs code on your machine, sees the error, fixes it, reruns\n\n\nOutput\nText you copy-paste\nReal files: edited scripts, saved figures, cleaned CSVs, reports\n\n\nTools\nFixed set (search, maybe a sandbox)\nTool use: shell, git, package installs, web fetch, your own scripts, MCP connectors\n\n\nScale of work\nOne answer per prompt\nAgentic loops: plans multi-step tasks, works for minutes to hours, can manage sub-agents working in parallel\n\n\nMemory across sessions\nProduct “memory,” opaque\nInstruction files you control (CLAUDE.md / AGENTS.md): project conventions the agent reads every time\n\n\n\nSo: the $20 chat subscription answers questions; the same $20 pointed at a harness does the work with you — on a great deal of material, in your folders, with tools, verifiably. The trade: it runs on your machine with real permissions, so you also learn safety habits (it asks before running commands; you review diffs; git is your undo button).\nThe three harnesses on the menu today (skills transfer 1:1 between them):\n\n\n\nHarness\nComes with\nSurfaces\n\n\n\n\nClaude Code (course default)\nClaude Pro/Max $20+\nDesktop app · terminal CLI · VS Code extension\n\n\nCodex\nChatGPT Plus/Pro $20+\nChatGPT desktop app · terminal CLI · IDE extension\n\n\nGitHub Copilot\n~$10/mo, free for students\nVS Code (agent mode) · terminal CLI\n\n\n\nAwareness, not required: there are also open-code harnesses — open-source agents you point at any model, including a local one. Same workflow, swappable engine.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -314,6 +339,7 @@
     "text": "Chunk 3 — Hands-on: install your harness (60 min · individual)\nSet up at least one tool fully — desktop and CLI. Course demos use Claude Code, so that’s the default; if your subscription is ChatGPT or Copilot, use the matching tab. (Full reference: Installing AI CLI Tools.)\nWhy desktop first, then CLI? The desktop app is the friendly on-ramp: sign in, point it at a folder, go. The CLI is the same agent in the terminal — more control, scriptable, and the surface we’ll use for real pipelines from Week 3 on. You want both working.\n\n\n🟠 Option A — Claude Code (course default)\n\n\nStep 1 — Desktop app. Download from claude.com/product/claude-code, install, sign in with your Claude account. Create a folder my-first-agent with any CSV in it, open the folder in the app, and ask: “What’s in this folder? Describe the CSV.” Watch it read your files and ask permission before acting — that permission dialog is the safety model.\nStep 2 — CLI.\n\nWindowsMacLinux\n\n\nIn PowerShell:\nirm https://claude.ai/install.ps1 | iex\nThen close and reopen the terminal.\n\n\ncurl -fsSL https://claude.ai/install.sh | bash\nOr: brew install claude\n\n\ncurl -fsSL https://claude.ai/install.sh | bash\n\n\n\nStep 3 — Launch and authenticate.\ncd my-first-agent\nclaude\nFirst run opens a browser window to log in — pick your Claude subscription. Then try /help, and ask the same folder question you asked the desktop app.\n\n\n\n\n⚪ Option B — Codex (with ChatGPT Plus)\n\n\nStep 1 — Desktop app. The ChatGPT desktop app (download) now includes Codex: sign in with your ChatGPT account, open the Codex tab, and point it at a local folder. Same experiment: “What’s in this folder?”\nStep 2 — CLI.\n\nWindowsMacLinux\n\n\nIn PowerShell:\npowershell -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 | iex\"\n\n\ncurl -fsSL https://chatgpt.com/codex/install.sh | sh\nOr: npm install -g @openai/codex\n\n\ncurl -fsSL https://chatgpt.com/codex/install.sh | sh\n\n\n\nStep 3 — Launch and authenticate.\ncd my-first-agent\ncodex\nChoose Sign in with ChatGPT (uses your Plus plan — no API key needed).\n\n\n\n\n⚫ Option C — GitHub Copilot (free for students)\n\n\nStep 1 — VS Code first (Copilot’s “desktop” is your editor). Install the GitHub Copilot extension in VS Code, sign in with the GitHub account that has your Copilot access, open Copilot Chat (Ctrl+Shift+I / Cmd+Shift+I) and switch it to Agent mode. Full guide: VS Code + Copilot setup.\nStep 2 — Copilot CLI.\n\nWindowsMacLinux\n\n\nwinget install GitHub.Copilot\nOr: npm install -g @github/copilot (needs Node.js 22+)\n\n\nbrew install --cask copilot-cli\nOr: npm install -g @github/copilot\n\n\nnpm install -g @github/copilot\n\n\n\nStep 3 — Launch and authenticate.\ncd my-first-agent\ncopilot\nSign in with GitHub when prompted.\n\n\n\n\n\n\n\n\nTip\n\n\n\nSetup verified when: (1) the desktop app can read a local folder; (2) the CLI launches in a folder, authenticates, and answers “what’s in this folder?” by actually listing your files. If you finish early, set up a second tool — comparing harnesses is part of Chunk 4.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -326,6 +352,7 @@
     "text": "Chunk 4 — Hands-on: one real task, two surfaces (40 min · individual)\n\n\n🎯 The task: a small, checkable analysis\n\n\nDon’t just look up data — make something. Run this same prompt on (a) the plain chat app in the browser, and (b) your harness (desktop or CLI):\n\n“Get Connecticut median household income by county for 2023, load it into a dataframe, and make one labelled bar chart sorted high to low. Save the chart as a PNG.”\n\nFor each surface, note:\n\nDid it actually run the code and produce a PNG on your disk, or just hand you a snippet?\nWas the data right? Open the numbers and compare to the Census/ACS source. Flag anything invented. (Connecticut switched from counties to planning regions — did the AI mention that, or quietly paper over it?)\nHow many turns did it take to get a correct chart?\n\n\n\n\n\n\n\n\n\n\n\nSurface\nRan the code?\nPNG on disk?\nData correct?\nTurns needed\n\n\n\n\nChat app (browser)\n\n\n\n\n\n\nHarness (desktop or CLI)\n\n\n\n\n\n\n\nThis tiny table is the raw material for your delivery note — and your first data point on the chat-vs-harness question.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -338,6 +365,7 @@
     "text": "Closing talk — beyond subscriptions: OpenRouter & local models\n\n\n🌐 OpenRouter — one key, every model\n\n\nSubscriptions are one door to the models; the other is the API — pay per token, no monthly fee. OpenRouter is a marketplace that puts hundreds of models (frontier and open-weights) behind one API key and one bill. Why an analyst cares:\n\nCompare models on your task — run the same prompt through Claude, GPT, Gemini, DeepSeek, Kimi and diff the answers.\nCheap bulk work — classifying 100,000 texts (as in our capstone) through an open-weights model can cost a few dollars instead of a few hundred.\nOne integration — most harnesses and libraries accept an OpenRouter endpoint; you swap models by changing one string.\n\nWe use APIs seriously in Week 5 and the capstone — see Get AI API keys when you get there.\n\n\n\n\n🦙 Running an open-weights model on your own computer\n\n\nThe final rung of independence: download the weights, run the model locally. Nothing leaves your machine — the answer to privacy, offline work, and perfectly reproducible (“frozen”) models. The easy on-ramp is Ollama or LM Studio.\nWhat machine do you need? The model must fit in your GPU memory (VRAM) or a Mac’s unified memory:\n\n\n\n\n\n\n\n\nModel size\nHardware needed\nWhat it’s like\n\n\n\n\n3–4B\nAny modern laptop, 8 GB RAM\nAutocomplete-plus; fine for drafts and simple extraction\n\n\n7–8B\n16 GB RAM laptop or 8 GB VRAM GPU\nGenuinely useful for summarising, classification, simple code\n\n\n14–32B\n24 GB VRAM GPU (RTX 4090/5090-class) or 32 GB+ Apple Silicon\nSolid mid-tier assistant; the sweet spot for local\n\n\n70B\n48–64 GB — big GPU rig or 64–128 GB Mac\nApproaches last year’s frontier\n\n\nFrontier-scale open models (DeepSeek, Kimi)\nServer-class, multiple GPUs\nDon’t run these at home — rent them via OpenRouter\n\n\n\nTry it if curious: ollama run llama3.2 and give it the Connecticut prompt. Feel the capability gap versus the frontier model — that gap is the price of privacy. Full orientation: Open-weights & local models.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -350,6 +378,7 @@
     "text": "Discussion (20 min)\n\nChat vs harness on the same task — what concretely changed? What did the harness do that the browser couldn’t?\nWhen would you pay $20? When $0? Is there any task in your life worth $100/month?\nDocuments and privacy: what would you upload to a free chat, a paid chat, an API, a local model? Draw your personal line.\nThe jagged frontier — what did the AI nail, and where did it quietly get the Connecticut data wrong? How did you catch it?",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -362,6 +391,7 @@
     "text": "Delivery\n\n\n📦 What to hand in (Sunday 23:55)\n\n\n\nWorking environment — a screenshot of your harness (desktop and CLI) completing the Connecticut task, PNG visible on disk.\nA short note (½ page): (1) your chat-vs-harness comparison table with two sentences of interpretation; (2) which subscription/tool you’ll use this term and why; (3) one thing the AI got wrong and how you caught it.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -374,6 +404,7 @@
     "text": "Academic integrity & AI use\n\nAI as assistant — use AI to enhance your capabilities, not replace your thinking.\nMaintain authority — you remain responsible for all outputs and interpretations.\nVerify everything — always validate AI suggestions, especially statistical claims.\nDocument usage — keep track of how AI helped, to learn and for transparency.\n\nRed lines: never submit unverified AI output as your own; always understand the analysis you present; don’t outsource critical thinking.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -386,6 +417,7 @@
     "text": "Knowledge Base\n\nWhich AI model · Glossary of LLM terms\nInstalling AI CLI Tools · VS Code + Copilot setup · Terminal Basics\nOpen-weights & local models · Open-code tools\nGet AI API keys — for later weeks",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -398,6 +430,7 @@
     "text": "Further reading (optional)\n\nEthan Mollick, Co-Intelligence: Living and Working with AI — Chapters 1–2 for the Cyborg/Centaur framing.\nMollick — The shape of AI jaggedness\nAttention Is All You Need (2017) — the transformer paper, if you’re curious about the engine.\nClaude Code documentation · Codex documentation · Copilot CLI",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 1: LLMs, Harnesses & Setup"
     ]
@@ -410,7 +443,8 @@
     "text": "Capstone Project — Session 3\n\n\nFrom panel to causal effect — and how to present what you found",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 3: DiD & Presentation"
     ]
   },
@@ -422,7 +456,8 @@
     "text": "Before you come to class (30–60 min)\n\n\n✅ Pre-class checklist\n\n\n\nDataset frozen — your match + manager-change panel (Session 1) and expectation scores (Session 2) are final and committed. No more scraping today.\nMerge plan — sketch how the two tables join: shared keys, time unit, what to do with (team, week) rows that have no articles.\nReview terms — difference-in-differences, parallel trends, event-study, two-way fixed effects, staggered treatment (glossary). You saw these in Week 4 — Econometrics with AI.\nPick a presentation format — decide as a team: HTML slides, dashboard, or PDF report.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 3: DiD & Presentation"
     ]
   },
@@ -434,7 +469,8 @@
     "text": "1. Where we are\n\nSession 1 → match + manager-change dataset.\nSession 2 → a text-based expectation score per change.\nSession 3 (today) → build the analysis panel, run a causal design (difference-in-differences), explore heterogeneity — especially by expectations — and present your findings.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 3: DiD & Presentation"
     ]
   },
@@ -446,7 +482,8 @@
     "text": "Review week 02\n\nData collection\n\nscraping (technical issues)\nAPI calls (technical issues)\nkey decision points\n\nReview classification solutions\n\nsimple\ntwo-step\ntool use",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 3: DiD & Presentation"
     ]
   },
@@ -458,7 +495,8 @@
     "text": "2. The causal question\n\n\n🎯 What are we actually trying to answer?\n\n\nResearch question: Does changing a manager improve team performance? And does the impact vary by manager and team characteristics?\nYour first task is to translate it into a very specific question you will estimate.\n\nDefine all aspects of the question\nMake editorial decisions.\n\nThink about what can go wrong:\n\nsample design\nconfounders\nanything else",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 3: DiD & Presentation"
     ]
   },
@@ -470,7 +508,8 @@
     "text": "3. Building the analysis panel\n\n\n🧩 Your two datasets don’t quite fit together\n\n\nYou arrive at Session 3 with two outputs:\nFrom Session 1:\n\na match/manager-change panel. Rows indexed by some combination of team, season, date, match_id.\nteam characteristics\nmanager characteristics\n\nFrom Session 2:\n\nan article-level table\na (team, gameweek) → avg_score aggregation.\n\nPotential issues\nWe have to create a single panel dataset.\nA short list of what to expect:\n\nEntity resolution\nTime unit problems, inconsistencies and mismatch\nCoverage gaps regarding the expectation data\nDate alignment\n\nThese are not bugs in your pipeline. They are the substance of working with real data. Fixing them is the first half of this session. Don’t start the regression until you have a merge you trust.\n\n\n\n\n🏗️ Decisions you have to name (write them in PANEL.md)\n\n\nBefore you merge anything, pick and write down your answers to these:\n\nUnit of observation. (team, match)? (team, calendar_week)? (team, gameweek)?\nTime index.\nEntity keys. One clean team identifier across all tables. One clean manager identifier.\nTreatment timing. What is “the” date of the change.\nPre / post window. How many periods before and after the change do you include? 5 matches? 10 weeks? To end of season?\nMissing-coverage policy. A (team, week) with zero articles: do you drop it, impute zero, or carry forward the previous week’s score?\n\nNone of these has a universally right answer. But you do need to commit to one answer per question and defend it in the slides.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 3: DiD & Presentation"
     ]
   },
@@ -482,7 +521,8 @@
     "text": "4. Difference-in-Differences — vocabulary & tools\nThis is a vocabulary to get started. You can learn the rest with AI — not a from-scratch DiD lecture.\n\n\n📐 Key concepts\n\n\nSetup\n\nTreatment — the event whose effect you want to measure. Here: a manager change.\nTreated unit — a team that experiences a manager change. Control unit — a team that does not (in the same window).\n\nMethods\n\nTwo-way fixed effects (team FE + time FE) — the standard panel regression that could be a good start.\nEvent-study specification — transform data into event time (when the intervention happens); one coefficient per lead / lag around the event, to see the dynamics rather than a single number.\nPre / post — periods before vs after the change.\nDiD estimator — the difference between treated and control in the change from pre to post. In plain words: how much more (or less) did treated teams’ performance move than control teams’?\n\nKey challenges\n\nParallel trends — the core assumption: absent treatment, treated and control would have moved in parallel. Mostly untestable, but pre-trends are a useful proxy.\nStaggered treatment — different teams are treated at different times. This has important econometric implications that you shall investigate.\nAsk AI on what can go wrong with a naive DiD in your setup.\n\n\n\n\n\n📦 Package pointers\n\n\nPython\n\ndiff-diff — a general difference-in-differences / event-study package with sensible defaults. New but already great.\npyfixest — general regression package with options for difference in differences.\n\nR (if you prefer)\n\ndid — the original Callaway–Sant’Anna implementation.\nfixest — fastest FE in the ecosystem; feols, etable, coefplot.\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nUse AI to learn the details\n— ask for worked mini-examples in your setup. Then read the code, don’t just run it. - Use the AI-interviews-me technique to better understand the setup, what you expect, and what your key modelling choices are.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 3: DiD & Presentation"
     ]
   },
@@ -494,7 +534,8 @@
     "text": "5. The expectations angle\n\n\n🧭 What is the purpose of knowing if a manager change was expected?\n\n\nLook at data\n\nFocus on the season(s) you have data on expectations.\nDescriptive: What share of changes were expected? Were there cases when expectation was high but the manager was not fired?\n\nEconometrics\n\nParallel trends: what does it mean in this context?\nWhat does it mean to have anticipation in terms of the causal estimation?\n\nUse\n\nHeterogeneity: do expected changes have a different effect than unexpected ones?\n\nCompare dynamics and simple diff-in-diffs estimates.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 3: DiD & Presentation"
     ]
   },
@@ -506,7 +547,8 @@
     "text": "6. Analysis work block (90 min)\n\n\n🔬 Suggested workflow\n\n\nHere is a suggested workflow. But you can proceed differently.\n\nMerge & validate. Join Session 1 and Session 2 on your chosen keys. Print counts before and after. Eyeball a few rows.\nWrite the spec — in METHODS.md, before any regression:\n\nOutcome.\nUnit.\nTreatment definition (date, caretaker handling).\nWindow (pre/post periods).\nControls (team FE, time FE, opponent strength).\nCluster level for SEs (team).\n\nTest on a subset — one season. Get the plumbing right before you scale.\nTry out one or two models — think about what econometric models you shall use. Start with something you understand.\nTest additional econometric model — think about time, dynamics. Carefully interact with AI to pick one or two extra models.\nHeterogeneity 1 — interact with a binary indicator of manager characteristic. Repeat for team characteristic.\nExpectations — interact with expectation score.\nRobustness — think about 2 key decisions you have made. Test how much they matter.\nDraft slides while code runs. Don’t leave them for the last 15 minutes.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 3: DiD & Presentation"
     ]
   },
@@ -518,7 +560,8 @@
     "text": "7. Deliverables\n\n\n📑 The presentation\n\n\nOne piece, with a choice of delivery format:\n\nHTML presentation\nInteractive dashboard\nPDF report generated from markdown or LaTeX\n\nThis must be fully human reviewed.\n\n\n\n\n📦 Submission: reproducible research, presentation, reflection\n\n\n\nWho: by group — same team you started with in Session 1.+ Individual note\nWhat:\n\nPresentation file (HTML, PDF, or dashboard link)\nGitHub repo that allows reproduction — see Reproducible Research).\n\nIngests raw data and reproduces all figures and tables in a clear workflow\nHINT: AI use, scraping, AI classification not needed – use classified data as raw\n\nMETHODS-AI.md — where and how AI was used\nINDIVIDUAL reflection (3 paragraphs per person): (1) hardest part and how you solved it, (2) most important or notable learning experience, and (3) how you felt working in the group, would you aim for a different work process next",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 3: DiD & Presentation"
     ]
   },
@@ -530,7 +573,8 @@
     "text": "8. Further resources\nFor going deeper on modern DiD, two canonical stops:\n\nPedro Sant’Anna — DiD resources — the maintained hub for modern difference-in-differences. Papers, code, slides, videos, curated by one of the authors of the Callaway–Sant’Anna estimator. Start here for anything staggered.\nCarlos Mendez — DiD in Python — a worked Python tutorial walking through classic and event-study / staggered DiD on real data. Good companion to the csdid / pyfixest pointers above.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 3: DiD & Presentation"
     ]
   },
@@ -542,7 +586,8 @@
     "text": "Capstone Project — Session 1\n\n\nData collection: building a match-and-manager dataset\n→ Project overview & research question",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 1: Data Collection"
     ]
   },
@@ -554,7 +599,8 @@
     "text": "Before you come to class (30–60 min)\n\n\n✅ Pre-class checklist\n\n\n\nTeam & country — form your 3-person team and pick your country/league.\nRepo — create the team’s GitHub repo (private for now, shared with us).\nScout sources — find at least one viable source for match results and one for manager changes.\nReview terms — primary key, schema (glossary).",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 1: Data Collection"
     ]
   },
@@ -566,7 +612,8 @@
     "text": "Learning objectives\nBy the end of this session your team will:\n\nIdentify reliable data sources for your chosen country/league.\nCollect 10+ years of match-level and manager-change data.\nStructure and document the dataset with explicit quality checks.\nBe honest about what is missing and how it limits the later analysis.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 1: Data Collection"
     ]
   },
@@ -578,7 +625,8 @@
     "text": "Required dataset components\n\n\n📊 Core dataset components\n\n\nYou will need six datasets. Details are up to you, here are some examples.\n\n\n\n\n\n\n\n\nComponent\nDetails\n☐\n\n\n\n\nGame results\nDate, home team, away team, goals, league, season\n☐\n\n\nManagers\ndate, team, manager\n☐\n\n\nManager characteristics\nAge, experience, nationality, etc\n☐\n\n\nTeam information\nteam, season, location, quality, etc\n☐\n\n\nData documentation\nSchema, sources, number of observations, quality notes\n☐\n\n\nQuality assurance\nNo missing critical fields, consistent dates, no duplicates, standardized team names\n☐",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 1: Data Collection"
     ]
   },
@@ -590,7 +638,8 @@
     "text": "Work tasks (2-hour block)\n\n\n🎯 What you’ll do\n\n\n\nDiscuss in teams — Which country/league? What sources exist?\nSelf-interview — have your AI ask you clarifying questions before it writes code. (See Designing Larger Analytics Projects.)\nPlan — a short written PLAN.md: sources, primary key, joins, tests, owner per task.\nExecute — scrape / download / compile from your sources.\nTest — all three kinds: data tests, data-describe, code tests. See the testing section for what each means in practice.\nUnderstand the data you have — coverage: how many manager changes? how complete? what is missing for small clubs or early seasons?\n\n\n\n\nData descriptive statistics\nYou are expected to evaluate data quality and understand key characteristics of your dataset.\nBasically create a few important exhibits that describe the data you have.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 1: Data Collection"
     ]
   },
@@ -602,7 +651,8 @@
     "text": "Discussion (last hour)\n\nTeam work — How did you divide the work? What worked well? What was hard?\nData quality\nCross-country variation — How does availability change across leagues?\nTests — What failed? What do you plan?\nHow far ahead – what is left to do\nNext session readiness — API, clear UIDs.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 1: Data Collection"
     ]
   },
@@ -614,7 +664,8 @@
     "text": "Delivery (Session 1)\n\n\n📦 What to hand in\n\n\n\nWho: by group — you finish what you started in class together.\nDeadline: Sunday 23:55 (the Sunday after this session).\nWhere: your team’s GitHub repo for the project. (please keep private for now, share with us)\nWhat:\n\nRaw data (or a script that fetches it reproducibly) + processed dataset.\nA short DATA.md describing each table, source, schema, and known issues.\nTest files (data tests, data-describe checks, code tests).\nData description (any way, notebook or html) with key statistics and exhibits describing the data you have.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 1: Data Collection"
     ]
   },
@@ -693,70 +744,35 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Data Analysis with AI",
+    "title": "Gábor’s AI Courses",
     "section": "",
-    "text": "Gabor’s Data Analysis with AI"
+    "text": "Gábor Békés · Central European University\n\n\nGábor’s AI Courses\n\n\nTwo courses on doing data analysis and research with AI, and the references and case studies behind them. All open, all free to use for teaching and learning."
   },
   {
-    "objectID": "index.html#whats-this",
-    "href": "index.html#whats-this",
-    "title": "Data Analysis with AI",
-    "section": "What’s this",
-    "text": "What’s this\nA course for students who already know data analysis / econometrics and want to seriously rework their practice around AI. The aim is not “tips and tricks”: it is to spend a semester building real things with AI as a teammate, and to think honestly about where it helps, where it lies, and where it lets you do work you genuinely could not do alone.\nAs AI becomes more and more powerful, it is also important to provide a platform to discuss human agency in data analysis. A core role of the instructor is to lead that discussion across the term — what we delegate, what we keep, and how we stay accountable for the result.\nThis is the 2026 Summer edition release\nLast updated: 2026-07-10\n\nStructure\nThe course is eight 200-minute sessions — a five-week core course plus a three-session capstone:\n\nWeek 1 — LLMs & Setup. The one front-facing week: what LLMs are, context windows and document sharing, free vs paid subscriptions, the model-vs-harness distinction, closed vs open-weights models — and getting a working harness (desktop + CLI) running.\nWeeks 2–3 — Core Data Analysis. Use AI on tasks students mostly can do unaided: a reproducible raw-data-to-report pipeline, then reviewing and debugging AI’s work with instruction files, skills, and tests.\nWeeks 4–5 — Research with AI. AI as a research companion: causal identification (controls, instruments, difference-in-differences) and text-as-data with LLM APIs.\nCapstone (3 sessions). A team project that pushes students into work they have never done before: production-style web scraping, text-as-data classification using LLM APIs, and modern causal econometrics (difference-in-differences with staggered treatment, event-study designs). The whole point is that AI makes this newly accessible — and the course makes students actually do it.\n\n\n\nAI and me\nAt the end of all classes, instructors and students should always consider these three questions.\n\nHow did AI support me do what I planned.\nHow did AI fail me: gave half-truths, buggy code, imprecise arguments\nHow did AI extend me: helped do things I could not, or gave new ideas"
-  },
-  {
-    "objectID": "index.html#course-description",
-    "href": "index.html#course-description",
-    "title": "Data Analysis with AI",
-    "section": "Course description",
-    "text": "Course description\n\nContent — the core course\nWeeks 1–5 cover using large language models (LLMs — ChatGPT, Claude, Gemini, Le Chat and others) to carry out tasks in data analysis: LLM and harness setup, a reproducible raw-data-to-report pipeline, reviewing and debugging AI’s work, using AI as a research companion for controls/IV/DiD, and text-as-data on football interviews.\nSeveral case studies run across the material — simulated hotel data from Austria, the World Values Survey, US CPS earnings, football manager post-match interviews. There are practice assignments and a learning-more collection with blogs, papers, and video recommendations.\n\n\nContent — capstone\nA three-session team project on manager changes in football. Each team picks a country, builds a 10+ season match-and-manager panel, scrapes news around each change, uses an LLM API to score how expected each change was, then runs a difference-in-differences analysis with heterogeneity by manager type, team, and expectation.\nThe capstone deliberately requires three things students typically have not done:\n\nWeb scraping at project scale — RSS feeds, article pages, hundreds to thousands of items across sources and languages.\nText-as-data with LLM APIs — designing a classification prompt, structured outputs, hand-validation against the model, cost and reproducibility.\nModern causal econometrics — staggered DiD, event-study specifications, parallel-trends diagnostics, anticipation effects.\n\nThe argument of the course is that AI is what makes this scope realistic in three sessions — and the capstone is where students prove that to themselves.\n\n\nBackground: data analysis / econometrics\nYou need a background in Data Analysis / Econometrics, a good introductory course is enough. I, of course, suggest Chapters 1-12 and 19 of Data Analysis for Business, Economics and Policy (Cambridge UP, 2021). Full slideshows, data and code are open source. But consider buying the book!🤝\nIn particular, the course builds on Chapters 1-6 and 7-10, and 19 and 22-24 of Data Analysis but other Introductory Econometrics + basics of data science knowledge is ok.\n\n\nBackground: coding\nStudents are expected to have some basic coding knowledge in Python or R (Stata also fine for the early weeks). The capstone is realistically Python or R only — scraping and API work in Stata is painful.\n\n\nRelevance\nAI is everywhere and has become essential, most analytic work will be using it. It’s like the Internet a while back. Does not solve all problems, but almost all intellectual tasks will rely on inputs from it.\n\n\nLearning Outcomes\nBy the end of the course, students will be able to\n\nUse genAI fluently across the standard data-analysis stack — wrangling, description, reporting, light text analysis.\nWork with agentic CLI tools (Claude Code and similar) on a real repo, with reproducibility and tests.\nScrape structured data from the web for a defined research goal.\nUse an LLM API to turn text into numbers, including prompt design, structured output, and hand-validation.\nRun a modern difference-in-differences / event-study analysis with staggered treatment and discuss its limits honestly.\nDistinguish AI uses where the output is fine as-is from those that need strong human supervision.\nRun a multi-week team project from data collection to causal analysis, using AI throughout.\n\n\n\nTarget audience\nThe course is aimed primarily at graduate and advanced-undergraduate students in economics, quantitative social science, political science, sociology, business analytics, and adjacent fields — students who have done a real econometrics or data-analysis course and now need to reset their practice around AI. The capstone in particular assumes you are willing to push past your current toolkit.\nThe material is also designed to be forkable by instructors: all open source under CC BY-NC-SA, so teachers can pick weeks, swap case studies, and run their own version. Practitioners, researchers, and journalists with the background can absolutely go through it solo."
-  },
-  {
-    "objectID": "index.html#assignments",
-    "href": "index.html#assignments",
-    "title": "Data Analysis with AI",
-    "section": "Assignments",
-    "text": "Assignments\nAssignments are available for all classes\nImportant to note for assignments: * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this."
-  },
-  {
-    "objectID": "index.html#the-core-course",
-    "href": "index.html#the-core-course",
-    "title": "Data Analysis with AI",
-    "section": "The core course",
-    "text": "The core course\n\n\n\n\n\n\nTip\n\n\n\nBefore Week 1. Get your environment in shape and pick up a few prompting-for-code habits — see AI Coding Prep. Skip it if you already use Copilot/Cursor on real projects.\n\n\nWeek 1: LLMs, Harnesses & Setup\nWhat LLMs are and how the magic happens — a non-technical intro that starts from the free chat box. Context windows and what happens when you share documents, free vs paid subscriptions and when to upgrade, and the harness idea: coding agents (Claude Code, Codex, GitHub Copilot) that read whole folders, run code, and use tools. Get one running — desktop app and CLI — and close with OpenRouter and open-weights models on your own machine. See also which AI model to use.\nContent\nWeek 2: From Raw Data to Report\nDownload real survey data, build a reproducible pipeline (explore → composite variables → aggregate → join an external API), and contrast an undirected “vibe report” with a carefully directed report.\nCase study: World Values Survey\nContent\nWeek 3: Data Wrangling & Debugging\nReviewing AI’s work: project instruction files (CLAUDE.md / agents.md), reusable skills, the three kinds of tests, git discipline, and safe autonomous execution.\nCase study: Austrian Hotels\nContent\nWeek 4: Econometrics with AI\nAI as a research companion for causal identification — designing control sets (helpful vs adversarial), surfacing instruments via prompt chaining, and difference-in-differences.\nContent\nWeek 5: Text as Data\nFootball post-match interviews as the running case: the NLP pipeline, four ways to score sentiment, humans vs AI, and a text→data pipeline that scales via an LLM API.\nCase study: Football Manager Interviews\nContent"
-  },
-  {
-    "objectID": "index.html#capstone-three-sessions-doing-things-you-have-never-done",
-    "href": "index.html#capstone-three-sessions-doing-things-you-have-never-done",
-    "title": "Data Analysis with AI",
-    "section": "Capstone: three sessions — doing things you have never done",
-    "text": "Capstone: three sessions — doing things you have never done\nA three-session team project on manager changes in football, deliberately scoped so that each session forces students into territory they have not been in before. Pick a country, build a 10+ season panel, score the news, run the causal design. — Project description\nSession 1 — Data collection & description. Build a multi-table match-and-manager panel from messy public sources. Real entity resolution, real data quality work. — Content\nSession 2 — From text to expectations (web scraping + LLM APIs). Scrape news articles around each manager change, then use an LLM API to score how expected the change was. Prompt design, structured output, hand-validation, cost. — Content\nSession 3 — Difference-in-Differences + final presentation. Modern causal econometrics: staggered DiD, event-study, parallel-trends diagnostics, heterogeneity by manager / team / expectation. Honest presentation of what the data can and cannot say. — Content"
-  },
-  {
-    "objectID": "index.html#knowledge-base",
-    "href": "index.html#knowledge-base",
-    "title": "Data Analysis with AI",
-    "section": "Knowledge Base",
-    "text": "Knowledge Base\nReusable reference pages on APIs, tools setup, project design, and more — see the Knowledge Base. For further reading beyond the course, check the beyond page."
+    "objectID": "index.html#which-course-is-for-me",
+    "href": "index.html#which-course-is-for-me",
+    "title": "Gábor’s AI Courses",
+    "section": "Which course is for me?",
+    "text": "Which course is for me?\nData Analysis with AI assumes a course in econometrics or data analysis and some coding in Python or R. It goes all the way to scraping, LLM APIs and modern causal econometrics.\nThe friendly introduction assumes neither. You give instructions in plain language, you use one tool, and you work on material from your own field. If you have never used an AI agent, it is a good place to start either way."
   },
   {
     "objectID": "index.html#rights-and-acknowledgement",
     "href": "index.html#rights-and-acknowledgement",
-    "title": "Data Analysis with AI",
+    "title": "Gábor’s AI Courses",
     "section": "Rights and acknowledgement",
     "text": "Rights and acknowledgement\n\nYou can use it to teach and learn freely\nAttribution: Békés, Gábor: “Data Analysis with AI: a comprehensive course”, available at gabors-data-analysis.com/ai-course/, v2.2. 2026-05-01.\nYou can fork it from the Github Repo. github.com/gabors-data-analysis/da-w-ai/\nLicense: CC BY-NC-SA 4.0 – share, attribute, non-commercial (contact me for corporate gigs)\nTextbook Please check out the textbook behind all this, buy it if you can. If interested teaching contact the Cambridge UP or me."
   },
   {
     "objectID": "index.html#thanks",
     "href": "index.html#thanks",
-    "title": "Data Analysis with AI",
+    "title": "Gábor’s AI Courses",
     "section": "Thanks",
     "text": "Thanks\nThanks: Developed mostly by me, Gábor Békés Thanks a million to the two wonderful human RAs, Ms Zsuzsanna Vadle and Mr Kenneth Colombe, both Phd students. Also thanks to Adam Víg, long term collaborator now at Google. Thanks to Claude and ChatGPT to craft pages, improve consistency, create the simulated dataset. They helped create the slideshows and educated me on a bunch of topics like reinforcement learning or NLP. This is a beautiful example of collaboration with great young people while heavily benefiting from advanced AI. Thanks for Quarto – it was all drafted and written in Quarto and Rstudio by Posit. Plus all the love from Github.\nThanks for CEU’s teaching grant that allowed me pay people and AI."
   },
   {
     "objectID": "index.html#questions-and-suggestions",
     "href": "index.html#questions-and-suggestions",
-    "title": "Data Analysis with AI",
+    "title": "Gábor’s AI Courses",
     "section": "Questions and suggestions",
     "text": "Questions and suggestions\nThis material is based my course at CEU in Vienna, Austria. Here is the Github repo\nIf you have questions or suggestions or interested to learn more, just fill in this form."
   },
@@ -2272,21 +2288,36 @@
     "href": "case-studies/index.html",
     "title": "Case Studies",
     "section": "",
-    "text": "This course uses several case studies to demonstrate data analysis with AI. Each case study includes data, code examples, and documentation."
+    "text": "This course uses several case studies to demonstrate data analysis with AI. Each case study includes data, code examples, and documentation.",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Overview"
+    ]
   },
   {
     "objectID": "case-studies/index.html#main-case-studies",
     "href": "case-studies/index.html#main-case-studies",
     "title": "Case Studies",
     "section": "Main Case Studies",
-    "text": "Main Case Studies\n\nWorld Values Survey (WVS)\nThe 7th Wave of the World Values Survey, cleaned and merged with World Bank GDP data. Used for data documentation and report writing exercises.\nUsed in: Week 2 (Data Documentation), Week 3 (Report Writing)\n\n\n\nAustrian Hotels\nA realistic simulated dataset of hotels across Austria for practicing data wrangling and table joins. Contains 8 related tables.\nUsed in: Week 4 (Joining Tables)\n\n\n\nFootball Manager Interviews\nPost-match interview texts from football managers for sentiment analysis and NLP practice. Includes rating systems for comparison and validation.\nUsed in: Week 7 (Text as Data I), Week 8 (Text as Data II)"
+    "text": "Main Case Studies\n\nWorld Values Survey (WVS)\nThe 7th Wave of the World Values Survey, cleaned and merged with World Bank GDP data. Used for data documentation and report writing exercises.\nUsed in: Week 2 (Data Documentation), Week 3 (Report Writing)\n\n\n\nAustrian Hotels\nA realistic simulated dataset of hotels across Austria for practicing data wrangling and table joins. Contains 8 related tables.\nUsed in: Week 4 (Joining Tables)\n\n\n\nFootball Manager Interviews\nPost-match interview texts from football managers for sentiment analysis and NLP practice. Includes rating systems for comparison and validation.\nUsed in: Week 7 (Text as Data I), Week 8 (Text as Data II)",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Overview"
+    ]
   },
   {
     "objectID": "case-studies/index.html#additional-case-studies",
     "href": "case-studies/index.html#additional-case-studies",
     "title": "Case Studies",
     "section": "Additional Case Studies",
-    "text": "Additional Case Studies\n\nUS Earnings Data (CPS)\nCurrent Population Survey data for analyzing earnings patterns, gender gaps, and returns to education.\nUsed in: Week 6 (From Data to Report)\n\n\n\nEmployee Commits\nSimulated dataset of employee commit activity for exploring AI-generated data analysis comparisons.\n\n\n\nCommon Support Analysis (R)\nIterative development of R code for causal inference analysis using Claude AI, demonstrating prompt-refine workflow."
+    "text": "Additional Case Studies\n\nUS Earnings Data (CPS)\nCurrent Population Survey data for analyzing earnings patterns, gender gaps, and returns to education.\nUsed in: Week 6 (From Data to Report)\n\n\n\nEmployee Commits\nSimulated dataset of employee commit activity for exploring AI-generated data analysis comparisons.\n\n\n\nCommon Support Analysis (R)\nIterative development of R code for causal inference analysis using Claude AI, demonstrating prompt-refine workflow.",
+    "crumbs": [
+      "Home",
+      "Case Studies",
+      "Overview"
+    ]
   },
   {
     "objectID": "case-studies/employee_commits/data/index.html",
@@ -2579,7 +2610,8 @@
     "text": "Capstone Project\n\n\nManager Impact in Football — from raw data to causal claims in three sessions",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Project Description"
     ]
   },
@@ -2591,7 +2623,8 @@
     "text": "The Project\nAfter ten weeks of guided exercises, the capstone project is a three-session team project with one broad research question, messy real-world data, and AI as a teammate.\nResearch question: Does changing a manager improve team performance? And does the impact vary by manager and team characteristics?\nYour audience is heads of data science at sports clubs with a strong background in econometrics. Your goal is to produce a rigorous, reproducible analysis that sheds light on the true impact of managerial changes in football.\nYou will make decisions, be assertive and transparent.\n\nWhy this project\n\nIt is specific (one domain, concrete RQ) but broad (no exact steps given to you).\nYou will have to plan, layer tasks with AI, and decide — not just follow a recipe.\nBefore you start, we’ll go over two companion pages: Designing Larger Analytics Projects with AI and Reproducible Research Pipelines. Together they cover the mindsets, self-interview, agents.md file, testing, repo layout, and workflow habits you’ll apply throughout the project.\n\n\n\nTask and Scope\nYour task is to answer the research question above by collecting, combining, and analyzing data on football matches and manager changes. There will be 3-member teams, each picking a country.\n\n\n\n\n\n\n\nDimension\nChoice\n\n\n\n\nSport\nFootball (soccer)\n\n\nLeague tier\nFirst division only\n\n\nCountries (pick one per team)\nSpain, Italy, France, Germany, Turkey, Scotland, Portugal, Netherlands, Poland, Ukraine, Russia, or another you can defend\n\n\nTime horizon\n10+ seasons of historical data\n\n\nSession 1, 2 deliverable\nData, scripts, reproducible repo and READMEs\n\n\nSession 3\nFull project repo + ~12-minute presentation\n\n\n\n\n\nKey questions to answer by Session 3\n\nWhat is the average effect of a manager change on team performance?\nWhich types of managers show larger or smaller effects?\nWhich types of teams respond more?\nWhen a dismissal is more expected as shown by news reports, is the effect any different?\n\n\n\nOpen questions\n\nAnything not specified is open. You can consult each other and AI, and the team shall make decisions.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Project Description"
     ]
   },
@@ -2603,7 +2636,8 @@
     "text": "Sessions at a glance\n\n\n\nSession\nFocus\nDeliverable by Sunday 23:55\n\n\n\n\n1\nData collection, combination, description\nDocumented dataset + QA notes\n\n\n2\nText → expectations (APIs, scraping)\nArticle corpus + per-change expectation score\n\n\n3\nDiD analysis + heterogeneity + presentation\nResults, slides, repo\n\n\n\n\nSession structure (same each time)\nEach 200-minute session runs the same shape:\n\nIntro talk (≈30 min) — key concepts, common pitfalls, decisions to make.\nTeam work (≈120 min) — you execute; AI assists; I circulate.\nGroup discussion (≈50 min) — share what worked, compare approaches, debrief.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Project Description"
     ]
   },
@@ -2615,7 +2649,8 @@
     "text": "Evaluation\nYou will be evaluated on:\n\nData quality — required elements collected, documented, tested.\nNews classification — coverage of changes, validated classification, reproducible prompt.\nCausal identification — appropriate method, assumptions stated and checked where possible.\nHeterogeneity & expectations — meaningful comparisons, expectations-vs-reality done rigorously.\nReproducibility — somebody else can rerun.\nPresentation — clarity for a peer audience, honest about limits.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Project Description"
     ]
   },
@@ -7721,133 +7756,204 @@
     "href": "navbar/assignments.html",
     "title": "Course Assignments",
     "section": "",
-    "text": "Assignments are available for all classes\nImportant to note for assignments:  * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this."
+    "text": "Assignments are available for all classes\nImportant to note for assignments:  * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this.",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Assignments"
+    ]
   },
   {
     "objectID": "navbar/assignments.html#assignment-1-reproduce-an-ft-graph",
     "href": "navbar/assignments.html#assignment-1-reproduce-an-ft-graph",
     "title": "Course Assignments",
     "section": "Assignment 1: Reproduce an FT graph",
-    "text": "Assignment 1: Reproduce an FT graph\nLook at this graph from Financial Times. Your task is to recreate this figure using real-world data.\nAssignment Details"
+    "text": "Assignment 1: Reproduce an FT graph\nLook at this graph from Financial Times. Your task is to recreate this figure using real-world data.\nAssignment Details",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Assignments"
+    ]
   },
   {
     "objectID": "navbar/assignments.html#assignment-2-creating-a-readme-doc",
     "href": "navbar/assignments.html#assignment-2-creating-a-readme-doc",
     "title": "Course Assignments",
     "section": "Assignment 2: Creating a readme doc",
-    "text": "Assignment 2: Creating a readme doc\nIn this assignment, you will create a readme document by asking for AI assistance.\nAssignment Details"
+    "text": "Assignment 2: Creating a readme doc\nIn this assignment, you will create a readme document by asking for AI assistance.\nAssignment Details",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Assignments"
+    ]
   },
   {
     "objectID": "navbar/assignments.html#assignment-3-create-a-report",
     "href": "navbar/assignments.html#assignment-3-create-a-report",
     "title": "Course Assignments",
     "section": "Assignment 3: Create a report",
-    "text": "Assignment 3: Create a report\nContinue with the research question you had chosen in class. Use AI iteratively to help you create a report.\nAssignment Details"
+    "text": "Assignment 3: Create a report\nContinue with the research question you had chosen in class. Use AI iteratively to help you create a report.\nAssignment Details",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Assignments"
+    ]
   },
   {
     "objectID": "navbar/assignments.html#assignment-4-extend-the-austrian-hotels-dataset",
     "href": "navbar/assignments.html#assignment-4-extend-the-austrian-hotels-dataset",
     "title": "Course Assignments",
     "section": "Assignment 4: Extend the Austrian Hotels Dataset",
-    "text": "Assignment 4: Extend the Austrian Hotels Dataset\nUsing Claude Code, create a new data table that joins to the Austrian Hotels dataset, then perform an analysis that answers an interesting question.\nAssignment Details"
+    "text": "Assignment 4: Extend the Austrian Hotels Dataset\nUsing Claude Code, create a new data table that joins to the Austrian Hotels dataset, then perform an analysis that answers an interesting question.\nAssignment Details",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Assignments"
+    ]
   },
   {
     "objectID": "navbar/assignments.html#assignment-5-advanced-cli-workflows",
     "href": "navbar/assignments.html#assignment-5-advanced-cli-workflows",
     "title": "Course Assignments",
     "section": "Assignment 5: Advanced CLI Workflows",
-    "text": "Assignment 5: Advanced CLI Workflows\nUse Claude Code to solve an interesting problem and report on the experience.\nAssignment Details"
+    "text": "Assignment 5: Advanced CLI Workflows\nUse Claude Code to solve an interesting problem and report on the experience.\nAssignment Details",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Assignments"
+    ]
   },
   {
     "objectID": "navbar/assignments.html#assignment-6-from-data-to-report",
     "href": "navbar/assignments.html#assignment-6-from-data-to-report",
     "title": "Course Assignments",
     "section": "Assignment 6: From Data to Report",
-    "text": "Assignment 6: From Data to Report\nUse Claude Code to download CPS earnings data, create a focused PDF report (3-5 exhibits, 600-800 words, at least one regression), and reflect on directed vs. undirected AI output.\nAssignment Details"
+    "text": "Assignment 6: From Data to Report\nUse Claude Code to download CPS earnings data, create a focused PDF report (3-5 exhibits, 600-800 words, at least one regression), and reflect on directed vs. undirected AI output.\nAssignment Details",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Assignments"
+    ]
   },
   {
     "objectID": "navbar/assignments.html#assignment-7-text-sentiment-analysis",
     "href": "navbar/assignments.html#assignment-7-text-sentiment-analysis",
     "title": "Course Assignments",
     "section": "Assignment 7: Text sentiment analysis",
-    "text": "Assignment 7: Text sentiment analysis\nStudent-Specific Text Sentiment Analysis – Compare manual ratings with AI-generated ratings.\nAssignment Details"
+    "text": "Assignment 7: Text sentiment analysis\nStudent-Specific Text Sentiment Analysis – Compare manual ratings with AI-generated ratings.\nAssignment Details",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Assignments"
+    ]
   },
   {
     "objectID": "navbar/assignments.html#assignment-8-text-analysis-guessing-gender-in-text",
     "href": "navbar/assignments.html#assignment-8-text-analysis-guessing-gender-in-text",
     "title": "Course Assignments",
     "section": "Assignment 8: Text analysis: guessing gender in text",
-    "text": "Assignment 8: Text analysis: guessing gender in text\nCreate pipeline for guessing the speaker’s gender.\nAssignment Details"
+    "text": "Assignment 8: Text analysis: guessing gender in text\nCreate pipeline for guessing the speaker’s gender.\nAssignment Details",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Assignments"
+    ]
   },
   {
     "objectID": "navbar/assignments.html#assignment-10-design-an-iv",
     "href": "navbar/assignments.html#assignment-10-design-an-iv",
     "title": "Course Assignments",
     "section": "Assignment 10: Design an IV",
-    "text": "Assignment 10: Design an IV\nThink about an identification problem and iterate to find a good IV.\nAssignment Details"
+    "text": "Assignment 10: Design an IV\nThink about an identification problem and iterate to find a good IV.\nAssignment Details",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Assignments"
+    ]
   },
   {
     "objectID": "navbar/weeks.html",
     "href": "navbar/weeks.html",
-    "title": "Course Content",
+    "title": "Data Analysis with AI",
     "section": "",
-    "text": "The course is eight 200-minute sessions: a five-week core course plus a three-session capstone. Each week opens with a 30–60 minute “Before you come to class” checklist and ends with a deliverable due Sunday 23:55."
+    "text": "A course in eight sessions · Gábor Békés, CEU\n\n\nData Analysis with AI\n\n\nFive weeks of core material and a three-session capstone, for students who know data analysis or econometrics and want to rework their practice around AI",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Course Overview"
+    ]
   },
   {
-    "objectID": "navbar/weeks.html#week-1-llms-harnesses-setup",
-    "href": "navbar/weeks.html#week-1-llms-harnesses-setup",
-    "title": "Course Content",
-    "section": "Week 1: LLMs, Harnesses & Setup",
-    "text": "Week 1: LLMs, Harnesses & Setup\nStarting from the free chat box: what LLMs are, context windows and what happens when you share documents, free vs paid subscriptions and when to upgrade, and the harness idea — coding agents (Claude Code, Codex, GitHub Copilot) that read whole folders, run code, and use tools. Set up a working harness (desktop app + CLI); close with OpenRouter and local open-weights models.\nWhich AI? See my take on current models.\nContent"
+    "objectID": "navbar/weeks.html#whats-this",
+    "href": "navbar/weeks.html#whats-this",
+    "title": "Data Analysis with AI",
+    "section": "What’s this",
+    "text": "What’s this\nA course for students who already know data analysis / econometrics and want to seriously rework their practice around AI. The aim is not “tips and tricks”: it is to spend a semester building real things with AI as a teammate, and to think honestly about where it helps, where it lies, and where it lets you do work you genuinely could not do alone.\nAs AI becomes more and more powerful, it is also important to provide a platform to discuss human agency in data analysis. A core role of the instructor is to lead that discussion across the term — what we delegate, what we keep, and how we stay accountable for the result.\nThis is the 2026 Summer edition release\nLast updated: 2026-07-10\n\nStructure\nThe course is eight 200-minute sessions — a five-week core course plus a three-session capstone:\n\nWeek 1 — LLMs & Setup. The one front-facing week: what LLMs are, context windows and document sharing, free vs paid subscriptions, the model-vs-harness distinction, closed vs open-weights models — and getting a working harness (desktop + CLI) running.\nWeeks 2–3 — Core Data Analysis. Use AI on tasks students mostly can do unaided: a reproducible raw-data-to-report pipeline, then reviewing and debugging AI’s work with instruction files, skills, and tests.\nWeeks 4–5 — Research with AI. AI as a research companion: causal identification (controls, instruments, difference-in-differences) and text-as-data with LLM APIs.\nCapstone (3 sessions). A team project that pushes students into work they have never done before: production-style web scraping, text-as-data classification using LLM APIs, and modern causal econometrics (difference-in-differences with staggered treatment, event-study designs). The whole point is that AI makes this newly accessible — and the course makes students actually do it.\n\nEach week opens with a 30–60 minute “Before you come to class” checklist and ends with a deliverable due Sunday 23:55.\n\n\nAI and me\nAt the end of all classes, instructors and students should always consider these three questions.\n\nHow did AI support me do what I planned.\nHow did AI fail me: gave half-truths, buggy code, imprecise arguments\nHow did AI extend me: helped do things I could not, or gave new ideas",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Course Overview"
+    ]
   },
   {
-    "objectID": "navbar/weeks.html#week-2-from-raw-data-to-report",
-    "href": "navbar/weeks.html#week-2-from-raw-data-to-report",
-    "title": "Course Content",
-    "section": "Week 2: From Raw Data to Report",
-    "text": "Week 2: From Raw Data to Report\nDownload real survey data, build a reproducible pipeline (explore → composite variables → aggregate → join an external API), and contrast an undirected “vibe report” with a carefully directed report.\nCase study: World Values Survey\nContent"
+    "objectID": "navbar/weeks.html#course-description",
+    "href": "navbar/weeks.html#course-description",
+    "title": "Data Analysis with AI",
+    "section": "Course description",
+    "text": "Course description\n\nContent — the core course\nWeeks 1–5 cover using large language models (LLMs — ChatGPT, Claude, Gemini, Le Chat and others) to carry out tasks in data analysis: LLM and harness setup, a reproducible raw-data-to-report pipeline, reviewing and debugging AI’s work, using AI as a research companion for controls/IV/DiD, and text-as-data on football interviews.\nSeveral case studies run across the material — simulated hotel data from Austria, the World Values Survey, US CPS earnings, football manager post-match interviews. There are practice assignments and a learning-more collection with blogs, papers, and video recommendations.\n\n\nContent — capstone\nA three-session team project on manager changes in football. Each team picks a country, builds a 10+ season match-and-manager panel, scrapes news around each change, uses an LLM API to score how expected each change was, then runs a difference-in-differences analysis with heterogeneity by manager type, team, and expectation.\nThe capstone deliberately requires three things students typically have not done:\n\nWeb scraping at project scale — RSS feeds, article pages, hundreds to thousands of items across sources and languages.\nText-as-data with LLM APIs — designing a classification prompt, structured outputs, hand-validation against the model, cost and reproducibility.\nModern causal econometrics — staggered DiD, event-study specifications, parallel-trends diagnostics, anticipation effects.\n\nThe argument of the course is that AI is what makes this scope realistic in three sessions — and the capstone is where students prove that to themselves.\n\n\nBackground: data analysis / econometrics\nYou need a background in Data Analysis / Econometrics, a good introductory course is enough. I, of course, suggest Chapters 1-12 and 19 of Data Analysis for Business, Economics and Policy (Cambridge UP, 2021). Full slideshows, data and code are open source. But consider buying the book!🤝\nIn particular, the course builds on Chapters 1-6 and 7-10, and 19 and 22-24 of Data Analysis but other Introductory Econometrics + basics of data science knowledge is ok.\n\n\nBackground: coding\nStudents are expected to have some basic coding knowledge in Python or R (Stata also fine for the early weeks). The capstone is realistically Python or R only — scraping and API work in Stata is painful.\n\n\nRelevance\nAI is everywhere and has become essential, most analytic work will be using it. It’s like the Internet a while back. Does not solve all problems, but almost all intellectual tasks will rely on inputs from it.\n\n\nLearning Outcomes\nBy the end of the course, students will be able to\n\nUse genAI fluently across the standard data-analysis stack — wrangling, description, reporting, light text analysis.\nWork with agentic CLI tools (Claude Code and similar) on a real repo, with reproducibility and tests.\nScrape structured data from the web for a defined research goal.\nUse an LLM API to turn text into numbers, including prompt design, structured output, and hand-validation.\nRun a modern difference-in-differences / event-study analysis with staggered treatment and discuss its limits honestly.\nDistinguish AI uses where the output is fine as-is from those that need strong human supervision.\nRun a multi-week team project from data collection to causal analysis, using AI throughout.\n\n\n\nTarget audience\nThe course is aimed primarily at graduate and advanced-undergraduate students in economics, quantitative social science, political science, sociology, business analytics, and adjacent fields — students who have done a real econometrics or data-analysis course and now need to reset their practice around AI. The capstone in particular assumes you are willing to push past your current toolkit.\nThe material is also designed to be forkable by instructors: all open source under CC BY-NC-SA, so teachers can pick weeks, swap case studies, and run their own version. Practitioners, researchers, and journalists with the background can absolutely go through it solo.",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Course Overview"
+    ]
   },
   {
-    "objectID": "navbar/weeks.html#week-3-data-wrangling-debugging",
-    "href": "navbar/weeks.html#week-3-data-wrangling-debugging",
-    "title": "Course Content",
-    "section": "Week 3: Data Wrangling & Debugging",
-    "text": "Week 3: Data Wrangling & Debugging\nReviewing AI’s work: project instruction files (CLAUDE.md / agents.md), reusable skills, the three kinds of tests, git discipline, and safe autonomous execution.\nCase study: Austrian Hotels\nContent"
+    "objectID": "navbar/weeks.html#assignments",
+    "href": "navbar/weeks.html#assignments",
+    "title": "Data Analysis with AI",
+    "section": "Assignments",
+    "text": "Assignments\nAssignments are available for all classes: see the list of assignments.\nImportant to note for assignments: * Use AI but do not submit something that was created by AI. AI is your assistant. * One of the goals of the course is to practice this.",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Course Overview"
+    ]
   },
   {
-    "objectID": "navbar/weeks.html#week-4-econometrics-with-ai",
-    "href": "navbar/weeks.html#week-4-econometrics-with-ai",
-    "title": "Course Content",
-    "section": "Week 4: Econometrics with AI",
-    "text": "Week 4: Econometrics with AI\nAI as a research companion for causal identification — designing control sets (helpful vs adversarial), surfacing instruments via prompt chaining, and difference-in-differences.\nContent"
+    "objectID": "navbar/weeks.html#the-core-course",
+    "href": "navbar/weeks.html#the-core-course",
+    "title": "Data Analysis with AI",
+    "section": "The core course",
+    "text": "The core course\n\n\n\n\n\n\nTip\n\n\n\nBefore Week 1. Get your environment in shape and pick up a few prompting-for-code habits — see AI Coding Prep. Skip it if you already use Copilot/Cursor on real projects.\n\n\nWeek 1: LLMs, Harnesses & Setup\nWhat LLMs are and how the magic happens — a non-technical intro that starts from the free chat box. Context windows and what happens when you share documents, free vs paid subscriptions and when to upgrade, and the harness idea: coding agents (Claude Code, Codex, GitHub Copilot) that read whole folders, run code, and use tools. Get one running — desktop app and CLI — and close with OpenRouter and open-weights models on your own machine. See also which AI model to use.\nContent\nWeek 2: From Raw Data to Report\nDownload real survey data, build a reproducible pipeline (explore → composite variables → aggregate → join an external API), and contrast an undirected “vibe report” with a carefully directed report.\nCase study: World Values Survey\nContent\nWeek 3: Data Wrangling & Debugging\nReviewing AI’s work: project instruction files (CLAUDE.md / agents.md), reusable skills, the three kinds of tests, git discipline, and safe autonomous execution.\nCase study: Austrian Hotels\nContent\nWeek 4: Econometrics with AI\nAI as a research companion for causal identification — designing control sets (helpful vs adversarial), surfacing instruments via prompt chaining, and difference-in-differences.\nContent\nWeek 5: Text as Data\nFootball post-match interviews as the running case: the NLP pipeline, four ways to score sentiment, humans vs AI, and a text→data pipeline that scales via an LLM API.\nCase study: Football Manager Interviews\nContent",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Course Overview"
+    ]
   },
   {
-    "objectID": "navbar/weeks.html#week-5-text-as-data",
-    "href": "navbar/weeks.html#week-5-text-as-data",
-    "title": "Course Content",
-    "section": "Week 5: Text as Data",
-    "text": "Week 5: Text as Data\nTurning short texts into numbers — the NLP pipeline, four ways to score sentiment, humans vs AI, and a text→data pipeline that scales via an LLM API.\nCase study: Football Manager Interviews\nContent"
+    "objectID": "navbar/weeks.html#capstone-three-sessions-doing-things-you-have-never-done",
+    "href": "navbar/weeks.html#capstone-three-sessions-doing-things-you-have-never-done",
+    "title": "Data Analysis with AI",
+    "section": "Capstone: three sessions — doing things you have never done",
+    "text": "Capstone: three sessions — doing things you have never done\nA three-session team project on manager changes in football, deliberately scoped so that each session forces students into territory they have not been in before. Pick a country, build a 10+ season panel, score the news, run the causal design. — Project description\nSession 1 — Data collection & description. Build a multi-table match-and-manager panel from messy public sources. Real entity resolution, real data quality work. — Content\nSession 2 — From text to expectations (web scraping + LLM APIs). Scrape news articles around each manager change, then use an LLM API to score how expected the change was. Prompt design, structured output, hand-validation, cost. — Content\nSession 3 — Difference-in-Differences + final presentation. Modern causal econometrics: staggered DiD, event-study, parallel-trends diagnostics, heterogeneity by manager / team / expectation. Honest presentation of what the data can and cannot say. — Content",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Course Overview"
+    ]
   },
   {
-    "objectID": "navbar/weeks.html#session-1-data-collection-description",
-    "href": "navbar/weeks.html#session-1-data-collection-description",
-    "title": "Course Content",
-    "section": "Session 1: Data collection & description",
-    "text": "Session 1: Data collection & description\nPick a league, collect and document 10+ seasons of match and manager-change data.\nContent"
-  },
-  {
-    "objectID": "navbar/weeks.html#session-2-from-text-to-expectations-apis",
-    "href": "navbar/weeks.html#session-2-from-text-to-expectations-apis",
-    "title": "Course Content",
-    "section": "Session 2: From text to expectations (APIs)",
-    "text": "Session 2: From text to expectations (APIs)\nScrape news sources and use an LLM API to score expectations around each manager change.\nContent"
-  },
-  {
-    "objectID": "navbar/weeks.html#session-3-difference-in-differences-analysis-final-presentation",
-    "href": "navbar/weeks.html#session-3-difference-in-differences-analysis-final-presentation",
-    "title": "Course Content",
-    "section": "Session 3: Difference-in-Differences analysis + final presentation",
-    "text": "Session 3: Difference-in-Differences analysis + final presentation\nRun a DiD on your panel, explore heterogeneity (including by expectation score), and present to the class.\nContent"
+    "objectID": "navbar/weeks.html#knowledge-base",
+    "href": "navbar/weeks.html#knowledge-base",
+    "title": "Data Analysis with AI",
+    "section": "Knowledge Base",
+    "text": "Knowledge Base\nReusable reference pages on APIs, tools setup, project design, and more — see the Knowledge Base. For further reading beyond the course, check the beyond page.",
+    "crumbs": [
+      "Home",
+      "Data Analysis with AI",
+      "Course Overview"
+    ]
   },
   {
     "objectID": "project02/index.html",
@@ -7857,7 +7963,8 @@
     "text": "Capstone Project — Session 2\n\n\nFrom text to expectations — scrape, call an API, score expectations",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 2: Text to Expectations"
     ]
   },
@@ -7869,7 +7976,8 @@
     "text": "Where we are\n\nSession 1 → you have a cleaned match + manager-change dataset.\nSession 2 (today) → for each manager change, you build a news-based expectation signal: how much was an imminent change expected?\nSession 3 → you use that signal as a moderator in the DiD analysis.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 2: Text to Expectations"
     ]
   },
@@ -7881,7 +7989,8 @@
     "text": "Before you come to class (30–60 min)\n\n\n✅ Pre-class checklist\n\n\n\nAPI keys — confirm your LLM API key works and is stored outside the repo (env var).\nSources — identify ≥ 2 credible news outlets for your country/league; check for RSS or a simple URL pattern.\nRead — skim Introduction to APIs if APIs are new.\nReview terms — rate limits, scraping etiquette (glossary).",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 2: Text to Expectations"
     ]
   },
@@ -7893,7 +8002,8 @@
     "text": "Learning objectives\nBy the end of this session your team will:\n\nLearn about the classical NLP pipeline and how LLMs fit into it.\nIdentify relevant news sources for your country/league.\nScrape or pull articles into a structured table (one row per article).\nUse an LLM API to classify each article into an expectation score.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 2: Text to Expectations"
     ]
   },
@@ -7905,7 +8015,8 @@
     "text": "Today’s task — purpose and expected output\n\n\n🎯 Purpose\n\n\nStarting example. Read this article before going any further: Reuters — “Last season we lose that game”, says Man United’s Amorim (1 Nov 2025). Amorim talking after a 2–2 draw, a year into his tenure at Man United. Does the press suggest a change is coming? How would you score this one?\nThat is the task — at scale.\nFor every manager change in your panel, produce a numeric expectation score that answers one question:\n\nIn the period before the change was announced, how strongly did the press suggest that a change was coming?\n\nYou are not trying to judge whether the new manager is good, nor whether fans are happy. You are measuring how much of a surprise the change was at the moment it happened.\n\n\n\n\n📤 Expected output\n\n\nTwo datasets\narticle-level list. One row per article:\n\n\n\ncolumn\nwhat it is\n\n\n\n\nnews_uid\nunique id for the article\n\n\nteam\nteam the article is about\n\n\ndate\narticle publication date\n\n\nscore\nLLM-produced expectation score\n\n\n\nteam–gameweek panel. Aggregate to one row per (team, gameweek) with two key variables:\n\n\n\n\n\n\n\ncolumn\nwhat it is\n\n\n\n\nteam\nteam the article is about\n\n\ndate\narticle publication date\n\n\navg_score\naverage expectation score across articles in the window\n\n\nn_articles\nhow many articles fed that average.\n\n\n\nThis is the object you merge onto your match + manager-change panel in Session 3. We will use lagged values of this score.\ninformation on what you did\n\nprompt_classifier.md\nEXTRA: validation note (hand-labelled n, agreement rate).\n\n\n\n\n\n\n\nNote\n\n\n\nWhat counts as a “gameweek”? Default to a calendar week, because that is how football coverage is paced. But the unit of time is a choice — it can be shorter (a few days, if you want to see the signal tighten as the change approaches) or longer (a fortnight or month, if article volume is thin). Pick one, document it, and keep it consistent across teams.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 2: Text to Expectations"
     ]
   },
@@ -7917,7 +8028,8 @@
     "text": "Intro talks (~75 min)\nTwo short decks frame the session — watch/skim before the session if you can.\n\n\n🎞️ 1. NLP Basics — Text as Data (~30 min)\n\n\nSlides: NLP Basics — Text as Data\nWalks the classical pipeline (tokenization → BoW → TF-IDF) and the modern tools (word embeddings, BERT, LLMs) — all on a running example: a Ruben Amorim post-match quote that looks a lot like the articles you’ll score.\nSource text for both decks: Reuters — “Last season we lose that game”, says Man United’s Amorim (1 Nov 2025).\n\n\n\n\n🎞️ 2. Scoring News with LLMs\n\n\nSlides: LLM Scoring\nThe project-2 deck. Uses the same Amorim quote to answer: “What is the probability the manager is out in 4 weeks?”\nCovers:\n\nWhat the LLM is actually doing when it outputs a number — and three biases to expect.\nSix prompting strategies — crude, anchored, structured JSON, reason-then-score, self-consistency, logprob-based.\nIn-class activities: pick a strategy and argue for it; score the Amorim article by hand before asking Claude.\nBonus task (3 p): investigate calibration.\nOpen design issues for the group to decide (temperature, hand-validate, output format, model choice, aggregation, time window).",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 2: Text to Expectations"
     ]
   },
@@ -7929,7 +8041,8 @@
     "text": "APIs: what you need this session\nAPIs come up twice in this session: news/data APIs (to get articles) and LLM APIs (to classify them). You already saw these in Week 5 — Text as Data; the key references are in the Knowledge Base.\n\n\n🔑 Getting set up\n\n\n\nGet an API key (OpenAI, Anthropic, or similar): How to get AI API keys.\nBudget ~$5 — that is more than enough for a project this size.\nStore the key outside the repo. Use an environment variable (.env, export) — never commit it.\nTest first. Run your classification prompt on 10–20 articles before you unleash it on 1,000.\n\n\n\n\n\n📚 Reference reading\n\n\nPulled into our knowledge base so you can find it after the course:\n\nIntroduction to APIs — what an API call is, headers, auth, rate limits.\nCalling LLM APIs from Python — practical first calls, response schemas, and model choice.\nHow APIs work under the hood — idempotency, retries, batching, tokens.\nSimple walkthrough: World Bank + FRED — public data APIs.\nFootball-data walkthrough (FBref) — scraping a sports data source.\n\nIf you are new to APIs, spend 15 minutes on “Introduction to APIs” before you start your work block. If you already understand the basics and need to build the classifier script, start with “Calling LLM APIs from Python”.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 2: Text to Expectations"
     ]
   },
@@ -7941,7 +8054,8 @@
     "text": "Work tasks (2-hour block)\n\n\n🔍 News collection & classification pipeline\n\n\n1. Find news sources\n\nAim for ≥ 2 credible outlets per country.\nThink about English vs local language news outlets.\nPrefer sources with RSS or a simple URL pattern — you’ll thank yourself tomorrow.\nMix national and league-specific / tabloid and broadsheet: drama lives in tabloids, context lives in broadsheets.\n\n2. Build URL/article lists\n\nGoogle News RSS (with a manager name in the query) is the fastest start.\nIf the source has team-specific RSS feeds, prefer those.\nExpected scale per season: ~20 teams × 2 sources ≈ 200–1,000 articles / season.\n\n3. Scrape clean text\n\nTitle + lead + full body. Keep source + pubDate + URL for reproducibility.\nStore in a single tidy table: one row per article.\n\n4. Classify via LLM API\n\nCall an LLM (OpenAI, Anthropic, …) via API to score each article\nConsult AI on how to create a prompt for such an exercise.\nDesign a clear prompt — think about:\n\nWhat scale or label set best captures “expectation”?\nHow should irrelevant articles be handled?\nWhat output format makes downstream parsing easiest?\n\nPrefer a structured response schema over free text, so each call returns the same fields, for example score, reason, and is_relevant.\n\nextra - Validate before scaling: hand-label ~20 articles yourself, run them through the prompt, and compare. Aim for ≥ 80 % agreement; if you’re below that, revise the prompt before classifying the full set.\n5. Aggregate\n\ncreate team*gameweek panel with average score and article count per (team, gameweek)\n\n\n\n\nScale & reality check\n\n\n📐 Plan before you scrape\n\n\n\n\n\nDimension\nExample\n\n\n\n\nSeasons\n10\n\n\nManager changes per season\n~30\n\n\nArticles per change\n~5\n\n\nTotal articles to classify\n~1,500\n\n\nCost at typical pricing\nA couple of dollars\n\n\n\nThis is a lot of work for a 2-hour block. Scope down on purpose:\n\nStart with 1 season, 1 source and a 3-month window.\nGet the full pipeline working end to end.\nOnly then expand.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 2: Text to Expectations"
     ]
   },
@@ -7953,7 +8067,8 @@
     "text": "Discussion\n\nCoverage — Which manager changes got lots of press? Which got none? What does silence mean here?\nClassification quality — Where did the model disagree with you on hand-labelled cases? Why?\nPrompt engineering — Share one prompt change that noticeably improved output.\nCost & reproducibility — How many articles did you classify? What did it cost? Could somebody else rerun it from your repo?\nInto Session 3 — Is your (team, change_date) → expectation_score table ready to merge into the panel?",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 2: Text to Expectations"
     ]
   },
@@ -7965,7 +8080,8 @@
     "text": "Delivery (Session 2)\n\n\n📦 What to hand in\n\n\n\nWho: by group — continue with your Session 1 team and repo; finish what you started in the session.\nDeadline: Sunday 23:55 (the Sunday after this session).\nWhat:\n\nArticle table (one row per article) + classification table (one row per article with score + reason).\nAggregated expectations.csv: one row per (team, date).\nPrompt file (prompt_classifier.md) + a short note on validation (n hand-labelled, agreement rate).\nUpdated DATA.md with the new tables documented.",
     "crumbs": [
       "Home",
-      "Capstone Project",
+      "Data Analysis with AI",
+      "Capstone",
       "Session 2: Text to Expectations"
     ]
   },
@@ -8047,6 +8163,7 @@
     "text": "Week 2 — From Raw Data to Report\n\n\nThe full pipeline with AI: understand → document → download → clean → join → aggregate → report. Vibe vs directed.\nThis is the first core-analysis week. You meet a genuinely messy, 600-column raw file, use AI to understand and document it, then run the whole pipeline — from that raw file to a finished short report. Two lessons live in the room: how to face an unfamiliar dataset with AI as a research assistant, and the contrast between an undirected “vibe report” and a carefully directed, analysis-quality one.\nIt is also your first full working session inside a harness. Instead of copy-pasting through a chat window, you drive Claude Code (or Codex / Copilot) through the whole pipeline: it reads the codebook and samples from your project folder, writes and runs the scripts, and saves real outputs to disk. Learning to steer that loop — plan, instruct, watch, verify — is as much the point of today as the analysis itself.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 2: From Raw Data to Report"
     ]
@@ -8059,6 +8176,7 @@
     "text": "Before you come to class (30–60 min)\n\n\n✅ Pre-class checklist\n\n\n\nTech — confirm your harness from Week 1 still runs (Claude Code desktop and CLI — or Codex / Copilot). Be able to run Python/R from a terminal: the harness writes the scripts, but your machine executes them.\nPackages — install once:\n\n\nPythonR\n\n\npip install pandas numpy matplotlib seaborn statsmodels requests wbgapi\n\n\ninstall.packages(c(\"dplyr\", \"readr\", \"ggplot2\", \"WDI\"))\n\n\n\n\nRead — the World Values Survey case study; skim the WVS codebook (pages 1–10). Also read Data Documentation 101 — you’ll write a README today.\nGrab the practice subset — the 2,000-row WVS sample (covers all countries) for fast iteration before you touch the full file.\nReview terms — tidy data, join, aggregate, data dictionary, composite index (glossary).",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 2: From Raw Data to Report"
     ]
@@ -8071,6 +8189,7 @@
     "text": "Learning objectives\nBy the end of this unit you will be able to:\n\nUse AI and the context window effectively to understand a complex, hundreds-of-columns dataset and its codebook.\nWrite a clear, professional README / data dictionary for an unfamiliar dataset, and verify AI’s understanding rather than trusting it.\nDownload a large public dataset from code (API/URL), not by hand.\nExplore, select, and clean variables from a wide file with AI assistance.\nConstruct a composite variable, aggregate to a new unit of observation, and join two datasets.\nTell the difference between an undirected “vibe report” and a directed, analysis-quality report — and produce the latter.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 2: From Raw Data to Report"
     ]
@@ -8083,6 +8202,7 @@
     "text": "Session shape (200 min · 50·100·50)\n\n\n\n\n\n\n\n\nBlock\nFocus\nMode\n\n\n\n\nIntro (50)\nPrompting & context windows · discovery & documentation · the vibe-vs-directed idea\nTalk\n\n\nTask (100)\nUnderstand & document → run the full pipeline → produce a directed report\nIndividual / pairs\n\n\nDiscussion (50)\nWhere AI steered wrong, documentation, reproducibility\nGroup",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 2: From Raw Data to Report"
     ]
@@ -8095,6 +8215,7 @@
     "text": "Intro (50 min)\n\n\n💬 Prompting for code & managing the context window\n\n\nSlideshow: Prompting & context-window management\nHabits that pay off all term (fuller checklist in AI Coding Prep):\n\nBe specific about the stack. “Using pandas and seaborn…” / “Using R and tidyverse…” / “Prefer polars to pandas unless I ask”.\nShow the data shape. Paste column names + dtypes, or upload a 1/1000 random sample. Better still, build a small data dictionary first (we do that today).\nSpecify the output. “Tidy data frame, one row per (country, year)” / “PNG 1200×800” / “3–5 exhibits, no more”.\nSet defaults once. ChatGPT Custom Instructions, a Claude Project, or a CLAUDE.md for language, libraries, and comment style — so you don’t repeat yourself every chat.\nMind the context window. A 180 MB file does not fit in a prompt. Feed AI the codebook + a sample + column lists, not the whole table.\n\nVague: \"Analyze this data and write a report.\" Specific: \"Estimate the association between income and trust across countries, controlling for region. One LOESS scatter + one table. 700 words, non-causal language.\"\n\n\n\n\n🛠️ Driving the harness — how to actually work in Claude Code today\n\n\nThe prompting habits above apply in any chat. Working in a harness adds a workflow of its own. Today’s session is built around it:\n\nLaunch where the work is. Make one project folder (wvs-project/), put the codebook PDF and the 2,000-row sample in it, cd there, run claude. The folder is the shared workspace — no uploading; the agent reads what it needs.\nPlan before code. Start big tasks with “Don’t write code yet — propose a plan” (in Claude Code, Shift+Tab toggles plan mode). Approve or edit the plan, then let it execute. This one habit prevents most runaway sessions.\nAsk for scripts, not answers. “Write 01_download.py that fetches the WVS file, then run it” beats “download the data”. Scripts on disk are what make your pipeline reproducible; a chat answer evaporates. By day’s end you want a numbered set: 01_download → 02_clean → 03_aggregate → 04_join → 05_report.\nDon’t let the big file near the context window. The agent should never “read” the 180 MB CSV — it should peek at it with code (head, shapes, dtypes, value counts). If you see it trying to open the whole file, stop it and say so. Codebook + samples in context; full data only through code.\nMake it verify — then verify yourself. After every step: “Print row counts before and after. Show 5 random rows. Do the country codes look right?” Then open the output CSV yourself. The agent checking its own work is good; you spot-checking it is non-negotiable.\nWatch the permission prompts. The harness asks before running commands or editing files. Read them — that’s you staying in charge. Reading files and running your analysis scripts: approve freely. Installs, deletions, anything network-facing: think first.\nOne phase, one session. When you finish a phase (say, cleaning), start a fresh session (/clear) and open with a one-line recap: “Cleaned data is in data_clean/wvs.csv, one row per respondent; now let’s aggregate to countries.” A short restated context beats a bloated window.\nCheckpoint with git. git init at the start; ask the agent to commit after each working stage (“commit with a message describing the cleaning step”). Cheap insurance and a readable history of your decisions. Week 3 builds this into a full discipline (instruction files, skills, tests).\n\nIf something goes sideways: press Esc to interrupt; ask “what did you just change?”; use git diff to see exactly what happened. You’re never more than one commit away from safety.\n\n\n\n\n🧭 Facing an unfamiliar dataset: discovery & documentation\n\n\nOften the hard part isn’t the analysis — it’s that the data is messy and you don’t know what it is yet. AI is a strong research assistant for this, but it makes mistakes, so you verify.\n\nUnderstand with AI. Upload the codebook (PDF) + a small sample (CSV). Ask what variables mean, how they’re encoded, what the missing-value codes are.\nTest AI’s understanding. Ask it to “explain the difference between Q6 and Q7 in plain terms.” If it can’t, it hasn’t really read the codebook — and neither answer can be trusted yet.\nDocument as you go. A short data dictionary / README is the artefact that makes everything downstream reproducible. See Data Documentation 101.\n\n\nNote from Gábor: when we first built this in 2024, AI stumbled badly on a 400-page codebook. By 2025 it read it cleanly; by 2026 it handles larger files and several at once. The skill that lasts is verification, not the tool.\n\n\n\n\n\n🔬 The experiment: vibe vs directed\n\n\nThe pipeline: understand → document → download → explore → clean → create variables → aggregate → join → report. We use the World Values Survey (WVS) Wave 7 raw file (~180 MB, 97k rows, 613 columns).\nThe lesson: first let AI loose with a vague prompt — “Create a nice looking report on an interesting question using this data” — and score the result (1–10). Then build the analysis deliberately, step by step. The contrast is the point.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 2: From Raw Data to Report"
     ]
@@ -8107,6 +8228,7 @@
     "text": "Task block (100 min · individual or pairs)\nWork at your own pace. Tasks 1–8 are core; 9–10 are stretch. Verify after every step.\n\n\n🧭 Part 1 — Understand & document (start on the 2,000-row sample)\n\n\n1. Discover without AI first (5 min). Open the 2,000-row sample and the codebook. Jot down what you can tell unaided, and a first guess at a research question (a y and an x). This sharpens what AI is actually adding.\n2. Understand with AI. Put the codebook PDF and the sample CSV in your project folder and launch the harness there — then just ask; it reads both itself. Ask: how many countries? what years? what do Q1–Q89 cover (which sections)? what do negative values (−1…−5) mean? Then test it: “Explain the difference between Q6 and Q7 in simple terms.” Check: you can name 5 Q-variables and what they measure.\nHarness hint: a 400-page codebook is exactly what the harness is for — it can search the PDF for the pages about a specific variable instead of stuffing the whole thing into context. Ask “where in the codebook is Q57 defined? Quote the exact wording.” Quoting forces it to actually look.\n3. Write a mini data dictionary / README. For the variables you’ll use, document name, meaning, scale, and missing codes. Iterate it with AI, but verify every technical detail. Check: a teammate could pick up your DATA.md and know what each column is.\n\n\n\n\n🎯 Part 2 — The pipeline, end to end (move to the full file)\n\n\n4. Download from code. Fetch the WVS Wave 7 CSV from OSF (https://osf.io/36dgb/download) — write a script, don’t click. In the harness: “Write 01_download.py (or .R) that downloads the WVS file to data_raw/, run it, and confirm the file size and shape.” Check: 97,220 rows × 613 columns.\nHarness hint: from here on, the agent must work on the full file through code only — shapes, dtypes, value counts — never by reading it into context. If it stalls or tries, tell it explicitly: “don’t read the CSV, inspect it with pandas.”\n5. Pick a topic & variables. Choose one concept (trust, gender equality, happiness, tolerance) and 3–6 related Q-items. Decide your x-variable: GDP per capita PPP. Check: a short list with a sentence on why these items belong together.\n6. Clean & build a composite. Keep identifiers (B_COUNTRY_ALPHA, A_YEAR, A_WAVE), weight (W_WEIGHT), your Q-items, demographics (Q260 sex, Q262 age, Q275 education). Filter to Wave 7, recode negatives to missing, z-score each item and average into one index (handles the different scales). Check: composite has mean ≈ 0, sensible spread.\nHarness hint: this is the step where silent errors live (a −2 treated as a real value will poison the index). Ask the agent to prove the recode: “Show the value counts of Q57 before and after recoding, side by side.” And make it a script (02_clean.py), not throwaway session code — you’ll rerun it.\n7. Aggregate. Group by country (and year); mean composite + respondent count. Check: ~66 country-year rows.\n8. Get GDP & join. Pull World Bank indicators for 2017–2023; left-join onto your country panel. Save the merged CSV.\nHarness hint: joins are where row counts lie. Before accepting the result, ask: “How many rows before and after the join? Which countries failed to match, and why?” (Country-code mismatches — GBR vs UK — are the classic.) Make it list the unmatched rows, not just count them.\n\n\n\nIndicator\nWorld Bank code\n\n\n\n\nGDP per capita PPP\nNY.GDP.PCAP.PP.CD\n\n\nGDP (current USD)\nNY.GDP.MKTP.CD\n\n\nPopulation\nSP.POP.TOTL\n\n\n\nCheck: still ~66 rows, now with GDP columns.\n\n\n\n\n📊 Part 3 — The report (your deliverable)\n\n\n9. The directed report. Produce a short report: a scatter of your composite vs log GDP per capita (label a few countries, non-causal title) + a 2–3 sentence interpretation. Constrain it: 3–5 exhibits, ~700 words.\nHarness hint: ask for a rendered artifact, not chat text: “Create report.qmd (or a notebook) with the scatter, the table, and the text; render it to HTML.” Then iterate on the file: “labels overlap in the bottom-left — fix”, “the title implies causality — soften it.” Editing a real document beats regenerating chat answers.\n10. Composite vs single item (stretch). Redo the scatter with one raw Q-item; put side by side; explain why averaging gives a cleaner signal.\n\n\n\n\n\n\n\n\nTip\n\n\n\nRun the vibe report too. Before or after the directed build, give AI the vague prompt and keep its output — you’ll compare the two in discussion. Want a second example on different data? The same contrast shows up on the CPS earnings data (US Earnings case study).",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 2: From Raw Data to Report"
     ]
@@ -8119,6 +8241,7 @@
     "text": "Discussion (50 min)\n\nScore the vibe report (1–10): length, is the question well defined, are exhibits informative and well labelled, is the text honest about what it shows?\nThe harness itself: what did you approve without reading? Did plan mode change what got built? When did you interrupt, and what had gone wrong by then? How does driving an agent differ from prompting a chat?\nDiscovery & docs: Was there any benefit to looking at the data without AI first? What was AI’s biggest contribution? How did the first result compare to the version after a few iterations?\nWhere did AI’s understanding of the codebook break down — and how did your “test” prompt catch it?\nWhich task did AI help with most? Where did you have to correct it?\nHow does starting from raw data change your understanding vs a curated file?\nCould someone else rerun your pipeline from scratch using your README?",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 2: From Raw Data to Report"
     ]
@@ -8131,6 +8254,7 @@
     "text": "Delivery\n\n\n📦 What to hand in (Sunday 23:55)\n\n\n\nThe short directed report (notebook or HTML) — your scatter + table + ~700-word interpretation, non-causal language.\nThe pipeline script(s) that download, clean, build the composite, aggregate, and join — reproducibly.\nDATA.md — your data dictionary / README for the variables you used.\nOne paragraph comparing your vibe report to your directed report.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 2: From Raw Data to Report"
     ]
@@ -8143,6 +8267,7 @@
     "text": "Knowledge Base\n\nWorld Values Survey case study · US Earnings (CPS)\nData Documentation 101 · Joining Data Tables · Creating Graphs\nAI Coding Prep · PDF Guide\nPrompting & context-window slideshow",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 2: From Raw Data to Report"
     ]
@@ -8155,6 +8280,7 @@
     "text": "Week 4 — Econometrics with AI\n\n\nAI as a research companion for causal identification — designing controls, finding instruments, and difference-in-differences\nThe first research-focused week. Here AI acts like a researcher: helping you reason toward causal identification. We cover three tools — control variables, instrumental variables, and difference-in-differences — and the prompting strategies that make AI genuinely useful for each. (DiD overlaps with the capstone on purpose — repetition is intended.)",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 4: Econometrics with AI"
     ]
@@ -8167,6 +8293,7 @@
     "text": "Before you come to class (30–60 min)\n\n\n✅ Pre-class checklist — this is where the causality recap lives now\n\n\n\nRead / recap causality — confounders and bad controls (what they are, how to treat them); the three IV assumptions (relevance, exclusion, independence); the DiD idea (treated vs control, parallel trends). Use AI to refresh anything rusty — ask it to explain the three IV assumptions in plain words.\nReview terms — confounder, backdoor path, control, instrument, exclusion restriction, difference-in-differences, parallel trends (glossary).\nSetup — turn off chat history/memory in your AI tool for this unit (so it reasons from the problem, not from your past chats).",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 4: Econometrics with AI"
     ]
@@ -8179,6 +8306,7 @@
     "text": "Learning objectives\nBy the end of this unit you will be able to:\n\nUse a two-session “helpful vs adversarial” prompt pattern to design a control set.\nUse prompt chaining to surface candidate instruments without leaking that you want IVs.\nState the DiD setup and assumptions, and have AI sketch a worked design in your setting.\nTranslate a research question into a defensible identification strategy.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 4: Econometrics with AI"
     ]
@@ -8191,6 +8319,7 @@
     "text": "Session shape (200 min · 50·50·50·50)\n\n\n\nChunk\nFocus\nMode\n\n\n\n\n1 (50)\nAI-as-research-companion; framing\nTalk\n\n\n2 (50)\nDesigning controls (Z)\nTalk + run prompts\n\n\n3 (50)\nInstrumental variables\nTalk + run prompts\n\n\n4 (50)\nDifference-in-differences + work-together\nTalk + group",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 4: Econometrics with AI"
     ]
@@ -8203,6 +8332,7 @@
     "text": "Chunk 1 — AI as a research companion (50 min)\n\n\n🤖 A different way to prompt\n\n\nUntil now AI wrote code. Now we ask it to reason like a researcher. The skill is not asking “what’s my instrument?” — it’s structuring the conversation so the AI reasons from the setting up to the econometrics. Two ideas we’ll use repeatedly:\n\nAdversarial pairing — one session proposes, a second session (or model) attacks, then you feed the critique back. A debate between a helpful and a suspicious AI.\nPrompt chaining — break a hard question (find an IV) into steps: map relationships first, then narrow to candidates. Avoids generic textbook answers and training-data bias.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 4: Econometrics with AI"
     ]
@@ -8215,6 +8345,7 @@
     "text": "Chunk 2 — Designing controls “Z” (50 min · run prompts)\nRunning question: Do firms with better management export more of their production? — World Management Survey data, codebook.\n\n\n😇😈 Helpful vs adversarial, in three prompts\n\n\n\n🤖 Prompt 1 (Original LLM). You are a researcher who wants to find control variables to estimate the association between percent of production exported (outcome) and management quality (variable of interest). Attached is a codebook. Choose variables for a multivariate OLS regression. Return each with expected direction of association, then a plain copyable list (one variable per line).\n\n\n😈 Prompt 2 (Adversarial LLM, separate session). Below is a list of variables someone wants in a regression of percent exported on management quality. Argue, for each, why it should not be included. [paste list]\n\n\n🤖 Prompt 3 (back to Original). Below are counter-arguments to your selection. Revise and give a final list. [paste critique]\n\nAs you go: how do the answers differ from a one-shot prompt? Which proposed controls are bad controls? What got left out?",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 4: Econometrics with AI"
     ]
@@ -8227,6 +8358,7 @@
     "text": "Chunk 3 — Instrumental variables (50 min · run prompts)\nPrompting approach adapted from Sukjin Han (2024), “Mining Causality: AI-Assisted Search for Instrumental Variables”.\n\n\n🔗 The two-step chain — and why we don’t say “IV”\n\n\nWhy not say “IV”: if you ask directly, the model defaults to textbook instruments (weather, distance to school) regardless of context — shallow, biased toward popular examples. Instead, describe the setting and let it reason.\n\n🤖 Step 1 (search, satisfies REL + EX). You are [agent] who must make a [treatment] decision in [scenario]. What factors determine your decision but do not directly affect [outcome] except through [treatment]? List [K] quantifiable factors and explain each.\n\n\n🤖 Step 2 (refine, satisfies IND). Among those factors, choose the ones most likely unassociated with [confounders] of [outcome], while still influencing [treatment]. Explain each.\n\nWorked examples to run together: demand estimation (Copacabana beer price) and peer effects on microfinance adoption. For each: does the AI seem to realise we’re testing something deeper? Are the instruments believable?",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 4: Econometrics with AI"
     ]
@@ -8239,6 +8371,7 @@
     "text": "Chunk 4 — Difference-in-differences + work-together (50 min)\n\n\n📐 DiD vocabulary (new) — overlaps the capstone on purpose\n\n\n\nTreatment / treated unit / control unit — the event and who does/doesn’t experience it in a window.\nTwo-way fixed effects (unit FE + time FE) — the standard panel starting point.\nEvent-study spec — one coefficient per lead/lag around the event, to see the dynamics.\nDiD estimator — the difference between treated and control in the change from pre to post.\nParallel trends — the core (mostly untestable) assumption; check pre-trends as a proxy.\nStaggered treatment — units treated at different times; has real econometric consequences — ask AI what can go wrong with a naïve DiD.\n\nPackages to ask AI for worked mini-examples in your setting: Python — diff-diff, pyfixest; R — did, fixest. Read the code, don’t just run it.\n\n\n\n\n👥 Work together (groups of 3–4)\n\n\nResearch question: What is the effect of migration on wages in the target country? Pin down context (from→to country, industry, period, skill type). Then:\n\nDesign a control set (helpful vs adversarial).\nBuild Prompt 1 / Prompt 2 to surface an instrument; compare what you’d keep vs what the AI kept, and interrogate the difference.\nSketch a DiD alternative: what’s the treatment, who are controls, what threatens parallel trends?",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 4: Econometrics with AI"
     ]
@@ -8251,6 +8384,7 @@
     "text": "Delivery\n\n\n📦 What to hand in (Sunday 23:55)\n\n\n\nA one-page identification memo for the migration→wages question (or your own RQ): the proposed control set and/or instrument and/or DiD design, with assumptions stated and the main threats named.\nLinks to the chats you used, plus 2–3 sentences on which prompting pattern worked best and why.\nNo regressions required — this unit is about identification, not estimation.",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 4: Econometrics with AI"
     ]
@@ -8263,6 +8397,7 @@
     "text": "Knowledge Base & further reading\n\nGlossary of LLM terms · Designing Larger Analytics Projects\nSukjin Han (2024) — Mining Causality\nPedro Sant’Anna — DiD resources · Carlos Mendez — DiD in Python",
     "crumbs": [
       "Home",
+      "Data Analysis with AI",
       "Core course",
       "Week 4: Econometrics with AI"
     ]
