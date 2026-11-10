@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-11-09">
+<meta name="dcterms.date" content="2026-11-10">
 
 <title>Friendly Introduction to Agentic AI for Social Scientists – Doing Data Analysis with AI</title>
 <style>
@@ -26,41 +26,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -112,9 +77,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<link rel="stylesheet" href="friendly.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="nav-sidebar docked nav-fixed friendly quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -203,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../friendly-agentic-ai-intro/live-demo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Part 4: Live Demo</span></a>
+ <span class="menu-text">Part 4: A Paper in 50 Minutes</span></a>
   </div>
 </li>
       </ul>
@@ -542,12 +508,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#who-this-course-is-for" id="toc-who-this-course-is-for" class="nav-link active" data-scroll-target="#who-this-course-is-for">Who this course is for</a></li>
+  <li><a href="#who-is-this-course-for" id="toc-who-is-this-course-for" class="nav-link active" data-scroll-target="#who-is-this-course-for">Who is this course for?</a></li>
   <li><a href="#what-is-an-ai-agent" id="toc-what-is-an-ai-agent" class="nav-link" data-scroll-target="#what-is-an-ai-agent">What is an AI agent?</a></li>
-  <li><a href="#what-you-need" id="toc-what-you-need" class="nav-link" data-scroll-target="#what-you-need">What you need</a></li>
-  <li><a href="#the-course" id="toc-the-course" class="nav-link" data-scroll-target="#the-course">The course</a></li>
+  <li><a href="#what-can-it-do-for-a-social-scientist" id="toc-what-can-it-do-for-a-social-scientist" class="nav-link" data-scroll-target="#what-can-it-do-for-a-social-scientist">What can it do for a social scientist?</a></li>
+  <li><a href="#what-do-you-need" id="toc-what-do-you-need" class="nav-link" data-scroll-target="#what-do-you-need">What do you need?</a></li>
+  <li><a href="#how-is-the-course-organized" id="toc-how-is-the-course-organized" class="nav-link" data-scroll-target="#how-is-the-course-organized">How is the course organized?</a></li>
   <li><a href="#a-short-glossary" id="toc-a-short-glossary" class="nav-link" data-scroll-target="#a-short-glossary">A short glossary</a></li>
-  <li><a href="#where-to-go-next" id="toc-where-to-go-next" class="nav-link" data-scroll-target="#where-to-go-next">Where to go next</a></li>
+  <li><a href="#useful-links" id="toc-useful-links" class="nav-link" data-scroll-target="#useful-links">Useful links</a></li>
   </ul>
 </nav>
     </div>
@@ -556,8 +523,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/index.html">Friendly Intro to Agentic AI</a></li><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/index.html">Course Overview</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Friendly Introduction to Agentic AI for Social Scientists</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">A mini course: from chatbot to an AI agent that works with your data, PDFs and Word drafts</p>
+<h1 class="title">Friendly Introduction to Agentic AI for Social Scientists</h1>
+<p class="subtitle lead">A mini course: from a chatbot that polishes your text to an AI agent that works with your files</p>
 </div>
 
 
@@ -568,7 +535,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 9, 2026</p>
+      <p class="date">November 10, 2026</p>
     </div>
   </div>
   
@@ -582,117 +549,244 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="hero-section">
 <div class="container">
+<div class="hero-eyebrow">
+<p>A mini course in four parts</p>
+</div>
 <div class="hero-title">
 <p>Friendly Introduction to Agentic AI for Social Scientists</p>
 </div>
 <div class="hero-subtitle">
-<p>You have used ChatGPT or Claude in a browser, mostly for text. This mini course takes you, step by step, to an AI agent that works with the files on your computer: your data, your PDFs, your Word drafts</p>
+<p>From a chatbot that polishes your text to an AI agent that works with your files: your readings, your Word drafts, your data</p>
 </div>
 </div>
 </div>
-<hr>
-<section id="who-this-course-is-for" class="level2">
-<h2 class="anchored" data-anchor-id="who-this-course-is-for">Who this course is for</h2>
-<p>Social scientists who have used AI as a chatbot, mostly for text, and have never used Python or R. Seniority and field do not matter.</p>
-<p>Two reactions are common.</p>
-<p><em>“This is for programmers.”</em> It is not. You will not type a single command. You give instructions in plain language, as you would to a research assistant. Even Python is installed by the agent, which explains each step first.</p>
-<p><em>“I don’t need this.”</em> Maybe so. This course does not argue the point. It lets you find out on your own material, for the cost of an afternoon and one month of subscription. You stay the author: nothing changes without your approval.</p>
-<p>We use one tool: <strong>Claude Code, in the Claude desktop app</strong>, on Windows, Mac or Linux. Similar agents exist, and what you learn carries over. While learning, one tool is enough.</p>
-<hr>
+<div class="course-map">
+<p><a href="../friendly-agentic-ai-intro/index.html" class="here"><span class="n">⌂</span> Overview</a> <a href="../friendly-agentic-ai-intro/setup.html"><span class="n">1</span> Setup</a> <a href="../friendly-agentic-ai-intro/first-steps.html"><span class="n">2</span> First steps</a> <a href="../friendly-agentic-ai-intro/checking-work.html"><span class="n">3</span> Staying in charge</a> <a href="../friendly-agentic-ai-intro/live-demo.html"><span class="n">4</span> A paper in 50 minutes</a></p>
+</div>
+<section id="who-is-this-course-for" class="level2">
+<h2 class="anchored" data-anchor-id="who-is-this-course-for">Who is this course for?</h2>
+<p>You are a social scientist: a sociologist, a political scientist, an anthropologist, an economist. You have used ChatGPT or Claude in a browser, mostly to improve a text or as a better search engine. You haven’t used it for the actual work of your field, and you may never have written a line of code. This course is for you. Seniority doesn’t matter.</p>
+<p>We hear two reactions from colleagues.</p>
+<p><em>“This is for programmers.”</em> It isn’t. You won’t type a single command. You give instructions in plain language, as you would to a research assistant. Even the technical setup is done by the agent, which explains each step before it takes it.</p>
+<p><em>“I don’t need this.”</em> Maybe. The course lets you find out on your own material, for the price of an afternoon and one month of subscription. You remain the author: nothing changes in your files without your approval.</p>
+<p>We use one tool: <strong>Claude Code, in the Claude desktop app</strong>, on Windows, Mac or Linux. Similar agents exist, and what you learn here carries over. But when learning, one tool is enough.</p>
 </section>
 <section id="what-is-an-ai-agent" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-an-ai-agent">What is an AI agent?</h2>
-<p><strong>A chatbot</strong> is a conversation in a browser. You paste text or upload a file, it answers, and you copy the answer back. It knows only what you gave it in that conversation.</p>
-<p><strong>An agent</strong> is the same AI model with three additions. First, access to <strong>one folder</strong> on your computer that you choose. Second, the ability to <strong>act</strong> there: open files, write and run small programs, save files. Third, a <strong>loop</strong>: it takes a step, looks at the result, and decides the next one, until the task is done or it needs you.</p>
-<p>The loop makes the difference. Ask for <em>“a chart of turnout by age group from survey.csv”</em>. A chatbot needs the file uploaded and may guess what the columns mean. The agent:</p>
+<p>Let’s start with what you know. <strong>A chatbot</strong> is a conversation in a browser. You paste in a text or upload a file, it answers, and you copy the answer back into your document. It knows only what you gave it in that conversation.</p>
+<p><strong>An agent</strong> is the same AI model with three additions. First, it has access to <strong>one folder</strong> on your computer, which you choose. Second, it can <strong>act</strong> there: open files, write and run small programs, save results. Third, it works in a <strong>loop</strong>: it takes a step, looks at the result and decides on the next one, until the task is done or it needs you.</p>
+<figure class="agent-figure figure">
+<svg viewbox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A chatbot exchanges text with you and cannot reach your files. An agent takes a task from you, then reads, runs and saves in your project folder in a loop, and comes back with questions and results.">
+  <defs>
+    <marker id="fa-arrow" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a5f6e"></path>
+    </marker>
+    <marker id="fa-arrow-clay" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b4502e"></path>
+    </marker>
+  </defs>
+  <g font-family="'Source Sans Pro','Source Sans 3',system-ui,sans-serif" font-size="13" fill="#5a5f6e" text-anchor="middle">
+
+    <!-- row 1: chatbot -->
+    <text x="18" y="66" text-anchor="start" font-family="Fraunces,Georgia,serif" font-size="21" font-weight="600" fill="#23283a">Chatbot</text>
+    <text x="18" y="86" text-anchor="start">what you know</text>
+
+    <rect x="170" y="38" width="100" height="64" rx="10" fill="#fffdf8" stroke="#23283a" stroke-width="1.5"></rect>
+    <text x="220" y="75" font-size="15" font-weight="600" fill="#23283a">You</text>
+
+    <rect x="390" y="38" width="130" height="64" rx="10" fill="#fffdf8" stroke="#23283a" stroke-width="1.5"></rect>
+    <text x="455" y="68" font-size="15" font-weight="600" fill="#23283a">Chatbot</text>
+    <text x="455" y="87">in a browser</text>
+
+    <rect x="640" y="38" width="110" height="64" rx="10" fill="none" stroke="#b9b2a2" stroke-width="1.5" stroke-dasharray="5 4"></rect>
+    <text x="695" y="75" font-size="15" fill="#8d8778">Your files</text>
+
+    <text x="330" y="50">paste a text in</text>
+    <line x1="278" y1="60" x2="382" y2="60" stroke="#5a5f6e" stroke-width="1.5" marker-end="url(#fa-arrow)"></line>
+    <line x1="382" y1="82" x2="278" y2="82" stroke="#5a5f6e" stroke-width="1.5" marker-end="url(#fa-arrow)"></line>
+    <text x="330" y="102">copy the answer out</text>
+
+    <text x="580" y="75" fill="#8d8778">out of reach</text>
+
+    <line x1="18" y1="140" x2="750" y2="140" stroke="#e6dcc8" stroke-width="1"></line>
+
+    <!-- row 2: agent -->
+    <text x="18" y="216" text-anchor="start" font-family="Fraunces,Georgia,serif" font-size="21" font-weight="600" fill="#23283a">Agent</text>
+    <text x="18" y="236" text-anchor="start">what this course adds</text>
+
+    <rect x="170" y="188" width="100" height="64" rx="10" fill="#fffdf8" stroke="#23283a" stroke-width="1.5"></rect>
+    <text x="220" y="225" font-size="15" font-weight="600" fill="#23283a">You</text>
+
+    <rect x="390" y="188" width="130" height="64" rx="10" fill="#b4502e" stroke="#b4502e" stroke-width="1.5"></rect>
+    <text x="455" y="218" font-size="15" font-weight="600" fill="#ffffff">Agent</text>
+    <text x="455" y="237" fill="#fbe9df">on your computer</text>
+
+    <rect x="640" y="188" width="110" height="64" rx="10" fill="#fbf1d6" stroke="#23283a" stroke-width="1.5"></rect>
+    <text x="695" y="218" font-size="15" font-weight="600" fill="#23283a">One folder</text>
+    <text x="695" y="237">that you choose</text>
+
+    <text x="330" y="200">a task, your OK</text>
+    <line x1="278" y1="210" x2="382" y2="210" stroke="#5a5f6e" stroke-width="1.5" marker-end="url(#fa-arrow)"></line>
+    <line x1="382" y1="232" x2="278" y2="232" stroke="#5a5f6e" stroke-width="1.5" marker-end="url(#fa-arrow)"></line>
+    <text x="330" y="252">questions, results</text>
+
+    <text x="580" y="200" fill="#b4502e">reads, runs, saves</text>
+    <line x1="528" y1="210" x2="632" y2="210" stroke="#b4502e" stroke-width="1.5" marker-end="url(#fa-arrow-clay)"></line>
+    <line x1="632" y1="232" x2="528" y2="232" stroke="#b4502e" stroke-width="1.5" marker-end="url(#fa-arrow-clay)"></line>
+    <text x="580" y="252" fill="#b4502e">looks at the result</text>
+    <text x="580" y="280" fill="#b4502e" font-weight="600">again and again, until done</text>
+  </g>
+</svg>
+<figcaption>The model is the same. The difference is where it works and what it is allowed to do.</figcaption>
+</figure>
+<p>The loop makes the difference. Suppose you ask for <em>a chart of turnout by age group from survey.csv</em>. A chatbot needs the file uploaded and may guess what the columns mean. The agent does the following:</p>
 <ol type="1">
-<li>opens the file and sees that age is called <code>age_cat</code>, not <code>age</code>;</li>
-<li>writes a short program and runs it;</li>
-<li>hits an error because some ages are coded “refused”, and asks you how to handle them;</li>
-<li>runs it again, opens the chart to check it, and saves it in <code>output/</code>.</li>
+<li>it opens the file and sees that age is called <code>age_cat</code>, not <code>age</code>;</li>
+<li>it writes a short program and runs it;</li>
+<li>it hits an error because some ages are coded “refused”, and asks you how to handle them;</li>
+<li>it runs the program again, opens the chart to check it, and saves it in <code>output/</code>.</li>
 </ol>
 <p>You see every step, and at first it asks your permission before each one.</p>
-<p>Think of a very fast research assistant at your computer: well read, new to your project, and sometimes confidently wrong. Your job shifts from doing each step to <strong>deciding, instructing and checking</strong>. Checking becomes the most important part.</p>
-<hr>
+<p>It helps to think of the agent as a very fast research assistant sitting at your computer. It has read a lot, but it is new to your project, and it can be wrong with confidence. Hence your job shifts from doing each step to instructing the agent and checking its work. Checking matters most.</p>
 </section>
-<section id="what-you-need" class="level2">
-<h2 class="anchored" data-anchor-id="what-you-need">What you need</h2>
+<section id="what-can-it-do-for-a-social-scientist" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-it-do-for-a-social-scientist">What can it do for a social scientist?</h2>
+<p>Here are a few tasks that fit an agent well. None of them needs you to write code.</p>
+<div class="uses">
+<div class="use">
+<p><strong>A pile of readings.</strong> Thirty PDFs in a folder become a table: research question, data, method and main finding, each with a page number you can check.</p>
+</div>
+<div class="use">
+<p><strong>A draft in Word.</strong> The agent comments on the argument, or edits a copy, and you review each edit as a tracked change.</p>
+</div>
+<div class="use">
+<p><strong>Interviews and open-ended answers.</strong> A first pass over transcripts: recurring themes, each with word-for-word quotes and where they come from. Interpretation stays with you.</p>
+</div>
+<div class="use">
+<p><strong>A survey or a public dataset.</strong> Download, clean, tabulate and chart, with every step saved in a script you can rerun.</p>
+</div>
+<div class="use">
+<p><strong>The dull parts.</strong> Reformatting references for another journal, checking that the numbers in the text match the tables, turning a paper into slides.</p>
+</div>
+</div>
+<p>The agent has limits, too. First, the agent makes mistakes, and it makes them in fluent, confident prose. It may misread a variable, drop observations without telling you, or hand you a paraphrase in quotation marks. Second, it doesn’t know the judgment calls of your field: which cases belong in the sample, or what a concept means in your literature. Third, what it reads is sent to the company’s servers, so confidential material needs care.</p>
+<p>Each of these problems has a routine that handles it, and you already know most of them from supervising research assistants and refereeing papers. Part 3 is about those routines.</p>
+</section>
+<section id="what-do-you-need" class="level2">
+<h2 class="anchored" data-anchor-id="what-do-you-need">What do you need?</h2>
 <ul>
-<li><strong>A paid Claude plan.</strong> Claude Code needs <strong>Claude Pro</strong> or higher (about $20/month, cancel any time; <a href="https://claude.com/pricing">pricing</a>). A university Claude Team or Enterprise plan also works.</li>
-<li><strong>A computer</strong> with Windows 10/11, macOS, or Linux (Ubuntu or Debian).</li>
-<li><strong>Permission to install software.</strong> University laptops may need IT approval. Try first; ask if blocked.</li>
+<li><strong>A paid Claude plan.</strong> Claude Code needs <strong>Claude Pro</strong> or higher (about $20 a month, cancel any time; see <a href="https://claude.com/pricing">pricing</a>). A university Claude Team or Enterprise plan also works.</li>
+<li><strong>A computer</strong> with Windows 10 or 11, macOS, or Linux (Ubuntu or Debian).</li>
+<li><strong>Permission to install software.</strong> A university laptop may need IT approval. Try first, and ask if you are blocked.</li>
 </ul>
-<hr>
 </section>
-<section id="the-course" class="level2">
-<h2 class="anchored" data-anchor-id="the-course">The course</h2>
-<p>Three hands-on parts, about an hour each, and a live demo. If something fails, nothing is broken: check the troubleshooting table, or ask the agent what went wrong.</p>
-<div class="week-card card">
-<div class="card-header">
-<p>🛠️ <strong><a href="../friendly-agentic-ai-intro/setup.html">Part 1 — Setup</a></strong> · steps 1.1–1.5 · about an hour</p>
+<section id="how-is-the-course-organized" class="level2">
+<h2 class="anchored" data-anchor-id="how-is-the-course-organized">How is the course organized?</h2>
+<p>The course has four parts. The first three are hands-on and take about an hour each. The fourth is a live demonstration, followed by homework. If something fails along the way, nothing is broken: check the troubleshooting table of that part, or ask the agent what went wrong.</p>
+<div class="part-card">
+<div class="part-no">
+<p>1</p>
 </div>
-<div class="card-body">
-<p>Install the app, make a project folder, meet the agent, let it set up Python, and install a Markdown reader.</p>
-<p><strong>You end with:</strong> a working Code tab, a project folder, Python, and Typora.</p>
-<p><strong><a href="../friendly-agentic-ai-intro/setup.html">Start Part 1 →</a></strong></p>
+<div class="part-body">
+<div class="part-meta">
+<p>Steps 1.1–1.5 · about an hour</p>
 </div>
-</div>
-<div class="week-card card">
-<div class="card-header">
-<p>🚶 <strong><a href="../friendly-agentic-ai-intro/first-steps.html">Part 2 — First Steps</a></strong> · steps 2.1–2.4 · about an hour</p>
-</div>
-<div class="card-body">
-<p>Edit a Word document and review the edits as tracked changes. Give the agent standing instructions in <code>AGENTS.md</code>, add two skills, and do a first small analysis.</p>
-<p><strong>You end with:</strong> a routine for Word documents, an <code>AGENTS.md</code> file, two skills, and one analysis you checked yourself.</p>
-<p><strong><a href="../friendly-agentic-ai-intro/first-steps.html">Start Part 2 →</a></strong></p>
+<p><span class="part-title"><a href="../friendly-agentic-ai-intro/setup.html">Setup</a></span></p>
+<p>Install the app, make a project folder, meet the agent, let it set up Python, and install a reader for the files it writes.</p>
+<p><strong>You end with</strong> a working agent in a folder of your own.</p>
 </div>
 </div>
-<div class="week-card card">
-<div class="card-header">
-<p>🔍 <strong><a href="../friendly-agentic-ai-intro/checking-work.html">Part 3 — Staying in Charge</a></strong> · steps 3.1–3.4 · about an hour</p>
+<div class="part-card">
+<div class="part-no">
+<p>2</p>
 </div>
-<div class="card-body">
-<p>Trust, verification and control. Keep the agent in its folder, lock the raw data, see what it did, build checks into the work, and have a fresh session review it.</p>
-<p><strong>You end with:</strong> read-only raw data, checks with a pass/fail table, a review routine, and new lines in <code>AGENTS.md</code>.</p>
-<p><strong><a href="../friendly-agentic-ai-intro/checking-work.html">Start Part 3 →</a></strong></p>
+<div class="part-body">
+<div class="part-meta">
+<p>Steps 2.1–2.5 · about an hour</p>
 </div>
-</div>
-<div class="week-card card">
-<div class="card-header">
-<p>🎬 <strong><a href="../friendly-agentic-ai-intro/live-demo.html">Part 4 — Live Demo: How to Write a Paper in One Hour</a></strong></p>
-</div>
-<div class="card-body">
-<p>Coming soon.</p>
+<p><span class="part-title"><a href="../friendly-agentic-ai-intro/first-steps.html">First Steps</a></span></p>
+<p>Put the agent to work on what you know: a Word draft, a pile of readings, a small dataset. Along the way, give it standing instructions and two skills.</p>
+<p><strong>You end with</strong> a routine for Word documents, a table of readings you verified, and one analysis whose numbers you checked yourself.</p>
 </div>
 </div>
-<hr>
+<div class="part-card">
+<div class="part-no">
+<p>3</p>
+</div>
+<div class="part-body">
+<div class="part-meta">
+<p>Steps 3.1–3.4 · about an hour</p>
+</div>
+<p><span class="part-title"><a href="../friendly-agentic-ai-intro/checking-work.html">Staying in Charge</a></span></p>
+<p>Trust, verification and control. Keep the agent in its folder, lock the raw data, see what it did, build checks into the work, and have it reviewed by a second pair of eyes.</p>
+<p><strong>You end with</strong> work you can put your name on, because you can trace it.</p>
+</div>
+</div>
+<div class="part-card">
+<div class="part-no">
+<p>4</p>
+</div>
+<div class="part-body">
+<div class="part-meta">
+<p>Live demo · then homework</p>
+</div>
+<p><span class="part-title"><a href="../friendly-agentic-ai-intro/live-demo.html">A Paper in 50 Minutes</a></span></p>
+<p>We give the agent a single prompt and watch it produce a short empirical paper and a slide deck. Then comes your part: go home and study what it left behind, from the paper and the deck to the decision log, the code and the skills it used.</p>
+<p><strong>You end with</strong> a view of a whole project, and practice in reading an agent’s work as a referee would.</p>
+</div>
+</div>
 </section>
 <section id="a-short-glossary" class="level2">
 <h2 class="anchored" data-anchor-id="a-short-glossary">A short glossary</h2>
 <ul>
 <li><strong>Agent:</strong> an AI model that acts on your computer (reads files, runs code, saves results) in a loop until a task is done.</li>
-<li><strong>Harness:</strong> a word you will hear later: the program around the model that gives it these abilities. Claude Code is one.</li>
-<li><strong>Session:</strong> one conversation with the agent. Each starts fresh.</li>
+<li><strong>Prompt:</strong> the instruction you type for the agent. In this course, prompts to copy come in boxes.</li>
+<li><strong>Session:</strong> one conversation with the agent. Each session starts fresh.</li>
 <li><strong>Context window:</strong> what the model can see at once. Long sessions fill it up, and quality drops.</li>
-<li><strong>Terminal:</strong> a text window for typing commands. The agent uses one behind the scenes; you don’t have to.</li>
-<li><strong>Environment (Python):</strong> a project’s own copy of Python and its packages, kept in the <code>.venv</code> folder.</li>
-<li><strong>Markdown (<code>.md</code>):</strong> plain text with a few formatting symbols. The common language of people and agents.</li>
-<li><strong><code>AGENTS.md</code>:</strong> standing instructions the agent reads at the start of every session.</li>
+<li><strong>Permission mode:</strong> how much the agent may do without asking you. We start with <em>Manual</em>: it asks every time.</li>
+<li><strong>Markdown (<code>.md</code>):</strong> plain text with a few formatting symbols. It is the common language of people and agents.</li>
+<li><strong><code>AGENTS.md</code>:</strong> your standing instructions, which the agent reads at the start of every session.</li>
 <li><strong>Skill:</strong> a recipe file the agent follows for one type of task.</li>
+<li><strong>Terminal:</strong> a text window for typing commands. The agent uses one behind the scenes. You don’t have to.</li>
+<li><strong>Environment (Python):</strong> a project’s own copy of Python and its add-ons, kept in the <code>.venv</code> folder.</li>
+<li><strong>Harness:</strong> a word you will hear later. It is the program around the model that gives it these abilities. Claude Code is one.</li>
 </ul>
-<hr>
 </section>
-<section id="where-to-go-next" class="level2">
-<h2 class="anchored" data-anchor-id="where-to-go-next">Where to go next</h2>
+<section id="useful-links" class="level2">
+<h2 class="anchored" data-anchor-id="useful-links">Useful links</h2>
+<p>Many people have written about agents for researchers. These are the ones we find most useful for this audience.</p>
+<p><strong>For people who don’t code</strong></p>
 <ul>
-<li><a href="../unit1/index.html">Week 1 — LLMs, Harnesses &amp; Setup</a>: what is behind the chat box, and other agents.</li>
-<li><a href="../unit2/index.html">Week 2 — From Raw Data to Report</a>: a full analysis project with an agent.</li>
-<li><a href="../da-knowledge/technical-terms-page.html">Glossary of LLM terms</a> · <a href="../da-knowledge/which-ai.html">Which AI model</a> · <a href="../da-knowledge/terminal-basics.html">Terminal Basics</a></li>
-<li>Claude Code documentation: <a href="https://code.claude.com/docs/en/desktop">desktop app</a> · <a href="https://code.claude.com/docs/en/skills">skills</a> · <a href="https://code.claude.com/docs/en/memory">AGENTS.md and CLAUDE.md</a></li>
+<li>Chris Blattman, <a href="https://claudeblattman.com/">AI for Professionals Who Don’t Code</a>. A political economist’s guide to running projects, meetings and everyday academic work with an agent.</li>
+<li>Mushtaq Bilal, <a href="https://velikov-mihail.github.io/ai-econ-wiki/summaries/bilal-beginners-guide/">A Beginner’s Guide to Claude Code for (Non-Technical) Academics</a>. Written for the humanities and social sciences. The link is a summary; the original is a long post on X.</li>
+<li>Carl Vellotti, <a href="https://ccforeveryone.com/guides/claude-code-for-researchers">Claude Code for Researchers</a>. Interview transcripts, PDFs and field notes, with good advice on verifying quotes.</li>
+<li>Neal Caren, <a href="https://github.com/nealcaren/social-data-analysis">social-data-analysis</a>. Ready-made skills for qualitative and quantitative sociological research, from interview analysis to literature synthesis.</li>
 </ul>
+<p><strong>If you work with data</strong></p>
+<ul>
+<li>Paul Goldsmith-Pinkham, <a href="https://markusacademy.substack.com/p/claude-code-for-applied-economists">Claude Code for Applied Economists</a>. Eight video episodes, from getting started to verification.</li>
+<li>Scott Cunningham, <a href="https://causalinf.substack.com/p/claude-code-changed-how-i-work-part">Claude Code Changed How I Work</a>. A long series on empirical research with an agent. Some posts are for subscribers.</li>
+<li>Mihail Velikov, <a href="https://velikov-mihail.github.io/ai-econ-wiki/">AI in Business &amp; Economic Research</a>. One-page summaries of more than 180 guides and papers.</li>
+</ul>
+<p><strong>Background reading</strong></p>
+<ul>
+<li>Ethan Mollick, <a href="https://www.oneusefulthing.org/">One Useful Thing</a>. The best running commentary on working with AI.</li>
+<li>Our own list: <a href="../da-knowledge/beyond.html">suggested readings and resources</a>.</li>
+</ul>
+<p><strong>Official documentation</strong></p>
+<ul>
+<li>Claude Code: <a href="https://code.claude.com/docs/en/desktop">desktop app</a> · <a href="https://code.claude.com/docs/en/skills">skills</a> · <a href="https://code.claude.com/docs/en/memory">AGENTS.md and CLAUDE.md</a> · <a href="https://code.claude.com/docs/en/data-usage">data usage</a></li>
+</ul>
+<p><strong>On this site, when you want more</strong></p>
+<ul>
+<li><a href="../unit1/index.html">Week 1: LLMs, Harnesses &amp; Setup</a> explains what is behind the chat box, and covers other agents.</li>
+<li><a href="../unit2/index.html">Week 2: From Raw Data to Report</a> is a full analysis project with an agent.</li>
+<li><a href="../da-knowledge/technical-terms-page.html">Glossary of LLM terms</a> · <a href="../da-knowledge/which-ai.html">Which AI model</a> · <a href="../da-knowledge/ai-coding-prep.html">AI Coding Prep</a></li>
+</ul>
+<div class="next-part">
+<p><a href="../friendly-agentic-ai-intro/setup.html">Start with Part 1: Setup →</a></p>
+</div>
 
-
-<!-- -->
 
 </section>
 
@@ -767,57 +861,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
-        for (let i=0; i<cellDetails.length; i++) {
-          const details = cellDetails[i];
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -1223,149 +1266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
   <script type="application/javascript">
   window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Friendly Introduction to Agentic AI for Social Scientists"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "A mini course: from chatbot to an AI agent that works with your data, PDFs and Word drafts"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-11-09"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">aliases:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - ../setup-friendly/index.html</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>::::::: {.hero-section}</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>:::::: {.container}</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>::: {.hero-title}</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Friendly Introduction to Agentic AI for Social Scientists</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>You have used ChatGPT or Claude in a browser, mostly for text. This mini course takes you, step by step, to an AI agent that works with the files on your computer: your data, your PDFs, your Word drafts</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>::::::</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>:::::::</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Who this course is for</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Social scientists who have used AI as a chatbot, mostly for text, and have never used Python or R. Seniority and field do not matter.</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>Two reactions are common.</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>*"This is for programmers."* It is not. You will not type a single command. You give instructions in plain language, as you would to a research assistant. Even Python is installed by the agent, which explains each step first.</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>*"I don't need this."* Maybe so. This course does not argue the point. It lets you find out on your own material, for the cost of an afternoon and one month of subscription. You stay the author: nothing changes without your approval.</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>We use one tool: **Claude Code, in the Claude desktop app**, on Windows, Mac or Linux. Similar agents exist, and what you learn carries over. While learning, one tool is enough.</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is an AI agent?</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>**A chatbot** is a conversation in a browser. You paste text or upload a file, it answers, and you copy the answer back. It knows only what you gave it in that conversation.</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>**An agent** is the same AI model with three additions. First, access to **one folder** on your computer that you choose. Second, the ability to **act** there: open files, write and run small programs, save files. Third, a **loop**: it takes a step, looks at the result, and decides the next one, until the task is done or it needs you.</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>The loop makes the difference. Ask for *"a chart of turnout by age group from survey.csv"*. A chatbot needs the file uploaded and may guess what the columns mean. The agent:</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>opens the file and sees that age is called <span class="in">`age_cat`</span>, not <span class="in">`age`</span>;</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>writes a short program and runs it;</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>hits an error because some ages are coded "refused", and asks you how to handle them;</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>runs it again, opens the chart to check it, and saves it in <span class="in">`output/`</span>.</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>You see every step, and at first it asks your permission before each one.</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>Think of a very fast research assistant at your computer: well read, new to your project, and sometimes confidently wrong. Your job shifts from doing each step to **deciding, instructing and checking**. Checking becomes the most important part.</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">## What you need</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A paid Claude plan.** Claude Code needs **Claude Pro** or higher (about \$20/month, cancel any time; <span class="co">[</span><span class="ot">pricing</span><span class="co">](https://claude.com/pricing)</span>). A university Claude Team or Enterprise plan also works.</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A computer** with Windows 10/11, macOS, or Linux (Ubuntu or Debian).</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Permission to install software.** University laptops may need IT approval. Try first; ask if blocked.</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="fu">## The course</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>Three hands-on parts, about an hour each, and a live demo. If something fails, nothing is broken: check the troubleshooting table, or ask the agent what went wrong.</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>🛠️ **[Part 1 — Setup](setup.qmd)** · steps 1.1–1.5 · about an hour</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>Install the app, make a project folder, meet the agent, let it set up Python, and install a Markdown reader.</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>**You end with:** a working Code tab, a project folder, Python, and Typora.</span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>**[Start Part 1 →](setup.qmd)**</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>🚶 **[Part 2 — First Steps](first-steps.qmd)** · steps 2.1–2.4 · about an hour</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>Edit a Word document and review the edits as tracked changes. Give the agent standing instructions in <span class="in">`AGENTS.md`</span>, add two skills, and do a first small analysis.</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>**You end with:** a routine for Word documents, an <span class="in">`AGENTS.md`</span> file, two skills, and one analysis you checked yourself.</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>**[Start Part 2 →](first-steps.qmd)**</span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>🔍 **[Part 3 — Staying in Charge](checking-work.qmd)** · steps 3.1–3.4 · about an hour</span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>Trust, verification and control. Keep the agent in its folder, lock the raw data, see what it did, build checks into the work, and have a fresh session review it.</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>**You end with:** read-only raw data, checks with a pass/fail table, a review routine, and new lines in <span class="in">`AGENTS.md`</span>.</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>**[Start Part 3 →](checking-work.qmd)**</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>::::: {.week-card .card}</span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>::: card-header</span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>🎬 **[Part 4 — Live Demo: How to Write a Paper in One Hour](live-demo.qmd)**</span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>Coming soon.</span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>:::::</span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="fu">## A short glossary</span></span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Agent:** an AI model that acts on your computer (reads files, runs code, saves results) in a loop until a task is done.</span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Harness:** a word you will hear later: the program around the model that gives it these abilities. Claude Code is one.</span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Session:** one conversation with the agent. Each starts fresh.</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Context window:** what the model can see at once. Long sessions fill it up, and quality drops.</span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Terminal:** a text window for typing commands. The agent uses one behind the scenes; you don't have to.</span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Environment (Python):** a project's own copy of Python and its packages, kept in the <span class="in">`.venv`</span> folder.</span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Markdown (`.md`):** plain text with a few formatting symbols. The common language of people and agents.</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`AGENTS.md`:** standing instructions the agent reads at the start of every session.</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Skill:** a recipe file the agent follows for one type of task.</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## Where to go next</span></span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Week 1 — LLMs, Harnesses &amp; Setup</span><span class="co">](../unit1/index.qmd)</span>: what is behind the chat box, and other agents.</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Week 2 — From Raw Data to Report</span><span class="co">](../unit2/index.qmd)</span>: a full analysis project with an agent.</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Glossary of LLM terms</span><span class="co">](../da-knowledge/technical-terms-page.qmd)</span> · <span class="co">[</span><span class="ot">Which AI model</span><span class="co">](../da-knowledge/which-ai.qmd)</span> · <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](../da-knowledge/terminal-basics.qmd)</span></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Claude Code documentation: <span class="co">[</span><span class="ot">desktop app</span><span class="co">](https://code.claude.com/docs/en/desktop)</span> · <span class="co">[</span><span class="ot">skills</span><span class="co">](https://code.claude.com/docs/en/skills)</span> · <span class="co">[</span><span class="ot">AGENTS.md and CLAUDE.md</span><span class="co">](https://code.claude.com/docs/en/memory)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
+  </script>
 </div> <!-- /content -->
 
 

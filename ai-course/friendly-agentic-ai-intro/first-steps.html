@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-11-09">
+<meta name="dcterms.date" content="2026-11-10">
 
-<title>Part 2 — First Steps – Doing Data Analysis with AI</title>
+<title>Part 2: First Steps – Doing Data Analysis with AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -112,9 +112,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<link rel="stylesheet" href="friendly.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="nav-sidebar docked nav-fixed friendly quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -203,7 +204,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../friendly-agentic-ai-intro/live-demo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Part 4: Live Demo</span></a>
+ <span class="menu-text">Part 4: A Paper in 50 Minutes</span></a>
   </div>
 </li>
       </ul>
@@ -542,20 +543,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#before-you-start" id="toc-before-you-start" class="nav-link active" data-scroll-target="#before-you-start">Before you start</a></li>
-  <li><a href="#step-2.1-working-on-word-documents" id="toc-step-2.1-working-on-word-documents" class="nav-link" data-scroll-target="#step-2.1-working-on-word-documents">Step 2.1 — Working on Word documents</a>
+  <li><a href="#what-do-we-do-in-this-part" id="toc-what-do-we-do-in-this-part" class="nav-link active" data-scroll-target="#what-do-we-do-in-this-part">What do we do in this part?</a></li>
+  <li><a href="#step-2-1" id="toc-step-2-1" class="nav-link" data-scroll-target="#step-2-1"><span class="step-no">2.1</span> Work on a Word document</a>
   <ul class="collapse">
   <li><a href="#ask-for-comments-not-changes" id="toc-ask-for-comments-not-changes" class="nav-link" data-scroll-target="#ask-for-comments-not-changes">Ask for comments, not changes</a></li>
   <li><a href="#ask-for-edits-then-review-them-as-tracked-changes" id="toc-ask-for-edits-then-review-them-as-tracked-changes" class="nav-link" data-scroll-target="#ask-for-edits-then-review-them-as-tracked-changes">Ask for edits, then review them as tracked changes</a></li>
   <li><a href="#write-in-markdown-finish-in-word" id="toc-write-in-markdown-finish-in-word" class="nav-link" data-scroll-target="#write-in-markdown-finish-in-word">Write in Markdown, finish in Word</a></li>
-  <li><a href="#margin-comments" id="toc-margin-comments" class="nav-link" data-scroll-target="#margin-comments">Margin comments</a></li>
+  <li><a href="#comments-in-the-margin" id="toc-comments-in-the-margin" class="nav-link" data-scroll-target="#comments-in-the-margin">Comments in the margin</a></li>
   </ul></li>
-  <li><a href="#step-2.2-give-the-agent-standing-instructions-agents.md" id="toc-step-2.2-give-the-agent-standing-instructions-agents.md" class="nav-link" data-scroll-target="#step-2.2-give-the-agent-standing-instructions-agents.md">Step 2.2 — Give the agent standing instructions: AGENTS.md</a></li>
-  <li><a href="#step-2.3-add-two-skills" id="toc-step-2.3-add-two-skills" class="nav-link" data-scroll-target="#step-2.3-add-two-skills">Step 2.3 — Add two skills</a></li>
-  <li><a href="#step-2.4-a-first-real-task-with-data" id="toc-step-2.4-a-first-real-task-with-data" class="nav-link" data-scroll-target="#step-2.4-a-first-real-task-with-data">Step 2.4 — A first real task with data</a></li>
-  <li><a href="#habits-that-make-it-work" id="toc-habits-that-make-it-work" class="nav-link" data-scroll-target="#habits-that-make-it-work">Habits that make it work</a></li>
+  <li><a href="#step-2-2" id="toc-step-2-2" class="nav-link" data-scroll-target="#step-2-2"><span class="step-no">2.2</span> Give the agent standing instructions: AGENTS.md</a></li>
+  <li><a href="#step-2-3" id="toc-step-2-3" class="nav-link" data-scroll-target="#step-2-3"><span class="step-no">2.3</span> Add two skills</a></li>
+  <li><a href="#step-2-4" id="toc-step-2-4" class="nav-link" data-scroll-target="#step-2-4"><span class="step-no">2.4</span> Read a pile of papers</a></li>
+  <li><a href="#step-2-5" id="toc-step-2-5" class="nav-link" data-scroll-target="#step-2-5"><span class="step-no">2.5</span> Do a first task with data</a></li>
+  <li><a href="#what-habits-make-it-work" id="toc-what-habits-make-it-work" class="nav-link" data-scroll-target="#what-habits-make-it-work">What habits make it work?</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
-  <li><a href="#what-comes-next" id="toc-what-comes-next" class="nav-link" data-scroll-target="#what-comes-next">What comes next</a></li>
+  <li><a href="#what-comes-next" id="toc-what-comes-next" class="nav-link" data-scroll-target="#what-comes-next">What comes next?</a></li>
   </ul>
 </nav>
     </div>
@@ -564,7 +566,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/index.html">Friendly Intro to Agentic AI</a></li><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/first-steps.html">Part 2: First Steps</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Part 2 — First Steps</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<h1 class="title">Part 2: First Steps</h1>
 <p class="subtitle lead">Friendly Introduction to Agentic AI for Social Scientists</p>
 </div>
 
@@ -576,7 +578,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 9, 2026</p>
+      <p class="date">November 10, 2026</p>
     </div>
   </div>
   
@@ -590,19 +592,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="hero-section">
 <div class="container">
+<div class="hero-eyebrow">
+<p>Part 2 of 4 · about an hour</p>
+</div>
 <div class="hero-title">
-<p>Part 2 — First Steps</p>
+<p>First Steps</p>
 </div>
 <div class="hero-subtitle">
-<p>Put the agent to work on your Word drafts, a PDF you know well, and a small analysis whose numbers you check yourself</p>
+<p>Put the agent to work on what you know: a Word draft, a pile of readings, and a small dataset whose numbers you check yourself</p>
 </div>
 </div>
 </div>
-<hr>
-<section id="before-you-start" class="level2">
-<h2 class="anchored" data-anchor-id="before-you-start">Before you start</h2>
-<p>This is Part 2 of <a href="../friendly-agentic-ai-intro/index.html">Friendly Introduction to Agentic AI for Social Scientists</a>. It assumes you have finished <a href="../friendly-agentic-ai-intro/setup.html">Part 1 — Setup</a>: the app works, <code>first-project</code> is open in the Code tab in <strong>Manual</strong> mode, Python is set up, and Typora opens <code>.md</code> files.</p>
-<p>It takes about an hour.</p>
+<div class="course-map">
+<p><a href="../friendly-agentic-ai-intro/index.html"><span class="n">⌂</span> Overview</a> <a href="../friendly-agentic-ai-intro/setup.html"><span class="n">1</span> Setup</a> <a href="../friendly-agentic-ai-intro/first-steps.html" class="here"><span class="n">2</span> First steps</a> <a href="../friendly-agentic-ai-intro/checking-work.html"><span class="n">3</span> Staying in charge</a> <a href="../friendly-agentic-ai-intro/live-demo.html"><span class="n">4</span> A paper in 50 minutes</a></p>
+</div>
+<section id="what-do-we-do-in-this-part" class="level2">
+<h2 class="anchored" data-anchor-id="what-do-we-do-in-this-part">What do we do in this part?</h2>
+<p>In this part the agent works on three things from your everyday work: a draft in Word, a handful of papers in PDF, and a small public dataset. There is a reason for this choice. <strong>You can judge the agent’s work only where you know the answer.</strong> On a draft you wrote and on papers you have read, you will see at once what is useful, what is generic and what is wrong.</p>
+<p>Between the first and the second task, we give the agent two things that make it more reliable: standing instructions, and two skills.</p>
+<p>We assume you have finished <a href="../friendly-agentic-ai-intro/setup.html">Part 1</a>: the app works, <code>first-project</code> is open in the Code tab in <strong>Manual</strong> mode, Python is set up, and Typora opens <code>.md</code> files.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -617,63 +625,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><label><input type="checkbox">A routine for working on Word documents, with every change visible as a tracked change</label></li>
 <li><label><input type="checkbox">An <code>AGENTS.md</code> file with standing instructions for the agent</label></li>
 <li><label><input type="checkbox">Two <strong>skills</strong>: one to log analytical decisions, one to read PDFs reliably</label></li>
-<li><label><input type="checkbox">One small, real analysis, with numbers you checked yourself</label></li>
+<li><label><input type="checkbox">A table of readings, with quotes you verified on the page</label></li>
+<li><label><input type="checkbox">One small analysis, with numbers you checked yourself</label></li>
 </ul>
 </div>
 </div>
-<hr>
 </section>
-<section id="step-2.1-working-on-word-documents" class="level2">
-<h2 class="anchored" data-anchor-id="step-2.1-working-on-word-documents">Step 2.1 — Working on Word documents</h2>
+<section id="step-2-1" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-1"><span class="step-no">2.1</span> Work on a Word document</h2>
 <p>Most of your writing, and your coauthors’, lives in Word. The agent can read, comment on, edit and create Word files. The routine below keeps you in control: <strong>the agent never touches your original, and you see each change as a tracked change in Word.</strong></p>
-<p><strong>Get ready.</strong> Copy a Word document you know well (a draft, a proposal, a referee report) into a <code>docs/</code> subfolder. Pick one that is not confidential.</p>
+<p>To get ready, copy a Word document you know well (a draft, a proposal, a referee report) into a <code>docs/</code> subfolder. Pick one that is not confidential.</p>
 <section id="ask-for-comments-not-changes" class="level3">
 <h3 class="anchored" data-anchor-id="ask-for-comments-not-changes">Ask for comments, not changes</h3>
-<p>The safest start: nothing is edited.</p>
-<pre class="text"><code>Read docs/draft.docx. Do not change it.
-Give me the ten most important comments on the argument, structure and
-clarity, most important first. For each, say which section or paragraph
-it refers to. Save the list as docs/draft_comments.md.</code></pre>
-<p>Open the list in Typora. Some comments will be useful, some generic, a few wrong. That mix tells you a lot about how to use the agent.</p>
+<p>This is the safest start, because nothing is edited.</p>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Read docs/draft.docx. Do not change it.</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Give me the ten most important comments on the argument, structure and clarity, most important first. For each, say which section or paragraph it refers to. Save the list as docs/draft_comments.md.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Open the list in Typora. Some comments will be useful, some generic, and a few wrong. That mix tells you a lot about how to use the agent.</p>
 </section>
 <section id="ask-for-edits-then-review-them-as-tracked-changes" class="level3">
 <h3 class="anchored" data-anchor-id="ask-for-edits-then-review-them-as-tracked-changes">Ask for edits, then review them as tracked changes</h3>
-<pre class="text"><code>Make a copy of docs/draft.docx called docs/draft_v2.docx. In the copy only:
-fix grammar and typos, and split sentences longer than 40 words.
-Do not change the argument, the citations or the numbers.
-Keep all formatting, footnotes and comments.
-When done, list the kinds of changes you made.</code></pre>
-<p>Then let Word show what changed:</p>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Make a copy of docs/draft.docx called docs/draft_v2.docx. In the copy only: fix grammar and typos, and split sentences longer than 40 words.</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Do not change the argument, the citations or the numbers. Keep all formatting, footnotes and comments.</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>When done, list the kinds of changes you made.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Then let Word show what changed.</p>
 <ol type="1">
-<li>In desktop Word (the browser version cannot compare), go to the <strong>Review</strong> tab, click <strong>Compare</strong>, then <strong>Compare…</strong> (Windows) or <strong>Compare Documents</strong> (Mac).</li>
+<li>In desktop Word (the browser version can’t compare), go to the <strong>Review</strong> tab, click <strong>Compare</strong>, then <strong>Compare…</strong> (Windows) or <strong>Compare Documents</strong> (Mac).</li>
 <li>As <em>Original document</em>, choose <code>draft.docx</code>. As <em>Revised document</em>, choose <code>draft_v2.docx</code>.</li>
 <li>Word opens a new document with each change as a <strong>tracked change</strong>. Accept or reject them as you would a coauthor’s.</li>
 </ol>
-<p>There is nothing new to learn, and it shows any change you did not ask for.</p>
+<p>This is the Word review you already use. Also, the comparison shows every change, including the ones you didn’t ask for.</p>
 </section>
 <section id="write-in-markdown-finish-in-word" class="level3">
 <h3 class="anchored" data-anchor-id="write-in-markdown-finish-in-word">Write in Markdown, finish in Word</h3>
-<p>For new text (a memo, a section, a report), draft and revise in Markdown with the agent, and convert to Word at the end. The agent works best in plain text, and its changes are easier to follow there.</p>
-<pre class="text"><code>Convert docs/memo.md to docs/memo.docx.
-Use docs/my-template.docx for the styles (fonts, headings, margins).</code></pre>
-<p>For <code>my-template.docx</code>, use any Word file whose look you like (your university template, a past paper). The agent copies its styles, not its text.</p>
+<p>For new text (a memo, a section, a report), we advise drafting and revising in Markdown with the agent, and converting to Word at the end. The agent works best in plain text, and its changes are easier to follow there.</p>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Convert docs/memo.md to docs/memo.docx. Use docs/my-template.docx for the styles (fonts, headings, margins).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>For <code>my-template.docx</code>, use any Word file whose look you like, such as your university template or a past paper. The agent copies its styles, not its text.</p>
 </section>
-<section id="margin-comments" class="level3">
-<h3 class="anchored" data-anchor-id="margin-comments">Margin comments</h3>
+<section id="comments-in-the-margin" class="level3">
+<h3 class="anchored" data-anchor-id="comments-in-the-margin">Comments in the margin</h3>
 <p>You can also ask: <em>“Put your comments as Word comments in the margin of docs/draft_v2.docx.”</em> This usually works. If the result looks odd, use the list in Markdown instead.</p>
-<hr>
 </section>
 </section>
-<section id="step-2.2-give-the-agent-standing-instructions-agents.md" class="level2">
-<h2 class="anchored" data-anchor-id="step-2.2-give-the-agent-standing-instructions-agents.md">Step 2.2 — Give the agent standing instructions: AGENTS.md</h2>
-<p>Each session starts from zero: the agent does not remember yesterday. So write down once what it should always know: who you are, how you work, what it must never do. This file, <strong><code>AGENTS.md</code></strong>, sits in the project folder, and the agent reads it at the start of every session.</p>
-<p>We prepared a starter file based on how we work with agents. Ask the agent to fetch it and create the folders:</p>
-<pre class="text"><code>Download this file exactly (use a download command, do not retype it) and
-save it as AGENTS.md in this folder:
-https://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/AGENTS.md
-
-Then create the folders it describes (data/raw, data/clean, code, output, docs)
-and summarize the instructions for me in five bullet points.</code></pre>
+<section id="step-2-2" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-2"><span class="step-no">2.2</span> Give the agent standing instructions: AGENTS.md</h2>
+<p>Each session starts from zero: the agent doesn’t remember yesterday. So it is good practice to write down once what it should always know: who you are, how you work, and what it must never do. This file is called <strong><code>AGENTS.md</code></strong>. It sits in the project folder, and the agent reads it at the start of every session.</p>
+<p>We prepared a starter file based on how we work with agents. Ask the agent to fetch it and to create the folders:</p>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Download this file exactly (use a download command, do not retype it) and save it as AGENTS.md in this folder:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>https://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/AGENTS.md</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>Then create the folders it describes (data/raw, data/clean, code, output, docs) and summarize the instructions for me in five bullet points.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>Then open <code>AGENTS.md</code> in Typora and <strong>edit the “About me” section</strong>. It is your file.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -750,18 +758,15 @@ and summarize the instructions for me in five bullet points.</code></pre>
 </div>
 </div>
 </div>
-<p>In short, it says: plan before longer tasks; do the smallest thing that answers the request; never delete (move files to <code>_old/</code>); never overwrite raw data or your Word files; never invent numbers or references; say where each number comes from; check results by hand; log analytical decisions.</p>
+<p>What does it say? Plan before longer tasks. Do the smallest thing that answers the request. Never delete: move files to <code>_old/</code>. Never overwrite raw data or your Word files. Never invent numbers or references, and say where each number comes from. Check results by hand. Log analytical decisions.</p>
 <p>Grow the file slowly. <strong>When the agent makes the same mistake twice, add one line.</strong> After a month it will fit how you work better than any template.</p>
-<hr>
 </section>
-<section id="step-2.3-add-two-skills" class="level2">
-<h2 class="anchored" data-anchor-id="step-2.3-add-two-skills">Step 2.3 — Add two skills</h2>
-<p>A <strong>skill</strong> is a recipe for one type of task: a Markdown file called <code>SKILL.md</code> in its own folder. The agent uses a skill when the task matches its description, or when you type <code>/</code> and its name.</p>
-<p>Two to start with:</p>
-<ul>
-<li><strong><code>decision-log</code></strong> records every analytical choice in <code>DECISIONS.md</code>: dropped observations, variable definitions, methods. For each, it notes the alternatives and the basis (evidence, convention, your instruction, or just a default). Read it <em>before</em> you trust the results.</li>
-<li><strong><code>read-pdf</code></strong> makes the agent extract a PDF’s text to a <code>.txt</code> file first and work from that, citing page numbers. This prevents the most common PDF failure: answering from a partly read document without saying so.</li>
-</ul>
+<section id="step-2-3" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-3"><span class="step-no">2.3</span> Add two skills</h2>
+<p><strong>A skill</strong> is a recipe for one type of task: a Markdown file called <code>SKILL.md</code> in its own folder. The agent uses a skill when the task matches its description, or when you type <code>/</code> and its name.</p>
+<p>We start with two.</p>
+<p><strong><code>decision-log</code></strong> records every analytical choice in a file called <code>DECISIONS.md</code>: dropped observations, variable definitions, methods. For each choice it notes the alternatives and the basis: evidence, convention, your instruction, or just a default. Read this file <em>before</em> you trust the results.</p>
+<p><strong><code>read-pdf</code></strong> makes the agent extract a PDF’s text to a <code>.txt</code> file first and work from that, with page numbers. This prevents the most common failure with PDFs: answering from a partly read document without saying so.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -888,53 +893,98 @@ and summarize the instructions for me in five bullet points.</code></pre>
 </div>
 </div>
 <p>Install them with this prompt:</p>
-<pre class="text"><code>Download these two files exactly (use a download command, do not retype them):
-https://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/skills/decision-log/SKILL.md
-https://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/skills/read-pdf/SKILL.md
-
-Save them as .claude/skills/decision-log/SKILL.md and
-.claude/skills/read-pdf/SKILL.md inside this project folder.
-Then tell me in two sentences what each skill does.</code></pre>
-<p>Folders starting with a dot, like <code>.claude</code>, are hidden by default, so you may not see it in Explorer or Finder. Start a new session (<strong>+</strong> or <em>New session</em>) and type <code>/</code>: both skills should show up.</p>
-<p><strong>Try the PDF skill</strong> on a paper you know well: <em>“Use the read-pdf skill on [file name]. What is the research question, the data, the main result? Give page numbers.”</em> Check one page number yourself. Then ask <em>“What are the three weakest points of this paper?”</em> and judge the answer as a referee would.</p>
-<hr>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Download these two files exactly (use a download command, do not retype them):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>https://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/skills/decision-log/SKILL.md</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>https://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/skills/read-pdf/SKILL.md</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>Save them as .claude/skills/decision-log/SKILL.md and .claude/skills/read-pdf/SKILL.md inside this project folder. Then tell me in two sentences what each skill does.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Folders starting with a dot, like <code>.claude</code>, are hidden by default, so you may not see it in Explorer or Finder.</p>
+<div class="check">
+<p><strong>It worked if</strong> you start a new session (<strong>+</strong> or <em>New session</em>), type <code>/</code>, and both skills show up in the list.</p>
+</div>
 </section>
-<section id="step-2.4-a-first-real-task-with-data" class="level2">
-<h2 class="anchored" data-anchor-id="step-2.4-a-first-real-task-with-data">Step 2.4 — A first real task with data</h2>
-<p>Now it all comes together. Start a new session and, before you send the prompt, switch the permission mode to <strong>Plan</strong>. In Plan mode the agent proposes but changes nothing until you agree.</p>
-<pre class="text"><code>Using the World Bank's open data (its API, no key needed), get for all
-EU countries for 2023:
-- female labour force participation rate (% of women 15+)
-- GDP per capita, PPP
-
-Save the raw download in data/raw, write the code in code/, and make
-one scatter plot (GDP per capita on the x axis, participation on the y axis,
-with country labels) saved in output/. Then write a half-page memo in
-docs/memo.md: what the chart shows, and three caveats.
-Keep the decision log as you go.</code></pre>
-<p>Read the plan, and say plainly if something looks off. When you are happy, switch back to <strong>Manual</strong> and tell it to go ahead.</p>
+<section id="step-2-4" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-4"><span class="step-no">2.4</span> Read a pile of papers</h2>
+<p>Every project starts with reading, and reading is where a chatbot was already of some help. The agent adds two things. It works through a whole folder of papers in one go, and it leaves behind a table that you can check, line by line.</p>
+<p>To get ready, make a folder <code>docs/readings/</code> and copy five to ten PDFs into it. Choose papers you know well. Start a new session and send:</p>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Use the read-pdf skill on every PDF in docs/readings/.</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Then make a table with one row per paper: authors and year, research question, data or material, method, main finding. For each item, give the page number where you found it.</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>For each paper, add one sentence quoted word for word that states the main finding, with its page number.</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>If a paper does not state something, write "not stated". Do not guess, and do not use what you know about the paper from elsewhere.</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>Save the table as docs/readings.md.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Then check it. Open <code>docs/readings.md</code> in Typora and do three things.</p>
+<ol type="1">
+<li>Pick <strong>two papers</strong>. Open each PDF at the page given, and search for the quoted sentence (<code>Ctrl+F</code>, or <code>Cmd+F</code> on a Mac). Is it there, word for word?</li>
+<li>Read the row of the paper you know best. Is this how you would summarize it to a colleague?</li>
+<li>Look at one “not stated”. Is it really not in the paper?</li>
+</ol>
+<p>Why the fuss about quotes? Summarizing is what these models do best, and the table will look convincing. The typical mistake is a different one: a paraphrase presented as a quote, or a finding that comes from the model’s general knowledge and not from the file. A page number and a word-for-word quote make both mistakes easy to catch. In a published paper, a quote that doesn’t exist is the kind of error that readers remember.</p>
+<p>Now ask a question across the papers: <em>“Which of these papers disagree with each other, and on what? Give page numbers.”</em> Judge the answer as you would judge a memo from a research assistant.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Interviews, field notes, open-ended answers
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The same routine works on your own qualitative material: transcripts, field notes, open-ended survey answers. Ask for themes, each with word-for-word quotes, the file name and the line. But note that such material is usually confidential. Check your consent forms and your data agreement before any of it goes into the folder (Step 1.2).</p>
+</div>
+</div>
+</section>
+<section id="step-2-5" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-5"><span class="step-no">2.5</span> Do a first task with data</h2>
+<p>Now it all comes together. Our question is simple: in EU countries where more women work, do women also hold more seats in parliament?</p>
+<p>Start a new session and, before you send the prompt, switch the permission mode to <strong>Plan</strong>. In Plan mode the agent proposes but changes nothing until you agree.</p>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Using the World Bank's open data (its API, no key needed), get for all EU countries for 2023:</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>- the share of seats held by women in the national parliament (%)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>- the female labor force participation rate (% of women aged 15 and over)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>Save the raw download in data/raw, write the code in code/, and make one scatter plot (participation on the x axis, seats in parliament on the y axis, with country labels) saved in output/.</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>Then write a half-page memo in docs/memo.md: what the chart shows, and three caveats.</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>Keep the decision log as you go.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Read the plan, and say plainly if something looks off. When you are happy with it, switch back to <strong>Manual</strong> and tell the agent to go ahead.</p>
 <p><strong>Then check it. This is your job, not the agent’s.</strong></p>
 <ol type="1">
-<li>Open the chart. Are the countries where you expected?</li>
-<li>Pick <strong>two countries</strong> and look up their numbers on <a href="https://data.worldbank.org/">data.worldbank.org</a>. Do they match the CSV?</li>
-<li>Read <code>DECISIONS.md</code>. Which countries had no 2023 data, and what did the agent do: use another year, drop them, or ask you?</li>
-<li>Read the memo. Does it say “effect” or “causes”? It shouldn’t: a cross-country scatter shows an association.</li>
+<li>Open the chart. Are the countries where you expected them to be?</li>
+<li>Pick <strong>two countries</strong> and look up their numbers on <a href="https://data.worldbank.org/">data.worldbank.org</a>. Do they match the CSV file in <code>data/raw</code>?</li>
+<li>Read <code>DECISIONS.md</code>. The World Bank has more than one measure of labor force participation. Which one did the agent pick, and did it tell you? Which countries had no 2023 data, and what did it do about them?</li>
+<li>Read the memo. Does it say “effect” or “causes”? It shouldn’t. A scatter plot of 27 countries shows an association.</li>
 </ol>
 <p>If you find a mistake, tell the agent, and add a line to <code>AGENTS.md</code> if it could happen again. Finally, ask for the memo as a Word file (Step 2.1).</p>
-<hr>
+<p>Note what happened in check 3. The agent made a choice that you didn’t know existed. Nothing is wrong with that, as long as the choice is written down and you read it.</p>
 </section>
-<section id="habits-that-make-it-work" class="level2">
-<h2 class="anchored" data-anchor-id="habits-that-make-it-work">Habits that make it work</h2>
-<p>None of these is technical.</p>
+<section id="what-habits-make-it-work" class="level2">
+<h2 class="anchored" data-anchor-id="what-habits-make-it-work">What habits make it work?</h2>
+<p>These habits are not technical. They are what you would ask of a careful research assistant, and of yourself.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Six habits
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="1">
-<li><strong>Plan first.</strong> For anything longer than a few minutes, use Plan mode. Fixing a plan costs a sentence; fixing finished work costs an afternoon.</li>
+<li><strong>Plan first.</strong> For anything longer than a few minutes, use Plan mode. It is much cheaper to fix a plan than to fix finished work.</li>
 <li><strong>Small steps.</strong> Ask for one thing, check it, then ask for the next. An agent running on a vague task produces plausible-looking work that you then have to read.</li>
-<li><strong>Check the numbers.</strong> Compare a few values with the source by hand, every time. A smaller result you checked beats a larger one you did not.</li>
-<li><strong>Never let it delete or overwrite.</strong> Raw data and original documents stay untouched; old files go to <code>_old/</code>. Then every mistake can be undone.</li>
-<li><strong>One session per task.</strong> Long sessions get muddled. Start a new one for each task; what must carry over goes in <code>AGENTS.md</code>, <code>DECISIONS.md</code> or a notes file.</li>
+<li><strong>Check against the source.</strong> Compare a few numbers and a few quotes with the source by hand, every time.</li>
+<li><strong>Never let it delete or overwrite.</strong> Raw data and original documents stay untouched, and old files go to <code>_old/</code>. Then every mistake can be undone.</li>
+<li><strong>One session per task.</strong> Long sessions get muddled. Start a new one for each task. What must carry over goes in <code>AGENTS.md</code>, <code>DECISIONS.md</code> or a notes file.</li>
 <li><strong>Ask it to explain.</strong> “Why did you do that?” “What could go wrong here?” You are responsible for the work, so you need to understand it.</li>
 </ol>
-<hr>
+</div>
+</div>
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
@@ -959,41 +1009,32 @@ Keep the decision log as you go.</code></pre>
 <td>Start a new session. Skills load when a session starts</td>
 </tr>
 <tr class="odd">
+<td>A PDF comes out as nonsense, or nearly empty</td>
+<td>It is probably a scan. Tell the agent, and the read-pdf skill reads those pages as images. Check such papers with extra care</td>
+</tr>
+<tr class="even">
 <td>The agent seems stuck, or keeps doing the wrong thing</td>
 <td>Click stop and say plainly what you want. If the session is long, start a new one</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>It made a mess of my files</td>
 <td>Ask: <em>“List every file you created or changed in this session.”</em> Then ask it to move the unwanted ones to <code>_old/</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>An error I don’t understand</td>
 <td>Paste it in and ask: <em>“Explain this error simply, then fix it.”</em></td>
 </tr>
 </tbody>
 </table>
-<p>More setup problems: <a href="../friendly-agentic-ai-intro/setup.html#troubleshooting">Part 1</a>. Unfamiliar terms: the <a href="../friendly-agentic-ai-intro/index.html#a-short-glossary">glossary</a> on the course page.</p>
-<hr>
+<p>More setup problems: <a href="../friendly-agentic-ai-intro/setup.html#troubleshooting">Part 1</a>. Unfamiliar terms: the <a href="../friendly-agentic-ai-intro/index.html#a-short-glossary">glossary</a> in the overview.</p>
 </section>
 <section id="what-comes-next" class="level2">
-<h2 class="anchored" data-anchor-id="what-comes-next">What comes next</h2>
-<p>Part 3 is about staying in charge. Keep the agent in its folder, see what it did, and build checks into the work.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Continue with Part 3
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong><a href="../friendly-agentic-ai-intro/checking-work.html">Part 3 — Staying in Charge →</a></strong></p>
-</div>
+<h2 class="anchored" data-anchor-id="what-comes-next">What comes next?</h2>
+<p>You now have an agent that has worked on your text, your readings and a dataset. You have also seen it make choices you didn’t ask for. Part 3 is about that: how to set its limits, see what it did, and build the checks into the work.</p>
+<div class="next-part">
+<p><a href="../friendly-agentic-ai-intro/checking-work.html">Continue with Part 3: Staying in Charge →</a></p>
 </div>
 
-
-<!-- -->
 
 </section>
 
@@ -1068,57 +1109,6 @@ Keep the decision log as you go.</code></pre>
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
-        for (let i=0; i<cellDetails.length; i++) {
-          const details = cellDetails[i];
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -1524,240 +1514,7 @@ Keep the decision log as you go.</code></pre>
   </script>
   <script type="application/javascript">
   window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Part 2 — First Steps"</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Friendly Introduction to Agentic AI for Social Scientists"</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-11-09"</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="an">resources:</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - starter/**</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>::::::: {.hero-section}</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>:::::: {.container}</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>::: {.hero-title}</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>Part 2 — First Steps</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>Put the agent to work on your Word drafts, a PDF you know well, and a small analysis whose numbers you check yourself</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>::::::</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>:::::::</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Before you start</span></span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>This is Part 2 of <span class="co">[</span><span class="ot">Friendly Introduction to Agentic AI for Social Scientists</span><span class="co">](index.qmd)</span>. It assumes you have finished <span class="co">[</span><span class="ot">Part 1 — Setup</span><span class="co">](setup.qmd)</span>: the app works, <span class="in">`first-project`</span> is open in the Code tab in **Manual** mode, Python is set up, and Typora opens <span class="in">`.md`</span> files.</span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>It takes about an hour.</span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## What you will have at the end</span></span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ A routine for working on Word documents, with every change visible as a tracked change</span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ An <span class="in">`AGENTS.md`</span> file with standing instructions for the agent</span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ Two **skills**: one to log analytical decisions, one to read PDFs reliably</span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ One small, real analysis, with numbers you checked yourself</span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2.1 — Working on Word documents</span></span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>Most of your writing, and your coauthors', lives in Word. The agent can read, comment on, edit and create Word files. The routine below keeps you in control: **the agent never touches your original, and you see each change as a tracked change in Word.**</span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>**Get ready.** Copy a Word document you know well (a draft, a proposal, a referee report) into a <span class="in">`docs/`</span> subfolder. Pick one that is not confidential.</span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ask for comments, not changes</span></span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>The safest start: nothing is edited.</span>
-<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a><span class="in">Read docs/draft.docx. Do not change it.</span></span>
-<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a><span class="in">Give me the ten most important comments on the argument, structure and</span></span>
-<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a><span class="in">clarity, most important first. For each, say which section or paragraph</span></span>
-<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a><span class="in">it refers to. Save the list as docs/draft_comments.md.</span></span>
-<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>Open the list in Typora. Some comments will be useful, some generic, a few wrong. That mix tells you a lot about how to use the agent.</span>
-<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ask for edits, then review them as tracked changes</span></span>
-<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a><span class="in">Make a copy of docs/draft.docx called docs/draft_v2.docx. In the copy only:</span></span>
-<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a><span class="in">fix grammar and typos, and split sentences longer than 40 words.</span></span>
-<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a><span class="in">Do not change the argument, the citations or the numbers.</span></span>
-<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a><span class="in">Keep all formatting, footnotes and comments.</span></span>
-<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a><span class="in">When done, list the kinds of changes you made.</span></span>
-<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a>Then let Word show what changed:</span>
-<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>In desktop Word (the browser version cannot compare), go to the **Review** tab, click **Compare**, then **Compare…** (Windows) or **Compare Documents** (Mac).</span>
-<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>As *Original document*, choose `draft.docx`. As *Revised document*, choose <span class="in">`draft_v2.docx`</span>.</span>
-<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Word opens a new document with each change as a **tracked change**. Accept or reject them as you would a coauthor's.</span>
-<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a>There is nothing new to learn, and it shows any change you did not ask for.</span>
-<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a><span class="fu">### Write in Markdown, finish in Word</span></span>
-<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a>For new text (a memo, a section, a report), draft and revise in Markdown with the agent, and convert to Word at the end. The agent works best in plain text, and its changes are easier to follow there.</span>
-<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a><span class="in">Convert docs/memo.md to docs/memo.docx.</span></span>
-<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a><span class="in">Use docs/my-template.docx for the styles (fonts, headings, margins).</span></span>
-<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a>For <span class="in">`my-template.docx`</span>, use any Word file whose look you like (your university template, a past paper). The agent copies its styles, not its text.</span>
-<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a><span class="fu">### Margin comments</span></span>
-<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a>You can also ask: *"Put your comments as Word comments in the margin of docs/draft_v2.docx."* This usually works. If the result looks odd, use the list in Markdown instead.</span>
-<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2.2 — Give the agent standing instructions: AGENTS.md</span></span>
-<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a>Each session starts from zero: the agent does not remember yesterday. So write down once what it should always know: who you are, how you work, what it must never do. This file, **`AGENTS.md`**, sits in the project folder, and the agent reads it at the start of every session.</span>
-<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a>We prepared a starter file based on how we work with agents. Ask the agent to fetch it and create the folders:</span>
-<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb10-101"><a href="#cb10-101" aria-hidden="true" tabindex="-1"></a><span class="in">Download this file exactly (use a download command, do not retype it) and</span></span>
-<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a><span class="in">save it as AGENTS.md in this folder:</span></span>
-<span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a><span class="in">https://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/AGENTS.md</span></span>
-<span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a><span class="in">Then create the folders it describes (data/raw, data/clean, code, output, docs)</span></span>
-<span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a><span class="in">and summarize the instructions for me in five bullet points.</span></span>
-<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a>Then open <span class="in">`AGENTS.md`</span> in Typora and **edit the "About me" section**. It is your file.</span>
-<span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-111"><a href="#cb10-111" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
-<span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is in the starter AGENTS.md (click to open)</span></span>
-<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a><span class="in">```` markdown</span></span>
-<span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a>{{&lt; include starter/AGENTS.md &gt;}}</span>
-<span id="cb10-116"><a href="#cb10-116" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
-<span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a>In short, it says: plan before longer tasks; do the smallest thing that answers the request; never delete (move files to <span class="in">`_old/`</span>); never overwrite raw data or your Word files; never invent numbers or references; say where each number comes from; check results by hand; log analytical decisions.</span>
-<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a>Grow the file slowly. **When the agent makes the same mistake twice, add one line.** After a month it will fit how you work better than any template.</span>
-<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2.3 — Add two skills</span></span>
-<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a>A **skill** is a recipe for one type of task: a Markdown file called <span class="in">`SKILL.md`</span> in its own folder. The agent uses a skill when the task matches its description, or when you type <span class="in">`/`</span> and its name.</span>
-<span id="cb10-128"><a href="#cb10-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-129"><a href="#cb10-129" aria-hidden="true" tabindex="-1"></a>Two to start with:</span>
-<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`decision-log`** records every analytical choice in <span class="in">`DECISIONS.md`</span>: dropped observations, variable definitions, methods. For each, it notes the alternatives and the basis (evidence, convention, your instruction, or just a default). Read it *before* you trust the results.</span>
-<span id="cb10-132"><a href="#cb10-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**`read-pdf`** makes the agent extract a PDF's text to a <span class="in">`.txt`</span> file first and work from that, citing page numbers. This prevents the most common PDF failure: answering from a partly read document without saying so.</span>
-<span id="cb10-133"><a href="#cb10-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
-<span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a><span class="fu">## The decision-log skill (click to open)</span></span>
-<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a><span class="in">```` markdown</span></span>
-<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a>{{&lt; include starter/skills/decision-log/SKILL.md &gt;}}</span>
-<span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
-<span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-142"><a href="#cb10-142" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
-<span id="cb10-143"><a href="#cb10-143" aria-hidden="true" tabindex="-1"></a><span class="fu">## The read-pdf skill (click to open)</span></span>
-<span id="cb10-144"><a href="#cb10-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a><span class="in">```` markdown</span></span>
-<span id="cb10-146"><a href="#cb10-146" aria-hidden="true" tabindex="-1"></a>{{&lt; include starter/skills/read-pdf/SKILL.md &gt;}}</span>
-<span id="cb10-147"><a href="#cb10-147" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
-<span id="cb10-148"><a href="#cb10-148" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb10-149"><a href="#cb10-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-150"><a href="#cb10-150" aria-hidden="true" tabindex="-1"></a>Install them with this prompt:</span>
-<span id="cb10-151"><a href="#cb10-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-152"><a href="#cb10-152" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb10-153"><a href="#cb10-153" aria-hidden="true" tabindex="-1"></a><span class="in">Download these two files exactly (use a download command, do not retype them):</span></span>
-<span id="cb10-154"><a href="#cb10-154" aria-hidden="true" tabindex="-1"></a><span class="in">https://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/skills/decision-log/SKILL.md</span></span>
-<span id="cb10-155"><a href="#cb10-155" aria-hidden="true" tabindex="-1"></a><span class="in">https://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/skills/read-pdf/SKILL.md</span></span>
-<span id="cb10-156"><a href="#cb10-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-157"><a href="#cb10-157" aria-hidden="true" tabindex="-1"></a><span class="in">Save them as .claude/skills/decision-log/SKILL.md and</span></span>
-<span id="cb10-158"><a href="#cb10-158" aria-hidden="true" tabindex="-1"></a><span class="in">.claude/skills/read-pdf/SKILL.md inside this project folder.</span></span>
-<span id="cb10-159"><a href="#cb10-159" aria-hidden="true" tabindex="-1"></a><span class="in">Then tell me in two sentences what each skill does.</span></span>
-<span id="cb10-160"><a href="#cb10-160" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-161"><a href="#cb10-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-162"><a href="#cb10-162" aria-hidden="true" tabindex="-1"></a>Folders starting with a dot, like <span class="in">`.claude`</span>, are hidden by default, so you may not see it in Explorer or Finder. Start a new session (**+** or *New session*) and type <span class="in">`/`</span>: both skills should show up.</span>
-<span id="cb10-163"><a href="#cb10-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-164"><a href="#cb10-164" aria-hidden="true" tabindex="-1"></a>**Try the PDF skill** on a paper you know well: *"Use the read-pdf skill on [file name]. What is the research question, the data, the main result? Give page numbers."* Check one page number yourself. Then ask *"What are the three weakest points of this paper?"* and judge the answer as a referee would.</span>
-<span id="cb10-165"><a href="#cb10-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-166"><a href="#cb10-166" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb10-167"><a href="#cb10-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-168"><a href="#cb10-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2.4 — A first real task with data</span></span>
-<span id="cb10-169"><a href="#cb10-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-170"><a href="#cb10-170" aria-hidden="true" tabindex="-1"></a>Now it all comes together. Start a new session and, before you send the prompt, switch the permission mode to **Plan**. In Plan mode the agent proposes but changes nothing until you agree.</span>
-<span id="cb10-171"><a href="#cb10-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-172"><a href="#cb10-172" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb10-173"><a href="#cb10-173" aria-hidden="true" tabindex="-1"></a><span class="in">Using the World Bank's open data (its API, no key needed), get for all</span></span>
-<span id="cb10-174"><a href="#cb10-174" aria-hidden="true" tabindex="-1"></a><span class="in">EU countries for 2023:</span></span>
-<span id="cb10-175"><a href="#cb10-175" aria-hidden="true" tabindex="-1"></a><span class="in">- female labour force participation rate (% of women 15+)</span></span>
-<span id="cb10-176"><a href="#cb10-176" aria-hidden="true" tabindex="-1"></a><span class="in">- GDP per capita, PPP</span></span>
-<span id="cb10-177"><a href="#cb10-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-178"><a href="#cb10-178" aria-hidden="true" tabindex="-1"></a><span class="in">Save the raw download in data/raw, write the code in code/, and make</span></span>
-<span id="cb10-179"><a href="#cb10-179" aria-hidden="true" tabindex="-1"></a><span class="in">one scatter plot (GDP per capita on the x axis, participation on the y axis,</span></span>
-<span id="cb10-180"><a href="#cb10-180" aria-hidden="true" tabindex="-1"></a><span class="in">with country labels) saved in output/. Then write a half-page memo in</span></span>
-<span id="cb10-181"><a href="#cb10-181" aria-hidden="true" tabindex="-1"></a><span class="in">docs/memo.md: what the chart shows, and three caveats.</span></span>
-<span id="cb10-182"><a href="#cb10-182" aria-hidden="true" tabindex="-1"></a><span class="in">Keep the decision log as you go.</span></span>
-<span id="cb10-183"><a href="#cb10-183" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb10-184"><a href="#cb10-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-185"><a href="#cb10-185" aria-hidden="true" tabindex="-1"></a>Read the plan, and say plainly if something looks off. When you are happy, switch back to **Manual** and tell it to go ahead.</span>
-<span id="cb10-186"><a href="#cb10-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-187"><a href="#cb10-187" aria-hidden="true" tabindex="-1"></a>**Then check it. This is your job, not the agent's.**</span>
-<span id="cb10-188"><a href="#cb10-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-189"><a href="#cb10-189" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Open the chart. Are the countries where you expected?</span>
-<span id="cb10-190"><a href="#cb10-190" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Pick **two countries** and look up their numbers on <span class="co">[</span><span class="ot">data.worldbank.org</span><span class="co">](https://data.worldbank.org/)</span>. Do they match the CSV?</span>
-<span id="cb10-191"><a href="#cb10-191" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Read <span class="in">`DECISIONS.md`</span>. Which countries had no 2023 data, and what did the agent do: use another year, drop them, or ask you?</span>
-<span id="cb10-192"><a href="#cb10-192" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Read the memo. Does it say "effect" or "causes"? It shouldn't: a cross-country scatter shows an association.</span>
-<span id="cb10-193"><a href="#cb10-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-194"><a href="#cb10-194" aria-hidden="true" tabindex="-1"></a>If you find a mistake, tell the agent, and add a line to <span class="in">`AGENTS.md`</span> if it could happen again. Finally, ask for the memo as a Word file (Step 2.1).</span>
-<span id="cb10-195"><a href="#cb10-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-196"><a href="#cb10-196" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb10-197"><a href="#cb10-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-198"><a href="#cb10-198" aria-hidden="true" tabindex="-1"></a><span class="fu">## Habits that make it work</span></span>
-<span id="cb10-199"><a href="#cb10-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-200"><a href="#cb10-200" aria-hidden="true" tabindex="-1"></a>None of these is technical.</span>
-<span id="cb10-201"><a href="#cb10-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-202"><a href="#cb10-202" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Plan first.** For anything longer than a few minutes, use Plan mode. Fixing a plan costs a sentence; fixing finished work costs an afternoon.</span>
-<span id="cb10-203"><a href="#cb10-203" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Small steps.** Ask for one thing, check it, then ask for the next. An agent running on a vague task produces plausible-looking work that you then have to read.</span>
-<span id="cb10-204"><a href="#cb10-204" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Check the numbers.** Compare a few values with the source by hand, every time. A smaller result you checked beats a larger one you did not.</span>
-<span id="cb10-205"><a href="#cb10-205" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Never let it delete or overwrite.** Raw data and original documents stay untouched; old files go to <span class="in">`_old/`</span>. Then every mistake can be undone.</span>
-<span id="cb10-206"><a href="#cb10-206" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**One session per task.** Long sessions get muddled. Start a new one for each task; what must carry over goes in <span class="in">`AGENTS.md`</span>, <span class="in">`DECISIONS.md`</span> or a notes file.</span>
-<span id="cb10-207"><a href="#cb10-207" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Ask it to explain.** "Why did you do that?" "What could go wrong here?" You are responsible for the work, so you need to understand it.</span>
-<span id="cb10-208"><a href="#cb10-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-209"><a href="#cb10-209" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb10-210"><a href="#cb10-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-211"><a href="#cb10-211" aria-hidden="true" tabindex="-1"></a><span class="fu">## Troubleshooting</span></span>
-<span id="cb10-212"><a href="#cb10-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-213"><a href="#cb10-213" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Problem <span class="pp">|</span> What to do <span class="pp">|</span></span>
-<span id="cb10-214"><a href="#cb10-214" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
-<span id="cb10-215"><a href="#cb10-215" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Word Compare shows changes everywhere <span class="pp">|</span> The agent probably rebuilt the whole document. Ask it to start again from a fresh copy and change only the text <span class="pp">|</span></span>
-<span id="cb10-216"><a href="#cb10-216" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> The skills don't show up when I type <span class="in">`/`</span> <span class="pp">|</span> Start a new session. Skills load when a session starts <span class="pp">|</span></span>
-<span id="cb10-217"><a href="#cb10-217" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> The agent seems stuck, or keeps doing the wrong thing <span class="pp">|</span> Click stop and say plainly what you want. If the session is long, start a new one <span class="pp">|</span></span>
-<span id="cb10-218"><a href="#cb10-218" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> It made a mess of my files <span class="pp">|</span> Ask: *"List every file you created or changed in this session."* Then ask it to move the unwanted ones to <span class="in">`_old/`</span> <span class="pp">|</span></span>
-<span id="cb10-219"><a href="#cb10-219" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> An error I don't understand <span class="pp">|</span> Paste it in and ask: *"Explain this error simply, then fix it."* <span class="pp">|</span></span>
-<span id="cb10-220"><a href="#cb10-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-221"><a href="#cb10-221" aria-hidden="true" tabindex="-1"></a>More setup problems: <span class="co">[</span><span class="ot">Part 1</span><span class="co">](setup.qmd#troubleshooting)</span>. Unfamiliar terms: the <span class="co">[</span><span class="ot">glossary</span><span class="co">](index.qmd#a-short-glossary)</span> on the course page.</span>
-<span id="cb10-222"><a href="#cb10-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-223"><a href="#cb10-223" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb10-224"><a href="#cb10-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-225"><a href="#cb10-225" aria-hidden="true" tabindex="-1"></a><span class="fu">## What comes next</span></span>
-<span id="cb10-226"><a href="#cb10-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-227"><a href="#cb10-227" aria-hidden="true" tabindex="-1"></a>Part 3 is about staying in charge. Keep the agent in its folder, see what it did, and build checks into the work.</span>
-<span id="cb10-228"><a href="#cb10-228" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-229"><a href="#cb10-229" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb10-230"><a href="#cb10-230" aria-hidden="true" tabindex="-1"></a><span class="fu">## Continue with Part 3</span></span>
-<span id="cb10-231"><a href="#cb10-231" aria-hidden="true" tabindex="-1"></a>**[Part 3 — Staying in Charge →](checking-work.qmd)**</span>
-<span id="cb10-232"><a href="#cb10-232" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
+  </script>
 </div> <!-- /content -->
 
 

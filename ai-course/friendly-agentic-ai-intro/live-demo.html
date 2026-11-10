@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-11-09">
+<meta name="dcterms.date" content="2026-11-10">
 
-<title>Part 4 — Live Demo: How to Write a Paper in One Hour – Doing Data Analysis with AI</title>
+<title>Part 4: A Paper in 50 Minutes – Doing Data Analysis with AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,41 +26,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -112,9 +77,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<link rel="stylesheet" href="friendly.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="nav-sidebar docked nav-fixed friendly quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -158,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/index.html">Friendly Intro to Agentic AI</a></li><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/live-demo.html">Part 4: Live Demo</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/index.html">Friendly Intro to Agentic AI</a></li><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/live-demo.html">Part 4: A Paper in 50 Minutes</a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -203,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../friendly-agentic-ai-intro/live-demo.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Part 4: Live Demo</span></a>
+ <span class="menu-text">Part 4: A Paper in 50 Minutes</span></a>
   </div>
 </li>
       </ul>
@@ -537,15 +503,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-happens-in-this-part" id="toc-what-happens-in-this-part" class="nav-link active" data-scroll-target="#what-happens-in-this-part">What happens in this part?</a></li>
+  <li><a href="#what-is-a-50-minute-paper-worth" id="toc-what-is-a-50-minute-paper-worth" class="nav-link" data-scroll-target="#what-is-a-50-minute-paper-worth">What is a 50-minute paper worth?</a></li>
+  <li><a href="#what-should-you-watch-during-the-demo" id="toc-what-should-you-watch-during-the-demo" class="nav-link" data-scroll-target="#what-should-you-watch-during-the-demo">What should you watch during the demo?</a></li>
+  <li><a href="#your-homework-read-the-project-as-a-referee-would" id="toc-your-homework-read-the-project-as-a-referee-would" class="nav-link" data-scroll-target="#your-homework-read-the-project-as-a-referee-would">Your homework: read the project as a referee would</a></li>
+  <li><a href="#and-then" id="toc-and-then" class="nav-link" data-scroll-target="#and-then">And then?</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content" tabindex="-1">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/index.html">Friendly Intro to Agentic AI</a></li><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/live-demo.html">Part 4: Live Demo</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/index.html">Friendly Intro to Agentic AI</a></li><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/live-demo.html">Part 4: A Paper in 50 Minutes</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Part 4 — Live Demo: How to Write a Paper in One Hour</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<h1 class="title">Part 4: A Paper in 50 Minutes</h1>
 <p class="subtitle lead">Friendly Introduction to Agentic AI for Social Scientists</p>
 </div>
 
@@ -557,7 +533,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 9, 2026</p>
+      <p class="date">November 10, 2026</p>
     </div>
   </div>
   
@@ -571,21 +547,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="hero-section">
 <div class="container">
+<div class="hero-eyebrow">
+<p>Part 4 of 4 · live demo, then homework</p>
+</div>
 <div class="hero-title">
-<p>Part 4 — Live Demo: How to Write a Paper in One Hour</p>
+<p>A Paper in 50 Minutes</p>
 </div>
 <div class="hero-subtitle">
-<p>Coming soon</p>
+<p>One prompt, one short empirical paper and a slide deck. Then your part: study what the agent left behind</p>
 </div>
 </div>
 </div>
-<hr>
-<p>This page is a placeholder. The material for the live demo will be added here.</p>
-<p>This is Part 4 of <a href="../friendly-agentic-ai-intro/index.html">Friendly Introduction to Agentic AI for Social Scientists</a>. Before it, do <a href="../friendly-agentic-ai-intro/setup.html">Part 1 — Setup</a>, <a href="../friendly-agentic-ai-intro/first-steps.html">Part 2 — First Steps</a> and <a href="../friendly-agentic-ai-intro/checking-work.html">Part 3 — Staying in Charge</a>.</p>
+<div class="course-map">
+<p><a href="../friendly-agentic-ai-intro/index.html"><span class="n">⌂</span> Overview</a> <a href="../friendly-agentic-ai-intro/setup.html"><span class="n">1</span> Setup</a> <a href="../friendly-agentic-ai-intro/first-steps.html"><span class="n">2</span> First steps</a> <a href="../friendly-agentic-ai-intro/checking-work.html"><span class="n">3</span> Staying in charge</a> <a href="../friendly-agentic-ai-intro/live-demo.html" class="here"><span class="n">4</span> A paper in 50 minutes</a></p>
+</div>
+<section id="what-happens-in-this-part" class="level2">
+<h2 class="anchored" data-anchor-id="what-happens-in-this-part">What happens in this part?</h2>
+<p>In Parts 1 to 3 we went step by step: one task, one check, then the next task. Here we do the opposite. We give the agent a single prompt, and it runs a whole project, from the question and the data to a short paper and a slide deck. We watch it together, live, for 50 minutes.</p>
+<p>This part has two halves. First we run the demo. Then you take the project folder home and study what the agent produced, piece by piece.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The prompt and the project folder
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We will post both here after the session: the prompt exactly as we gave it, and the complete project folder as the agent left it.</p>
+</div>
+</div>
+</section>
+<section id="what-is-a-50-minute-paper-worth" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-50-minute-paper-worth">What is a 50-minute paper worth?</h2>
+<p>What you will see looks like a paper: a question, data, tables, charts, a conclusion. But it is a first draft, made in under an hour, and nobody has checked it yet. Don’t judge it as a finished paper, and don’t take its results at face value.</p>
+<p>The point of the demo is the process: how far the agent gets on its own, and how much work is left for you before your name could go on the result.</p>
+<p>Note what the agent doesn’t bring, too. The question comes from us. So does the judgment on whether the answer is interesting, and whether it is right.</p>
+</section>
+<section id="what-should-you-watch-during-the-demo" class="level2">
+<h2 class="anchored" data-anchor-id="what-should-you-watch-during-the-demo">What should you watch during the demo?</h2>
+<p>Four things are worth following as the agent works.</p>
+<p><strong>The plan.</strong> Before it touches anything, the agent proposes a plan. Is it the plan you would have made?</p>
+<p><strong>The choices.</strong> Each time the agent picks a sample, a definition or a method, ask yourself whether you would have picked the same.</p>
+<p><strong>The checks.</strong> Does it test its own work, as in Step 3.3? What does it do when a check fails?</p>
+<p><strong>The files.</strong> Follow what gets written where: data, code, outputs, the decision log, the paper.</p>
+</section>
+<section id="your-homework-read-the-project-as-a-referee-would" class="level2">
+<h2 class="anchored" data-anchor-id="your-homework-read-the-project-as-a-referee-would">Your homework: read the project as a referee would</h2>
+<p>Download the project folder and open it in the Code tab, in Manual mode (Step 1.2). Then go through what the agent left behind. We advise this order. Your own agent can help along the way: ask it to explain any file in plain language (Step 3.2).</p>
+<ol type="1">
+<li><strong>The prompt.</strong> Read it again, slowly. What did it specify, and what did it leave open? Everything left open is a choice the agent had to make.</li>
+<li><strong>The paper.</strong> Read it as a referee. Mark three claims you would question.</li>
+<li><strong>The decision log.</strong> Open <code>DECISIONS.md</code>. Which choices were the agent’s own? Which would you have made differently, and could any of them change the main result?</li>
+<li><strong>The code and the checks.</strong> You don’t need to read the code line by line. Read the comment at the top of each script, look at which checks were run, and ask your agent to explain one script.</li>
+<li><strong>The slide deck.</strong> Compare it with the paper. Does it make the same claims, with the same numbers?</li>
+<li><strong>The skills and the instructions.</strong> Look at <code>AGENTS.md</code> and the skills the agent used. Which rules shaped the work? Which would you copy into your own project?</li>
+<li><strong>One number, traced back.</strong> Pick one number from the abstract. Find it in a table, then in the script that made the table, then in the raw data.</li>
+</ol>
+<div class="check">
+<p><strong>You are done when</strong> you can write half a page, as a referee would: what the paper claims, what you checked, and what would have to change before you put your name on it.</p>
+</div>
+</section>
+<section id="and-then" class="level2">
+<h2 class="anchored" data-anchor-id="and-then">And then?</h2>
+<p>Try it on your own question. Take the prompt, replace the topic with one from your field, and run it in a new project folder. Use what you learned in Part 3: Manual mode, read-only raw data, checks agreed in advance, and a review in a fresh session.</p>
+<p>The first attempt won’t be a paper you can submit. But you will see, on a question you know well, what the agent does well and where it needs you.</p>
+<p>For more to read and watch, see the <a href="../friendly-agentic-ai-intro/index.html#useful-links">useful links</a> in the overview.</p>
+<div class="next-part">
+<p><a href="../friendly-agentic-ai-intro/index.html">Back to the overview →</a></p>
+</div>
 
 
-<!-- -->
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -658,57 +692,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
-        for (let i=0; i<cellDetails.length; i++) {
-          const details = cellDetails[i];
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -1114,31 +1097,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
   <script type="application/javascript">
   window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Part 4 — Live Demo: How to Write a Paper in One Hour"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Friendly Introduction to Agentic AI for Social Scientists"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-11-09"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>::::::: {.hero-section}</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>:::::: {.container}</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>::: {.hero-title}</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Part 4 — Live Demo: How to Write a Paper in One Hour</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Coming soon</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>::::::</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>:::::::</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>This page is a placeholder. The material for the live demo will be added here.</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>This is Part 4 of <span class="co">[</span><span class="ot">Friendly Introduction to Agentic AI for Social Scientists</span><span class="co">](index.qmd)</span>. Before it, do <span class="co">[</span><span class="ot">Part 1 — Setup</span><span class="co">](setup.qmd)</span>, <span class="co">[</span><span class="ot">Part 2 — First Steps</span><span class="co">](first-steps.qmd)</span> and <span class="co">[</span><span class="ot">Part 3 — Staying in Charge</span><span class="co">](checking-work.qmd)</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
+  </script>
 </div> <!-- /content -->
 
 

@@ -763,21 +763,81 @@
   {
     "objectID": "friendly-agentic-ai-intro/live-demo.html",
     "href": "friendly-agentic-ai-intro/live-demo.html",
-    "title": "Part 4 — Live Demo: How to Write a Paper in One Hour",
+    "title": "Part 4: A Paper in 50 Minutes",
     "section": "",
-    "text": "Part 4 — Live Demo: How to Write a Paper in One Hour\n\n\nComing soon\n\n\n\n\nThis page is a placeholder. The material for the live demo will be added here.\nThis is Part 4 of Friendly Introduction to Agentic AI for Social Scientists. Before it, do Part 1 — Setup, Part 2 — First Steps and Part 3 — Staying in Charge.",
+    "text": "Part 4 of 4 · live demo, then homework\n\n\nA Paper in 50 Minutes\n\n\nOne prompt, one short empirical paper and a slide deck. Then your part: study what the agent left behind",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
-      "Part 4: Live Demo"
+      "Part 4: A Paper in 50 Minutes"
+    ]
+  },
+  {
+    "objectID": "friendly-agentic-ai-intro/live-demo.html#what-happens-in-this-part",
+    "href": "friendly-agentic-ai-intro/live-demo.html#what-happens-in-this-part",
+    "title": "Part 4: A Paper in 50 Minutes",
+    "section": "What happens in this part?",
+    "text": "What happens in this part?\nIn Parts 1 to 3 we went step by step: one task, one check, then the next task. Here we do the opposite. We give the agent a single prompt, and it runs a whole project, from the question and the data to a short paper and a slide deck. We watch it together, live, for 50 minutes.\nThis part has two halves. First we run the demo. Then you take the project folder home and study what the agent produced, piece by piece.\n\n\n\n\n\n\nNoteThe prompt and the project folder\n\n\n\nWe will post both here after the session: the prompt exactly as we gave it, and the complete project folder as the agent left it.",
+    "crumbs": [
+      "Home",
+      "Friendly Intro to Agentic AI",
+      "Part 4: A Paper in 50 Minutes"
+    ]
+  },
+  {
+    "objectID": "friendly-agentic-ai-intro/live-demo.html#what-is-a-50-minute-paper-worth",
+    "href": "friendly-agentic-ai-intro/live-demo.html#what-is-a-50-minute-paper-worth",
+    "title": "Part 4: A Paper in 50 Minutes",
+    "section": "What is a 50-minute paper worth?",
+    "text": "What is a 50-minute paper worth?\nWhat you will see looks like a paper: a question, data, tables, charts, a conclusion. But it is a first draft, made in under an hour, and nobody has checked it yet. Don’t judge it as a finished paper, and don’t take its results at face value.\nThe point of the demo is the process: how far the agent gets on its own, and how much work is left for you before your name could go on the result.\nNote what the agent doesn’t bring, too. The question comes from us. So does the judgment on whether the answer is interesting, and whether it is right.",
+    "crumbs": [
+      "Home",
+      "Friendly Intro to Agentic AI",
+      "Part 4: A Paper in 50 Minutes"
+    ]
+  },
+  {
+    "objectID": "friendly-agentic-ai-intro/live-demo.html#what-should-you-watch-during-the-demo",
+    "href": "friendly-agentic-ai-intro/live-demo.html#what-should-you-watch-during-the-demo",
+    "title": "Part 4: A Paper in 50 Minutes",
+    "section": "What should you watch during the demo?",
+    "text": "What should you watch during the demo?\nFour things are worth following as the agent works.\nThe plan. Before it touches anything, the agent proposes a plan. Is it the plan you would have made?\nThe choices. Each time the agent picks a sample, a definition or a method, ask yourself whether you would have picked the same.\nThe checks. Does it test its own work, as in Step 3.3? What does it do when a check fails?\nThe files. Follow what gets written where: data, code, outputs, the decision log, the paper.",
+    "crumbs": [
+      "Home",
+      "Friendly Intro to Agentic AI",
+      "Part 4: A Paper in 50 Minutes"
+    ]
+  },
+  {
+    "objectID": "friendly-agentic-ai-intro/live-demo.html#your-homework-read-the-project-as-a-referee-would",
+    "href": "friendly-agentic-ai-intro/live-demo.html#your-homework-read-the-project-as-a-referee-would",
+    "title": "Part 4: A Paper in 50 Minutes",
+    "section": "Your homework: read the project as a referee would",
+    "text": "Your homework: read the project as a referee would\nDownload the project folder and open it in the Code tab, in Manual mode (Step 1.2). Then go through what the agent left behind. We advise this order. Your own agent can help along the way: ask it to explain any file in plain language (Step 3.2).\n\nThe prompt. Read it again, slowly. What did it specify, and what did it leave open? Everything left open is a choice the agent had to make.\nThe paper. Read it as a referee. Mark three claims you would question.\nThe decision log. Open DECISIONS.md. Which choices were the agent’s own? Which would you have made differently, and could any of them change the main result?\nThe code and the checks. You don’t need to read the code line by line. Read the comment at the top of each script, look at which checks were run, and ask your agent to explain one script.\nThe slide deck. Compare it with the paper. Does it make the same claims, with the same numbers?\nThe skills and the instructions. Look at AGENTS.md and the skills the agent used. Which rules shaped the work? Which would you copy into your own project?\nOne number, traced back. Pick one number from the abstract. Find it in a table, then in the script that made the table, then in the raw data.\n\n\nYou are done when you can write half a page, as a referee would: what the paper claims, what you checked, and what would have to change before you put your name on it.",
+    "crumbs": [
+      "Home",
+      "Friendly Intro to Agentic AI",
+      "Part 4: A Paper in 50 Minutes"
+    ]
+  },
+  {
+    "objectID": "friendly-agentic-ai-intro/live-demo.html#and-then",
+    "href": "friendly-agentic-ai-intro/live-demo.html#and-then",
+    "title": "Part 4: A Paper in 50 Minutes",
+    "section": "And then?",
+    "text": "And then?\nTry it on your own question. Take the prompt, replace the topic with one from your field, and run it in a new project folder. Use what you learned in Part 3: Manual mode, read-only raw data, checks agreed in advance, and a review in a fresh session.\nThe first attempt won’t be a paper you can submit. But you will see, on a question you know well, what the agent does well and where it needs you.\nFor more to read and watch, see the useful links in the overview.\n\nBack to the overview →",
+    "crumbs": [
+      "Home",
+      "Friendly Intro to Agentic AI",
+      "Part 4: A Paper in 50 Minutes"
     ]
   },
   {
     "objectID": "friendly-agentic-ai-intro/first-steps.html",
     "href": "friendly-agentic-ai-intro/first-steps.html",
-    "title": "Part 2 — First Steps",
+    "title": "Part 2: First Steps",
     "section": "",
-    "text": "Part 2 — First Steps\n\n\nPut the agent to work on your Word drafts, a PDF you know well, and a small analysis whose numbers you check yourself",
+    "text": "Part 2 of 4 · about an hour\n\n\nFirst Steps\n\n\nPut the agent to work on what you know: a Word draft, a pile of readings, and a small dataset whose numbers you check yourself",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -785,11 +845,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/first-steps.html#before-you-start",
-    "href": "friendly-agentic-ai-intro/first-steps.html#before-you-start",
-    "title": "Part 2 — First Steps",
-    "section": "Before you start",
-    "text": "Before you start\nThis is Part 2 of Friendly Introduction to Agentic AI for Social Scientists. It assumes you have finished Part 1 — Setup: the app works, first-project is open in the Code tab in Manual mode, Python is set up, and Typora opens .md files.\nIt takes about an hour.\n\n\n\n\n\n\nNoteWhat you will have at the end\n\n\n\n\nA routine for working on Word documents, with every change visible as a tracked change\nAn AGENTS.md file with standing instructions for the agent\nTwo skills: one to log analytical decisions, one to read PDFs reliably\nOne small, real analysis, with numbers you checked yourself",
+    "objectID": "friendly-agentic-ai-intro/first-steps.html#what-do-we-do-in-this-part",
+    "href": "friendly-agentic-ai-intro/first-steps.html#what-do-we-do-in-this-part",
+    "title": "Part 2: First Steps",
+    "section": "What do we do in this part?",
+    "text": "What do we do in this part?\nIn this part the agent works on three things from your everyday work: a draft in Word, a handful of papers in PDF, and a small public dataset. There is a reason for this choice. You can judge the agent’s work only where you know the answer. On a draft you wrote and on papers you have read, you will see at once what is useful, what is generic and what is wrong.\nBetween the first and the second task, we give the agent two things that make it more reliable: standing instructions, and two skills.\nWe assume you have finished Part 1: the app works, first-project is open in the Code tab in Manual mode, Python is set up, and Typora opens .md files.\n\n\n\n\n\n\nNoteWhat you will have at the end\n\n\n\n\nA routine for working on Word documents, with every change visible as a tracked change\nAn AGENTS.md file with standing instructions for the agent\nTwo skills: one to log analytical decisions, one to read PDFs reliably\nA table of readings, with quotes you verified on the page\nOne small analysis, with numbers you checked yourself",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -797,11 +857,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/first-steps.html#step-2.1-working-on-word-documents",
-    "href": "friendly-agentic-ai-intro/first-steps.html#step-2.1-working-on-word-documents",
-    "title": "Part 2 — First Steps",
-    "section": "Step 2.1 — Working on Word documents",
-    "text": "Step 2.1 — Working on Word documents\nMost of your writing, and your coauthors’, lives in Word. The agent can read, comment on, edit and create Word files. The routine below keeps you in control: the agent never touches your original, and you see each change as a tracked change in Word.\nGet ready. Copy a Word document you know well (a draft, a proposal, a referee report) into a docs/ subfolder. Pick one that is not confidential.\n\nAsk for comments, not changes\nThe safest start: nothing is edited.\nRead docs/draft.docx. Do not change it.\nGive me the ten most important comments on the argument, structure and\nclarity, most important first. For each, say which section or paragraph\nit refers to. Save the list as docs/draft_comments.md.\nOpen the list in Typora. Some comments will be useful, some generic, a few wrong. That mix tells you a lot about how to use the agent.\n\n\nAsk for edits, then review them as tracked changes\nMake a copy of docs/draft.docx called docs/draft_v2.docx. In the copy only:\nfix grammar and typos, and split sentences longer than 40 words.\nDo not change the argument, the citations or the numbers.\nKeep all formatting, footnotes and comments.\nWhen done, list the kinds of changes you made.\nThen let Word show what changed:\n\nIn desktop Word (the browser version cannot compare), go to the Review tab, click Compare, then Compare… (Windows) or Compare Documents (Mac).\nAs Original document, choose draft.docx. As Revised document, choose draft_v2.docx.\nWord opens a new document with each change as a tracked change. Accept or reject them as you would a coauthor’s.\n\nThere is nothing new to learn, and it shows any change you did not ask for.\n\n\nWrite in Markdown, finish in Word\nFor new text (a memo, a section, a report), draft and revise in Markdown with the agent, and convert to Word at the end. The agent works best in plain text, and its changes are easier to follow there.\nConvert docs/memo.md to docs/memo.docx.\nUse docs/my-template.docx for the styles (fonts, headings, margins).\nFor my-template.docx, use any Word file whose look you like (your university template, a past paper). The agent copies its styles, not its text.\n\n\nMargin comments\nYou can also ask: “Put your comments as Word comments in the margin of docs/draft_v2.docx.” This usually works. If the result looks odd, use the list in Markdown instead.",
+    "objectID": "friendly-agentic-ai-intro/first-steps.html#step-2-1",
+    "href": "friendly-agentic-ai-intro/first-steps.html#step-2-1",
+    "title": "Part 2: First Steps",
+    "section": "2.1 Work on a Word document",
+    "text": "2.1 Work on a Word document\nMost of your writing, and your coauthors’, lives in Word. The agent can read, comment on, edit and create Word files. The routine below keeps you in control: the agent never touches your original, and you see each change as a tracked change in Word.\nTo get ready, copy a Word document you know well (a draft, a proposal, a referee report) into a docs/ subfolder. Pick one that is not confidential.\n\nAsk for comments, not changes\nThis is the safest start, because nothing is edited.\n\nRead docs/draft.docx. Do not change it.\nGive me the ten most important comments on the argument, structure and clarity, most important first. For each, say which section or paragraph it refers to. Save the list as docs/draft_comments.md.\n\nOpen the list in Typora. Some comments will be useful, some generic, and a few wrong. That mix tells you a lot about how to use the agent.\n\n\nAsk for edits, then review them as tracked changes\n\nMake a copy of docs/draft.docx called docs/draft_v2.docx. In the copy only: fix grammar and typos, and split sentences longer than 40 words.\nDo not change the argument, the citations or the numbers. Keep all formatting, footnotes and comments.\nWhen done, list the kinds of changes you made.\n\nThen let Word show what changed.\n\nIn desktop Word (the browser version can’t compare), go to the Review tab, click Compare, then Compare… (Windows) or Compare Documents (Mac).\nAs Original document, choose draft.docx. As Revised document, choose draft_v2.docx.\nWord opens a new document with each change as a tracked change. Accept or reject them as you would a coauthor’s.\n\nThis is the Word review you already use. Also, the comparison shows every change, including the ones you didn’t ask for.\n\n\nWrite in Markdown, finish in Word\nFor new text (a memo, a section, a report), we advise drafting and revising in Markdown with the agent, and converting to Word at the end. The agent works best in plain text, and its changes are easier to follow there.\n\nConvert docs/memo.md to docs/memo.docx. Use docs/my-template.docx for the styles (fonts, headings, margins).\n\nFor my-template.docx, use any Word file whose look you like, such as your university template or a past paper. The agent copies its styles, not its text.\n\n\nComments in the margin\nYou can also ask: “Put your comments as Word comments in the margin of docs/draft_v2.docx.” This usually works. If the result looks odd, use the list in Markdown instead.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -809,11 +869,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/first-steps.html#step-2.2-give-the-agent-standing-instructions-agents.md",
-    "href": "friendly-agentic-ai-intro/first-steps.html#step-2.2-give-the-agent-standing-instructions-agents.md",
-    "title": "Part 2 — First Steps",
-    "section": "Step 2.2 — Give the agent standing instructions: AGENTS.md",
-    "text": "Step 2.2 — Give the agent standing instructions: AGENTS.md\nEach session starts from zero: the agent does not remember yesterday. So write down once what it should always know: who you are, how you work, what it must never do. This file, AGENTS.md, sits in the project folder, and the agent reads it at the start of every session.\nWe prepared a starter file based on how we work with agents. Ask the agent to fetch it and create the folders:\nDownload this file exactly (use a download command, do not retype it) and\nsave it as AGENTS.md in this folder:\nhttps://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/AGENTS.md\n\nThen create the folders it describes (data/raw, data/clean, code, output, docs)\nand summarize the instructions for me in five bullet points.\nThen open AGENTS.md in Typora and edit the “About me” section. It is your file.\n\n\n\n\n\n\nNoteWhat is in the starter AGENTS.md (click to open)\n\n\n\n\n\n# Instructions for the AI agent in this project\n\nThe agent reads this file at the start of every session. Edit it freely.\nWhen the agent makes the same mistake twice, add a line here.\n\n## About me\n\n- I am a social scientist (EDIT: field, e.g. sociology, political science, economics).\n- I have used AI as a chatbot, mostly for text. I have not written code before.\n- Explain what you do in plain language. The first time you use a technical term,\n  give a one-line definition.\n- Use Python for code, unless I ask for R or Stata.\n\n## How to work with me\n\n- For any task with more than a few steps, first show me a short plan and wait for my OK.\n- Do the smallest thing that answers my request. Ask before adding extras.\n- Work in small steps. Stop at natural break points and tell me what you did and what is left.\n- If my request is unclear, ask one question rather than guessing.\n- When you finish, say what you did not do or could not check.\n\n## Safety with my files\n\n- Never delete files. If something should go, move it to `_old/` and tell me.\n- Never change anything in `data/raw/`. Raw data stays as it arrived.\n- Never overwrite a Word, Excel or PDF file I gave you. Save your changes as a new\n  file with `_v2` (or the next number) at the end of the name.\n- Install Python packages only inside this project's environment (`.venv`).\n  Ask before installing anything for the whole computer.\n- Do not upload my files or data to any website or online service.\n\n## Data and numbers\n\n- Never make up numbers, references, quotes or sources. If you cannot verify something, say so.\n- When you report a number, say where it comes from (which file, which script, which web page).\n- Check your own results: count rows before and after each step, and compare a few\n  values by hand with the source.\n- Log analytical choices in `DECISIONS.md` (see the `decision-log` skill).\n\n## Folders and files\n\n- `data/raw/` original data, never edited\n- `data/clean/` cleaned data, produced by code\n- `code/` scripts, numbered in the order they run: `01_get_data.py`, `02_clean.py`, ...\n- `output/` figures (PNG) and tables\n- `docs/` notes, memos and drafts. Write new text in Markdown (`.md`);\n  convert to Word only when I ask.\n- Every result must be reproducible: running the scripts in order rebuilds all outputs.\n\n## Writing\n\n- Plain, direct prose. Short sentences. No hype words (delve, crucial, landscape,\n  comprehensive, shed light on).\n- Say what the data shows, then the caveats. Talk about associations, not effects,\n  unless the design allows a causal reading.\n\n## PDFs\n\n- To read a PDF, first extract its text to a `.txt` file, then work from the text\n  (see the `read-pdf` skill).\n\n\n\nIn short, it says: plan before longer tasks; do the smallest thing that answers the request; never delete (move files to _old/); never overwrite raw data or your Word files; never invent numbers or references; say where each number comes from; check results by hand; log analytical decisions.\nGrow the file slowly. When the agent makes the same mistake twice, add one line. After a month it will fit how you work better than any template.",
+    "objectID": "friendly-agentic-ai-intro/first-steps.html#step-2-2",
+    "href": "friendly-agentic-ai-intro/first-steps.html#step-2-2",
+    "title": "Part 2: First Steps",
+    "section": "2.2 Give the agent standing instructions: AGENTS.md",
+    "text": "2.2 Give the agent standing instructions: AGENTS.md\nEach session starts from zero: the agent doesn’t remember yesterday. So it is good practice to write down once what it should always know: who you are, how you work, and what it must never do. This file is called AGENTS.md. It sits in the project folder, and the agent reads it at the start of every session.\nWe prepared a starter file based on how we work with agents. Ask the agent to fetch it and to create the folders:\n\nDownload this file exactly (use a download command, do not retype it) and save it as AGENTS.md in this folder:\nhttps://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/AGENTS.md\n\nThen create the folders it describes (data/raw, data/clean, code, output, docs) and summarize the instructions for me in five bullet points.\n\nThen open AGENTS.md in Typora and edit the “About me” section. It is your file.\n\n\n\n\n\n\nNoteWhat is in the starter AGENTS.md (click to open)\n\n\n\n\n\n# Instructions for the AI agent in this project\n\nThe agent reads this file at the start of every session. Edit it freely.\nWhen the agent makes the same mistake twice, add a line here.\n\n## About me\n\n- I am a social scientist (EDIT: field, e.g. sociology, political science, economics).\n- I have used AI as a chatbot, mostly for text. I have not written code before.\n- Explain what you do in plain language. The first time you use a technical term,\n  give a one-line definition.\n- Use Python for code, unless I ask for R or Stata.\n\n## How to work with me\n\n- For any task with more than a few steps, first show me a short plan and wait for my OK.\n- Do the smallest thing that answers my request. Ask before adding extras.\n- Work in small steps. Stop at natural break points and tell me what you did and what is left.\n- If my request is unclear, ask one question rather than guessing.\n- When you finish, say what you did not do or could not check.\n\n## Safety with my files\n\n- Never delete files. If something should go, move it to `_old/` and tell me.\n- Never change anything in `data/raw/`. Raw data stays as it arrived.\n- Never overwrite a Word, Excel or PDF file I gave you. Save your changes as a new\n  file with `_v2` (or the next number) at the end of the name.\n- Install Python packages only inside this project's environment (`.venv`).\n  Ask before installing anything for the whole computer.\n- Do not upload my files or data to any website or online service.\n\n## Data and numbers\n\n- Never make up numbers, references, quotes or sources. If you cannot verify something, say so.\n- When you report a number, say where it comes from (which file, which script, which web page).\n- Check your own results: count rows before and after each step, and compare a few\n  values by hand with the source.\n- Log analytical choices in `DECISIONS.md` (see the `decision-log` skill).\n\n## Folders and files\n\n- `data/raw/` original data, never edited\n- `data/clean/` cleaned data, produced by code\n- `code/` scripts, numbered in the order they run: `01_get_data.py`, `02_clean.py`, ...\n- `output/` figures (PNG) and tables\n- `docs/` notes, memos and drafts. Write new text in Markdown (`.md`);\n  convert to Word only when I ask.\n- Every result must be reproducible: running the scripts in order rebuilds all outputs.\n\n## Writing\n\n- Plain, direct prose. Short sentences. No hype words (delve, crucial, landscape,\n  comprehensive, shed light on).\n- Say what the data shows, then the caveats. Talk about associations, not effects,\n  unless the design allows a causal reading.\n\n## PDFs\n\n- To read a PDF, first extract its text to a `.txt` file, then work from the text\n  (see the `read-pdf` skill).\n\n\n\nWhat does it say? Plan before longer tasks. Do the smallest thing that answers the request. Never delete: move files to _old/. Never overwrite raw data or your Word files. Never invent numbers or references, and say where each number comes from. Check results by hand. Log analytical decisions.\nGrow the file slowly. When the agent makes the same mistake twice, add one line. After a month it will fit how you work better than any template.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -821,11 +881,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/first-steps.html#step-2.3-add-two-skills",
-    "href": "friendly-agentic-ai-intro/first-steps.html#step-2.3-add-two-skills",
-    "title": "Part 2 — First Steps",
-    "section": "Step 2.3 — Add two skills",
-    "text": "Step 2.3 — Add two skills\nA skill is a recipe for one type of task: a Markdown file called SKILL.md in its own folder. The agent uses a skill when the task matches its description, or when you type / and its name.\nTwo to start with:\n\ndecision-log records every analytical choice in DECISIONS.md: dropped observations, variable definitions, methods. For each, it notes the alternatives and the basis (evidence, convention, your instruction, or just a default). Read it before you trust the results.\nread-pdf makes the agent extract a PDF’s text to a .txt file first and work from that, citing page numbers. This prevents the most common PDF failure: answering from a partly read document without saying so.\n\n\n\n\n\n\n\nNoteThe decision-log skill (click to open)\n\n\n\n\n\n---\nname: decision-log\ndescription: Keep a DECISIONS.md log of the analytical choices made during data work (which observations to keep, how a variable is defined, which method, which chart), so the researcher can review the reasoning before trusting results. Use whenever cleaning data, building a sample, defining variables, choosing a method or designing a table or figure, even if the user does not mention it. Also use when the user asks \"what did you decide?\" or \"review the decisions\".\n---\n\n# Decision log\n\nEvery result rests on judgment calls the reader never sees. The researcher needs to\ncheck those calls *before* looking at results. This skill keeps them in one file,\n`DECISIONS.md` in the project folder, written as the decisions are made.\n\n## What to log\n\nLog a decision when a reasonable analyst could have chosen differently AND the choice\ncould change the results or how we read them. Examples:\n\n- dropping observations (missing values, outliers, small groups, a year or a country)\n- defining a variable (what counts as \"employed\", income in levels or logs, which year's prices)\n- merging tables (which key, what to do with rows that do not match)\n- choosing a method (mean or median, which regression, which controls)\n- designing an exhibit (what goes in the main chart, what is left out)\n\nDo not log mechanical steps with no real alternative, or formatting.\n\n## Format\n\nCreate `DECISIONS.md` on first use. Keep a summary table on top and a short entry for each\ndecision below it. Number entries D1, D2, ... and never renumber or delete them.\n\n```markdown\n# Decision log\n\n| ID | Date | Decision | Basis | Status |\n|----|------|----------|-------|--------|\n| D1 | 2026-11-06 | Drop respondents younger than 18 | user | decided |\n\n## D1 - Drop respondents younger than 18\n- **Decision point:** The survey includes 16-17 year olds; the question is about adult voters.\n- **Chosen:** Keep age 18 and above (drops 412 of 9,870 rows).\n- **Alternatives:** keep all (rejected: they cannot vote); keep 16+ (only where voting age is 16).\n- **Basis:** user instruction, 2026-11-06.\n- **Affects:** all tables and figures. Easy to reverse.\n```\n\nThe **Basis** field matters most. Be honest about it:\n\n- `evidence` a check was run (name the file or the numbers)\n- `convention` common practice in the field (name the source)\n- `user` the researcher asked for it (give the date)\n- `default` chosen for convenience, not tested. This label is the most useful one for the\n  reviewer, because it shows where to look first.\n\n**Status** is `decided`, `provisional` (to make progress, revisit later) or `needs-review`.\n\n## How to work\n\n1. Write the entry when the decision is made, not at the end.\n2. If a decision drops a lot of data, changes the main finding, or is hard to undo,\n   mark it `needs-review` and tell the user in plain words before going on.\n3. If a decision is reversed, add a new entry and mark the old one `superseded by Dn`.\n4. When the user asks to review the log, list first the `default` and `provisional`\n   decisions that many results depend on.\n\n\n\n\n\n\n\n\n\nNoteThe read-pdf skill (click to open)\n\n\n\n\n\n---\nname: read-pdf\ndescription: Read a PDF (paper, report, book chapter, questionnaire, codebook) reliably by first extracting its text into a .txt file and then working from that text. Use whenever the user asks to read, summarize, quote, compare or extract information or tables from a PDF.\n---\n\n# Read a PDF: text first\n\nReading a PDF directly is unreliable: long files get cut, columns get mixed up, and the\nagent may answer from a partial view without saying so. So we always extract the text\nfirst, save it, and work from the saved text.\n\n## Steps\n\n1. **Extract the text.** Use the Python package `pymupdf` in this project's environment\n   (install it with the project's package manager if missing). Save the text next to the\n   PDF with the same name and a `.txt` ending, for example `paper.pdf` -&gt; `paper.txt`.\n   Mark each page with a line like `=== page 7 ===` so page numbers can be cited.\n2. **Check the extraction.** Report the number of pages and the number of characters.\n   If a page has almost no text (under ~200 characters), it is probably a scanned image.\n   For those pages, render them to PNG (150 dpi is enough) and read the images.\n   Tell the user which pages were read as images.\n3. **Work from the `.txt` file**, not the PDF. For long documents (more than ~40 pages),\n   read it section by section rather than all at once.\n4. **Cite page numbers** for every claim, number or quote taken from the document.\n   Quote exactly; never paraphrase inside quotation marks.\n5. **Tables:** when the user needs a table, copy it into a CSV in `data/raw/` and then\n   check three numbers from the CSV against the page image.\n\n## What to tell the user at the end\n\n- what was extracted (pages, characters, any pages read as images)\n- where the `.txt` file is\n- anything that could not be read well (garbled tables, formulas, footnotes)\n\n\n\nInstall them with this prompt:\nDownload these two files exactly (use a download command, do not retype them):\nhttps://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/skills/decision-log/SKILL.md\nhttps://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/skills/read-pdf/SKILL.md\n\nSave them as .claude/skills/decision-log/SKILL.md and\n.claude/skills/read-pdf/SKILL.md inside this project folder.\nThen tell me in two sentences what each skill does.\nFolders starting with a dot, like .claude, are hidden by default, so you may not see it in Explorer or Finder. Start a new session (+ or New session) and type /: both skills should show up.\nTry the PDF skill on a paper you know well: “Use the read-pdf skill on [file name]. What is the research question, the data, the main result? Give page numbers.” Check one page number yourself. Then ask “What are the three weakest points of this paper?” and judge the answer as a referee would.",
+    "objectID": "friendly-agentic-ai-intro/first-steps.html#step-2-3",
+    "href": "friendly-agentic-ai-intro/first-steps.html#step-2-3",
+    "title": "Part 2: First Steps",
+    "section": "2.3 Add two skills",
+    "text": "2.3 Add two skills\nA skill is a recipe for one type of task: a Markdown file called SKILL.md in its own folder. The agent uses a skill when the task matches its description, or when you type / and its name.\nWe start with two.\ndecision-log records every analytical choice in a file called DECISIONS.md: dropped observations, variable definitions, methods. For each choice it notes the alternatives and the basis: evidence, convention, your instruction, or just a default. Read this file before you trust the results.\nread-pdf makes the agent extract a PDF’s text to a .txt file first and work from that, with page numbers. This prevents the most common failure with PDFs: answering from a partly read document without saying so.\n\n\n\n\n\n\nNoteThe decision-log skill (click to open)\n\n\n\n\n\n---\nname: decision-log\ndescription: Keep a DECISIONS.md log of the analytical choices made during data work (which observations to keep, how a variable is defined, which method, which chart), so the researcher can review the reasoning before trusting results. Use whenever cleaning data, building a sample, defining variables, choosing a method or designing a table or figure, even if the user does not mention it. Also use when the user asks \"what did you decide?\" or \"review the decisions\".\n---\n\n# Decision log\n\nEvery result rests on judgment calls the reader never sees. The researcher needs to\ncheck those calls *before* looking at results. This skill keeps them in one file,\n`DECISIONS.md` in the project folder, written as the decisions are made.\n\n## What to log\n\nLog a decision when a reasonable analyst could have chosen differently AND the choice\ncould change the results or how we read them. Examples:\n\n- dropping observations (missing values, outliers, small groups, a year or a country)\n- defining a variable (what counts as \"employed\", income in levels or logs, which year's prices)\n- merging tables (which key, what to do with rows that do not match)\n- choosing a method (mean or median, which regression, which controls)\n- designing an exhibit (what goes in the main chart, what is left out)\n\nDo not log mechanical steps with no real alternative, or formatting.\n\n## Format\n\nCreate `DECISIONS.md` on first use. Keep a summary table on top and a short entry for each\ndecision below it. Number entries D1, D2, ... and never renumber or delete them.\n\n```markdown\n# Decision log\n\n| ID | Date | Decision | Basis | Status |\n|----|------|----------|-------|--------|\n| D1 | 2026-11-06 | Drop respondents younger than 18 | user | decided |\n\n## D1 - Drop respondents younger than 18\n- **Decision point:** The survey includes 16-17 year olds; the question is about adult voters.\n- **Chosen:** Keep age 18 and above (drops 412 of 9,870 rows).\n- **Alternatives:** keep all (rejected: they cannot vote); keep 16+ (only where voting age is 16).\n- **Basis:** user instruction, 2026-11-06.\n- **Affects:** all tables and figures. Easy to reverse.\n```\n\nThe **Basis** field matters most. Be honest about it:\n\n- `evidence` a check was run (name the file or the numbers)\n- `convention` common practice in the field (name the source)\n- `user` the researcher asked for it (give the date)\n- `default` chosen for convenience, not tested. This label is the most useful one for the\n  reviewer, because it shows where to look first.\n\n**Status** is `decided`, `provisional` (to make progress, revisit later) or `needs-review`.\n\n## How to work\n\n1. Write the entry when the decision is made, not at the end.\n2. If a decision drops a lot of data, changes the main finding, or is hard to undo,\n   mark it `needs-review` and tell the user in plain words before going on.\n3. If a decision is reversed, add a new entry and mark the old one `superseded by Dn`.\n4. When the user asks to review the log, list first the `default` and `provisional`\n   decisions that many results depend on.\n\n\n\n\n\n\n\n\n\nNoteThe read-pdf skill (click to open)\n\n\n\n\n\n---\nname: read-pdf\ndescription: Read a PDF (paper, report, book chapter, questionnaire, codebook) reliably by first extracting its text into a .txt file and then working from that text. Use whenever the user asks to read, summarize, quote, compare or extract information or tables from a PDF.\n---\n\n# Read a PDF: text first\n\nReading a PDF directly is unreliable: long files get cut, columns get mixed up, and the\nagent may answer from a partial view without saying so. So we always extract the text\nfirst, save it, and work from the saved text.\n\n## Steps\n\n1. **Extract the text.** Use the Python package `pymupdf` in this project's environment\n   (install it with the project's package manager if missing). Save the text next to the\n   PDF with the same name and a `.txt` ending, for example `paper.pdf` -&gt; `paper.txt`.\n   Mark each page with a line like `=== page 7 ===` so page numbers can be cited.\n2. **Check the extraction.** Report the number of pages and the number of characters.\n   If a page has almost no text (under ~200 characters), it is probably a scanned image.\n   For those pages, render them to PNG (150 dpi is enough) and read the images.\n   Tell the user which pages were read as images.\n3. **Work from the `.txt` file**, not the PDF. For long documents (more than ~40 pages),\n   read it section by section rather than all at once.\n4. **Cite page numbers** for every claim, number or quote taken from the document.\n   Quote exactly; never paraphrase inside quotation marks.\n5. **Tables:** when the user needs a table, copy it into a CSV in `data/raw/` and then\n   check three numbers from the CSV against the page image.\n\n## What to tell the user at the end\n\n- what was extracted (pages, characters, any pages read as images)\n- where the `.txt` file is\n- anything that could not be read well (garbled tables, formulas, footnotes)\n\n\n\nInstall them with this prompt:\n\nDownload these two files exactly (use a download command, do not retype them):\nhttps://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/skills/decision-log/SKILL.md\nhttps://raw.githubusercontent.com/gabors-data-analysis/da-w-ai/main/friendly-agentic-ai-intro/starter/skills/read-pdf/SKILL.md\n\nSave them as .claude/skills/decision-log/SKILL.md and .claude/skills/read-pdf/SKILL.md inside this project folder. Then tell me in two sentences what each skill does.\n\nFolders starting with a dot, like .claude, are hidden by default, so you may not see it in Explorer or Finder.\n\nIt worked if you start a new session (+ or New session), type /, and both skills show up in the list.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -833,11 +893,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/first-steps.html#step-2.4-a-first-real-task-with-data",
-    "href": "friendly-agentic-ai-intro/first-steps.html#step-2.4-a-first-real-task-with-data",
-    "title": "Part 2 — First Steps",
-    "section": "Step 2.4 — A first real task with data",
-    "text": "Step 2.4 — A first real task with data\nNow it all comes together. Start a new session and, before you send the prompt, switch the permission mode to Plan. In Plan mode the agent proposes but changes nothing until you agree.\nUsing the World Bank's open data (its API, no key needed), get for all\nEU countries for 2023:\n- female labour force participation rate (% of women 15+)\n- GDP per capita, PPP\n\nSave the raw download in data/raw, write the code in code/, and make\none scatter plot (GDP per capita on the x axis, participation on the y axis,\nwith country labels) saved in output/. Then write a half-page memo in\ndocs/memo.md: what the chart shows, and three caveats.\nKeep the decision log as you go.\nRead the plan, and say plainly if something looks off. When you are happy, switch back to Manual and tell it to go ahead.\nThen check it. This is your job, not the agent’s.\n\nOpen the chart. Are the countries where you expected?\nPick two countries and look up their numbers on data.worldbank.org. Do they match the CSV?\nRead DECISIONS.md. Which countries had no 2023 data, and what did the agent do: use another year, drop them, or ask you?\nRead the memo. Does it say “effect” or “causes”? It shouldn’t: a cross-country scatter shows an association.\n\nIf you find a mistake, tell the agent, and add a line to AGENTS.md if it could happen again. Finally, ask for the memo as a Word file (Step 2.1).",
+    "objectID": "friendly-agentic-ai-intro/first-steps.html#step-2-4",
+    "href": "friendly-agentic-ai-intro/first-steps.html#step-2-4",
+    "title": "Part 2: First Steps",
+    "section": "2.4 Read a pile of papers",
+    "text": "2.4 Read a pile of papers\nEvery project starts with reading, and reading is where a chatbot was already of some help. The agent adds two things. It works through a whole folder of papers in one go, and it leaves behind a table that you can check, line by line.\nTo get ready, make a folder docs/readings/ and copy five to ten PDFs into it. Choose papers you know well. Start a new session and send:\n\nUse the read-pdf skill on every PDF in docs/readings/.\nThen make a table with one row per paper: authors and year, research question, data or material, method, main finding. For each item, give the page number where you found it.\nFor each paper, add one sentence quoted word for word that states the main finding, with its page number.\nIf a paper does not state something, write \"not stated\". Do not guess, and do not use what you know about the paper from elsewhere.\nSave the table as docs/readings.md.\n\nThen check it. Open docs/readings.md in Typora and do three things.\n\nPick two papers. Open each PDF at the page given, and search for the quoted sentence (Ctrl+F, or Cmd+F on a Mac). Is it there, word for word?\nRead the row of the paper you know best. Is this how you would summarize it to a colleague?\nLook at one “not stated”. Is it really not in the paper?\n\nWhy the fuss about quotes? Summarizing is what these models do best, and the table will look convincing. The typical mistake is a different one: a paraphrase presented as a quote, or a finding that comes from the model’s general knowledge and not from the file. A page number and a word-for-word quote make both mistakes easy to catch. In a published paper, a quote that doesn’t exist is the kind of error that readers remember.\nNow ask a question across the papers: “Which of these papers disagree with each other, and on what? Give page numbers.” Judge the answer as you would judge a memo from a research assistant.\n\n\n\n\n\n\nTipInterviews, field notes, open-ended answers\n\n\n\nThe same routine works on your own qualitative material: transcripts, field notes, open-ended survey answers. Ask for themes, each with word-for-word quotes, the file name and the line. But note that such material is usually confidential. Check your consent forms and your data agreement before any of it goes into the folder (Step 1.2).",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -845,11 +905,23 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/first-steps.html#habits-that-make-it-work",
-    "href": "friendly-agentic-ai-intro/first-steps.html#habits-that-make-it-work",
-    "title": "Part 2 — First Steps",
-    "section": "Habits that make it work",
-    "text": "Habits that make it work\nNone of these is technical.\n\nPlan first. For anything longer than a few minutes, use Plan mode. Fixing a plan costs a sentence; fixing finished work costs an afternoon.\nSmall steps. Ask for one thing, check it, then ask for the next. An agent running on a vague task produces plausible-looking work that you then have to read.\nCheck the numbers. Compare a few values with the source by hand, every time. A smaller result you checked beats a larger one you did not.\nNever let it delete or overwrite. Raw data and original documents stay untouched; old files go to _old/. Then every mistake can be undone.\nOne session per task. Long sessions get muddled. Start a new one for each task; what must carry over goes in AGENTS.md, DECISIONS.md or a notes file.\nAsk it to explain. “Why did you do that?” “What could go wrong here?” You are responsible for the work, so you need to understand it.",
+    "objectID": "friendly-agentic-ai-intro/first-steps.html#step-2-5",
+    "href": "friendly-agentic-ai-intro/first-steps.html#step-2-5",
+    "title": "Part 2: First Steps",
+    "section": "2.5 Do a first task with data",
+    "text": "2.5 Do a first task with data\nNow it all comes together. Our question is simple: in EU countries where more women work, do women also hold more seats in parliament?\nStart a new session and, before you send the prompt, switch the permission mode to Plan. In Plan mode the agent proposes but changes nothing until you agree.\n\nUsing the World Bank's open data (its API, no key needed), get for all EU countries for 2023:\n- the share of seats held by women in the national parliament (%)\n- the female labor force participation rate (% of women aged 15 and over)\n\nSave the raw download in data/raw, write the code in code/, and make one scatter plot (participation on the x axis, seats in parliament on the y axis, with country labels) saved in output/.\nThen write a half-page memo in docs/memo.md: what the chart shows, and three caveats.\nKeep the decision log as you go.\n\nRead the plan, and say plainly if something looks off. When you are happy with it, switch back to Manual and tell the agent to go ahead.\nThen check it. This is your job, not the agent’s.\n\nOpen the chart. Are the countries where you expected them to be?\nPick two countries and look up their numbers on data.worldbank.org. Do they match the CSV file in data/raw?\nRead DECISIONS.md. The World Bank has more than one measure of labor force participation. Which one did the agent pick, and did it tell you? Which countries had no 2023 data, and what did it do about them?\nRead the memo. Does it say “effect” or “causes”? It shouldn’t. A scatter plot of 27 countries shows an association.\n\nIf you find a mistake, tell the agent, and add a line to AGENTS.md if it could happen again. Finally, ask for the memo as a Word file (Step 2.1).\nNote what happened in check 3. The agent made a choice that you didn’t know existed. Nothing is wrong with that, as long as the choice is written down and you read it.",
+    "crumbs": [
+      "Home",
+      "Friendly Intro to Agentic AI",
+      "Part 2: First Steps"
+    ]
+  },
+  {
+    "objectID": "friendly-agentic-ai-intro/first-steps.html#what-habits-make-it-work",
+    "href": "friendly-agentic-ai-intro/first-steps.html#what-habits-make-it-work",
+    "title": "Part 2: First Steps",
+    "section": "What habits make it work?",
+    "text": "What habits make it work?\nThese habits are not technical. They are what you would ask of a careful research assistant, and of yourself.\n\n\n\n\n\n\nNoteSix habits\n\n\n\n\nPlan first. For anything longer than a few minutes, use Plan mode. It is much cheaper to fix a plan than to fix finished work.\nSmall steps. Ask for one thing, check it, then ask for the next. An agent running on a vague task produces plausible-looking work that you then have to read.\nCheck against the source. Compare a few numbers and a few quotes with the source by hand, every time.\nNever let it delete or overwrite. Raw data and original documents stay untouched, and old files go to _old/. Then every mistake can be undone.\nOne session per task. Long sessions get muddled. Start a new one for each task. What must carry over goes in AGENTS.md, DECISIONS.md or a notes file.\nAsk it to explain. “Why did you do that?” “What could go wrong here?” You are responsible for the work, so you need to understand it.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -859,9 +931,9 @@
   {
     "objectID": "friendly-agentic-ai-intro/first-steps.html#troubleshooting",
     "href": "friendly-agentic-ai-intro/first-steps.html#troubleshooting",
-    "title": "Part 2 — First Steps",
+    "title": "Part 2: First Steps",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\n\n\n\n\n\n\n\nProblem\nWhat to do\n\n\n\n\nWord Compare shows changes everywhere\nThe agent probably rebuilt the whole document. Ask it to start again from a fresh copy and change only the text\n\n\nThe skills don’t show up when I type /\nStart a new session. Skills load when a session starts\n\n\nThe agent seems stuck, or keeps doing the wrong thing\nClick stop and say plainly what you want. If the session is long, start a new one\n\n\nIt made a mess of my files\nAsk: “List every file you created or changed in this session.” Then ask it to move the unwanted ones to _old/\n\n\nAn error I don’t understand\nPaste it in and ask: “Explain this error simply, then fix it.”\n\n\n\nMore setup problems: Part 1. Unfamiliar terms: the glossary on the course page.",
+    "text": "Troubleshooting\n\n\n\n\n\n\n\nProblem\nWhat to do\n\n\n\n\nWord Compare shows changes everywhere\nThe agent probably rebuilt the whole document. Ask it to start again from a fresh copy and change only the text\n\n\nThe skills don’t show up when I type /\nStart a new session. Skills load when a session starts\n\n\nA PDF comes out as nonsense, or nearly empty\nIt is probably a scan. Tell the agent, and the read-pdf skill reads those pages as images. Check such papers with extra care\n\n\nThe agent seems stuck, or keeps doing the wrong thing\nClick stop and say plainly what you want. If the session is long, start a new one\n\n\nIt made a mess of my files\nAsk: “List every file you created or changed in this session.” Then ask it to move the unwanted ones to _old/\n\n\nAn error I don’t understand\nPaste it in and ask: “Explain this error simply, then fix it.”\n\n\n\nMore setup problems: Part 1. Unfamiliar terms: the glossary in the overview.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -871,9 +943,9 @@
   {
     "objectID": "friendly-agentic-ai-intro/first-steps.html#what-comes-next",
     "href": "friendly-agentic-ai-intro/first-steps.html#what-comes-next",
-    "title": "Part 2 — First Steps",
-    "section": "What comes next",
-    "text": "What comes next\nPart 3 is about staying in charge. Keep the agent in its folder, see what it did, and build checks into the work.\n\n\n\n\n\n\nTipContinue with Part 3\n\n\n\nPart 3 — Staying in Charge →",
+    "title": "Part 2: First Steps",
+    "section": "What comes next?",
+    "text": "What comes next?\nYou now have an agent that has worked on your text, your readings and a dataset. You have also seen it make choices you didn’t ask for. Part 3 is about that: how to set its limits, see what it did, and build the checks into the work.\n\nContinue with Part 3: Staying in Charge →",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7335,21 +7407,9 @@
   {
     "objectID": "friendly-agentic-ai-intro/checking-work.html",
     "href": "friendly-agentic-ai-intro/checking-work.html",
-    "title": "Part 3 — Staying in Charge",
+    "title": "Part 3: Staying in Charge",
     "section": "",
-    "text": "Part 3 — Staying in Charge\n\n\nTrust, verification and control: set the agent’s limits, see what it did, and stand behind work you did not do with your own hands",
-    "crumbs": [
-      "Home",
-      "Friendly Intro to Agentic AI",
-      "Part 3: Staying in Charge"
-    ]
-  },
-  {
-    "objectID": "friendly-agentic-ai-intro/checking-work.html#before-you-start",
-    "href": "friendly-agentic-ai-intro/checking-work.html#before-you-start",
-    "title": "Part 3 — Staying in Charge",
-    "section": "Before you start",
-    "text": "Before you start\nThis is Part 3 of Friendly Introduction to Agentic AI for Social Scientists. It assumes you have finished Part 1 and Part 2: a project folder with AGENTS.md, the decision-log skill and a first analysis.\nIt takes about an hour, best done on the World Bank task from Step 2.4.\n\n\n\n\n\n\nNoteWhat you will have at the end\n\n\n\n\nA clear picture of what the agent can and cannot touch on your computer\nRaw data that is read-only by file setting, not only by instruction\nThree ways to see what the agent did: its scripts, its changes, and every step it took\nChecks written into the code, with a pass/fail table after each run\nA routine for having the work reviewed by a fresh session\nA few new lines in your AGENTS.md",
+    "text": "Part 3 of 4 · about an hour\n\n\nStaying in Charge\n\n\nTrust, verification and control: set the agent’s limits, see what it did, and stand behind work you didn’t do with your own hands",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7359,9 +7419,9 @@
   {
     "objectID": "friendly-agentic-ai-intro/checking-work.html#who-is-in-charge-here",
     "href": "friendly-agentic-ai-intro/checking-work.html#who-is-in-charge-here",
-    "title": "Part 3 — Staying in Charge",
+    "title": "Part 3: Staying in Charge",
     "section": "Who is in charge here?",
-    "text": "Who is in charge here?\nAfter the first real task, almost everyone has the same worries. They deserve a serious answer.\n\nControl. It does things on my computer. What stops it from touching files it should not?\nVisibility. It works behind the scenes. How do I see what it actually did, the code included?\nJudgment. It makes choices along the way. Which ones did it make without asking me?\nTrust. Its results look convincing. How can I put my name on them?\n\nBehind these sits a bigger unease: if the agent does the work, where is my part? Is this the robots taking over, one folder at a time?\nNo, but not automatically. An agent is a tool that acts, and a tool that acts needs supervision, like a research assistant. That supervision is your part: you set the limits, decide what must be true before you accept a result, read what it did, and decide what goes out under your name. It needs no coding, only the habits of a careful researcher.\nThe four steps below answer the four worries: limits (3.1), visibility (3.2), checks and decisions (3.3) and independent review (3.4).",
+    "text": "Who is in charge here?\nAfter the first real task, almost everyone has the same four worries. They deserve a serious answer.\n\nControl. It does things on my computer. What stops it from touching files it shouldn’t?\nVisibility. It works behind the scenes. How do I see what it actually did, the code included?\nJudgment. It makes choices along the way. Which ones did it make without asking me?\nTrust. Its results look convincing. How can I put my name on them?\n\nBehind these sits a bigger unease. If the agent does the work, where is my part?\nYour part is supervision. An agent is a tool that acts, and a tool that acts needs supervision, just as a research assistant does. You set the limits, decide what must be true before you accept a result, read what it did, and decide what goes out under your name. This needs no coding, only the habits of a careful researcher.\nThe four steps below answer the four worries: limits (3.1), visibility (3.2), checks and decisions (3.3) and independent review (3.4).\nWe assume you have finished Part 1 and Part 2: a project folder with AGENTS.md, two skills, a table of readings and a first analysis. This part takes about an hour, and it is best done on the World Bank task of Step 2.5.\n\n\n\n\n\n\nNoteWhat you will have at the end\n\n\n\n\nA clear picture of what the agent can and can’t touch on your computer\nRaw data that is read-only by file setting, not only by instruction\nThree ways to see what the agent did: its scripts, its changes, and every step it took\nChecks written into the code, with a pass or fail table after each run\nA routine for having the work reviewed by a fresh session\nA few new lines in your AGENTS.md",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7369,11 +7429,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/checking-work.html#step-3.1-keep-the-agent-in-its-folder",
-    "href": "friendly-agentic-ai-intro/checking-work.html#step-3.1-keep-the-agent-in-its-folder",
-    "title": "Part 3 — Staying in Charge",
-    "section": "Step 3.1 — Keep the agent in its folder",
-    "text": "Step 3.1 — Keep the agent in its folder\nFiles: the folder is a boundary. In Manual mode, the agent asks before it reads or changes any file outside the project folder.\nCommands: the one gap. To run code, the agent runs commands, and an approved command can reach anything you can. The safeguard is you: in Manual mode, every command waits for your OK.\nFour habits close the gap:\n\nRead the paths before you approve a command. A folder outside your project (C:\\Users\\you\\Desktop, ~/Documents/other-project, an unfamiliar drive)? Click no and ask: “Why do you need to go outside the project folder?”\nKnow the expected exceptions. Installing Python (Step 1.4) puts tools in your user folder, and downloading data (Step 2.4) reaches the web. The agent tells you before it does either.\nWork on copies, and lock the raw data. Put copies in the project folder and keep the originals where they are. Make the raw data read-only (box below). Then even a bad mistake costs nothing.\nPut it in AGENTS.md, under “Safety with my files”:\n\n- Work only inside this project folder. If a step needs anything outside it,\n  stop, tell me what and why, and wait for my OK.\n\n\n\n\n\n\nImportantRaw data is read-only. Always.\n\n\n\nYour AGENTS.md tells the agent never to change data/raw/. But an instruction can be misread or forgotten in a long session; a file setting cannot. So make the raw files read-only. Ask the agent:\nMake every file in data/raw read-only. Then try to write to one of them,\nshow me that it fails, and tell me how I could undo the setting.\nOr do it by hand. Windows: right-click the file → Properties → tick Read-only. Mac: select the file → File → Get Info → tick Locked.\nTo overwrite raw data, the agent would now first have to change the setting. That takes a command, and in Manual mode a command waits for your OK.\n\n\n\n\n\n\n\n\nNoteFor the technically curious: the sandbox (click to open)\n\n\n\n\n\nOn Mac and Linux, Claude Code can also enforce the folder boundary through the operating system, so even an approved command cannot write outside the project. This sandbox is off by default and does not run on Windows directly. You do not need it here; see the sandboxing documentation if you are curious.",
+    "objectID": "friendly-agentic-ai-intro/checking-work.html#step-3-1",
+    "href": "friendly-agentic-ai-intro/checking-work.html#step-3-1",
+    "title": "Part 3: Staying in Charge",
+    "section": "3.1 Keep the agent in its folder",
+    "text": "3.1 Keep the agent in its folder\nThe folder is a boundary. In Manual mode, the agent asks before it reads or changes any file outside the project folder.\nCommands are the one gap. To run code, the agent runs commands, and an approved command can reach anything you can. Here the safeguard is you: in Manual mode, every command waits for your OK.\nFour habits close the gap.\n\nRead the paths before you approve a command. Do you see a folder outside your project, such as C:\\Users\\you\\Desktop, ~/Documents/other-project, or an unfamiliar drive? Click no and ask: “Why do you need to go outside the project folder?”\nKnow the expected exceptions. Installing Python (Step 1.4) puts tools in your user folder, and downloading data (Step 2.5) reaches the web. The agent tells you before it does either.\nWork on copies, and lock the raw data. Put copies in the project folder and keep the originals where they are. Make the raw data read-only (see the box below). Then even a bad mistake costs nothing.\nPut it in AGENTS.md, under “Safety with my files”:\n\n- Work only inside this project folder. If a step needs anything outside it, stop, tell me what and why, and wait for my OK.\n\n\n\n\n\n\nImportantRaw data is read-only. Always.\n\n\n\nYour AGENTS.md tells the agent never to change data/raw/. But an instruction can be misread or forgotten in a long session, and a file setting cannot. So make the raw files read-only. Ask the agent:\n\nMake every file in data/raw read-only. Then try to write to one of them, show me that it fails, and tell me how I could undo the setting.\n\nOr do it by hand. Windows: right-click the file → Properties → tick Read-only. Mac: select the file → File → Get Info → tick Locked.\nTo overwrite raw data, the agent would now first have to change the setting. That takes a command, and in Manual mode a command waits for your OK.\nThe same holds for raw material that is not numbers: interview transcripts, scanned documents, the PDFs of your readings.\n\n\n\n\n\n\n\n\nNoteFor the technically curious: the sandbox (click to open)\n\n\n\n\n\nOn Mac and Linux, Claude Code can also enforce the folder boundary through the operating system, so even an approved command can’t write outside the project. This sandbox is off by default and doesn’t run on Windows directly. You don’t need it here. See the sandboxing documentation if you are curious.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7381,11 +7441,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/checking-work.html#step-3.2-see-what-it-did",
-    "href": "friendly-agentic-ai-intro/checking-work.html#step-3.2-see-what-it-did",
-    "title": "Part 3 — Staying in Charge",
-    "section": "Step 3.2 — See what it did",
-    "text": "Step 3.2 — See what it did\nThe agent does not have to work behind the scenes. Use all three windows into its work.\n1. The scripts. Every data step should live in a script in code/, which you can read and rerun. Your AGENTS.md already asks for numbered scripts. Add two lines to close the loopholes:\n- Do every step that reads, changes or creates data in a script in code/,\n  never as a one-off command, so that I can read and rerun it.\n- Start each script with a short comment in plain language: what it reads,\n  what it does, and what it writes.\nYou do not need to read Python. Click a script in the chat to open it, and ask: “Explain code/02_clean.py paragraph by paragraph, in plain language, for a colleague who does not code.” Then ask about anything that sounds like a choice: “Why drop those rows? What else could you have done?”\n2. The changes. After the agent edits files, a Changes card shows line counts such as +12 -1. Click it for the diff view: each changed file, with removed lines in red and added lines in green. To comment on a line, hover over it, click the + next to the line number, and type. Send all comments with Ctrl+Enter (Windows) or Cmd+Enter (Mac), and the agent revises.\n3. The steps. The conversation normally shows each action as a short summary. To see every file read and every command run, switch the Transcript view to Verbose: press Ctrl+O to cycle through the views, or use the menu next to the session title. This helps when something surprises you.",
+    "objectID": "friendly-agentic-ai-intro/checking-work.html#step-3-2",
+    "href": "friendly-agentic-ai-intro/checking-work.html#step-3-2",
+    "title": "Part 3: Staying in Charge",
+    "section": "3.2 See what it did",
+    "text": "3.2 See what it did\nThe agent doesn’t have to work behind the scenes. There are three windows into its work, and we advise using all three.\nThe scripts. Every data step should live in a script in code/, which you can read and rerun. Your AGENTS.md already asks for numbered scripts. Add two lines to close the loopholes:\n- Do every step that reads, changes or creates data in a script in code/, never as a one-off command, so that I can read and rerun it.\n- Start each script with a short comment in plain language: what it reads, what it does, and what it writes.\nYou don’t need to read Python. Click a script in the chat to open it, and ask: “Explain code/02_clean.py paragraph by paragraph, in plain language, for a colleague who doesn’t code.” Then ask about anything that sounds like a choice: “Why drop those rows? What else could you have done?”\nThe changes. After the agent edits files, a Changes card shows line counts such as +12 -1. Click it for the diff view: each changed file, with removed lines in red and added lines in green. It is the tracked changes of Step 2.1, for any file. To comment on a line, hover over it, click the + next to the line number, and type. Send all comments with Ctrl+Enter (Windows) or Cmd+Enter (Mac), and the agent revises.\nThe steps. The conversation normally shows each action as a short summary. To see every file read and every command run, switch the Transcript view to Verbose: press Ctrl+O to cycle through the views, or use the menu next to the session title. This helps when something surprises you.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7393,11 +7453,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/checking-work.html#step-3.3-decide-the-checks-before-the-work",
-    "href": "friendly-agentic-ai-intro/checking-work.html#step-3.3-decide-the-checks-before-the-work",
-    "title": "Part 3 — Staying in Charge",
-    "section": "Step 3.3 — Decide the checks before the work",
-    "text": "Step 3.3 — Decide the checks before the work\nSave the code, plan checks in advance, or hear only about problems? All three, in this order.\nBefore the work: agree on what must be true. In Plan mode, ask the agent to propose checks for each step. For social science data, the usual ones are:\n\nthe number of observations after each step (respondents, countries, years);\nno duplicate IDs where there should be one row per person or country-year;\nafter a merge: how many rows matched, and how many did not, from each side;\nvalues in a plausible range (age 18–99, shares between 0 and 100);\nmissing values per key variable;\ntotals that should match a published table.\n\nAdd your own; you know the data. A good research assistant runs these checks anyway. Here they become explicit.\nDuring the work: checks go into the code, so they run every time. After each run, the agent saves a short table with a pass or fail for each check.\nAfter the work: report by exception. There are two kinds of exception. A failed check means stop and tell me. Any choice you did not specify goes into DECISIONS.md, marked needs-review; this is what the decision-log skill from Step 2.3 does.\nThe prompt, for the start of a task, in Plan mode:\nBefore you start, propose the checks that should hold after each step:\nrow counts, duplicate IDs, matches in merges, value ranges, missing values.\nWait for my OK on the list.\nThen put the checks in the code, so they run every time. After each run,\nsave a short table of all checks with pass/fail in output/checks.md.\nIf a check fails, stop and tell me.\nAny choice I did not specify goes into DECISIONS.md, marked needs-review.\nTry it on the World Bank task: in a new session, ask the agent to add checks to the existing scripts.\n\n\n\n\n\n\nWarningReport by exception is not enough on its own\n\n\n\n“No problems found” only means the agreed checks passed. Keep the hand check from Step 2.4: compare two or three numbers with the source yourself. It takes five minutes, and it is the one check that does not depend on the agent.",
+    "objectID": "friendly-agentic-ai-intro/checking-work.html#step-3-3",
+    "href": "friendly-agentic-ai-intro/checking-work.html#step-3-3",
+    "title": "Part 3: Staying in Charge",
+    "section": "3.3 Decide the checks before the work",
+    "text": "3.3 Decide the checks before the work\nShould we save the code, plan the checks in advance, or hear only about problems? All three, in this order.\nBefore the work: agree on what must be true. In Plan mode, ask the agent to propose checks for each step. For social science data, the usual ones are:\n\nthe number of observations after each step (respondents, countries, years);\nno duplicate IDs where there should be one row per person or country-year;\nafter a merge: how many rows matched, and how many didn’t, from each side;\nvalues in a plausible range (age 18 to 99, shares between 0 and 100);\nmissing values per key variable;\ntotals that should match a published table.\n\nFor work with text, the checks are different but the idea is the same:\n\nevery quote is found word for word in its source, at the page given;\nevery reference is a file in the folder, or has a DOI that opens;\nevery number in the text matches the table it comes from.\n\nAdd your own. You know the data and the literature. A good research assistant runs such checks anyway. Here they become explicit.\nDuring the work: the checks go into the code, so they run every time. After each run, the agent saves a short table with a pass or a fail for each check.\nAfter the work: report by exception. There are two kinds of exception. A failed check means stop and tell me. Any choice you didn’t specify goes into DECISIONS.md, marked needs-review. This is what the decision-log skill of Step 2.3 does.\nHere is the prompt, for the start of a task, in Plan mode:\n\nBefore you start, propose the checks that should hold after each step: row counts, duplicate IDs, matches in merges, value ranges, missing values. Wait for my OK on the list.\nThen put the checks in the code, so they run every time. After each run, save a short table of all checks with pass/fail in output/checks.md.\nIf a check fails, stop and tell me.\nAny choice I did not specify goes into DECISIONS.md, marked needs-review.\n\nTry it on the World Bank task: in a new session, ask the agent to add checks to the existing scripts.\n\n\n\n\n\n\nWarningReport by exception is not enough on its own\n\n\n\n“No problems found” only means that the agreed checks passed. Keep the hand checks of Part 2: compare two or three numbers with the source yourself (Step 2.5), and find two quotes on the page (Step 2.4). It takes five minutes, and it is the one check that doesn’t depend on the agent.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7405,11 +7465,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/checking-work.html#step-3.4-a-second-pair-of-eyes",
-    "href": "friendly-agentic-ai-intro/checking-work.html#step-3.4-a-second-pair-of-eyes",
-    "title": "Part 3 — Staying in Charge",
-    "section": "Step 3.4 — A second pair of eyes",
-    "text": "Step 3.4 — A second pair of eyes\nThe session that did the work is not its best judge: it remembers its own reasoning and tends to defend it. A new session has no such history and reads the files as a coauthor would.\nWhen a piece of work is done, start a new session and send:\nYou are reviewing work that someone else did in this folder.\nRead AGENTS.md, DECISIONS.md and the scripts in code/.\nRerun all scripts from scratch, in order. Do the outputs match the ones\nalready saved? Then list anything that looks wrong, untested or\nundocumented, most serious first. Do not change any files.\nRead the review like a referee report: some points matter, some are noise. Take the serious ones back to the agent, one at a time, each in a new session.",
+    "objectID": "friendly-agentic-ai-intro/checking-work.html#step-3-4",
+    "href": "friendly-agentic-ai-intro/checking-work.html#step-3-4",
+    "title": "Part 3: Staying in Charge",
+    "section": "3.4 Get a second pair of eyes",
+    "text": "3.4 Get a second pair of eyes\nThe session that did the work is not its best judge. It remembers its own reasoning and tends to defend it. A new session has no such history, and it reads the files as a coauthor would.\nWhen a piece of work is done, start a new session and send:\n\nYou are reviewing work that someone else did in this folder.\nRead AGENTS.md, DECISIONS.md and the scripts in code/.\nRerun all scripts from scratch, in order. Do the outputs match the ones already saved?\nThen list anything that looks wrong, untested or undocumented, most serious first. Do not change any files.\n\nFor a text, ask the reviewer to check every quote and every reference against the files in the folder, and every number against the tables.\nRead the review as you would read a referee report: some points matter, some are noise. Take the serious ones back to the agent, one at a time, each in a new session.\nAll this takes time. But it is your name on the paper, not the agent’s, and a wrong number or an invented quote found by a reader costs far more than an hour of checking.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7419,9 +7479,9 @@
   {
     "objectID": "friendly-agentic-ai-intro/checking-work.html#worth-the-setup-version-control",
     "href": "friendly-agentic-ai-intro/checking-work.html#worth-the-setup-version-control",
-    "title": "Part 3 — Staying in Charge",
-    "section": "Worth the setup: version control",
-    "text": "Worth the setup: version control\nThe steps above need no extra tools. Once you use the agent regularly, one more is worth setting up: version control, usually Git with GitHub. Git keeps a history of your project folder: each commit saves a snapshot of every file with a one-line note on what changed. GitHub keeps a private copy of that history online.\nIt adds two things. First, you see what changed across sessions and days, line by line, not only within one session. Second, every mistake can be undone by going back to the last version that worked, which makes it cheap to let the agent try things.\nThe price is about an hour of setup and one habit: commit after each step that works. The agent does most of the typing, and GitHub Desktop shows the history without the terminal. Setup and daily use: Version control with Git and GitHub.\n\n\n\n\n\n\nTipLet the agent run Git, with you deciding each step\n\n\n\nOnce Git is set up, you can run it entirely through the agent. You read and decide; it types.\n1. Review before you commit. Ask for a summary first, and commit only when it matches what you wanted:\nSummarize, in plain language, what changed since the last commit:\nwhich files, and what changed in each. Propose a one-line commit message.\nDo not commit yet.\nIf the summary lists something you did not ask for, ask about it before you go on.\n2. Commit and push. When the summary is right:\nCommit with that message, then push to GitHub.\n3. Undo. If a step turns out wrong, even days later:\nRevert the last commit, keeping the history. First tell me what this\nwill undo, and wait for my OK.\nA revert adds a new commit that undoes an old one, so the record of what happened stays complete. This fits the AGENTS.md rule below: never rewrite or delete Git history.\nYou can also ask about the past: “What changed since Monday, and why?”",
+    "title": "Part 3: Staying in Charge",
+    "section": "Is version control worth the setup?",
+    "text": "Is version control worth the setup?\nThe steps above need no extra tools. Once you use the agent regularly, one more tool is worth setting up: version control, usually Git with GitHub. Git keeps a history of your project folder: each commit saves a snapshot of every file, with a one-line note on what changed. GitHub keeps a private copy of that history online.\nIt adds two things. First, you see what changed across sessions and days, line by line, not only within one session. Second, every mistake can be undone by going back to the last version that worked. This makes it cheap to let the agent try things.\nThe price is about an hour of setup and one habit: commit after each step that works. The agent does most of the typing, and GitHub Desktop shows the history without the terminal. For setup and daily use, see Version control with Git and GitHub.\n\n\n\n\n\n\nTipLet the agent run Git, with you deciding each step\n\n\n\nOnce Git is set up, you can run it entirely through the agent. You read and decide, and the agent does the typing.\n1. Review before you commit. Ask for a summary first, and commit only when it matches what you wanted:\n\nSummarize, in plain language, what changed since the last commit: which files, and what changed in each. Propose a one-line commit message. Do not commit yet.\n\nIf the summary lists something you didn’t ask for, ask about it before you go on.\n2. Commit and push. When the summary is right:\n\nCommit with that message, then push to GitHub.\n\n3. Undo. If a step turns out wrong, even days later:\n\nRevert the last commit, keeping the history. First tell me what this will undo, and wait for my OK.\n\nA revert adds a new commit that undoes an old one, so the record of what happened stays complete. This fits the AGENTS.md rule below: never rewrite or delete Git history.\nYou can also ask about the past: “What changed since Monday, and why?”",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7431,9 +7491,9 @@
   {
     "objectID": "friendly-agentic-ai-intro/checking-work.html#the-new-lines-for-agents.md-in-one-place",
     "href": "friendly-agentic-ai-intro/checking-work.html#the-new-lines-for-agents.md-in-one-place",
-    "title": "Part 3 — Staying in Charge",
+    "title": "Part 3: Staying in Charge",
     "section": "The new lines for AGENTS.md, in one place",
-    "text": "The new lines for AGENTS.md, in one place\nCopy these into your AGENTS.md, or ask the agent to add them:\n## Checking\n\n- Work only inside this project folder. If a step needs anything outside it,\n  stop, tell me what and why, and wait for my OK.\n- Do every step that reads, changes or creates data in a script in code/,\n  never as a one-off command, so that I can read and rerun it.\n- Start each script with a short comment in plain language: what it reads,\n  what it does, and what it writes.\n- Put checks in the code (row counts, duplicate IDs, merge matches, value\n  ranges, missing values). After each run, save all checks with pass/fail\n  in output/checks.md. If a check fails, stop and tell me.\n- Any choice I did not specify goes into DECISIONS.md, marked needs-review.\nIf you set up Git, add two more:\n- Commit only when I ask. Never push to GitHub without asking.\n- Never rewrite or delete Git history.",
+    "text": "The new lines for AGENTS.md, in one place\nCopy these into your AGENTS.md, or ask the agent to add them:\n## Checking\n\n- Work only inside this project folder. If a step needs anything outside it, stop, tell me what and why, and wait for my OK.\n- Do every step that reads, changes or creates data in a script in code/, never as a one-off command, so that I can read and rerun it.\n- Start each script with a short comment in plain language: what it reads, what it does, and what it writes.\n- Put checks in the code (row counts, duplicate IDs, merge matches, value ranges, missing values). After each run, save all checks with pass/fail in output/checks.md. If a check fails, stop and tell me.\n- Any choice I did not specify goes into DECISIONS.md, marked needs-review.\n- Every quote must be word for word from a file in this folder, with the file name and page. Every reference must be a file in this folder or have a DOI.\nIf you set up Git, add two more:\n- Commit only when I ask. Never push to GitHub without asking.\n- Never rewrite or delete Git history.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7443,9 +7503,9 @@
   {
     "objectID": "friendly-agentic-ai-intro/checking-work.html#what-comes-next",
     "href": "friendly-agentic-ai-intro/checking-work.html#what-comes-next",
-    "title": "Part 3 — Staying in Charge",
-    "section": "What comes next",
-    "text": "What comes next\nPart 4 is a live demo: how to write a paper in one hour.\n\n\n\n\n\n\nTipContinue with Part 4\n\n\n\nPart 4 — Live Demo →",
+    "title": "Part 3: Staying in Charge",
+    "section": "What comes next?",
+    "text": "What comes next?\nSo far we went step by step, one task at a time. In Part 4 we do the opposite: we give the agent a single prompt and watch a whole paper come out. What you practiced in this part is what makes such a paper checkable.\n\nContinue with Part 4: A Paper in 50 Minutes →",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7457,7 +7517,7 @@
     "href": "friendly-agentic-ai-intro/index.html",
     "title": "Friendly Introduction to Agentic AI for Social Scientists",
     "section": "",
-    "text": "Friendly Introduction to Agentic AI for Social Scientists\n\n\nYou have used ChatGPT or Claude in a browser, mostly for text. This mini course takes you, step by step, to an AI agent that works with the files on your computer: your data, your PDFs, your Word drafts",
+    "text": "A mini course in four parts\n\n\nFriendly Introduction to Agentic AI for Social Scientists\n\n\nFrom a chatbot that polishes your text to an AI agent that works with your files: your readings, your Word drafts, your data",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7465,11 +7525,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/index.html#who-this-course-is-for",
-    "href": "friendly-agentic-ai-intro/index.html#who-this-course-is-for",
+    "objectID": "friendly-agentic-ai-intro/index.html#who-is-this-course-for",
+    "href": "friendly-agentic-ai-intro/index.html#who-is-this-course-for",
     "title": "Friendly Introduction to Agentic AI for Social Scientists",
-    "section": "Who this course is for",
-    "text": "Who this course is for\nSocial scientists who have used AI as a chatbot, mostly for text, and have never used Python or R. Seniority and field do not matter.\nTwo reactions are common.\n“This is for programmers.” It is not. You will not type a single command. You give instructions in plain language, as you would to a research assistant. Even Python is installed by the agent, which explains each step first.\n“I don’t need this.” Maybe so. This course does not argue the point. It lets you find out on your own material, for the cost of an afternoon and one month of subscription. You stay the author: nothing changes without your approval.\nWe use one tool: Claude Code, in the Claude desktop app, on Windows, Mac or Linux. Similar agents exist, and what you learn carries over. While learning, one tool is enough.",
+    "section": "Who is this course for?",
+    "text": "Who is this course for?\nYou are a social scientist: a sociologist, a political scientist, an anthropologist, an economist. You have used ChatGPT or Claude in a browser, mostly to improve a text or as a better search engine. You haven’t used it for the actual work of your field, and you may never have written a line of code. This course is for you. Seniority doesn’t matter.\nWe hear two reactions from colleagues.\n“This is for programmers.” It isn’t. You won’t type a single command. You give instructions in plain language, as you would to a research assistant. Even the technical setup is done by the agent, which explains each step before it takes it.\n“I don’t need this.” Maybe. The course lets you find out on your own material, for the price of an afternoon and one month of subscription. You remain the author: nothing changes in your files without your approval.\nWe use one tool: Claude Code, in the Claude desktop app, on Windows, Mac or Linux. Similar agents exist, and what you learn here carries over. But when learning, one tool is enough.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7481,7 +7541,7 @@
     "href": "friendly-agentic-ai-intro/index.html#what-is-an-ai-agent",
     "title": "Friendly Introduction to Agentic AI for Social Scientists",
     "section": "What is an AI agent?",
-    "text": "What is an AI agent?\nA chatbot is a conversation in a browser. You paste text or upload a file, it answers, and you copy the answer back. It knows only what you gave it in that conversation.\nAn agent is the same AI model with three additions. First, access to one folder on your computer that you choose. Second, the ability to act there: open files, write and run small programs, save files. Third, a loop: it takes a step, looks at the result, and decides the next one, until the task is done or it needs you.\nThe loop makes the difference. Ask for “a chart of turnout by age group from survey.csv”. A chatbot needs the file uploaded and may guess what the columns mean. The agent:\n\nopens the file and sees that age is called age_cat, not age;\nwrites a short program and runs it;\nhits an error because some ages are coded “refused”, and asks you how to handle them;\nruns it again, opens the chart to check it, and saves it in output/.\n\nYou see every step, and at first it asks your permission before each one.\nThink of a very fast research assistant at your computer: well read, new to your project, and sometimes confidently wrong. Your job shifts from doing each step to deciding, instructing and checking. Checking becomes the most important part.",
+    "text": "What is an AI agent?\nLet’s start with what you know. A chatbot is a conversation in a browser. You paste in a text or upload a file, it answers, and you copy the answer back into your document. It knows only what you gave it in that conversation.\nAn agent is the same AI model with three additions. First, it has access to one folder on your computer, which you choose. Second, it can act there: open files, write and run small programs, save results. Third, it works in a loop: it takes a step, looks at the result and decides on the next one, until the task is done or it needs you.\n\n\n  \n    \n      \n    \n    \n      \n    \n  \n  \n\n    \n    Chatbot\n    what you know\n\n    \n    You\n\n    \n    Chatbot\n    in a browser\n\n    \n    Your files\n\n    paste a text in\n    \n    \n    copy the answer out\n\n    out of reach\n\n    \n\n    \n    Agent\n    what this course adds\n\n    \n    You\n\n    \n    Agent\n    on your computer\n\n    \n    One folder\n    that you choose\n\n    a task, your OK\n    \n    \n    questions, results\n\n    reads, runs, saves\n    \n    \n    looks at the result\n    again and again, until done\n  \n\nThe model is the same. The difference is where it works and what it is allowed to do.\n\nThe loop makes the difference. Suppose you ask for a chart of turnout by age group from survey.csv. A chatbot needs the file uploaded and may guess what the columns mean. The agent does the following:\n\nit opens the file and sees that age is called age_cat, not age;\nit writes a short program and runs it;\nit hits an error because some ages are coded “refused”, and asks you how to handle them;\nit runs the program again, opens the chart to check it, and saves it in output/.\n\nYou see every step, and at first it asks your permission before each one.\nIt helps to think of the agent as a very fast research assistant sitting at your computer. It has read a lot, but it is new to your project, and it can be wrong with confidence. Hence your job shifts from doing each step to instructing the agent and checking its work. Checking matters most.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7489,11 +7549,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/index.html#what-you-need",
-    "href": "friendly-agentic-ai-intro/index.html#what-you-need",
+    "objectID": "friendly-agentic-ai-intro/index.html#what-can-it-do-for-a-social-scientist",
+    "href": "friendly-agentic-ai-intro/index.html#what-can-it-do-for-a-social-scientist",
     "title": "Friendly Introduction to Agentic AI for Social Scientists",
-    "section": "What you need",
-    "text": "What you need\n\nA paid Claude plan. Claude Code needs Claude Pro or higher (about $20/month, cancel any time; pricing). A university Claude Team or Enterprise plan also works.\nA computer with Windows 10/11, macOS, or Linux (Ubuntu or Debian).\nPermission to install software. University laptops may need IT approval. Try first; ask if blocked.",
+    "section": "What can it do for a social scientist?",
+    "text": "What can it do for a social scientist?\nHere are a few tasks that fit an agent well. None of them needs you to write code.\n\n\nA pile of readings. Thirty PDFs in a folder become a table: research question, data, method and main finding, each with a page number you can check.\n\n\nA draft in Word. The agent comments on the argument, or edits a copy, and you review each edit as a tracked change.\n\n\nInterviews and open-ended answers. A first pass over transcripts: recurring themes, each with word-for-word quotes and where they come from. Interpretation stays with you.\n\n\nA survey or a public dataset. Download, clean, tabulate and chart, with every step saved in a script you can rerun.\n\n\nThe dull parts. Reformatting references for another journal, checking that the numbers in the text match the tables, turning a paper into slides.\n\n\nThe agent has limits, too. First, the agent makes mistakes, and it makes them in fluent, confident prose. It may misread a variable, drop observations without telling you, or hand you a paraphrase in quotation marks. Second, it doesn’t know the judgment calls of your field: which cases belong in the sample, or what a concept means in your literature. Third, what it reads is sent to the company’s servers, so confidential material needs care.\nEach of these problems has a routine that handles it, and you already know most of them from supervising research assistants and refereeing papers. Part 3 is about those routines.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7501,11 +7561,23 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/index.html#the-course",
-    "href": "friendly-agentic-ai-intro/index.html#the-course",
+    "objectID": "friendly-agentic-ai-intro/index.html#what-do-you-need",
+    "href": "friendly-agentic-ai-intro/index.html#what-do-you-need",
     "title": "Friendly Introduction to Agentic AI for Social Scientists",
-    "section": "The course",
-    "text": "The course\nThree hands-on parts, about an hour each, and a live demo. If something fails, nothing is broken: check the troubleshooting table, or ask the agent what went wrong.\n\n\n🛠️ Part 1 — Setup · steps 1.1–1.5 · about an hour\n\n\nInstall the app, make a project folder, meet the agent, let it set up Python, and install a Markdown reader.\nYou end with: a working Code tab, a project folder, Python, and Typora.\nStart Part 1 →\n\n\n\n\n🚶 Part 2 — First Steps · steps 2.1–2.4 · about an hour\n\n\nEdit a Word document and review the edits as tracked changes. Give the agent standing instructions in AGENTS.md, add two skills, and do a first small analysis.\nYou end with: a routine for Word documents, an AGENTS.md file, two skills, and one analysis you checked yourself.\nStart Part 2 →\n\n\n\n\n🔍 Part 3 — Staying in Charge · steps 3.1–3.4 · about an hour\n\n\nTrust, verification and control. Keep the agent in its folder, lock the raw data, see what it did, build checks into the work, and have a fresh session review it.\nYou end with: read-only raw data, checks with a pass/fail table, a review routine, and new lines in AGENTS.md.\nStart Part 3 →\n\n\n\n\n🎬 Part 4 — Live Demo: How to Write a Paper in One Hour\n\n\nComing soon.",
+    "section": "What do you need?",
+    "text": "What do you need?\n\nA paid Claude plan. Claude Code needs Claude Pro or higher (about $20 a month, cancel any time; see pricing). A university Claude Team or Enterprise plan also works.\nA computer with Windows 10 or 11, macOS, or Linux (Ubuntu or Debian).\nPermission to install software. A university laptop may need IT approval. Try first, and ask if you are blocked.",
+    "crumbs": [
+      "Home",
+      "Friendly Intro to Agentic AI",
+      "Course Overview"
+    ]
+  },
+  {
+    "objectID": "friendly-agentic-ai-intro/index.html#how-is-the-course-organized",
+    "href": "friendly-agentic-ai-intro/index.html#how-is-the-course-organized",
+    "title": "Friendly Introduction to Agentic AI for Social Scientists",
+    "section": "How is the course organized?",
+    "text": "How is the course organized?\nThe course has four parts. The first three are hands-on and take about an hour each. The fourth is a live demonstration, followed by homework. If something fails along the way, nothing is broken: check the troubleshooting table of that part, or ask the agent what went wrong.\n\n\n1\n\n\n\nSteps 1.1–1.5 · about an hour\n\nSetup\nInstall the app, make a project folder, meet the agent, let it set up Python, and install a reader for the files it writes.\nYou end with a working agent in a folder of your own.\n\n\n\n\n2\n\n\n\nSteps 2.1–2.5 · about an hour\n\nFirst Steps\nPut the agent to work on what you know: a Word draft, a pile of readings, a small dataset. Along the way, give it standing instructions and two skills.\nYou end with a routine for Word documents, a table of readings you verified, and one analysis whose numbers you checked yourself.\n\n\n\n\n3\n\n\n\nSteps 3.1–3.4 · about an hour\n\nStaying in Charge\nTrust, verification and control. Keep the agent in its folder, lock the raw data, see what it did, build checks into the work, and have it reviewed by a second pair of eyes.\nYou end with work you can put your name on, because you can trace it.\n\n\n\n\n4\n\n\n\nLive demo · then homework\n\nA Paper in 50 Minutes\nWe give the agent a single prompt and watch it produce a short empirical paper and a slide deck. Then comes your part: go home and study what it left behind, from the paper and the deck to the decision log, the code and the skills it used.\nYou end with a view of a whole project, and practice in reading an agent’s work as a referee would.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7517,7 +7589,7 @@
     "href": "friendly-agentic-ai-intro/index.html#a-short-glossary",
     "title": "Friendly Introduction to Agentic AI for Social Scientists",
     "section": "A short glossary",
-    "text": "A short glossary\n\nAgent: an AI model that acts on your computer (reads files, runs code, saves results) in a loop until a task is done.\nHarness: a word you will hear later: the program around the model that gives it these abilities. Claude Code is one.\nSession: one conversation with the agent. Each starts fresh.\nContext window: what the model can see at once. Long sessions fill it up, and quality drops.\nTerminal: a text window for typing commands. The agent uses one behind the scenes; you don’t have to.\nEnvironment (Python): a project’s own copy of Python and its packages, kept in the .venv folder.\nMarkdown (.md): plain text with a few formatting symbols. The common language of people and agents.\nAGENTS.md: standing instructions the agent reads at the start of every session.\nSkill: a recipe file the agent follows for one type of task.",
+    "text": "A short glossary\n\nAgent: an AI model that acts on your computer (reads files, runs code, saves results) in a loop until a task is done.\nPrompt: the instruction you type for the agent. In this course, prompts to copy come in boxes.\nSession: one conversation with the agent. Each session starts fresh.\nContext window: what the model can see at once. Long sessions fill it up, and quality drops.\nPermission mode: how much the agent may do without asking you. We start with Manual: it asks every time.\nMarkdown (.md): plain text with a few formatting symbols. It is the common language of people and agents.\nAGENTS.md: your standing instructions, which the agent reads at the start of every session.\nSkill: a recipe file the agent follows for one type of task.\nTerminal: a text window for typing commands. The agent uses one behind the scenes. You don’t have to.\nEnvironment (Python): a project’s own copy of Python and its add-ons, kept in the .venv folder.\nHarness: a word you will hear later. It is the program around the model that gives it these abilities. Claude Code is one.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7525,11 +7597,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/index.html#where-to-go-next",
-    "href": "friendly-agentic-ai-intro/index.html#where-to-go-next",
+    "objectID": "friendly-agentic-ai-intro/index.html#useful-links",
+    "href": "friendly-agentic-ai-intro/index.html#useful-links",
     "title": "Friendly Introduction to Agentic AI for Social Scientists",
-    "section": "Where to go next",
-    "text": "Where to go next\n\nWeek 1 — LLMs, Harnesses & Setup: what is behind the chat box, and other agents.\nWeek 2 — From Raw Data to Report: a full analysis project with an agent.\nGlossary of LLM terms · Which AI model · Terminal Basics\nClaude Code documentation: desktop app · skills · AGENTS.md and CLAUDE.md",
+    "section": "Useful links",
+    "text": "Useful links\nMany people have written about agents for researchers. These are the ones we find most useful for this audience.\nFor people who don’t code\n\nChris Blattman, AI for Professionals Who Don’t Code. A political economist’s guide to running projects, meetings and everyday academic work with an agent.\nMushtaq Bilal, A Beginner’s Guide to Claude Code for (Non-Technical) Academics. Written for the humanities and social sciences. The link is a summary; the original is a long post on X.\nCarl Vellotti, Claude Code for Researchers. Interview transcripts, PDFs and field notes, with good advice on verifying quotes.\nNeal Caren, social-data-analysis. Ready-made skills for qualitative and quantitative sociological research, from interview analysis to literature synthesis.\n\nIf you work with data\n\nPaul Goldsmith-Pinkham, Claude Code for Applied Economists. Eight video episodes, from getting started to verification.\nScott Cunningham, Claude Code Changed How I Work. A long series on empirical research with an agent. Some posts are for subscribers.\nMihail Velikov, AI in Business & Economic Research. One-page summaries of more than 180 guides and papers.\n\nBackground reading\n\nEthan Mollick, One Useful Thing. The best running commentary on working with AI.\nOur own list: suggested readings and resources.\n\nOfficial documentation\n\nClaude Code: desktop app · skills · AGENTS.md and CLAUDE.md · data usage\n\nOn this site, when you want more\n\nWeek 1: LLMs, Harnesses & Setup explains what is behind the chat box, and covers other agents.\nWeek 2: From Raw Data to Report is a full analysis project with an agent.\nGlossary of LLM terms · Which AI model · AI Coding Prep\n\n\nStart with Part 1: Setup →",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7539,9 +7611,9 @@
   {
     "objectID": "friendly-agentic-ai-intro/setup.html",
     "href": "friendly-agentic-ai-intro/setup.html",
-    "title": "Part 1 — Setup",
+    "title": "Part 1: Setup",
     "section": "",
-    "text": "Part 1 — Setup\n\n\nInstall the Claude desktop app, make a project folder, meet the agent, and let it set up Python for you",
+    "text": "Part 1 of 4 · about an hour\n\n\nSetup\n\n\nInstall the Claude desktop app, make a project folder, meet the agent, and let it set up Python for you",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7549,11 +7621,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/setup.html#before-you-start",
-    "href": "friendly-agentic-ai-intro/setup.html#before-you-start",
-    "title": "Part 1 — Setup",
-    "section": "Before you start",
-    "text": "Before you start\nThis is Part 1 of Friendly Introduction to Agentic AI for Social Scientists. New here? Read the course page first: it explains what an agent is and what you need.\nIt takes about an hour. If something fails, nothing is broken: see the troubleshooting table at the end, or ask the agent.\n\n\n\n\n\n\nNoteWhat you will have at the end\n\n\n\n\nThe Claude desktop app, with the Code tab working\nA project folder that the agent can read and write\nPython, set up by the agent for you\nA Markdown reader for the files the agent writes",
+    "objectID": "friendly-agentic-ai-intro/setup.html#what-do-we-do-in-this-part",
+    "href": "friendly-agentic-ai-intro/setup.html#what-do-we-do-in-this-part",
+    "title": "Part 1: Setup",
+    "section": "What do we do in this part?",
+    "text": "What do we do in this part?\nBefore a new research assistant can help, they need a desk, access to the right files, and the tools of the job. The agent is no different. In this part we install the app, make a folder for the agent to work in, have a first conversation with it, and let it install its own tools.\nNew here? Read the overview first: it explains what an agent is and what you need.\nThis part takes about an hour. The agent explains each step before it takes it, and you approve. If something fails, nothing is broken. See the troubleshooting table at the end, or ask the agent what went wrong.\n\n\n\n\n\n\nNoteWhat you will have at the end\n\n\n\n\nThe Claude desktop app, with the Code tab working\nA project folder that the agent can read and write\nPython, set up by the agent for you\nA Markdown reader for the files the agent writes",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7561,11 +7633,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/setup.html#step-1.1-install-the-claude-desktop-app",
-    "href": "friendly-agentic-ai-intro/setup.html#step-1.1-install-the-claude-desktop-app",
-    "title": "Part 1 — Setup",
-    "section": "Step 1.1 — Install the Claude desktop app",
-    "text": "Step 1.1 — Install the Claude desktop app\n\nWindowsMacLinux\n\n\n\nDownload the installer: Claude for Windows. (On a Surface or other ARM laptop, use the ARM64 installer.)\nRun the downloaded file. If Windows shows a blue “Windows protected your PC” box, click More info → Run anyway.\nOpen Claude from the Start menu and sign in with your Claude account.\n\n\n\n\nDownload the installer: Claude for macOS. It works on Intel and Apple Silicon Macs.\nOpen the downloaded .dmg file and drag Claude into Applications.\nOpen Claude from Applications (or press Cmd+Space, type Claude) and sign in.\n\n\n\nThe desktop app for Linux is in beta, for Ubuntu and Debian. Follow the steps on the official page: Claude Desktop on Linux. Then start Claude from your application launcher and sign in.\nOn another distribution, use the terminal version of Claude Code: install guide. The rest of this course still applies; you type the same prompts in the terminal.\n\n\n\nThen open the Code tab at the top of the left sidebar (hover over the icons if you see no names). If it asks you to upgrade, your plan does not include Claude Code.\n\n\n\n\n\n\nTip\n\n\n\nThe Chat tab is the chatbot you know; the Code tab is the agent. Despite the name, Code is for any work on files in a folder, text included.",
+    "objectID": "friendly-agentic-ai-intro/setup.html#step-1-1",
+    "href": "friendly-agentic-ai-intro/setup.html#step-1-1",
+    "title": "Part 1: Setup",
+    "section": "1.1 Install the Claude desktop app",
+    "text": "1.1 Install the Claude desktop app\n\nWindowsMacLinux\n\n\n\nDownload the installer: Claude for Windows. (On a Surface or other ARM laptop, use the ARM64 installer.)\nRun the downloaded file. If Windows shows a blue “Windows protected your PC” box, click More info → Run anyway.\nOpen Claude from the Start menu and sign in with your Claude account.\n\n\n\n\nDownload the installer: Claude for macOS. It works on Intel and Apple Silicon Macs.\nOpen the downloaded .dmg file and drag Claude into Applications.\nOpen Claude from Applications (or press Cmd+Space, type Claude) and sign in.\n\n\n\nThe desktop app for Linux is in beta, for Ubuntu and Debian. Follow the steps on the official page: Claude Desktop on Linux. Then start Claude from your application launcher and sign in.\nOn another distribution, use the terminal version of Claude Code: install guide. The rest of this course still applies. You type the same prompts in the terminal.\n\n\n\nThen open the Code tab at the top of the left sidebar (hover over the icons if you see no names). If it asks you to upgrade, your plan doesn’t include Claude Code.\n\n\n\n\n\n\nTipChat or Code?\n\n\n\nThe Chat tab is the chatbot you know. The Code tab is the agent. Don’t let the name mislead you: Code is for any work on files in a folder, text included.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7573,11 +7645,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/setup.html#step-1.2-make-a-project-folder",
-    "href": "friendly-agentic-ai-intro/setup.html#step-1.2-make-a-project-folder",
-    "title": "Part 1 — Setup",
-    "section": "Step 1.2 — Make a project folder",
-    "text": "Step 1.2 — Make a project folder\nThe agent works inside one folder. Everything for a project lives there: data, code, notes, drafts, outputs. Use a new folder for each project.\n\nIn your Documents folder, create a folder called ai-projects, and inside it a folder called first-project.\nUse short names without spaces or accents (first-project, not My First Project (ÁÉ)). Programs handle plain names better.\nShow file extensions, so you can tell .md, .csv, .py and .docx files apart.\n\nWindows: in File Explorer, click View → Show → File name extensions.\nMac: in Finder, open Finder → Settings → Advanced and tick Show all filename extensions.\n\n\nOpen the folder in Claude. In the Code tab, find the row of controls under the prompt box. Click the first one (the environment) and choose the top entry under Local. Then click the folder control next to it, choose Open folder… and pick first-project.\n\n\n\n\n\n\nWarningWhat not to put in the folder (yet)\n\n\n\nThe agent sends what it reads to Anthropic’s servers. Keep confidential material out (identifiable survey data, health records, anything under a data-use agreement, other people’s unpublished work) until you have checked your data agreement. Also check your Claude account’s privacy settings, which control whether your conversations may be used to train future models. For learning, public data and your own drafts are fine.",
+    "objectID": "friendly-agentic-ai-intro/setup.html#step-1-2",
+    "href": "friendly-agentic-ai-intro/setup.html#step-1-2",
+    "title": "Part 1: Setup",
+    "section": "1.2 Make a project folder",
+    "text": "1.2 Make a project folder\nThe agent works inside one folder. Think of it as the desk you give to a new research assistant: what is on the desk, they can read and work on. What is not, they can’t. Everything for a project lives there: data, code, notes, drafts, outputs. It is good practice to use a new folder for each project.\n\nIn your Documents folder, create a folder called ai-projects, and inside it a folder called first-project.\nUse short names without spaces or accents (first-project, not My First Project (ÁÉ)). Programs handle plain names better.\nShow file extensions, so you can tell .md, .csv, .py and .docx files apart.\n\nWindows: in File Explorer, click View → Show → File name extensions.\nMac: in Finder, open Finder → Settings → Advanced and tick Show all filename extensions.\n\n\nOpen the folder in Claude. In the Code tab, find the row of controls under the prompt box. Click the first one (the environment) and choose the top entry under Local. Then click the folder control next to it, choose Open folder… and pick first-project.\n\n\n\n\n\n\nWarningWhat not to put in the folder (yet)\n\n\n\nThe agent sends what it reads to Anthropic’s servers. So keep confidential material out of the folder until you have checked your data agreement: interview recordings and transcripts, identifiable survey data, health records, anything under a data-use agreement, other people’s unpublished work. Also check your Claude account’s privacy settings, which control whether your conversations may be used to train future models. For learning, public data and your own drafts are fine.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7585,11 +7657,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/setup.html#step-1.3-your-first-conversation-with-the-agent",
-    "href": "friendly-agentic-ai-intro/setup.html#step-1.3-your-first-conversation-with-the-agent",
-    "title": "Part 1 — Setup",
-    "section": "Step 1.3 — Your first conversation with the agent",
-    "text": "Step 1.3 — Your first conversation with the agent\nSet the permission mode (in the row under the prompt box) to Manual. The agent then asks before it creates or changes any file and before it runs anything. It is slower, but you see everything. Stay in Manual for your first week.\nType this and press Enter:\n\nHi. I am new to this. What can you see in this folder? Then create a file called hello.md with three sentences about what you can do for a social scientist.\n\nThe agent looks at the folder (it is empty), then asks to create a file. Read what it wants to do. If it is unclear, click no and ask: “What does this do? Explain in one sentence.”\nThen try:\n\nClick hello.md in the chat. It opens inside the app.\nAsk: “Make it two sentences and less formal.” The agent edits the file, not just the chat.\nClick the stop button to interrupt it. You can also type a correction while it works.",
+    "objectID": "friendly-agentic-ai-intro/setup.html#step-1-3",
+    "href": "friendly-agentic-ai-intro/setup.html#step-1-3",
+    "title": "Part 1: Setup",
+    "section": "1.3 Have a first conversation with the agent",
+    "text": "1.3 Have a first conversation with the agent\nSet the permission mode (in the row under the prompt box) to Manual. The agent then asks before it creates or changes any file and before it runs anything. True, this is slower. But you see everything, and that is what we want at the start. We advise staying in Manual for your first week.\nType this and press Enter:\n\nHi. I am new to this. What can you see in this folder? Then create a file called hello.md with three sentences about what you can do for a social scientist.\n\nThe agent looks at the folder (it is empty), then asks to create a file. Read what it wants to do. If it is unclear, click no and ask: “What does this do? Explain in one sentence.”\nThen try three things.\n\nClick hello.md in the chat. It opens inside the app.\nAsk: “Make it two sentences and less formal.” The agent edits the file, not just the chat.\nClick the stop button to interrupt it. You can also type a correction while it works.\n\nNote the second one. With a chatbot, you would get a new version in the conversation and copy it over. Here the file itself changed.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7597,11 +7669,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/setup.html#step-1.4-let-the-agent-set-up-python",
-    "href": "friendly-agentic-ai-intro/setup.html#step-1.4-let-the-agent-set-up-python",
-    "title": "Part 1 — Setup",
-    "section": "Step 1.4 — Let the agent set up Python",
-    "text": "Step 1.4 — Let the agent set up Python\nThis is the most technical step, and you need not understand it. It takes five to ten minutes; you mostly read and click Yes.\nWhy Python, if you work with text? The agent uses small Python programs as its tools: to read Word and PDF files, convert formats, handle large datasets and draw charts. Python is free, runs everywhere, and AI models write it well.\nCopy this prompt into the agent:\nI have never used Python. Please set up Python for this project folder.\n\n- Use uv (a modern Python installer) to install Python and create an\n  environment for this project only. Do not change anything else on my\n  computer without asking.\n- Before each command, tell me in one sentence what it does.\n- Install these packages: pandas, matplotlib, openpyxl, pyreadstat,\n  pymupdf, python-docx, pypandoc-binary, requests.\n- Test it: write a short script code/00_test.py that makes a simple bar chart\n  of five made-up numbers and saves it as output/test_chart.png. Run it.\n- Finally write docs/SETUP-NOTES.md: what you installed, where it lives,\n  how to run a script, and how to undo all of it.\nWhat the packages do: pandas handles data tables, matplotlib draws charts, openpyxl reads Excel, pyreadstat reads Stata and SPSS files, pymupdf reads PDFs, python-docx reads and edits Word files, pypandoc-binary converts between Markdown and Word, requests downloads data from the web.\nIt worked if output/test_chart.png shows a bar chart. Keep SETUP-NOTES.md: when something breaks months later, show it to the agent first.\nAlready use Stata or R? Keep using them; the agent can write and run do-files and R scripts too. For this course, Python is the path.\n\n\n\n\n\n\nTipIf something goes wrong here (click to open)\n\n\n\n\n\n\nWindows: if the agent says it needs Git, install Git for Windows with the default options, restart the Claude app, and ask the agent to continue.\nMac: a window may ask to install command line developer tools. Click Install, wait a few minutes, then tell the agent to continue.\n“Command not found” right after an install: quit the Claude app fully and open it again.\nIn every case, paste the error into the chat and ask: “What went wrong? Explain simply, then fix it.”",
+    "objectID": "friendly-agentic-ai-intro/setup.html#step-1-4",
+    "href": "friendly-agentic-ai-intro/setup.html#step-1-4",
+    "title": "Part 1: Setup",
+    "section": "1.4 Let the agent set up Python",
+    "text": "1.4 Let the agent set up Python\nThis is the most technical step of the course, and you don’t need to follow the details. It takes five to ten minutes. Read the one-sentence explanation before each command, then approve.\nWhy Python, if you work with text? The agent uses small Python programs as its tools: to read Word and PDF files, to convert formats, to handle large datasets and to draw charts. Python is free, it runs on every computer, and AI models write it well. You won’t write any of it yourself.\nCopy this prompt into the agent:\n\nI have never used Python. Please set up Python for this project folder.\n\n- Use uv (a modern Python installer) to install Python and create an environment for this project only. Do not change anything else on my computer without asking.\n- Before each command, tell me in one sentence what it does.\n- Install these packages: pandas, matplotlib, openpyxl, pyreadstat, pymupdf, python-docx, pypandoc-binary, requests.\n- Test it: write a short script code/00_test.py that makes a simple bar chart of five made-up numbers and saves it as output/test_chart.png. Run it.\n- Finally write docs/SETUP-NOTES.md: what you installed, where it lives, how to run a script, and how to undo all of it.\n\nWhat do the packages do? pandas handles data tables, matplotlib draws charts, openpyxl reads Excel, pyreadstat reads Stata and SPSS files, pymupdf reads PDFs, python-docx reads and edits Word files, pypandoc-binary converts between Markdown and Word, and requests downloads data from the web.\n\nIt worked if output/test_chart.png shows a bar chart. Keep docs/SETUP-NOTES.md: when something breaks months later, show it to the agent first.\n\nAlready use Stata or R? Keep using them. The agent can write and run do-files and R scripts, too. For this course, Python is the path.\n\n\n\n\n\n\nTipIf something goes wrong here (click to open)\n\n\n\n\n\n\nWindows: if the agent says it needs Git, install Git for Windows with the default options, restart the Claude app, and ask the agent to continue.\nMac: a window may ask to install command line developer tools. Click Install, wait a few minutes, then tell the agent to continue.\n“Command not found” right after an install: quit the Claude app fully and open it again.\nIn every case, paste the error into the chat and ask: “What went wrong? Explain simply, then fix it.”",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7609,11 +7681,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/setup.html#step-1.5-a-markdown-reader-typora",
-    "href": "friendly-agentic-ai-intro/setup.html#step-1.5-a-markdown-reader-typora",
-    "title": "Part 1 — Setup",
-    "section": "Step 1.5 — A Markdown reader: Typora",
-    "text": "Step 1.5 — A Markdown reader: Typora\nThe agent writes notes, memos and plans in Markdown: plain text files ending in .md, where a few symbols do the formatting (# Title for a heading, **word** for bold, - item for a list). Agents read and write it perfectly, and the files open on any computer.\nTo read Markdown as formatted text, install Typora. It looks and edits like Word, runs on Windows, Mac and Linux, and costs about $15 once, after a free trial.\n\nDownload and install Typora from typora.io.\nOpen hello.md from Step 1.3 in Typora (right-click the file → Open with → Typora). It should look like a formatted document.\nMake Typora the default program for .md files, so a double-click opens it.\n\n\n\n\n\n\n\nNote\n\n\n\nIf you write code, or plan to, use VS Code instead (free). It previews Markdown and also shows the agent’s Python, R or Stata code. The main course uses it.",
+    "objectID": "friendly-agentic-ai-intro/setup.html#step-1-5",
+    "href": "friendly-agentic-ai-intro/setup.html#step-1-5",
+    "title": "Part 1: Setup",
+    "section": "1.5 Install a Markdown reader: Typora",
+    "text": "1.5 Install a Markdown reader: Typora\nThe agent writes its notes, memos and plans in Markdown: plain text files ending in .md, where a few symbols do the formatting (# Title for a heading, **word** for bold, - item for a list). Agents read and write it very well, and the files open on any computer.\nTo read Markdown as formatted text, install Typora. It looks and edits like Word, runs on Windows, Mac and Linux, and costs about $15 once, after a free trial.\n\nDownload and install Typora from typora.io.\nOpen hello.md from Step 1.3 in Typora (right-click the file → Open with → Typora). It should look like a formatted document.\nMake Typora the default program for .md files, so a double-click opens it.\n\n\n\n\n\n\n\nNoteIf you write code, or plan to\n\n\n\nUse VS Code instead (free). It previews Markdown and also shows the agent’s Python, R or Stata code. The main course uses it.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7623,9 +7695,9 @@
   {
     "objectID": "friendly-agentic-ai-intro/setup.html#troubleshooting",
     "href": "friendly-agentic-ai-intro/setup.html#troubleshooting",
-    "title": "Part 1 — Setup",
+    "title": "Part 1: Setup",
     "section": "Troubleshooting",
-    "text": "Troubleshooting\n\n\n\nProblem\nWhat to do\n\n\n\n\nThe Code tab asks me to upgrade\nClaude Code needs a Pro plan or higher. A free account only has Chat\n\n\nThe Code tab shows a sign-in prompt or a 403 error\nFinish the sign-in in the browser, then quit and restart the app. Still failing: see the official troubleshooting\n\n\nThe agent cannot see my files\nCheck the folder control under the prompt box: is the right folder open?\n\n\nPython, Git or a package “not found” after installing\nQuit the Claude app fully and start it again\n\n\nAn error I don’t understand\nPaste it in and ask: “Explain this error simply, then fix it.” This works more often than you would expect\n\n\n\nUnfamiliar terms? See the glossary on the course page.",
+    "text": "Troubleshooting\n\n\n\nProblem\nWhat to do\n\n\n\n\nThe Code tab asks me to upgrade\nClaude Code needs a Pro plan or higher. A free account only has Chat\n\n\nThe Code tab shows a sign-in prompt or a 403 error\nFinish the sign-in in the browser, then quit and restart the app. Still failing: see the official troubleshooting\n\n\nThe agent can’t see my files\nCheck the folder control under the prompt box: is the right folder open?\n\n\nPython, Git or a package “not found” after installing\nQuit the Claude app fully and start it again\n\n\nAn error I don’t understand\nPaste it in and ask: “Explain this error simply, then fix it.” This works more often than you would expect\n\n\n\nUnfamiliar terms? See the glossary in the overview.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7633,11 +7705,11 @@
     ]
   },
   {
-    "objectID": "friendly-agentic-ai-intro/setup.html#you-are-ready",
-    "href": "friendly-agentic-ai-intro/setup.html#you-are-ready",
-    "title": "Part 1 — Setup",
-    "section": "You are ready",
-    "text": "You are ready\nCheck that you have:\n\nthe Claude desktop app open, with the Code tab working\nthe first-project folder open in the Code tab, in Manual mode\noutput/test_chart.png (Python works) and docs/SETUP-NOTES.md\nTypora opening .md files\n\nNext: Word documents, standing instructions for the agent, and a first real task with data.\n\n\n\n\n\n\nTipContinue with Part 2\n\n\n\nPart 2 — First Steps →",
+    "objectID": "friendly-agentic-ai-intro/setup.html#are-you-ready-for-part-2",
+    "href": "friendly-agentic-ai-intro/setup.html#are-you-ready-for-part-2",
+    "title": "Part 1: Setup",
+    "section": "Are you ready for Part 2?",
+    "text": "Are you ready for Part 2?\nBefore we move on, check that you have:\n\nthe Claude desktop app open, with the Code tab working;\nthe first-project folder open in the Code tab, in Manual mode;\noutput/test_chart.png (Python works) and docs/SETUP-NOTES.md;\nTypora opening .md files.\n\nSetup is done. In Part 2 we put the agent to work: on a Word draft, on a pile of readings, and on a small dataset.\n\nContinue with Part 2: First Steps →",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",

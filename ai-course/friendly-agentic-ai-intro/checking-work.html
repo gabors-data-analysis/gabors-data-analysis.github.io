@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-11-09">
+<meta name="dcterms.date" content="2026-11-10">
 
-<title>Part 3 — Staying in Charge – Doing Data Analysis with AI</title>
+<title>Part 3: Staying in Charge – Doing Data Analysis with AI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -112,9 +112,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<link rel="stylesheet" href="friendly.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="nav-sidebar docked nav-fixed friendly quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -203,7 +204,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../friendly-agentic-ai-intro/live-demo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Part 4: Live Demo</span></a>
+ <span class="menu-text">Part 4: A Paper in 50 Minutes</span></a>
   </div>
 </li>
       </ul>
@@ -542,15 +543,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#before-you-start" id="toc-before-you-start" class="nav-link active" data-scroll-target="#before-you-start">Before you start</a></li>
-  <li><a href="#who-is-in-charge-here" id="toc-who-is-in-charge-here" class="nav-link" data-scroll-target="#who-is-in-charge-here">Who is in charge here?</a></li>
-  <li><a href="#step-3.1-keep-the-agent-in-its-folder" id="toc-step-3.1-keep-the-agent-in-its-folder" class="nav-link" data-scroll-target="#step-3.1-keep-the-agent-in-its-folder">Step 3.1 — Keep the agent in its folder</a></li>
-  <li><a href="#step-3.2-see-what-it-did" id="toc-step-3.2-see-what-it-did" class="nav-link" data-scroll-target="#step-3.2-see-what-it-did">Step 3.2 — See what it did</a></li>
-  <li><a href="#step-3.3-decide-the-checks-before-the-work" id="toc-step-3.3-decide-the-checks-before-the-work" class="nav-link" data-scroll-target="#step-3.3-decide-the-checks-before-the-work">Step 3.3 — Decide the checks before the work</a></li>
-  <li><a href="#step-3.4-a-second-pair-of-eyes" id="toc-step-3.4-a-second-pair-of-eyes" class="nav-link" data-scroll-target="#step-3.4-a-second-pair-of-eyes">Step 3.4 — A second pair of eyes</a></li>
-  <li><a href="#worth-the-setup-version-control" id="toc-worth-the-setup-version-control" class="nav-link" data-scroll-target="#worth-the-setup-version-control">Worth the setup: version control</a></li>
+  <li><a href="#who-is-in-charge-here" id="toc-who-is-in-charge-here" class="nav-link active" data-scroll-target="#who-is-in-charge-here">Who is in charge here?</a></li>
+  <li><a href="#step-3-1" id="toc-step-3-1" class="nav-link" data-scroll-target="#step-3-1"><span class="step-no">3.1</span> Keep the agent in its folder</a></li>
+  <li><a href="#step-3-2" id="toc-step-3-2" class="nav-link" data-scroll-target="#step-3-2"><span class="step-no">3.2</span> See what it did</a></li>
+  <li><a href="#step-3-3" id="toc-step-3-3" class="nav-link" data-scroll-target="#step-3-3"><span class="step-no">3.3</span> Decide the checks before the work</a></li>
+  <li><a href="#step-3-4" id="toc-step-3-4" class="nav-link" data-scroll-target="#step-3-4"><span class="step-no">3.4</span> Get a second pair of eyes</a></li>
+  <li><a href="#worth-the-setup-version-control" id="toc-worth-the-setup-version-control" class="nav-link" data-scroll-target="#worth-the-setup-version-control">Is version control worth the setup?</a></li>
   <li><a href="#the-new-lines-for-agents.md-in-one-place" id="toc-the-new-lines-for-agents.md-in-one-place" class="nav-link" data-scroll-target="#the-new-lines-for-agents.md-in-one-place">The new lines for AGENTS.md, in one place</a></li>
-  <li><a href="#what-comes-next" id="toc-what-comes-next" class="nav-link" data-scroll-target="#what-comes-next">What comes next</a></li>
+  <li><a href="#what-comes-next" id="toc-what-comes-next" class="nav-link" data-scroll-target="#what-comes-next">What comes next?</a></li>
   </ul>
 </nav>
     </div>
@@ -559,7 +559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/index.html">Friendly Intro to Agentic AI</a></li><li class="breadcrumb-item"><a href="../friendly-agentic-ai-intro/checking-work.html">Part 3: Staying in Charge</a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Part 3 — Staying in Charge</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<h1 class="title">Part 3: Staying in Charge</h1>
 <p class="subtitle lead">Friendly Introduction to Agentic AI for Social Scientists</p>
 </div>
 
@@ -571,7 +571,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 9, 2026</p>
+      <p class="date">November 10, 2026</p>
     </div>
   </div>
   
@@ -585,19 +585,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="hero-section">
 <div class="container">
+<div class="hero-eyebrow">
+<p>Part 3 of 4 · about an hour</p>
+</div>
 <div class="hero-title">
-<p>Part 3 — Staying in Charge</p>
+<p>Staying in Charge</p>
 </div>
 <div class="hero-subtitle">
-<p>Trust, verification and control: set the agent’s limits, see what it did, and stand behind work you did not do with your own hands</p>
+<p>Trust, verification and control: set the agent’s limits, see what it did, and stand behind work you didn’t do with your own hands</p>
 </div>
 </div>
 </div>
-<hr>
-<section id="before-you-start" class="level2">
-<h2 class="anchored" data-anchor-id="before-you-start">Before you start</h2>
-<p>This is Part 3 of <a href="../friendly-agentic-ai-intro/index.html">Friendly Introduction to Agentic AI for Social Scientists</a>. It assumes you have finished <a href="../friendly-agentic-ai-intro/setup.html">Part 1</a> and <a href="../friendly-agentic-ai-intro/first-steps.html">Part 2</a>: a project folder with <code>AGENTS.md</code>, the decision-log skill and a first analysis.</p>
-<p>It takes about an hour, best done on the World Bank task from Step 2.4.</p>
+<div class="course-map">
+<p><a href="../friendly-agentic-ai-intro/index.html"><span class="n">⌂</span> Overview</a> <a href="../friendly-agentic-ai-intro/setup.html"><span class="n">1</span> Setup</a> <a href="../friendly-agentic-ai-intro/first-steps.html"><span class="n">2</span> First steps</a> <a href="../friendly-agentic-ai-intro/checking-work.html" class="here"><span class="n">3</span> Staying in charge</a> <a href="../friendly-agentic-ai-intro/live-demo.html"><span class="n">4</span> A paper in 50 minutes</a></p>
+</div>
+<section id="who-is-in-charge-here" class="level2">
+<h2 class="anchored" data-anchor-id="who-is-in-charge-here">Who is in charge here?</h2>
+<p>After the first real task, almost everyone has the same four worries. They deserve a serious answer.</p>
+<ul>
+<li><strong>Control.</strong> <em>It does things on my computer. What stops it from touching files it shouldn’t?</em></li>
+<li><strong>Visibility.</strong> <em>It works behind the scenes. How do I see what it actually did, the code included?</em></li>
+<li><strong>Judgment.</strong> <em>It makes choices along the way. Which ones did it make without asking me?</em></li>
+<li><strong>Trust.</strong> <em>Its results look convincing. How can I put my name on them?</em></li>
+</ul>
+<p>Behind these sits a bigger unease. If the agent does the work, where is my part?</p>
+<p>Your part is supervision. An agent is a tool that acts, and a tool that acts needs supervision, just as a research assistant does. You set the limits, decide what must be true before you accept a result, read what it did, and decide what goes out under your name. This needs no coding, only the habits of a careful researcher.</p>
+<p>The four steps below answer the four worries: <strong>limits</strong> (3.1), <strong>visibility</strong> (3.2), <strong>checks and decisions</strong> (3.3) and <strong>independent review</strong> (3.4).</p>
+<p>We assume you have finished <a href="../friendly-agentic-ai-intro/setup.html">Part 1</a> and <a href="../friendly-agentic-ai-intro/first-steps.html">Part 2</a>: a project folder with <code>AGENTS.md</code>, two skills, a table of readings and a first analysis. This part takes about an hour, and it is best done on the World Bank task of Step 2.5.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -609,44 +623,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul class="task-list">
-<li><label><input type="checkbox">A clear picture of what the agent can and cannot touch on your computer</label></li>
+<li><label><input type="checkbox">A clear picture of what the agent can and can’t touch on your computer</label></li>
 <li><label><input type="checkbox">Raw data that is read-only by file setting, not only by instruction</label></li>
 <li><label><input type="checkbox">Three ways to see what the agent did: its scripts, its changes, and every step it took</label></li>
-<li><label><input type="checkbox">Checks written into the code, with a pass/fail table after each run</label></li>
+<li><label><input type="checkbox">Checks written into the code, with a pass or fail table after each run</label></li>
 <li><label><input type="checkbox">A routine for having the work reviewed by a fresh session</label></li>
 <li><label><input type="checkbox">A few new lines in your <code>AGENTS.md</code></label></li>
 </ul>
 </div>
 </div>
-<hr>
 </section>
-<section id="who-is-in-charge-here" class="level2">
-<h2 class="anchored" data-anchor-id="who-is-in-charge-here">Who is in charge here?</h2>
-<p>After the first real task, almost everyone has the same worries. They deserve a serious answer.</p>
-<ul>
-<li><strong>Control.</strong> <em>It does things on my computer. What stops it from touching files it should not?</em></li>
-<li><strong>Visibility.</strong> <em>It works behind the scenes. How do I see what it actually did, the code included?</em></li>
-<li><strong>Judgment.</strong> <em>It makes choices along the way. Which ones did it make without asking me?</em></li>
-<li><strong>Trust.</strong> <em>Its results look convincing. How can I put my name on them?</em></li>
-</ul>
-<p>Behind these sits a bigger unease: if the agent does the work, where is my part? Is this the robots taking over, one folder at a time?</p>
-<p>No, but not automatically. An agent is a tool that acts, and a tool that acts needs supervision, like a research assistant. That supervision is your part: you set the limits, decide what must be true before you accept a result, read what it did, and decide what goes out under your name. It needs no coding, only the habits of a careful researcher.</p>
-<p>The four steps below answer the four worries: <strong>limits</strong> (3.1), <strong>visibility</strong> (3.2), <strong>checks and decisions</strong> (3.3) and <strong>independent review</strong> (3.4).</p>
-<hr>
-</section>
-<section id="step-3.1-keep-the-agent-in-its-folder" class="level2">
-<h2 class="anchored" data-anchor-id="step-3.1-keep-the-agent-in-its-folder">Step 3.1 — Keep the agent in its folder</h2>
-<p><strong>Files: the folder is a boundary.</strong> In Manual mode, the agent asks before it reads or changes any file outside the project folder.</p>
-<p><strong>Commands: the one gap.</strong> To run code, the agent runs commands, and an approved command can reach anything you can. The safeguard is you: in Manual mode, every command waits for your OK.</p>
-<p>Four habits close the gap:</p>
+<section id="step-3-1" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-1"><span class="step-no">3.1</span> Keep the agent in its folder</h2>
+<p><strong>The folder is a boundary.</strong> In Manual mode, the agent asks before it reads or changes any file outside the project folder.</p>
+<p>Commands are the one gap. To run code, the agent runs commands, and an approved command can reach anything you can. Here the safeguard is you: in Manual mode, every command waits for your OK.</p>
+<p>Four habits close the gap.</p>
 <ol type="1">
-<li><strong>Read the paths before you approve a command.</strong> A folder outside your project (<code>C:\Users\you\Desktop</code>, <code>~/Documents/other-project</code>, an unfamiliar drive)? Click no and ask: <em>“Why do you need to go outside the project folder?”</em></li>
-<li><strong>Know the expected exceptions.</strong> Installing Python (Step 1.4) puts tools in your user folder, and downloading data (Step 2.4) reaches the web. The agent tells you before it does either.</li>
-<li><strong>Work on copies, and lock the raw data.</strong> Put copies in the project folder and keep the originals where they are. Make the raw data read-only (box below). Then even a bad mistake costs nothing.</li>
+<li><strong>Read the paths before you approve a command.</strong> Do you see a folder outside your project, such as <code>C:\Users\you\Desktop</code>, <code>~/Documents/other-project</code>, or an unfamiliar drive? Click no and ask: <em>“Why do you need to go outside the project folder?”</em></li>
+<li><strong>Know the expected exceptions.</strong> Installing Python (Step 1.4) puts tools in your user folder, and downloading data (Step 2.5) reaches the web. The agent tells you before it does either.</li>
+<li><strong>Work on copies, and lock the raw data.</strong> Put copies in the project folder and keep the originals where they are. Make the raw data read-only (see the box below). Then even a bad mistake costs nothing.</li>
 <li><strong>Put it in <code>AGENTS.md</code></strong>, under “Safety with my files”:</li>
 </ol>
-<pre class="text"><code>- Work only inside this project folder. If a step needs anything outside it,
-  stop, tell me what and why, and wait for my OK.</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>- Work only inside this project folder. If a step needs anything outside it, stop, tell me what and why, and wait for my OK.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -657,11 +655,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Your <code>AGENTS.md</code> tells the agent never to change <code>data/raw/</code>. But an instruction can be misread or forgotten in a long session; a file setting cannot. So make the raw files read-only. Ask the agent:</p>
-<pre class="text"><code>Make every file in data/raw read-only. Then try to write to one of them,
-show me that it fails, and tell me how I could undo the setting.</code></pre>
+<p>Your <code>AGENTS.md</code> tells the agent never to change <code>data/raw/</code>. But an instruction can be misread or forgotten in a long session, and a file setting cannot. So make the raw files read-only. Ask the agent:</p>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Make every file in data/raw read-only. Then try to write to one of them, show me that it fails, and tell me how I could undo the setting.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>Or do it by hand. <em>Windows:</em> right-click the file → <strong>Properties</strong> → tick <strong>Read-only</strong>. <em>Mac:</em> select the file → <strong>File → Get Info</strong> → tick <strong>Locked</strong>.</p>
 <p>To overwrite raw data, the agent would now first have to change the setting. That takes a command, and in Manual mode a command waits for your OK.</p>
+<p>The same holds for raw material that is not numbers: interview transcripts, scanned documents, the PDFs of your readings.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -676,49 +676,50 @@ show me that it fails, and tell me how I could undo the setting.</code></pre>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>On Mac and Linux, Claude Code can also enforce the folder boundary through the operating system, so even an approved command cannot write outside the project. This <strong>sandbox</strong> is off by default and does not run on Windows directly. You do not need it here; see the <a href="https://code.claude.com/docs/en/sandboxing">sandboxing documentation</a> if you are curious.</p>
+<p>On Mac and Linux, Claude Code can also enforce the folder boundary through the operating system, so even an approved command can’t write outside the project. This <strong>sandbox</strong> is off by default and doesn’t run on Windows directly. You don’t need it here. See the <a href="https://code.claude.com/docs/en/sandboxing">sandboxing documentation</a> if you are curious.</p>
 </div>
 </div>
 </div>
-<hr>
 </section>
-<section id="step-3.2-see-what-it-did" class="level2">
-<h2 class="anchored" data-anchor-id="step-3.2-see-what-it-did">Step 3.2 — See what it did</h2>
-<p>The agent does not have to work behind the scenes. Use all three windows into its work.</p>
-<p><strong>1. The scripts.</strong> Every data step should live in a script in <code>code/</code>, which you can read and rerun. Your <code>AGENTS.md</code> already asks for numbered scripts. Add two lines to close the loopholes:</p>
-<pre class="text"><code>- Do every step that reads, changes or creates data in a script in code/,
-  never as a one-off command, so that I can read and rerun it.
-- Start each script with a short comment in plain language: what it reads,
-  what it does, and what it writes.</code></pre>
-<p>You do not need to read Python. Click a script in the chat to open it, and ask: <em>“Explain code/02_clean.py paragraph by paragraph, in plain language, for a colleague who does not code.”</em> Then ask about anything that sounds like a choice: <em>“Why drop those rows? What else could you have done?”</em></p>
-<p><strong>2. The changes.</strong> After the agent edits files, a <strong>Changes</strong> card shows line counts such as <code>+12 -1</code>. Click it for the <strong>diff view</strong>: each changed file, with removed lines in red and added lines in green. To comment on a line, hover over it, click the <strong>+</strong> next to the line number, and type. Send all comments with <strong>Ctrl+Enter</strong> (Windows) or <strong>Cmd+Enter</strong> (Mac), and the agent revises.</p>
-<p><strong>3. The steps.</strong> The conversation normally shows each action as a short summary. To see every file read and every command run, switch the <strong>Transcript view</strong> to <strong>Verbose</strong>: press <strong>Ctrl+O</strong> to cycle through the views, or use the menu next to the session title. This helps when something surprises you.</p>
-<hr>
+<section id="step-3-2" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-2"><span class="step-no">3.2</span> See what it did</h2>
+<p>The agent doesn’t have to work behind the scenes. There are three windows into its work, and we advise using all three.</p>
+<p><strong>The scripts.</strong> Every data step should live in a script in <code>code/</code>, which you can read and rerun. Your <code>AGENTS.md</code> already asks for numbered scripts. Add two lines to close the loopholes:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>- Do every step that reads, changes or creates data in a script in code/, never as a one-off command, so that I can read and rerun it.</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>- Start each script with a short comment in plain language: what it reads, what it does, and what it writes.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You don’t need to read Python. Click a script in the chat to open it, and ask: <em>“Explain code/02_clean.py paragraph by paragraph, in plain language, for a colleague who doesn’t code.”</em> Then ask about anything that sounds like a choice: <em>“Why drop those rows? What else could you have done?”</em></p>
+<p><strong>The changes.</strong> After the agent edits files, a <strong>Changes</strong> card shows line counts such as <code>+12 -1</code>. Click it for the <strong>diff view</strong>: each changed file, with removed lines in red and added lines in green. It is the tracked changes of Step 2.1, for any file. To comment on a line, hover over it, click the <strong>+</strong> next to the line number, and type. Send all comments with <strong>Ctrl+Enter</strong> (Windows) or <strong>Cmd+Enter</strong> (Mac), and the agent revises.</p>
+<p><strong>The steps.</strong> The conversation normally shows each action as a short summary. To see every file read and every command run, switch the <strong>Transcript view</strong> to <strong>Verbose</strong>: press <strong>Ctrl+O</strong> to cycle through the views, or use the menu next to the session title. This helps when something surprises you.</p>
 </section>
-<section id="step-3.3-decide-the-checks-before-the-work" class="level2">
-<h2 class="anchored" data-anchor-id="step-3.3-decide-the-checks-before-the-work">Step 3.3 — Decide the checks before the work</h2>
-<p>Save the code, plan checks in advance, or hear only about problems? All three, in this order.</p>
+<section id="step-3-3" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-3"><span class="step-no">3.3</span> Decide the checks before the work</h2>
+<p>Should we save the code, plan the checks in advance, or hear only about problems? All three, in this order.</p>
 <p><strong>Before the work: agree on what must be true.</strong> In Plan mode, ask the agent to propose checks for each step. For social science data, the usual ones are:</p>
 <ul>
 <li>the number of observations after each step (respondents, countries, years);</li>
 <li>no duplicate IDs where there should be one row per person or country-year;</li>
-<li>after a merge: how many rows matched, and how many did not, from each side;</li>
-<li>values in a plausible range (age 18–99, shares between 0 and 100);</li>
+<li>after a merge: how many rows matched, and how many didn’t, from each side;</li>
+<li>values in a plausible range (age 18 to 99, shares between 0 and 100);</li>
 <li>missing values per key variable;</li>
 <li>totals that should match a published table.</li>
 </ul>
-<p>Add your own; you know the data. A good research assistant runs these checks anyway. Here they become explicit.</p>
-<p><strong>During the work: checks go into the code</strong>, so they run every time. After each run, the agent saves a short table with a pass or fail for each check.</p>
-<p><strong>After the work: report by exception.</strong> There are two kinds of exception. A failed check means stop and tell me. Any choice you did not specify goes into <code>DECISIONS.md</code>, marked <code>needs-review</code>; this is what the decision-log skill from Step 2.3 does.</p>
-<p>The prompt, for the start of a task, in Plan mode:</p>
-<pre class="text"><code>Before you start, propose the checks that should hold after each step:
-row counts, duplicate IDs, matches in merges, value ranges, missing values.
-Wait for my OK on the list.
-Then put the checks in the code, so they run every time. After each run,
-save a short table of all checks with pass/fail in output/checks.md.
-If a check fails, stop and tell me.
-Any choice I did not specify goes into DECISIONS.md, marked needs-review.</code></pre>
-<p><strong>Try it</strong> on the World Bank task: in a new session, ask the agent to add checks to the existing scripts.</p>
+<p>For work with text, the checks are different but the idea is the same:</p>
+<ul>
+<li>every quote is found word for word in its source, at the page given;</li>
+<li>every reference is a file in the folder, or has a DOI that opens;</li>
+<li>every number in the text matches the table it comes from.</li>
+</ul>
+<p>Add your own. You know the data and the literature. A good research assistant runs such checks anyway. Here they become explicit.</p>
+<p><strong>During the work: the checks go into the code</strong>, so they run every time. After each run, the agent saves a short table with a pass or a fail for each check.</p>
+<p><strong>After the work: report by exception.</strong> There are two kinds of exception. A failed check means stop and tell me. Any choice you didn’t specify goes into <code>DECISIONS.md</code>, marked <code>needs-review</code>. This is what the decision-log skill of Step 2.3 does.</p>
+<p>Here is the prompt, for the start of a task, in Plan mode:</p>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Before you start, propose the checks that should hold after each step: row counts, duplicate IDs, matches in merges, value ranges, missing values. Wait for my OK on the list.</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Then put the checks in the code, so they run every time. After each run, save a short table of all checks with pass/fail in output/checks.md.</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>If a check fails, stop and tell me.</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>Any choice I did not specify goes into DECISIONS.md, marked needs-review.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Try it on the World Bank task: in a new session, ask the agent to add checks to the existing scripts.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -729,28 +730,29 @@ Any choice I did not specify goes into DECISIONS.md, marked needs-review.</code>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>“No problems found” only means the agreed checks passed. Keep the hand check from Step 2.4: compare two or three numbers with the source yourself. It takes five minutes, and it is the one check that does not depend on the agent.</p>
+<p>“No problems found” only means that the agreed checks passed. Keep the hand checks of Part 2: compare two or three numbers with the source yourself (Step 2.5), and find two quotes on the page (Step 2.4). It takes five minutes, and it is the one check that doesn’t depend on the agent.</p>
 </div>
 </div>
-<hr>
 </section>
-<section id="step-3.4-a-second-pair-of-eyes" class="level2">
-<h2 class="anchored" data-anchor-id="step-3.4-a-second-pair-of-eyes">Step 3.4 — A second pair of eyes</h2>
-<p>The session that did the work is not its best judge: it remembers its own reasoning and tends to defend it. A <strong>new session</strong> has no such history and reads the files as a coauthor would.</p>
+<section id="step-3-4" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-4"><span class="step-no">3.4</span> Get a second pair of eyes</h2>
+<p>The session that did the work is not its best judge. It remembers its own reasoning and tends to defend it. <strong>A new session</strong> has no such history, and it reads the files as a coauthor would.</p>
 <p>When a piece of work is done, start a new session and send:</p>
-<pre class="text"><code>You are reviewing work that someone else did in this folder.
-Read AGENTS.md, DECISIONS.md and the scripts in code/.
-Rerun all scripts from scratch, in order. Do the outputs match the ones
-already saved? Then list anything that looks wrong, untested or
-undocumented, most serious first. Do not change any files.</code></pre>
-<p>Read the review like a referee report: some points matter, some are noise. Take the serious ones back to the agent, one at a time, each in a new session.</p>
-<hr>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>You are reviewing work that someone else did in this folder.</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Read AGENTS.md, DECISIONS.md and the scripts in code/.</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Rerun all scripts from scratch, in order. Do the outputs match the ones already saved?</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>Then list anything that looks wrong, untested or undocumented, most serious first. Do not change any files.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>For a text, ask the reviewer to check every quote and every reference against the files in the folder, and every number against the tables.</p>
+<p>Read the review as you would read a referee report: some points matter, some are noise. Take the serious ones back to the agent, one at a time, each in a new session.</p>
+<p>All this takes time. But it is your name on the paper, not the agent’s, and a wrong number or an invented quote found by a reader costs far more than an hour of checking.</p>
 </section>
 <section id="worth-the-setup-version-control" class="level2">
-<h2 class="anchored" data-anchor-id="worth-the-setup-version-control">Worth the setup: version control</h2>
-<p>The steps above need no extra tools. Once you use the agent regularly, one more is worth setting up: <strong>version control</strong>, usually <strong>Git</strong> with <strong>GitHub</strong>. Git keeps a history of your project folder: each <em>commit</em> saves a snapshot of every file with a one-line note on what changed. GitHub keeps a private copy of that history online.</p>
-<p>It adds two things. First, you see what changed across sessions and days, line by line, not only within one session. Second, every mistake can be undone by going back to the last version that worked, which makes it cheap to let the agent try things.</p>
-<p>The price is about an hour of setup and one habit: commit after each step that works. The agent does most of the typing, and GitHub Desktop shows the history without the terminal. Setup and daily use: <a href="../da-knowledge/ai-coding-prep.html#version-control-with-git-and-github">Version control with Git and GitHub</a>.</p>
+<h2 class="anchored" data-anchor-id="worth-the-setup-version-control">Is version control worth the setup?</h2>
+<p>The steps above need no extra tools. Once you use the agent regularly, one more tool is worth setting up: <strong>version control</strong>, usually <strong>Git</strong> with <strong>GitHub</strong>. Git keeps a history of your project folder: each <em>commit</em> saves a snapshot of every file, with a one-line note on what changed. GitHub keeps a private copy of that history online.</p>
+<p>It adds two things. First, you see what changed across sessions and days, line by line, not only within one session. Second, every mistake can be undone by going back to the last version that worked. This makes it cheap to let the agent try things.</p>
+<p>The price is about an hour of setup and one habit: commit after each step that works. The agent does most of the typing, and GitHub Desktop shows the history without the terminal. For setup and daily use, see <a href="../da-knowledge/ai-coding-prep.html#version-control-with-git-and-github">Version control with Git and GitHub</a>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -761,62 +763,47 @@ undocumented, most serious first. Do not change any files.</code></pre>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Once Git is set up, you can run it entirely through the agent. You read and decide; it types.</p>
+<p>Once Git is set up, you can run it entirely through the agent. You read and decide, and the agent does the typing.</p>
 <p><strong>1. Review before you commit.</strong> Ask for a summary first, and commit only when it matches what you wanted:</p>
-<pre class="text"><code>Summarize, in plain language, what changed since the last commit:
-which files, and what changed in each. Propose a one-line commit message.
-Do not commit yet.</code></pre>
-<p>If the summary lists something you did not ask for, ask about it before you go on.</p>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Summarize, in plain language, what changed since the last commit: which files, and what changed in each. Propose a one-line commit message. Do not commit yet.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If the summary lists something you didn’t ask for, ask about it before you go on.</p>
 <p><strong>2. Commit and push.</strong> When the summary is right:</p>
-<pre class="text"><code>Commit with that message, then push to GitHub.</code></pre>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Commit with that message, then push to GitHub.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p><strong>3. Undo.</strong> If a step turns out wrong, even days later:</p>
-<pre class="text"><code>Revert the last commit, keeping the history. First tell me what this
-will undo, and wait for my OK.</code></pre>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Revert the last commit, keeping the history. First tell me what this will undo, and wait for my OK.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>A <em>revert</em> adds a new commit that undoes an old one, so the record of what happened stays complete. This fits the <code>AGENTS.md</code> rule below: never rewrite or delete Git history.</p>
 <p>You can also ask about the past: <em>“What changed since Monday, and why?”</em></p>
 </div>
 </div>
-<hr>
 </section>
 <section id="the-new-lines-for-agents.md-in-one-place" class="level2">
 <h2 class="anchored" data-anchor-id="the-new-lines-for-agents.md-in-one-place">The new lines for AGENTS.md, in one place</h2>
 <p>Copy these into your <code>AGENTS.md</code>, or ask the agent to add them:</p>
-<pre class="text"><code>## Checking
-
-- Work only inside this project folder. If a step needs anything outside it,
-  stop, tell me what and why, and wait for my OK.
-- Do every step that reads, changes or creates data in a script in code/,
-  never as a one-off command, so that I can read and rerun it.
-- Start each script with a short comment in plain language: what it reads,
-  what it does, and what it writes.
-- Put checks in the code (row counts, duplicate IDs, merge matches, value
-  ranges, missing values). After each run, save all checks with pass/fail
-  in output/checks.md. If a check fails, stop and tell me.
-- Any choice I did not specify goes into DECISIONS.md, marked needs-review.</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>## Checking</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>- Work only inside this project folder. If a step needs anything outside it, stop, tell me what and why, and wait for my OK.</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>- Do every step that reads, changes or creates data in a script in code/, never as a one-off command, so that I can read and rerun it.</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>- Start each script with a short comment in plain language: what it reads, what it does, and what it writes.</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>- Put checks in the code (row counts, duplicate IDs, merge matches, value ranges, missing values). After each run, save all checks with pass/fail in output/checks.md. If a check fails, stop and tell me.</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>- Any choice I did not specify goes into DECISIONS.md, marked needs-review.</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>- Every quote must be word for word from a file in this folder, with the file name and page. Every reference must be a file in this folder or have a DOI.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If you set up Git, add two more:</p>
-<pre class="text"><code>- Commit only when I ask. Never push to GitHub without asking.
-- Never rewrite or delete Git history.</code></pre>
-<hr>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>- Commit only when I ask. Never push to GitHub without asking.</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>- Never rewrite or delete Git history.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="what-comes-next" class="level2">
-<h2 class="anchored" data-anchor-id="what-comes-next">What comes next</h2>
-<p>Part 4 is a live demo: how to write a paper in one hour.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Continue with Part 4
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong><a href="../friendly-agentic-ai-intro/live-demo.html">Part 4 — Live Demo →</a></strong></p>
-</div>
+<h2 class="anchored" data-anchor-id="what-comes-next">What comes next?</h2>
+<p>So far we went step by step, one task at a time. In Part 4 we do the opposite: we give the agent a single prompt and watch a whole paper come out. What you practiced in this part is what makes such a paper checkable.</p>
+<div class="next-part">
+<p><a href="../friendly-agentic-ai-intro/live-demo.html">Continue with Part 4: A Paper in 50 Minutes →</a></p>
 </div>
 
-
-<!-- -->
 
 </section>
 
@@ -891,57 +878,6 @@ will undo, and wait for my OK.</code></pre>
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
-        for (let i=0; i<cellDetails.length; i++) {
-          const details = cellDetails[i];
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -1347,262 +1283,7 @@ will undo, and wait for my OK.</code></pre>
   </script>
   <script type="application/javascript">
   window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Part 3 — Staying in Charge"</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Friendly Introduction to Agentic AI for Social Scientists"</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-11-09"</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>::::::: {.hero-section}</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>:::::: {.container}</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>::: {.hero-title}</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>Part 3 — Staying in Charge</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>::: {.hero-subtitle}</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>Trust, verification and control: set the agent's limits, see what it did, and stand behind work you did not do with your own hands</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>::::::</span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>:::::::</span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Before you start</span></span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>This is Part 3 of <span class="co">[</span><span class="ot">Friendly Introduction to Agentic AI for Social Scientists</span><span class="co">](index.qmd)</span>. It assumes you have finished <span class="co">[</span><span class="ot">Part 1</span><span class="co">](setup.qmd)</span> and <span class="co">[</span><span class="ot">Part 2</span><span class="co">](first-steps.qmd)</span>: a project folder with <span class="in">`AGENTS.md`</span>, the decision-log skill and a first analysis.</span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>It takes about an hour, best done on the World Bank task from Step 2.4.</span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## What you will have at the end</span></span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ A clear picture of what the agent can and cannot touch on your computer</span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ Raw data that is read-only by file setting, not only by instruction</span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ Three ways to see what the agent did: its scripts, its changes, and every step it took</span>
-<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ Checks written into the code, with a pass/fail table after each run</span>
-<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ A routine for having the work reviewed by a fresh session</span>
-<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>☐ A few new lines in your <span class="in">`AGENTS.md`</span></span>
-<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Who is in charge here?</span></span>
-<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>After the first real task, almost everyone has the same worries. They deserve a serious answer.</span>
-<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Control.** *It does things on my computer. What stops it from touching files it should not?*</span>
-<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Visibility.** *It works behind the scenes. How do I see what it actually did, the code included?*</span>
-<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Judgment.** *It makes choices along the way. Which ones did it make without asking me?*</span>
-<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Trust.** *Its results look convincing. How can I put my name on them?*</span>
-<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>Behind these sits a bigger unease: if the agent does the work, where is my part? Is this the robots taking over, one folder at a time?</span>
-<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>No, but not automatically. An agent is a tool that acts, and a tool that acts needs supervision, like a research assistant. That supervision is your part: you set the limits, decide what must be true before you accept a result, read what it did, and decide what goes out under your name. It needs no coding, only the habits of a careful researcher.</span>
-<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>The four steps below answer the four worries: **limits** (3.1), **visibility** (3.2), **checks and decisions** (3.3) and **independent review** (3.4).</span>
-<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 3.1 — Keep the agent in its folder</span></span>
-<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>**Files: the folder is a boundary.** In Manual mode, the agent asks before it reads or changes any file outside the project folder.</span>
-<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>**Commands: the one gap.** To run code, the agent runs commands, and an approved command can reach anything you can. The safeguard is you: in Manual mode, every command waits for your OK.</span>
-<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a>Four habits close the gap:</span>
-<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Read the paths before you approve a command.** A folder outside your project (<span class="in">`C:\Users\you\Desktop`</span>, <span class="in">`~/Documents/other-project`</span>, an unfamiliar drive)? Click no and ask: *"Why do you need to go outside the project folder?"*</span>
-<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Know the expected exceptions.** Installing Python (Step 1.4) puts tools in your user folder, and downloading data (Step 2.4) reaches the web. The agent tells you before it does either.</span>
-<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Work on copies, and lock the raw data.** Put copies in the project folder and keep the originals where they are. Make the raw data read-only (box below). Then even a bad mistake costs nothing.</span>
-<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Put it in `AGENTS.md`**, under "Safety with my files":</span>
-<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a><span class="in">- Work only inside this project folder. If a step needs anything outside it,</span></span>
-<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a><span class="in">  stop, tell me what and why, and wait for my OK.</span></span>
-<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
-<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a><span class="fu">## Raw data is read-only. Always.</span></span>
-<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a>Your <span class="in">`AGENTS.md`</span> tells the agent never to change <span class="in">`data/raw/`</span>. But an instruction can be misread or forgotten in a long session; a file setting cannot. So make the raw files read-only. Ask the agent:</span>
-<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a><span class="in">Make every file in data/raw read-only. Then try to write to one of them,</span></span>
-<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a><span class="in">show me that it fails, and tell me how I could undo the setting.</span></span>
-<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a>Or do it by hand. *Windows:* right-click the file → **Properties** → tick **Read-only**. *Mac:* select the file → **File → Get Info** → tick **Locked**.</span>
-<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a>To overwrite raw data, the agent would now first have to change the setting. That takes a command, and in Manual mode a command waits for your OK.</span>
-<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a>::: {.callout-note collapse="true"}</span>
-<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a><span class="fu">## For the technically curious: the sandbox (click to open)</span></span>
-<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a>On Mac and Linux, Claude Code can also enforce the folder boundary through the operating system, so even an approved command cannot write outside the project. This **sandbox** is off by default and does not run on Windows directly. You do not need it here; see the <span class="co">[</span><span class="ot">sandboxing documentation</span><span class="co">](https://code.claude.com/docs/en/sandboxing)</span> if you are curious.</span>
-<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 3.2 — See what it did</span></span>
-<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a>The agent does not have to work behind the scenes. Use all three windows into its work.</span>
-<span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a>**1. The scripts.** Every data step should live in a script in <span class="in">`code/`</span>, which you can read and rerun. Your <span class="in">`AGENTS.md`</span> already asks for numbered scripts. Add two lines to close the loopholes:</span>
-<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a><span class="in">- Do every step that reads, changes or creates data in a script in code/,</span></span>
-<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a><span class="in">  never as a one-off command, so that I can read and rerun it.</span></span>
-<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a><span class="in">- Start each script with a short comment in plain language: what it reads,</span></span>
-<span id="cb11-107"><a href="#cb11-107" aria-hidden="true" tabindex="-1"></a><span class="in">  what it does, and what it writes.</span></span>
-<span id="cb11-108"><a href="#cb11-108" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-109"><a href="#cb11-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a>You do not need to read Python. Click a script in the chat to open it, and ask: *"Explain code/02_clean.py paragraph by paragraph, in plain language, for a colleague who does not code."* Then ask about anything that sounds like a choice: *"Why drop those rows? What else could you have done?"*</span>
-<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a>**2. The changes.** After the agent edits files, a **Changes** card shows line counts such as `+12 -1`. Click it for the **diff view**: each changed file, with removed lines in red and added lines in green. To comment on a line, hover over it, click the **+** next to the line number, and type. Send all comments with **Ctrl+Enter** (Windows) or **Cmd+Enter** (Mac), and the agent revises.</span>
-<span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a>**3. The steps.** The conversation normally shows each action as a short summary. To see every file read and every command run, switch the **Transcript view** to **Verbose**: press **Ctrl+O** to cycle through the views, or use the menu next to the session title. This helps when something surprises you.</span>
-<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 3.3 — Decide the checks before the work</span></span>
-<span id="cb11-119"><a href="#cb11-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a>Save the code, plan checks in advance, or hear only about problems? All three, in this order.</span>
-<span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a>**Before the work: agree on what must be true.** In Plan mode, ask the agent to propose checks for each step. For social science data, the usual ones are:</span>
-<span id="cb11-123"><a href="#cb11-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-124"><a href="#cb11-124" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>the number of observations after each step (respondents, countries, years);</span>
-<span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>no duplicate IDs where there should be one row per person or country-year;</span>
-<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>after a merge: how many rows matched, and how many did not, from each side;</span>
-<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>values in a plausible range (age 18–99, shares between 0 and 100);</span>
-<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>missing values per key variable;</span>
-<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>totals that should match a published table.</span>
-<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a>Add your own; you know the data. A good research assistant runs these checks anyway. Here they become explicit.</span>
-<span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a>**During the work: checks go into the code**, so they run every time. After each run, the agent saves a short table with a pass or fail for each check.</span>
-<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a>**After the work: report by exception.** There are two kinds of exception. A failed check means stop and tell me. Any choice you did not specify goes into <span class="in">`DECISIONS.md`</span>, marked <span class="in">`needs-review`</span>; this is what the decision-log skill from Step 2.3 does.</span>
-<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a>The prompt, for the start of a task, in Plan mode:</span>
-<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-139"><a href="#cb11-139" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb11-140"><a href="#cb11-140" aria-hidden="true" tabindex="-1"></a><span class="in">Before you start, propose the checks that should hold after each step:</span></span>
-<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a><span class="in">row counts, duplicate IDs, matches in merges, value ranges, missing values.</span></span>
-<span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a><span class="in">Wait for my OK on the list.</span></span>
-<span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a><span class="in">Then put the checks in the code, so they run every time. After each run,</span></span>
-<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a><span class="in">save a short table of all checks with pass/fail in output/checks.md.</span></span>
-<span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a><span class="in">If a check fails, stop and tell me.</span></span>
-<span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a><span class="in">Any choice I did not specify goes into DECISIONS.md, marked needs-review.</span></span>
-<span id="cb11-147"><a href="#cb11-147" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-148"><a href="#cb11-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a>**Try it** on the World Bank task: in a new session, ask the agent to add checks to the existing scripts.</span>
-<span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-151"><a href="#cb11-151" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
-<span id="cb11-152"><a href="#cb11-152" aria-hidden="true" tabindex="-1"></a><span class="fu">## Report by exception is not enough on its own</span></span>
-<span id="cb11-153"><a href="#cb11-153" aria-hidden="true" tabindex="-1"></a>"No problems found" only means the agreed checks passed. Keep the hand check from Step 2.4: compare two or three numbers with the source yourself. It takes five minutes, and it is the one check that does not depend on the agent.</span>
-<span id="cb11-154"><a href="#cb11-154" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-155"><a href="#cb11-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-156"><a href="#cb11-156" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-157"><a href="#cb11-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-158"><a href="#cb11-158" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 3.4 — A second pair of eyes</span></span>
-<span id="cb11-159"><a href="#cb11-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-160"><a href="#cb11-160" aria-hidden="true" tabindex="-1"></a>The session that did the work is not its best judge: it remembers its own reasoning and tends to defend it. A **new session** has no such history and reads the files as a coauthor would.</span>
-<span id="cb11-161"><a href="#cb11-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-162"><a href="#cb11-162" aria-hidden="true" tabindex="-1"></a>When a piece of work is done, start a new session and send:</span>
-<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-164"><a href="#cb11-164" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a><span class="in">You are reviewing work that someone else did in this folder.</span></span>
-<span id="cb11-166"><a href="#cb11-166" aria-hidden="true" tabindex="-1"></a><span class="in">Read AGENTS.md, DECISIONS.md and the scripts in code/.</span></span>
-<span id="cb11-167"><a href="#cb11-167" aria-hidden="true" tabindex="-1"></a><span class="in">Rerun all scripts from scratch, in order. Do the outputs match the ones</span></span>
-<span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a><span class="in">already saved? Then list anything that looks wrong, untested or</span></span>
-<span id="cb11-169"><a href="#cb11-169" aria-hidden="true" tabindex="-1"></a><span class="in">undocumented, most serious first. Do not change any files.</span></span>
-<span id="cb11-170"><a href="#cb11-170" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-171"><a href="#cb11-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-172"><a href="#cb11-172" aria-hidden="true" tabindex="-1"></a>Read the review like a referee report: some points matter, some are noise. Take the serious ones back to the agent, one at a time, each in a new session.</span>
-<span id="cb11-173"><a href="#cb11-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-175"><a href="#cb11-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-176"><a href="#cb11-176" aria-hidden="true" tabindex="-1"></a><span class="fu">## Worth the setup: version control</span></span>
-<span id="cb11-177"><a href="#cb11-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-178"><a href="#cb11-178" aria-hidden="true" tabindex="-1"></a>The steps above need no extra tools. Once you use the agent regularly, one more is worth setting up: **version control**, usually **Git** with **GitHub**. Git keeps a history of your project folder: each *commit* saves a snapshot of every file with a one-line note on what changed. GitHub keeps a private copy of that history online.</span>
-<span id="cb11-179"><a href="#cb11-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-180"><a href="#cb11-180" aria-hidden="true" tabindex="-1"></a>It adds two things. First, you see what changed across sessions and days, line by line, not only within one session. Second, every mistake can be undone by going back to the last version that worked, which makes it cheap to let the agent try things.</span>
-<span id="cb11-181"><a href="#cb11-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-182"><a href="#cb11-182" aria-hidden="true" tabindex="-1"></a>The price is about an hour of setup and one habit: commit after each step that works. The agent does most of the typing, and GitHub Desktop shows the history without the terminal. Setup and daily use: <span class="co">[</span><span class="ot">Version control with Git and GitHub</span><span class="co">](../da-knowledge/ai-coding-prep.qmd#version-control-with-git-and-github)</span>.</span>
-<span id="cb11-183"><a href="#cb11-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-184"><a href="#cb11-184" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb11-185"><a href="#cb11-185" aria-hidden="true" tabindex="-1"></a><span class="fu">## Let the agent run Git, with you deciding each step</span></span>
-<span id="cb11-186"><a href="#cb11-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-187"><a href="#cb11-187" aria-hidden="true" tabindex="-1"></a>Once Git is set up, you can run it entirely through the agent. You read and decide; it types.</span>
-<span id="cb11-188"><a href="#cb11-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-189"><a href="#cb11-189" aria-hidden="true" tabindex="-1"></a>**1. Review before you commit.** Ask for a summary first, and commit only when it matches what you wanted:</span>
-<span id="cb11-190"><a href="#cb11-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-191"><a href="#cb11-191" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb11-192"><a href="#cb11-192" aria-hidden="true" tabindex="-1"></a><span class="in">Summarize, in plain language, what changed since the last commit:</span></span>
-<span id="cb11-193"><a href="#cb11-193" aria-hidden="true" tabindex="-1"></a><span class="in">which files, and what changed in each. Propose a one-line commit message.</span></span>
-<span id="cb11-194"><a href="#cb11-194" aria-hidden="true" tabindex="-1"></a><span class="in">Do not commit yet.</span></span>
-<span id="cb11-195"><a href="#cb11-195" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-196"><a href="#cb11-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-197"><a href="#cb11-197" aria-hidden="true" tabindex="-1"></a>If the summary lists something you did not ask for, ask about it before you go on.</span>
-<span id="cb11-198"><a href="#cb11-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-199"><a href="#cb11-199" aria-hidden="true" tabindex="-1"></a>**2. Commit and push.** When the summary is right:</span>
-<span id="cb11-200"><a href="#cb11-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-201"><a href="#cb11-201" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb11-202"><a href="#cb11-202" aria-hidden="true" tabindex="-1"></a><span class="in">Commit with that message, then push to GitHub.</span></span>
-<span id="cb11-203"><a href="#cb11-203" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-204"><a href="#cb11-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-205"><a href="#cb11-205" aria-hidden="true" tabindex="-1"></a>**3. Undo.** If a step turns out wrong, even days later:</span>
-<span id="cb11-206"><a href="#cb11-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-207"><a href="#cb11-207" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb11-208"><a href="#cb11-208" aria-hidden="true" tabindex="-1"></a><span class="in">Revert the last commit, keeping the history. First tell me what this</span></span>
-<span id="cb11-209"><a href="#cb11-209" aria-hidden="true" tabindex="-1"></a><span class="in">will undo, and wait for my OK.</span></span>
-<span id="cb11-210"><a href="#cb11-210" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-211"><a href="#cb11-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-212"><a href="#cb11-212" aria-hidden="true" tabindex="-1"></a>A *revert* adds a new commit that undoes an old one, so the record of what happened stays complete. This fits the <span class="in">`AGENTS.md`</span> rule below: never rewrite or delete Git history.</span>
-<span id="cb11-213"><a href="#cb11-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-214"><a href="#cb11-214" aria-hidden="true" tabindex="-1"></a>You can also ask about the past: *"What changed since Monday, and why?"*</span>
-<span id="cb11-215"><a href="#cb11-215" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-216"><a href="#cb11-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-217"><a href="#cb11-217" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-218"><a href="#cb11-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-219"><a href="#cb11-219" aria-hidden="true" tabindex="-1"></a><span class="fu">## The new lines for AGENTS.md, in one place</span></span>
-<span id="cb11-220"><a href="#cb11-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-221"><a href="#cb11-221" aria-hidden="true" tabindex="-1"></a>Copy these into your <span class="in">`AGENTS.md`</span>, or ask the agent to add them:</span>
-<span id="cb11-222"><a href="#cb11-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-223"><a href="#cb11-223" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb11-224"><a href="#cb11-224" aria-hidden="true" tabindex="-1"></a><span class="in">## Checking</span></span>
-<span id="cb11-225"><a href="#cb11-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-226"><a href="#cb11-226" aria-hidden="true" tabindex="-1"></a><span class="in">- Work only inside this project folder. If a step needs anything outside it,</span></span>
-<span id="cb11-227"><a href="#cb11-227" aria-hidden="true" tabindex="-1"></a><span class="in">  stop, tell me what and why, and wait for my OK.</span></span>
-<span id="cb11-228"><a href="#cb11-228" aria-hidden="true" tabindex="-1"></a><span class="in">- Do every step that reads, changes or creates data in a script in code/,</span></span>
-<span id="cb11-229"><a href="#cb11-229" aria-hidden="true" tabindex="-1"></a><span class="in">  never as a one-off command, so that I can read and rerun it.</span></span>
-<span id="cb11-230"><a href="#cb11-230" aria-hidden="true" tabindex="-1"></a><span class="in">- Start each script with a short comment in plain language: what it reads,</span></span>
-<span id="cb11-231"><a href="#cb11-231" aria-hidden="true" tabindex="-1"></a><span class="in">  what it does, and what it writes.</span></span>
-<span id="cb11-232"><a href="#cb11-232" aria-hidden="true" tabindex="-1"></a><span class="in">- Put checks in the code (row counts, duplicate IDs, merge matches, value</span></span>
-<span id="cb11-233"><a href="#cb11-233" aria-hidden="true" tabindex="-1"></a><span class="in">  ranges, missing values). After each run, save all checks with pass/fail</span></span>
-<span id="cb11-234"><a href="#cb11-234" aria-hidden="true" tabindex="-1"></a><span class="in">  in output/checks.md. If a check fails, stop and tell me.</span></span>
-<span id="cb11-235"><a href="#cb11-235" aria-hidden="true" tabindex="-1"></a><span class="in">- Any choice I did not specify goes into DECISIONS.md, marked needs-review.</span></span>
-<span id="cb11-236"><a href="#cb11-236" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-237"><a href="#cb11-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-238"><a href="#cb11-238" aria-hidden="true" tabindex="-1"></a>If you set up Git, add two more:</span>
-<span id="cb11-239"><a href="#cb11-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-240"><a href="#cb11-240" aria-hidden="true" tabindex="-1"></a><span class="in">``` text</span></span>
-<span id="cb11-241"><a href="#cb11-241" aria-hidden="true" tabindex="-1"></a><span class="in">- Commit only when I ask. Never push to GitHub without asking.</span></span>
-<span id="cb11-242"><a href="#cb11-242" aria-hidden="true" tabindex="-1"></a><span class="in">- Never rewrite or delete Git history.</span></span>
-<span id="cb11-243"><a href="#cb11-243" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-244"><a href="#cb11-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-245"><a href="#cb11-245" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
-<span id="cb11-246"><a href="#cb11-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-247"><a href="#cb11-247" aria-hidden="true" tabindex="-1"></a><span class="fu">## What comes next</span></span>
-<span id="cb11-248"><a href="#cb11-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-249"><a href="#cb11-249" aria-hidden="true" tabindex="-1"></a>Part 4 is a live demo: how to write a paper in one hour.</span>
-<span id="cb11-250"><a href="#cb11-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-251"><a href="#cb11-251" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb11-252"><a href="#cb11-252" aria-hidden="true" tabindex="-1"></a><span class="fu">## Continue with Part 4</span></span>
-<span id="cb11-253"><a href="#cb11-253" aria-hidden="true" tabindex="-1"></a>**[Part 4 — Live Demo →](live-demo.qmd)**</span>
-<span id="cb11-254"><a href="#cb11-254" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
+  </script>
 </div> <!-- /content -->
 
 
