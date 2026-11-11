@@ -692,6 +692,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="write-in-markdown-finish-in-word" class="level3">
 <h3 class="anchored" data-anchor-id="write-in-markdown-finish-in-word">Write in Markdown, finish in Word</h3>
 <p>For new text (a memo, a section, a report), we advise drafting and revising in Markdown with the agent, and converting to Word at the end. The agent works best in plain text, and its changes are easier to follow there.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Try it: what the agent sees
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Right-click a Word file and open it with Notepad (on Windows). What you see is unreadable: a <code>.docx</code> is a packed bundle of files. Before the agent can work with it, it has to unpack and convert it, which costs time and loses some structure. Now open a Markdown file the same way: it reads just as it does in Typora. On a Mac, or on any computer, you can ask the agent instead: <em>“Show me the first 20 lines of docs/draft.docx exactly as stored on disk, without converting it.”</em></p>
+<p>The idea comes from Simon Martin’s slides <a href="https://github.com/simonmartinecon/jumpstart-ai">Jump-starting AI agents</a>.</p>
+</div>
+</div>
 <div class="prompt">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Convert docs/memo.md to docs/memo.docx. Use docs/my-template.docx for the styles (fonts, headings, margins).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -714,7 +728,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Then open <code>AGENTS.md</code> in Typora and <strong>edit the “About me” section</strong>. It is your file.</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -723,7 +737,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Instructions for the AI agent in this project</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -745,50 +759,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Work in small steps. Stop at natural break points and tell me what you did and what is left.</span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If my request is unclear, ask one question rather than guessing.</span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>When you finish, say what you did not do or could not check.</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Safety with my files</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Keep <span class="in">`status.md`</span> up to date: what is done, what is open, what comes next.</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  Update it at the end of each task. When I say "continue", read it first.</span>
 <span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never delete files. If something should go, move it to <span class="in">`_old/`</span> and tell me.</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never change anything in <span class="in">`data/raw/`</span>. Raw data stays as it arrived.</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never overwrite a Word, Excel or PDF file I gave you. Save your changes as a new</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  file with <span class="in">`_v2`</span> (or the next number) at the end of the name.</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Install Python packages only inside this project's environment (<span class="in">`.venv`</span>).</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  Ask before installing anything for the whole computer.</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Do not upload my files or data to any website or online service.</span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data and numbers</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Safety with my files</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never delete files. If something should go, move it to <span class="in">`_old/`</span> and tell me.</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never change anything in <span class="in">`data/raw/`</span>. Raw data stays as it arrived.</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never overwrite a Word, Excel or PDF file I gave you. Save your changes as a new</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  file with <span class="in">`_v2`</span> (or the next number) at the end of the name.</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Install Python packages only inside this project's environment (<span class="in">`.venv`</span>).</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  Ask before installing anything for the whole computer.</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Do not upload my files or data to any website or online service.</span>
 <span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never make up numbers, references, quotes or sources. If you cannot verify something, say so.</span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>When you report a number, say where it comes from (which file, which script, which web page).</span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check your own results: count rows before and after each step, and compare a few</span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  values by hand with the source.</span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Log analytical choices in <span class="in">`DECISIONS.md`</span> (see the <span class="in">`decision-log`</span> skill).</span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="fu">## Folders and files</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data and numbers</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Never make up numbers, references, quotes or sources. If you cannot verify something, say so.</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>When you report a number, say where it comes from (which file, which script, which web page).</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check your own results: count rows before and after each step, and compare a few</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>  values by hand with the source.</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Log analytical choices in <span class="in">`DECISIONS.md`</span> (see the <span class="in">`decision-log`</span> skill).</span>
 <span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/raw/`</span> original data, never edited</span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/clean/`</span> cleaned data, produced by code</span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`code/`</span> scripts, numbered in the order they run: <span class="in">`01_get_data.py`</span>, <span class="in">`02_clean.py`</span>, ...</span>
-<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`output/`</span> figures (PNG) and tables</span>
-<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`docs/`</span> notes, memos and drafts. Write new text in Markdown (<span class="in">`.md`</span>);</span>
-<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>  convert to Word only when I ask.</span>
-<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Every result must be reproducible: running the scripts in order rebuilds all outputs.</span>
-<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## Writing</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## Folders and files</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/raw/`</span> original data, never edited</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data/clean/`</span> cleaned data, produced by code</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`code/`</span> scripts, numbered in the order they run: <span class="in">`01_get_data.py`</span>, <span class="in">`02_clean.py`</span>, ...</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`output/`</span> figures (PNG) and tables</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`docs/`</span> notes, memos and drafts. Write new text in Markdown (<span class="in">`.md`</span>);</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>  convert to Word only when I ask.</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Every result must be reproducible: running the scripts in order rebuilds all outputs.</span>
 <span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Plain, direct prose. Short sentences. No hype words (delve, crucial, landscape,</span>
-<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>  comprehensive, shed light on).</span>
-<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Say what the data shows, then the caveats. Talk about associations, not effects,</span>
-<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>  unless the design allows a causal reading.</span>
-<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a><span class="fu">## PDFs</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Writing</span></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Plain, direct prose. Short sentences. No hype words (delve, crucial, landscape,</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>  comprehensive, shed light on).</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Say what the data shows, then the caveats. Talk about associations, not effects,</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>  unless the design allows a causal reading.</span>
 <span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>To read a PDF, first extract its text to a <span class="in">`.txt`</span> file, then work from the text</span>
-<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>  (see the <span class="in">`read-pdf`</span> skill).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## PDFs</span></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>To read a PDF, first extract its text to a <span class="in">`.txt`</span> file, then work from the text</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>  (see the <span class="in">`read-pdf`</span> skill).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
-<p>What does it say? Plan before longer tasks. Do the smallest thing that answers the request. Never delete: move files to <code>_old/</code>. Never overwrite raw data or your Word files. Never invent numbers or references, and say where each number comes from. Check results by hand. Log analytical decisions.</p>
+<p>What does it say? Plan before longer tasks. Do the smallest thing that answers the request. Never delete: move files to <code>_old/</code>. Never overwrite raw data or your Word files. Never invent numbers or references, and say where each number comes from. Check results by hand. Log analytical decisions. Keep a short progress note, <code>status.md</code>, so the next session can pick up where this one stopped.</p>
 <p>Grow the file slowly. <strong>When the agent makes the same mistake twice, add one line.</strong> After a month it will fit how you work better than any template.</p>
 </section>
 <section id="step-2-3" class="level2">
@@ -798,7 +814,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong><code>decision-log</code></strong> records every analytical choice in a file called <code>DECISIONS.md</code>: dropped observations, variable definitions, methods. For each choice it notes the alternatives and the basis: evidence, convention, your instruction, or just a default. Read this file <em>before</em> you trust the results.</p>
 <p><strong><code>read-pdf</code></strong> makes the agent extract a PDF’s text to a <code>.txt</code> file first and work from that, with page numbers. This prevents the most common failure with PDFs: answering from a partly read document without saying so.</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -807,7 +823,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> decision-log</span></span>
@@ -875,7 +891,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -884,7 +900,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> read-pdf</span></span>
@@ -1010,7 +1026,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Small steps.</strong> Ask for one thing, check it, then ask for the next. An agent running on a vague task produces plausible-looking work that you then have to read.</li>
 <li><strong>Check against the source.</strong> Compare a few numbers and a few quotes with the source by hand, every time.</li>
 <li><strong>Never let it delete or overwrite.</strong> Raw data and original documents stay untouched, and old files go to <code>_old/</code>. Then every mistake can be undone.</li>
-<li><strong>One session per task.</strong> Long sessions get muddled. Start a new one for each task. What must carry over goes in <code>AGENTS.md</code>, <code>DECISIONS.md</code> or a notes file.</li>
+<li><strong>One session per task.</strong> Long sessions get muddled. Start a new one for each task. What must carry over goes in a file: standing rules in <code>AGENTS.md</code>, analytical choices in <code>DECISIONS.md</code>, and where the work stands in <code>status.md</code>. End a session with <em>“Update status.md.”</em> Start the next with <em>“Read status.md and continue where we left off.”</em></li>
 <li><strong>Ask it to explain.</strong> “Why did you do that?” “What could go wrong here?” You are responsible for the work, so you need to understand it.</li>
 </ol>
 </div>
