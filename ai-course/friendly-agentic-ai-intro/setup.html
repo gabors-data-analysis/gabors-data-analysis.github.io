@@ -697,7 +697,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="step-1-2"><span class="step-no">1.2</span> Make a project folder</h2>
 <p>The agent works inside <strong>one folder</strong>. Think of it as the desk you give to a new research assistant: what is on the desk, they can read and work on. What is not, they can’t. Everything for a project lives there: data, code, notes, drafts, outputs. It is good practice to use a new folder for each project.</p>
 <ol type="1">
-<li>In your <strong>Documents</strong> folder, create a folder called <code>ai-projects</code>, and inside it a folder called <code>first-project</code>.</li>
+<li>In your <strong>Documents</strong> folder, or in your Dropbox (see the box below), create a folder called <code>ai-projects</code>, and inside it a folder called <code>first-project</code>.</li>
 <li>Use short names without spaces or accents (<code>first-project</code>, not <code>My First Project (ÁÉ)</code>). Programs handle plain names better.</li>
 <li>Show file extensions, so you can tell <code>.md</code>, <code>.csv</code>, <code>.py</code> and <code>.docx</code> files apart.
 <ul>
@@ -705,6 +705,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><em>Mac:</em> in Finder, open <strong>Finder → Settings → Advanced</strong> and tick <strong>Show all filename extensions</strong>.</li>
 </ul></li>
 </ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Put the folder in Dropbox
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you use Dropbox, OneDrive or Google Drive, it is good practice to create <code>ai-projects</code> there rather than in Documents. These services keep earlier versions of each file. So you can go back in time: if the agent spoils a file, open its version history and restore yesterday’s version. How far back you can go depends on your plan.</p>
+<p>Git and GitHub do the same job more precisely, with a saved snapshot after each step that works. They take some setup. See <a href="../friendly-agentic-ai-intro/checking-work.html#worth-the-setup-version-control">Is version control worth the setup?</a> in Part 3.</p>
+</div>
+</div>
 <p><strong>Open the folder in Claude.</strong> In the Code tab, find the row of controls under the prompt box. Click the first one (the environment) and choose the top entry under <strong>Local</strong>. Then click the folder control next to it, choose <strong>Open folder…</strong> and pick <code>first-project</code>.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -756,7 +770,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Already use Stata or R? Keep using them. The agent can write and run do-files and R scripts, too. For this course, Python is the path.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -765,7 +779,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>Windows:</strong> if the agent says it needs <strong>Git</strong>, install <a href="https://git-scm.com/downloads/win">Git for Windows</a> with the default options, restart the Claude app, and ask the agent to continue.</li>
