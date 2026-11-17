@@ -82,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a3cd743da2d5fef018bf0d51e79a95a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3637eac0653fefa00eca104b8efbd080.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -311,14 +311,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../friendly-agentic-ai-intro/checking-work.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Part 3: Staying in Charge</span></a>
+  <a href="../friendly-agentic-ai-intro/live-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 3: A Paper in 50 Minutes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../friendly-agentic-ai-intro/live-demo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Part 4: A Paper in 50 Minutes</span></a>
+  <a href="../friendly-agentic-ai-intro/after-the-course.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 4: After the Course</span></a>
   </div>
 </li>
       </ul>
@@ -627,13 +627,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="course-map">
-<p><a href="../friendly-agentic-ai-intro/index.html"><span class="n">⌂</span> Overview</a> <a href="../friendly-agentic-ai-intro/setup.html" class="here"><span class="n">1</span> Setup</a> <a href="../friendly-agentic-ai-intro/first-steps.html"><span class="n">2</span> First steps</a> <a href="../friendly-agentic-ai-intro/checking-work.html"><span class="n">3</span> Staying in charge</a> <a href="../friendly-agentic-ai-intro/live-demo.html"><span class="n">4</span> A paper in 50 minutes</a></p>
+<p><a href="../friendly-agentic-ai-intro/index.html"><span class="n">⌂</span> Overview</a> <a href="../friendly-agentic-ai-intro/setup.html" class="here"><span class="n">1</span> Setup</a> <a href="../friendly-agentic-ai-intro/first-steps.html"><span class="n">2</span> First steps</a> <a href="../friendly-agentic-ai-intro/live-demo.html"><span class="n">3</span> A paper in 50 minutes</a> <a href="../friendly-agentic-ai-intro/after-the-course.html"><span class="n">4</span> After the course</a></p>
 </div>
 <section id="what-do-we-do-in-this-part" class="level2">
 <h2 class="anchored" data-anchor-id="what-do-we-do-in-this-part">What do we do in this part?</h2>
 <p>Before a new research assistant can help, they need a desk, access to the right files, and the tools of the job. The agent is no different. In this part we install the app, make a folder for the agent to work in, have a first conversation with it, and let it install its own tools.</p>
 <p>New here? Read the <a href="../friendly-agentic-ai-intro/index.html">overview</a> first: it explains what an agent is and what you need.</p>
 <p>This part takes about an hour. The agent explains each step before it takes it, and you approve. If something fails, nothing is broken. See the <a href="#troubleshooting">troubleshooting table</a> at the end, or ask the agent what went wrong.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Worried you will break something?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Many people are, and it is a good instinct. Here is why you can relax.</p>
+<ul>
+<li><strong>Nothing happens without your click.</strong> In Manual mode the agent asks before it changes a file or runs anything. When in doubt, click no. Nothing bad follows from a no.</li>
+<li><strong>It works in one folder you choose.</strong> Your other files are outside it. If a request ever names another folder, click no and ask why.</li>
+<li><strong>Start with copies.</strong> Put copies of your files in the project folder and keep the originals where they are. In the worst case, you delete the folder and start again.</li>
+<li><strong>You can stop it at any time.</strong> The stop button interrupts it mid-step.</li>
+<li><strong>You can ask before you approve.</strong> <em>“What does this do? Is it safe? Can it be undone?”</em> The agent answers in plain language.</li>
+<li><strong>You can’t run up a bill.</strong> Pro has a fixed monthly price. When you reach the usage limit, the agent pauses until the limit resets, unless you choose to buy extra usage.</li>
+<li><strong>Even the Python setup can be undone.</strong> The agent writes down what it installed and how to remove all of it (Step 1.4).</li>
+</ul>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -655,6 +677,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="step-1-1" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-1"><span class="step-no">1.1</span> Install the Claude desktop app</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Which plan do I need?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The free Claude plan has no agent. For this course you need <strong>Claude Pro</strong>: $20 a month, or $17 a month paid for a year. You can cancel any time, so one month is enough to try. Prices as of November 2026; see <a href="https://claude.com/pricing">claude.com/pricing</a>.</p>
+<ul>
+<li><strong>Usage limits.</strong> Every plan has a limit that resets every five hours, and a weekly one. Long sessions, large files and the strongest models use it up faster. When you hit it, you wait until it resets. Pro is enough for this course and for light regular use.</li>
+<li><strong>More usage.</strong> <strong>Max</strong> ($100 a month) gives five times the usage of Pro, and <strong>Ultra</strong> ($200) more still. Move up only when you keep hitting the limit.</li>
+<li><strong>Through your university.</strong> Ask whether it has a Claude <strong>Team</strong> or <strong>Enterprise</strong> plan. These include the agent, and conversations on them are not used to train models. On Pro and Max, training is a setting you choose in your account’s privacy settings.</li>
+<li><strong>The alternatives</strong> cost about the same: ChatGPT Plus ($20) includes OpenAI’s Codex, and Google AI Pro (about $20) raises the limits of Antigravity, which also has a free tier. See the box below.</li>
+</ul>
+</div>
+</div>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Linux</a></li></ul>
 <div class="tab-content">
@@ -692,6 +733,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The <strong>Chat</strong> tab is the chatbot you know. The <strong>Code</strong> tab is the agent. Don’t let the name mislead you: Code is for any work on files in a folder, text included.</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Using Codex or Antigravity instead? (click to open)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Two agents work much like Claude Code. Most of this course carries over: the project folder, <code>AGENTS.md</code>, planning first, small steps, and checking.</p>
+<p><strong>Codex, by OpenAI.</strong> The closest alternative. It comes with a ChatGPT plan (Plus or higher).</p>
+<ol type="1">
+<li>Download the Codex app from <a href="https://openai.com/codex/">openai.com/codex</a>. On Windows it comes from the Microsoft Store.</li>
+<li>Sign in with your ChatGPT account.</li>
+<li>Open your project folder, and start with the setting that asks before every action.</li>
+<li>Codex reads <code>AGENTS.md</code> by itself, so our starter file works as it is. Skills live in a different folder: ask Codex where to put them.</li>
+</ol>
+<p><strong>Antigravity, by Google.</strong> It runs Google’s Gemini models. It is free to start, with weekly limits; Google AI Pro raises them. It looks more like a programmer’s editor than a chat window.</p>
+<ol type="1">
+<li>Download it from <a href="https://antigravity.google/">antigravity.google</a> (Mac, Windows, Linux).</li>
+<li>Sign in with your Google account.</li>
+<li>Open your project folder, and choose the setting where the agent asks for your review before it acts.</li>
+<li>Ask the agent to read <code>AGENTS.md</code> at the start of each session, or copy its rules into the tool’s own rules.</li>
+</ol>
+<p>In both, the prompts of this course work as they are. The menus and the names of the settings differ, and they change often. When in doubt, ask the agent itself: <em>“How do I make you ask before every action?”</em></p>
+</div>
+</div>
+</div>
 </section>
 <section id="step-1-2" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-2"><span class="step-no">1.2</span> Make a project folder</h2>
@@ -716,7 +788,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <p>If you use Dropbox, OneDrive or Google Drive, it is good practice to create <code>ai-projects</code> there rather than in Documents. These services keep earlier versions of each file. So you can go back in time: if the agent spoils a file, open its version history and restore yesterday’s version. How far back you can go depends on your plan.</p>
-<p>Git and GitHub do the same job more precisely, with a saved snapshot after each step that works. They take some setup. See <a href="../friendly-agentic-ai-intro/checking-work.html#worth-the-setup-version-control">Is version control worth the setup?</a> in Part 3.</p>
+<p>Git and GitHub do the same job more precisely, with a saved snapshot after each step that works. They take some setup. See <a href="../friendly-agentic-ai-intro/after-the-course.html#how-do-i-keep-a-history-of-every-change">How do I keep a history of every change?</a> in Part 4.</p>
 </div>
 </div>
 <p><strong>Open the folder in Claude.</strong> In the Code tab, find the row of controls under the prompt box. Click the first one (the environment) and choose the top entry under <strong>Local</strong>. Then click the folder control next to it, choose <strong>Open folder…</strong> and pick <code>first-project</code>.</p>
@@ -742,10 +814,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Hi. I am new to this. What can you see in this folder? Then create a file called hello.md with three sentences about what you can do for a social scientist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The agent looks at the folder (it is empty), then asks to create a file. Read what it wants to do. If it is unclear, click no and ask: <em>“What does this do? Explain in one sentence.”</em></p>
-<p>Then try three things.</p>
+<p>Then try four things.</p>
 <ul>
 <li>Click <code>hello.md</code> in the chat. It opens inside the app.</li>
 <li>Ask: <em>“Make it two sentences and less formal.”</em> The agent edits the file, not just the chat.</li>
+<li>The next time it asks to change the file, click no, on purpose. Nothing changes, and the agent waits for your instruction.</li>
 <li>Click the stop button to interrupt it. You can also type a correction while it works.</li>
 </ul>
 <p>Note the second one. With a chatbot, you would get a new version in the conversation and copy it over. Here the file itself changed.</p>
@@ -770,7 +843,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Already use Stata or R? Keep using them. The agent can write and run do-files and R scripts, too. For this course, Python is the path.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -779,7 +852,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>Windows:</strong> if the agent says it needs <strong>Git</strong>, install <a href="https://git-scm.com/downloads/win">Git for Windows</a> with the default options, restart the Claude app, and ask the agent to continue.</li>
@@ -857,7 +930,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><label><input type="checkbox"><code>output/test_chart.png</code> (Python works) and <code>docs/SETUP-NOTES.md</code>;</label></li>
 <li><label><input type="checkbox">Typora opening <code>.md</code> files.</label></li>
 </ul>
-<p>Setup is done. In Part 2 we put the agent to work: on a Word draft, on a pile of readings, and on a small dataset.</p>
+<p>Setup is done. In Part 2 we put the agent to work on a small project: a pile of papers, a memo you review, and a little data.</p>
 <div class="next-part">
 <p><a href="../friendly-agentic-ai-intro/first-steps.html">Continue with Part 2: First Steps →</a></p>
 </div>
