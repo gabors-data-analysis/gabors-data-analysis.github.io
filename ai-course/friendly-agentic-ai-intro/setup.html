@@ -82,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e6c4e55687ce001ee86b118b65b67507.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1e190821242e70951a7505c3e5e9ae83.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -591,6 +591,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-1-3" id="toc-step-1-3" class="nav-link" data-scroll-target="#step-1-3"><span class="step-no">1.3</span> Have a first conversation with the agent</a></li>
   <li><a href="#step-1-4" id="toc-step-1-4" class="nav-link" data-scroll-target="#step-1-4"><span class="step-no">1.4</span> Let the agent set up Python</a></li>
   <li><a href="#step-1-5" id="toc-step-1-5" class="nav-link" data-scroll-target="#step-1-5"><span class="step-no">1.5</span> Install a Markdown reader: Typora</a></li>
+  <li><a href="#which-model" id="toc-which-model" class="nav-link" data-scroll-target="#which-model">Which model should you use?</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
   <li><a href="#are-you-ready-for-part-2" id="toc-are-you-ready-for-part-2" class="nav-link" data-scroll-target="#are-you-ready-for-part-2">Are you ready for Part 2?</a></li>
   </ul>
@@ -824,7 +825,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="step-1-3" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-3"><span class="step-no">1.3</span> Have a first conversation with the agent</h2>
-<p>Set the <strong>permission mode</strong> (in the row under the prompt box) to <strong>Manual</strong>. The agent then asks before it creates or changes any file and before it runs anything. True, this is slower. But you see everything, and that is what we want at the start. We advise staying in Manual for your first week.</p>
+<p>Set the <strong>permission mode</strong> (in the row under the prompt box) to <strong>Manual</strong>. The agent then asks before it creates or changes any file and before it runs anything. True, this is slower. But you see everything, and that is what we want at the start. We advise staying in Manual for your first week. Next to the permission mode is the model picker. Leave the default for now: we come back to it in <a href="#which-model">Which model should you use?</a></p>
 <p>Type this and press Enter:</p>
 <div class="prompt">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Hi. I am new to this. What can you see in this folder? Then create a file called hello.md with three sentences about what you can do for a social scientist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -903,6 +904,76 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Use <a href="https://code.visualstudio.com/">VS Code</a> instead (free). It previews Markdown and also shows the agent’s Python, R or Stata code. The main course uses it.</p>
 </div>
 </div>
+</section>
+<section id="which-model" class="level2">
+<h2 class="anchored" data-anchor-id="which-model">Which model should you use?</h2>
+<p>The Claude app offers several models, and they differ in strength, speed and price. You choose in the <strong>model picker</strong>, toward the right end of the row under the prompt box. You can change the model in the middle of a session, too.</p>
+<p>Our advice is simple. <strong>Start with the default, and change only when you have a reason.</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>What it is</th>
+<th>Use it for</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Opus</strong> (5.5)</td>
+<td>The default. A strong model for work that needs reasoning</td>
+<td>Almost everything in this course: extracts, the memo, the data task</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><strong>Sonnet</strong> (5.5)</td>
+<td>Faster and lighter</td>
+<td>Routine work with a clear instruction: reformatting, tidying files, simple edits</td>
+<td>about half</td>
+</tr>
+<tr class="odd">
+<td><strong>Haiku</strong> (5.5)</td>
+<td>The smallest and fastest</td>
+<td>One simple step repeated many times, such as sorting short texts into categories</td>
+<td>a small fraction</td>
+</tr>
+<tr class="even">
+<td><strong>Fable</strong> (5.2)</td>
+<td>The strongest model, and the slowest</td>
+<td>The hardest and longest tasks: a whole project from one prompt, as in <a href="../friendly-agentic-ai-intro/live-demo.html">Part 3</a>, or the review of a finished paper</td>
+<td>about twice</td>
+</tr>
+</tbody>
+</table>
+<p>The price column compares Anthropic’s list prices per unit of text with Opus (November 2026). With a subscription you don’t pay per task, but the price shows up in another way: the stronger the model, the faster you reach your usage limit. Fable is special. On the Pro plan it is paid from usage credits, and on Max it is included up to half of your weekly limit. Model names and versions change every few months, so the picker may show newer ones.</p>
+<p>When should you change?</p>
+<ul>
+<li><strong>Go up to Fable</strong> when the task is long and has many steps, or when the default got the same thing wrong twice.</li>
+<li><strong>Go down to Sonnet or Haiku</strong> when you keep hitting your usage limit, or when the task is simple and you repeat it many times.</li>
+</ul>
+<p>Two more points matter for researchers.</p>
+<p><strong>A stronger model is not a substitute for checking.</strong> Every model can misquote a paper or drop observations without saying so. The checks of <a href="../friendly-agentic-ai-intro/first-steps.html">Part 2</a> apply to all of them.</p>
+<p><strong>Write down which model you used.</strong> Models are replaced and retired, and the same prompt gives a different result with another model. For anything you may publish, note the model and the date, for example in <code>DECISIONS.md</code>. You would do the same for the version of a statistical package.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Other settings worth knowing
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Effort.</strong> In the model picker, under <strong>Effort</strong>, you set how hard the model thinks before it answers: low, medium, high, xhigh (extra high) or max. The default is medium. Lower is faster and uses less of your limit. We suggest medium for this course, and high for work where a mistake is costly, such as the data task or a review. Max is rarely worth it.</li>
+<li><strong>Thinking.</strong> The current models always think before they answer, and there is no switch for it. To read the thinking, set the <strong>Transcript view</strong> to <strong>Thinking</strong>.</li>
+<li><strong>The usage ring.</strong> Next to the model picker, a small ring shows how much of your plan’s usage you have used. Click it for the details.</li>
+<li><strong>Permission mode.</strong> Manual for now (Step 1.3). For what to choose later, see <a href="../friendly-agentic-ai-intro/first-steps.html#step-2-1">Step 2.1</a>.</li>
+<li><strong>Long sessions.</strong> What the model can see at once is limited, and a long session fills it up. Start a new session for each task. Part 2 shows how to carry over what matters.</li>
+</ul>
+</div>
+</div>
+<p>Want to use models from other companies? See <a href="../friendly-agentic-ai-intro/go-further.html">Part 5</a>. For a comparison of the main models, see <a href="../da-knowledge/which-ai.html">Which AI model</a> in the knowledge base.</p>
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
