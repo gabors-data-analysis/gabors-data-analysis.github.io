@@ -592,6 +592,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#step-5-2" id="toc-step-5-2" class="nav-link" data-scroll-target="#step-5-2"><span class="step-no">5.2</span> Use cheap models to experiment</a>
   <ul class="collapse">
+  <li><a href="#which-kind-of-model-for-which-task" id="toc-which-kind-of-model-for-which-task" class="nav-link" data-scroll-target="#which-kind-of-model-for-which-task">Which kind of model for which task?</a></li>
   <li><a href="#connect-a-model" id="toc-connect-a-model" class="nav-link" data-scroll-target="#connect-a-model">Connect a model</a></li>
   <li><a href="#what-to-try" id="toc-what-to-try" class="nav-link" data-scroll-target="#what-to-try">What to try</a></li>
   </ul></li>
@@ -693,6 +694,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>DeepSeek V4.1 Flash</strong> is a small, fast and very cheap model. It is not among the strongest, but it is good enough for many simple tasks. Use it for volume.</li>
 </ul>
 <p>Why bother, if you have Claude? Because cheap changes what you can try. You can run a task on five hundred documents, or run the same task five times, without watching a usage limit. And you learn which of your tasks need the strongest model, and which don’t.</p>
+<section id="which-kind-of-model-for-which-task" class="level3">
+<h3 class="anchored" data-anchor-id="which-kind-of-model-for-which-task">Which kind of model for which task?</h3>
+<p>We find it useful to think of three kinds of model. Each has its use.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Kind</th>
+<th>Example</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Cheap open-weights</strong></td>
+<td>DeepSeek V4.1 Flash</td>
+<td>Simple tasks repeated many times: sorting texts into categories, pulling a few facts out of each document</td>
+</tr>
+<tr class="even">
+<td><strong>Very good</strong></td>
+<td>Claude Opus 5.5</td>
+<td>Most research work: extracts with quotes, a memo, a data task</td>
+</tr>
+<tr class="odd">
+<td><strong>State of the art</strong></td>
+<td>Claude Fable 5.2</td>
+<td>The hardest and longest tasks: a whole project from one prompt, as in <a href="../friendly-agentic-ai-intro/live-demo.html">Part 3</a>, or the review of a finished paper</td>
+</tr>
+</tbody>
+</table>
+<p>There is a fourth option, too. <strong>High-end open-weights</strong> models, such as Kimi K3.1 Pro, cost about half as much as Claude Opus 5.5. Where one of them does a task well enough, it saves money.</p>
+<p>Which kind fits which task is not fixed. It depends on the task, on your field and on how costly a mistake would be, and it changes with every new model. So we advise you to experiment: run the same task with two or three models, and compare the results. The ideas under <em>What to try</em> below show how.</p>
+</section>
 <section id="connect-a-model" class="level3">
 <h3 class="anchored" data-anchor-id="connect-a-model">Connect a model</h3>
 <ol type="1">
