@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-11-22">
+
+<title>Where to run your agent – Gábor’s AI Courses</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-4235b52e4ea0fa6d513467d9d66ae0a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Gábor’s AI Courses</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../navbar/weeks.html" aria-current="page"> 
+<span class="menu-text">Data Analysis with AI</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../friendly-agentic-ai-intro/index.html"> 
+<span class="menu-text">Friendly Intro</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../navbar/resources.html"> 
+<span class="menu-text">Knowledge Base</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../case-studies/index.html"> 
+<span class="menu-text">Case Studies</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/ai-coding-prep.html">Setting up AI tools</a></li><li class="breadcrumb-item"><a href="../da-knowledge/where-to-run-agent.html">Where to run your agent</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Section">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Data Analysis with AI</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../navbar/weeks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../navbar/assignments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Core course</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1: LLMs, Harnesses &amp; Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2: From Raw Data to Report</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit3/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3: Data Wrangling &amp; Debugging</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit4/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4: Econometrics with AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit5/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5: Text as Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Capstone</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capstone/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Description</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project01/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 1: Data Collection</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 2: Text to Expectations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 3: DiD &amp; Presentation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Slideshows</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Key concepts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-02-prompting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prompting, Context</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-5-label">Friendly Intro to Agentic AI</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 1: Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/first-steps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 2: First Steps</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/live-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 3: A Paper in 50 Minutes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/after-the-course.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 4: After the Course</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/go-further.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 5: Go Further</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/ai-in-science.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 6: AI in Science</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-6-label">Knowledge Base</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../navbar/resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-7-label">AI &amp; LLM fundamentals</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/technical-terms-page.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary of LLM terms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/which-ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Which AI model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/choosing-a-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choosing a model with evidence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/open-weights-models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Open-weights &amp; local models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/run-ai-locally.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Running AI on your computer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/open-code-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Open-code tools &amp; harnesses</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/ai-and-your-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI and your data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/beyond.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learn More</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-controls="quarto-sidebar-section-8" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-8-label">Setting up AI tools</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-8" aria-labelledby="quarto-sidebar-section-8-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/ai-coding-prep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI Coding Prep</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/terminal-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminal Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/where-to-run-agent.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Where to run your agent</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/install-cli.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing AI CLI Tools</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/vscode-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code + Copilot Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/git-for-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git for working with agents</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-controls="quarto-sidebar-section-9" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-9-label">Working with APIs</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-9" aria-labelledby="quarto-sidebar-section-9-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/get-ai-api-key.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Get AI API keys</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/api-use.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">APIs — Intro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/llm-api-python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LLM APIs in Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/llm-jobs-at-scale.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Running LLM jobs at scale</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/api-advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">APIs — Under the hood</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/walkthrough-wb-fred.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Walkthrough: World Bank + FRED</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/walkthrough-fbref.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Walkthrough: FBref</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-controls="quarto-sidebar-section-10" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-10-label">Doing the analysis</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-10" aria-labelledby="quarto-sidebar-section-10-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/designing-projects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Designing Larger Analytics Projects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/reproducible-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reproducible Research</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/documentation-readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation Fundamentals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/decision-logs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Decision logs &amp; disclosing AI use</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/knowledge-bases-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Bases for Agents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Joining Data Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/nlp-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NLP Basics — Text as Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/creating-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating Graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/ideas-good-report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Good Report Ideas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/pdf-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PDF Guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-controls="quarto-sidebar-section-11" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-11-label">Case Studies</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-11" aria-labelledby="quarto-sidebar-section-11-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/VWS/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">World Values Survey</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/austria-hotels/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Austrian Hotels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/interviews/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Football Interviews</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/earnings/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">US Earnings (CPS)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/employee_commits/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Employee Commits</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/common-support-r/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Common Support (R)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-the-desktop-app" id="toc-what-is-the-desktop-app" class="nav-link active" data-scroll-target="#what-is-the-desktop-app">What is the desktop app?</a></li>
+  <li><a href="#what-is-the-terminal-version" id="toc-what-is-the-terminal-version" class="nav-link" data-scroll-target="#what-is-the-terminal-version">What is the terminal version?</a></li>
+  <li><a href="#what-is-the-editor-version" id="toc-what-is-the-editor-version" class="nav-link" data-scroll-target="#what-is-the-editor-version">What is the editor version?</a></li>
+  <li><a href="#what-is-the-web-version-and-what-runs-in-the-cloud" id="toc-what-is-the-web-version-and-what-runs-in-the-cloud" class="nav-link" data-scroll-target="#what-is-the-web-version-and-what-runs-in-the-cloud">What is the web version, and what runs in the cloud?</a></li>
+  <li><a href="#how-do-the-four-compare" id="toc-how-do-the-four-compare" class="nav-link" data-scroll-target="#how-do-the-four-compare">How do the four compare?</a></li>
+  <li><a href="#what-about-codex-copilot-and-antigravity" id="toc-what-about-codex-copilot-and-antigravity" class="nav-link" data-scroll-target="#what-about-codex-copilot-and-antigravity">What about Codex, Copilot and Antigravity?</a></li>
+  <li><a href="#does-our-setup-carry-over-between-surfaces" id="toc-does-our-setup-carry-over-between-surfaces" class="nav-link" data-scroll-target="#does-our-setup-carry-over-between-surfaces">Does our setup carry over between surfaces?</a></li>
+  <li><a href="#which-one-should-we-use" id="toc-which-one-should-we-use" class="nav-link" data-scroll-target="#which-one-should-we-use">Which one should we use?</a></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See also</a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/ai-coding-prep.html">Setting up AI tools</a></li><li class="breadcrumb-item"><a href="../da-knowledge/where-to-run-agent.html">Where to run your agent</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Where to run your agent</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Desktop, terminal, web or editor: the same agent in four places</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 22, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Claude Code is one agent, but we can open it in four places: a desktop app, the terminal, a web browser, and a code editor such as VS Code. The model is the same in all four, and so are the instructions it follows. What differs is where the work happens, what we see while it works, and what we need to install. This page helps us choose. It covers Claude Code in detail, and Codex, GitHub Copilot and Google Antigravity briefly, since they come in the same forms.</p>
+<p>Checked against official documentation on 22 November 2026. These products change every few months, so check the sources at the end before relying on a detail.</p>
+<p>The documentation calls each of these places a <em>surface</em>.</p>
+<section id="what-is-the-desktop-app" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-desktop-app">What is the desktop app?</h2>
+<p>The Claude app has a <strong>Code</strong> tab, and that tab is Claude Code with windows and buttons. We type in a prompt box and approve or refuse each step with a click. When the agent changes a file, a diff view shows what was added and removed, line by line. This is the surface the <a href="../friendly-agentic-ai-intro/setup.html">friendly introduction</a> uses, and its Part 1 walks through the installation.</p>
+<p><strong>What we need.</strong> A paid Claude plan: Pro, Max, Ultra, Team or Enterprise. The app includes Claude Code, so there is nothing else to install and no terminal to open. It runs on macOS (Intel and Apple Silicon) and Windows (x64 and ARM64). On Ubuntu and Debian it is in beta.</p>
+<p><strong>What it is good for.</strong> Starting out, and any work where we want to see each change before it happens. We can run several sessions side by side, and there is an optional terminal pane for the rare moment we want one. The same app can also start a session in the cloud: in the environment selector, <strong>Local</strong> means our computer, <strong>Cloud</strong> means a machine run by Anthropic.</p>
+<p><strong>Limits.</strong> Console credits are not enough here: the app needs a subscription. And we can’t run the app from a script; for that we need the terminal version.</p>
+</section>
+<section id="what-is-the-terminal-version" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-terminal-version">What is the terminal version?</h2>
+<p>Here Claude Code is a command. We open a terminal, move to the project folder and type <code>claude</code>. The conversation happens in the terminal window, as text. The documentation calls it the full-featured version.</p>
+<p><strong>What we need.</strong> A paid Claude plan, or a Claude Console account with prepaid credits (the Console is Anthropic’s pay-per-use account for developers; see <a href="../da-knowledge/get-ai-api-key.html">How to get an API key</a>). It installs with one command on Mac, Windows and Linux: see <a href="../da-knowledge/install-cli.html">Installing AI CLI tools</a>. On Windows, the documentation recommends installing <a href="https://git-scm.com/downloads/win">Git for Windows</a> as well. We also need some comfort with the command line: moving between folders, reading an error message. If that is new, read <a href="../da-knowledge/terminal-basics.html">Terminal basics</a> first.</p>
+<p><strong>What it is good for.</strong> Three things the other surfaces do less well. First, it has every command; the editor extension has only a subset. Second, it can be scripted: <code>claude -p "..."</code> runs one instruction and exits, so it fits into a script or a pipeline. Third, it runs on Linux, so it also runs on a server we log into, such as a university computing cluster, next to data that is too large to copy to a laptop.</p>
+<p><strong>Limits.</strong> Changes are shown as text, not in a diff window, which takes some getting used to. When we want the visual view, typing <code>/desktop</code> moves the current session into the desktop app (on macOS and x64 Windows, with a Claude subscription).</p>
+</section>
+<section id="what-is-the-editor-version" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-editor-version">What is the editor version?</h2>
+<p>Claude Code also comes as an extension for VS Code and as a plugin for JetBrains editors such as PyCharm and IntelliJ IDEA. It opens in a panel next to our code files. In VS Code, a proposed change appears as a side-by-side comparison that we accept or reject, and a plan opens as a Markdown document we can comment on before the agent starts.</p>
+<p><strong>What we need.</strong> A paid Claude plan or a Console account. VS Code 1.94 or later. The VS Code extension brings what its panel needs, but to type <code>claude</code> in VS Code’s own terminal we install the terminal version too. The same extension installs in Cursor. The JetBrains plugin needs the terminal version installed separately. In an editor without an extension, such as RStudio, we can run the terminal version in the editor’s terminal.</p>
+<p><strong>What it is good for.</strong> Work where we read and write code ourselves, next to the agent: we see the script, the agent’s change to it and the output in one window. For setting up VS Code with Python or R, see <a href="../da-knowledge/vscode-setup.html">VS Code setup</a>.</p>
+<p><strong>Limits.</strong> Not every command of the terminal version is in the extension. The documentation suggests running <code>claude</code> in the editor’s terminal for the missing ones.</p>
+</section>
+<section id="what-is-the-web-version-and-what-runs-in-the-cloud" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-web-version-and-what-runs-in-the-cloud">What is the web version, and what runs in the cloud?</h2>
+<p>At <a href="https://claude.ai/code">claude.ai/code</a>, or in the <strong>Code</strong> tab of the Claude mobile app, Claude Code runs in a <em>cloud session</em>. The work does not happen on our computer. It happens on a virtual machine that Anthropic manages. The machine copies our project from GitHub, works on that copy, and sends its changes back to GitHub on a separate <em>branch</em> (see <a href="../da-knowledge/git-for-agents.html#when-should-i-use-a-branch">Git for agents</a>). We review them and, if we like them, open a <em>pull request</em>: a proposal to merge the branch into the main version.</p>
+<p><strong>What we need.</strong> A Pro, Max, Ultra or Team plan, or an Enterprise seat that includes Claude Code. A GitHub account connected to Claude, and the project in a GitHub repository. Nothing to install. Cloud sessions count toward the plan’s usage limits, with no separate charge for the machine.</p>
+<p><strong>What it is good for.</strong> Long tasks we want to start and check on later: the session keeps running when we close the laptop. Several tasks at once, each in its own session. And work from a phone or a borrowed computer.</p>
+<p><strong>Limits.</strong> The cloud machine sees only what is in the repository. It can’t see the files on our laptop, our Dropbox folder, or data we keep out of git. Its internet access is limited by default. Cloning and pull requests work with GitHub; other hosts work only partly. A session that sits idle for a while stops, and reopening it starts a fresh machine with the conversation restored.</p>
+<p>We can move work between cloud and local. From the terminal, <code>claude --cloud "task"</code> starts a cloud session on the current repository (push local commits first, since the cloud clones from GitHub), and <code>claude --teleport</code> pulls a cloud session back into the terminal. The desktop app can send a local session to the cloud from its <strong>Open in</strong> menu.</p>
+</section>
+<section id="how-do-the-four-compare" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-the-four-compare">How do the four compare?</h2>
+<p>“Paid plan” means Pro, Max, Ultra, Team or Enterprise. The free Claude plan has no Claude Code on any surface.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Desktop app</th>
+<th>Terminal</th>
+<th>Editor</th>
+<th>Web / cloud</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Where it runs</td>
+<td>Our computer</td>
+<td>Our computer, or a server we log into</td>
+<td>Our computer</td>
+<td>A machine run by Anthropic</td>
+</tr>
+<tr class="even">
+<td>What it works on</td>
+<td>The folder we open</td>
+<td>The folder we start it in</td>
+<td>The folder open in the editor</td>
+<td>A copy of a GitHub repository</td>
+</tr>
+<tr class="odd">
+<td>Plan</td>
+<td>Paid plan</td>
+<td>Paid plan or Console credits</td>
+<td>Paid plan or Console credits</td>
+<td>Paid plan</td>
+</tr>
+<tr class="even">
+<td>Install</td>
+<td>The Claude app</td>
+<td>One command</td>
+<td>An extension (JetBrains also needs the terminal version)</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td>Systems</td>
+<td>Mac, Windows; Linux in beta</td>
+<td>Mac, Windows, Linux</td>
+<td>Where VS Code or JetBrains runs</td>
+<td>A desktop browser, or the Claude mobile app</td>
+</tr>
+<tr class="even">
+<td>How we see changes</td>
+<td>Diff view, click to approve</td>
+<td>Text in the terminal</td>
+<td>Side-by-side diffs in the editor</td>
+<td>Diff view, then a pull request</td>
+</tr>
+<tr class="odd">
+<td>Good for</td>
+<td>Starting out; reviewing each step</td>
+<td>Scripts, servers, every feature</td>
+<td>Coding alongside the agent</td>
+<td>Long or parallel tasks on repositories without confidential data</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="what-about-codex-copilot-and-antigravity" class="level2">
+<h2 class="anchored" data-anchor-id="what-about-codex-copilot-and-antigravity">What about Codex, Copilot and Antigravity?</h2>
+<p>The other agents come in similar forms. The names differ, and so do the plans.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Desktop</th>
+<th>Terminal</th>
+<th>Editor</th>
+<th>Cloud</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Codex</strong> (OpenAI)</td>
+<td>The ChatGPT desktop app, where Codex runs (Mac, Windows; Linux has its own guide)</td>
+<td><code>codex</code></td>
+<td>Extension for VS Code, Cursor and Windsurf; in JetBrains through AI Chat</td>
+<td>Codex cloud, from ChatGPT; works on repositories from a connected GitHub or GitLab account. Plus or higher</td>
+</tr>
+<tr class="even">
+<td><strong>GitHub Copilot</strong></td>
+<td>The GitHub Copilot app (Mac, Windows, Linux), on all Copilot plans</td>
+<td><code>copilot</code>, on all Copilot plans</td>
+<td>VS Code, Visual Studio, JetBrains, Eclipse, Xcode</td>
+<td>The cloud agent on GitHub.com: works only on GitHub repositories, in a temporary environment GitHub manages, and returns a pull request</td>
+</tr>
+<tr class="odd">
+<td><strong>Antigravity</strong> (Google)</td>
+<td>The Antigravity app (Mac, Windows, Linux)</td>
+<td><code>agy</code>, which replaced Gemini CLI for individual users in June 2026</td>
+<td>Extensions for VS Code, JetBrains and other editors, plus the Antigravity IDE</td>
+<td>Remote agents, also in the browser at antigravity.google.com, with connected GitHub repositories. Google AI Pro or Ultra on a personal account, not the free tier; still rolling out</td>
+</tr>
+</tbody>
+</table>
+<p>For students, GitHub has a free <strong>Copilot Student</strong> plan, which includes the terminal version and agents. See <a href="../da-knowledge/vscode-setup.html#student-note">VS Code setup</a> for how to apply.</p>
+</section>
+<section id="does-our-setup-carry-over-between-surfaces" class="level2">
+<h2 class="anchored" data-anchor-id="does-our-setup-carry-over-between-surfaces">Does our setup carry over between surfaces?</h2>
+<p>Mostly, yes. Say we start a project in the desktop app, and a month later we open the same folder in the terminal. The agent finds the same files, and it reads the same instructions: Claude Code reads the project’s <code>CLAUDE.md</code> on every surface. If the project has an <code>AGENTS.md</code> and no <code>CLAUDE.md</code>, Claude Code reads <code>AGENTS.md</code> instead. Codex reads <code>AGENTS.md</code> too, and the Antigravity CLI reads both <code>AGENTS.md</code> and <code>GEMINI.md</code>. Skills in the project’s <code>.claude/skills/</code> folder come along with the folder, and personal skills in <code>~/.claude/skills/</code> work in both the desktop app and the terminal.</p>
+<p>It is good practice to keep the instructions in the project folder, not in our heads or in a chat history. Then switching surfaces, or switching agents, costs almost nothing.</p>
+<p>There is one exception. A cloud session sees only what is committed to the repository and pushed to GitHub. An instructions file that lives only on our laptop doesn’t reach it. So commit <code>CLAUDE.md</code> or <code>AGENTS.md</code> and push it. For a gentle start with git, see <a href="../da-knowledge/git-for-agents.html">Git for agents</a>.</p>
+</section>
+<section id="which-one-should-we-use" class="level2">
+<h2 class="anchored" data-anchor-id="which-one-should-we-use">Which one should we use?</h2>
+<p>In this course, we start with the <strong>desktop app</strong>. It needs no terminal, it shows every change before it happens, and the <a href="../friendly-agentic-ai-intro/setup.html">friendly introduction</a> is built around it.</p>
+<p>Later, once we write code ourselves, the <strong>editor</strong> version is the natural next step: the agent works in the same window as our scripts. The <strong>terminal</strong> version is worth learning when we want to script the agent or run it on a server. Nothing is lost by moving, since the project folder and its instructions come along.</p>
+<p>We use the <strong>cloud</strong> for repositories that hold no confidential data: a public replication package, course material, a package we develop. It is the best surface for long tasks we don’t want to watch. It needs GitHub, but most code projects belong there anyway.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Cloud sessions and confidential data
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On every surface, the agent sends what it reads to Anthropic’s servers, as Part 1 of the <a href="../friendly-agentic-ai-intro/setup.html#step-1-2">friendly introduction</a> explains. The local surfaces at least keep our files on our computer. A cloud session goes further: it puts a copy of the whole repository on a remote machine, and its changes are pushed to GitHub. So keep interview transcripts, identifiable survey data and anything under a data-use agreement out of any repository we use with cloud sessions, even a private one. Check the data agreement before using any surface with such material. For what providers keep and what the GDPR asks, see <a href="../da-knowledge/ai-and-your-data.html">AI and your data</a>. For data that must not leave the computer at all, see <a href="../da-knowledge/run-ai-locally.html">Running AI on your own computer</a>.</p>
+</div>
+</div>
+</section>
+<section id="see-also" class="level2">
+<h2 class="anchored" data-anchor-id="see-also">See also</h2>
+<ul>
+<li><a href="../da-knowledge/install-cli.html">Installing AI CLI tools</a>: install commands for the terminal versions.</li>
+<li><a href="../da-knowledge/vscode-setup.html">VS Code setup</a>: VS Code with Python or R, and GitHub Copilot.</li>
+<li><a href="../da-knowledge/terminal-basics.html">Terminal basics</a>: the command line for beginners.</li>
+<li><a href="../da-knowledge/run-ai-locally.html">Running AI on your own computer</a>: for confidential material.</li>
+</ul>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<ul>
+<li>Anthropic, Claude Code overview: <a href="https://code.claude.com/docs/en/overview">code.claude.com/docs/en/overview</a></li>
+<li>Anthropic, Claude Code desktop app: <a href="https://code.claude.com/docs/en/desktop">code.claude.com/docs/en/desktop</a></li>
+<li>Anthropic, Claude Code in VS Code: <a href="https://code.claude.com/docs/en/vs-code">code.claude.com/docs/en/vs-code</a></li>
+<li>Anthropic, Claude Code in JetBrains: <a href="https://code.claude.com/docs/en/jetbrains">code.claude.com/docs/en/jetbrains</a></li>
+<li>Anthropic, Use Claude Code in the cloud: <a href="https://code.claude.com/docs/en/claude-code-on-the-web">code.claude.com/docs/en/claude-code-on-the-web</a></li>
+<li>Anthropic, How Claude remembers your project (CLAUDE.md and AGENTS.md): <a href="https://code.claude.com/docs/en/memory">code.claude.com/docs/en/memory</a></li>
+<li>OpenAI, Codex documentation (app, CLI, IDE extension, cloud, AGENTS.md, pricing): <a href="https://learn.chatgpt.com/docs/codex/cli">learn.chatgpt.com/docs</a></li>
+<li>GitHub, Copilot plans: <a href="https://docs.github.com/en/copilot/get-started/plans">docs.github.com/en/copilot/get-started/plans</a></li>
+<li>GitHub, GitHub Copilot app: <a href="https://docs.github.com/en/copilot/concepts/agents/github-copilot-app">docs.github.com/en/copilot/concepts/agents/github-copilot-app</a></li>
+<li>GitHub, Copilot cloud agent: <a href="https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent">docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent</a></li>
+<li>Google, Antigravity documentation (app, CLI, IDE extensions, remote agents, plans): <a href="https://antigravity.google/docs/getting-started">antigravity.google/docs</a></li>
+<li>Google for Developers blog, Transitioning Gemini CLI to Antigravity CLI: <a href="https://developers.googleblog.com/en/an-important-update-transitioning-gemini-cli-to-antigravity-cli/">developers.googleblog.com</a></li>
+</ul>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/gabors-data-analysis\.com\/ai-course");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Where to run your agent"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Desktop, terminal, web or editor: the same agent in four places"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-11-22"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Claude Code is one agent, but we can open it in four places: a desktop app, the terminal, a web browser, and a code editor such as VS Code. The model is the same in all four, and so are the instructions it follows. What differs is where the work happens, what we see while it works, and what we need to install. This page helps us choose. It covers Claude Code in detail, and Codex, GitHub Copilot and Google Antigravity briefly, since they come in the same forms.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Checked against official documentation on 22 November 2026. These products change every few months, so check the sources at the end before relying on a detail.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>The documentation calls each of these places a *surface*.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is the desktop app?</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>The Claude app has a **Code** tab, and that tab is Claude Code with windows and buttons. We type in a prompt box and approve or refuse each step with a click. When the agent changes a file, a diff view shows what was added and removed, line by line. This is the surface the <span class="co">[</span><span class="ot">friendly introduction</span><span class="co">](../friendly-agentic-ai-intro/setup.qmd)</span> uses, and its Part 1 walks through the installation.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>**What we need.** A paid Claude plan: Pro, Max, Ultra, Team or Enterprise. The app includes Claude Code, so there is nothing else to install and no terminal to open. It runs on macOS (Intel and Apple Silicon) and Windows (x64 and ARM64). On Ubuntu and Debian it is in beta.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>**What it is good for.** Starting out, and any work where we want to see each change before it happens. We can run several sessions side by side, and there is an optional terminal pane for the rare moment we want one. The same app can also start a session in the cloud: in the environment selector, **Local** means our computer, **Cloud** means a machine run by Anthropic.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>**Limits.** Console credits are not enough here: the app needs a subscription. And we can't run the app from a script; for that we need the terminal version.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is the terminal version?</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Here Claude Code is a command. We open a terminal, move to the project folder and type <span class="in">`claude`</span>. The conversation happens in the terminal window, as text. The documentation calls it the full-featured version.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>**What we need.** A paid Claude plan, or a Claude Console account with prepaid credits (the Console is Anthropic's pay-per-use account for developers; see <span class="co">[</span><span class="ot">How to get an API key</span><span class="co">](get-ai-api-key.qmd)</span>). It installs with one command on Mac, Windows and Linux: see <span class="co">[</span><span class="ot">Installing AI CLI tools</span><span class="co">](install-cli.qmd)</span>. On Windows, the documentation recommends installing <span class="co">[</span><span class="ot">Git for Windows</span><span class="co">](https://git-scm.com/downloads/win)</span> as well. We also need some comfort with the command line: moving between folders, reading an error message. If that is new, read <span class="co">[</span><span class="ot">Terminal basics</span><span class="co">](terminal-basics.qmd)</span> first.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>**What it is good for.** Three things the other surfaces do less well. First, it has every command; the editor extension has only a subset. Second, it can be scripted: <span class="in">`claude -p "..."`</span> runs one instruction and exits, so it fits into a script or a pipeline. Third, it runs on Linux, so it also runs on a server we log into, such as a university computing cluster, next to data that is too large to copy to a laptop.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>**Limits.** Changes are shown as text, not in a diff window, which takes some getting used to. When we want the visual view, typing <span class="in">`/desktop`</span> moves the current session into the desktop app (on macOS and x64 Windows, with a Claude subscription).</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is the editor version?</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>Claude Code also comes as an extension for VS Code and as a plugin for JetBrains editors such as PyCharm and IntelliJ IDEA. It opens in a panel next to our code files. In VS Code, a proposed change appears as a side-by-side comparison that we accept or reject, and a plan opens as a Markdown document we can comment on before the agent starts.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>**What we need.** A paid Claude plan or a Console account. VS Code 1.94 or later. The VS Code extension brings what its panel needs, but to type <span class="in">`claude`</span> in VS Code's own terminal we install the terminal version too. The same extension installs in Cursor. The JetBrains plugin needs the terminal version installed separately. In an editor without an extension, such as RStudio, we can run the terminal version in the editor's terminal.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>**What it is good for.** Work where we read and write code ourselves, next to the agent: we see the script, the agent's change to it and the output in one window. For setting up VS Code with Python or R, see <span class="co">[</span><span class="ot">VS Code setup</span><span class="co">](vscode-setup.qmd)</span>.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>**Limits.** Not every command of the terminal version is in the extension. The documentation suggests running <span class="in">`claude`</span> in the editor's terminal for the missing ones.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is the web version, and what runs in the cloud?</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>At <span class="co">[</span><span class="ot">claude.ai/code</span><span class="co">](https://claude.ai/code)</span>, or in the **Code** tab of the Claude mobile app, Claude Code runs in a *cloud session*. The work does not happen on our computer. It happens on a virtual machine that Anthropic manages. The machine copies our project from GitHub, works on that copy, and sends its changes back to GitHub on a separate *branch* (see [Git for agents](git-for-agents.qmd#when-should-i-use-a-branch)). We review them and, if we like them, open a *pull request*: a proposal to merge the branch into the main version.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>**What we need.** A Pro, Max, Ultra or Team plan, or an Enterprise seat that includes Claude Code. A GitHub account connected to Claude, and the project in a GitHub repository. Nothing to install. Cloud sessions count toward the plan's usage limits, with no separate charge for the machine.</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>**What it is good for.** Long tasks we want to start and check on later: the session keeps running when we close the laptop. Several tasks at once, each in its own session. And work from a phone or a borrowed computer.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>**Limits.** The cloud machine sees only what is in the repository. It can't see the files on our laptop, our Dropbox folder, or data we keep out of git. Its internet access is limited by default. Cloning and pull requests work with GitHub; other hosts work only partly. A session that sits idle for a while stops, and reopening it starts a fresh machine with the conversation restored.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>We can move work between cloud and local. From the terminal, <span class="in">`claude --cloud "task"`</span> starts a cloud session on the current repository (push local commits first, since the cloud clones from GitHub), and <span class="in">`claude --teleport`</span> pulls a cloud session back into the terminal. The desktop app can send a local session to the cloud from its **Open in** menu.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">## How do the four compare?</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>"Paid plan" means Pro, Max, Ultra, Team or Enterprise. The free Claude plan has no Claude Code on any surface.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="pp">|</span> Desktop app <span class="pp">|</span> Terminal <span class="pp">|</span> Editor <span class="pp">|</span> Web / cloud <span class="pp">|</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|---|</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Where it runs <span class="pp">|</span> Our computer <span class="pp">|</span> Our computer, or a server we log into <span class="pp">|</span> Our computer <span class="pp">|</span> A machine run by Anthropic <span class="pp">|</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> What it works on <span class="pp">|</span> The folder we open <span class="pp">|</span> The folder we start it in <span class="pp">|</span> The folder open in the editor <span class="pp">|</span> A copy of a GitHub repository <span class="pp">|</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Plan <span class="pp">|</span> Paid plan <span class="pp">|</span> Paid plan or Console credits <span class="pp">|</span> Paid plan or Console credits <span class="pp">|</span> Paid plan <span class="pp">|</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Install <span class="pp">|</span> The Claude app <span class="pp">|</span> One command <span class="pp">|</span> An extension (JetBrains also needs the terminal version) <span class="pp">|</span> None <span class="pp">|</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Systems <span class="pp">|</span> Mac, Windows; Linux in beta <span class="pp">|</span> Mac, Windows, Linux <span class="pp">|</span> Where VS Code or JetBrains runs <span class="pp">|</span> A desktop browser, or the Claude mobile app <span class="pp">|</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> How we see changes <span class="pp">|</span> Diff view, click to approve <span class="pp">|</span> Text in the terminal <span class="pp">|</span> Side-by-side diffs in the editor <span class="pp">|</span> Diff view, then a pull request <span class="pp">|</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Good for <span class="pp">|</span> Starting out; reviewing each step <span class="pp">|</span> Scripts, servers, every feature <span class="pp">|</span> Coding alongside the agent <span class="pp">|</span> Long or parallel tasks on repositories without confidential data <span class="pp">|</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## What about Codex, Copilot and Antigravity?</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>The other agents come in similar forms. The names differ, and so do the plans.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="pp">|</span> Desktop <span class="pp">|</span> Terminal <span class="pp">|</span> Editor <span class="pp">|</span> Cloud <span class="pp">|</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|---|</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Codex** (OpenAI) <span class="pp">|</span> The ChatGPT desktop app, where Codex runs (Mac, Windows; Linux has its own guide) <span class="pp">|</span> <span class="in">`codex`</span> <span class="pp">|</span> Extension for VS Code, Cursor and Windsurf; in JetBrains through AI Chat <span class="pp">|</span> Codex cloud, from ChatGPT; works on repositories from a connected GitHub or GitLab account. Plus or higher <span class="pp">|</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **GitHub Copilot** <span class="pp">|</span> The GitHub Copilot app (Mac, Windows, Linux), on all Copilot plans <span class="pp">|</span> <span class="in">`copilot`</span>, on all Copilot plans <span class="pp">|</span> VS Code, Visual Studio, JetBrains, Eclipse, Xcode <span class="pp">|</span> The cloud agent on GitHub.com: works only on GitHub repositories, in a temporary environment GitHub manages, and returns a pull request <span class="pp">|</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Antigravity** (Google) <span class="pp">|</span> The Antigravity app (Mac, Windows, Linux) <span class="pp">|</span> <span class="in">`agy`</span>, which replaced Gemini CLI for individual users in June 2026 <span class="pp">|</span> Extensions for VS Code, JetBrains and other editors, plus the Antigravity IDE <span class="pp">|</span> Remote agents, also in the browser at antigravity.google.com, with connected GitHub repositories. Google AI Pro or Ultra on a personal account, not the free tier; still rolling out <span class="pp">|</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>For students, GitHub has a free **Copilot Student** plan, which includes the terminal version and agents. See <span class="co">[</span><span class="ot">VS Code setup</span><span class="co">](vscode-setup.qmd#student-note)</span> for how to apply.</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="fu">## Does our setup carry over between surfaces?</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>Mostly, yes. Say we start a project in the desktop app, and a month later we open the same folder in the terminal. The agent finds the same files, and it reads the same instructions: Claude Code reads the project's <span class="in">`CLAUDE.md`</span> on every surface. If the project has an <span class="in">`AGENTS.md`</span> and no <span class="in">`CLAUDE.md`</span>, Claude Code reads <span class="in">`AGENTS.md`</span> instead. Codex reads <span class="in">`AGENTS.md`</span> too, and the Antigravity CLI reads both <span class="in">`AGENTS.md`</span> and <span class="in">`GEMINI.md`</span>. Skills in the project's <span class="in">`.claude/skills/`</span> folder come along with the folder, and personal skills in <span class="in">`~/.claude/skills/`</span> work in both the desktop app and the terminal.</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>It is good practice to keep the instructions in the project folder, not in our heads or in a chat history. Then switching surfaces, or switching agents, costs almost nothing.</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>There is one exception. A cloud session sees only what is committed to the repository and pushed to GitHub. An instructions file that lives only on our laptop doesn't reach it. So commit <span class="in">`CLAUDE.md`</span> or <span class="in">`AGENTS.md`</span> and push it. For a gentle start with git, see <span class="co">[</span><span class="ot">Git for agents</span><span class="co">](git-for-agents.qmd)</span>.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="fu">## Which one should we use?</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>In this course, we start with the **desktop app**. It needs no terminal, it shows every change before it happens, and the <span class="co">[</span><span class="ot">friendly introduction</span><span class="co">](../friendly-agentic-ai-intro/setup.qmd)</span> is built around it.</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>Later, once we write code ourselves, the **editor** version is the natural next step: the agent works in the same window as our scripts. The **terminal** version is worth learning when we want to script the agent or run it on a server. Nothing is lost by moving, since the project folder and its instructions come along.</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>We use the **cloud** for repositories that hold no confidential data: a public replication package, course material, a package we develop. It is the best surface for long tasks we don't want to watch. It needs GitHub, but most code projects belong there anyway.</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cloud sessions and confidential data</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>On every surface, the agent sends what it reads to Anthropic's servers, as Part 1 of the <span class="co">[</span><span class="ot">friendly introduction</span><span class="co">](../friendly-agentic-ai-intro/setup.qmd#step-1-2)</span> explains. The local surfaces at least keep our files on our computer. A cloud session goes further: it puts a copy of the whole repository on a remote machine, and its changes are pushed to GitHub. So keep interview transcripts, identifiable survey data and anything under a data-use agreement out of any repository we use with cloud sessions, even a private one. Check the data agreement before using any surface with such material. For what providers keep and what the GDPR asks, see <span class="co">[</span><span class="ot">AI and your data</span><span class="co">](ai-and-your-data.qmd)</span>. For data that must not leave the computer at all, see <span class="co">[</span><span class="ot">Running AI on your own computer</span><span class="co">](run-ai-locally.qmd)</span>.</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="fu">## See also</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Installing AI CLI tools</span><span class="co">](install-cli.qmd)</span>: install commands for the terminal versions.</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">VS Code setup</span><span class="co">](vscode-setup.qmd)</span>: VS Code with Python or R, and GitHub Copilot.</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Terminal basics</span><span class="co">](terminal-basics.qmd)</span>: the command line for beginners.</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Running AI on your own computer</span><span class="co">](run-ai-locally.qmd)</span>: for confidential material.</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sources</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Anthropic, Claude Code overview: <span class="co">[</span><span class="ot">code.claude.com/docs/en/overview</span><span class="co">](https://code.claude.com/docs/en/overview)</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Anthropic, Claude Code desktop app: <span class="co">[</span><span class="ot">code.claude.com/docs/en/desktop</span><span class="co">](https://code.claude.com/docs/en/desktop)</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Anthropic, Claude Code in VS Code: <span class="co">[</span><span class="ot">code.claude.com/docs/en/vs-code</span><span class="co">](https://code.claude.com/docs/en/vs-code)</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Anthropic, Claude Code in JetBrains: <span class="co">[</span><span class="ot">code.claude.com/docs/en/jetbrains</span><span class="co">](https://code.claude.com/docs/en/jetbrains)</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Anthropic, Use Claude Code in the cloud: <span class="co">[</span><span class="ot">code.claude.com/docs/en/claude-code-on-the-web</span><span class="co">](https://code.claude.com/docs/en/claude-code-on-the-web)</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Anthropic, How Claude remembers your project (CLAUDE.md and AGENTS.md): <span class="co">[</span><span class="ot">code.claude.com/docs/en/memory</span><span class="co">](https://code.claude.com/docs/en/memory)</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>OpenAI, Codex documentation (app, CLI, IDE extension, cloud, AGENTS.md, pricing): <span class="co">[</span><span class="ot">learn.chatgpt.com/docs</span><span class="co">](https://learn.chatgpt.com/docs/codex/cli)</span></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GitHub, Copilot plans: <span class="co">[</span><span class="ot">docs.github.com/en/copilot/get-started/plans</span><span class="co">](https://docs.github.com/en/copilot/get-started/plans)</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GitHub, GitHub Copilot app: <span class="co">[</span><span class="ot">docs.github.com/en/copilot/concepts/agents/github-copilot-app</span><span class="co">](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app)</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GitHub, Copilot cloud agent: <span class="co">[</span><span class="ot">docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent</span><span class="co">](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent)</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Google, Antigravity documentation (app, CLI, IDE extensions, remote agents, plans): <span class="co">[</span><span class="ot">antigravity.google/docs</span><span class="co">](https://antigravity.google/docs/getting-started)</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Google for Developers blog, Transitioning Gemini CLI to Antigravity CLI: <span class="co">[</span><span class="ot">developers.googleblog.com</span><span class="co">](https://developers.googleblog.com/en/an-important-update-transitioning-gemini-cli-to-antigravity-cli/)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -366,6 +366,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/choosing-a-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choosing a model with evidence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../da-knowledge/open-weights-models.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Open-weights &amp; local models</span></a>
   </div>
@@ -380,6 +386,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../da-knowledge/open-code-tools.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Open-code tools &amp; harnesses</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/ai-and-your-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI and your data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -410,6 +422,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/where-to-run-agent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Where to run your agent</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../da-knowledge/install-cli.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Installing AI CLI Tools</span></a>
   </div>
@@ -418,6 +436,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../da-knowledge/vscode-setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">VS Code + Copilot Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/git-for-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git for working with agents</span></a>
   </div>
 </li>
       </ul>
@@ -444,6 +468,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../da-knowledge/llm-api-python.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">LLM APIs in Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/llm-jobs-at-scale.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Running LLM jobs at scale</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -488,6 +518,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../da-knowledge/documentation-readme.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Documentation Fundamentals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/decision-logs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Decision logs &amp; disclosing AI use</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -682,7 +718,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="choosing-a-model">Choosing a model</h2>
 <p>For API work, the right default is usually the <strong>smallest model that passes your benchmark on real data</strong>. Use smaller models for classification, extraction, tagging, and other short structured tasks; move to a larger model only if you see clear failures on edge cases, messy instructions, or harder reasoning. In practice, compare models on four things:</p>
 <ul>
-<li><strong>quality</strong>: does it get your labels or extraction right on 20 to 50 real examples?</li>
+<li><strong>quality</strong>: does it get your labels or extraction right on about 100 real examples (see <a href="../da-knowledge/choosing-a-model.html">Choosing a model with evidence</a>)?</li>
 <li><strong>cost</strong>: how expensive are the input and output tokens at your expected scale?</li>
 <li><strong>latency</strong>: is it fast enough for a loop, app, or batch job?</li>
 <li><strong>context window</strong>: can it fit the documents, examples, or schema you want to send?</li>
@@ -1454,7 +1490,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>For API work, the right default is usually the **smallest model that passes your benchmark on real data**. Use smaller models for classification, extraction, tagging, and other short structured tasks; move to a larger model only if you see clear failures on edge cases, messy instructions, or harder reasoning. In practice, compare models on four things:</span>
 <span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**quality**: does it get your labels or extraction right on 20 to 50 real examples?</span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**quality**: does it get your labels or extraction right on about 100 real examples (see <span class="co">[</span><span class="ot">Choosing a model with evidence</span><span class="co">](choosing-a-model.qmd)</span>)?</span>
 <span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**cost**: how expensive are the input and output tokens at your expected scale?</span>
 <span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**latency**: is it fast enough for a loop, app, or batch job?</span>
 <span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**context window**: can it fit the documents, examples, or schema you want to send?</span>

@@ -1,0 +1,1706 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-11-22">
+
+<title>Running LLM jobs at scale – Gábor’s AI Courses</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-4235b52e4ea0fa6d513467d9d66ae0a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Gábor’s AI Courses</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../navbar/weeks.html" aria-current="page"> 
+<span class="menu-text">Data Analysis with AI</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../friendly-agentic-ai-intro/index.html"> 
+<span class="menu-text">Friendly Intro</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../navbar/resources.html"> 
+<span class="menu-text">Knowledge Base</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../case-studies/index.html"> 
+<span class="menu-text">Case Studies</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/get-ai-api-key.html">Working with APIs</a></li><li class="breadcrumb-item"><a href="../da-knowledge/llm-jobs-at-scale.html">Running LLM jobs at scale</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" aria-label="Section">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Data Analysis with AI</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../navbar/weeks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../navbar/assignments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Core course</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1: LLMs, Harnesses &amp; Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2: From Raw Data to Report</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit3/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3: Data Wrangling &amp; Debugging</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit4/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4: Econometrics with AI</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unit5/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5: Text as Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Capstone</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../capstone/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Description</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project01/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 1: Data Collection</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 2: Text to Expectations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Session 3: DiD &amp; Presentation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Slideshows</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Key concepts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-02-prompting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prompting, Context</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-5-label">Friendly Intro to Agentic AI</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 1: Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/first-steps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 2: First Steps</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/live-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 3: A Paper in 50 Minutes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/after-the-course.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 4: After the Course</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/go-further.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 5: Go Further</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/ai-in-science.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 6: AI in Science</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-controls="quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-6-label">Knowledge Base</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-6" aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../navbar/resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-controls="quarto-sidebar-section-7" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-7-label">AI &amp; LLM fundamentals</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-7" aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/technical-terms-page.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary of LLM terms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/which-ai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Which AI model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/choosing-a-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Choosing a model with evidence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/open-weights-models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Open-weights &amp; local models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/run-ai-locally.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Running AI on your computer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/open-code-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Open-code tools &amp; harnesses</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/ai-and-your-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI and your data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/beyond.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learn More</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-controls="quarto-sidebar-section-8" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-8-label">Setting up AI tools</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-8" aria-labelledby="quarto-sidebar-section-8-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/ai-coding-prep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AI Coding Prep</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/terminal-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminal Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/where-to-run-agent.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Where to run your agent</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/install-cli.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing AI CLI Tools</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/vscode-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">VS Code + Copilot Setup</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/git-for-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git for working with agents</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-controls="quarto-sidebar-section-9" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-9-label">Working with APIs</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-9" aria-labelledby="quarto-sidebar-section-9-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/get-ai-api-key.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Get AI API keys</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/api-use.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">APIs — Intro</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/llm-api-python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">LLM APIs in Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/llm-jobs-at-scale.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Running LLM jobs at scale</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/api-advanced.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">APIs — Under the hood</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/walkthrough-wb-fred.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Walkthrough: World Bank + FRED</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/walkthrough-fbref.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Walkthrough: FBref</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-controls="quarto-sidebar-section-10" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-10-label">Doing the analysis</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-10" aria-labelledby="quarto-sidebar-section-10-label" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/designing-projects.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Designing Larger Analytics Projects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/reproducible-research.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Reproducible Research</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/documentation-readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation Fundamentals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/decision-logs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Decision logs &amp; disclosing AI use</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/knowledge-bases-agents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Knowledge Bases for Agents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/joining-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Joining Data Tables</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/nlp-basics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NLP Basics — Text as Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/creating-graphs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating Graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/ideas-good-report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Good Report Ideas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../da-knowledge/pdf-guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PDF Guide</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-controls="quarto-sidebar-section-11" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-11-label">Case Studies</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-11" aria-labelledby="quarto-sidebar-section-11-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/VWS/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">World Values Survey</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/austria-hotels/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Austrian Hotels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/interviews/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Football Interviews</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/earnings/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">US Earnings (CPS)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/employee_commits/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Employee Commits</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../case-studies/common-support-r/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Common Support (R)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-much-will-the-job-cost" id="toc-how-much-will-the-job-cost" class="nav-link active" data-scroll-target="#how-much-will-the-job-cost">How much will the job cost?</a></li>
+  <li><a href="#why-start-with-a-pilot-of-50-to-100-documents" id="toc-why-start-with-a-pilot-of-50-to-100-documents" class="nav-link" data-scroll-target="#why-start-with-a-pilot-of-50-to-100-documents">Why start with a pilot of 50 to 100 documents?</a></li>
+  <li><a href="#what-is-a-batch-api-and-when-should-we-use-it" id="toc-what-is-a-batch-api-and-when-should-we-use-it" class="nav-link" data-scroll-target="#what-is-a-batch-api-and-when-should-we-use-it">What is a batch API, and when should we use it?</a></li>
+  <li><a href="#how-does-prompt-caching-cut-the-cost-of-a-long-codebook" id="toc-how-does-prompt-caching-cut-the-cost-of-a-long-codebook" class="nav-link" data-scroll-target="#how-does-prompt-caching-cut-the-cost-of-a-long-codebook">How does prompt caching cut the cost of a long codebook?</a></li>
+  <li><a href="#what-happens-when-we-hit-a-rate-limit" id="toc-what-happens-when-we-hit-a-rate-limit" class="nav-link" data-scroll-target="#what-happens-when-we-hit-a-rate-limit">What happens when we hit a rate limit?</a></li>
+  <li><a href="#how-do-we-make-sure-a-crash-doesnt-lose-work" id="toc-how-do-we-make-sure-a-crash-doesnt-lose-work" class="nav-link" data-scroll-target="#how-do-we-make-sure-a-crash-doesnt-lose-work">How do we make sure a crash doesn’t lose work?</a></li>
+  <li><a href="#how-do-we-keep-the-results-reproducible" id="toc-how-do-we-keep-the-results-reproducible" class="nav-link" data-scroll-target="#how-do-we-keep-the-results-reproducible">How do we keep the results reproducible?</a></li>
+  <li><a href="#how-do-we-stop-a-runaway-bill" id="toc-how-do-we-stop-a-runaway-bill" class="nav-link" data-scroll-target="#how-do-we-stop-a-runaway-bill">How do we stop a runaway bill?</a></li>
+  <li><a href="#when-is-a-cheap-model-or-a-local-model-the-better-choice" id="toc-when-is-a-cheap-model-or-a-local-model-the-better-choice" class="nav-link" data-scroll-target="#when-is-a-cheap-model-or-a-local-model-the-better-choice">When is a cheap model or a local model the better choice?</a></li>
+  <li><a href="#what-about-r" id="toc-what-about-r" class="nav-link" data-scroll-target="#what-about-r">What about R?</a></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See also</a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/get-ai-api-key.html">Working with APIs</a></li><li class="breadcrumb-item"><a href="../da-knowledge/llm-jobs-at-scale.html">Running LLM jobs at scale</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Running LLM jobs at scale</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Batch, caching and cost control when a model reads thousands of texts</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 22, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Prices and API details checked on 22 November 2026.</p>
+<p>Say we have 20,000 open-ended survey answers, and we want each one coded into one of twelve categories. <a href="../da-knowledge/llm-api-python.html">Calling LLM APIs from Python</a> showed how to classify one text, then ten. This page is the next step: running the same call 20,000 times at a cost we know in advance, and keeping every result. The order of work we suggest is this: estimate the cost, run a pilot, then run the full job as a batch, with caching and a log.</p>
+<section id="how-much-will-the-job-cost" class="level2">
+<h2 class="anchored" data-anchor-id="how-much-will-the-job-cost">How much will the job cost?</h2>
+<p>The arithmetic is simple. Cost = documents × (input tokens per document × input price + output tokens per document × output price). Prices are quoted per million tokens.</p>
+<p>Input tokens per document are the instructions (the codebook) plus the text itself. Output tokens are the answer plus the model’s thinking. Note that the current small models think before answering by default, and the thinking is billed as output tokens even when we never see it. Lowering the effort setting cuts it.</p>
+<p>Don’t guess the input length, count it. Anthropic’s token counting endpoint is free:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> anthropic</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># CODEBOOK: the codebook as one string; df: a data frame with columns id and text</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> anthropic.Anthropic()</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> client.messages.count_tokens(</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"claude-haiku-5-5"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    system<span class="op">=</span>CODEBOOK,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: df[<span class="st">"text"</span>].iloc[<span class="dv">0</span>]}],</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(n.input_tokens)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Let’s work through the example. The codebook is 1,500 tokens, an average answer is 150 tokens, and we assume 100 output tokens per answer. Over 20,000 answers, that is 33 million input tokens and 2 million output tokens.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Price per million tokens (input / output)</th>
+<th>Standard</th>
+<th>Batch</th>
+<th>Standard, codebook cached</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>claude-haiku-5-5</code></td>
+<td>$0.10 / $0.50</td>
+<td>$4.30</td>
+<td>$2.15</td>
+<td>$1.60</td>
+</tr>
+<tr class="even">
+<td><code>gpt-6-luna</code></td>
+<td>$0.10 / $0.50</td>
+<td>$4.30</td>
+<td>$2.15</td>
+<td>about $1.60</td>
+</tr>
+<tr class="odd">
+<td><code>claude-sonnet-5-5</code></td>
+<td>$2 / $10</td>
+<td>$86</td>
+<td>$43</td>
+<td>$29</td>
+</tr>
+<tr class="even">
+<td><code>claude-opus-5-5</code></td>
+<td>$4 / $20</td>
+<td>$172</td>
+<td>$86</td>
+<td>$58</td>
+</tr>
+</tbody>
+</table>
+<p>Two things stand out. The large model costs 40 times as much as the small one for the same job. And the two discounts, batch and caching, cut the bill by half and by about two thirds. They can also be combined. The weakest number in the table is the 100 output tokens, because thinking varies by task. The pilot replaces it with a measured one.</p>
+</section>
+<section id="why-start-with-a-pilot-of-50-to-100-documents" class="level2">
+<h2 class="anchored" data-anchor-id="why-start-with-a-pilot-of-50-to-100-documents">Why start with a pilot of 50 to 100 documents?</h2>
+<p>A pilot tells us two things before we spend real money: whether the labels are right, and what a document actually costs.</p>
+<p>It is good practice to draw a random sample of 100 documents and code them ourselves before looking at any model output. Then we run the model on the same 100, compare the two sets of labels, and read every disagreement. Most disagreements point to a vague category in the codebook. We fix the wording and rerun on the same 100. When we are happy, we check the final codebook on 50 fresh documents that played no role in the tuning, as we would hold out a test sample.</p>
+<p>The pilot also gives us measured tokens. Every response reports <code>usage.input_tokens</code> and <code>usage.output_tokens</code>, so we can redo the cost estimate with real averages. The whole pilot costs a few cents. This is also the moment to compare a small and a large model on the same 100 documents, as described in <a href="../da-knowledge/choosing-a-model.html">Choosing a model with evidence</a>.</p>
+</section>
+<section id="what-is-a-batch-api-and-when-should-we-use-it" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-batch-api-and-when-should-we-use-it">What is a batch API, and when should we use it?</h2>
+<p>A batch API takes all our requests in one go, processes them when the provider has spare capacity, and returns the results later at half the price. No one waits for 20,000 survey codes in real time, so for this kind of job the batch is the natural default.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Anthropic Message Batches</th>
+<th>OpenAI Batch API</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Discount</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+<tr class="even">
+<td>Turnaround</td>
+<td>Most within 1 hour, at most 24 hours</td>
+<td>Within 24 hours, often faster</td>
+</tr>
+<tr class="odd">
+<td>Size limit</td>
+<td>100,000 requests or 256 MB</td>
+<td>50,000 requests, 200 MB input file</td>
+</tr>
+<tr class="even">
+<td>Results kept</td>
+<td>29 days</td>
+<td>30 days by default</td>
+</tr>
+</tbody>
+</table>
+<p>Results may come back in a different order than we sent them, so each request carries a <code>custom_id</code> and we match on it. With Anthropic, we send a list of requests and keep the batch ID:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> anthropic.types.message_create_params <span class="im">import</span> MessageCreateParamsNonStreaming</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> anthropic.types.messages.batch_create_params <span class="im">import</span> Request</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>requests <span class="op">=</span> [</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    Request(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        custom_id<span class="op">=</span><span class="ss">f"r</span><span class="sc">{</span>row<span class="sc">.</span><span class="bu">id</span><span class="sc">}</span><span class="ss">"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        params<span class="op">=</span>MessageCreateParamsNonStreaming(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            model<span class="op">=</span><span class="st">"claude-haiku-5-5"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>            max_tokens<span class="op">=</span><span class="dv">1024</span>,                    <span class="co"># thinking counts toward this</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            output_config<span class="op">=</span>{<span class="st">"effort"</span>: <span class="st">"low"</span>},</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            system<span class="op">=</span>[{<span class="st">"type"</span>: <span class="st">"text"</span>, <span class="st">"text"</span>: CODEBOOK,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"cache_control"</span>: {<span class="st">"type"</span>: <span class="st">"ephemeral"</span>, <span class="st">"ttl"</span>: <span class="st">"1h"</span>}}],</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>            messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: row.text}],</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> df.itertuples()</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>batch <span class="op">=</span> client.messages.batches.create(requests<span class="op">=</span>requests)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="bu">open</span>(<span class="st">"batch_id.txt"</span>, <span class="st">"w"</span>).write(batch.<span class="bu">id</span>)  <span class="co"># needed to collect the results later</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Later, maybe after lunch, we collect the results:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>batch_id <span class="op">=</span> <span class="bu">open</span>(<span class="st">"batch_id.txt"</span>).read()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>batch <span class="op">=</span> client.messages.batches.retrieve(batch_id)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> batch.processing_status <span class="op">==</span> <span class="st">"ended"</span>:</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    rows <span class="op">=</span> []</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> r <span class="kw">in</span> client.messages.batches.results(batch_id):</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> r.result.<span class="bu">type</span> <span class="op">==</span> <span class="st">"succeeded"</span>:</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>            msg <span class="op">=</span> r.result.message</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>            text <span class="op">=</span> <span class="bu">next</span>((b.text <span class="cf">for</span> b <span class="kw">in</span> msg.content <span class="cf">if</span> b.<span class="bu">type</span> <span class="op">==</span> <span class="st">"text"</span>), <span class="st">""</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>            rows.append({<span class="st">"custom_id"</span>: r.custom_id, <span class="st">"label"</span>: text.strip(), <span class="st">"model"</span>: msg.model})</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:  <span class="co"># errored, canceled or expired: send these again</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            rows.append({<span class="st">"custom_id"</span>: r.custom_id, <span class="st">"label"</span>: <span class="va">None</span>, <span class="st">"status"</span>: r.result.<span class="bu">type</span>})</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    pd.DataFrame(rows).to_csv(<span class="st">"batch_results.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>With OpenAI, we write the requests to a JSONL file (plain text, one request per line), upload it, and point the batch at the Responses endpoint:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> openai <span class="im">import</span> OpenAI</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> OpenAI()</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"batch_input.jsonl"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> df.itertuples():</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        f.write(json.dumps({<span class="st">"custom_id"</span>: <span class="ss">f"r</span><span class="sc">{</span>row<span class="sc">.</span><span class="bu">id</span><span class="sc">}</span><span class="ss">"</span>, <span class="st">"method"</span>: <span class="st">"POST"</span>, <span class="st">"url"</span>: <span class="st">"/v1/responses"</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>                            <span class="st">"body"</span>: {<span class="st">"model"</span>: <span class="st">"gpt-6-luna"</span>, <span class="st">"instructions"</span>: CODEBOOK,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"input"</span>: row.text, <span class="st">"reasoning"</span>: {<span class="st">"effort"</span>: <span class="st">"low"</span>}}}) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>batch_file <span class="op">=</span> client.files.create(<span class="bu">file</span><span class="op">=</span><span class="bu">open</span>(<span class="st">"batch_input.jsonl"</span>, <span class="st">"rb"</span>), purpose<span class="op">=</span><span class="st">"batch"</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>batch <span class="op">=</span> client.batches.create(input_file_id<span class="op">=</span>batch_file.<span class="bu">id</span>, endpoint<span class="op">=</span><span class="st">"/v1/responses"</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                              completion_window<span class="op">=</span><span class="st">"24h"</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="bu">open</span>(<span class="st">"batch_id_openai.txt"</span>, <span class="st">"w"</span>).write(batch.<span class="bu">id</span>)  <span class="co"># needed to collect the results later</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># later, also in a new session</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>batch <span class="op">=</span> client.batches.retrieve(<span class="bu">open</span>(<span class="st">"batch_id_openai.txt"</span>).read())</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> batch.status <span class="op">==</span> <span class="st">"completed"</span>:</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> []</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> client.files.content(batch.output_file_id).text.splitlines():</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        r <span class="op">=</span> json.loads(line)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        body <span class="op">=</span> r[<span class="st">"response"</span>][<span class="st">"body"</span>]</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>        text <span class="op">=</span> <span class="bu">next</span>(c[<span class="st">"text"</span>] <span class="cf">for</span> item <span class="kw">in</span> body[<span class="st">"output"</span>] <span class="cf">if</span> item[<span class="st">"type"</span>] <span class="op">==</span> <span class="st">"message"</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">for</span> c <span class="kw">in</span> item[<span class="st">"content"</span>] <span class="cf">if</span> c[<span class="st">"type"</span>] <span class="op">==</span> <span class="st">"output_text"</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>        results.append({<span class="st">"custom_id"</span>: r[<span class="st">"custom_id"</span>], <span class="st">"label"</span>: text.strip()})</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    pd.DataFrame(results).to_csv(<span class="st">"batch_results.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Failed requests go to a separate file, found through <code>batch.error_file_id</code>.</p>
+</section>
+<section id="how-does-prompt-caching-cut-the-cost-of-a-long-codebook" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-prompt-caching-cut-the-cost-of-a-long-codebook">How does prompt caching cut the cost of a long codebook?</h2>
+<p>Every one of our 20,000 requests starts with the same 1,500-token codebook. With prompt caching, the provider keeps that processed beginning for a while, and the next request that starts with exactly the same text reads it from the cache at a fraction of the input price. The rule that follows: fixed text first, the document last.</p>
+<p>With Anthropic we mark the end of the fixed part with <code>cache_control</code>, as in the batch code above. A cache read costs 0.1 times the base input price on Claude Haiku 5.5, and 0.05 times on Claude Sonnet 5.5 and Claude Opus 5.5. Writing to the cache costs 1.25 times the base price for the default 5-minute lifetime, and 2 times for the 1-hour option. The current models cache prompts of 512 tokens or more. A shorter prompt is simply not cached, with no error. Inside a batch, cache hits are best effort, and the documentation suggests the 1-hour cache there. Check <code>usage.cache_read_input_tokens</code> in the pilot: if it stays at zero, the cache is not working.</p>
+<p>With OpenAI, caching is automatic for prompts of at least 1,024 tokens on recent models, cached input costs 0.1 times the normal rate on most models, and <code>usage.input_tokens_details.cached_tokens</code> shows what was read from the cache.</p>
+</section>
+<section id="what-happens-when-we-hit-a-rate-limit" class="level2">
+<h2 class="anchored" data-anchor-id="what-happens-when-we-hit-a-rate-limit">What happens when we hit a rate limit?</h2>
+<p>Providers cap how much we can send per minute: requests, input tokens and output tokens. Above the cap, the API returns error 429. Both Python packages, <code>anthropic</code> and <code>openai</code>, retry such errors automatically, twice by default, with growing pauses. For a long loop we can raise this with <code>anthropic.Anthropic(max_retries=5)</code> or <code>OpenAI(max_retries=5)</code>. With Anthropic, tokens read from the cache don’t count toward the input-token limit. A sudden jump in traffic can also trigger a 429, so start a big loop slowly rather than all at once.</p>
+<p>Batch jobs have their own, separate limits, which is one more reason to prefer them for large jobs. Note that not every error is worth retrying. A 400 means the request itself is wrong, and a 429 that says the monthly spend cap is reached will keep failing until the cap is raised or the next month starts.</p>
+</section>
+<section id="how-do-we-make-sure-a-crash-doesnt-lose-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-we-make-sure-a-crash-doesnt-lose-work">How do we make sure a crash doesn’t lose work?</h2>
+<p>When we run requests one by one, each result should go to disk the moment it arrives, one line per document. If the script stops after 12,000 documents, because of a dropped connection or a laptop lid, we restart it, it reads the file, and it skips what is done.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> anthropic, datetime, hashlib, json, os</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> anthropic.Anthropic(max_retries<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>PROMPT_VERSION <span class="op">=</span> hashlib.sha256(CODEBOOK.encode()).hexdigest()[:<span class="dv">8</span>]</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>OUT <span class="op">=</span> <span class="st">"labels.jsonl"</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>done <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> os.path.exists(OUT):</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(OUT) <span class="im">as</span> f:</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        done <span class="op">=</span> {json.loads(line)[<span class="st">"id"</span>] <span class="cf">for</span> line <span class="kw">in</span> f}</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(OUT, <span class="st">"a"</span>) <span class="im">as</span> f:</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> df.itertuples():</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> row.<span class="bu">id</span> <span class="kw">in</span> done:</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        msg <span class="op">=</span> client.messages.create(</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>            model<span class="op">=</span><span class="st">"claude-haiku-5-5"</span>, max_tokens<span class="op">=</span><span class="dv">1024</span>, output_config<span class="op">=</span>{<span class="st">"effort"</span>: <span class="st">"low"</span>},</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>            system<span class="op">=</span>[{<span class="st">"type"</span>: <span class="st">"text"</span>, <span class="st">"text"</span>: CODEBOOK, <span class="st">"cache_control"</span>: {<span class="st">"type"</span>: <span class="st">"ephemeral"</span>}}],</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>            messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: row.text}],</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>        f.write(json.dumps({</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>            <span class="st">"id"</span>: row.<span class="bu">id</span>,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>            <span class="st">"label"</span>: <span class="bu">next</span>((b.text <span class="cf">for</span> b <span class="kw">in</span> msg.content <span class="cf">if</span> b.<span class="bu">type</span> <span class="op">==</span> <span class="st">"text"</span>), <span class="st">""</span>).strip(),</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>            <span class="st">"stop_reason"</span>: msg.stop_reason,          <span class="co"># "max_tokens" means the answer was cut off</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            <span class="st">"model"</span>: msg.model, <span class="st">"prompt_version"</span>: PROMPT_VERSION,</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>            <span class="st">"date"</span>: datetime.date.today().isoformat(),</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>            <span class="st">"input_tokens"</span>: msg.usage.input_tokens,</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>            <span class="st">"cache_read_tokens"</span>: msg.usage.cache_read_input_tokens,</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>            <span class="st">"output_tokens"</span>: msg.usage.output_tokens,</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>        }) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        f.flush()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For a batch, the equivalent is to save the batch ID to a file right after creating it. The results wait on the provider’s side for about a month.</p>
+</section>
+<section id="how-do-we-keep-the-results-reproducible" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-we-keep-the-results-reproducible">How do we keep the results reproducible?</h2>
+<p>Each row in the file above carries the exact model ID returned by the API, the date, and a prompt version. The version is a short hash of the codebook text, so any change to the wording gives a new version. Keep the codebook in its own file under git, next to the script.</p>
+<p>Why bother? Hosted models are retired. OpenAI’s <code>gpt-4o-mini</code> shuts down on 14 January 2027, with <code>gpt-6-luna</code> as the suggested replacement. A referee who asks for a rerun in two years may get a different model, and the log is what tells us which model produced the numbers in the paper. If exact reruns matter, a downloaded local model is the safer choice. See <a href="../da-knowledge/reproducible-research.html">Reproducible research</a> for the wider workflow.</p>
+</section>
+<section id="how-do-we-stop-a-runaway-bill" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-we-stop-a-runaway-bill">How do we stop a runaway bill?</h2>
+<p>Set a spend limit before the full run, not after. In the Claude Console, under <a href="https://platform.claude.com/settings/spend-limits">Spend limits</a>, we can set a monthly limit below our tier’s cap. Above it, requests fail with an error instead of costing money. We can also give the project its own workspace with its own limit. OpenAI offers a spend alert, which only sends a notification, and a hard spend limit, which stops requests, for the whole organization or for one project.</p>
+<p>Also watch the first thousand documents. If the tokens per document are far above the pilot’s numbers, stop and find out why.</p>
+</section>
+<section id="when-is-a-cheap-model-or-a-local-model-the-better-choice" class="level2">
+<h2 class="anchored" data-anchor-id="when-is-a-cheap-model-or-a-local-model-the-better-choice">When is a cheap model or a local model the better choice?</h2>
+<p>For classification into fixed categories, or for pulling a few fields out of each text, a small model is usually enough. Anthropic itself positions Claude Haiku 5.5 for high-volume work such as classification and extraction. A larger model earns its price when the categories need judgment, when the documents are long and subtle, or when the pilot shows clear errors that a better prompt doesn’t fix. We decide on the pilot numbers.</p>
+<p>A local model is the better choice when the texts are confidential, when exact reruns matter, or when there is no budget for a per-token bill. The price is time: a laptop is much slower than a hosted model. The script barely changes, and checkpointing matters even more for runs that take a whole night. See <a href="../da-knowledge/run-ai-locally.html">Running AI on your own computer</a>.</p>
+</section>
+<section id="what-about-r" class="level2">
+<h2 class="anchored" data-anchor-id="what-about-r">What about R?</h2>
+<p>The <a href="https://ellmer.tidyverse.org/">ellmer</a> package has <code>batch_chat()</code>, which sends prompts through the batch APIs of OpenAI, Anthropic, Google Gemini and Groq. It saves the state of the job in a JSON file, so we can stop R and rerun the same line later to pick up the results. <code>batch_chat_text()</code> returns the answers as a character vector, and <code>batch_chat_structured()</code> returns structured data, by default as a data frame. The package marks these functions as experimental. For requests that should come back right away, <code>parallel_chat()</code> sends several at a time.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ellmer)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>chat <span class="ot">&lt;-</span> <span class="fu">chat_anthropic</span>(<span class="at">model =</span> <span class="st">"claude-haiku-5-5"</span>, <span class="at">system_prompt =</span> codebook)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">batch_chat_text</span>(<span class="at">chat =</span> chat, <span class="at">prompts =</span> <span class="fu">as.list</span>(df<span class="sc">$</span>text), <span class="at">path =</span> <span class="st">"labels-batch.json"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="see-also" class="level2">
+<h2 class="anchored" data-anchor-id="see-also">See also</h2>
+<ul>
+<li><a href="../da-knowledge/llm-api-python.html">Calling LLM APIs from Python</a>: the first calls and the helper function this page builds on.</li>
+<li><a href="../da-knowledge/api-use.html">Introduction to APIs</a> and <a href="../da-knowledge/api-advanced.html">Supplementary information for APIs</a>.</li>
+<li><a href="../da-knowledge/run-ai-locally.html">Running AI on your own computer</a>: local models for confidential text.</li>
+</ul>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<ul>
+<li>Anthropic: <a href="https://platform.claude.com/docs/en/about-claude/pricing">Pricing</a>, <a href="https://platform.claude.com/docs/en/build-with-claude/batch-processing">Batch processing</a>, <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching">Prompt caching</a>, <a href="https://platform.claude.com/docs/en/build-with-claude/token-counting">Token counting</a>, <a href="https://platform.claude.com/docs/en/api/rate-limits">Rate limits and spend limits</a>, <a href="https://platform.claude.com/docs/en/api/errors">Errors</a>, <a href="https://platform.claude.com/docs/en/build-with-claude/effort">Effort</a>, <a href="https://platform.claude.com/docs/en/build-with-claude/thinking">Thinking</a></li>
+<li>OpenAI: <a href="https://developers.openai.com/api/docs/pricing">Pricing</a>, <a href="https://developers.openai.com/api/docs/guides/batch">Batch API</a>, <a href="https://developers.openai.com/api/docs/guides/prompt-caching">Prompt caching</a>, <a href="https://developers.openai.com/api/docs/guides/rate-limits">Rate limits</a>, <a href="https://developers.openai.com/api/docs/guides/reasoning">Reasoning models</a>, <a href="https://developers.openai.com/api/docs/deprecations">Deprecations</a>, <a href="https://github.com/openai/openai-python#retries">Python SDK retries</a></li>
+<li>ellmer: <a href="https://ellmer.tidyverse.org/reference/batch_chat.html">batch_chat()</a>, <a href="https://ellmer.tidyverse.org/reference/parallel_chat.html">parallel_chat()</a>, <a href="https://ellmer.tidyverse.org/reference/chat_anthropic.html">chat_anthropic()</a></li>
+</ul>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/gabors-data-analysis\.com\/ai-course");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Running LLM jobs at scale"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Batch, caching and cost control when a model reads thousands of texts"</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-11-22"</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>Prices and API details checked on 22 November 2026.</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>Say we have 20,000 open-ended survey answers, and we want each one coded into one of twelve categories. <span class="co">[</span><span class="ot">Calling LLM APIs from Python</span><span class="co">](llm-api-python.qmd)</span> showed how to classify one text, then ten. This page is the next step: running the same call 20,000 times at a cost we know in advance, and keeping every result. The order of work we suggest is this: estimate the cost, run a pilot, then run the full job as a batch, with caching and a log.</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## How much will the job cost?</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>The arithmetic is simple. Cost = documents × (input tokens per document × input price + output tokens per document × output price). Prices are quoted per million tokens.</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>Input tokens per document are the instructions (the codebook) plus the text itself. Output tokens are the answer plus the model's thinking. Note that the current small models think before answering by default, and the thinking is billed as output tokens even when we never see it. Lowering the effort setting cuts it.</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>Don't guess the input length, count it. Anthropic's token counting endpoint is free:</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> anthropic</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co"># CODEBOOK: the codebook as one string; df: a data frame with columns id and text</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> anthropic.Anthropic()</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> client.messages.count_tokens(</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"claude-haiku-5-5"</span>,</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    system<span class="op">=</span>CODEBOOK,</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: df[<span class="st">"text"</span>].iloc[<span class="dv">0</span>]}],</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(n.input_tokens)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>Let's work through the example. The codebook is 1,500 tokens, an average answer is 150 tokens, and we assume 100 output tokens per answer. Over 20,000 answers, that is 33 million input tokens and 2 million output tokens.</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Model <span class="pp">|</span> Price per million tokens (input / output) <span class="pp">|</span> Standard <span class="pp">|</span> Batch <span class="pp">|</span> Standard, codebook cached <span class="pp">|</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|---|</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`claude-haiku-5-5`</span> <span class="pp">|</span> \$0.10 / \$0.50 <span class="pp">|</span> \$4.30 <span class="pp">|</span> \$2.15 <span class="pp">|</span> \$1.60 <span class="pp">|</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`gpt-6-luna`</span> <span class="pp">|</span> \$0.10 / \$0.50 <span class="pp">|</span> \$4.30 <span class="pp">|</span> \$2.15 <span class="pp">|</span> about \$1.60 <span class="pp">|</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`claude-sonnet-5-5`</span> <span class="pp">|</span> \$2 / \$10 <span class="pp">|</span> \$86 <span class="pp">|</span> \$43 <span class="pp">|</span> \$29 <span class="pp">|</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`claude-opus-5-5`</span> <span class="pp">|</span> \$4 / \$20 <span class="pp">|</span> \$172 <span class="pp">|</span> \$86 <span class="pp">|</span> \$58 <span class="pp">|</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>Two things stand out. The large model costs 40 times as much as the small one for the same job. And the two discounts, batch and caching, cut the bill by half and by about two thirds. They can also be combined. The weakest number in the table is the 100 output tokens, because thinking varies by task. The pilot replaces it with a measured one.</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why start with a pilot of 50 to 100 documents?</span></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>A pilot tells us two things before we spend real money: whether the labels are right, and what a document actually costs.</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>It is good practice to draw a random sample of 100 documents and code them ourselves before looking at any model output. Then we run the model on the same 100, compare the two sets of labels, and read every disagreement. Most disagreements point to a vague category in the codebook. We fix the wording and rerun on the same 100. When we are happy, we check the final codebook on 50 fresh documents that played no role in the tuning, as we would hold out a test sample.</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>The pilot also gives us measured tokens. Every response reports <span class="in">`usage.input_tokens`</span> and <span class="in">`usage.output_tokens`</span>, so we can redo the cost estimate with real averages. The whole pilot costs a few cents. This is also the moment to compare a small and a large model on the same 100 documents, as described in <span class="co">[</span><span class="ot">Choosing a model with evidence</span><span class="co">](choosing-a-model.qmd)</span>.</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is a batch API, and when should we use it?</span></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>A batch API takes all our requests in one go, processes them when the provider has spare capacity, and returns the results later at half the price. No one waits for 20,000 survey codes in real time, so for this kind of job the batch is the natural default.</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="pp">|</span> Anthropic Message Batches <span class="pp">|</span> OpenAI Batch API <span class="pp">|</span></span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Discount <span class="pp">|</span> 50% <span class="pp">|</span> 50% <span class="pp">|</span></span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Turnaround <span class="pp">|</span> Most within 1 hour, at most 24 hours <span class="pp">|</span> Within 24 hours, often faster <span class="pp">|</span></span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Size limit <span class="pp">|</span> 100,000 requests or 256 MB <span class="pp">|</span> 50,000 requests, 200 MB input file <span class="pp">|</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Results kept <span class="pp">|</span> 29 days <span class="pp">|</span> 30 days by default <span class="pp">|</span></span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>Results may come back in a different order than we sent them, so each request carries a <span class="in">`custom_id`</span> and we match on it. With Anthropic, we send a list of requests and keep the batch ID:</span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> anthropic.types.message_create_params <span class="im">import</span> MessageCreateParamsNonStreaming</span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> anthropic.types.messages.batch_create_params <span class="im">import</span> Request</span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>requests <span class="op">=</span> [</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>    Request(</span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>        custom_id<span class="op">=</span><span class="ss">f"r</span><span class="sc">{</span>row<span class="sc">.</span><span class="bu">id</span><span class="sc">}</span><span class="ss">"</span>,</span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>        params<span class="op">=</span>MessageCreateParamsNonStreaming(</span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>            model<span class="op">=</span><span class="st">"claude-haiku-5-5"</span>,</span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>            max_tokens<span class="op">=</span><span class="dv">1024</span>,                    <span class="co"># thinking counts toward this</span></span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>            output_config<span class="op">=</span>{<span class="st">"effort"</span>: <span class="st">"low"</span>},</span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>            system<span class="op">=</span>[{<span class="st">"type"</span>: <span class="st">"text"</span>, <span class="st">"text"</span>: CODEBOOK,</span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"cache_control"</span>: {<span class="st">"type"</span>: <span class="st">"ephemeral"</span>, <span class="st">"ttl"</span>: <span class="st">"1h"</span>}}],</span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>            messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: row.text}],</span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> df.itertuples()</span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>batch <span class="op">=</span> client.messages.batches.create(requests<span class="op">=</span>requests)</span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a><span class="bu">open</span>(<span class="st">"batch_id.txt"</span>, <span class="st">"w"</span>).write(batch.<span class="bu">id</span>)  <span class="co"># needed to collect the results later</span></span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a>Later, maybe after lunch, we collect the results:</span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>batch_id <span class="op">=</span> <span class="bu">open</span>(<span class="st">"batch_id.txt"</span>).read()</span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a>batch <span class="op">=</span> client.messages.batches.retrieve(batch_id)</span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> batch.processing_status <span class="op">==</span> <span class="st">"ended"</span>:</span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>    rows <span class="op">=</span> []</span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> r <span class="kw">in</span> client.messages.batches.results(batch_id):</span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> r.result.<span class="bu">type</span> <span class="op">==</span> <span class="st">"succeeded"</span>:</span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a>            msg <span class="op">=</span> r.result.message</span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a>            text <span class="op">=</span> <span class="bu">next</span>((b.text <span class="cf">for</span> b <span class="kw">in</span> msg.content <span class="cf">if</span> b.<span class="bu">type</span> <span class="op">==</span> <span class="st">"text"</span>), <span class="st">""</span>)</span>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>            rows.append({<span class="st">"custom_id"</span>: r.custom_id, <span class="st">"label"</span>: text.strip(), <span class="st">"model"</span>: msg.model})</span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:  <span class="co"># errored, canceled or expired: send these again</span></span>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>            rows.append({<span class="st">"custom_id"</span>: r.custom_id, <span class="st">"label"</span>: <span class="va">None</span>, <span class="st">"status"</span>: r.result.<span class="bu">type</span>})</span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>    pd.DataFrame(rows).to_csv(<span class="st">"batch_results.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a>With OpenAI, we write the requests to a JSONL file (plain text, one request per line), upload it, and point the batch at the Responses endpoint:</span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> openai <span class="im">import</span> OpenAI</span>
+<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> OpenAI()</span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"batch_input.jsonl"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> df.itertuples():</span>
+<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a>        f.write(json.dumps({<span class="st">"custom_id"</span>: <span class="ss">f"r</span><span class="sc">{</span>row<span class="sc">.</span><span class="bu">id</span><span class="sc">}</span><span class="ss">"</span>, <span class="st">"method"</span>: <span class="st">"POST"</span>, <span class="st">"url"</span>: <span class="st">"/v1/responses"</span>,</span>
+<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a>                            <span class="st">"body"</span>: {<span class="st">"model"</span>: <span class="st">"gpt-6-luna"</span>, <span class="st">"instructions"</span>: CODEBOOK,</span>
+<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"input"</span>: row.text, <span class="st">"reasoning"</span>: {<span class="st">"effort"</span>: <span class="st">"low"</span>}}}) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a>batch_file <span class="op">=</span> client.files.create(<span class="bu">file</span><span class="op">=</span><span class="bu">open</span>(<span class="st">"batch_input.jsonl"</span>, <span class="st">"rb"</span>), purpose<span class="op">=</span><span class="st">"batch"</span>)</span>
+<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a>batch <span class="op">=</span> client.batches.create(input_file_id<span class="op">=</span>batch_file.<span class="bu">id</span>, endpoint<span class="op">=</span><span class="st">"/v1/responses"</span>,</span>
+<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a>                              completion_window<span class="op">=</span><span class="st">"24h"</span>)</span>
+<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a><span class="bu">open</span>(<span class="st">"batch_id_openai.txt"</span>, <span class="st">"w"</span>).write(batch.<span class="bu">id</span>)  <span class="co"># needed to collect the results later</span></span>
+<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a><span class="co"># later, also in a new session</span></span>
+<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>batch <span class="op">=</span> client.batches.retrieve(<span class="bu">open</span>(<span class="st">"batch_id_openai.txt"</span>).read())</span>
+<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> batch.status <span class="op">==</span> <span class="st">"completed"</span>:</span>
+<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> []</span>
+<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> client.files.content(batch.output_file_id).text.splitlines():</span>
+<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a>        r <span class="op">=</span> json.loads(line)</span>
+<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a>        body <span class="op">=</span> r[<span class="st">"response"</span>][<span class="st">"body"</span>]</span>
+<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>        text <span class="op">=</span> <span class="bu">next</span>(c[<span class="st">"text"</span>] <span class="cf">for</span> item <span class="kw">in</span> body[<span class="st">"output"</span>] <span class="cf">if</span> item[<span class="st">"type"</span>] <span class="op">==</span> <span class="st">"message"</span></span>
+<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">for</span> c <span class="kw">in</span> item[<span class="st">"content"</span>] <span class="cf">if</span> c[<span class="st">"type"</span>] <span class="op">==</span> <span class="st">"output_text"</span>)</span>
+<span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a>        results.append({<span class="st">"custom_id"</span>: r[<span class="st">"custom_id"</span>], <span class="st">"label"</span>: text.strip()})</span>
+<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a>    pd.DataFrame(results).to_csv(<span class="st">"batch_results.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-138"><a href="#cb7-138" aria-hidden="true" tabindex="-1"></a>Failed requests go to a separate file, found through <span class="in">`batch.error_file_id`</span>.</span>
+<span id="cb7-139"><a href="#cb7-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-140"><a href="#cb7-140" aria-hidden="true" tabindex="-1"></a><span class="fu">## How does prompt caching cut the cost of a long codebook?</span></span>
+<span id="cb7-141"><a href="#cb7-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-142"><a href="#cb7-142" aria-hidden="true" tabindex="-1"></a>Every one of our 20,000 requests starts with the same 1,500-token codebook. With prompt caching, the provider keeps that processed beginning for a while, and the next request that starts with exactly the same text reads it from the cache at a fraction of the input price. The rule that follows: fixed text first, the document last.</span>
+<span id="cb7-143"><a href="#cb7-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-144"><a href="#cb7-144" aria-hidden="true" tabindex="-1"></a>With Anthropic we mark the end of the fixed part with <span class="in">`cache_control`</span>, as in the batch code above. A cache read costs 0.1 times the base input price on Claude Haiku 5.5, and 0.05 times on Claude Sonnet 5.5 and Claude Opus 5.5. Writing to the cache costs 1.25 times the base price for the default 5-minute lifetime, and 2 times for the 1-hour option. The current models cache prompts of 512 tokens or more. A shorter prompt is simply not cached, with no error. Inside a batch, cache hits are best effort, and the documentation suggests the 1-hour cache there. Check <span class="in">`usage.cache_read_input_tokens`</span> in the pilot: if it stays at zero, the cache is not working.</span>
+<span id="cb7-145"><a href="#cb7-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-146"><a href="#cb7-146" aria-hidden="true" tabindex="-1"></a>With OpenAI, caching is automatic for prompts of at least 1,024 tokens on recent models, cached input costs 0.1 times the normal rate on most models, and <span class="in">`usage.input_tokens_details.cached_tokens`</span> shows what was read from the cache.</span>
+<span id="cb7-147"><a href="#cb7-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-148"><a href="#cb7-148" aria-hidden="true" tabindex="-1"></a><span class="fu">## What happens when we hit a rate limit?</span></span>
+<span id="cb7-149"><a href="#cb7-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-150"><a href="#cb7-150" aria-hidden="true" tabindex="-1"></a>Providers cap how much we can send per minute: requests, input tokens and output tokens. Above the cap, the API returns error 429. Both Python packages, <span class="in">`anthropic`</span> and <span class="in">`openai`</span>, retry such errors automatically, twice by default, with growing pauses. For a long loop we can raise this with <span class="in">`anthropic.Anthropic(max_retries=5)`</span> or <span class="in">`OpenAI(max_retries=5)`</span>. With Anthropic, tokens read from the cache don't count toward the input-token limit. A sudden jump in traffic can also trigger a 429, so start a big loop slowly rather than all at once.</span>
+<span id="cb7-151"><a href="#cb7-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-152"><a href="#cb7-152" aria-hidden="true" tabindex="-1"></a>Batch jobs have their own, separate limits, which is one more reason to prefer them for large jobs. Note that not every error is worth retrying. A 400 means the request itself is wrong, and a 429 that says the monthly spend cap is reached will keep failing until the cap is raised or the next month starts.</span>
+<span id="cb7-153"><a href="#cb7-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-154"><a href="#cb7-154" aria-hidden="true" tabindex="-1"></a><span class="fu">## How do we make sure a crash doesn't lose work?</span></span>
+<span id="cb7-155"><a href="#cb7-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-156"><a href="#cb7-156" aria-hidden="true" tabindex="-1"></a>When we run requests one by one, each result should go to disk the moment it arrives, one line per document. If the script stops after 12,000 documents, because of a dropped connection or a laptop lid, we restart it, it reads the file, and it skips what is done.</span>
+<span id="cb7-157"><a href="#cb7-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-158"><a href="#cb7-158" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb7-159"><a href="#cb7-159" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> anthropic, datetime, hashlib, json, os</span>
+<span id="cb7-160"><a href="#cb7-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-161"><a href="#cb7-161" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> anthropic.Anthropic(max_retries<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb7-162"><a href="#cb7-162" aria-hidden="true" tabindex="-1"></a>PROMPT_VERSION <span class="op">=</span> hashlib.sha256(CODEBOOK.encode()).hexdigest()[:<span class="dv">8</span>]</span>
+<span id="cb7-163"><a href="#cb7-163" aria-hidden="true" tabindex="-1"></a>OUT <span class="op">=</span> <span class="st">"labels.jsonl"</span></span>
+<span id="cb7-164"><a href="#cb7-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-165"><a href="#cb7-165" aria-hidden="true" tabindex="-1"></a>done <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb7-166"><a href="#cb7-166" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> os.path.exists(OUT):</span>
+<span id="cb7-167"><a href="#cb7-167" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(OUT) <span class="im">as</span> f:</span>
+<span id="cb7-168"><a href="#cb7-168" aria-hidden="true" tabindex="-1"></a>        done <span class="op">=</span> {json.loads(line)[<span class="st">"id"</span>] <span class="cf">for</span> line <span class="kw">in</span> f}</span>
+<span id="cb7-169"><a href="#cb7-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-170"><a href="#cb7-170" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(OUT, <span class="st">"a"</span>) <span class="im">as</span> f:</span>
+<span id="cb7-171"><a href="#cb7-171" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> df.itertuples():</span>
+<span id="cb7-172"><a href="#cb7-172" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> row.<span class="bu">id</span> <span class="kw">in</span> done:</span>
+<span id="cb7-173"><a href="#cb7-173" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb7-174"><a href="#cb7-174" aria-hidden="true" tabindex="-1"></a>        msg <span class="op">=</span> client.messages.create(</span>
+<span id="cb7-175"><a href="#cb7-175" aria-hidden="true" tabindex="-1"></a>            model<span class="op">=</span><span class="st">"claude-haiku-5-5"</span>, max_tokens<span class="op">=</span><span class="dv">1024</span>, output_config<span class="op">=</span>{<span class="st">"effort"</span>: <span class="st">"low"</span>},</span>
+<span id="cb7-176"><a href="#cb7-176" aria-hidden="true" tabindex="-1"></a>            system<span class="op">=</span>[{<span class="st">"type"</span>: <span class="st">"text"</span>, <span class="st">"text"</span>: CODEBOOK, <span class="st">"cache_control"</span>: {<span class="st">"type"</span>: <span class="st">"ephemeral"</span>}}],</span>
+<span id="cb7-177"><a href="#cb7-177" aria-hidden="true" tabindex="-1"></a>            messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: row.text}],</span>
+<span id="cb7-178"><a href="#cb7-178" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb7-179"><a href="#cb7-179" aria-hidden="true" tabindex="-1"></a>        f.write(json.dumps({</span>
+<span id="cb7-180"><a href="#cb7-180" aria-hidden="true" tabindex="-1"></a>            <span class="st">"id"</span>: row.<span class="bu">id</span>,</span>
+<span id="cb7-181"><a href="#cb7-181" aria-hidden="true" tabindex="-1"></a>            <span class="st">"label"</span>: <span class="bu">next</span>((b.text <span class="cf">for</span> b <span class="kw">in</span> msg.content <span class="cf">if</span> b.<span class="bu">type</span> <span class="op">==</span> <span class="st">"text"</span>), <span class="st">""</span>).strip(),</span>
+<span id="cb7-182"><a href="#cb7-182" aria-hidden="true" tabindex="-1"></a>            <span class="st">"stop_reason"</span>: msg.stop_reason,          <span class="co"># "max_tokens" means the answer was cut off</span></span>
+<span id="cb7-183"><a href="#cb7-183" aria-hidden="true" tabindex="-1"></a>            <span class="st">"model"</span>: msg.model, <span class="st">"prompt_version"</span>: PROMPT_VERSION,</span>
+<span id="cb7-184"><a href="#cb7-184" aria-hidden="true" tabindex="-1"></a>            <span class="st">"date"</span>: datetime.date.today().isoformat(),</span>
+<span id="cb7-185"><a href="#cb7-185" aria-hidden="true" tabindex="-1"></a>            <span class="st">"input_tokens"</span>: msg.usage.input_tokens,</span>
+<span id="cb7-186"><a href="#cb7-186" aria-hidden="true" tabindex="-1"></a>            <span class="st">"cache_read_tokens"</span>: msg.usage.cache_read_input_tokens,</span>
+<span id="cb7-187"><a href="#cb7-187" aria-hidden="true" tabindex="-1"></a>            <span class="st">"output_tokens"</span>: msg.usage.output_tokens,</span>
+<span id="cb7-188"><a href="#cb7-188" aria-hidden="true" tabindex="-1"></a>        }) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb7-189"><a href="#cb7-189" aria-hidden="true" tabindex="-1"></a>        f.flush()</span>
+<span id="cb7-190"><a href="#cb7-190" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-191"><a href="#cb7-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-192"><a href="#cb7-192" aria-hidden="true" tabindex="-1"></a>For a batch, the equivalent is to save the batch ID to a file right after creating it. The results wait on the provider's side for about a month.</span>
+<span id="cb7-193"><a href="#cb7-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-194"><a href="#cb7-194" aria-hidden="true" tabindex="-1"></a><span class="fu">## How do we keep the results reproducible?</span></span>
+<span id="cb7-195"><a href="#cb7-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-196"><a href="#cb7-196" aria-hidden="true" tabindex="-1"></a>Each row in the file above carries the exact model ID returned by the API, the date, and a prompt version. The version is a short hash of the codebook text, so any change to the wording gives a new version. Keep the codebook in its own file under git, next to the script.</span>
+<span id="cb7-197"><a href="#cb7-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-198"><a href="#cb7-198" aria-hidden="true" tabindex="-1"></a>Why bother? Hosted models are retired. OpenAI's <span class="in">`gpt-4o-mini`</span> shuts down on 14 January 2027, with <span class="in">`gpt-6-luna`</span> as the suggested replacement. A referee who asks for a rerun in two years may get a different model, and the log is what tells us which model produced the numbers in the paper. If exact reruns matter, a downloaded local model is the safer choice. See <span class="co">[</span><span class="ot">Reproducible research</span><span class="co">](reproducible-research.qmd)</span> for the wider workflow.</span>
+<span id="cb7-199"><a href="#cb7-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-200"><a href="#cb7-200" aria-hidden="true" tabindex="-1"></a><span class="fu">## How do we stop a runaway bill?</span></span>
+<span id="cb7-201"><a href="#cb7-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-202"><a href="#cb7-202" aria-hidden="true" tabindex="-1"></a>Set a spend limit before the full run, not after. In the Claude Console, under <span class="co">[</span><span class="ot">Spend limits</span><span class="co">](https://platform.claude.com/settings/spend-limits)</span>, we can set a monthly limit below our tier's cap. Above it, requests fail with an error instead of costing money. We can also give the project its own workspace with its own limit. OpenAI offers a spend alert, which only sends a notification, and a hard spend limit, which stops requests, for the whole organization or for one project.</span>
+<span id="cb7-203"><a href="#cb7-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-204"><a href="#cb7-204" aria-hidden="true" tabindex="-1"></a>Also watch the first thousand documents. If the tokens per document are far above the pilot's numbers, stop and find out why.</span>
+<span id="cb7-205"><a href="#cb7-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-206"><a href="#cb7-206" aria-hidden="true" tabindex="-1"></a><span class="fu">## When is a cheap model or a local model the better choice?</span></span>
+<span id="cb7-207"><a href="#cb7-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-208"><a href="#cb7-208" aria-hidden="true" tabindex="-1"></a>For classification into fixed categories, or for pulling a few fields out of each text, a small model is usually enough. Anthropic itself positions Claude Haiku 5.5 for high-volume work such as classification and extraction. A larger model earns its price when the categories need judgment, when the documents are long and subtle, or when the pilot shows clear errors that a better prompt doesn't fix. We decide on the pilot numbers.</span>
+<span id="cb7-209"><a href="#cb7-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-210"><a href="#cb7-210" aria-hidden="true" tabindex="-1"></a>A local model is the better choice when the texts are confidential, when exact reruns matter, or when there is no budget for a per-token bill. The price is time: a laptop is much slower than a hosted model. The script barely changes, and checkpointing matters even more for runs that take a whole night. See <span class="co">[</span><span class="ot">Running AI on your own computer</span><span class="co">](run-ai-locally.qmd)</span>.</span>
+<span id="cb7-211"><a href="#cb7-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-212"><a href="#cb7-212" aria-hidden="true" tabindex="-1"></a><span class="fu">## What about R?</span></span>
+<span id="cb7-213"><a href="#cb7-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-214"><a href="#cb7-214" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">ellmer</span><span class="co">](https://ellmer.tidyverse.org/)</span> package has <span class="in">`batch_chat()`</span>, which sends prompts through the batch APIs of OpenAI, Anthropic, Google Gemini and Groq. It saves the state of the job in a JSON file, so we can stop R and rerun the same line later to pick up the results. <span class="in">`batch_chat_text()`</span> returns the answers as a character vector, and <span class="in">`batch_chat_structured()`</span> returns structured data, by default as a data frame. The package marks these functions as experimental. For requests that should come back right away, <span class="in">`parallel_chat()`</span> sends several at a time.</span>
+<span id="cb7-215"><a href="#cb7-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-216"><a href="#cb7-216" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb7-217"><a href="#cb7-217" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ellmer)</span>
+<span id="cb7-218"><a href="#cb7-218" aria-hidden="true" tabindex="-1"></a>chat <span class="ot">&lt;-</span> <span class="fu">chat_anthropic</span>(<span class="at">model =</span> <span class="st">"claude-haiku-5-5"</span>, <span class="at">system_prompt =</span> codebook)</span>
+<span id="cb7-219"><a href="#cb7-219" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">batch_chat_text</span>(<span class="at">chat =</span> chat, <span class="at">prompts =</span> <span class="fu">as.list</span>(df<span class="sc">$</span>text), <span class="at">path =</span> <span class="st">"labels-batch.json"</span>)</span>
+<span id="cb7-220"><a href="#cb7-220" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-221"><a href="#cb7-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-222"><a href="#cb7-222" aria-hidden="true" tabindex="-1"></a><span class="fu">## See also</span></span>
+<span id="cb7-223"><a href="#cb7-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-224"><a href="#cb7-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Calling LLM APIs from Python</span><span class="co">](llm-api-python.qmd)</span>: the first calls and the helper function this page builds on.</span>
+<span id="cb7-225"><a href="#cb7-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Introduction to APIs</span><span class="co">](api-use.qmd)</span> and <span class="co">[</span><span class="ot">Supplementary information for APIs</span><span class="co">](api-advanced.qmd)</span>.</span>
+<span id="cb7-226"><a href="#cb7-226" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Running AI on your own computer</span><span class="co">](run-ai-locally.qmd)</span>: local models for confidential text.</span>
+<span id="cb7-227"><a href="#cb7-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-228"><a href="#cb7-228" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sources</span></span>
+<span id="cb7-229"><a href="#cb7-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-230"><a href="#cb7-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Anthropic: <span class="co">[</span><span class="ot">Pricing</span><span class="co">](https://platform.claude.com/docs/en/about-claude/pricing)</span>, <span class="co">[</span><span class="ot">Batch processing</span><span class="co">](https://platform.claude.com/docs/en/build-with-claude/batch-processing)</span>, <span class="co">[</span><span class="ot">Prompt caching</span><span class="co">](https://platform.claude.com/docs/en/build-with-claude/prompt-caching)</span>, <span class="co">[</span><span class="ot">Token counting</span><span class="co">](https://platform.claude.com/docs/en/build-with-claude/token-counting)</span>, <span class="co">[</span><span class="ot">Rate limits and spend limits</span><span class="co">](https://platform.claude.com/docs/en/api/rate-limits)</span>, <span class="co">[</span><span class="ot">Errors</span><span class="co">](https://platform.claude.com/docs/en/api/errors)</span>, <span class="co">[</span><span class="ot">Effort</span><span class="co">](https://platform.claude.com/docs/en/build-with-claude/effort)</span>, <span class="co">[</span><span class="ot">Thinking</span><span class="co">](https://platform.claude.com/docs/en/build-with-claude/thinking)</span></span>
+<span id="cb7-231"><a href="#cb7-231" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>OpenAI: <span class="co">[</span><span class="ot">Pricing</span><span class="co">](https://developers.openai.com/api/docs/pricing)</span>, <span class="co">[</span><span class="ot">Batch API</span><span class="co">](https://developers.openai.com/api/docs/guides/batch)</span>, <span class="co">[</span><span class="ot">Prompt caching</span><span class="co">](https://developers.openai.com/api/docs/guides/prompt-caching)</span>, <span class="co">[</span><span class="ot">Rate limits</span><span class="co">](https://developers.openai.com/api/docs/guides/rate-limits)</span>, <span class="co">[</span><span class="ot">Reasoning models</span><span class="co">](https://developers.openai.com/api/docs/guides/reasoning)</span>, <span class="co">[</span><span class="ot">Deprecations</span><span class="co">](https://developers.openai.com/api/docs/deprecations)</span>, <span class="co">[</span><span class="ot">Python SDK retries</span><span class="co">](https://github.com/openai/openai-python#retries)</span></span>
+<span id="cb7-232"><a href="#cb7-232" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ellmer: <span class="co">[</span><span class="ot">batch_chat()</span><span class="co">](https://ellmer.tidyverse.org/reference/batch_chat.html)</span>, <span class="co">[</span><span class="ot">parallel_chat()</span><span class="co">](https://ellmer.tidyverse.org/reference/parallel_chat.html)</span>, <span class="co">[</span><span class="ot">chat_anthropic()</span><span class="co">](https://ellmer.tidyverse.org/reference/chat_anthropic.html)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
