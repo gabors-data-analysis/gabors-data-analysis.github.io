@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-04-17">
+<meta name="dcterms.date" content="2026-11-22">
 
 <title>Calling LLM APIs from Python – Gábor’s AI Courses</title>
 <style>
@@ -626,7 +626,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 17, 2026</p>
+      <p class="date">November 22, 2026</p>
     </div>
   </div>
   
@@ -696,7 +696,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> OpenAI()  <span class="co"># reads OPENAI_API_KEY</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> client.responses.create(</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gpt-5.4-mini"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gpt-6-luna"</span>,</span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">input</span><span class="op">=</span><span class="st">"In one sentence, explain what panel data is."</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
@@ -719,7 +719,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Reply with exactly one label: positive, neutral, or negative."</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classify_text(text, model<span class="op">=</span><span class="st">"gpt-5.4-mini"</span>, retries<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classify_text(text, model<span class="op">=</span><span class="st">"gpt-6-luna"</span>, retries<span class="op">=</span><span class="dv">3</span>):</span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> attempt <span class="kw">in</span> <span class="bu">range</span>(retries):</span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span>:</span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>            response <span class="op">=</span> client.responses.create(</span>
@@ -775,7 +775,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    short_reason: <span class="bu">str</span></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> client.responses.parse(</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gpt-5.4-mini"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gpt-6-luna"</span>,</span>
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">input</span><span class="op">=</span>[</span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        {</span>
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>            <span class="st">"role"</span>: <span class="st">"system"</span>,</span>
@@ -855,10 +855,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="https://developers.openai.com/api/docs/quickstart">OpenAI quickstart</a></li>
 <li><a href="https://developers.openai.com/api/docs/models">OpenAI models</a></li>
-<li><a href="https://openai.com/api/pricing/">OpenAI pricing</a></li>
-<li><a href="https://platform.openai.com/docs/api-reference/responses/create?lang=python">OpenAI Responses API reference</a></li>
+<li><a href="https://developers.openai.com/api/docs/pricing">OpenAI pricing</a></li>
+<li><a href="https://developers.openai.com/api/reference/resources/responses/methods/create">OpenAI Responses API reference</a></li>
 <li><a href="https://platform.claude.com/docs/en/about-claude/models/choosing-a-model">Anthropic choosing a model</a></li>
-<li><a href="https://platform.claude.com/docs/en/about-claude/models/overview">Anthropic models overview</a></li>
+<li><a href="https://platform.claude.com/docs/en/models/overview">Anthropic models overview</a></li>
 <li><a href="https://platform.claude.com/docs/en/about-claude/pricing">Anthropic pricing</a></li>
 </ul>
 
@@ -1397,7 +1397,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Calling LLM APIs from Python"</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-04-17"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2026-11-22"</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>This page is about the **Python workflow** for using large language models through APIs: load a key, send text, get output back, and turn that output into data. It assumes you already know the basic idea of an API and already have access to at least one provider.</span>
@@ -1469,7 +1469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> OpenAI()  <span class="co"># reads OPENAI_API_KEY</span></span>
 <span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> client.responses.create(</span>
-<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gpt-5.4-mini"</span>,</span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gpt-6-luna"</span>,</span>
 <span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>    <span class="bu">input</span><span class="op">=</span><span class="st">"In one sentence, explain what panel data is."</span></span>
 <span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a></span>
@@ -1497,7 +1497,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Reply with exactly one label: positive, neutral, or negative."</span></span>
 <span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classify_text(text, model<span class="op">=</span><span class="st">"gpt-5.4-mini"</span>, retries<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classify_text(text, model<span class="op">=</span><span class="st">"gpt-6-luna"</span>, retries<span class="op">=</span><span class="dv">3</span>):</span>
 <span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> attempt <span class="kw">in</span> <span class="bu">range</span>(retries):</span>
 <span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span>:</span>
 <span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a>            response <span class="op">=</span> client.responses.create(</span>
@@ -1562,7 +1562,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-165"><a href="#cb7-165" aria-hidden="true" tabindex="-1"></a>    short_reason: <span class="bu">str</span></span>
 <span id="cb7-166"><a href="#cb7-166" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-167"><a href="#cb7-167" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> client.responses.parse(</span>
-<span id="cb7-168"><a href="#cb7-168" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gpt-5.4-mini"</span>,</span>
+<span id="cb7-168"><a href="#cb7-168" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gpt-6-luna"</span>,</span>
 <span id="cb7-169"><a href="#cb7-169" aria-hidden="true" tabindex="-1"></a>    <span class="bu">input</span><span class="op">=</span>[</span>
 <span id="cb7-170"><a href="#cb7-170" aria-hidden="true" tabindex="-1"></a>        {</span>
 <span id="cb7-171"><a href="#cb7-171" aria-hidden="true" tabindex="-1"></a>            <span class="st">"role"</span>: <span class="st">"system"</span>,</span>
@@ -1635,10 +1635,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-238"><a href="#cb7-238" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-239"><a href="#cb7-239" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">OpenAI quickstart</span><span class="co">](https://developers.openai.com/api/docs/quickstart)</span></span>
 <span id="cb7-240"><a href="#cb7-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">OpenAI models</span><span class="co">](https://developers.openai.com/api/docs/models)</span></span>
-<span id="cb7-241"><a href="#cb7-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">OpenAI pricing</span><span class="co">](https://openai.com/api/pricing/)</span></span>
-<span id="cb7-242"><a href="#cb7-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">OpenAI Responses API reference</span><span class="co">](https://platform.openai.com/docs/api-reference/responses/create?lang=python)</span></span>
+<span id="cb7-241"><a href="#cb7-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">OpenAI pricing</span><span class="co">](https://developers.openai.com/api/docs/pricing)</span></span>
+<span id="cb7-242"><a href="#cb7-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">OpenAI Responses API reference</span><span class="co">](https://developers.openai.com/api/reference/resources/responses/methods/create)</span></span>
 <span id="cb7-243"><a href="#cb7-243" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Anthropic choosing a model</span><span class="co">](https://platform.claude.com/docs/en/about-claude/models/choosing-a-model)</span></span>
-<span id="cb7-244"><a href="#cb7-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Anthropic models overview</span><span class="co">](https://platform.claude.com/docs/en/about-claude/models/overview)</span></span>
+<span id="cb7-244"><a href="#cb7-244" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Anthropic models overview</span><span class="co">](https://platform.claude.com/docs/en/models/overview)</span></span>
 <span id="cb7-245"><a href="#cb7-245" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Anthropic pricing</span><span class="co">](https://platform.claude.com/docs/en/about-claude/pricing)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

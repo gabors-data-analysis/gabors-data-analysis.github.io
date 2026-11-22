@@ -645,9 +645,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="leading-models" class="level3">
 <h3 class="anchored" data-anchor-id="leading-models">Leading models</h3>
 <ul>
-<li>As of now the leading (state of the art, SOTA) models are Google’s Gemini (3), OpenAI’s GPT (5.5), and Anthropic’s Claude (Opus 4.8 and the Claude 5 family).</li>
+<li>As of now the leading (state of the art, SOTA) models are Google’s Gemini (4), OpenAI’s GPT (6), and Anthropic’s Claude (the Claude 5 family: Fable 5.2, Opus 5.5).</li>
 <li>Other key model is <a href="https://mistral.ai/">Mistral AI</a> but there are several others</li>
-<li>Open source – open weights models are also quite good, <a href="https://www.kimi.com/ai-models/kimi-k2-5">Kimi (K2.5)</a>, an open weight model, is quite good and free. Deepseek, Qwen the other leading models. Think of them as SOTA 4-9 months ago</li>
+<li>Open source – open weights models are also quite good, <a href="https://www.kimi.com/ai-models/kimi-k3">Kimi (K3)</a>, an open weight model, is quite good and free. Deepseek, Qwen the other leading models. Think of them as SOTA 4-9 months ago</li>
 </ul>
 </section>
 <section id="paid-vs-free-of-leading-providers" class="level3">
@@ -661,7 +661,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="thinking" class="level3">
 <h3 class="anchored" data-anchor-id="thinking">Thinking</h3>
 <ul>
-<li>Each model have faster (cheaper) and thinking (more expensive) variants, such as Sonnet and Opus for Claude, Thinking and Instant for ChatGPT. In addition you can have extended thinking</li>
+<li>Each model have faster (cheaper) and stronger (more expensive) models, such as Haiku, Sonnet and Opus for Claude. In addition you can set how hard the model thinks: effort (low to max) in Claude, reasoning levels from Instant to Extra High in ChatGPT</li>
 <li>For data analysis work, the thinking variants are recommended.</li>
 <li>All major models have deep research</li>
 </ul>
@@ -702,7 +702,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="for-data-analysis-workspaces-comparison" class="level2">
 <h2 class="anchored" data-anchor-id="for-data-analysis-workspaces-comparison">For data analysis workspaces – comparison</h2>
-<p><em>Last update: 16 Jan 2026</em></p>
+<p><em>Last update: 22 Nov 2026</em></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -720,8 +720,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">• Creates <strong>interactive applications</strong> (tutors, calculators) within the output window.<br>• Real-time iteration on complex document structures.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>OpenAI ChatGPT Canvas</strong></td>
-<td style="text-align: left;">• Advanced frontier models with contextual persistence for tone and style.<br>• Inline editing with granular control over specific sections.</td>
+<td style="text-align: left;"><strong>OpenAI ChatGPT writing blocks</strong> (Canvas retired 2026)</td>
+<td style="text-align: left;">• Writing and code blocks inside the chat, with a full-screen editor for long documents.<br>• Inline editing with granular control over specific sections.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>Google NotebookLM</strong></td>
@@ -804,15 +804,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>GitHub Copilot</strong></td>
-<td style="text-align: left;">• Uses <strong>Extensions</strong> to interact with external dev tools (Azure, Slack, Jira).<br>• Deep context from local and remote repositories.</td>
+<td style="text-align: left;">• Uses <strong>MCP servers</strong> to interact with external dev tools (Azure, Slack, Jira).<br>• Deep context from local and remote repositories.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>Cursor</strong></td>
 <td style="text-align: left;">• AI-first editor with awareness of project-wide dependencies.<br>• Strong support for iterative refactors across files.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Windsurf (Codeium)</strong></td>
-<td style="text-align: left;">• <strong>Cascade mode</strong> for orchestrating large-scale refactors.<br>• Robust free tier for students and individual users.</td>
+<td style="text-align: left;"><strong>Devin Desktop (formerly Windsurf)</strong></td>
+<td style="text-align: left;">• Agent mode for orchestrating large-scale refactors.<br>• Free tier for students and individual users.</td>
 </tr>
 </tbody>
 </table>
@@ -1376,9 +1376,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### Leading models</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>As of now the leading (state of the art, SOTA) models are Google's Gemini (3), OpenAI's GPT (5.5), and Anthropic's Claude (Opus 4.8 and the Claude 5 family).</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>As of now the leading (state of the art, SOTA) models are Google's Gemini (4), OpenAI's GPT (6), and Anthropic's Claude (the Claude 5 family: Fable 5.2, Opus 5.5).</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Other key model is <span class="co">[</span><span class="ot">Mistral AI</span><span class="co">](https://mistral.ai/)</span> but there are several others</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Open source -- open weights models are also quite good, <span class="co">[</span><span class="ot">Kimi (K2.5)</span><span class="co">](https://www.kimi.com/ai-models/kimi-k2-5)</span>, an open weight model, is quite good and free. Deepseek, Qwen the other leading models. Think of them as SOTA 4-9 months ago </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Open source -- open weights models are also quite good, <span class="co">[</span><span class="ot">Kimi (K3)</span><span class="co">](https://www.kimi.com/ai-models/kimi-k3)</span>, an open weight model, is quite good and free. Deepseek, Qwen the other leading models. Think of them as SOTA 4-9 months ago </span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">### Paid vs free of leading providers</span></span>
@@ -1389,7 +1389,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">### Thinking</span></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Each model have faster (cheaper) and thinking (more expensive) variants, such as Sonnet and Opus for Claude, Thinking and Instant for ChatGPT. In addition you can have extended thinking </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Each model have faster (cheaper) and stronger (more expensive) models, such as Haiku, Sonnet and Opus for Claude. In addition you can set how hard the model thinks: effort (low to max) in Claude, reasoning levels from Instant to Extra High in ChatGPT </span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>For data analysis work, the thinking variants are recommended.</span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>All major models have deep research </span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
@@ -1426,12 +1426,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## For data analysis workspaces -- comparison </span></span>
 <span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>*Last update: 16 Jan 2026*</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>*Last update: 22 Nov 2026*</span>
 <span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Workspace <span class="pp">|</span> 2026 Key Features <span class="pp">|</span></span>
 <span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---|:---|</span></span>
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Anthropic Claude Artifacts** | • Creates **interactive applications** (tutors, calculators) within the output window.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>• Real-time iteration on complex document structures. <span class="pp">|</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **OpenAI ChatGPT Canvas** <span class="pp">|</span> • Advanced frontier models with contextual persistence for tone and style.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>• Inline editing with granular control over specific sections. <span class="pp">|</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **OpenAI ChatGPT writing blocks** (Canvas retired 2026) <span class="pp">|</span> • Writing and code blocks inside the chat, with a full-screen editor for long documents.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>• Inline editing with granular control over specific sections. <span class="pp">|</span></span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Google NotebookLM** | • **Interactive Audio Overviews** with user interruption and questioning.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>• Grounded citations linked directly to uploaded source segments. <span class="pp">|</span></span>
 <span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Perplexity Pages** <span class="pp">|</span> • Multi-source synthesis using live web retrieval.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>• Inline citation and consistency checking against sources. <span class="pp">|</span></span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
@@ -1461,9 +1461,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Workspace <span class="pp">|</span> 2026 Key Features for Developers <span class="pp">|</span></span>
 <span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---|:---|</span></span>
 <span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Anthropic Claude Code** | • Native **VS Code extension** with agent-style workflows and inline diffs.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>• Supports complex multi-file edits and testing assistance. <span class="pp">|</span></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **GitHub Copilot** | • Uses **Extensions** to interact with external dev tools (Azure, Slack, Jira).<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>• Deep context from local and remote repositories. <span class="pp">|</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **GitHub Copilot** | • Uses **MCP servers** to interact with external dev tools (Azure, Slack, Jira).<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>• Deep context from local and remote repositories. <span class="pp">|</span></span>
 <span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Cursor** <span class="pp">|</span> • AI-first editor with awareness of project-wide dependencies.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>• Strong support for iterative refactors across files. <span class="pp">|</span></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Windsurf (Codeium)** | • **Cascade mode** for orchestrating large-scale refactors.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>• Robust free tier for students and individual users. <span class="pp">|</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Devin Desktop (formerly Windsurf)** <span class="pp">|</span> • Agent mode for orchestrating large-scale refactors.<span class="dt">&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>• Free tier for students and individual users. <span class="pp">|</span></span>
 <span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>**Security note:** SOC2 compliance is common; strict zero-retention guarantees typically apply to enterprise or explicitly configured accounts.</span>
 <span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>

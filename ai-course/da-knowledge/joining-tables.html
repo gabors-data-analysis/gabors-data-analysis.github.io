@@ -749,7 +749,7 @@ hotel_id | name     | review_id | rating
 2        | Imperial | 104       | 4.6
 2        | Imperial | 105       | 4.8
 3        | Fuschl   | 106       | 4.5</code></pre>
-<p><strong>Watch out:</strong> Hotel information is now duplicated. If you calculate <code>mean(stars)</code> without thinking, you’ll weight hotels with more reviews more heavily.</p>
+<p><strong>Watch out:</strong> Hotel information is now duplicated. If you calculate a hotel-level average (say, star rating) on this table without thinking, you’ll weight hotels with more reviews more heavily.</p>
 <hr>
 </section>
 <section id="composite-key-joins" class="level2">
@@ -927,7 +927,7 @@ Vienna | 2     | 2024 | 450000</code></pre>
 <span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>* Check <span class="kw">for</span> issues</span>
 <span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>  <span class="co">// Rows after</span></span>
-<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>misstab  <span class="co">// Check missing values (requires misstab package)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>misstable <span class="kw">summarize</span>  <span class="co">// Check missing values (built-in)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Stata notes:</strong></p>
 <ul>
 <li><code>merge 1:1</code> for one-to-one, <code>merge 1:m</code> for one-to-many, <code>merge m:1</code> for many-to-one</li>
@@ -1614,7 +1614,7 @@ Vienna | 2     | 2024 | 450000</code></pre>
 <span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a><span class="in">3        | Fuschl   | 106       | 4.5</span></span>
 <span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a>**Watch out:** Hotel information is now duplicated. If you calculate <span class="in">`mean(stars)`</span> without thinking, you'll weight hotels with more reviews more heavily.</span>
+<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a>**Watch out:** Hotel information is now duplicated. If you calculate a hotel-level average (say, star rating) on this table without thinking, you'll weight hotels with more reviews more heavily.</span>
 <span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a></span>
@@ -1798,7 +1798,7 @@ Vienna | 2     | 2024 | 450000</code></pre>
 <span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a><span class="in">* Check for issues</span></span>
 <span id="cb14-317"><a href="#cb14-317" aria-hidden="true" tabindex="-1"></a><span class="in">count  // Rows after</span></span>
-<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a><span class="in">misstab  // Check missing values (requires misstab package)</span></span>
+<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a><span class="in">misstable summarize  // Check missing values (built-in)</span></span>
 <span id="cb14-319"><a href="#cb14-319" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-320"><a href="#cb14-320" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-321"><a href="#cb14-321" aria-hidden="true" tabindex="-1"></a>**Stata notes:**</span>

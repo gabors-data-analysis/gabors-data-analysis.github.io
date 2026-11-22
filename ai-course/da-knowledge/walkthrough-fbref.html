@@ -617,8 +617,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Below is a simple, step-by-step recipe for pulling Arsenal’s match-by-match team statistics for the 2023–24 Premier League season from FBref, using the <code>soccerdata</code> Python client library. You never write raw HTTP requests—<code>soccerdata</code> handles those for you.</p>
+<p>Note (2026): FBref has no official API. <code>soccerdata</code> downloads and parses FBref’s web pages, and because FBref now blocks bots it drives a real browser and waits between requests. Since January 2026 FBref no longer shows Opta’s advanced stats (xG, progressive passes, shot-creating actions); results, tables and basic stats remain.</p>
 <pre><code># 1. Install and import the library
-#    Wraps FBref's REST API in Python methods.
+#    Scrapes FBref's web pages and returns pandas tables.
 #    pip install soccerdata
 import soccerdata as sd
 
@@ -636,15 +637,15 @@ print(arsenal_stats.head())</code></pre>
 <h3 class="anchored" data-anchor-id="what-just-happened">What just happened?</h3>
 <ul>
 <li><p><strong>Abstraction over HTTP</strong><br>
-The <code>FBref</code> class builds the correct URLs, attaches any required headers or API keys, sends HTTP GET requests to FBref’s endpoints, and handles pagination and retries automatically.</p></li>
+The <code>FBref</code> class builds the correct page URLs, fetches the pages (through a browser, because of FBref’s bot protection), waits between requests to respect FBref’s rate limit, and caches pages locally.</p></li>
 <li><p><strong>Automatic data parsing</strong><br>
-JSON responses from FBref are converted into a pandas DataFrame for you—no manual <code>json.loads()</code> or DataFrame construction needed.</p></li>
+The HTML tables on FBref’s pages are parsed into a pandas DataFrame for you—no manual parsing or DataFrame construction needed.</p></li>
 <li><p><strong>Error handling &amp; reliability</strong><br>
 Common HTTP errors (e.g., timeouts, 404 Not Found) are wrapped in clear exceptions. Transient failures can trigger automatic retries, so your analysis code stays focused on insights, not networking glitches.</p></li>
 <li><p><strong>Idiomatic, Pythonic interface</strong><br>
 The library returns native Python objects (DataFrames, lists, dictionaries) and uses familiar method names, making the API feel intuitive and concise rather than a tangle of raw HTTP mechanics.</p></li>
 </ul>
-<p>Under the hood, <code>soccerdata</code> still uses an HTTP client (like <code>requests</code>) to interact with the REST API. But by encapsulating all networking, authentication, and JSON-handling logic in a single <code>read_team_match_stats()</code> call, it lets you:</p>
+<p>Under the hood, <code>soccerdata</code> still uses an HTTP client (like <code>requests</code>) to download FBref’s pages. But by encapsulating all networking, rate limiting and HTML parsing in a single <code>read_team_match_stats()</code> call, it lets you:</p>
 <ol type="1">
 <li><strong>Write clean, declarative code</strong><br>
 </li>
@@ -662,7 +663,7 @@ library(worldfootballR)
 
 # 2. Get Arsenal match results from the Premier League 2023/24
 arsenal_matches &lt;- fb_team_match_results(
-  team_url = "https://fbref.com/en/squads/18bb7c10/Arsenal-Stats")
+  team_url = "https://fbref.com/en/squads/18bb7c10/2023-2024/Arsenal-Stats")
 
 # 3. Inspect the data
 head(arsenal_matches)
@@ -1207,61 +1208,63 @@ head(arsenal_matches)
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Below is a simple, step-by-step recipe for pulling Arsenal's match-by-match team statistics for the 2023–24 Premier League season from FBref, using the <span class="in">`soccerdata`</span> Python client library. You never write raw HTTP requests—<span class="in">`soccerdata`</span> handles those for you.</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="in"># 1. Install and import the library</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in">#    Wraps FBref's REST API in Python methods.</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="in">#    pip install soccerdata</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="in">import soccerdata as sd</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="in"># 2. Initialize the FBref data source</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="in">#    Specify the league and season you want.</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="in">fbref = sd.FBref(leagues="ENG-Premier League", seasons="2023-24")</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="in"># 3. Retrieve Arsenal's match stats</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="in">#    Returns a pandas DataFrame of every fixture.</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="in">arsenal_stats = fbref.read_team_match_stats(team="Arsenal")</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="in"># 4. Inspect the resulting DataFrame</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="in">print(arsenal_stats.head())</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="fu">### What just happened?</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>Note (2026): FBref has no official API. <span class="in">`soccerdata`</span> downloads and parses FBref's web pages, and because FBref now blocks bots it drives a real browser and waits between requests. Since January 2026 FBref no longer shows Opta's advanced stats (xG, progressive passes, shot-creating actions); results, tables and basic stats remain.</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="in"># 1. Install and import the library</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="in">#    Scrapes FBref's web pages and returns pandas tables.</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="in">#    pip install soccerdata</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="in">import soccerdata as sd</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="in"># 2. Initialize the FBref data source</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="in">#    Specify the league and season you want.</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="in">fbref = sd.FBref(leagues="ENG-Premier League", seasons="2023-24")</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="in"># 3. Retrieve Arsenal's match stats</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="in">#    Returns a pandas DataFrame of every fixture.</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="in">arsenal_stats = fbref.read_team_match_stats(team="Arsenal")</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="in"># 4. Inspect the resulting DataFrame</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="in">print(arsenal_stats.head())</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Abstraction over HTTP**  </span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  The <span class="in">`FBref`</span> class builds the correct URLs, attaches any required headers or API keys, sends HTTP GET requests to FBref's endpoints, and handles pagination and retries automatically.</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Automatic data parsing**  </span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  JSON responses from FBref are converted into a pandas DataFrame for you—no manual <span class="in">`json.loads()`</span> or DataFrame construction needed.</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Error handling &amp; reliability**  </span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  Common HTTP errors (e.g., timeouts, 404 Not Found) are wrapped in clear exceptions. Transient failures can trigger automatic retries, so your analysis code stays focused on insights, not networking glitches.</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Idiomatic, Pythonic interface**  </span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  The library returns native Python objects (DataFrames, lists, dictionaries) and uses familiar method names, making the API feel intuitive and concise rather than a tangle of raw HTTP mechanics.</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>Under the hood, <span class="in">`soccerdata`</span> still uses an HTTP client (like <span class="in">`requests`</span>) to interact with the REST API. But by encapsulating all networking, authentication, and JSON-handling logic in a single <span class="in">`read_team_match_stats()`</span> call, it lets you:</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="fu">### What just happened?</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Abstraction over HTTP**  </span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  The <span class="in">`FBref`</span> class builds the correct page URLs, fetches the pages (through a browser, because of FBref's bot protection), waits between requests to respect FBref's rate limit, and caches pages locally.</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Automatic data parsing**  </span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  The HTML tables on FBref's pages are parsed into a pandas DataFrame for you—no manual parsing or DataFrame construction needed.</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Error handling &amp; reliability**  </span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  Common HTTP errors (e.g., timeouts, 404 Not Found) are wrapped in clear exceptions. Transient failures can trigger automatic retries, so your analysis code stays focused on insights, not networking glitches.</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Idiomatic, Pythonic interface**  </span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  The library returns native Python objects (DataFrames, lists, dictionaries) and uses familiar method names, making the API feel intuitive and concise rather than a tangle of raw HTTP mechanics.</span>
 <span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Write clean, declarative code**  </span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Develop faster with fewer bugs**  </span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Focus on analysis and insights instead of HTTP details**</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>This pattern—installing a client library, instantiating a connector object, invoking a single method, and working with a DataFrame—is common across many Python APIs, from OpenAI to Google Cloud to GitHub. Once you understand it, you can apply it to virtually any web service.</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>Under the hood, <span class="in">`soccerdata`</span> still uses an HTTP client (like <span class="in">`requests`</span>) to download FBref's pages. But by encapsulating all networking, rate limiting and HTML parsing in a single <span class="in">`read_team_match_stats()`</span> call, it lets you:</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Write clean, declarative code**  </span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Develop faster with fewer bugs**  </span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Focus on analysis and insights instead of HTTP details**</span>
 <span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## R equivalent</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>This pattern—installing a client library, instantiating a connector object, invoking a single method, and working with a DataFrame—is common across many Python APIs, from OpenAI to Google Cloud to GitHub. Once you understand it, you can apply it to virtually any web service.</span>
 <span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="in"># 1. Install and load the package</span></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="in">install.packages("worldfootballR")  # different package, same idea</span></span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="in">library(worldfootballR)</span></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="in"># 2. Get Arsenal match results from the Premier League 2023/24</span></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="in">arsenal_matches &lt;- fb_team_match_results(</span></span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="in">  team_url = "https://fbref.com/en/squads/18bb7c10/Arsenal-Stats")</span></span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="in"># 3. Inspect the data</span></span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="in">head(arsenal_matches)</span></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## R equivalent</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="in"># 1. Install and load the package</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="in">install.packages("worldfootballR")  # different package, same idea</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="in">library(worldfootballR)</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="in"># 2. Get Arsenal match results from the Premier League 2023/24</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="in">arsenal_matches &lt;- fb_team_match_results(</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="in">  team_url = "https://fbref.com/en/squads/18bb7c10/2023-2024/Arsenal-Stats")</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="in"># 3. Inspect the data</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="in">head(arsenal_matches)</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

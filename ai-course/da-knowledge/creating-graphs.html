@@ -748,11 +748,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>For me, it turns out that it needed some adjustments after several iterations to get this. Add CI. Add Footnote. Increase FN font size. Add N of obs. Change color scheme.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.cm <span class="im">as</span> cm</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.colors <span class="im">import</span> to_hex</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Get viridis colors</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>viridis <span class="op">=</span> cm.get_cmap(<span class="st">"viridis"</span>, <span class="dv">2</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>viridis <span class="op">=</span> matplotlib.colormaps[<span class="st">"viridis"</span>].resampled(<span class="dv">2</span>)</span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>color_male <span class="op">=</span> to_hex(viridis(<span class="fl">0.1</span>))</span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>color_female <span class="op">=</span> to_hex(viridis(<span class="fl">0.8</span>))</span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
@@ -854,10 +854,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>x_f, y_f, l_f, u_f <span class="op">=</span> bootstrap_loess(reg_data, <span class="st">'Female'</span>, <span class="st">'age'</span>, <span class="st">'resid'</span>)</span>
 <span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Colors and footnote</span></span>
-<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.cm <span class="im">as</span> cm</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
 <span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.colors <span class="im">import</span> to_hex</span>
 <span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>viridis <span class="op">=</span> cm.get_cmap(<span class="st">"viridis"</span>, <span class="dv">2</span>)</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>viridis <span class="op">=</span> matplotlib.colormaps[<span class="st">"viridis"</span>].resampled(<span class="dv">2</span>)</span>
 <span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>color_male <span class="op">=</span> to_hex(viridis(<span class="fl">0.1</span>))</span>
 <span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>color_female <span class="op">=</span> to_hex(viridis(<span class="fl">0.8</span>))</span>
 <span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a></span>
@@ -917,7 +917,7 @@ Then create bins for education.</code></pre>
 <p>Many other options. Two extremes.</p>
 <ul>
 <li>Describe age. In a graph. (Hint: think about binsize)</li>
-<li>Create an interesting and well-done scatterplot (turn o3 on or use Claude Sonnet)</li>
+<li>Create an interesting and well-done scatterplot (use a thinking model in ChatGPT, or Claude Opus/Sonnet)</li>
 </ul>
 </section>
 </section>
@@ -1648,11 +1648,11 @@ Note
 <span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
 <span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.cm <span class="im">as</span> cm</span>
+<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
 <span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.colors <span class="im">import</span> to_hex</span>
 <span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a><span class="co"># Get viridis colors</span></span>
-<span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a>viridis <span class="op">=</span> cm.get_cmap(<span class="st">"viridis"</span>, <span class="dv">2</span>)</span>
+<span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a>viridis <span class="op">=</span> matplotlib.colormaps[<span class="st">"viridis"</span>].resampled(<span class="dv">2</span>)</span>
 <span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a>color_male <span class="op">=</span> to_hex(viridis(<span class="fl">0.1</span>))</span>
 <span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a>color_female <span class="op">=</span> to_hex(viridis(<span class="fl">0.8</span>))</span>
 <span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a></span>
@@ -1750,10 +1750,10 @@ Note
 <span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a>x_f, y_f, l_f, u_f <span class="op">=</span> bootstrap_loess(reg_data, <span class="st">'Female'</span>, <span class="st">'age'</span>, <span class="st">'resid'</span>)</span>
 <span id="cb14-252"><a href="#cb14-252" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a><span class="co"># Colors and footnote</span></span>
-<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.cm <span class="im">as</span> cm</span>
+<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
 <span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.colors <span class="im">import</span> to_hex</span>
 <span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a>viridis <span class="op">=</span> cm.get_cmap(<span class="st">"viridis"</span>, <span class="dv">2</span>)</span>
+<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a>viridis <span class="op">=</span> matplotlib.colormaps[<span class="st">"viridis"</span>].resampled(<span class="dv">2</span>)</span>
 <span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a>color_male <span class="op">=</span> to_hex(viridis(<span class="fl">0.1</span>))</span>
 <span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a>color_female <span class="op">=</span> to_hex(viridis(<span class="fl">0.8</span>))</span>
 <span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a></span>
@@ -1825,7 +1825,7 @@ Note
 <span id="cb14-326"><a href="#cb14-326" aria-hidden="true" tabindex="-1"></a>Many other options. Two extremes. </span>
 <span id="cb14-327"><a href="#cb14-327" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-328"><a href="#cb14-328" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Describe age. In a graph. (Hint: think about binsize)</span>
-<span id="cb14-329"><a href="#cb14-329" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Create an interesting and well-done scatterplot (turn o3 on or use Claude Sonnet) </span>
+<span id="cb14-329"><a href="#cb14-329" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Create an interesting and well-done scatterplot (use a thinking model in ChatGPT, or Claude Opus/Sonnet)</span>
 <span id="cb14-330"><a href="#cb14-330" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-331"><a href="#cb14-331" aria-hidden="true" tabindex="-1"></a><span class="fu">## Now with Claude</span></span>
 <span id="cb14-332"><a href="#cb14-332" aria-hidden="true" tabindex="-1"></a></span>

@@ -803,7 +803,7 @@ No matching terms found. Try a different search.
 <h2 class="anchored" data-anchor-id="token">Token</h2>
 <p>The basic unit of text that LLMs process.</p>
 <ul>
-<li>Roughly 4 characters or ¾ of a word in English</li>
+<li>Roughly 4 characters or ¾ of a word in English (varies by model: Claude’s newer tokenizer counts about half a word per token)</li>
 <li>“Hello world” ≈ 2 tokens</li>
 <li>Pricing and limits are measured in tokens</li>
 </ul>
@@ -946,7 +946,7 @@ No matching terms found. Try a different search.
 <p>A mode where the model explicitly reasons through problems.</p>
 <ul>
 <li>Some platforms expose reasoning summaries, others keep internal reasoning hidden</li>
-<li>Configurable thinking “budget”</li>
+<li>Configurable thinking “budget” on older models; newer ones (e.g.&nbsp;Claude 5) decide how much to think, steered by the effort setting</li>
 <li>Trade-off: higher latency and cost</li>
 </ul>
 </section>
@@ -985,7 +985,7 @@ No matching terms found. Try a different search.
 <p>An open standard for connecting AI to external tools and data.</p>
 <ul>
 <li>“USB-C for AI applications”</li>
-<li>Developed by Anthropic, adopted broadly</li>
+<li>Developed by Anthropic, now run by the Agentic AI Foundation (Linux Foundation), adopted broadly</li>
 <li>Enables secure access to files, databases, APIs</li>
 </ul>
 <p><a href="https://modelcontextprotocol.io/">Learn more: MCP documentation</a></p>
@@ -1065,7 +1065,7 @@ No matching terms found. Try a different search.
 <p>These terms are platform-specific. Learn the ones that match the tools you actually use.</p>
 <section id="skills-claude" class="level2 term-section">
 <h2 class="anchored" data-anchor-id="skills-claude">Skills (Claude)</h2>
-<p>Reusable, modular instruction packages in Claude.</p>
+<p>Reusable, modular instruction packages, first in Claude, now an open standard (<a href="https://agentskills.io">Agent Skills</a>) used by ChatGPT, GitHub Copilot, Cursor and others.</p>
 <ul>
 <li>Pre-defined workflows and behaviors</li>
 <li>Shareable across conversations</li>
@@ -1074,7 +1074,7 @@ No matching terms found. Try a different search.
 </section>
 <section id="gems-gemini" class="level2 term-section">
 <h2 class="anchored" data-anchor-id="gems-gemini">Gems (Gemini)</h2>
-<p>Custom AI assistants in Gemini Advanced.</p>
+<p>Custom AI assistants in the Gemini app, free for all users. Being replaced by Gemini skills from November 2026.</p>
 <ul>
 <li>User-defined personas and instructions</li>
 <li>Persistent across conversations</li>
@@ -1094,7 +1094,7 @@ No matching terms found. Try a different search.
 <h2 class="anchored" data-anchor-id="canvas-artifacts">Canvas / Artifacts</h2>
 <p>Interactive workspaces for editing AI-generated content.</p>
 <ul>
-<li>ChatGPT Canvas, Claude Artifacts</li>
+<li>ChatGPT writing blocks (Canvas until 2026), Claude Artifacts</li>
 <li>Side-by-side editing</li>
 <li>Good for code and documents</li>
 </ul>
@@ -1106,9 +1106,10 @@ No matching terms found. Try a different search.
 <h2 class="anchored" data-anchor-id="temperature">Temperature</h2>
 <p>A parameter controlling randomness in model outputs.</p>
 <ul>
-<li>0 = deterministic (same input → same output)</li>
+<li>0 = least random (close to, but not guaranteed, the same output)</li>
 <li>1 = default, balanced creativity</li>
 <li>Higher = more random/creative</li>
+<li>Some newer models (e.g.&nbsp;Claude Opus 5.5) no longer accept a temperature setting</li>
 </ul>
 <p><strong>Practical tip:</strong> For empirical analysis and reproducible outputs, start low-to-default (often 0 to 1, platform-dependent).</p>
 </section>
@@ -1150,6 +1151,7 @@ No matching terms found. Try a different search.
 <li>Markdown file in project root</li>
 <li>Contains: file descriptions, conventions, current task</li>
 <li>Automatically read by Claude Code CLI</li>
+<li>Other agents (Codex, Copilot, OpenCode) read the same kind of file, named AGENTS.md</li>
 </ul>
 </section>
 <section id="prompt-chaining" class="level2 term-section">
@@ -1278,9 +1280,9 @@ No matching terms found. Try a different search.
 <h1>Resources</h1>
 <p><strong>Documentation</strong></p>
 <ul>
-<li><a href="https://docs.anthropic.com/en/docs/glossary">Anthropic Glossary</a></li>
-<li><a href="https://platform.openai.com/docs">OpenAI Documentation</a></li>
-<li><a href="https://ai.google.dev/">Google AI for Developers</a></li>
+<li><a href="https://platform.claude.com/docs/en/about-claude/glossary">Anthropic Glossary</a></li>
+<li><a href="https://developers.openai.com/api/docs">OpenAI Documentation</a></li>
+<li><a href="https://aistudio.google.com/docs">Google AI Studio docs</a></li>
 <li><a href="https://modelcontextprotocol.io/">MCP Documentation</a></li>
 <li><a href="https://github.github.com/gh-aw/reference/glossary/">GitHub Agentic Workflows Glossary</a></li>
 </ul>
@@ -2023,7 +2025,7 @@ Document metadata:
 <span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>The basic unit of text that LLMs process. </span>
 <span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Roughly 4 characters or ¾ of a word in English</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Roughly 4 characters or ¾ of a word in English (varies by model: Claude's newer tokenizer counts about half a word per token)</span>
 <span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Hello world" ≈ 2 tokens</span>
 <span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pricing and limits are measured in tokens</span>
 <span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>:::</span>
@@ -2179,7 +2181,7 @@ Document metadata:
 <span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>A mode where the model explicitly reasons through problems.</span>
 <span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Some platforms expose reasoning summaries, others keep internal reasoning hidden</span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Configurable thinking "budget"</span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Configurable thinking "budget" on older models; newer ones (e.g. Claude 5) decide how much to think, steered by the effort setting</span>
 <span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Trade-off: higher latency and cost</span>
 <span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
@@ -2221,7 +2223,7 @@ Document metadata:
 <span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>An open standard for connecting AI to external tools and data.</span>
 <span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"USB-C for AI applications"</span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Developed by Anthropic, adopted broadly</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Developed by Anthropic, now run by the Agentic AI Foundation (Linux Foundation), adopted broadly</span>
 <span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Enables secure access to files, databases, APIs</span>
 <span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Learn more: MCP documentation</span><span class="co">](https://modelcontextprotocol.io/)</span></span>
@@ -2308,7 +2310,7 @@ Document metadata:
 <span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
 <span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a><span class="fu">## Skills (Claude)</span></span>
 <span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>Reusable, modular instruction packages in Claude.</span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>Reusable, modular instruction packages, first in Claude, now an open standard (<span class="co">[</span><span class="ot">Agent Skills</span><span class="co">](https://agentskills.io)</span>) used by ChatGPT, GitHub Copilot, Cursor and others.</span>
 <span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pre-defined workflows and behaviors</span>
 <span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Shareable across conversations</span>
@@ -2318,7 +2320,7 @@ Document metadata:
 <span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
 <span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gems (Gemini)</span></span>
 <span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a>Custom AI assistants in Gemini Advanced.</span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a>Custom AI assistants in the Gemini app, free for all users. Being replaced by Gemini skills from November 2026.</span>
 <span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>User-defined personas and instructions</span>
 <span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Persistent across conversations</span>
@@ -2340,7 +2342,7 @@ Document metadata:
 <span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a>Interactive workspaces for editing AI-generated content.</span>
 <span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ChatGPT Canvas, Claude Artifacts</span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ChatGPT writing blocks (Canvas until 2026), Claude Artifacts</span>
 <span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Side-by-side editing</span>
 <span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Good for code and documents</span>
 <span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a>:::</span>
@@ -2352,154 +2354,156 @@ Document metadata:
 <span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a>A parameter controlling randomness in model outputs.</span>
 <span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>0 = deterministic (same input → same output)</span>
+<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>0 = least random (close to, but not guaranteed, the same output)</span>
 <span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1 = default, balanced creativity</span>
 <span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Higher = more random/creative</span>
-<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>**Practical tip:** For empirical analysis and reproducible outputs, start low-to-default (often 0 to 1, platform-dependent).</span>
-<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
-<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a><span class="fu">## Context Rot</span></span>
-<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a>Performance degradation as the context window fills up.</span>
-<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Model becomes less accurate over long conversations</span>
-<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Even within technical limits</span>
-<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Solution: start fresh, use memory tools</span>
-<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
-<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a><span class="fu">## KV-Cache</span></span>
-<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a>A technical optimization that speeds up repeated inference.</span>
-<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Caches intermediate computations</span>
-<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Faster response for repeated prefixes</span>
-<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Why stable prompt prefixes can matter for latency and cost</span>
-<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Advanced term: useful mainly if you build API workflows</span>
-<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-523"><a href="#cb1-523" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-524"><a href="#cb1-524" aria-hidden="true" tabindex="-1"></a><span class="fu"># Development Patterns</span></span>
-<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-526"><a href="#cb1-526" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
-<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a><span class="fu">## Vibe Coding</span></span>
-<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a>Describing desired behavior in natural language rather than writing syntax.</span>
-<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Make this chart interactive with company colors"</span>
-<span id="cb1-532"><a href="#cb1-532" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI translates intent to code</span>
-<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Requires human review and iteration</span>
-<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-535"><a href="#cb1-535" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-536"><a href="#cb1-536" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
-<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a><span class="fu">## CLAUDE.md</span></span>
-<span id="cb1-538"><a href="#cb1-538" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a>A convention for providing project context to Claude Code.</span>
-<span id="cb1-540"><a href="#cb1-540" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Markdown file in project root</span>
-<span id="cb1-542"><a href="#cb1-542" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Contains: file descriptions, conventions, current task</span>
-<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Automatically read by Claude Code CLI</span>
-<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-546"><a href="#cb1-546" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
-<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prompt Chaining</span></span>
-<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a>Breaking complex tasks into sequential prompts.</span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Some newer models (e.g. Claude Opus 5.5) no longer accept a temperature setting</span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a>**Practical tip:** For empirical analysis and reproducible outputs, start low-to-default (often 0 to 1, platform-dependent).</span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a><span class="fu">## Context Rot</span></span>
+<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a>Performance degradation as the context window fills up.</span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Model becomes less accurate over long conversations</span>
+<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Even within technical limits</span>
+<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Solution: start fresh, use memory tools</span>
+<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
+<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a><span class="fu">## KV-Cache</span></span>
+<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a>A technical optimization that speeds up repeated inference.</span>
+<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Caches intermediate computations</span>
+<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Faster response for repeated prefixes</span>
+<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Why stable prompt prefixes can matter for latency and cost</span>
+<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Advanced term: useful mainly if you build API workflows</span>
+<span id="cb1-523"><a href="#cb1-523" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-524"><a href="#cb1-524" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a><span class="fu"># Development Patterns</span></span>
+<span id="cb1-526"><a href="#cb1-526" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
+<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a><span class="fu">## Vibe Coding</span></span>
+<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a>Describing desired behavior in natural language rather than writing syntax.</span>
+<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-532"><a href="#cb1-532" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Make this chart interactive with company colors"</span>
+<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI translates intent to code</span>
+<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Requires human review and iteration</span>
+<span id="cb1-535"><a href="#cb1-535" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-536"><a href="#cb1-536" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
+<span id="cb1-538"><a href="#cb1-538" aria-hidden="true" tabindex="-1"></a><span class="fu">## CLAUDE.md</span></span>
+<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-540"><a href="#cb1-540" aria-hidden="true" tabindex="-1"></a>A convention for providing project context to Claude Code.</span>
+<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-542"><a href="#cb1-542" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Markdown file in project root</span>
+<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Contains: file descriptions, conventions, current task</span>
+<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Automatically read by Claude Code CLI</span>
+<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Other agents (Codex, Copilot, OpenCode) read the same kind of file, named AGENTS.md</span>
+<span id="cb1-546"><a href="#cb1-546" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
+<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prompt Chaining</span></span>
 <span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Output of step N becomes input to step N+1</span>
-<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More reliable than single complex prompt</span>
-<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Enables debugging at each stage</span>
-<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a><span class="fu"># Costs &amp; Limits</span></span>
+<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a>Breaking complex tasks into sequential prompts.</span>
+<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Output of step N becomes input to step N+1</span>
+<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More reliable than single complex prompt</span>
+<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Enables debugging at each stage</span>
+<span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
-<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a><span class="fu">## Input/Output Tokens</span></span>
-<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a>Tokens are billed separately for input (prompt) and output (response).</span>
+<span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a><span class="fu"># Costs &amp; Limits</span></span>
+<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
+<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a><span class="fu">## Input/Output Tokens</span></span>
 <span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Input: what you send (including context)</span>
-<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Output: what the model generates</span>
-<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Output tokens typically cost more</span>
-<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
-<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rate Limiting</span></span>
-<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a>Restrictions on how many requests you can make.</span>
+<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a>Tokens are billed separately for input (prompt) and output (response).</span>
+<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Input: what you send (including context)</span>
+<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Output: what the model generates</span>
+<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Output tokens typically cost more</span>
+<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
+<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rate Limiting</span></span>
 <span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Requests per minute (RPM)</span>
-<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tokens per minute (TPM)</span>
-<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prevents abuse and ensures fair access</span>
-<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
-<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quota Limit</span></span>
-<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a>A hard cap on the total amount of usage (tokens or cost) allowed within a specific billing cycle.</span>
+<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a>Restrictions on how many requests you can make.</span>
+<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Requests per minute (RPM)</span>
+<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tokens per minute (TPM)</span>
+<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prevents abuse and ensures fair access</span>
+<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
+<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quota Limit</span></span>
 <span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Distinct from *Rate Limiting* (which is about speed/throughput)</span>
-<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prevents accidental overspending</span>
-<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Once reached, API access is paused until the limit is raised or the month resets</span>
-<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
-<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prompt Caching</span></span>
-<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a>Storing and reusing processed prompts to reduce cost.</span>
+<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a>A hard cap on the total amount of usage (tokens or cost) allowed within a specific billing cycle.</span>
+<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Distinct from *Rate Limiting* (which is about speed/throughput)</span>
+<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prevents accidental overspending</span>
+<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Once reached, API access is paused until the limit is raised or the month resets</span>
+<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a>::: {.term-section}</span>
+<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prompt Caching</span></span>
 <span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Same prefix → cached, cheaper</span>
-<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Useful for repeated system prompts</span>
-<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Requires stable prompt structure</span>
-<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a><span class="fu"># Quick Reference</span></span>
+<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a>Storing and reusing processed prompts to reduce cost.</span>
+<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Same prefix → cached, cheaper</span>
+<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Useful for repeated system prompts</span>
+<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Requires stable prompt structure</span>
+<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Term <span class="pp">|</span> One-liner <span class="pp">|</span></span>
-<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|-----------|</span></span>
-<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Token <span class="pp">|</span> Basic text unit (~4 characters) <span class="pp">|</span></span>
-<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Context window <span class="pp">|</span> Max tokens model can see at once <span class="pp">|</span></span>
-<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Inference <span class="pp">|</span> Generating output from input <span class="pp">|</span></span>
-<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Agent <span class="pp">|</span> AI that takes actions via tools <span class="pp">|</span></span>
-<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> MCP <span class="pp">|</span> Standard for AI tool connections <span class="pp">|</span></span>
-<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Hallucination <span class="pp">|</span> AI-generated false information <span class="pp">|</span></span>
-<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Grounding <span class="pp">|</span> Linking answers to trusted sources/data <span class="pp">|</span></span>
-<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> RAG <span class="pp">|</span> Retrieval + generation technique <span class="pp">|</span></span>
-<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Reasoning effort <span class="pp">|</span> Setting that trades speed/cost for deeper reasoning <span class="pp">|</span></span>
-<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> MoE <span class="pp">|</span> Architecture activating subset of experts <span class="pp">|</span></span>
-<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Orchestration <span class="pp">|</span> Coordinating multi-step AI workflows <span class="pp">|</span></span>
-<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Least privilege <span class="pp">|</span> Minimum permissions needed to complete a task <span class="pp">|</span></span>
-<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Validation <span class="pp">|</span> Checking outputs against quality rules <span class="pp">|</span></span>
-<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> DataOps <span class="pp">|</span> Repeatable, monitored, and tested data workflows <span class="pp">|</span></span>
-<span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a><span class="fu"># Resources</span></span>
+<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a><span class="fu"># Quick Reference</span></span>
+<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Term <span class="pp">|</span> One-liner <span class="pp">|</span></span>
+<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|-----------|</span></span>
+<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Token <span class="pp">|</span> Basic text unit (~4 characters) <span class="pp">|</span></span>
+<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Context window <span class="pp">|</span> Max tokens model can see at once <span class="pp">|</span></span>
+<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Inference <span class="pp">|</span> Generating output from input <span class="pp">|</span></span>
+<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Agent <span class="pp">|</span> AI that takes actions via tools <span class="pp">|</span></span>
+<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> MCP <span class="pp">|</span> Standard for AI tool connections <span class="pp">|</span></span>
+<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Hallucination <span class="pp">|</span> AI-generated false information <span class="pp">|</span></span>
+<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Grounding <span class="pp">|</span> Linking answers to trusted sources/data <span class="pp">|</span></span>
+<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> RAG <span class="pp">|</span> Retrieval + generation technique <span class="pp">|</span></span>
+<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Reasoning effort <span class="pp">|</span> Setting that trades speed/cost for deeper reasoning <span class="pp">|</span></span>
+<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> MoE <span class="pp">|</span> Architecture activating subset of experts <span class="pp">|</span></span>
+<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Orchestration <span class="pp">|</span> Coordinating multi-step AI workflows <span class="pp">|</span></span>
+<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Least privilege <span class="pp">|</span> Minimum permissions needed to complete a task <span class="pp">|</span></span>
+<span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Validation <span class="pp">|</span> Checking outputs against quality rules <span class="pp">|</span></span>
+<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> DataOps <span class="pp">|</span> Repeatable, monitored, and tested data workflows <span class="pp">|</span></span>
 <span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a>**Documentation**</span>
+<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a><span class="fu"># Resources</span></span>
 <span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Anthropic Glossary</span><span class="co">](https://docs.anthropic.com/en/docs/glossary)</span></span>
-<span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">OpenAI Documentation</span><span class="co">](https://platform.openai.com/docs)</span></span>
-<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Google AI for Developers</span><span class="co">](https://ai.google.dev/)</span></span>
-<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">MCP Documentation</span><span class="co">](https://modelcontextprotocol.io/)</span></span>
-<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">GitHub Agentic Workflows Glossary</span><span class="co">](https://github.github.com/gh-aw/reference/glossary/)</span></span>
-<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a>**Learning**</span>
+<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>**Documentation**</span>
+<span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Anthropic Glossary</span><span class="co">](https://platform.claude.com/docs/en/about-claude/glossary)</span></span>
+<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">OpenAI Documentation</span><span class="co">](https://developers.openai.com/api/docs)</span></span>
+<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Google AI Studio docs</span><span class="co">](https://aistudio.google.com/docs)</span></span>
+<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">MCP Documentation</span><span class="co">](https://modelcontextprotocol.io/)</span></span>
+<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">GitHub Agentic Workflows Glossary</span><span class="co">](https://github.github.com/gh-aw/reference/glossary/)</span></span>
 <span id="cb1-628"><a href="#cb1-628" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">3Blue1Brown Neural Networks</span><span class="co">](https://www.3blue1brown.com/topics/neural-networks)</span></span>
-<span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Anthropic Context Engineering Guide</span><span class="co">](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)</span></span>
-<span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a>**Learning**</span>
+<span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">3Blue1Brown Neural Networks</span><span class="co">](https://www.3blue1brown.com/topics/neural-networks)</span></span>
+<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Anthropic Context Engineering Guide</span><span class="co">](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)</span></span>
 <span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a>**Version:** 0.4.1 | **Date:** 2026-02-17 | **Contact:** <span class="co">[</span><span class="ot">bekesg@ceu.edu</span><span class="co">](mailto:bekesg@ceu.edu)</span></span>
+<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span></span>
-<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a><span class="co">Document metadata:</span></span>
-<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a><span class="co">- Iterations with user: 2</span></span>
-<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a><span class="co">- Internal version: v0.4.1</span></span>
-<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a><span class="co">- Date: 2026-02-17</span></span>
-<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a><span class="co">- Model: Claude Opus 4.5 (claude-opus-4-5-20251101)</span></span>
-<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a><span class="co">- Changes: Converted from revealjs to HTML page, added search, refined wording, and kept only a minimal set of GitHub glossary terms relevant to course workflows</span></span>
-<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a>**Version:** 0.4.1 | **Date:** 2026-02-17 | **Contact:** <span class="co">[</span><span class="ot">bekesg@ceu.edu</span><span class="co">](mailto:bekesg@ceu.edu)</span></span>
+<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span></span>
+<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a><span class="co">Document metadata:</span></span>
+<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a><span class="co">- Iterations with user: 2</span></span>
+<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a><span class="co">- Internal version: v0.4.1</span></span>
+<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a><span class="co">- Date: 2026-02-17</span></span>
+<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a><span class="co">- Model: Claude Opus 4.5 (claude-opus-4-5-20251101)</span></span>
+<span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a><span class="co">- Changes: Converted from revealjs to HTML page, added search, refined wording, and kept only a minimal set of GitHub glossary terms relevant to course workflows</span></span>
+<span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <script>

@@ -676,7 +676,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>📝 <strong>Tell the AI the rules of <em>this</em> project</strong></p>
 </div>
 <div class="card-body">
-<p>Each CLI coding agent starts a fresh context window per session. Some (like Claude Code) also build an auto-memory across sessions, but the most reliable way to carry conventions forward is to write them down explicitly. Create a file at the repo root — <code>CLAUDE.md</code> (Claude Code), <code>AGENTS.md</code> (Codex), or <code>GEMINI.md</code> (Gemini CLI). Each tool reads its own file automatically at the start of every session.</p>
+<p>Each CLI coding agent starts a fresh context window per session. Some (like Claude Code) also build an auto-memory across sessions, but the most reliable way to carry conventions forward is to write them down explicitly. Create a file at the repo root — <code>CLAUDE.md</code> (Claude Code), <code>AGENTS.md</code> (Codex and others), or <code>GEMINI.md</code> (Gemini CLI). Each tool reads its own file automatically at the start of every session. Claude Code also reads <code>AGENTS.md</code> when there is no <code>CLAUDE.md</code>, so one <code>AGENTS.md</code> now covers most tools.</p>
 <p>This file is <strong>project-specific</strong>. It describes how <em>this</em> project is organised and what is non-negotiable inside it.</p>
 <p>Split it into two short parts:</p>
 <p><strong>1. Preferences</strong> — what <em>you</em> like.</p>
@@ -716,7 +716,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p><strong>Write them at the start</strong> — or, more commonly, <strong>carry them over from previous projects</strong>. A good skill, once written, outlives the project that produced it. The second time you do something, promote the working prompt into a skill.</p>
 <p><strong>Then update them on the go.</strong> The first version of <code>scrape-match-data</code> will be rough; after the second or third source you’ll know what edge cases matter, and the skill improves. A mature skill is one you’ve used on three different projects without editing.</p>
-<p><strong>You don’t have to write skills from scratch.</strong> Most CLI tools ship with a built-in skill creator skills. Describe what the skill should do, and the tool generates the directory structure and <code>SKILL.md</code> for you. Start there and refine.</p>
+<p><strong>You don’t have to write skills from scratch.</strong> Codex ships with a built-in <code>skill-creator</code> skill; in Claude Code, install the official <code>skill-creator</code> plugin (<code>/plugin install skill-creator@claude-plugins-official</code>). Describe what the skill should do, and the tool generates the directory structure and <code>SKILL.md</code> for you. Start there and refine.</p>
 <p><strong>Rule of thumb — where does this rule go?</strong></p>
 <table class="caption-top table">
 <thead>
@@ -1404,7 +1404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>::: card-body</span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>Each CLI coding agent starts a fresh context window per session. Some (like Claude Code) also build an auto-memory across sessions, but the most reliable way to carry conventions forward is to write them down explicitly. Create a file at the repo root — <span class="in">`CLAUDE.md`</span> (Claude Code), <span class="in">`AGENTS.md`</span> (Codex), or <span class="in">`GEMINI.md`</span> (Gemini CLI). Each tool reads its own file automatically at the start of every session.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>Each CLI coding agent starts a fresh context window per session. Some (like Claude Code) also build an auto-memory across sessions, but the most reliable way to carry conventions forward is to write them down explicitly. Create a file at the repo root — <span class="in">`CLAUDE.md`</span> (Claude Code), <span class="in">`AGENTS.md`</span> (Codex and others), or <span class="in">`GEMINI.md`</span> (Gemini CLI). Each tool reads its own file automatically at the start of every session. Claude Code also reads <span class="in">`AGENTS.md`</span> when there is no <span class="in">`CLAUDE.md`</span>, so one <span class="in">`AGENTS.md`</span> now covers most tools.</span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>This file is **project-specific**. It describes how *this* project is organised and what is non-negotiable inside it.</span>
 <span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
@@ -1456,7 +1456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>**Then update them on the go.** The first version of <span class="in">`scrape-match-data`</span> will be rough; after the second or third source you'll know what edge cases matter, and the skill improves. A mature skill is one you've used on three different projects without editing.</span>
 <span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>**You don't have to write skills from scratch.** Most CLI tools ship with a built-in skill creator skills. Describe what the skill should do, and the tool generates the directory structure and <span class="in">`SKILL.md`</span> for you. Start there and refine.</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>**You don't have to write skills from scratch.** Codex ships with a built-in <span class="in">`skill-creator`</span> skill; in Claude Code, install the official <span class="in">`skill-creator`</span> plugin (<span class="in">`/plugin install skill-creator@claude-plugins-official`</span>). Describe what the skill should do, and the tool generates the directory structure and <span class="in">`SKILL.md`</span> for you. Start there and refine.</span>
 <span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>**Rule of thumb — where does this rule go?**</span>
 <span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>

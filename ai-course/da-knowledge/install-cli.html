@@ -604,7 +604,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
   </ul></li>
-  <li><a href="#gemini-cli" id="toc-gemini-cli" class="nav-link" data-scroll-target="#gemini-cli">Gemini CLI</a>
+  <li><a href="#antigravity-cli" id="toc-antigravity-cli" class="nav-link" data-scroll-target="#antigravity-cli">Antigravity CLI</a>
   <ul class="collapse">
   <li><a href="#install-1" id="toc-install-1" class="nav-link" data-scroll-target="#install-1">Install</a></li>
   <li><a href="#use-1" id="toc-use-1" class="nav-link" data-scroll-target="#use-1">Use</a></li>
@@ -629,7 +629,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../navbar/resources.html">Knowledge Base</a></li><li class="breadcrumb-item"><a href="../da-knowledge/ai-coding-prep.html">Setting up AI tools</a></li><li class="breadcrumb-item"><a href="../da-knowledge/install-cli.html">Installing AI CLI Tools</a></li></ol></nav>
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Installing AI CLI Tools</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Claude Code, Codex CLI, GitHub Copilot CLI, and Gemini CLI</p>
+<p class="subtitle lead">Claude Code, Codex CLI, GitHub Copilot CLI, and Antigravity CLI</p>
 </div>
 
 
@@ -687,20 +687,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td><strong>Codex CLI</strong></td>
 <td>OpenAI</td>
-<td>GPT-5 family</td>
-<td>ChatGPT Plus/Pro ($20+/mo)</td>
+<td>GPT models</td>
+<td>ChatGPT Plus ($20/mo) or higher</td>
 </tr>
 <tr class="odd">
 <td><strong>Copilot CLI</strong></td>
 <td>GitHub</td>
-<td>Multiple (Claude, GPT)</td>
+<td>Multiple (Claude, GPT); on Free and Student plans Copilot picks the model</td>
 <td>Copilot (~$10/mo, <strong>free for students/teachers</strong>)</td>
 </tr>
 <tr class="even">
-<td><strong>Gemini CLI</strong></td>
+<td><strong>Antigravity CLI</strong></td>
 <td>Google</td>
 <td>Gemini</td>
-<td>Free tier + paid plans</td>
+<td>Free tier + Google AI Pro</td>
 </tr>
 </tbody>
 </table>
@@ -711,7 +711,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Before installing any CLI tool, you need:</p>
 <section id="node.js" class="level3">
 <h3 class="anchored" data-anchor-id="node.js">1. Node.js</h3>
-<p>Most CLI tools require Node.js. Check if you have it:</p>
+<p>You only need Node.js if you install a tool with <code>npm</code> (Copilot CLI via npm needs Node.js 22 or later). The recommended installers below do not need it. Check if you have it:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Linux</a></li></ul>
 <div class="tab-content">
@@ -808,7 +808,7 @@ sudo dnf install nodejs npm</code></pre>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <pre><code>curl -fsSL https://claude.ai/install.sh | bash</code></pre>
 <p>Or with Homebrew:</p>
-<pre><code>brew install claude</code></pre>
+<pre><code>brew install --cask claude-code</code></pre>
 </div>
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
 <pre><code>curl -fsSL https://claude.ai/install.sh | bash</code></pre>
@@ -821,7 +821,7 @@ sudo dnf install nodejs npm</code></pre>
 <p>Navigate to your project folder and start:</p>
 <pre><code>cd /path/to/your/project
 claude</code></pre>
-<p><strong>First time</strong>: You’ll be prompted to log in via browser. You need one of: - <strong>Claude Pro, Max, Teams, or Enterprise</strong> subscription (recommended) - <strong>Claude Console</strong> account (API access with pre-paid credits)</p>
+<p><strong>First time</strong>: You’ll be prompted to log in via browser. You need one of: - <strong>Claude Pro, Max, Ultra, Team, or Enterprise</strong> subscription (recommended; the free plan does not include Claude Code) - <strong>Claude Console</strong> account (API access with pre-paid credits)</p>
 <p><strong>After login</strong>: Type your requests naturally like “what does this project do?” or “add a hello world function to the main file.”</p>
 <p><strong>More details:</strong> <a href="https://code.claude.com/docs/en/quickstart">Claude Code Documentation</a></p>
 </section>
@@ -858,7 +858,7 @@ claude</code></pre>
 <h3 class="anchored" data-anchor-id="requirements">Requirements</h3>
 <ul>
 <li><strong>Claude account</strong> — Sign up at <a href="https://claude.ai">claude.ai</a> if you don’t have one</li>
-<li><strong>Subscription or Console credits</strong> — Claude Pro/Max/Teams/Enterprise or a Claude Console account with credits</li>
+<li><strong>Subscription or Console credits</strong> — Claude Pro/Max/Ultra/Team/Enterprise or a Claude Console account with credits</li>
 <li><strong>Internet connection</strong> — Claude runs in the cloud</li>
 </ul>
 </section>
@@ -872,22 +872,23 @@ claude</code></pre>
 <hr>
 </section>
 </section>
-<section id="gemini-cli" class="level2">
-<h2 class="anchored" data-anchor-id="gemini-cli">Gemini CLI</h2>
-<p>Google’s CLI for Gemini models.</p>
+<section id="antigravity-cli" class="level2">
+<h2 class="anchored" data-anchor-id="antigravity-cli">Antigravity CLI</h2>
+<p>Google’s terminal agent for Gemini models. It replaced Gemini CLI for individual users in June 2026.</p>
 <section id="install-1" class="level3">
 <h3 class="anchored" data-anchor-id="install-1">Install</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">Linux</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
-<pre><code>npm install -g @google/gemini-cli</code></pre>
+<p>PowerShell:</p>
+<pre><code>irm https://antigravity.google/cli/install.ps1 | iex</code></pre>
 </div>
 <div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-<pre><code>npm install -g @google/gemini-cli</code></pre>
+<pre><code>curl -fsSL https://antigravity.google/cli/install.sh | bash</code></pre>
 </div>
 <div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
-<pre><code>npm install -g @google/gemini-cli</code></pre>
+<pre><code>curl -fsSL https://antigravity.google/cli/install.sh | bash</code></pre>
 </div>
 </div>
 </div>
@@ -896,14 +897,9 @@ claude</code></pre>
 <h3 class="anchored" data-anchor-id="use-1">Use</h3>
 <p>Navigate to your project folder and start:</p>
 <pre><code>cd /path/to/your/project
-gemini</code></pre>
-<p><strong>First time</strong>: You’ll be prompted to select <strong>Login with Google</strong> and authenticate via browser with your Google account.</p>
-<p><strong>Account options</strong>:</p>
-<ul>
-<li>Individual Google accounts (free tier + paid Google AI Pro/Ultra)</li>
-<li>Organization accounts (company, school, or Google Workspace)</li>
-</ul>
-<p><strong>More details:</strong> <a href="https://geminicli.com/docs/get-started/installation/">Gemini CLI Documentation</a></p>
+agy</code></pre>
+<p><strong>First time</strong>: You’ll be prompted to sign in with your Google account. There is a free tier; Google AI Pro raises the limits.</p>
+<p><strong>More details:</strong> <a href="https://antigravity.google/docs/install?tab=cli">Antigravity CLI Documentation</a></p>
 <hr>
 </section>
 </section>
@@ -943,7 +939,7 @@ codex</code></pre>
 <li><strong>ChatGPT account</strong> (Plus, Pro, Business, Edu, or Enterprise) - recommended</li>
 <li><strong>OpenAI API key</strong> (alternative option)</li>
 </ul>
-<p><strong>More details:</strong> <a href="https://developers.openai.com/codex/cli/">Codex CLI Documentation</a></p>
+<p><strong>More details:</strong> <a href="https://learn.chatgpt.com/docs/codex/cli">Codex CLI Documentation</a></p>
 <hr>
 </section>
 </section>
@@ -959,6 +955,7 @@ codex</code></pre>
 <pre><code>winget install GitHub.Copilot</code></pre>
 <p>Or with npm (needs Node.js 22+):</p>
 <pre><code>npm install -g @github/copilot</code></pre>
+<p>On Windows, Copilot CLI needs PowerShell 6 or later (Windows ships with 5.1).</p>
 </div>
 <div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
 <pre><code>brew install --cask copilot-cli</code></pre>
@@ -1525,7 +1522,7 @@ copilot</code></pre>
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Installing AI CLI Tools"</span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Claude Code, Codex CLI, GitHub Copilot CLI, and Gemini CLI"</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Claude Code, Codex CLI, GitHub Copilot CLI, and Antigravity CLI"</span></span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Choose Your Tool</span></span>
@@ -1540,9 +1537,9 @@ copilot</code></pre>
 <span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Tool <span class="pp">|</span> Provider <span class="pp">|</span> Model <span class="pp">|</span> Pricing <span class="pp">|</span></span>
 <span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|------|----------|-------|---------|</span></span>
 <span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Claude Code** <span class="pp">|</span> Anthropic <span class="pp">|</span> Claude <span class="pp">|</span> Claude Pro/Max ($20+/mo) or Console <span class="pp">|</span></span>
-<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Codex CLI** <span class="pp">|</span> OpenAI <span class="pp">|</span> GPT-5 family <span class="pp">|</span> ChatGPT Plus/Pro ($20+/mo) <span class="pp">|</span></span>
-<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Copilot CLI** | GitHub | Multiple (Claude, GPT) | Copilot (~$10/mo, **free for students/teachers**) <span class="pp">|</span></span>
-<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Gemini CLI** <span class="pp">|</span> Google <span class="pp">|</span> Gemini <span class="pp">|</span> Free tier + paid plans <span class="pp">|</span></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Codex CLI** <span class="pp">|</span> OpenAI <span class="pp">|</span> GPT models <span class="pp">|</span> ChatGPT Plus ($20/mo) or higher <span class="pp">|</span></span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Copilot CLI** | GitHub | Multiple (Claude, GPT); on Free and Student plans Copilot picks the model | Copilot (~$10/mo, **free for students/teachers**) <span class="pp">|</span></span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Antigravity CLI** <span class="pp">|</span> Google <span class="pp">|</span> Gemini <span class="pp">|</span> Free tier + Google AI Pro <span class="pp">|</span></span>
 <span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>---</span>
@@ -1553,7 +1550,7 @@ copilot</code></pre>
 <span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Node.js</span></span>
 <span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a>Most CLI tools require Node.js. Check if you have it:</span>
+<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a>You only need Node.js if you install a tool with <span class="in">`npm`</span> (Copilot CLI via npm needs Node.js 22 or later). The recommended installers below do not need it. Check if you have it:</span>
 <span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
 <span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a></span>
@@ -1655,7 +1652,7 @@ copilot</code></pre>
 <span id="cb28-130"><a href="#cb28-130" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-131"><a href="#cb28-131" aria-hidden="true" tabindex="-1"></a>Or with Homebrew:</span>
 <span id="cb28-132"><a href="#cb28-132" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-133"><a href="#cb28-133" aria-hidden="true" tabindex="-1"></a><span class="in">brew install claude</span></span>
+<span id="cb28-133"><a href="#cb28-133" aria-hidden="true" tabindex="-1"></a><span class="in">brew install --cask claude-code</span></span>
 <span id="cb28-134"><a href="#cb28-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-135"><a href="#cb28-135" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-136"><a href="#cb28-136" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
@@ -1675,7 +1672,7 @@ copilot</code></pre>
 <span id="cb28-150"><a href="#cb28-150" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-151"><a href="#cb28-151" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-152"><a href="#cb28-152" aria-hidden="true" tabindex="-1"></a>**First time**: You'll be prompted to log in via browser. You need one of:</span>
-<span id="cb28-153"><a href="#cb28-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Claude Pro, Max, Teams, or Enterprise** subscription (recommended)</span>
+<span id="cb28-153"><a href="#cb28-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Claude Pro, Max, Ultra, Team, or Enterprise** subscription (recommended; the free plan does not include Claude Code)</span>
 <span id="cb28-154"><a href="#cb28-154" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Claude Console** account (API access with pre-paid credits)</span>
 <span id="cb28-155"><a href="#cb28-155" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-156"><a href="#cb28-156" aria-hidden="true" tabindex="-1"></a>**After login**: Type your requests naturally like "what does this project do?" or "add a hello world function to the main file."</span>
@@ -1694,7 +1691,7 @@ copilot</code></pre>
 <span id="cb28-169"><a href="#cb28-169" aria-hidden="true" tabindex="-1"></a><span class="fu">### Requirements</span></span>
 <span id="cb28-170"><a href="#cb28-170" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-171"><a href="#cb28-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Claude account** — Sign up at <span class="co">[</span><span class="ot">claude.ai</span><span class="co">](https://claude.ai)</span> if you don't have one</span>
-<span id="cb28-172"><a href="#cb28-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Subscription or Console credits** — Claude Pro/Max/Teams/Enterprise or a Claude Console account with credits</span>
+<span id="cb28-172"><a href="#cb28-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Subscription or Console credits** — Claude Pro/Max/Ultra/Team/Enterprise or a Claude Console account with credits</span>
 <span id="cb28-173"><a href="#cb28-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Internet connection** — Claude runs in the cloud</span>
 <span id="cb28-174"><a href="#cb28-174" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-175"><a href="#cb28-175" aria-hidden="true" tabindex="-1"></a><span class="fu">### Troubleshooting</span></span>
@@ -1705,9 +1702,9 @@ copilot</code></pre>
 <span id="cb28-180"><a href="#cb28-180" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-181"><a href="#cb28-181" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb28-182"><a href="#cb28-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-183"><a href="#cb28-183" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gemini CLI</span></span>
+<span id="cb28-183"><a href="#cb28-183" aria-hidden="true" tabindex="-1"></a><span class="fu">## Antigravity CLI</span></span>
 <span id="cb28-184"><a href="#cb28-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-185"><a href="#cb28-185" aria-hidden="true" tabindex="-1"></a>Google's CLI for Gemini models.</span>
+<span id="cb28-185"><a href="#cb28-185" aria-hidden="true" tabindex="-1"></a>Google's terminal agent for Gemini models. It replaced Gemini CLI for individual users in June 2026.</span>
 <span id="cb28-186"><a href="#cb28-186" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-187"><a href="#cb28-187" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
 <span id="cb28-188"><a href="#cb28-188" aria-hidden="true" tabindex="-1"></a></span>
@@ -1715,159 +1712,157 @@ copilot</code></pre>
 <span id="cb28-190"><a href="#cb28-190" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-191"><a href="#cb28-191" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
 <span id="cb28-192"><a href="#cb28-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-193"><a href="#cb28-193" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-194"><a href="#cb28-194" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @google/gemini-cli</span></span>
-<span id="cb28-195"><a href="#cb28-195" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-196"><a href="#cb28-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-197"><a href="#cb28-197" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
-<span id="cb28-198"><a href="#cb28-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-199"><a href="#cb28-199" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-200"><a href="#cb28-200" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @google/gemini-cli</span></span>
-<span id="cb28-201"><a href="#cb28-201" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-202"><a href="#cb28-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-203"><a href="#cb28-203" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
-<span id="cb28-204"><a href="#cb28-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-205"><a href="#cb28-205" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-206"><a href="#cb28-206" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @google/gemini-cli</span></span>
-<span id="cb28-207"><a href="#cb28-207" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-208"><a href="#cb28-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-209"><a href="#cb28-209" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb28-210"><a href="#cb28-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-211"><a href="#cb28-211" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
-<span id="cb28-212"><a href="#cb28-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-213"><a href="#cb28-213" aria-hidden="true" tabindex="-1"></a>Navigate to your project folder and start:</span>
-<span id="cb28-214"><a href="#cb28-214" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-215"><a href="#cb28-215" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
-<span id="cb28-216"><a href="#cb28-216" aria-hidden="true" tabindex="-1"></a><span class="in">gemini</span></span>
-<span id="cb28-217"><a href="#cb28-217" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-218"><a href="#cb28-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-219"><a href="#cb28-219" aria-hidden="true" tabindex="-1"></a>**First time**: You'll be prompted to select **Login with Google** and authenticate via browser with your Google account.</span>
-<span id="cb28-220"><a href="#cb28-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-221"><a href="#cb28-221" aria-hidden="true" tabindex="-1"></a>**Account options**:</span>
-<span id="cb28-222"><a href="#cb28-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-223"><a href="#cb28-223" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Individual Google accounts (free tier + paid Google AI Pro/Ultra)</span>
-<span id="cb28-224"><a href="#cb28-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Organization accounts (company, school, or Google Workspace)</span>
+<span id="cb28-193"><a href="#cb28-193" aria-hidden="true" tabindex="-1"></a>PowerShell:</span>
+<span id="cb28-194"><a href="#cb28-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-195"><a href="#cb28-195" aria-hidden="true" tabindex="-1"></a><span class="in">irm https://antigravity.google/cli/install.ps1 | iex</span></span>
+<span id="cb28-196"><a href="#cb28-196" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-197"><a href="#cb28-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-198"><a href="#cb28-198" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
+<span id="cb28-199"><a href="#cb28-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-200"><a href="#cb28-200" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-201"><a href="#cb28-201" aria-hidden="true" tabindex="-1"></a><span class="in">curl -fsSL https://antigravity.google/cli/install.sh | bash</span></span>
+<span id="cb28-202"><a href="#cb28-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-203"><a href="#cb28-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-204"><a href="#cb28-204" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
+<span id="cb28-205"><a href="#cb28-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-206"><a href="#cb28-206" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-207"><a href="#cb28-207" aria-hidden="true" tabindex="-1"></a><span class="in">curl -fsSL https://antigravity.google/cli/install.sh | bash</span></span>
+<span id="cb28-208"><a href="#cb28-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-209"><a href="#cb28-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-210"><a href="#cb28-210" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb28-211"><a href="#cb28-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-212"><a href="#cb28-212" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
+<span id="cb28-213"><a href="#cb28-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-214"><a href="#cb28-214" aria-hidden="true" tabindex="-1"></a>Navigate to your project folder and start:</span>
+<span id="cb28-215"><a href="#cb28-215" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-216"><a href="#cb28-216" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
+<span id="cb28-217"><a href="#cb28-217" aria-hidden="true" tabindex="-1"></a><span class="in">agy</span></span>
+<span id="cb28-218"><a href="#cb28-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-219"><a href="#cb28-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-220"><a href="#cb28-220" aria-hidden="true" tabindex="-1"></a>**First time**: You'll be prompted to sign in with your Google account. There is a free tier; Google AI Pro raises the limits.</span>
+<span id="cb28-221"><a href="#cb28-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-222"><a href="#cb28-222" aria-hidden="true" tabindex="-1"></a>**More details:** <span class="co">[</span><span class="ot">Antigravity CLI Documentation</span><span class="co">](https://antigravity.google/docs/install?tab=cli)</span></span>
+<span id="cb28-223"><a href="#cb28-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-224"><a href="#cb28-224" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb28-225"><a href="#cb28-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-226"><a href="#cb28-226" aria-hidden="true" tabindex="-1"></a>**More details:** <span class="co">[</span><span class="ot">Gemini CLI Documentation</span><span class="co">](https://geminicli.com/docs/get-started/installation/)</span></span>
+<span id="cb28-226"><a href="#cb28-226" aria-hidden="true" tabindex="-1"></a><span class="fu">## Codex CLI</span></span>
 <span id="cb28-227"><a href="#cb28-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-228"><a href="#cb28-228" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb28-228"><a href="#cb28-228" aria-hidden="true" tabindex="-1"></a>OpenAI's command-line coding tool.</span>
 <span id="cb28-229"><a href="#cb28-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-230"><a href="#cb28-230" aria-hidden="true" tabindex="-1"></a><span class="fu">## Codex CLI</span></span>
+<span id="cb28-230"><a href="#cb28-230" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
 <span id="cb28-231"><a href="#cb28-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-232"><a href="#cb28-232" aria-hidden="true" tabindex="-1"></a>OpenAI's command-line coding tool.</span>
+<span id="cb28-232"><a href="#cb28-232" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
 <span id="cb28-233"><a href="#cb28-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-234"><a href="#cb28-234" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
+<span id="cb28-234"><a href="#cb28-234" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
 <span id="cb28-235"><a href="#cb28-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-236"><a href="#cb28-236" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb28-237"><a href="#cb28-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-238"><a href="#cb28-238" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
-<span id="cb28-239"><a href="#cb28-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-240"><a href="#cb28-240" aria-hidden="true" tabindex="-1"></a>PowerShell:</span>
-<span id="cb28-241"><a href="#cb28-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-242"><a href="#cb28-242" aria-hidden="true" tabindex="-1"></a><span class="in">powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"</span></span>
-<span id="cb28-243"><a href="#cb28-243" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-244"><a href="#cb28-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-245"><a href="#cb28-245" aria-hidden="true" tabindex="-1"></a>Or with npm:</span>
-<span id="cb28-246"><a href="#cb28-246" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-247"><a href="#cb28-247" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @openai/codex</span></span>
+<span id="cb28-236"><a href="#cb28-236" aria-hidden="true" tabindex="-1"></a>PowerShell:</span>
+<span id="cb28-237"><a href="#cb28-237" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-238"><a href="#cb28-238" aria-hidden="true" tabindex="-1"></a><span class="in">powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1 | iex"</span></span>
+<span id="cb28-239"><a href="#cb28-239" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-240"><a href="#cb28-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-241"><a href="#cb28-241" aria-hidden="true" tabindex="-1"></a>Or with npm:</span>
+<span id="cb28-242"><a href="#cb28-242" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-243"><a href="#cb28-243" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @openai/codex</span></span>
+<span id="cb28-244"><a href="#cb28-244" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-245"><a href="#cb28-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-246"><a href="#cb28-246" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
+<span id="cb28-247"><a href="#cb28-247" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-248"><a href="#cb28-248" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-249"><a href="#cb28-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-250"><a href="#cb28-250" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
+<span id="cb28-249"><a href="#cb28-249" aria-hidden="true" tabindex="-1"></a><span class="in">curl -fsSL https://chatgpt.com/codex/install.sh | sh</span></span>
+<span id="cb28-250"><a href="#cb28-250" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-251"><a href="#cb28-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-252"><a href="#cb28-252" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-253"><a href="#cb28-253" aria-hidden="true" tabindex="-1"></a><span class="in">curl -fsSL https://chatgpt.com/codex/install.sh | sh</span></span>
-<span id="cb28-254"><a href="#cb28-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-252"><a href="#cb28-252" aria-hidden="true" tabindex="-1"></a>Or: <span class="in">`npm install -g @openai/codex`</span> / <span class="in">`brew install openai/tap/codex`</span></span>
+<span id="cb28-253"><a href="#cb28-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-254"><a href="#cb28-254" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
 <span id="cb28-255"><a href="#cb28-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-256"><a href="#cb28-256" aria-hidden="true" tabindex="-1"></a>Or: <span class="in">`npm install -g @openai/codex`</span> / <span class="in">`brew install openai/tap/codex`</span></span>
-<span id="cb28-257"><a href="#cb28-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-258"><a href="#cb28-258" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
+<span id="cb28-256"><a href="#cb28-256" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-257"><a href="#cb28-257" aria-hidden="true" tabindex="-1"></a><span class="in">curl -fsSL https://chatgpt.com/codex/install.sh | sh</span></span>
+<span id="cb28-258"><a href="#cb28-258" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-259"><a href="#cb28-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-260"><a href="#cb28-260" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-261"><a href="#cb28-261" aria-hidden="true" tabindex="-1"></a><span class="in">curl -fsSL https://chatgpt.com/codex/install.sh | sh</span></span>
-<span id="cb28-262"><a href="#cb28-262" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-263"><a href="#cb28-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-264"><a href="#cb28-264" aria-hidden="true" tabindex="-1"></a>Or with npm:</span>
-<span id="cb28-265"><a href="#cb28-265" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-266"><a href="#cb28-266" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @openai/codex</span></span>
-<span id="cb28-267"><a href="#cb28-267" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-260"><a href="#cb28-260" aria-hidden="true" tabindex="-1"></a>Or with npm:</span>
+<span id="cb28-261"><a href="#cb28-261" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-262"><a href="#cb28-262" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @openai/codex</span></span>
+<span id="cb28-263"><a href="#cb28-263" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-264"><a href="#cb28-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-265"><a href="#cb28-265" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb28-266"><a href="#cb28-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-267"><a href="#cb28-267" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
 <span id="cb28-268"><a href="#cb28-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-269"><a href="#cb28-269" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb28-270"><a href="#cb28-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-271"><a href="#cb28-271" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
-<span id="cb28-272"><a href="#cb28-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-273"><a href="#cb28-273" aria-hidden="true" tabindex="-1"></a>Navigate to your project folder and start:</span>
-<span id="cb28-274"><a href="#cb28-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-275"><a href="#cb28-275" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
-<span id="cb28-276"><a href="#cb28-276" aria-hidden="true" tabindex="-1"></a><span class="in">codex</span></span>
-<span id="cb28-277"><a href="#cb28-277" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-278"><a href="#cb28-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-279"><a href="#cb28-279" aria-hidden="true" tabindex="-1"></a>**First time**: You'll be prompted to sign in via browser. You can authenticate with:</span>
-<span id="cb28-280"><a href="#cb28-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-281"><a href="#cb28-281" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**ChatGPT account** (Plus, Pro, Business, Edu, or Enterprise) - recommended</span>
-<span id="cb28-282"><a href="#cb28-282" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**OpenAI API key** (alternative option)</span>
+<span id="cb28-269"><a href="#cb28-269" aria-hidden="true" tabindex="-1"></a>Navigate to your project folder and start:</span>
+<span id="cb28-270"><a href="#cb28-270" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-271"><a href="#cb28-271" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
+<span id="cb28-272"><a href="#cb28-272" aria-hidden="true" tabindex="-1"></a><span class="in">codex</span></span>
+<span id="cb28-273"><a href="#cb28-273" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-274"><a href="#cb28-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-275"><a href="#cb28-275" aria-hidden="true" tabindex="-1"></a>**First time**: You'll be prompted to sign in via browser. You can authenticate with:</span>
+<span id="cb28-276"><a href="#cb28-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-277"><a href="#cb28-277" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**ChatGPT account** (Plus, Pro, Business, Edu, or Enterprise) - recommended</span>
+<span id="cb28-278"><a href="#cb28-278" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**OpenAI API key** (alternative option)</span>
+<span id="cb28-279"><a href="#cb28-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-280"><a href="#cb28-280" aria-hidden="true" tabindex="-1"></a>**More details:** <span class="co">[</span><span class="ot">Codex CLI Documentation</span><span class="co">](https://learn.chatgpt.com/docs/codex/cli)</span></span>
+<span id="cb28-281"><a href="#cb28-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-282"><a href="#cb28-282" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb28-283"><a href="#cb28-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-284"><a href="#cb28-284" aria-hidden="true" tabindex="-1"></a>**More details:** <span class="co">[</span><span class="ot">Codex CLI Documentation</span><span class="co">](https://developers.openai.com/codex/cli/)</span></span>
+<span id="cb28-284"><a href="#cb28-284" aria-hidden="true" tabindex="-1"></a><span class="fu">## GitHub Copilot CLI</span></span>
 <span id="cb28-285"><a href="#cb28-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-286"><a href="#cb28-286" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb28-286"><a href="#cb28-286" aria-hidden="true" tabindex="-1"></a>GitHub's terminal coding agent — the same agent that powers Copilot in VS Code. **Free for verified students and teachers** via the <span class="co">[</span><span class="ot">GitHub Student Developer Pack</span><span class="co">](https://education.github.com/pack)</span>.</span>
 <span id="cb28-287"><a href="#cb28-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-288"><a href="#cb28-288" aria-hidden="true" tabindex="-1"></a><span class="fu">## GitHub Copilot CLI</span></span>
+<span id="cb28-288"><a href="#cb28-288" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
 <span id="cb28-289"><a href="#cb28-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-290"><a href="#cb28-290" aria-hidden="true" tabindex="-1"></a>GitHub's terminal coding agent — the same agent that powers Copilot in VS Code. **Free for verified students and teachers** via the <span class="co">[</span><span class="ot">GitHub Student Developer Pack</span><span class="co">](https://education.github.com/pack)</span>.</span>
+<span id="cb28-290"><a href="#cb28-290" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
 <span id="cb28-291"><a href="#cb28-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-292"><a href="#cb28-292" aria-hidden="true" tabindex="-1"></a><span class="fu">### Install</span></span>
+<span id="cb28-292"><a href="#cb28-292" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
 <span id="cb28-293"><a href="#cb28-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-294"><a href="#cb28-294" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
-<span id="cb28-295"><a href="#cb28-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-296"><a href="#cb28-296" aria-hidden="true" tabindex="-1"></a><span class="fu">### Windows</span></span>
+<span id="cb28-294"><a href="#cb28-294" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-295"><a href="#cb28-295" aria-hidden="true" tabindex="-1"></a><span class="in">winget install GitHub.Copilot</span></span>
+<span id="cb28-296"><a href="#cb28-296" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb28-297"><a href="#cb28-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-298"><a href="#cb28-298" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-299"><a href="#cb28-299" aria-hidden="true" tabindex="-1"></a><span class="in">winget install GitHub.Copilot</span></span>
-<span id="cb28-300"><a href="#cb28-300" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-301"><a href="#cb28-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-302"><a href="#cb28-302" aria-hidden="true" tabindex="-1"></a>Or with npm (needs Node.js 22+):</span>
-<span id="cb28-303"><a href="#cb28-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-304"><a href="#cb28-304" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @github/copilot</span></span>
-<span id="cb28-305"><a href="#cb28-305" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-298"><a href="#cb28-298" aria-hidden="true" tabindex="-1"></a>Or with npm (needs Node.js 22+):</span>
+<span id="cb28-299"><a href="#cb28-299" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-300"><a href="#cb28-300" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @github/copilot</span></span>
+<span id="cb28-301"><a href="#cb28-301" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-302"><a href="#cb28-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-303"><a href="#cb28-303" aria-hidden="true" tabindex="-1"></a>On Windows, Copilot CLI needs PowerShell 6 or later (Windows ships with 5.1).</span>
+<span id="cb28-304"><a href="#cb28-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-305"><a href="#cb28-305" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
 <span id="cb28-306"><a href="#cb28-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-307"><a href="#cb28-307" aria-hidden="true" tabindex="-1"></a><span class="fu">### Mac</span></span>
-<span id="cb28-308"><a href="#cb28-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-307"><a href="#cb28-307" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-308"><a href="#cb28-308" aria-hidden="true" tabindex="-1"></a><span class="in">brew install --cask copilot-cli</span></span>
 <span id="cb28-309"><a href="#cb28-309" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-310"><a href="#cb28-310" aria-hidden="true" tabindex="-1"></a><span class="in">brew install --cask copilot-cli</span></span>
-<span id="cb28-311"><a href="#cb28-311" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-312"><a href="#cb28-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-313"><a href="#cb28-313" aria-hidden="true" tabindex="-1"></a>Or with npm (needs Node.js 22+):</span>
+<span id="cb28-310"><a href="#cb28-310" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-311"><a href="#cb28-311" aria-hidden="true" tabindex="-1"></a>Or with npm (needs Node.js 22+):</span>
+<span id="cb28-312"><a href="#cb28-312" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-313"><a href="#cb28-313" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @github/copilot</span></span>
 <span id="cb28-314"><a href="#cb28-314" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-315"><a href="#cb28-315" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @github/copilot</span></span>
-<span id="cb28-316"><a href="#cb28-316" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-315"><a href="#cb28-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-316"><a href="#cb28-316" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
 <span id="cb28-317"><a href="#cb28-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-318"><a href="#cb28-318" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linux</span></span>
-<span id="cb28-319"><a href="#cb28-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-318"><a href="#cb28-318" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-319"><a href="#cb28-319" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @github/copilot</span></span>
 <span id="cb28-320"><a href="#cb28-320" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-321"><a href="#cb28-321" aria-hidden="true" tabindex="-1"></a><span class="in">npm install -g @github/copilot</span></span>
-<span id="cb28-322"><a href="#cb28-322" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-321"><a href="#cb28-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-322"><a href="#cb28-322" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb28-323"><a href="#cb28-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-324"><a href="#cb28-324" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb28-324"><a href="#cb28-324" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
 <span id="cb28-325"><a href="#cb28-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-326"><a href="#cb28-326" aria-hidden="true" tabindex="-1"></a><span class="fu">### Use</span></span>
-<span id="cb28-327"><a href="#cb28-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-328"><a href="#cb28-328" aria-hidden="true" tabindex="-1"></a>Navigate to your project folder and start:</span>
-<span id="cb28-329"><a href="#cb28-329" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb28-330"><a href="#cb28-330" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
-<span id="cb28-331"><a href="#cb28-331" aria-hidden="true" tabindex="-1"></a><span class="in">copilot</span></span>
-<span id="cb28-332"><a href="#cb28-332" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-326"><a href="#cb28-326" aria-hidden="true" tabindex="-1"></a>Navigate to your project folder and start:</span>
+<span id="cb28-327"><a href="#cb28-327" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-328"><a href="#cb28-328" aria-hidden="true" tabindex="-1"></a><span class="in">cd /path/to/your/project</span></span>
+<span id="cb28-329"><a href="#cb28-329" aria-hidden="true" tabindex="-1"></a><span class="in">copilot</span></span>
+<span id="cb28-330"><a href="#cb28-330" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb28-331"><a href="#cb28-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-332"><a href="#cb28-332" aria-hidden="true" tabindex="-1"></a>**First time**: You'll be prompted to sign in via browser with the GitHub account that has your Copilot access.</span>
 <span id="cb28-333"><a href="#cb28-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-334"><a href="#cb28-334" aria-hidden="true" tabindex="-1"></a>**First time**: You'll be prompted to sign in via browser with the GitHub account that has your Copilot access.</span>
+<span id="cb28-334"><a href="#cb28-334" aria-hidden="true" tabindex="-1"></a>**More details:** <span class="co">[</span><span class="ot">Copilot CLI Documentation</span><span class="co">](https://docs.github.com/en/copilot/how-tos/copilot-cli)</span></span>
 <span id="cb28-335"><a href="#cb28-335" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-336"><a href="#cb28-336" aria-hidden="true" tabindex="-1"></a>**More details:** <span class="co">[</span><span class="ot">Copilot CLI Documentation</span><span class="co">](https://docs.github.com/en/copilot/how-tos/copilot-cli)</span></span>
+<span id="cb28-336"><a href="#cb28-336" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb28-337"><a href="#cb28-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-338"><a href="#cb28-338" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb28-338"><a href="#cb28-338" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
 <span id="cb28-339"><a href="#cb28-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-340"><a href="#cb28-340" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next Steps</span></span>
-<span id="cb28-341"><a href="#cb28-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-342"><a href="#cb28-342" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Install one tool** (we recommend Claude Code for this course)</span>
-<span id="cb28-343"><a href="#cb28-343" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Read** <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](terminal-basics.html)</span> if you're new to command line</span>
-<span id="cb28-344"><a href="#cb28-344" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Try it** on a simple task: navigate to a folder with some files and ask "what's here?"</span>
-<span id="cb28-345"><a href="#cb28-345" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Continue** to <span class="co">[</span><span class="ot">Week 1</span><span class="co">](../unit1/)</span> to use it for data analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb28-340"><a href="#cb28-340" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Install one tool** (we recommend Claude Code for this course)</span>
+<span id="cb28-341"><a href="#cb28-341" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Read** <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](terminal-basics.html)</span> if you're new to command line</span>
+<span id="cb28-342"><a href="#cb28-342" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Try it** on a simple task: navigate to a folder with some files and ask "what's here?"</span>
+<span id="cb28-343"><a href="#cb28-343" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Continue** to <span class="co">[</span><span class="ot">Week 1</span><span class="co">](../unit1/)</span> to use it for data analysis</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
