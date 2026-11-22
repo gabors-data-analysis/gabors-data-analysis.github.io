@@ -781,7 +781,7 @@
     "href": "friendly-agentic-ai-intro/live-demo.html",
     "title": "Part 3: A Paper in 50 Minutes",
     "section": "",
-    "text": "Part 3 of 5 · live demo, then homework\n\n\nA Paper in 50 Minutes\n\n\nOne prompt, a short empirical paper and a slide deck. Then your part: study what the agent left behind, as a referee would",
+    "text": "Part 3 of 6 · live demo, then homework\n\n\nA Paper in 50 Minutes\n\n\nOne prompt, a short empirical paper and a slide deck. Then your part: study what the agent left behind, as a referee would",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -877,7 +877,7 @@
     "href": "friendly-agentic-ai-intro/go-further.html",
     "title": "Part 5: Go Further",
     "section": "",
-    "text": "Part 5 of 5 · for self-study\n\n\nGo Further\n\n\nFree yourself from one provider, and use cheap models to experiment: bigger tasks, repeated runs, and a sense of what each model can do",
+    "text": "Part 5 of 6 · for self-study\n\n\nGo Further\n\n\nFree yourself from one provider, and use cheap models to experiment: bigger tasks, repeated runs, and a sense of what each model can do",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -937,7 +937,7 @@
     "href": "friendly-agentic-ai-intro/go-further.html#to-read-more",
     "title": "Part 5: Go Further",
     "section": "To read more",
-    "text": "To read more\nIn the knowledge base: Open-code tools and harnesses and Open-weights and local models.\n\nBack to the overview →",
+    "text": "To read more\nIn the knowledge base: Open-code tools and harnesses and Open-weights and local models.\n\nContinue with Part 6: AI in Science →",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -947,73 +947,73 @@
   {
     "objectID": "friendly-agentic-ai-intro/ai-in-science.html",
     "href": "friendly-agentic-ai-intro/ai-in-science.html",
-    "title": "AI in Science",
+    "title": "Part 6: AI in Science",
     "section": "",
-    "text": "Extra · frontier research bits\n\n\nAI in Science\n\n\nWhat AI is doing to research in maths and the social sciences, in short notes with a link to the source\nEach bit is two or three sentences and a link. Newest first. I add new ones as I come across them.",
+    "text": "Part 6 of 6 · links, updated as they come\n\n\nAI in Science\n\n\nA few links that peek into the future of social science fields\nLots of new research uses AI as a tool. This part is not a list of those. Here I share a few links that peek into the future of social science fields: pieces on what AI may do to the work of economists, political scientists, survey researchers and psychologists. I am picky, and add new ones only when they change how I think about a field. Each comes with two or three sentences, newest first.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
-      "Extra: AI in Science"
+      "Part 6: AI in Science"
     ]
   },
   {
     "objectID": "friendly-agentic-ai-intro/ai-in-science.html#maths-and-economics-next",
     "href": "friendly-agentic-ai-intro/ai-in-science.html#maths-and-economics-next",
-    "title": "AI in Science",
+    "title": "Part 6: AI in Science",
     "section": "Maths, and economics next?",
     "text": "Maths, and economics next?\nThe Economist, Free Exchange column · 19 November 2026\nAfter AI models solved hundreds of open problems in mathematics, economists are asking whether their field is next. Ben Golub, a theorist at Northwestern, expects less angst than among mathematicians. But AI already cuts the cost of producing research, and the open question is whether it will also erode the human advantage in ideas.\nAI is swallowing maths. Is economics next? (paywall)",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
-      "Extra: AI in Science"
+      "Part 6: AI in Science"
     ]
   },
   {
     "objectID": "friendly-agentic-ai-intro/ai-in-science.html#economics-whole-papers-written-by-an-agent",
     "href": "friendly-agentic-ai-intro/ai-in-science.html#economics-whole-papers-written-by-an-agent",
-    "title": "AI in Science",
+    "title": "Part 6: AI in Science",
     "section": "Economics: whole papers written by an agent",
     "text": "Economics: whole papers written by an agent\nJason Furman · August–November 2026\nJason Furman built a system, Paperwright, that takes a one-line topic and has Claude write an economics paper with no human in the loop: the question, the literature, the data, the analysis, a simulated referee round, and a replication package. Seven papers are posted so far, from the UK minimum wage to data centers and electricity prices. Furman asks readers to treat them as experiments: nobody edited or checked them.\nAI-Generated Economics Papers: An Experiment",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
-      "Extra: AI in Science"
+      "Part 6: AI in Science"
     ]
   },
   {
     "objectID": "friendly-agentic-ai-intro/ai-in-science.html#survey-research-ai-respondents-are-not-a-poll",
     "href": "friendly-agentic-ai-intro/ai-in-science.html#survey-research-ai-respondents-are-not-a-poll",
-    "title": "AI in Science",
+    "title": "Part 6: AI in Science",
     "section": "Survey research: AI respondents are not a poll",
     "text": "Survey research: AI respondents are not a poll\nPew Research Center · 30 September 2026\nPew rebuilt three waves of its American Trends Panel with AI “digital twins” of the real respondents. Across nearly 300 questions, the synthetic answers missed the human ones by 12 percentage points on average, and by more for Republicans (16) and Black adults (15). The AI respondents were also about four times less likely to say “not sure”, and the errors were hard to predict.\nCan AI Stand In for Human Survey-Takers? Not Really",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
-      "Extra: AI in Science"
+      "Part 6: AI in Science"
     ]
   },
   {
     "objectID": "friendly-agentic-ai-intro/ai-in-science.html#political-science-party-positions-from-texts",
     "href": "friendly-agentic-ai-intro/ai-in-science.html#political-science-party-positions-from-texts",
-    "title": "AI in Science",
+    "title": "Part 6: AI in Science",
     "section": "Political science: party positions from texts",
     "text": "Political science: party positions from texts\nAmerican Journal of Political Science · 2026\nKenneth Benoit and coauthors asked LLMs to place political parties on six policy dimensions, such as economic policy, immigration and European integration. Averaged across models, the scores correlate 0.87–0.92 with expert surveys, close to how well two expert surveys agree with each other. Open-weight models (DeepSeek, Llama, Gemma) gave similar results. The weak spot was decentralization, where party manifestos tend to stay vague.\nUsing large language models to analyze political texts through natural language understanding · authors’ summary",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
-      "Extra: AI in Science"
+      "Part 6: AI in Science"
     ]
   },
   {
     "objectID": "friendly-agentic-ai-intro/ai-in-science.html#psychology-one-model-of-human-choices",
     "href": "friendly-agentic-ai-intro/ai-in-science.html#psychology-one-model-of-human-choices",
-    "title": "AI in Science",
+    "title": "Part 6: AI in Science",
     "section": "Psychology: one model of human choices",
-    "text": "Psychology: one model of human choices\nNature · July 2025\nMarcel Binz and colleagues fine-tuned an open-weight model (Llama 3.1 70B) on Psych-101: 160 psychology experiments, 60,092 participants and 10.7 million choices. The resulting model, Centaur, predicts the choices of new participants better than the standard cognitive models, also in task variants and domains it was not trained on.\nA foundation model to predict and capture human cognition",
+    "text": "Psychology: one model of human choices\nNature · July 2025\nMarcel Binz and colleagues fine-tuned an open-weight model (Llama 3.1 70B) on Psych-101: 160 psychology experiments, 60,092 participants and 10.7 million choices. The resulting model, Centaur, predicts the choices of new participants better than the standard cognitive models, also in task variants and domains it was not trained on.\nA foundation model to predict and capture human cognition\n\nFor what an agent can do for your own research today, see What can it do for a social scientist?\n\nBack to the overview →",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
-      "Extra: AI in Science"
+      "Part 6: AI in Science"
     ]
   },
   {
@@ -7583,7 +7583,7 @@
     "href": "friendly-agentic-ai-intro/after-the-course.html",
     "title": "Part 4: After the Course",
     "section": "",
-    "text": "Part 4 of 5 · at your own pace\n\n\nAfter the Course\n\n\nIdeas for the weeks after: a better AGENTS.md, your own voice and your own skills, a history of every change, and new uses",
+    "text": "Part 4 of 6 · at your own pace\n\n\nAfter the Course\n\n\nIdeas for the weeks after: a better AGENTS.md, your own voice and your own skills, a history of every change, and new uses",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7679,7 +7679,7 @@
     "href": "friendly-agentic-ai-intro/first-steps.html",
     "title": "Part 2: First Steps",
     "section": "",
-    "text": "Part 2 of 5 · an hour in class, an hour after\n\n\nFirst Steps\n\n\nOne small project, from a pile of papers to a reviewed memo, and how to stay in charge at every step",
+    "text": "Part 2 of 6 · an hour in class, an hour after\n\n\nFirst Steps\n\n\nOne small project, from a pile of papers to a reviewed memo, and how to stay in charge at every step",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7871,7 +7871,7 @@
     "href": "friendly-agentic-ai-intro/index.html",
     "title": "Friendly Introduction to Agentic AI for Social Scientists",
     "section": "",
-    "text": "A mini course in five parts\n\n\nFriendly Introduction to Agentic AI for Social Scientists\n\n\nFrom a chatbot that polishes your text to an AI agent that works with your files: your readings, your Word drafts, your data\nVersion 0.7 · 20 November 2026",
+    "text": "A mini course in six parts\n\n\nFriendly Introduction to Agentic AI for Social Scientists\n\n\nFrom a chatbot that polishes your text to an AI agent that works with your files: your readings, your Word drafts, your data\nVersion 0.8 · 22 November 2026",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7931,7 +7931,7 @@
     "href": "friendly-agentic-ai-intro/index.html#how-is-the-course-organized",
     "title": "Friendly Introduction to Agentic AI for Social Scientists",
     "section": "How is the course organized?",
-    "text": "How is the course organized?\nThe course has five parts. The first two are hands-on: setup takes about an hour, the first project about two. The third is a live demonstration, followed by homework. The last two are for later: the fourth when you use the agent on your own work, the fifth when you want to try other models. If something fails along the way, nothing is broken: check the troubleshooting table of that part, or ask the agent what went wrong.\n\n\n1\n\n\n\nSteps 1.1–1.5 · about an hour\n\nSetup\nInstall the app, make a project folder, meet the agent, let it set up Python, and install a reader for the files it writes.\nYou end with a working agent in a folder of your own.\n\n\n\n\n2\n\n\n\nSteps 2.1–2.6 · an hour in class, an hour after\n\nFirst Steps\nOne small project on one question: do big events change when babies are born? The agent collects six papers, makes an extract of each, answers your questions, and writes a memo. You review the memo on paper, and it revises. Then a short task with data. Each step ends with how to stay in charge: limits, visibility, checks, and the final say.\nYou end with extracts you verified on the page, a reviewed memo, and work you can put your name on.\n\n\n\n\n3\n\n\n\nLive demo · then homework\n\nA Paper in 50 Minutes\nWe give the agent a single prompt, “Does the World Cup affect fertility?”, and watch it produce a short empirical paper and a slide deck. Then comes your part: go home and study what it left behind, from the paper and the deck to the decision memo, the code and the skills it used.\nYou end with a view of a whole project, and practice in reading an agent’s work as a referee would.\n\n\n\n\n4\n\n\n\nAt your own pace\n\nAfter the Course\nA menu for the weeks after: a better AGENTS.md, making the agent write like you, your own skills, a history of every change with Git, and new uses.\nYou end with an agent set up for the way you work.\n\n\n\n\n5\n\n\n\nSteps 5.1–5.2 · for self-study\n\nGo Further\nTwo steps beyond the course. Use an app that works with any model, so you don’t depend on one provider. Then use cheap open-weights models to experiment: a large corpus, repeated runs, a cheap worker with a strong reviewer.\nYou end with a sense of which tasks need the strongest model, and which don’t.\n\n\n\n\n\n\n\n\nTipTaking this as a two-hour workshop?\n\n\n\nBefore the session (at home, about an hour): Part 1, and Step 2.1.\nIn the session (two hours): at the start we give the agent the World Cup prompt of Part 3, and it works in the background. The first hour is Part 2: we explain a few ideas, you work on Steps 2.2 to 2.4 on your own laptop, and we end with a short debrief. The second hour is Part 3: the ingredients of the prompt, and what the agent produced.\nAfter the session (homework): Steps 2.5 and 2.6 of Part 2, and the referee homework of Part 3 on the project folder we share. Parts 4 and 5 are for the weeks after.",
+    "text": "How is the course organized?\nThe course has six parts. The first two are hands-on: setup takes about an hour, the first project about two. The third is a live demonstration, followed by homework. Parts 4 and 5 are for later: the fourth when you use the agent on your own work, the fifth when you want to try other models. The sixth is a short list of links on where social science research may be heading. If something fails along the way, nothing is broken: check the troubleshooting table of that part, or ask the agent what went wrong.\n\n\n1\n\n\n\nSteps 1.1–1.5 · about an hour\n\nSetup\nInstall the app, make a project folder, meet the agent, let it set up Python, and install a reader for the files it writes.\nYou end with a working agent in a folder of your own.\n\n\n\n\n2\n\n\n\nSteps 2.1–2.6 · an hour in class, an hour after\n\nFirst Steps\nOne small project on one question: do big events change when babies are born? The agent collects six papers, makes an extract of each, answers your questions, and writes a memo. You review the memo on paper, and it revises. Then a short task with data. Each step ends with how to stay in charge: limits, visibility, checks, and the final say.\nYou end with extracts you verified on the page, a reviewed memo, and work you can put your name on.\n\n\n\n\n3\n\n\n\nLive demo · then homework\n\nA Paper in 50 Minutes\nWe give the agent a single prompt, “Does the World Cup affect fertility?”, and watch it produce a short empirical paper and a slide deck. Then comes your part: go home and study what it left behind, from the paper and the deck to the decision memo, the code and the skills it used.\nYou end with a view of a whole project, and practice in reading an agent’s work as a referee would.\n\n\n\n\n4\n\n\n\nAt your own pace\n\nAfter the Course\nA menu for the weeks after: a better AGENTS.md, making the agent write like you, your own skills, a history of every change with Git, and new uses.\nYou end with an agent set up for the way you work.\n\n\n\n\n5\n\n\n\nSteps 5.1–5.2 · for self-study\n\nGo Further\nTwo steps beyond the course. Use an app that works with any model, so you don’t depend on one provider. Then use cheap open-weights models to experiment: a large corpus, repeated runs, a cheap worker with a strong reviewer.\nYou end with a sense of which tasks need the strongest model, and which don’t.\n\n\n\n\n6\n\n\n\nLinks · updated as they come\n\nAI in Science\nA few links that peek into the future of social science fields: economics, political science, survey research, psychology. Each comes with a two- or three-sentence summary.\nYou end with a sense of where research in your field may be heading.\n\n\n\n\n\n\n\n\nTipTaking this as a two-hour workshop?\n\n\n\nBefore the session (at home, about an hour): Part 1, and Step 2.1.\nIn the session (two hours): at the start we give the agent the World Cup prompt of Part 3, and it works in the background. The first hour is Part 2: we explain a few ideas, you work on Steps 2.2 to 2.4 on your own laptop, and we end with a short debrief. The second hour is Part 3: the ingredients of the prompt, and what the agent produced.\nAfter the session (homework): Steps 2.5 and 2.6 of Part 2, and the referee homework of Part 3 on the project folder we share. Parts 4 to 6 are for the weeks after.",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
@@ -7967,7 +7967,7 @@
     "href": "friendly-agentic-ai-intro/setup.html",
     "title": "Part 1: Setup",
     "section": "",
-    "text": "Part 1 of 5 · about an hour\n\n\nSetup\n\n\nInstall the Claude desktop app, make a project folder, meet the agent, and let it set up Python for you",
+    "text": "Part 1 of 6 · about an hour\n\n\nSetup\n\n\nInstall the Claude desktop app, make a project folder, meet the agent, and let it set up Python for you",
     "crumbs": [
       "Home",
       "Friendly Intro to Agentic AI",
