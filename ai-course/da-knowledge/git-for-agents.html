@@ -316,6 +316,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../friendly-agentic-ai-intro/after-the-course.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Part 4: After the Course</span></a>
   </div>
@@ -670,7 +676,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Suppose we ask an agent to fix the date variable in our cleaning script. It does that, and while it is there, it also renames two columns, changes a filter in another script and rewrites part of the README. Ten minutes later the regression table has 312 fewer observations. Which of these changes did it? With Git, we can see every changed line, and go back with one command. Without Git, we have to remember.</p>
-<p>This page goes deeper than the short section <a href="../friendly-agentic-ai-intro/after-the-course.html#how-do-i-keep-a-history-of-every-change">How do I keep a history of every change?</a> in the friendly introduction. For installing Git and GitHub Desktop, see <a href="../da-knowledge/ai-coding-prep.html#version-control-with-git-and-github">Version control with Git and GitHub</a>. The commands here work the same for R and Python projects, in any terminal (see <a href="../da-knowledge/terminal-basics.html">Terminal Basics</a>).</p>
+<p>This page goes deeper than the short <a href="../friendly-agentic-ai-intro/after-the-course.html#step-4-4">Step 4.4: Keep a history of every change</a> in the friendly introduction. For installing Git and GitHub Desktop, see <a href="../da-knowledge/ai-coding-prep.html#version-control-with-git-and-github">Version control with Git and GitHub</a>. The commands here work the same for R and Python projects, in any terminal (see <a href="../da-knowledge/terminal-basics.html">Terminal Basics</a>).</p>
 <p>Checked against official documentation on 22 November 2026.</p>
 <section id="why-does-git-matter-more-with-an-agent" class="level2">
 <h2 class="anchored" data-anchor-id="why-does-git-matter-more-with-an-agent">Why does Git matter more with an agent?</h2>
@@ -740,7 +746,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="can-the-agent-do-the-git-steps-for-me" class="level2">
 <h2 class="anchored" data-anchor-id="can-the-agent-do-the-git-steps-for-me">Can the agent do the Git steps for me?</h2>
-<p>Yes. An agent that runs terminal commands can run Git too, and agents write good commit notes. The friendly introduction has three prompts for reviewing, committing and reverting (<a href="../friendly-agentic-ai-intro/after-the-course.html#how-do-i-keep-a-history-of-every-change">Let the agent run Git</a>). A few more we use:</p>
+<p>Yes. An agent that runs terminal commands can run Git too, and agents write good commit notes. The friendly introduction has three prompts for reviewing, committing and reverting (<a href="../friendly-agentic-ai-intro/after-the-course.html#step-4-4">Let the agent run Git</a>). A few more we use:</p>
 <div class="prompt">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Before you start, run git status. If there are uncommitted changes, stop and tell me.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -820,7 +826,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Agents sometimes suggest <code>git reset --hard</code> or <code>git push --force</code>. These change or delete history, and work can be lost for good. Before any Git command that undoes something, ask the agent what it will undo and wait. The two lines for <code>AGENTS.md</code> in the <a href="../friendly-agentic-ai-intro/after-the-course.html#how-do-i-keep-a-history-of-every-change">friendly introduction</a> make this the default.</p>
+<p>Agents sometimes suggest <code>git reset --hard</code> or <code>git push --force</code>. These change or delete history, and work can be lost for good. Before any Git command that undoes something, ask the agent what it will undo and wait. The two lines for <code>AGENTS.md</code> in the <a href="../friendly-agentic-ai-intro/after-the-course.html#step-4-4">friendly introduction</a> make this the default.</p>
 </div>
 </div>
 </section>
@@ -1383,7 +1389,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>Suppose we ask an agent to fix the date variable in our cleaning script. It does that, and while it is there, it also renames two columns, changes a filter in another script and rewrites part of the README. Ten minutes later the regression table has 312 fewer observations. Which of these changes did it? With Git, we can see every changed line, and go back with one command. Without Git, we have to remember.</span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>This page goes deeper than the short section <span class="co">[</span><span class="ot">How do I keep a history of every change?</span><span class="co">](../friendly-agentic-ai-intro/after-the-course.qmd#how-do-i-keep-a-history-of-every-change)</span> in the friendly introduction. For installing Git and GitHub Desktop, see <span class="co">[</span><span class="ot">Version control with Git and GitHub</span><span class="co">](ai-coding-prep.qmd#version-control-with-git-and-github)</span>. The commands here work the same for R and Python projects, in any terminal (see <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](terminal-basics.qmd)</span>).</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>This page goes deeper than the short <span class="co">[</span><span class="ot">Step 4.4: Keep a history of every change</span><span class="co">](../friendly-agentic-ai-intro/after-the-course.qmd#step-4-4)</span> in the friendly introduction. For installing Git and GitHub Desktop, see <span class="co">[</span><span class="ot">Version control with Git and GitHub</span><span class="co">](ai-coding-prep.qmd#version-control-with-git-and-github)</span>. The commands here work the same for R and Python projects, in any terminal (see <span class="co">[</span><span class="ot">Terminal Basics</span><span class="co">](terminal-basics.qmd)</span>).</span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>Checked against official documentation on 22 November 2026.</span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
@@ -1435,7 +1441,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Can the agent do the Git steps for me?</span></span>
 <span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>Yes. An agent that runs terminal commands can run Git too, and agents write good commit notes. The friendly introduction has three prompts for reviewing, committing and reverting (<span class="co">[</span><span class="ot">Let the agent run Git</span><span class="co">](../friendly-agentic-ai-intro/after-the-course.qmd#how-do-i-keep-a-history-of-every-change)</span>). A few more we use:</span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>Yes. An agent that runs terminal commands can run Git too, and agents write good commit notes. The friendly introduction has three prompts for reviewing, committing and reverting (<span class="co">[</span><span class="ot">Let the agent run Git</span><span class="co">](../friendly-agentic-ai-intro/after-the-course.qmd#step-4-4)</span>). A few more we use:</span>
 <span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a>::: {.prompt}</span>
 <span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a><span class="in">``` default</span></span>
@@ -1545,7 +1551,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
 <span id="cb11-169"><a href="#cb11-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## Avoid commands that rewrite history</span></span>
 <span id="cb11-170"><a href="#cb11-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-171"><a href="#cb11-171" aria-hidden="true" tabindex="-1"></a>Agents sometimes suggest <span class="in">`git reset --hard`</span> or <span class="in">`git push --force`</span>. These change or delete history, and work can be lost for good. Before any Git command that undoes something, ask the agent what it will undo and wait. The two lines for <span class="in">`AGENTS.md`</span> in the <span class="co">[</span><span class="ot">friendly introduction</span><span class="co">](../friendly-agentic-ai-intro/after-the-course.qmd#how-do-i-keep-a-history-of-every-change)</span> make this the default.</span>
+<span id="cb11-171"><a href="#cb11-171" aria-hidden="true" tabindex="-1"></a>Agents sometimes suggest <span class="in">`git reset --hard`</span> or <span class="in">`git push --force`</span>. These change or delete history, and work can be lost for good. Before any Git command that undoes something, ask the agent what it will undo and wait. The two lines for <span class="in">`AGENTS.md`</span> in the <span class="co">[</span><span class="ot">friendly introduction</span><span class="co">](../friendly-agentic-ai-intro/after-the-course.qmd#step-4-4)</span> make this the default.</span>
 <span id="cb11-172"><a href="#cb11-172" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb11-173"><a href="#cb11-173" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a><span class="fu">## See also</span></span>

@@ -316,6 +316,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../friendly-agentic-ai-intro/after-the-course.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Part 4: After the Course</span></a>
   </div>
@@ -755,7 +761,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="how-do-i-make-the-agent-keep-it">How do I make the agent keep it?</h3>
 <p>Add one line to <code>AGENTS.md</code>, the file of standing instructions the agent reads at the start of every session:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>- Any choice I did not specify goes into DECISIONS.md, marked needs-review.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The starter <code>AGENTS.md</code> of the friendly introduction already points to the <code>decision-log</code> skill. For more lines worth adding, see <a href="../friendly-agentic-ai-intro/after-the-course.html#how-do-i-grow-my-agents.md">How do I grow my AGENTS.md?</a></p>
+<p>The starter <code>AGENTS.md</code> of the friendly introduction already points to the <code>decision-log</code> skill. For more lines worth adding, see <a href="../friendly-agentic-ai-intro/after-the-course.html#step-4-2">Step 4.2 of the friendly introduction</a></p>
 <p>Then review the log at natural break points, say after cleaning and after the first estimates. Ask: <em>“List the needs-review and default decisions in DECISIONS.md, starting with those that most results depend on.”</em> Go through them one by one, and change the status to <code>decided</code> when you agree.</p>
 </section>
 </section>
@@ -785,7 +791,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="should-another-agent-review-the-work" class="level3">
 <h3 class="anchored" data-anchor-id="should-another-agent-review-the-work">Should another agent review the work?</h3>
-<p>Yes, for anything that matters. The session that did the work remembers its own reasoning and tends to defend it. A fresh session doesn’t. Use the review prompt in <a href="../friendly-agentic-ai-intro/after-the-course.html#how-do-i-get-a-proper-review-of-a-project">How do I get a proper review of a project?</a>, which reruns everything from scratch. To focus on the choices, add: <em>“For each decision in DECISIONS.md with basis default, say whether a reasonable alternative could change the main result.”</em> A reviewer running on another provider’s model, for example Codex reviewing work done in Claude Code, is less likely to share the same blind spots.</p>
+<p>Yes, for anything that matters. The session that did the work remembers its own reasoning and tends to defend it. A fresh session doesn’t. Use the review prompt in <a href="../friendly-agentic-ai-intro/after-the-course.html#step-4-6">Step 4.6 of the friendly introduction</a>, which reruns everything from scratch. To focus on the choices, add: <em>“For each decision in DECISIONS.md with basis default, say whether a reasonable alternative could change the main result.”</em> A reviewer running on another provider’s model, for example Codex reviewing work done in Claude Code, is less likely to share the same blind spots.</p>
 </section>
 <section id="what-are-the-red-flags" class="level3">
 <h3 class="anchored" data-anchor-id="what-are-the-red-flags">What are the red flags?</h3>
@@ -1487,7 +1493,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a><span class="in">- Any choice I did not specify goes into DECISIONS.md, marked needs-review.</span></span>
 <span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>The starter <span class="in">`AGENTS.md`</span> of the friendly introduction already points to the <span class="in">`decision-log`</span> skill. For more lines worth adding, see <span class="co">[</span><span class="ot">How do I grow my AGENTS.md?</span><span class="co">](../friendly-agentic-ai-intro/after-the-course.qmd#how-do-i-grow-my-agents.md)</span></span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>The starter <span class="in">`AGENTS.md`</span> of the friendly introduction already points to the <span class="in">`decision-log`</span> skill. For more lines worth adding, see <span class="co">[</span><span class="ot">Step 4.2 of the friendly introduction</span><span class="co">](../friendly-agentic-ai-intro/after-the-course.qmd#step-4-2)</span></span>
 <span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>Then review the log at natural break points, say after cleaning and after the first estimates. Ask: *"List the needs-review and default decisions in DECISIONS.md, starting with those that most results depend on."* Go through them one by one, and change the status to <span class="in">`decided`</span> when you agree.</span>
 <span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a></span>
@@ -1525,7 +1531,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a><span class="fu">### Should another agent review the work?</span></span>
 <span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>Yes, for anything that matters. The session that did the work remembers its own reasoning and tends to defend it. A fresh session doesn't. Use the review prompt in <span class="co">[</span><span class="ot">How do I get a proper review of a project?</span><span class="co">](../friendly-agentic-ai-intro/after-the-course.qmd#how-do-i-get-a-proper-review-of-a-project)</span>, which reruns everything from scratch. To focus on the choices, add: *"For each decision in DECISIONS.md with basis default, say whether a reasonable alternative could change the main result."* A reviewer running on another provider's model, for example Codex reviewing work done in Claude Code, is less likely to share the same blind spots.</span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>Yes, for anything that matters. The session that did the work remembers its own reasoning and tends to defend it. A fresh session doesn't. Use the review prompt in <span class="co">[</span><span class="ot">Step 4.6 of the friendly introduction</span><span class="co">](../friendly-agentic-ai-intro/after-the-course.qmd#step-4-6)</span>, which reruns everything from scratch. To focus on the choices, add: *"For each decision in DECISIONS.md with basis default, say whether a reasonable alternative could change the main result."* A reviewer running on another provider's model, for example Codex reviewing work done in Claude Code, is less likely to share the same blind spots.</span>
 <span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a><span class="fu">### What are the red flags?</span></span>
 <span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a></span>

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-11-22">
+<meta name="dcterms.date" content="2026-11-27">
 
 <title>Friendly Introduction to Agentic AI for Social Scientists – Gábor’s AI Courses</title>
 <style>
@@ -278,6 +278,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../friendly-agentic-ai-intro/live-demo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Part 3: A Paper in 50 Minutes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -595,6 +601,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#who-is-this-course-for" id="toc-who-is-this-course-for" class="nav-link active" data-scroll-target="#who-is-this-course-for">Who is this course for?</a></li>
   <li><a href="#what-is-an-ai-agent" id="toc-what-is-an-ai-agent" class="nav-link" data-scroll-target="#what-is-an-ai-agent">What is an AI agent?</a></li>
   <li><a href="#what-can-it-do-for-a-social-scientist" id="toc-what-can-it-do-for-a-social-scientist" class="nav-link" data-scroll-target="#what-can-it-do-for-a-social-scientist">What can it do for a social scientist?</a></li>
+  <li><a href="#worried-you-will-break-something" id="toc-worried-you-will-break-something" class="nav-link" data-scroll-target="#worried-you-will-break-something">Worried you will break something?</a></li>
   <li><a href="#what-do-you-need" id="toc-what-do-you-need" class="nav-link" data-scroll-target="#what-do-you-need">What do you need?</a></li>
   <li><a href="#how-is-the-course-organized" id="toc-how-is-the-course-organized" class="nav-link" data-scroll-target="#how-is-the-course-organized">How is the course organized?</a></li>
   <li><a href="#a-short-glossary" id="toc-a-short-glossary" class="nav-link" data-scroll-target="#a-short-glossary">A short glossary</a></li>
@@ -619,7 +626,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 22, 2026</p>
+      <p class="date">November 27, 2026</p>
     </div>
   </div>
   
@@ -645,21 +652,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="course-map">
-<p><a href="../friendly-agentic-ai-intro/index.html" class="here"><span class="n">⌂</span> Overview</a> <a href="../friendly-agentic-ai-intro/setup.html"><span class="n">1</span> Setup</a> <a href="../friendly-agentic-ai-intro/first-steps.html"><span class="n">2</span> First steps</a> <a href="../friendly-agentic-ai-intro/live-demo.html"><span class="n">3</span> A paper in 50 minutes</a> <a href="../friendly-agentic-ai-intro/after-the-course.html"><span class="n">4</span> After the course</a> <a href="../friendly-agentic-ai-intro/go-further.html"><span class="n">5</span> Go further</a> <a href="../friendly-agentic-ai-intro/ai-in-science.html"><span class="n">6</span> AI in science</a></p>
+<p><a href="../friendly-agentic-ai-intro/index.html" class="here"><span class="n">⌂</span> Overview</a> <a href="../friendly-agentic-ai-intro/setup.html"><span class="n">1</span> Setup</a> <a href="../friendly-agentic-ai-intro/first-steps.html"><span class="n">2</span> First steps</a> <a href="../friendly-agentic-ai-intro/live-demo.html"><span class="n">3</span> A paper in 50 minutes</a> <a href="../friendly-agentic-ai-intro/assignment.html"><span class="n">A</span> Assignment</a> <a href="../friendly-agentic-ai-intro/after-the-course.html"><span class="n">4</span> After the course</a> <a href="../friendly-agentic-ai-intro/go-further.html"><span class="n">5</span> Go further</a> <a href="../friendly-agentic-ai-intro/ai-in-science.html"><span class="n">6</span> AI in science</a></p>
 </div>
-<p><em>Version 0.8 · 22 November 2026</em></p>
+<p><em>Version 0.9 · 27 November 2026</em></p>
 <section id="who-is-this-course-for" class="level2">
 <h2 class="anchored" data-anchor-id="who-is-this-course-for">Who is this course for?</h2>
 <p>You are a social scientist: a sociologist, a political scientist, an anthropologist, an economist. You have used ChatGPT or Claude in a browser, mostly to improve a text or as a better search engine. You haven’t used it for the actual work of your field, and you may never have written a line of code. This course is for you. Seniority doesn’t matter.</p>
 <p>When I say you should <strong>experiment</strong> with agentic AI, I hear two typical reactions.</p>
 <p><em>“This is for coders.”</em> It isn’t. You won’t type a single command. You give instructions in plain language, as you would to a research assistant. Even the technical setup is done by the agent, which explains each step before it takes it.</p>
-<p><em>“I don’t need this.”</em> Maybe. The course lets you find out on your own material. You remain in charge, and can decide how much to delegate. You will see what an agent can do and how to supervise. At least, get a glimpse.</p>
-<p>We use one tool: <strong>Claude Code, in the Claude desktop app</strong>, on Windows, Mac or Linux. Codex by OpenAI is the most similar, what you learn here carries over fully. Antigravity and Google Gemini is also similar, and there are open weight model alternatives that are close. But when learning, one tool is enough.</p>
+<p><em>“I don’t need this.”</em> Maybe. The course lets you find out on your own material. You remain in charge, and you decide how much to delegate. You will see what an agent can do and how to supervise it. At the very least, you get a glimpse.</p>
+<p>We use one tool: <strong>Claude Code, in the Claude desktop app</strong>, on Windows, Mac or Linux. Codex by OpenAI is the most similar, and what you learn here carries over fully. Antigravity, with Google’s Gemini, is also similar, and there are close alternatives that run open-weights models. But when learning, one tool is enough.</p>
 </section>
 <section id="what-is-an-ai-agent" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-an-ai-agent">What is an AI agent?</h2>
-<p>Let’s start with what you know. <strong>A chatbot</strong> is a conversation in a browser. You paste in a text or upload a file, it answers, and you copy the answer back into your document. It knows only what you gave it in that conversation. It mostly relies on info it “remembers” from its training, which can be wrong. It cannot read your files, run code, or save results.</p>
-<p><strong>An agent</strong> is the same AI model with four additions. First, it has access to <strong>folder(s)</strong> on your computer: the ones you allow. Second, it can <strong>act</strong> there: open files, write and run program code, save results. Third, it works in a <strong>loop</strong>: it takes a step, looks at the result and decides on the next one, until the task is done or it needs you. Fourth, it can <strong>use tools</strong>, open a browser, or call other programs such as Microsoft Word.</p>
+<p>Let’s start with what you know. <strong>A chatbot</strong> is a conversation in a browser. You paste in a text or upload a file, it answers, and you copy the answer back into your document. It knows only what you gave it in that conversation. It mostly relies on information it “remembers” from its training, which can be wrong. It cannot read your files, run code, or save results.</p>
+<p><strong>An agent</strong> is the same AI model with four additions. First, it has access to <strong>folders</strong> on your computer: the ones you allow. Second, it can <strong>act</strong> there: open files, write and run program code, save results. Third, it works in a <strong>loop</strong>: it takes a step, looks at the result and decides on the next one, until the task is done or it needs you. Fourth, it can <strong>use tools</strong>: open a browser, or call other programs such as Microsoft Word.</p>
 <figure class="agent-figure figure">
 <svg viewbox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A chatbot exchanges text with you and cannot reach your files. An agent takes a task from you, then reads, runs and saves in your project folder in a loop, and comes back with questions and results.">
   <defs>
@@ -734,30 +741,43 @@ ul.task-list li input[type="checkbox"] {
 <p>You see every step, and at first it asks your permission before each one.</p>
 <p>It helps to <strong>think of the agent as a very fast research assistant sitting at your computer</strong>. It has read a lot, but it is new to your project, and it can be wrong with confidence. Hence your job shifts from doing each step to instructing the agent and checking its work. Checking matters most.</p>
 <p>One more point changes how you use it. The model behind the agent is not a database. It doesn’t look facts up in its memory, it reconstructs them, so a reference, a number or a date it “remembers” can be wrong. It is much stronger at working with material you put in front of it. So working with an agent is largely about designing its context: you provide the grounding material (your readings, your data, your notes) and the tools to search and compute, and you ask it to work from those rather than from memory. A table of readings built from the PDFs in your folder can be checked line by line. One built from what the model recalls cannot.</p>
-<p>Indeed, the right habit is to make it write code that may be directly run, make it write notes that can be directly searched .</p>
+<p>Indeed, the right habit is to make it write code that can be run directly, and notes that can be searched directly.</p>
 </section>
 <section id="what-can-it-do-for-a-social-scientist" class="level2">
 <h2 class="anchored" data-anchor-id="what-can-it-do-for-a-social-scientist">What can it do for a social scientist?</h2>
 <p>Here are a few tasks that fit an agent well. None of them needs you to write code.</p>
 <div class="uses">
 <div class="use">
-<p><strong>Hundreds of historical notes, OCR-d in PDF</strong> Many large PDFs in a folder become first plain text that can later be searched and transformed into a data table</p>
+<p><strong>Hundreds of historical notes, as OCR-ed PDFs.</strong> Many large PDFs in a folder first become plain text, which can then be searched and turned into a data table.</p>
 </div>
 <div class="use">
 <p><strong>A draft in Word.</strong> The agent comments on the argument, or edits a copy, and you review each edit as a tracked change.</p>
 </div>
 <div class="use">
-<p><strong>Paper review.</strong> Detailed review of a draft, with agent(s) that checks the numbers, the references, and the argument. It will read literature and place your work in it. Suggest journals.</p>
+<p><strong>Paper review.</strong> A detailed review of a draft, with agents that check the numbers, the references and the argument. The agent reads the literature, places your work in it, and suggests journals.</p>
 </div>
 <div class="use">
-<p><strong>Data Analysis.</strong> Download data, clean it, run regressions, make tables and charts, and write a first pass data description report. You check the code and the results.</p>
+<p><strong>Data analysis.</strong> The agent downloads data, cleans it, runs regressions, makes tables and charts, and writes a first-pass report that describes the data. You check the code and the results.</p>
 </div>
 <div class="use">
-<p><strong>Prototype.</strong> Think of an idea. Get AI do the first pass: literature, data, code, and a draft. You can decide if it’s worth your time to continue.</p>
+<p><strong>Prototype.</strong> You have an idea. The agent does the first pass: literature, data, code and a draft. Then you decide whether it is worth your time to continue.</p>
 </div>
 </div>
 <p>The agent has limits, too. First, the agent makes mistakes, and it makes them in fluent, confident prose. It may misread a variable, drop observations without telling you, or hand you a paraphrase in quotation marks. Second, it doesn’t know the judgment calls of your field: which cases belong in the sample, or what a concept means in your literature. Third, what it reads is sent to the company’s servers, so confidential material needs care.</p>
 <p>Each of these problems has a routine that handles it, and you already know most of them from supervising research assistants and refereeing papers. Part 2 builds them into every step.</p>
+</section>
+<section id="worried-you-will-break-something" class="level2">
+<h2 class="anchored" data-anchor-id="worried-you-will-break-something">Worried you will break something?</h2>
+<p>Many people are, and it is a good instinct. Here is why you can relax.</p>
+<ul>
+<li><strong>Nothing happens without your click.</strong> In Manual mode, where we start, the agent asks before it changes a file or runs anything. When in doubt, click no. Nothing bad follows from a no.</li>
+<li><strong>It works in one folder you choose.</strong> Your other files are outside it. If a request ever names another folder, click no and ask why.</li>
+<li><strong>Start with copies.</strong> Put copies of your files in the project folder and keep the originals where they are. In the worst case, you delete the folder and start again.</li>
+<li><strong>You can stop it at any time.</strong> The stop button interrupts it mid-step.</li>
+<li><strong>You can ask before you approve.</strong> <em>“What does this do? Is it safe? Can it be undone?”</em> The agent answers in plain language.</li>
+<li><strong>You can’t run up a bill.</strong> Pro has a fixed monthly price. When you reach the usage limit, the agent pauses until the limit resets, unless you choose to buy extra usage.</li>
+<li><strong>Even the Python setup can be undone.</strong> The agent writes down what it installed and how to remove all of it (<a href="../friendly-agentic-ai-intro/setup.html#step-1-4">Step 1.4</a>).</li>
+</ul>
 </section>
 <section id="what-do-you-need" class="level2">
 <h2 class="anchored" data-anchor-id="what-do-you-need">What do you need?</h2>
@@ -769,7 +789,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="how-is-the-course-organized" class="level2">
 <h2 class="anchored" data-anchor-id="how-is-the-course-organized">How is the course organized?</h2>
-<p>The course has six parts. The first two are hands-on: setup takes about an hour, the first project about two. The third is a live demonstration, followed by homework. Parts 4 and 5 are for later: the fourth when you use the agent on your own work, the fifth when you want to try other models. The sixth is a short list of links on where social science research may be heading. If something fails along the way, nothing is broken: check the troubleshooting table of that part, or ask the agent what went wrong.</p>
+<p>The course has six parts and an assignment. The first two parts are hands-on: setup takes about an hour, the first project about two. The third is a live demonstration. The assignment follows it: you read the agent’s paper as a referee would, and you improve its prompt with skills. The fourth part is a guide to the weeks after: you make the rules and the skills yours, and you run a project on a question of your own. The fifth is broader advice for later, on other uses and other models. The sixth is a short list of links on where social science research may be heading. If something fails along the way, nothing is broken: check the troubleshooting table of that part, or ask the agent what went wrong.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Taking this as a two-hour workshop?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Before the session (at home, about an hour):</strong> Part 1, and Step 2.1.</p>
+<p><strong>In the session (two hours):</strong> at the start we give the agent the World Cup prompt of Part 3, and it works in the background. The first hour is Part 2: we explain a few ideas, you work on Steps 2.2 to 2.4 on your own laptop, and we end with a short debrief. The second hour is Part 3: the prompt, what it leaves out, and what the agent produced.</p>
+<p><strong>After the session (homework):</strong> Steps 2.5 and 2.6 of Part 2, and the <a href="../friendly-agentic-ai-intro/assignment.html">Assignment</a> on the World Cup project folder we share. Part 4 is for the weeks after, and Parts 5 and 6 for later.</p>
+</div>
+</div>
 <div class="part-card">
 <div class="part-no">
 <p>1</p>
@@ -802,11 +837,24 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="part-body">
 <div class="part-meta">
-<p>Live demo · then homework</p>
+<p>Live demo</p>
 </div>
 <p><span class="part-title"><a href="../friendly-agentic-ai-intro/live-demo.html">A Paper in 50 Minutes</a></span></p>
-<p>We give the agent a single prompt, “Does the World Cup affect fertility?”, and watch it produce a short empirical paper and a slide deck. Then comes your part: go home and study what it left behind, from the paper and the deck to the decision memo, the code and the skills it used.</p>
-<p><strong>You end with</strong> a view of a whole project, and practice in reading an agent’s work as a referee would.</p>
+<p>We give the agent a single prompt, “Does the World Cup affect fertility?”, and watch it produce a short empirical paper and a slide deck. While it works, we look at the prompt: what it asks for, and what it leaves out.</p>
+<p><strong>You end with</strong> a view of a whole project, from one prompt to a paper.</p>
+</div>
+</div>
+<div class="part-card">
+<div class="part-no">
+<p>A</p>
+</div>
+<div class="part-body">
+<div class="part-meta">
+<p>Tasks A.1–A.2 · after the session</p>
+</div>
+<p><span class="part-title"><a href="../friendly-agentic-ai-intro/assignment.html">Assignment</a></span></p>
+<p>Two tasks on the World Cup project. Read what the agent left behind as a referee would: the paper, the decisions memo, the code, the references. Then download six more skills and rewrite the prompt with them, so that the next run checks itself.</p>
+<p><strong>You end with</strong> referee notes on the agent’s paper, and a better prompt.</p>
 </div>
 </div>
 <div class="part-card">
@@ -815,11 +863,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="part-body">
 <div class="part-meta">
-<p>At your own pace</p>
+<p>Steps 4.1–4.6 · the weeks after</p>
 </div>
 <p><span class="part-title"><a href="../friendly-agentic-ai-intro/after-the-course.html">After the Course</a></span></p>
-<p>A menu for the weeks after: a better <code>AGENTS.md</code>, making the agent write like you, your own skills, a history of every change with Git, and new uses.</p>
-<p><strong>You end with</strong> an agent set up for the way you work.</p>
+<p>You are home. What next? A guided path that stays with the World Cup project: finish what is open, turn what you found as a referee into rules and skills of your own, then run your improved prompt on your own question and review the result.</p>
+<p><strong>You end with</strong> rules and skills that fit your work, and a first draft on a question from your own field.</p>
 </div>
 </div>
 <div class="part-card">
@@ -828,11 +876,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="part-body">
 <div class="part-meta">
-<p>Steps 5.1–5.2 · for self-study</p>
+<p>Broader advice · for self-study</p>
 </div>
 <p><span class="part-title"><a href="../friendly-agentic-ai-intro/go-further.html">Go Further</a></span></p>
-<p>Two steps beyond the course. Use an app that works with any model, so you don’t depend on one provider. Then use cheap open-weights models to experiment: a large corpus, repeated runs, a cheap worker with a strong reviewer.</p>
-<p><strong>You end with</strong> a sense of which tasks need the strongest model, and which don’t.</p>
+<p>No steps here, only advice for the time when the agent is part of your work: other things to use it for, making it write like you, an app that works with any model, and which model fits which task.</p>
+<p><strong>You end with</strong> a sense of what else to try, and of which tasks need the strongest model.</p>
 </div>
 </div>
 <div class="part-card">
@@ -846,21 +894,6 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="part-title"><a href="../friendly-agentic-ai-intro/ai-in-science.html">AI in Science</a></span></p>
 <p>A few links that peek into the future of social science fields: economics, political science, survey research, psychology. Each comes with a two- or three-sentence summary.</p>
 <p><strong>You end with</strong> a sense of where research in your field may be heading.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Taking this as a two-hour workshop?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Before the session (at home, about an hour):</strong> Part 1, and Step 2.1.</p>
-<p><strong>In the session (two hours):</strong> at the start we give the agent the World Cup prompt of Part 3, and it works in the background. The first hour is Part 2: we explain a few ideas, you work on Steps 2.2 to 2.4 on your own laptop, and we end with a short debrief. The second hour is Part 3: the ingredients of the prompt, and what the agent produced.</p>
-<p><strong>After the session (homework):</strong> Steps 2.5 and 2.6 of Part 2, and the referee homework of Part 3 on the project folder we share. Parts 4 to 6 are for the weeks after.</p>
 </div>
 </div>
 </section>

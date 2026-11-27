@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-11-13">
+<meta name="dcterms.date" content="2026-11-27">
 
 <title>Part 2: First Steps – Gábor’s AI Courses</title>
 <style>
@@ -313,6 +313,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../friendly-agentic-ai-intro/live-demo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Part 3: A Paper in 50 Minutes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../friendly-agentic-ai-intro/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -667,7 +673,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 13, 2026</p>
+      <p class="date">November 27, 2026</p>
     </div>
   </div>
   
@@ -693,7 +699,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="course-map">
-<p><a href="../friendly-agentic-ai-intro/index.html"><span class="n">⌂</span> Overview</a> <a href="../friendly-agentic-ai-intro/setup.html"><span class="n">1</span> Setup</a> <a href="../friendly-agentic-ai-intro/first-steps.html" class="here"><span class="n">2</span> First steps</a> <a href="../friendly-agentic-ai-intro/live-demo.html"><span class="n">3</span> A paper in 50 minutes</a> <a href="../friendly-agentic-ai-intro/after-the-course.html"><span class="n">4</span> After the course</a> <a href="../friendly-agentic-ai-intro/go-further.html"><span class="n">5</span> Go further</a> <a href="../friendly-agentic-ai-intro/ai-in-science.html"><span class="n">6</span> AI in science</a></p>
+<p><a href="../friendly-agentic-ai-intro/index.html"><span class="n">⌂</span> Overview</a> <a href="../friendly-agentic-ai-intro/setup.html"><span class="n">1</span> Setup</a> <a href="../friendly-agentic-ai-intro/first-steps.html" class="here"><span class="n">2</span> First steps</a> <a href="../friendly-agentic-ai-intro/live-demo.html"><span class="n">3</span> A paper in 50 minutes</a> <a href="../friendly-agentic-ai-intro/assignment.html"><span class="n">A</span> Assignment</a> <a href="../friendly-agentic-ai-intro/after-the-course.html"><span class="n">4</span> After the course</a> <a href="../friendly-agentic-ai-intro/go-further.html"><span class="n">5</span> Go further</a> <a href="../friendly-agentic-ai-intro/ai-in-science.html"><span class="n">6</span> AI in science</a></p>
 </div>
 <section id="what-do-we-do-in-this-part" class="level2">
 <h2 class="anchored" data-anchor-id="what-do-we-do-in-this-part">What do we do in this part?</h2>
@@ -704,7 +710,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The six steps in about a minute. No sound. <a href="assets/first-steps-in-a-minute.html" target="_blank">Open it full screen</a></p>
 </div>
 <p>Two ideas run through the whole part.</p>
-<p><strong>The agent works from material in the folder, not from memory.</strong> A table of readings built from the PDFs in your folder can be checked line by line. One built from what the model recalls cannot. See <a href="../friendly-agentic-ai-intro/index.html#what-is-an-ai-agent">What is an AI agent?</a> in the overview.</p>
+<p><strong>The agent works from material in the folder, not from memory.</strong> The overview explains why, in <a href="../friendly-agentic-ai-intro/index.html#what-is-an-ai-agent">What is an AI agent?</a></p>
 <p><strong>You stay in charge.</strong> An agent is a tool that acts, and a tool that acts needs supervision, just as a research assistant does. So each step ends with a short box on staying in charge: how to set its limits, see what it did, agree the checks, and keep the final say. None of this needs coding. It needs the habits of a careful researcher.</p>
 <p>We assume you have finished <a href="../friendly-agentic-ai-intro/setup.html">Part 1</a>: the app works, <code>first-project</code> is open in the Code tab in <strong>Manual</strong> mode, Python is set up, and Typora opens <code>.md</code> files.</p>
 </section>
@@ -732,7 +738,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><strong>In class: playtime</strong></td>
-<td><a href="#playtime">Steps 2.2 to 2.4</a>: collect the papers, make extracts, ask them questions</td>
+<td><a href="#playtime">Steps 2.2 to 2.4</a>: collect the six papers, make extracts, ask them questions</td>
 <td>35 minutes</td>
 </tr>
 <tr class="even">
@@ -742,7 +748,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td><strong>After class</strong></td>
-<td><a href="#after-class">Steps 2.5 and 2.6</a>: the memo and its review, a task with data</td>
+<td><a href="#after-class">Steps 2.5 and 2.6</a>: the memo and its review, and a separate assignment with data</td>
 <td>about an hour</td>
 </tr>
 </tbody>
@@ -1077,14 +1083,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Tell me which downloads failed and why. Do not try other websites.</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>Finally, make the PDFs read-only.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Then let the agent search on its own, with a tighter rule:</p>
+<p><strong>If you have time.</strong> The next prompt is slower, and it can wait until after class. Let the agent search on its own, with a tighter rule:</p>
 <div class="prompt">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Find three more published papers on whether big events (sports, blackouts, disasters, holidays) change the number of births nine months later.</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>For each, give the full citation and a DOI, and open the DOI to check that it leads to that paper. Download a paper only if it is free to read.</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>Add them to docs/readings/SOURCES.md, marked "found by the agent". If you cannot confirm a paper, leave it out and say so.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="check">
-<p><strong>It worked if</strong> the six papers open as papers in your PDF reader, <code>SOURCES.md</code> lists them, and the DOIs of the three new papers open on the right pages. Check those three yourself: open each DOI in your browser.</p>
+<p><strong>It worked if</strong> the six papers open as papers in your PDF reader, and <code>SOURCES.md</code> lists them. If you ran the search, check the three new papers yourself: open each DOI in your browser and see that it leads to that paper.</p>
 </div>
 <p>Why the check that each file is really a PDF? When we prepared this pack, two of the downloads “succeeded” but saved a web page instead of a paper: one asked to enable JavaScript, the other said <em>Oh no!</em>. Both files were called <code>.pdf</code>. An agent that doesn’t check would happily summarize them.</p>
 <div class="in-charge">
@@ -1152,7 +1158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="after-class" class="level2">
 <h2 class="anchored" data-anchor-id="after-class">After class: Steps 2.5 and 2.6</h2>
-<p>About an hour, at your own pace. Step 2.5 is the loop of every paper: a draft, comments, a revision. Step 2.6 is for those who work with data.</p>
+<p>About an hour, at your own pace. Step 2.5 finishes the project of this part. Step 2.6 is a separate assignment, on a new question, for those who work with data. Both are also the first step of <a href="../friendly-agentic-ai-intro/after-the-course.html">Part 4</a>, the guide to the weeks after.</p>
 </section>
 <section id="step-2-5" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-5"><span class="step-no">2.5</span> Write the memo, review it, revise it</h2>
@@ -1229,8 +1235,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="step-2-6" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-6"><span class="step-no">2.6</span> A first task with data</h2>
-<p><span class="when later">After class</span></p>
-<p>Now the agent works with numbers. Our question is simple: in EU countries where more women work, do women also hold more seats in parliament? If you don’t work with data, you may skip this step. Part 3 shows data work at a much larger scale.</p>
+<p><span class="when later">After class · a separate assignment</span></p>
+<p>This is a separate assignment. It leaves the papers behind: a new question, and numbers this time. The question is simple: in EU countries where more women work, do women also hold more seats in parliament? If you don’t work with data, you may skip this step. Part 3 shows data work at a much larger scale.</p>
 <p>Start a new session and, before you send the prompt, switch the permission mode to <strong>Plan</strong>.</p>
 <div class="prompt">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Using the World Bank's open data (its API, no key needed), get for all EU countries for 2023:</span>
@@ -1280,13 +1286,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td><strong>Visibility</strong></td>
-<td>You can see every file it changed and every step it took</td>
-<td>Step 2.2</td>
+<td>You can see every file it changed, every step it took and every choice it made</td>
+<td>Steps 2.2, 2.6</td>
 </tr>
 <tr class="odd">
 <td><strong>Checks</strong></td>
-<td>You agree the checks before the work, and you check a few things by hand</td>
-<td>Steps 2.3, 2.6</td>
+<td>You agree the checks before the work, you say where answers must come from, and you check a few things by hand</td>
+<td>Steps 2.3, 2.4, 2.6</td>
 </tr>
 <tr class="even">
 <td><strong>The final say</strong></td>
