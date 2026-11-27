@@ -966,17 +966,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>I have never used Python. Please set up Python for this project folder.</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>- Use uv (a modern Python installer) to install Python and create an environment for this project only. Do not change anything else on my computer without asking.</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>- Before each command, tell me in one sentence what it does.</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>- Install these packages: pandas, matplotlib, openpyxl, pyreadstat, pymupdf, python-docx, pypandoc-binary, requests.</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>- Test it: write a short script code/00_test.py that makes a simple bar chart of five made-up numbers and saves it as output/test_chart.png. Run it.</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>- Finally write docs/SETUP-NOTES.md: what you installed, where it lives, how to run a script, and how to undo all of it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>- If this folder is in Dropbox, OneDrive or Google Drive, keep the environment outside it, and tell me where you put it.</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>- Before each command, tell me in one sentence what it does.</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>- Install these packages: pandas, matplotlib, openpyxl, pyreadstat, pymupdf, python-docx, pypandoc-binary, requests.</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>- Test it: write a short script code/00_test.py that makes a simple bar chart of five made-up numbers and saves it as output/test_chart.png. Run it.</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>- Finally write docs/SETUP-NOTES.md: what you installed, where it lives, how to run a script, and how to undo all of it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Python goes outside the folder, and that is fine
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Python is a program, like Word or Typora. Like any program, it is installed on your computer, not in your project folder. So in this step the agent will ask to write outside <code>first-project</code>, for example into a folder of your user account. That is expected. Read the one-sentence explanation, and click <strong>Allow once</strong> for each step of the installation.</p>
+<p>If your project folder is in Dropbox, OneDrive or Google Drive, the agent will also propose to keep the project’s <em>environment</em> outside it. The environment is the project’s own set of Python add-ons: thousands of small files. Syncing them slows the cloud service down and can break the environment. Accept this proposal too. Your own files, the data, code and notes, stay in the project folder, and <code>docs/SETUP-NOTES.md</code> records where everything else went.</p>
+<p>This is the one time we expect the agent to work outside the folder. Later, a request to go outside it deserves a question (<a href="../friendly-agentic-ai-intro/first-steps.html#step-2-1">Step 2.1</a>).</p>
+</div>
 </div>
 <p>What do the packages do? <strong>pandas</strong> handles data tables, <strong>matplotlib</strong> draws charts, <strong>openpyxl</strong> reads Excel, <strong>pyreadstat</strong> reads Stata and SPSS files, <strong>pymupdf</strong> reads PDFs, <strong>python-docx</strong> reads and edits Word files, <strong>pypandoc-binary</strong> converts between Markdown and Word, and <strong>requests</strong> downloads data from the web.</p>
 <div class="check">
 <p><strong>It worked if</strong> <code>output/test_chart.png</code> shows a bar chart. Keep <code>docs/SETUP-NOTES.md</code>: when something breaks months later, show it to the agent first.</p>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -985,7 +1001,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>Windows:</strong> if the agent says it needs <strong>Git</strong>, install <a href="https://git-scm.com/downloads/win">Git for Windows</a> with the default options, restart the Claude app, and ask the agent to continue.</li>
@@ -998,7 +1014,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Already use Stata or R? Keep using them for your analysis: the agent can write and run do-files and R scripts, too. But do this step anyway, because the agent needs Python for its own tools.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1007,10 +1023,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Keep them. You only need to decide which language does what.</p>
-<p><strong>Python stays, as the agent’s toolkit.</strong> The skills of Part 2 read PDF and Word files with Python, and so does the review loop of Step 2.5. So do Step 1.4 as written. Python lives in the project’s <code>.venv</code> folder and doesn’t touch your R setup.</p>
+<p><strong>Python stays, as the agent’s toolkit.</strong> The skills of Part 2 read PDF and Word files with Python, and so does the review loop of Step 2.5. So do Step 1.4 as written. Python lives in its own environment and doesn’t touch your R setup.</p>
 <p><strong>R does the analysis.</strong> Change one line in <code>AGENTS.md</code>. Replace</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>- Use Python for code, unless I ask for R or Stata.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>with</p>
@@ -1020,7 +1036,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Find Rscript on this computer and tell me which version of R it is. Add its full path to AGENTS.md. Then write code/00_test.R that makes a bar chart of five made-up numbers, saves it as output/test_chart_r.png, and run it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Keep RStudio as your editor.</strong> Open the agent’s <code>.R</code> scripts in RStudio, run them line by line and change them as you always do. If you change a script, tell the agent, so it knows your version is the one that counts.</p>
-<p><strong>Optional: renv.</strong> If you use <code>renv</code>, R’s way of keeping a separate set of packages for each project, ask the agent to set it up for this folder. It does for R what <code>.venv</code> does for Python.</p>
+<p><strong>Optional: renv.</strong> If you use <code>renv</code>, R’s way of keeping a separate set of packages for each project, ask the agent to set it up for this folder. It does for R what the environment of Step 1.4 does for Python.</p>
 <p>The data task of Step 2.6 then comes out in R.</p>
 </div>
 </div>
