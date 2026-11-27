@@ -900,9 +900,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="check">
 <p><strong>It worked if</strong> <code>output/test_chart.png</code> shows a bar chart. Keep <code>docs/SETUP-NOTES.md</code>: when something breaks months later, show it to the agent first.</p>
 </div>
-<p>Already use Stata or R? Keep using them. The agent can write and run do-files and R scripts, too. For this course, Python is the path.</p>
+<p>Already use Stata or R? Keep using them for your analysis: the agent can write and run do-files and R scripts, too. But do this step anyway, because the agent needs Python for its own tools.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Already use R and RStudio? (click to open)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Keep them. You only need to decide which language does what.</p>
+<p><strong>Python stays, as the agent’s toolkit.</strong> The skills of Part 2 read PDF and Word files with Python, and so does the review loop of Step 2.5. So do Step 1.4 as written. Python lives in the project’s <code>.venv</code> folder and doesn’t touch your R setup.</p>
+<p><strong>R does the analysis.</strong> Change one line in <code>AGENTS.md</code>. Replace</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>- Use Python for code, unless I ask for R or Stata.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>with</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>- Use R for data analysis, tables and charts. Use Python only for reading and converting PDF and Word files.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Make sure the agent finds R.</strong> The agent doesn’t work through RStudio. It runs R scripts with <code>Rscript</code>, the command-line version of R. On Windows, R is often not on the system path, and then the agent can’t find it. Ask once:</p>
+<div class="prompt">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Find Rscript on this computer and tell me which version of R it is. Add its full path to AGENTS.md. Then write code/00_test.R that makes a bar chart of five made-up numbers, saves it as output/test_chart_r.png, and run it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Keep RStudio as your editor.</strong> Open the agent’s <code>.R</code> scripts in RStudio, run them line by line and change them as you always do. If you change a script, tell the agent, so it knows your version is the one that counts.</p>
+<p><strong>Optional: renv.</strong> If you use <code>renv</code>, R’s way of keeping a separate set of packages for each project, ask the agent to set it up for this folder. It does for R what <code>.venv</code> does for Python.</p>
+<p>The data task of Step 2.6 then comes out in R.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -911,7 +939,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><strong>Windows:</strong> if the agent says it needs <strong>Git</strong>, install <a href="https://git-scm.com/downloads/win">Git for Windows</a> with the default options, restart the Claude app, and ask the agent to continue.</li>
