@@ -764,7 +764,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <ol type="1">
-<li>Download the installer: <a href="https://claude.ai/api/desktop/win32/x64/setup/latest/redirect">Claude for Windows</a>. (On a Surface or other ARM laptop, use the <a href="https://claude.ai/api/desktop/win32/arm64/setup/latest/redirect">ARM64 installer</a>.)</li>
+<li>Download the installer: <a href="https://claude.ai/api/desktop/win32/x64/setup/latest/redirect">Claude for Windows</a>. (Some newer Windows laptops need a different installer. If <strong>Settings → System → About</strong> says <em>ARM-based processor</em>, use <a href="https://claude.ai/api/desktop/win32/arm64/setup/latest/redirect">this one</a>.)</li>
 <li>Run the downloaded file. If Windows shows a blue “Windows protected your PC” box, click <strong>More info → Run anyway</strong>.</li>
 <li>Open <strong>Claude</strong> from the Start menu and sign in with your Claude account.</li>
 </ol>
@@ -814,7 +814,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Install the ChatGPT desktop app, which now includes Codex. OpenAI’s <a href="https://learn.chatgpt.com/codex/app">instructions</a> have the download links. On Windows it comes from the Microsoft Store.</li>
 <li>Sign in with your ChatGPT account and open Codex.</li>
 <li>Open your project folder, and start with the setting that asks before every action.</li>
-<li>Codex reads <code>AGENTS.md</code> by itself, so our starter file works as it is. Skills live in a different folder: ask Codex where to put them.</li>
+<li>Codex reads <code>AGENTS.md</code> by itself, so our starter file works as it is. Codex keeps skills in a different folder: ask Codex where to put them.</li>
 </ol>
 <p><strong>Antigravity, by Google.</strong> It runs Google’s Gemini models. It is free to start, with weekly limits; Google AI Pro raises them. It looks more like a programmer’s editor than a chat window.</p>
 <ol type="1">
@@ -830,16 +830,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="step-1-2" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-2"><span class="step-no">1.2</span> Make a project folder</h2>
-<p>The agent works inside <strong>one folder</strong>. Think of it as the desk you give to a new research assistant: what is on the desk, they can read and work on. What is not, they can’t. Everything for a project lives there: data, code, notes, drafts, outputs. It is good practice to use a new folder for each project.</p>
+<p>The agent works inside <strong>one folder</strong>. Think of it as the desk you give to a new research assistant: what is on the desk, they can read and work on. What is not, they can’t. Everything for a project goes there: data, code, notes, drafts, outputs. It is good practice to use a new folder for each project.</p>
 <ol type="1">
 <li>In your <strong>Documents</strong> folder, or in your Dropbox (see the box below), create a folder called <code>ai-projects</code>, and inside it a folder called <code>first-project</code>.</li>
 <li>Use short names without spaces or accents (<code>first-project</code>, not <code>My First Project (ÁÉ)</code>). Programs handle plain names better.</li>
-<li>Show file extensions, so you can tell <code>.md</code>, <code>.csv</code>, <code>.py</code> and <code>.docx</code> files apart.
+<li>Show file extensions: the letters after the dot in a file name, which tell you the type of the file (<code>.docx</code> is Word, <code>.md</code> is Markdown, <code>.csv</code> is a data table, <code>.py</code> is a Python script).
 <ul>
 <li><em>Windows:</em> in File Explorer, click <strong>View → Show → File name extensions</strong>.</li>
 <li><em>Mac:</em> in Finder, open <strong>Finder → Settings → Advanced</strong> and tick <strong>Show all filename extensions</strong>.</li>
 </ul></li>
 </ol>
+<p>The address of a file or folder on your computer is called its <strong>path</strong>. It lists the folders you go through to reach it, for example <code>C:\Users\anna\Documents\ai-projects\first-project</code> on Windows, or <code>/Users/anna/Documents/ai-projects/first-project</code> on a Mac. You will see paths in the agent’s questions: they tell you where it wants to read or write.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -859,7 +860,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/claude1.png" class="img-fluid figure-img" alt="The Claude Code tab with an empty prompt box. Under it, on the left, a control reading This computer and a folder control; on the right, the model Opus 5.5, the effort Medium, the permission mode and a small usage ring. A Choose environment button is in the middle of the screen."></p>
-<figcaption>The Code tab, ready to start. Under the prompt box, from the left: the environment (<em>This computer</em>) and the folder. On the right: the model picker, which shows the model and its effort (<em>Opus 5.5</em>, <em>Medium</em>), then the permission mode and the usage ring.</figcaption>
+<figcaption>The Code tab, ready to start. Under the prompt box, from the left: the environment (<em>This computer</em>) and the folder. On the right: the model picker, which shows the model and its effort, how hard it thinks (<em>Opus 5.5</em>, <em>Medium</em>; leave both as they are), then the permission mode and the usage ring.</figcaption>
 </figure>
 </div>
 </div>
@@ -880,7 +881,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>Keep the <strong>Local</strong> tab: the agent works on your computer. The other tabs are for running it in the cloud or on another computer, or for reaching it from elsewhere. We don’t need them.</li>
 <li>Give the environment a <strong>Name</strong>, such as <code>first-project</code>.</li>
-<li>Under <strong>Folders</strong>, click <strong>+ Add</strong> and pick your <code>first-project</code> folder. <em>Not a Git repository</em> next to it is fine: Git comes later, if at all (<a href="../friendly-agentic-ai-intro/after-the-course.html#step-4-4">Step 4.4</a>).</li>
+<li>Under <strong>Folders</strong>, click <strong>+ Add</strong> and pick your <code>first-project</code> folder. <em>Not a Git repository</em> next to it is fine. Git is a tool that keeps a history of a folder, and the label only says that you don’t use it. It comes later, if at all (<a href="../friendly-agentic-ai-intro/after-the-course.html#step-4-4">Step 4.4</a>).</li>
 <li>Leave <strong>Environment variables</strong> alone, and click <strong>Create environment</strong>.</li>
 </ol>
 <p>Then check the row under the prompt box: it should show your folder, or the environment you just created with your folder in it. If it shows another folder, click it and choose yours. Still lost? Ask the AI, as the box at the top of this page shows.</p>
@@ -894,7 +895,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The agent sends what it reads to Anthropic’s servers. So keep confidential material out of the folder until you have checked your data agreement: interview recordings and transcripts, identifiable survey data, health records, anything under a data-use agreement, other people’s unpublished work.</p>
+<p>The agent sends what it reads to the servers of Anthropic, the company that makes Claude. So keep confidential material out of the folder until you have checked your data agreement: interview recordings and transcripts, identifiable survey data, health records, anything under a data-use agreement, other people’s unpublished work.</p>
 <p>In the EU, the GDPR applies: interview transcripts and survey answers about people who can be identified are personal data, even when names are replaced by codes, and sending them to an AI company needs a legal basis and safeguards. Only fully and irreversibly anonymised data falls outside it. Ask your university’s data protection officer before using such material, and see the European Commission’s <a href="https://commission.europa.eu/law/law-topic/data-protection/reform/what-personal-data_en">What is personal data?</a>.</p>
 <p>Also check your Claude account’s privacy settings, which control whether your conversations may be used to train future models. For more, see <a href="../da-knowledge/ai-and-your-data.html">AI and your data</a>. For learning, public data and your own drafts are fine.</p>
 </div>
@@ -936,7 +937,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <p>Leave <strong>Bypass permissions</strong> alone: it switches off the questions altogether.</p>
 <p>The choice is yours, and you can change it at any time, in the middle of a session too. We advise <strong>Manual</strong> for this course and for your first week. True, it is slower. But you see every step, and you learn what the agent does. Later, Auto saves a lot of clicks. Its check cuts the questions, but the <a href="https://code.claude.com/docs/en/permission-modes">documentation</a> says plainly that it does not guarantee safety. So go back to Manual when the work matters.</p>
-<p>Next to the permission mode is the model picker. Leave the default for now: we come back to it in <a href="#which-model">Which model should you use?</a></p>
+<p>Next to the permission mode is the model picker. Leave the model that is already selected: we come back to it in <a href="#which-model">Which model should you use?</a></p>
 <p>Type this and press Enter:</p>
 <div class="prompt">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Hi. I am new to this. What can you see in this folder? Then create a file called hello.md with three sentences about what you can do for a social scientist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -959,8 +960,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="step-1-4" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-4"><span class="step-no">1.4</span> Let the agent set up Python</h2>
-<p>This is the most technical step of the course, and you don’t need to follow the details. It takes five to ten minutes. Read the one-sentence explanation before each command, then click <strong>Allow once</strong>.</p>
-<p><strong>Why Python, if you work with text?</strong> The agent uses small Python programs as its tools: to read Word and PDF files, to convert formats, to handle large datasets and to draw charts. Python is free, it runs on every computer, and AI models write it well. You won’t write any of it yourself.</p>
+<p>This is the most technical step of the course, and you don’t need to follow the details. It takes five to ten minutes. The agent works by running <em>commands</em>: one-line instructions to the computer, such as “install Python”. Read the one-sentence explanation before each command, then click <strong>Allow once</strong>.</p>
+<p><strong>Why Python, if you work with text?</strong> The agent writes small Python programs and uses them as its tools. Such a program is called a <strong>script</strong>: a text file of instructions that the computer carries out, one after the other. The agent uses scripts to read Word and PDF files, to convert formats, to handle large datasets and to draw charts. Python is free, it runs on every computer, and AI models write it well. You won’t write any of it yourself.</p>
 <p>Copy this prompt into the agent:</p>
 <div class="prompt">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>I have never used Python. Please set up Python for this project folder.</span>
@@ -970,7 +971,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>- Before each command, tell me in one sentence what it does.</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>- Install these packages: pandas, matplotlib, openpyxl, pyreadstat, pymupdf, python-docx, pypandoc-binary, requests.</span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>- Test it: write a short script code/00_test.py that makes a simple bar chart of five made-up numbers and saves it as output/test_chart.png. Run it.</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>- Finally write docs/SETUP-NOTES.md: what you installed, where it lives, how to run a script, and how to undo all of it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>- Finally write docs/SETUP-NOTES.md: what you installed, where it is, how to run a script, and how to undo all of it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -983,11 +984,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <p>Python is a program, like Word or Typora. Like any program, it is installed on your computer, not in your project folder. So in this step the agent will ask to write outside <code>first-project</code>, for example into a folder of your user account. That is expected. Read the one-sentence explanation, and click <strong>Allow once</strong> for each step of the installation.</p>
-<p>If your project folder is in Dropbox, OneDrive or Google Drive, the agent will also propose to keep the project’s <em>environment</em> outside it. The environment is the project’s own set of Python add-ons: thousands of small files. Syncing them slows the cloud service down and can break the environment. Accept this proposal too. Your own files, the data, code and notes, stay in the project folder, and <code>docs/SETUP-NOTES.md</code> records where everything else went.</p>
+<p>If your project folder is in Dropbox, OneDrive or Google Drive, the agent will also propose to keep the project’s <em>environment</em> outside it. The environment is the project’s own set of Python add-ons: thousands of small files. Copying them to the cloud again and again slows the service down, and can break the environment. Accept this proposal too. Your own files, the data, code and notes, stay in the project folder, and <code>docs/SETUP-NOTES.md</code> records where everything else went.</p>
 <p>This is the one time we expect the agent to work outside the folder. Later, a request to go outside it deserves a question (<a href="../friendly-agentic-ai-intro/first-steps.html#step-2-1">Step 2.1</a>).</p>
 </div>
 </div>
-<p>What do the packages do? <strong>pandas</strong> handles data tables, <strong>matplotlib</strong> draws charts, <strong>openpyxl</strong> reads Excel, <strong>pyreadstat</strong> reads Stata and SPSS files, <strong>pymupdf</strong> reads PDFs, <strong>python-docx</strong> reads and edits Word files, <strong>pypandoc-binary</strong> converts between Markdown and Word, and <strong>requests</strong> downloads data from the web.</p>
+<p>A <em>package</em> is a free add-on that gives Python one more ability. What do these do? <strong>pandas</strong> handles data tables, <strong>matplotlib</strong> draws charts, <strong>openpyxl</strong> reads Excel, <strong>pyreadstat</strong> reads Stata and SPSS files, <strong>pymupdf</strong> reads PDFs, <strong>python-docx</strong> reads and edits Word files, <strong>pypandoc-binary</strong> converts between Markdown and Word, and <strong>requests</strong> downloads data from the web.</p>
 <div class="check">
 <p><strong>It worked if</strong> <code>output/test_chart.png</code> shows a bar chart. Keep <code>docs/SETUP-NOTES.md</code>: when something breaks months later, show it to the agent first.</p>
 </div>
@@ -1004,8 +1005,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>Windows:</strong> if the agent says it needs <strong>Git</strong>, install <a href="https://git-scm.com/downloads/win">Git for Windows</a> with the default options, restart the Claude app, and ask the agent to continue.</li>
-<li><strong>Mac:</strong> a window may ask to install <strong>command line developer tools</strong>. Click Install, wait a few minutes, then tell the agent to continue.</li>
+<li><strong>Windows:</strong> if the agent says it needs <strong>Git</strong>, install <a href="https://git-scm.com/downloads/win">Git for Windows</a>, accepting the options the installer suggests, restart the Claude app, and ask the agent to continue.</li>
+<li><strong>Mac:</strong> a window may ask to install <strong>command line developer tools</strong>. These are free tools from Apple that the installation needs, and they are safe to install. Click Install, wait a few minutes, then tell the agent to continue.</li>
 <li><strong>“Command not found” right after an install:</strong> quit the Claude app fully and open it again.</li>
 <li>In every case, paste the error into the chat and ask: <em>“What went wrong? Explain simply, then fix it.”</em></li>
 </ul>
@@ -1026,12 +1027,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Keep them. You only need to decide which language does what.</p>
-<p><strong>Python stays, as the agent’s toolkit.</strong> The skills of Part 2 read PDF and Word files with Python, and so does the review loop of Step 2.5. So do Step 1.4 as written. Python lives in its own environment and doesn’t touch your R setup.</p>
+<p><strong>Python stays, because the agent uses it as a tool.</strong> The skills of Part 2 read PDF and Word files with Python, and so does the review loop of Step 2.5. So do Step 1.4 as written. Python is kept in its own environment, apart from R, and changes nothing in your R setup.</p>
 <p><strong>R does the analysis.</strong> Change one line in <code>AGENTS.md</code>. Replace</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>- Use Python for code, unless I ask for R or Stata.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>with</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>- Use R for data analysis, tables and charts. Use Python only for reading and converting PDF and Word files.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Make sure the agent finds R.</strong> The agent doesn’t work through RStudio. It runs R scripts with <code>Rscript</code>, the command-line version of R. On Windows, R is often not on the system path, and then the agent can’t find it. Ask once:</p>
+<p><strong>Make sure the agent finds R.</strong> The agent doesn’t work through RStudio. It runs R scripts with <code>Rscript</code>, a part of R that runs a script without opening a window. On Windows, other programs are often not told where R is installed, and then the agent can’t find it. Ask once:</p>
 <div class="prompt">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Find Rscript on this computer and tell me which version of R it is. Add its full path to AGENTS.md. Then write code/00_test.R that makes a bar chart of five made-up numbers, saves it as output/test_chart_r.png, and run it.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -1049,8 +1050,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A free alternative is <strong><a href="https://zettlr.com/">Zettlr</a></strong>, made for academic writing. It is open source, runs on Windows, Mac and Linux, and exports to Word.</p>
 <ol type="1">
 <li>Download and install Typora from <a href="https://typora.io/">typora.io</a>.</li>
-<li>Open <code>hello.md</code> from Step 1.3 in Typora (right-click the file → <strong>Open with</strong> → Typora). It should look like a formatted document.</li>
-<li>Make Typora the default program for <code>.md</code> files, so a double-click opens it.</li>
+<li><strong>Open Typora once</strong>, from the Start menu or from Applications, then close it. Until it has been opened once, your computer may not offer it for <code>.md</code> files.</li>
+<li>Open <code>hello.md</code> from Step 1.3 in Typora: right-click the file, then <strong>Open with</strong> → Typora. It should look like a formatted document.</li>
+<li>Make Typora the program that opens <code>.md</code> files, so a double-click is enough.
+<ul>
+<li><em>Windows:</em> right-click the file, <strong>Open with</strong> → <strong>Choose another app</strong>, pick Typora, and click <strong>Always</strong>.</li>
+<li><em>Mac:</em> right-click the file, <strong>Get Info</strong>, choose Typora under <strong>Open with</strong>, and click <strong>Change All</strong>.</li>
+<li>Or ask the agent: <em>“Help me make Typora the program that opens .md files.”</em></li>
+</ul></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1107,7 +1114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>The price column compares Anthropic’s list prices per unit of text with Opus (November 2026). With a subscription you don’t pay per task, but the price shows up in another way: the stronger the model, the faster you reach your usage limit. Fable is special. On the Pro plan it is paid from usage credits, and on Max it is included up to half of your weekly limit. Model names and versions change every few months, so the picker may show newer ones.</p>
+<p>The price column compares Anthropic’s list prices per unit of text with Opus (November 2026). With a subscription you don’t pay per task, but the price shows up in another way: the stronger the model, the faster you reach your usage limit. Fable is special. On the Pro plan it is not part of your usage limit: it is paid from usage credits, extra usage you pay for separately. On Max it is included up to half of your weekly limit. You don’t need Fable for this course. Model names and versions change every few months, so the picker may show newer ones.</p>
 <p>When should you change?</p>
 <ul>
 <li><strong>Go up to Fable</strong> when the task is long and has many steps, or when the default got the same thing wrong twice.</li>
@@ -1135,7 +1142,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
-<p>Want to use models from other companies, such as cheaper open-weights models? See <a href="../friendly-agentic-ai-intro/go-further.html#which-model-for-which-task">Part 5</a>. For a comparison of the main models, see <a href="../da-knowledge/which-ai.html">Which AI model</a> in the knowledge base.</p>
+<p>Want to use models from other companies, such as cheaper models that anyone may download and run (<em>open-weights</em> models)? See <a href="../friendly-agentic-ai-intro/go-further.html#which-model-for-which-task">Part 5</a>. For a comparison of the main models, see <a href="../da-knowledge/which-ai.html">Which AI model</a> in the knowledge base.</p>
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>

@@ -781,7 +781,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The second tool is a <strong>skill</strong>: a recipe for one type of task, written as a Markdown file called <code>SKILL.md</code> in its own folder. The agent uses a skill when the task matches its description, or when you type <code>/</code> and its name. We start with two.</p>
 <ul>
 <li><strong><code>read-pdf</code></strong> makes the agent extract a PDF’s text to a <code>.txt</code> file first and work from that, with page numbers. This prevents the most common failure with PDFs: answering from a partly read document without saying so.</li>
-<li><strong><code>decision-log</code></strong> records every analytical choice in a file called <code>DECISIONS.md</code>: dropped observations, variable definitions, methods. For each choice it notes the alternatives and the basis: evidence, convention, your instruction, or just a default.</li>
+<li><strong><code>decision-log</code></strong> records every analytical choice in a file called <code>DECISIONS.md</code>: cases left out, how variables are defined, which methods are used. For each choice it notes the alternatives and the basis: evidence, convention, your instruction, or simply the usual choice, made without a particular reason.</li>
 </ul>
 <p>We prepared both, and a starter <code>AGENTS.md</code>. One prompt sets everything up:</p>
 <div class="prompt">
@@ -992,7 +992,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In short, <code>AGENTS.md</code> says: plan before longer tasks, do the smallest thing that answers the request, never delete (move files to <code>_old/</code>), never change raw data or your own files, work from the files and not from memory, quote word for word with the page, and keep a short progress note in <code>status.md</code>. Grow the file slowly. <strong>When the agent makes the same mistake twice, add one line.</strong></p>
 <div class="in-charge">
 <p><strong>Staying in charge: set the limits</strong></p>
-<p>The folder is a boundary. In Manual mode the agent asks before it reads or changes any file outside the project folder, and before it runs any command. Commands are the one gap: an approved command can reach anything you can. So read the paths before you allow a step. Do you see a folder outside your project, such as <code>C:\Users\you\Desktop</code> or <code>~/Documents/other-project</code>? Click <strong>Deny</strong> and ask: <em>“Why do you need to go outside the project folder?”</em> Installing a program, as in Step 1.4, is the exception.</p>
+<p>The folder is a boundary. In Manual mode the agent asks before it reads or changes any file outside the project folder, and before it runs any command. Commands are the one gap: an approved command can reach anything you can. So read the paths before you allow a step. Do you see a folder outside your project, such as <code>C:\Users\you\Desktop</code> or <code>/Users/you/Documents/other-project</code>? Click <strong>Deny</strong> and ask: <em>“Why do you need to go outside the project folder?”</em> Installing a program, as in Step 1.4, is the exception.</p>
 <p><code>AGENTS.md</code> adds a rule on top: work only inside this folder, and ask before going outside it.</p>
 <p><strong>Which permission mode?</strong> Stay in <strong>Manual</strong> for the first week: you see every step. After that, the choice is yours (<a href="../friendly-agentic-ai-intro/setup.html#step-1-3">Step 1.3</a> lists the modes). <strong>Accept edits</strong> follows a simple rule: free inside the project folder, permission everywhere else. <strong>Auto</strong> goes further: it works without routine questions, and a background check stops what it judges risky. Many experienced users work in Auto most of the time. Whatever you choose for routine work, go back to Manual when the work matters. If a project needs a second folder, add it with <strong>+</strong> next to the prompt box, then <strong>Add folder</strong>. Leave <strong>Bypass permissions</strong> alone: it switches off the questions altogether.</p>
 </div>
@@ -1093,7 +1093,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>Add them to docs/readings/SOURCES.md, marked "found by the agent". If you cannot confirm a paper, leave it out and say so.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="check">
-<p><strong>It worked if</strong> the six papers open as papers in your PDF reader, and <code>SOURCES.md</code> lists them. If you ran the search, check the three new papers yourself: open each DOI in your browser and see that it leads to that paper.</p>
+<p><strong>It worked if</strong> the six papers open as papers in your PDF reader, and <code>SOURCES.md</code> lists them. If you ran the search, check the three new papers yourself: open each DOI (the paper’s permanent ID, such as <code>10.1007/s00148-008-0219-2</code>) by typing <code>https://doi.org/</code> followed by the DOI into your browser, and see that it leads to that paper.</p>
 </div>
 <p>Why the check that each file is really a PDF? When we prepared this pack, two of the downloads “succeeded” but saved a web page instead of a paper: one asked to enable JavaScript, the other said <em>Oh no!</em>. Both files were called <code>.pdf</code>. An agent that doesn’t check would happily summarize them.</p>
 <div class="in-charge">
@@ -1122,8 +1122,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Why the fuss about quotes? Summarizing is what these models do best, and the table will look convincing. The typical mistake is a different one: a paraphrase presented as a quote, or a finding that comes from the model’s general knowledge and not from the file. A page number and a word-for-word quote make both mistakes easy to catch. In a published paper, a quote that doesn’t exist is the kind of error readers remember.</p>
 <div class="in-charge">
 <p><strong>Staying in charge: agree the checks before the work</strong></p>
-<p>For work with text, three checks cover most mistakes: every quote is found word for word at the page given, every reference is a file in the folder or has a DOI that opens, and every number matches the table it comes from. For data, the checks are counts of observations, duplicates, value ranges and missing values (Step 2.6).</p>
-<p>Then let the agent report by exception: it runs the agreed checks and tells you only about failures. But “no problems found” means only that the agreed checks passed. Keep your own hand check of two quotes. It takes five minutes, and it is the one check that doesn’t depend on the agent.</p>
+<p>For work with text, three checks cover most mistakes: every quote is found word for word at the page given, every reference is a file in the folder or has a DOI that opens, and every number matches the table it comes from. For data, the checks are how many cases there are, whether any appear twice, whether the values are plausible, and which are missing (Step 2.6).</p>
+<p>Then the agent can report only what fails: it runs the agreed checks and tells you about the failures. But “no problems found” means only that the agreed checks passed. Keep your own hand check of two quotes. It takes five minutes, and it is the one check that doesn’t depend on the agent.</p>
 </div>
 </section>
 <section id="step-2-4" class="level2">
@@ -1240,6 +1240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="step-2-6"><span class="step-no">2.6</span> A first task with data</h2>
 <p><span class="when later">After class · a separate assignment</span></p>
 <p>This is a separate assignment. It leaves the papers behind: a new question, and numbers this time. The question is simple: in EU countries where more women work, do women also hold more seats in parliament? If you don’t work with data, you may skip this step. Part 3 shows data work at a much larger scale.</p>
+<p>The agent gets the data from the World Bank’s <em>API</em>: a way for a program to fetch data straight from a website. Some APIs ask for a key, a kind of password. The World Bank’s does not.</p>
 <p>Start a new session and, before you send the prompt, switch the permission mode to <strong>Plan</strong>.</p>
 <div class="prompt">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Using the World Bank's open data (its API, no key needed), get for all EU countries for 2023:</span>

@@ -661,11 +661,11 @@ ul.task-list li input[type="checkbox"] {
 <p>When I say you should <strong>experiment</strong> with agentic AI, I hear two typical reactions.</p>
 <p><em>“This is for coders.”</em> It isn’t. You won’t type a single command. You give instructions in plain language, as you would to a research assistant. Even the technical setup is done by the agent, which explains each step before it takes it.</p>
 <p><em>“I don’t need this.”</em> Maybe. The course lets you find out on your own material. You remain in charge, and you decide how much to delegate. You will see what an agent can do and how to supervise it. At the very least, you get a glimpse.</p>
-<p>We use one tool: <strong>Claude Code, in the Claude desktop app</strong>, on Windows, Mac or Linux. Codex by OpenAI is the most similar, and what you learn here carries over fully. Antigravity, with Google’s Gemini, is also similar, and there are close alternatives that run open-weights models. But when learning, one tool is enough.</p>
+<p>We use one tool: <strong>Claude Code, in the Claude desktop app</strong>, on Windows, Mac or Linux. Codex by OpenAI is the most similar, and what you learn here carries over fully. Antigravity, with Google’s Gemini, is also similar, and there are close alternatives that run free models, which anyone may download. But when learning, one tool is enough.</p>
 </section>
 <section id="what-is-an-ai-agent" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-an-ai-agent">What is an AI agent?</h2>
-<p>Let’s start with what you know. <strong>A chatbot</strong> is a conversation in a browser. You paste in a text or upload a file, it answers, and you copy the answer back into your document. It knows only what you gave it in that conversation. It mostly relies on information it “remembers” from its training, which can be wrong. It cannot read your files, run code, or save results.</p>
+<p>Let’s start with what you know. <strong>A chatbot</strong> is a conversation in a browser. You paste in a text or upload a file, it answers, and you copy the answer back into your document. It knows only what you gave it in that conversation. It mostly relies on information it “remembers” from its training, which can be wrong. It cannot read your files, run a program, or save results.</p>
 <p><strong>An agent</strong> is the same AI model with four additions. First, it has access to <strong>folders</strong> on your computer: the ones you allow. Second, it can <strong>act</strong> there: open files, write and run program code, save results. Third, it works in a <strong>loop</strong>: it takes a step, looks at the result and decides on the next one, until the task is done or it needs you. Fourth, it can <strong>use tools</strong>: open a browser, or call other programs such as Microsoft Word.</p>
 <figure class="agent-figure figure">
 <svg viewbox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A chatbot exchanges text with you and cannot reach your files. An agent takes a task from you, then reads, runs and saves in your project folder in a loop, and comes back with questions and results.">
@@ -731,7 +731,7 @@ ul.task-list li input[type="checkbox"] {
 </svg>
 <figcaption>The model is the same. The difference is where it works and what it is allowed to do.</figcaption>
 </figure>
-<p>The loop makes the difference. Suppose you ask for <em>a chart of turnout by age group from survey.csv</em>. A chatbot needs the file uploaded and may guess what the columns mean. The agent does the following:</p>
+<p>The loop makes the difference. Suppose you ask for <em>a chart of turnout by age group from survey.csv</em>, a data table with one row per respondent. A chatbot needs the file uploaded and may guess what the columns mean. The agent does the following:</p>
 <ol type="1">
 <li>it opens the file and sees that age is called <code>age_cat</code>, not <code>age</code>;</li>
 <li>it writes a short program and runs it;</li>
@@ -740,15 +740,15 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>You see every step, and at first it asks your permission before each one.</p>
 <p>It helps to <strong>think of the agent as a very fast research assistant sitting at your computer</strong>. It has read a lot, but it is new to your project, and it can be wrong with confidence. Hence your job shifts from doing each step to instructing the agent and checking its work. Checking matters most.</p>
-<p>One more point changes how you use it. The model behind the agent is not a database. It doesn’t look facts up in its memory, it reconstructs them, so a reference, a number or a date it “remembers” can be wrong. It is much stronger at working with material you put in front of it. So working with an agent is largely about designing its context: you provide the grounding material (your readings, your data, your notes) and the tools to search and compute, and you ask it to work from those rather than from memory. A table of readings built from the PDFs in your folder can be checked line by line. One built from what the model recalls cannot.</p>
-<p>Indeed, the right habit is to make it write code that can be run directly, and notes that can be searched directly.</p>
+<p>One more point changes how you use it. The model behind the agent is not a database. It doesn’t look facts up in its memory, it reconstructs them, so a reference, a number or a date it “remembers” can be wrong. It is much stronger at working with material you put in front of it. So working with an agent is largely about choosing what it works from: you give it the material (your readings, your data, your notes) and the means to search and compute, and you ask it to work from those rather than from memory. A table of readings built from the PDFs in your folder can be checked line by line. One built from what the model recalls cannot.</p>
+<p>So the right habit is to let it do counts and calculations with a small program that it saves and can run again, not in its head, and to keep its notes in files you can search.</p>
 </section>
 <section id="what-can-it-do-for-a-social-scientist" class="level2">
 <h2 class="anchored" data-anchor-id="what-can-it-do-for-a-social-scientist">What can it do for a social scientist?</h2>
 <p>Here are a few tasks that fit an agent well. None of them needs you to write code.</p>
 <div class="uses">
 <div class="use">
-<p><strong>Hundreds of historical notes, as OCR-ed PDFs.</strong> Many large PDFs in a folder first become plain text, which can then be searched and turned into a data table.</p>
+<p><strong>Hundreds of historical notes, scanned as PDFs.</strong> Many large PDFs in a folder first become plain text, which can then be searched and turned into a data table.</p>
 </div>
 <div class="use">
 <p><strong>A draft in Word.</strong> The agent comments on the argument, or edits a copy, and you review each edit as a tracked change.</p>
@@ -757,13 +757,13 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Paper review.</strong> A detailed review of a draft, with agents that check the numbers, the references and the argument. The agent reads the literature, places your work in it, and suggests journals.</p>
 </div>
 <div class="use">
-<p><strong>Data analysis.</strong> The agent downloads data, cleans it, runs regressions, makes tables and charts, and writes a first-pass report that describes the data. You check the code and the results.</p>
+<p><strong>Data analysis.</strong> The agent downloads data, cleans it, runs statistical models, makes tables and charts, and writes a first-pass report that describes the data. You check the code and the results.</p>
 </div>
 <div class="use">
 <p><strong>Prototype.</strong> You have an idea. The agent does the first pass: literature, data, code and a draft. Then you decide whether it is worth your time to continue.</p>
 </div>
 </div>
-<p>The agent has limits, too. First, the agent makes mistakes, and it makes them in fluent, confident prose. It may misread a variable, drop observations without telling you, or hand you a paraphrase in quotation marks. Second, it doesn’t know the judgment calls of your field: which cases belong in the sample, or what a concept means in your literature. Third, what it reads is sent to the company’s servers, so confidential material needs care.</p>
+<p>The agent has limits, too. First, the agent makes mistakes, and it makes them in fluent, confident prose. It may misread a variable, leave out cases (rows of the data) without telling you, or hand you a paraphrase in quotation marks. Second, it doesn’t know the judgment calls of your field: which cases belong in the sample, or what a concept means in your literature. Third, what it reads is sent to the company’s servers, so confidential material needs care.</p>
 <p>Each of these problems has a routine that handles it, and you already know most of them from supervising research assistants and refereeing papers. Part 2 builds them into every step.</p>
 </section>
 <section id="worried-you-will-break-something" class="level2">
@@ -776,7 +776,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>You can stop it at any time.</strong> The stop button interrupts it mid-step.</li>
 <li><strong>You can ask before you allow.</strong> <em>“What does this do? Is it safe? Can it be undone?”</em> The agent answers in plain language.</li>
 <li><strong>You can’t run up a bill.</strong> Pro has a fixed monthly price. When you reach the usage limit, the agent pauses until the limit resets, unless you choose to buy extra usage.</li>
-<li><strong>Even the Python setup can be undone.</strong> The agent writes down what it installed and how to remove all of it (<a href="../friendly-agentic-ai-intro/setup.html#step-1-4">Step 1.4</a>).</li>
+<li><strong>Even the setup of Python can be undone.</strong> Python is a free programming language that the agent uses as a tool. The agent writes down what it installed and how to remove all of it (<a href="../friendly-agentic-ai-intro/setup.html#step-1-4">Step 1.4</a>).</li>
 </ul>
 </section>
 <section id="what-do-you-need" class="level2">
@@ -789,7 +789,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="how-is-the-course-organized" class="level2">
 <h2 class="anchored" data-anchor-id="how-is-the-course-organized">How is the course organized?</h2>
-<p>The course has six parts and an assignment. The first two parts are hands-on: setup takes about an hour, the first project about two. The third is a live demonstration. The assignment follows it: you read the agent’s paper as a referee would, and you improve its prompt with skills. The fourth part is a guide to the weeks after: you make the rules and the skills yours, and you run a project on a question of your own. The fifth is broader advice for later, on other uses and other models. The sixth is a short list of links on where social science research may be heading. If something fails along the way, nothing is broken: check the troubleshooting table of that part, or ask the agent what went wrong.</p>
+<p>The course has six parts and an assignment. The first two parts are hands-on: setup takes about an hour, the first project about two. The third is a live demonstration. The assignment follows it: you read the agent’s paper as a referee would, and you improve its prompt with skills: recipe files the agent follows for one type of task. The fourth part is a guide to the weeks after: you make the rules and the skills yours, and you run a project on a question of your own. The fifth is broader advice for later, on other uses and other models. The sixth is a short list of links on where social science research may be heading. If something fails along the way, nothing is broken: check the troubleshooting table of that part, or ask the agent what went wrong.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -906,6 +906,9 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Context window:</strong> what the model can see at once. Long sessions fill it up, and quality drops.</li>
 <li><strong>Permission mode:</strong> how much the agent may do without asking you. We start with <em>Manual</em>: it asks every time. Later many people use <em>Auto</em>.</li>
 <li><strong>Markdown (<code>.md</code>):</strong> plain text with a few formatting symbols. It is the common language of people and agents.</li>
+<li><strong>Path:</strong> the address of a file or folder on your computer, such as <code>C:\Users\anna\Documents\ai-projects</code>.</li>
+<li><strong>Script:</strong> a text file of instructions that the computer carries out, one after the other. The agent writes scripts in Python or R.</li>
+<li><strong>Command:</strong> a one-line instruction to the computer, such as “install Python”.</li>
 <li><strong><code>AGENTS.md</code>:</strong> your standing instructions, which the agent reads at the start of every session.</li>
 <li><strong>Skill:</strong> a recipe file the agent follows for one type of task.</li>
 <li><strong>Terminal:</strong> a text window for typing commands. The agent uses one behind the scenes. You don’t have to.</li>
